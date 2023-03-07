@@ -10,7 +10,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
-import vistas.*;
+//import vistas.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -45,10 +45,7 @@ public class MainView extends VerticalLayout {
      */
     public MainView(/*@Autowired GreetService service*/) {
 //
-    	
-    	/*VistaLogin init=*/add(new VistaLogin());
-    	
-    	//add(init);
+
 //        // Use TextField for standard text input
 //        TextField textField = new TextField("Your name");
 //        textField.addThemeName("bordered");
