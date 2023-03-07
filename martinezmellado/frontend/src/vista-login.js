@@ -12,7 +12,7 @@ class VistaLogin extends PolymerElement {
                 }
             </style>
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: stretch; justify-content: center;" id="vaadinVerticalLayout">
- <label id="label" style="margin: var(--lumo-space-xl); padding: var(--lumo-space-xl); align-self: center; flex-grow: 0; flex-shrink: 0;">SE ESTAN COCINANDO COSAS</label>
+ <label id="label" style="margin: var(--lumo-space-xl); padding: var(--lumo-space-xl); align-self: center; flex-grow: 0; flex-shrink: 0;">SE VIENEN COSITAS</label>
 </vaadin-vertical-layout>
 `;
     }

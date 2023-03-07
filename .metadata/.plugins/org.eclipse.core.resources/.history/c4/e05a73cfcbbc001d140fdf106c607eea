@@ -1,0 +1,35 @@
+import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+
+/**
+ * `vista-login`
+ *
+ * VistaLogin element.
+ *
+ * @customElement
+ * @polymer
+ */
+class VistaLogin extends PolymerElement {
+
+    static get template() {
+        return html`
+            <style include="shared-styles">
+                :host {
+                    display: block;
+                    height: 100%;
+                }
+            </style>
+        `;
+    }
+
+    static get is() {
+        return 'vista-login';
+    }
+
+    static get properties() {
+        return {
+            // Declare your properties here.
+        };
+    }
+}
+
+customElements.define(VistaLogin.is, VistaLogin);
