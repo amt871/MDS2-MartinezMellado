@@ -3,6 +3,8 @@ package vistas;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.component.template.Id;
 
 /**
  * A Designer generated component for the vista-iniciar_sesion template.
@@ -14,7 +16,10 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 @JsModule("./src/vista-iniciar_sesion.ts")
 public class VistaIniciar_sesion extends LitTemplate {
 
-    /**
+    @Id("vaadinVerticalLayout")
+	private Element vaadinVerticalLayout;
+
+	/**
      * Creates a new VistaIniciar_sesion.
      */
     public VistaIniciar_sesion() {
