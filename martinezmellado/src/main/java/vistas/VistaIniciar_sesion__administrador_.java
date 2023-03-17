@@ -26,10 +26,6 @@ public class VistaIniciar_sesion__administrador_ extends LitTemplate {
 	private TextField inUser;
 	@Id("LabelUsuario")
 	private Label labelUsuario;
-	@Id("labelNombreApp")
-	private Label labelNombreApp;
-	@Id("iconButton")
-	private Button iconButton;
 
 	/**
      * Creates a new VistaIniciar_sesion__administrador_.

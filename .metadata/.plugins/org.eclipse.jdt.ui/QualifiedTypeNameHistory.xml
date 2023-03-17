@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="vistas.VistaInit"/>
+    <fullyQualifiedTypeName name="interfaz.Iniciar_sesion__administrador_"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion__administrador_"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.VaadinIcon"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.Icon"/>
 </qualifiedTypeNameHistroy>

@@ -19,7 +19,7 @@ export class VistaIniciar_sesion__administrador_ extends LitElement {
     return html`
 <vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; align-self: center;">
-  <img style="width: 100%; height: 100%; align-self: center;" src="../../res/toktok2.svg">
+  <img style="width: 100%; height: 100%; align-self: center;" src="../../resources/icons/toktok2.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; align-self: center;">
   <label id="LabelUsuario" style="margin-top: 20%;">Administrador </label>

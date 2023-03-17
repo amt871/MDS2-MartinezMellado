@@ -3,6 +3,8 @@ package vistas;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.component.template.Id;
 
 /**
  * A Designer generated component for the vista-vista_detalle__administrador_ template.
@@ -14,7 +16,10 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 @JsModule("./src/vista-vista_detalle__administrador_.ts")
 public class VistaVista_detalle__administrador_ extends LitTemplate {
 
-    /**
+    @Id("userIcon")
+	private Element userIcon;
+
+	/**
      * Creates a new VistaVista_detalle__administrador_.
      */
     public VistaVista_detalle__administrador_() {
