@@ -3,6 +3,10 @@ package vistas;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.template.Id;
+import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.component.html.Image;
 
 /**
  * A Designer generated component for the vista-pantalla_inicio template.
@@ -14,7 +18,9 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 @JsModule("./src/vista-pantalla_inicio.ts")
 public class VistaPantalla_inicio extends LitTemplate {
 
-    /**
+    @Id("vaadinHorizontalLayout1")
+	private HorizontalLayout vaadinHorizontalLayout1;
+	/**
      * Creates a new VistaPantalla_inicio.
      */
     public VistaPantalla_inicio() {

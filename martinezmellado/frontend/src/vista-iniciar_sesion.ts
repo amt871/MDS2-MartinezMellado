@@ -1,6 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 
 @customElement('vista-iniciar_sesion')
 export class VistaIniciar_sesion extends LitElement {
@@ -15,13 +17,26 @@ export class VistaIniciar_sesion extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="height: 100%;">
- <vaadin-horizontal-layout theme="spacing" style="height: 30%; width: 100%;"></vaadin-horizontal-layout>
- <vaadin-horizontal-layout class="content" style="width: 100%; height: 100%;">
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%;"></vaadin-horizontal-layout>
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%;"></vaadin-horizontal-layout>
- </vaadin-horizontal-layout>
-</vaadin-vertical-layout>
+<vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+ <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; align-self: center;">
+  <img style="width: 100%; height: 100%; align-self: center;" src="../../resources/icons/toktok2.svg">
+ </vaadin-vertical-layout>
+ <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; align-self: center; justify-content: flex-end;">
+  <label id="LabelUsuario" style="margin-top: 20%;">Bienvenido!</label>
+  <vaadin-text-field id="inUser" style="flex-shrink: 0; flex-grow: 0; width: 60%; margin-top: 20%;" label="Usuario"></vaadin-text-field>
+  <vaadin-text-field id="inPass" style="width: 60%;" label="Contraseña"></vaadin-text-field>
+  <vaadin-button id="bIniciarSesion" style="width: 60%; margin-top: 5%;">
+    Iniciar sesion 
+  </vaadin-button>
+  <vaadin-vertical-layout style="width: 100%; flex-grow: 1; align-items: stretch; justify-content: flex-end;">
+   <vaadin-horizontal-layout theme="spacing-xl" style="align-items: flex-end; padding: var(--lumo-space-xl);">
+    <vaadin-button style="flex-grow: 0; flex-shrink: 0; height: 100%;">
+      Recuperar contrase�a 
+    </vaadin-button>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </vaadin-vertical-layout>
+</vaadin-horizontal-layout>
 `;
   }
 
