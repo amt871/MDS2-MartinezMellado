@@ -10,40 +10,36 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
-//import vistas.*;
+import interfaz.Iniciar_sesion__administrador_;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * A sample Vaadin view class.
  * <p>
- * To implement a Vaadin view just extend any Vaadin component and
- * use @Route annotation to announce it in a URL as a Spring managed
- * bean.
- * Use the @PWA annotation make the application installable on phones,
- * tablets and some desktop browsers.
+ * To implement a Vaadin view just extend any Vaadin component and use @Route
+ * annotation to announce it in a URL as a Spring managed bean. Use the @PWA
+ * annotation make the application installable on phones, tablets and some
+ * desktop browsers.
  * <p>
- * A new instance of this class is created for every new user and every
- * browser tab/window.
+ * A new instance of this class is created for every new user and every browser
+ * tab/window.
  */
 @Route
-@PWA(name = "Vaadin Application",
-        shortName = "Vaadin App",
-        description = "This is an example Vaadin application.",
-        enableInstallPrompt = false)
+@PWA(name = "Vaadin Application", shortName = "Vaadin App", description = "This is an example Vaadin application.", enableInstallPrompt = false)
 @CssImport("./styles/shared-styles.css")
 @CssImport(value = "./styles/vaadin-text-field-styles.css", themeFor = "vaadin-text-field")
 public class MainView extends VerticalLayout {
 
-
-    /**
-     * Construct a new Vaadin view.
-     * <p>
-     * Build the initial UI state for the user accessing the application.
-     *
-     * @param service The message service. Automatically injected Spring managed bean.
-     */
-    public MainView(/*@Autowired GreetService service*/) {
+	/**
+	 * Construct a new Vaadin view.
+	 * <p>
+	 * Build the initial UI state for the user accessing the application.
+	 *
+	 * @param service The message service. Automatically injected Spring managed
+	 *                bean.
+	 */
+	public MainView(/* @Autowired GreetService service */) {
 //
 
 //        // Use TextField for standard text input
@@ -66,6 +62,9 @@ public class MainView extends VerticalLayout {
 //        addClassName("centered-content");
 //
 //        add(textField, button);
-    }
+		//Iniciar_sesion__administrador_ inicio = new Iniciar_sesion__administrador_();
+		//add(inicio);
+
+	}
 
 }
