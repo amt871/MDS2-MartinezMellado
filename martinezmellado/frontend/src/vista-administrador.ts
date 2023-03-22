@@ -1,4 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import './vista-iniciar_sesion';
 
 @customElement('vista-administrador')
 export class VistaAdministrador extends LitElement {
@@ -12,7 +13,9 @@ export class VistaAdministrador extends LitElement {
   }
 
   render() {
-    return html``;
+    return html`
+<vista-iniciar_sesion></vista-iniciar_sesion>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM
