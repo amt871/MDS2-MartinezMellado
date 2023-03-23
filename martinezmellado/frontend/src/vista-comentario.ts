@@ -22,7 +22,7 @@ export class VistaComentario extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
- <vista-mi_cabecera style="width: 100%; height: 10%;"></vista-mi_cabecera>
+ <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; padding: var(--lumo-space-xl);">
   <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
    <img style="width: 100%; height: 100%;" src="../../resources/icons/video.png">
@@ -47,12 +47,12 @@ export class VistaComentario extends LitElement {
    <vaadin-horizontal-layout theme="spacing" style="align-items: center; width: 100%;">
     <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; justify-content: flex-start;">
      <vaadin-button id="idVolver">
-      Volver 
+       Volver 
      </vaadin-button>
     </vaadin-horizontal-layout>
     <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; justify-content: flex-end;">
      <vaadin-button id="idAñadirCom">
-      Añadir comentario 
+       Añadir comentario 
      </vaadin-button>
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
