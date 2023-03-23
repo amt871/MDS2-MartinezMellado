@@ -1,4 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-resultado_busqueda_hastag_item')
 export class VistaResultado_busqueda_hastag_item extends LitElement {
@@ -12,7 +14,14 @@ export class VistaResultado_busqueda_hastag_item extends LitElement {
   }
 
   render() {
-    return html``;
+    return html`
+<vaadin-horizontal-layout class="content" style="justify-content: space-between;" theme="spacing">
+ <vaadin-button style="margin-left: var(--lumo-space-s); width: 100%;">
+  Nombre Hashtag 
+ </vaadin-button>
+ <label style="flex-shrink: 0; flex-grow: 0; margin-right: var(--lumo-space-s); align-self: center;">Numero de videos </label>
+</vaadin-horizontal-layout>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM
