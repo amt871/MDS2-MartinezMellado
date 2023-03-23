@@ -17,14 +17,14 @@ export class VistaCabecera__administrador_ extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout class="content" style="width: 100%; align-items: flex-start; justify-content: space-between;">
+<vaadin-horizontal-layout class="content" style="width: 100%; align-items: flex-start; justify-content: space-between; padding-top: var(--lumo-space-s);">
  <vaadin-button style="margin-left: 5%;">
    Inicio 
  </vaadin-button>
  <vaadin-button>
    Busqueda 
  </vaadin-button>
- <vaadin-horizontal-layout theme="spacing" style="align-self: flex-start; margin-right: 5%; flex-grow: 0; flex-shrink: 1;">
+ <vaadin-horizontal-layout theme="spacing" style="margin-right: 5%; flex-grow: 0; flex-shrink: 1;">
   <vaadin-button style="flex-grow: 0; flex-shrink: 1; align-self: center;">
     Administrar 
   </vaadin-button>
