@@ -53,7 +53,7 @@ export class VistaVista_detalle__administrador_ extends LitElement {
     <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
     <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
    </vaadin-scroller>
-   <vaadin-horizontal-layout style="align-self: center; flex-grow: 0; flex-shrink: 1; justify-content: flex-start; align-items: flex-end; width: 100%;">
+   <vaadin-horizontal-layout style="align-self: center; flex-grow: 0; flex-shrink: 1; justify-content: flex-start; align-items: flex-end; width: 100%; margin-top: var(--lumo-space-xl);">
     <vaadin-vertical-layout style="flex-shrink: 1; flex-grow: 0; width: 30%; align-items: center; justify-content: center; align-self: flex-end;">
      <label style="align-self: center;">Me gustas </label>
      <iron-icon style="align-self: center; flex-grow: 0; flex-shrink: 1; width: 20%; height: 20%;" icon="vaadin:heart"></iron-icon>
