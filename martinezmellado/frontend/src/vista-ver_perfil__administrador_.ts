@@ -21,21 +21,21 @@ export class VistaVer_perfil__administrador_ extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vista-cabecera__administrador_ style="width: 100%; height: 5%;"></vista-cabecera__administrador_>
  <vaadin-button style="align-self: flex-end; margin-right: var(--lumo-space-m); width: 10%;">
-  Bloquear 
+   Bloquear 
  </vaadin-button>
- <vaadin-horizontal-layout style="width: 100%; height: 10%; justify-content: space-between;">
-  <vaadin-horizontal-layout theme="spacing" style="width: 33%; align-self: center; justify-content: center; align-items: center;">
+ <vaadin-horizontal-layout style="height: 10%; justify-content: space-between; width: 100%;">
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-self: center; justify-content: center; align-items: center;">
    <label>Numero de seguidores</label>
   </vaadin-horizontal-layout>
   <img style="height: 100%;" src="../../resources/icons/user.svg">
-  <vaadin-horizontal-layout theme="spacing" style="width: 33%; align-self: center; align-items: center; justify-content: center;">
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-self: center; align-items: center; justify-content: center;">
    <label>Numero de me gustas</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center;">
-  <label style="margin-top: var(--lumo-space-m); margin-bottom: var(--lumo-space-m);">Perfil privado</label>
+  <label>Perfil privado</label>
  </vaadin-horizontal-layout>
- <vista-video_otro_usuario_perfil__administrador_ style="width: 100%; height: 100%;"></vista-video_otro_usuario_perfil__administrador_>
+ <vista-video_otro_usuario_perfil__administrador_ style="width: 100%; height: 100%; align-self: stretch;"></vista-video_otro_usuario_perfil__administrador_>
 </vaadin-vertical-layout>
 `;
   }

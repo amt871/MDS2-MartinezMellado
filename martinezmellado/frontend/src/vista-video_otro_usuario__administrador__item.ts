@@ -44,8 +44,8 @@ export class VistaVideo_otro_usuario__administrador__item extends LitElement {
     <label>Comentarios</label>
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
-  <vaadin-button style="align-self: flex-end; margin-top: var(--lumo-space-xl); margin-right: var(--lumo-space-l); width: 20%;">
-   Denunciar
+  <vaadin-button style="align-self: flex-end; margin-top: var(--lumo-space-xl); margin-right: var(--lumo-space-l); flex-shrink: 1;">
+    Denunciar 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>

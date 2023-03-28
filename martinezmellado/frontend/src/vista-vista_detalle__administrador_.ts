@@ -28,7 +28,7 @@ export class VistaVista_detalle__administrador_ extends LitElement {
    <img style="height: 100%; width: 100%; align-self: center;" src="../../resources/icons/video.svg">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="align-items: center; justify-content: flex-start; flex-grow: 1; flex-shrink: 1; height: 90%; width: 40%;">
-   <iron-icon style="width: 15%; height: 10%;" src="../../resources/icons/user.svg"></iron-icon>
+   <iron-icon style="width: 25%; height: 25%; align-self: center;" src="../../resources/icons/user.svg"></iron-icon>
    <label>Usuario de la publicacion</label>
    <vaadin-horizontal-layout style="margin-top: var(--lumo-space-m); align-self: center; justify-content: space-around; width: 100%;">
     <vaadin-horizontal-layout style="width: 50%; align-self: center; align-items: center; justify-content: center;">
@@ -40,18 +40,18 @@ export class VistaVista_detalle__administrador_ extends LitElement {
    </vaadin-horizontal-layout>
    <label style="margin-top: 5%;">Comentarios</label>
    <vaadin-scroller style="width: 90%; height: 60%; margin-top: var(--lumo-space-m);">
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 10%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
+    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
    </vaadin-scroller>
    <vaadin-horizontal-layout style="align-self: center; flex-grow: 0; flex-shrink: 1; justify-content: flex-start; align-items: flex-end; width: 100%; margin-top: var(--lumo-space-xl);">
     <vaadin-vertical-layout style="flex-shrink: 1; flex-grow: 0; width: 30%; align-items: center; justify-content: center; align-self: flex-end;">
