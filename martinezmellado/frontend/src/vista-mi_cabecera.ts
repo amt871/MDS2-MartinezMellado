@@ -17,8 +17,8 @@ export class VistaMi_cabecera extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; justify-content: center;">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; padding-top: var(--lumo-space-s); padding-left: var(--lumo-space-m);">
+<vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center; height: 100%;">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; margin-left: var(--lumo-space-m);">
   <vaadin-button>
     Inicio 
   </vaadin-button>
@@ -26,19 +26,19 @@ export class VistaMi_cabecera extends LitElement {
     Notificaciones 
   </vaadin-button>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center; padding-top: var(--lumo-space-s);">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center;">
   <vaadin-button style="padding: var(--lumo-space-s);">
     Busqueda 
   </vaadin-button>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: flex-end; align-items: center; padding-top: var(--lumo-space-s); padding-right: var(--lumo-space-m);">
+ <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: flex-end; align-items: center; margin-right: var(--lumo-space-m);">
   <vista-cabecera_usuario_registrado id="idPublicar"></vista-cabecera_usuario_registrado>
   <vaadin-button>
     Perfil 
   </vaadin-button>
   <vaadin-button theme="icon" aria-label="Add new" id="iconPerfilButon">
    <iron-icon icon="lumo:user"></iron-icon>
-  </vaadin-button>Usuario 
+  </vaadin-button>
  </vaadin-horizontal-layout>
 </vaadin-horizontal-layout>
 `;

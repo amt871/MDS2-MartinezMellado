@@ -3,10 +3,9 @@ import '@vaadin/vaadin-icons/vaadin-icons.js';
 import './vista-cabecera__administrador_';
 import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-comentario__administrador__item';
+import './vista-comentario__administrador_';
 
 @customElement('vista-vista_detalle__administrador_')
 export class VistaVista_detalle__administrador_ extends LitElement {
@@ -39,20 +38,7 @@ export class VistaVista_detalle__administrador_ extends LitElement {
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
    <label style="margin-top: 5%;">Comentarios</label>
-   <vaadin-scroller style="width: 90%; height: 60%; margin-top: var(--lumo-space-m);">
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-    <vista-comentario__administrador__item style="height: 25%;"></vista-comentario__administrador__item>
-   </vaadin-scroller>
+   <vista-comentario__administrador_ style="width: 90%; height: 60%;"></vista-comentario__administrador_>
    <vaadin-horizontal-layout style="align-self: center; flex-grow: 0; flex-shrink: 1; justify-content: flex-start; align-items: flex-end; width: 100%; margin-top: var(--lumo-space-xl);">
     <vaadin-vertical-layout style="flex-shrink: 1; flex-grow: 0; width: 30%; align-items: center; justify-content: center; align-self: flex-end;">
      <label style="align-self: center;">Me gustas </label>
