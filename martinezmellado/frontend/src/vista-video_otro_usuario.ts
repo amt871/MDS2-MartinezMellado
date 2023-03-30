@@ -19,7 +19,7 @@ export class VistaVideo_otro_usuario extends LitElement {
     return html`
 <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
  <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
- <vaadin-scroller style="width: 100%; height: 100%;">
+ <vaadin-scroller style="width: 100%; height: 95%;">
   <vista-video_otro_usuario_item style="width: 100%; height: 100%; padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
   <vista-video_otro_usuario_item style="padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
   <vista-video_otro_usuario_item style="padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>

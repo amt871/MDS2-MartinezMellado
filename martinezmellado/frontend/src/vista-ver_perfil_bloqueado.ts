@@ -29,7 +29,7 @@ export class VistaVer_perfil_bloqueado extends LitElement {
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center;">
-  <label style="margin: var(--lumo-space-m);">PERFIL BLOQUEADO</label>
+  <label style="margin-top: var(--lumo-space-m); margin-bottom: var(--lumo-space-m);">PERFIL BLOQUEADO</label>
  </vaadin-horizontal-layout>
  <vista-videos_perfil_bloqueado style="width: 100%; height: 100%; margin-top: var(--lumo-space-xl);"></vista-videos_perfil_bloqueado>
 </vaadin-vertical-layout>

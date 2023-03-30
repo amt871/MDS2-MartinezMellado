@@ -1,6 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 
@@ -18,10 +17,12 @@ export class VistaComentario__administrador__item extends LitElement {
   render() {
     return html`
 <vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
- <iron-icon style="flex-shrink: 1; flex-grow: 0; height: 100%; width: 10%;" icon="lumo:user"></iron-icon>
- <label style="flex-grow: 1; flex-shrink: 0;">Texto Comentario</label>
- <vaadin-vertical-layout style="align-self: center; align-items: center; flex-direction: column; flex-shrink: 1; flex-grow: 0; height: 100%; margin-right: 1%; justify-content: center;">
-  <vaadin-button>
+ <img style="height: 90%;" src="../../resources/icons/user.svg">
+ <vaadin-horizontal-layout style="width: 100%; align-self: center; height: 100%; justify-content: center;">
+  <label style="align-self: center;">Texto Comentario</label>
+ </vaadin-horizontal-layout>
+ <vaadin-vertical-layout style="align-self: center; align-items: center; flex-direction: column; flex-shrink: 1; flex-grow: 0; height: 100%; margin-right: var(--lumo-space-s); justify-content: center; width: 50%;">
+  <vaadin-button style="width: 100%;">
     Eliminar 
   </vaadin-button>
   <label style="align-self: center;">Me gustas</label>
