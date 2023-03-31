@@ -19,19 +19,19 @@ export class VistaVer_perfil_bloqueado extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vista-cabecera__administrador_ style="width: 100%; height: 5%;"></vista-cabecera__administrador_>
- <vaadin-horizontal-layout style="width: 100%; height: 10%; justify-content: space-between; align-items: center; align-self: center; margin-top: var(--lumo-space-m);">
-  <vaadin-horizontal-layout theme="spacing" style="margin-left: var(--lumo-space-l); width: 33%; align-items: center; justify-content: center; align-self: center;">
+ <vaadin-horizontal-layout style="width: 100%; height: 10%; justify-content: space-between; align-items: center; align-self: center;">
+  <vaadin-horizontal-layout style="width: 33%; align-items: center; justify-content: center; align-self: center;">
    <label style="align-self: center;">Numero de seguidores</label>
   </vaadin-horizontal-layout>
   <img style="height: 100%;" src="../../resources/icons/user.svg">
-  <vaadin-horizontal-layout theme="spacing" style="margin-right: var(--lumo-space-l); width: 33%; align-self: center; align-items: center; justify-content: center;">
+  <vaadin-horizontal-layout style="width: 33%; align-self: center; align-items: center; justify-content: center;">
    <label style="align-self: center;">Numero de me gustas</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center;">
-  <label style="margin-top: var(--lumo-space-m); margin-bottom: var(--lumo-space-m);">PERFIL BLOQUEADO</label>
+ <vaadin-horizontal-layout style="align-self: center; align-items: center; justify-content: center; height: 5%;">
+  <label>PERFIL BLOQUEADO</label>
  </vaadin-horizontal-layout>
- <vista-videos_perfil_bloqueado style="width: 100%; height: 100%; margin-top: var(--lumo-space-xl);"></vista-videos_perfil_bloqueado>
+ <vista-videos_perfil_bloqueado style="width: 100%; height: 80%;"></vista-videos_perfil_bloqueado>
 </vaadin-vertical-layout>
 `;
   }

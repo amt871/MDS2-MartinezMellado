@@ -21,8 +21,8 @@ export class VistaVer_mi_video__comercial_ extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vista-cabecera_comercial style="width: 100%; height: 5%;"></vista-cabecera_comercial>
  <vaadin-horizontal-layout style="height: 95%; width: 100%;" theme="spacing">
-  <vaadin-vertical-layout style="width: 60%; height: 100%; align-items: center; justify-content: center;">
-   <img style="align-self: center;" src="../../resources/icons/video.svg">
+  <vaadin-vertical-layout style="width: 60%; height: 100%; justify-content: center;">
+   <img style="height: 100%;" src="../../resources/icons/video.svg">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 40%; height: 100%; align-items: center; align-self: center;">
    <iron-icon style="align-self: center; width: 25%; height: 25%;" src="../../resources/icons/user.svg"></iron-icon>

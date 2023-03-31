@@ -41,10 +41,8 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="proyectoMDS"/>
 		</list>
 		<list key="groupId">
-			<item value="proyectoMDS"/>
 		</list>
 		<list key="artifactId">
 		</list>
@@ -57,17 +55,15 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0-SNAPSHOT"/>
+			<item value="0.0.1-SNAPSHOT"/>
 		</list>
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="proyectoMDS"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="martinezmellado"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -78,7 +74,19 @@
 			<item value="[name]"/>
 		</list>
 		<list key="version">
-			<item value="1.0-SNAPSHOT"/>
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
 		</list>
 	</section>
 </section>
