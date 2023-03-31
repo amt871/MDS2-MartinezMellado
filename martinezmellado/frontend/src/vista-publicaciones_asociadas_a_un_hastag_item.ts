@@ -15,7 +15,7 @@ export class VistaPublicaciones_asociadas_a_un_hastag_item extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%;">
- <img style="align-self: center;" src="../../resources/icons/video.png">
+ <img style="align-self: center; width: 70%;" src="../../resources/icons/video.png">
  <label style="align-self: center;">Usuario</label>
 </vaadin-vertical-layout>
 `;
