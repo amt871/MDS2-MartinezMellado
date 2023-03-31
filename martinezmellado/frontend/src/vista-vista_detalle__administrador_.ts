@@ -23,8 +23,8 @@ export class VistaVista_detalle__administrador_ extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vista-cabecera__administrador_ style="width: 100%; align-self: center; flex-shrink: 1; height: 5%;"></vista-cabecera__administrador_>
  <vaadin-horizontal-layout style="height: 95%; width: 100%; flex-shrink: 1; flex-grow: 0; justify-content: center; align-items: center;">
-  <vaadin-vertical-layout style="height: 95%; width: 60%; align-self: center; justify-content: center; align-items: center;">
-   <img style="height: 100%; width: 100%; align-self: center;" src="../../resources/icons/video.svg">
+  <vaadin-vertical-layout style="height: 95%; width: 60%; align-items: center; justify-content: center;">
+   <img style="height: 100%; width: 100%;" src="../../resources/icons/video.svg">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="align-items: center; justify-content: flex-start; flex-grow: 1; flex-shrink: 1; height: 90%; width: 40%;">
    <iron-icon style="width: 25%; height: 25%; align-self: center;" src="../../resources/icons/user.svg"></iron-icon>
@@ -38,7 +38,7 @@ export class VistaVista_detalle__administrador_ extends LitElement {
     </vaadin-horizontal-layout>
    </vaadin-horizontal-layout>
    <label style="margin-top: 5%;">Comentarios</label>
-   <vista-comentario__administrador_ style="width: 90%; height: 60%;"></vista-comentario__administrador_>
+   <vista-comentario__administrador_ style="width: 90%; height: 50%;"></vista-comentario__administrador_>
    <vaadin-horizontal-layout style="align-self: center; flex-grow: 0; flex-shrink: 1; justify-content: flex-start; align-items: flex-end; width: 100%; margin-top: var(--lumo-space-xl);">
     <vaadin-vertical-layout style="flex-shrink: 1; flex-grow: 0; width: 30%; align-items: center; justify-content: center; align-self: flex-end;">
      <label style="align-self: center;">Me gustas </label>

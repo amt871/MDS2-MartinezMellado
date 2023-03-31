@@ -31,7 +31,7 @@ export class VistaVer_perfil_publico__usuario_no_registrado_ extends LitElement 
  <vaadin-horizontal-layout style="width: 100%; justify-content: center; align-items: center; height: 5%;">
   <label>Usuario</label>
  </vaadin-horizontal-layout>
- <vista-video_otro_usuario__no_registrado_ style="width: 100%; height: 100%;"></vista-video_otro_usuario__no_registrado_>
+ <vista-video_otro_usuario__no_registrado_ style="width: 100%; height: 80%;"></vista-video_otro_usuario__no_registrado_>
 </vaadin-vertical-layout>
 `;
   }
