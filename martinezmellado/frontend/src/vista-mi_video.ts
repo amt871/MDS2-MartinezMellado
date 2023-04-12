@@ -17,21 +17,21 @@ export class VistaMi_video extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
  <vaadin-scroller style="width: 100%; height: 100%; align-self: center;">
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center;">
+  <vaadin-horizontal-layout style="width: 100%; height: 50%; justify-content: space-around;">
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center;">
+  <vaadin-horizontal-layout style="width: 100%; height: 50%; justify-content: space-around;">
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center;">
+  <vaadin-horizontal-layout style="width: 100%; height: 50%; justify-content: space-around;">
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>

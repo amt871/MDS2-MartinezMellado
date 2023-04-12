@@ -18,9 +18,9 @@ export class VistaMi_perfil extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center;">
  <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; justify-content: center;">
+ <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center; height: 20%;">
   <label>Numero de seguidores</label>
   <vaadin-vertical-layout theme="spacing" style="align-items: center;">
    <img id="idImagen" style="height: 100%; width: 50%;" src="../../resources/icons/user.svg">
@@ -28,10 +28,10 @@ export class VistaMi_perfil extends LitElement {
   </vaadin-vertical-layout>
   <label>Numero de me gustas</label>
  </vaadin-horizontal-layout>
- <vaadin-button>
+ <vaadin-button style="height: 5%;">
    Configurar 
  </vaadin-button>
- <vista-mi_video style="width: 100%; height: 100%; align-self: center;"></vista-mi_video>
+ <vista-mi_video style="width: 100%; flex-shrink: 1; height: 70%;"></vista-mi_video>
 </vaadin-vertical-layout>
 `;
   }

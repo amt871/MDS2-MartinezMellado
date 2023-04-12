@@ -4,7 +4,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import vistas.VistaIniciar_sesion__administrador_;
 
-public class Iniciar_sesion__administrador_/* extends VistaIniciar_sesion__administrador_*/{
+public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__administrador_{
 //	private Button _entrar__administrador_;
 //	private Label _nombreAppL;
 //	private Label _esloganL;
@@ -13,11 +13,11 @@ public class Iniciar_sesion__administrador_/* extends VistaIniciar_sesion__admin
 //	private TextField _usuarioTF;
 //	private Label _contrasenaL;
 //	private TextField _contrasenaTF;
-	public Inicio_sesion__adminstrador_ _unnamed_inicio_sesion__adminstrador__;
+//	public Inicio_sesion__adminstrador_ _unnamed_inicio_sesion__adminstrador__;
 
-	public void entrar__administrador_() {
-		throw new UnsupportedOperationException();
-	}
+//	public void entrar__administrador_() {
+//		throw new UnsupportedOperationException();
+//	}
 	
 //	public Iniciar_sesion__administrador_(){
 //		inicializar();
