@@ -16,15 +16,15 @@ export class VistaDenuncias_item extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout class="content" style="width: 100%; height: 100%;">
- <vaadin-vertical-layout theme="spacing" style="margin: var(--lumo-space-s); align-items: center; justify-content: center;">
-  <img style="height: 90%; margin-left: var(--lumo-space-s);" src="../../resources/icons/java.svg">
-  <label style="align-self: center;">Objeto Denunciado</label>
+<vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; justify-content: space-between;">
+ <vaadin-vertical-layout style="align-items: center; height: 100%; justify-content: center; flex-shrink: 0;">
+  <img style="height: 90%; width: 90%;" src="../../resources/icons/java.svg">
+  <label>Objeto Denunciado</label>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout style="flex-grow: 0; justify-content: center; width: 100%; flex-shrink: 1; align-items: center;">
+ <vaadin-horizontal-layout style="flex-grow: 0; justify-content: center; width: 20%; flex-shrink: 1; align-items: center; height: 100%;">
   <label style="align-self: center;">Fecha de la denuncia</label>
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; margin-right: var(--lumo-space-s); flex-grow: 0; flex-shrink: 1; width: 50%;">
+ <vaadin-vertical-layout style="align-items: center; justify-content: center; flex-grow: 0; flex-shrink: 1; width: 40%; height: 100%;">
   <vaadin-button style="width: 100%;">
     Aceptar 
   </vaadin-button>

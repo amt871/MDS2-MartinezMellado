@@ -23,9 +23,9 @@ export class VistaVer_mi_video extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <vaadin-vertical-layout theme="spacing" style="width: 60%; height: 100%; align-items: center; justify-content: center;">
+  <vaadin-vertical-layout theme="spacing" style="width: 70%; height: 100%; align-items: center; justify-content: center;">
    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 50%; align-items: center;">
-    <img style="width: 50%; height: 100%;" src="../../resources/icons/video.svg">
+    <img style="width: 50%; height: 90%;" src="../../resources/icons/video.svg">
     <label>Descripcion</label>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; height: 40%;">
@@ -39,10 +39,10 @@ export class VistaVer_mi_video extends LitElement {
     </vaadin-vertical-layout>
    </vaadin-horizontal-layout>
    <vaadin-button style="margin-bottom: var(--lumo-space-xl);">
-    Eliminar Publicacion
+     Eliminar Publicacion 
    </vaadin-button>
   </vaadin-vertical-layout>
-  <vista-configurar style="height: 100%; width: 40%;"></vista-configurar>
+  <vista-configurar style="width: 30%; height: 100%;"></vista-configurar>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

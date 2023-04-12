@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 
-@customElement('vistas-solicitudes')
-export class VistasSolicitudes extends LitElement {
+@customElement('vista-ver_perfil_privado__usuario_registrado_')
+export class VistaVer_perfil_privado__usuario_registrado_ extends LitElement {
   static get styles() {
     return css`
       :host {

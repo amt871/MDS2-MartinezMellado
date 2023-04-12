@@ -1,10 +1,10 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
-import './vista-siguiendo_item';
+import './vista-solicitues_item';
 
-@customElement('vista-siguiendo')
-export class VistaSiguiendo extends LitElement {
+@customElement('vista-solicitudes')
+export class VistaSolicitudes extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -18,12 +18,12 @@ export class VistaSiguiendo extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-scroller style="width: 100%; height: 100%;">
-  <vista-siguiendo_item style="height: 20%; width: 100%;"></vista-siguiendo_item>
-  <vista-siguiendo_item style="height: 20%; width: 100%;"></vista-siguiendo_item>
-  <vista-siguiendo_item style="height: 20%; width: 100%;"></vista-siguiendo_item>
-  <vista-siguiendo_item style="height: 20%; width: 100%;"></vista-siguiendo_item>
-  <vista-siguiendo_item style="height: 20%; width: 100%;"></vista-siguiendo_item>
-  <vista-siguiendo_item style="height: 20%; width: 100%;"></vista-siguiendo_item>
+  <vista-solicitues_item style="height: 20%; width: 100%;"></vista-solicitues_item>
+  <vista-solicitues_item style="height: 20%; width: 100%;"></vista-solicitues_item>
+  <vista-solicitues_item style="height: 20%; width: 100%;"></vista-solicitues_item>
+  <vista-solicitues_item style="height: 20%; width: 100%;"></vista-solicitues_item>
+  <vista-solicitues_item style="height: 20%; width: 100%;"></vista-solicitues_item>
+  <vista-solicitues_item style="height: 20%; width: 100%;"></vista-solicitues_item>
  </vaadin-scroller>
 </vaadin-vertical-layout>
 `;
