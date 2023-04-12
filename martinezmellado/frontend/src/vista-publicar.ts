@@ -28,10 +28,10 @@ export class VistaPublicar extends LitElement {
   <vista-mi_cabecera style="width: 100%;"></vista-mi_cabecera>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <vaadin-vertical-layout style="width: 60%; align-items: flex-start; margin-bottom: var(--lumo-space-xs); margin-left: var(--lumo-space-xs);">
-   <img style="height: 100%;" src="../../resources/icons/video.svg">
+  <vaadin-vertical-layout style="width: 60%; align-items: flex-start; margin-bottom: var(--lumo-space-xs); margin-left: var(--lumo-space-xs); height: 100%;">
+   <img style="height: 90%; width: 90%;" src="../../resources/icons/video.svg">
   </vaadin-vertical-layout>
-  <vaadin-vertical-layout theme="spacing" style="width: 40%; align-items: center;">
+  <vaadin-vertical-layout theme="spacing" style="width: 40%; align-items: center; height: 100%;">
    <iron-icon style="width: 20%; height: 20%;" src="../../resources/icons/user.svg"></iron-icon>
    <vaadin-text-field label="Ubicacion" style="width: 60%;"></vaadin-text-field>
    <vaadin-text-area label="Descripcion" style="width: 60%; height: 40%;"></vaadin-text-area>

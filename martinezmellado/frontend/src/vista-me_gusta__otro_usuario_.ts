@@ -1,4 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
+import './vista-me_gusta__otro_usuario__item';
 
 @customElement('vista-me_gusta__otro_usuario_')
 export class VistaMe_gusta__otro_usuario_ extends LitElement {
@@ -12,7 +15,18 @@ export class VistaMe_gusta__otro_usuario_ extends LitElement {
   }
 
   render() {
-    return html``;
+    return html`
+<vaadin-vertical-layout style="width: 100%; height: 100%;">
+ <vaadin-scroller style="width: 100%; height: 100%;">
+  <vista-me_gusta__otro_usuario__item style="width: 100%; height: 20%;"></vista-me_gusta__otro_usuario__item>
+  <vista-me_gusta__otro_usuario__item style="width: 100%; height: 20%;"></vista-me_gusta__otro_usuario__item>
+  <vista-me_gusta__otro_usuario__item style="width: 100%; height: 20%;"></vista-me_gusta__otro_usuario__item>
+  <vista-me_gusta__otro_usuario__item style="width: 100%; height: 20%;"></vista-me_gusta__otro_usuario__item>
+  <vista-me_gusta__otro_usuario__item style="width: 100%; height: 20%;"></vista-me_gusta__otro_usuario__item>
+  <vista-me_gusta__otro_usuario__item style="width: 100%; height: 20%;"></vista-me_gusta__otro_usuario__item>
+ </vaadin-scroller>
+</vaadin-vertical-layout>
+`;
   }
 
   // Remove this method to render the contents of this view inside Shadow DOM
