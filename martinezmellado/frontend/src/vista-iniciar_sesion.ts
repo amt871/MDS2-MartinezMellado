@@ -30,8 +30,8 @@ export class VistaIniciar_sesion extends LitElement {
   </vaadin-button>
   <vaadin-vertical-layout style="width: 100%; flex-grow: 1; align-items: stretch; justify-content: flex-end;">
    <vaadin-horizontal-layout theme="spacing-xl" style="align-items: flex-end; padding: var(--lumo-space-xl);">
-    <vaadin-button style="flex-grow: 0; flex-shrink: 0; height: 100%;">
-     Recuperar contraseña 
+    <vaadin-button style="flex-grow: 0; flex-shrink: 0; height: 100%;" id="bRecuperarPass">
+      Recuperar contraseña 
     </vaadin-button>
    </vaadin-horizontal-layout>
   </vaadin-vertical-layout>

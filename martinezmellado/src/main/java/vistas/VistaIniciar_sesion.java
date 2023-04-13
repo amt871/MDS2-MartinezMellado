@@ -43,11 +43,37 @@ public class VistaIniciar_sesion extends LitTemplate {
 	private Element vaadinVerticalLayout2;
 	@Id("vaadinHorizontalLayout1")
 	private HorizontalLayout vaadinHorizontalLayout1;
+	@Id("bRecuperarPass")
+	private Button bRecuperarPass;
 	/**
      * Creates a new VistaIniciar_sesion.
      */
     public VistaIniciar_sesion() {
         // You can initialise any data required for the connected UI components here.
     }
+	public TextField getInUser() {
+		return inUser;
+	}
+	public void setInUser(TextField inUser) {
+		this.inUser = inUser;
+	}
+	public Button getbIniciarSesion() {
+		return bIniciarSesion;
+	}
+	public void setbIniciarSesion(Button bIniciarSesion) {
+		this.bIniciarSesion = bIniciarSesion;
+	}
+	public TextField getInPass() {
+		return inPass;
+	}
+	public void setInPass(TextField inPass) {
+		this.inPass = inPass;
+	}
+	public Button getbRecuperarPass() {
+		return bRecuperarPass;
+	}
+	public void setbRecuperarPass(Button bRecuperarPass) {
+		this.bRecuperarPass = bRecuperarPass;
+	}
 
 }

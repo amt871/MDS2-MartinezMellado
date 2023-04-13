@@ -20,20 +20,20 @@ export class VistaCabecera__administrador_ extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
  <vaadin-horizontal-layout class="content" style="width: 100%; align-items: center; justify-content: space-between;">
-  <vaadin-button style="margin-left: 1%;">
+  <vaadin-button style="margin-left: 1%;" id="bInicio">
     Inicio 
   </vaadin-button>
-  <vaadin-button>
+  <vaadin-button id="bBusqueda">
     Busqueda 
   </vaadin-button>
   <vaadin-horizontal-layout theme="spacing-s" style="margin-right: 1%; flex-grow: 0; flex-shrink: 1;">
-   <vaadin-button style="flex-grow: 0; flex-shrink: 1; align-self: center;">
+   <vaadin-button style="flex-grow: 0; flex-shrink: 1; align-self: center;" id="bAdministrar">
      Administrar 
    </vaadin-button>
-   <vaadin-button theme="icon" aria-label="Add new" id="iconPerfilButon">
+   <vaadin-button theme="icon" aria-label="Add new" id="bPerfil">
     <iron-icon icon="lumo:user"></iron-icon>
    </vaadin-button>
-   <vaadin-button theme="icon" aria-label="Add new" id="iconExitButton">
+   <vaadin-button theme="icon" aria-label="Add new" id="bSalir">
     <iron-icon icon="vaadin:sign-out"></iron-icon>
    </vaadin-button>
   </vaadin-horizontal-layout>

@@ -1,5 +1,6 @@
 package interfaz;
 
+
 //import basededatos.iInicio_sesion_administrador;
 
 public class Inicio_sesion__adminstrador_ {

@@ -19,9 +19,9 @@ export class VistaVideo_otro_usuario__administrador_ extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vista-cabecera__administrador_ style="flex-grow: 0; width: 100%; height: 5%;"></vista-cabecera__administrador_>
+ <vista-cabecera__administrador_ style="flex-grow: 0; width: 100%; height: 5%;" id="cabecera"></vista-cabecera__administrador_>
  <vaadin-vertical-layout style="width: 100%; height: 95%; flex-direction: row; align-self: center; align-items: center; justify-content: center;">
-  <vaadin-scroller style="width: 100%; height: 100%;">
+  <vaadin-scroller style="width: 100%; height: 100%;" id="scroller">
    <vista-video_otro_usuario__administrador__item></vista-video_otro_usuario__administrador__item>
    <vista-video_otro_usuario__administrador__item></vista-video_otro_usuario__administrador__item>
    <vista-video_otro_usuario__administrador__item></vista-video_otro_usuario__administrador__item>
