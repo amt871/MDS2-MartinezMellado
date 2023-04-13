@@ -17,7 +17,7 @@ export class VistaComentario__administrador__item extends LitElement {
   render() {
     return html`
 <vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
- <img style="height: 90%;" src="../../resources/icons/user.svg">
+ <img style="height: 10%; width: 10%;" src="icons/user.svg">
  <vaadin-horizontal-layout style="width: 100%; align-self: center; height: 100%; justify-content: center;">
   <label style="align-self: center;">Texto Comentario</label>
  </vaadin-horizontal-layout>

@@ -36,7 +36,7 @@ public class VistaIniciar_sesion__administrador_ extends LitTemplate {
      */
     public VistaIniciar_sesion__administrador_() {
         // You can initialise any data required for the connected UI components here.
-    	this.getElement().setAttribute("style", "width: 100%");
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
 	public Button getbIniciarSesion() {

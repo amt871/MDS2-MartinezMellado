@@ -16,14 +16,13 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-vista_detalle__administrador_.ts")
 public class VistaVista_detalle__administrador_ extends LitTemplate {
 
-    @Id("userIcon")
-	private Element userIcon;
 
 	/**
      * Creates a new VistaVista_detalle__administrador_.
      */
     public VistaVista_detalle__administrador_() {
         // You can initialise any data required for the connected UI components here.
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
 }

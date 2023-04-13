@@ -27,6 +27,23 @@ public class VistaVideo_otro_usuario__administrador_ extends LitTemplate {
      */
     public VistaVideo_otro_usuario__administrador_() {
         // You can initialise any data required for the connected UI components here.
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
+
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
+	}
+
+	public VistaCabecera__administrador_ getCabecera() {
+		return cabecera;
+	}
+
+	public void setCabecera(VistaCabecera__administrador_ cabecera) {
+		this.cabecera = cabecera;
+	}
 
 }
