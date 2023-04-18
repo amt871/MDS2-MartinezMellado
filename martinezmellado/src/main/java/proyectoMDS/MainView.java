@@ -64,8 +64,9 @@ public class MainView extends VerticalLayout {
 //        add(textField, button);
 		//Iniciar_sesion__administrador_ inicio = new Iniciar_sesion__administrador_();
 		//add(inicio);
-		add(new Vista_detalle__administrador_());
-
+		//add(new Vista_detalle__administrador_());
+		add(new Video_otro_usuario__administrador_());
+		
 	}
 
 }

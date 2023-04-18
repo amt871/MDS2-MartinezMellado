@@ -50,7 +50,7 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 
 			@Override
 			public void onComponentEvent(ComponentEvent event) {
-				// TODO Auto-generated method stub
+
 				iniciarSesion();
 			}});
 		

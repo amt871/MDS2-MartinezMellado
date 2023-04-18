@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="vistas.VistaInit"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.VaadinIcon"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.Icon"/>
     <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion__administrador_"/>
@@ -9,4 +8,20 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.ComponentEventListener"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
+    <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario__administrador__item"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Section"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Div"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.H3"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.datepicker.DatePicker"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextArea"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
+    <fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.Unit"/>
 </qualifiedTypeNameHistroy>
