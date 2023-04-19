@@ -1,5 +1,8 @@
 package proyectoMDS;
 
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.ComponentEvent;
+import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -7,6 +10,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
@@ -39,34 +43,105 @@ public class MainView extends VerticalLayout {
 	 * @param service The message service. Automatically injected Spring managed
 	 *                bean.
 	 */
-	public MainView(/* @Autowired GreetService service */) {
-//
 
-//        // Use TextField for standard text input
-//        TextField textField = new TextField("Your name");
-//        textField.addThemeName("bordered");
-//
-//        // Button click listeners can be defined as lambda expressions
-//        Button button = new Button("Say hello",
-//                e -> Notification.show(service.greet(textField.getValue())));
-//
-//        // Theme variants give you predefined extra styles for components.
-//        // Example: Primary button has a more prominent look.
-//        button.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-//
-//        // You can specify keyboard shortcuts for buttons.
-//        // Example: Pressing enter in this view clicks the Button.
-//        button.addClickShortcut(Key.ENTER);
-//
-//        // Use custom CSS classes to apply styling. This is defined in shared-styles.css.
-//        addClassName("centered-content");
-//
-//        add(textField, button);
-		//Iniciar_sesion__administrador_ inicio = new Iniciar_sesion__administrador_();
-		//add(inicio);
-		//add(new Vista_detalle__administrador_());
-		add(new Video_otro_usuario__administrador_());
+	private Component pantallaActual;
+	private Iniciar_sesion__administrador_ inicioAdministrador;
+
+	public MainView() {
 		
+		this.setPadding(false);
+		this.setMargin(false);
+		this.setSpacing(false);
+		
+		/***********CREACION DE PANTALLAS************/
+		
+		Video_otro_usuario__administrador_ paginaPrincipalAdministrador = new Video_otro_usuario__administrador_();
+		Cabecera__administrador_ cabeceraAdmin = new Cabecera__administrador_();
+		Administrar administrar = new Administrar();
+		Busqueda__administrador_ busquedaAdmin = new Busqueda__administrador_();
+		
+		/***********CABECERAS FUNCIONALES************/
+		
+		//Cabecera Administrador
+		
+		cabeceraAdmin.getbSalir2().addClickListener(event -> {
+			cambiarPantalla(inicioAdministrador);
+		});
+		
+		cabeceraAdmin.getbInicio2().addClickListener(event -> {
+			cambiarPantalla(paginaPrincipalAdministrador);
+			paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+		});
+		
+		cabeceraAdmin.getbAdministrar2().addClickListener(event -> {
+			cambiarPantalla(administrar);
+			administrar.setCabecera(cabeceraAdmin);
+		});
+		
+		cabeceraAdmin.getbBusqueda2().addClickListener(event -> {
+			cambiarPantalla(busquedaAdmin);
+			busquedaAdmin.setCabecera(cabeceraAdmin);
+		});
+		
+		/*********BOTONES CAMBIO DE PANTALLA*********/
+		
+		
+		
+		/**********SET CABECERA FUNCIONAL************/
+		
+		//paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+		//administrar.setCabecera(cabeceraAdmin);
+		
+		/**************PANTALLA INICIAL**************/
+		
+		inicioAdministrador = new Iniciar_sesion__administrador_();
+		
+		inicioAdministrador.getInUser().focus();
+		
+		//Listeners para el cambio de pantalla
+		
+		inicioAdministrador.getbIniciarSesion().addClickListener(event -> {
+			inicioSesionAdministrador(paginaPrincipalAdministrador);
+		});
+		
+		inicioAdministrador.getInPass().addKeyPressListener(Key.ENTER, e -> {
+			inicioSesionAdministrador(paginaPrincipalAdministrador);
+	    });
+		
+		//Puesta de pantalla en funcionamiento
+		
+		cambiarPantalla(inicioAdministrador);
+		paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+		
+		/********************************************/
+		
+		/********************TESTING**************************/
+		//cambiarPantalla(paginaPrincipalAdministrador);
+
+	}
+
+	private void cambiarPantalla(Component pantalla) {
+
+		if (getComponentCount() != 0)
+			remove(pantallaActual);
+		pantallaActual = pantalla;
+		add(pantallaActual);
+
+	}
+
+	private void inicioSesionAdministrador(Component pantalla) {
+
+		if (inicioAdministrador.getInUser().getValue().equals("admin") && inicioAdministrador.getInPass().getValue().equals("prueba")) {
+			cambiarPantalla(pantalla);
+			Notification.show("Acceso concedido");
+			inicioAdministrador.getInUser().setValue("");
+			inicioAdministrador.getInPass().setValue("");
+		} else {
+			
+			Notification.show("Credenciales incorrectas");
+			
+		}
+
 	}
 
 }

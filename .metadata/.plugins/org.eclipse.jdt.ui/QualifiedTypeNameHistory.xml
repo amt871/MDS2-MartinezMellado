@@ -14,14 +14,21 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Section"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Div"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.H3"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.datepicker.DatePicker"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextArea"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
     <fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Unit"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
+    <fullyQualifiedTypeName name="vistas.VistaAdministrar"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Div"/>
+    <fullyQualifiedTypeName name="vistas.VistaDenuncias"/>
+    <fullyQualifiedTypeName name="vistas.VistaDenuncias_item"/>
+    <fullyQualifiedTypeName name="vistas.VistaBusqueda__administrador_"/>
+    <fullyQualifiedTypeName name="interfaz.Cabecera__administrador_"/>
 </qualifiedTypeNameHistroy>

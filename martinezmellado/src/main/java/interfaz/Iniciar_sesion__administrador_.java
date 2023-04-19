@@ -35,29 +35,6 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 //	}
 	
 	
-	public void iniciarSesion() {
-		
-		if(this.getInUser().getValue().equals("admin")&&this.getInPass().getValue().equals("prueba")) {
-			this.getLabelUsuario().setText("Has iniciado sesion wachinche");
-			
-		}
-		
-	}
-
-	public Iniciar_sesion__administrador_() {
-
-		this.getbIniciarSesion().addClickListener(new ComponentEventListener() {
-
-			@Override
-			public void onComponentEvent(ComponentEvent event) {
-
-				iniciarSesion();
-			}});
-		
-		this.getInPass().addKeyPressListener(Key.ENTER, e -> {
-	        iniciarSesion();
-	    });
-
-	}
+	
 
 }

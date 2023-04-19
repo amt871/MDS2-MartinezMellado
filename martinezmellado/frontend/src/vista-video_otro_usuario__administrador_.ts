@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-icons/vaadin-icons.js';
-import './vista-cabecera__administrador_';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 
 @customElement('vista-video_otro_usuario__administrador_')
 export class VistaVideo_otro_usuario__administrador_ extends LitElement {
@@ -17,8 +17,10 @@ export class VistaVideo_otro_usuario__administrador_ extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vista-cabecera__administrador_ style="width: 100%; height: 5%;"></vista-cabecera__administrador_>
- <vaadin-vertical-layout id="VerticalContainer" style="width: 100%; height: 95%;"></vaadin-vertical-layout>
+ <div id="divCabecera" style="width: 100%; height: 5%;"></div>
+ <vaadin-horizontal-layout style="width: 100%; height: 870px; flex-shrink: 0; flex-direction: column;">
+  <div id="divScroller" style="width: 100%; height: 100%; flex-shrink: 1; flex-grow: 0; align-self: stretch;"></div>
+ </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }

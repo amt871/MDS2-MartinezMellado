@@ -8,6 +8,9 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.dom.Element;
+
+import interfaz.Cabecera__administrador_;
+
 import com.vaadin.flow.component.html.Div;
 
 /**
@@ -20,9 +23,12 @@ import com.vaadin.flow.component.html.Div;
 @JsModule("./src/vista-video_otro_usuario__administrador_.ts")
 public class VistaVideo_otro_usuario__administrador_ extends LitTemplate {
 
+	private VistaCabecera__administrador_ cabecera;
 
-	@Id("VerticalContainer")
-	private VerticalLayout verticalContainer;
+	@Id("divCabecera")
+	private Div divCabecera;
+	@Id("divScroller")
+	private Div divScroller;
 
 	/**
      * Creates a new VistaVideo_otro_usuario__administrador_.
@@ -30,16 +36,34 @@ public class VistaVideo_otro_usuario__administrador_ extends LitTemplate {
     public VistaVideo_otro_usuario__administrador_() {
         // You can initialise any data required for the connected UI components here.
     	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
+    	
     }
 
-	public VerticalLayout getVerticalContainer() {
-		return verticalContainer;
+	public Div getDivCabecera() {
+		return divCabecera;
 	}
 
-	public void setVerticalContainer(VerticalLayout verticalContainer) {
-		this.verticalContainer = verticalContainer;
+	public void setDivCabecera(Div divCabecera) {
+		this.divCabecera = divCabecera;
 	}
+
+	public Div getDivScroller() {
+		return divScroller;
+	}
+
+	public void setDivScroller(Div divScroller) {
+		this.divScroller = divScroller;
+	}
+
+	public VistaCabecera__administrador_ getCabecera() {
+		return cabecera;
+	}
+
+	public void setCabecera(VistaCabecera__administrador_ cabecera) {
+		this.cabecera = cabecera;
+		this.divCabecera.add(this.cabecera);
+	}
+
     
-
     
 }

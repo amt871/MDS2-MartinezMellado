@@ -24,8 +24,6 @@ public class VistaCabecera__administrador_ extends LitTemplate {
 	private Button bBusqueda2;
 	@Id("bAdministrar2")
 	private Button bAdministrar2;
-	@Id("bPerfil2")
-	private Button bPerfil2;
 	@Id("bSalir2")
 	private Button bSalir2;
 
@@ -60,14 +58,6 @@ public class VistaCabecera__administrador_ extends LitTemplate {
 
 	public void setbAdministrar2(Button bAdministrar2) {
 		this.bAdministrar2 = bAdministrar2;
-	}
-
-	public Button getbPerfil2() {
-		return bPerfil2;
-	}
-
-	public void setbPerfil2(Button bPerfil2) {
-		this.bPerfil2 = bPerfil2;
 	}
 
 	public Button getbSalir2() {
