@@ -45,7 +45,7 @@ public class MainView extends VerticalLayout {
 	 */
 
 	private Component pantallaActual;
-	private Iniciar_sesion__administrador_ inicioAdministrador;
+	//private Iniciar_sesion__administrador_ inicioAdministrador;
 
 	public MainView() {
 		
@@ -55,10 +55,18 @@ public class MainView extends VerticalLayout {
 		
 		/***********CREACION DE PANTALLAS************/
 		
+		//Administrador
+		
+		Iniciar_sesion__administrador_ inicioAdministrador = new Iniciar_sesion__administrador_();
 		Video_otro_usuario__administrador_ paginaPrincipalAdministrador = new Video_otro_usuario__administrador_();
 		Cabecera__administrador_ cabeceraAdmin = new Cabecera__administrador_();
 		Administrar administrar = new Administrar();
 		Busqueda__administrador_ busquedaAdmin = new Busqueda__administrador_();
+		
+		//Cibernauta
+		
+		Pantalla_inicio pantallaInicioCibernauta = new Pantalla_inicio();
+		Registro registroCibernauta = new Registro();
 		
 		/***********CABECERAS FUNCIONALES************/
 		
@@ -83,9 +91,36 @@ public class MainView extends VerticalLayout {
 			busquedaAdmin.setCabecera(cabeceraAdmin);
 		});
 		
+		//Cabeceras cibernauta
+		
+		
+		
 		/*********BOTONES CAMBIO DE PANTALLA*********/
 		
 		
+		//Administrador
+		
+		inicioAdministrador.getbIniciarSesion().addClickListener(event -> {
+			//inicioSesionAdministrador(paginaPrincipalAdministrador);
+			inicioAdministrador.inicioSesionAdministrador();
+			cambiarPantalla(paginaPrincipalAdministrador);
+			paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+		});
+				
+		inicioAdministrador.getInPass().addKeyPressListener(Key.ENTER, e -> {
+			//inicioSesionAdministrador(paginaPrincipalAdministrador);
+			inicioAdministrador.inicioSesionAdministrador();
+			cambiarPantalla(paginaPrincipalAdministrador);
+			paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+		});
+		
+		//Cibernauta
+		
+		pantallaInicioCibernauta.getbRegistrarse().addClickListener(event -> {
+			
+			cambiarPantalla(registroCibernauta);
+			
+		});
 		
 		/**********SET CABECERA FUNCIONAL************/
 		
@@ -94,24 +129,19 @@ public class MainView extends VerticalLayout {
 		
 		/**************PANTALLA INICIAL**************/
 		
-		inicioAdministrador = new Iniciar_sesion__administrador_();
+		//Administrador
 		
-		inicioAdministrador.getInUser().focus();
+		//inicioAdministrador = new Iniciar_sesion__administrador_();
 		
-		//Listeners para el cambio de pantalla
 		
-		inicioAdministrador.getbIniciarSesion().addClickListener(event -> {
-			inicioSesionAdministrador(paginaPrincipalAdministrador);
-		});
+		//Puesta de pantalla en funcionamiento////////////////////////////////////////
 		
-		inicioAdministrador.getInPass().addKeyPressListener(Key.ENTER, e -> {
-			inicioSesionAdministrador(paginaPrincipalAdministrador);
-	    });
+		//cambiarPantalla(inicioAdministrador);
+		//inicioAdministrador.getInUser().focus();
 		
-		//Puesta de pantalla en funcionamiento
+		//Cibernauta
 		
-		cambiarPantalla(inicioAdministrador);
-		paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+		cambiarPantalla(pantallaInicioCibernauta);
 		
 		/********************************************/
 		
@@ -129,19 +159,19 @@ public class MainView extends VerticalLayout {
 
 	}
 
-	private void inicioSesionAdministrador(Component pantalla) {
-
-		if (inicioAdministrador.getInUser().getValue().equals("admin") && inicioAdministrador.getInPass().getValue().equals("prueba")) {
-			cambiarPantalla(pantalla);
-			Notification.show("Acceso concedido");
-			inicioAdministrador.getInUser().setValue("");
-			inicioAdministrador.getInPass().setValue("");
-		} else {
-			
-			Notification.show("Credenciales incorrectas");
-			
-		}
-
-	}
+//	private void inicioSesionAdministrador(Component pantalla) {
+//
+//		if (inicioAdministrador.getInUser().getValue().equals("admin") && inicioAdministrador.getInPass().getValue().equals("prueba")) {
+//			cambiarPantalla(pantalla);
+//			Notification.show("Acceso concedido");
+//			inicioAdministrador.getInUser().setValue("");
+//			inicioAdministrador.getInPass().setValue("");
+//		} else {
+//			
+//			Notification.show("Credenciales incorrectas");
+//			
+//		}
+//
+//	}
 
 }

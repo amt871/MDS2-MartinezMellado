@@ -21,7 +21,7 @@ export class VistaRegistro extends LitElement {
     return html`
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
  <vaadin-vertical-layout style="width: 100%; justify-content: center;">
-  <img id="img" style="width: 100%; height: 100%; margin: var(--lumo-space-m);" src="../../resources/icons/toktok2.svg">
+  <img id="img" style="width: 100%; height: 100%; margin: var(--lumo-space-m);" src="icons/toktok2.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout style="width: 100%; justify-content: center; align-items: center; height: 100%; align-self: center;">
   <vaadin-text-field id="idNombre" style="flex-shrink: 1; flex-grow: 0; width: 80%;" label="Nombre"></vaadin-text-field>

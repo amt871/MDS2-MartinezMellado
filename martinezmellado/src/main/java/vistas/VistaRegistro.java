@@ -19,6 +19,7 @@ public class VistaRegistro extends LitTemplate {
      */
     public VistaRegistro() {
         // You can initialise any data required for the connected UI components here.
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
 }

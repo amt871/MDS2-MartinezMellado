@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.Key;
@@ -34,7 +35,20 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 //		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
 //	}
 	
-	
+	public void inicioSesionAdministrador() {
+
+		if (getInUser().getValue().equals("admin") && getInPass().getValue().equals("prueba")) {
+			//cambiarPantalla(pantalla);
+			Notification.show("Acceso concedido");
+			getInUser().setValue("");
+			getInPass().setValue("");
+		} else {
+			
+			Notification.show("Credenciales incorrectas");
+			
+		}
+
+	}
 	
 
 }

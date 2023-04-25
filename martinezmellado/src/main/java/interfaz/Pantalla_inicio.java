@@ -1,6 +1,10 @@
 package interfaz;
 
-public class Pantalla_inicio {
+import com.vaadin.flow.component.notification.Notification;
+
+import vistas.VistaPantalla_inicio;
+
+public class Pantalla_inicio extends VistaPantalla_inicio {
 //	private event _acceder;
 //	private Button _registrarseB;
 //	private Button _iniciarSesionB;
@@ -8,11 +12,12 @@ public class Pantalla_inicio {
 //	private ImageIcon _logoII;
 //	private Label _nombreAppL;
 //	private Label _esloganL;
-	public Cibernauta _cibernauta;
-	public Iniciar_sesion _iniciar_sesion;
-	public Registro _registro;
-
-	public void acceder() {
-		throw new UnsupportedOperationException();
-	}
+//	public Cibernauta _cibernauta;
+//	public Iniciar_sesion _iniciar_sesion;
+//	public Registro _registro;
+//
+//	public void acceder() {
+//		throw new UnsupportedOperationException();
+//	}
+	
 }
