@@ -16,15 +16,15 @@ export class VistaConfirmar_codigo extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
+<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; position: absolute;">
  <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; height: 30%; width: 100%;">
-  <img src="../../resources/icons/toktok2.svg">
+  <img src="icons/toktok2.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="height: 100%; width: 100%; align-items: center; justify-content: center;">
-  Introduzca el codigo que le hemos enviado
+   Introduzca el codigo que le hemos enviado 
   <vaadin-text-field id="idCodigo" style="width: 70%;"></vaadin-text-field>
-  <vaadin-button id="idBoton" style="width: 20%;">
-   Enviar 
+  <vaadin-button id="bEnviar" style="width: 20%;">
+    Enviar 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>

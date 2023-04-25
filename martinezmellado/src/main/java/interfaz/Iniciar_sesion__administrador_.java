@@ -35,16 +35,21 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 //		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
 //	}
 	
-	public void inicioSesionAdministrador() {
+	public boolean inicioSesionAdministrador() {
 
 		if (getInUser().getValue().equals("admin") && getInPass().getValue().equals("prueba")) {
 			//cambiarPantalla(pantalla);
 			Notification.show("Acceso concedido");
 			getInUser().setValue("");
 			getInPass().setValue("");
+			
+			return true;
+			
 		} else {
 			
 			Notification.show("Credenciales incorrectas");
+			
+			return false;
 			
 		}
 

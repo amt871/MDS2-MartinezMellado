@@ -16,8 +16,10 @@ export class VistaAdministrar extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <div id="divCabecera" style="width: 100%; height: 5%;"></div>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="height: 5%; width: 100%;">
+  <div id="divCabecera" style="width: 100%; height: 100%;"></div>
+ </vaadin-vertical-layout>
  <vaadin-horizontal-layout theme="spacing-xl" style="width: 100%; height: 5%; align-items: center; justify-content: center;">
   <vaadin-button style="width: 20%;" id="bTodas">
     Todas 
@@ -32,7 +34,9 @@ export class VistaAdministrar extends LitElement {
     Aplicadas 
   </vaadin-button>
  </vaadin-horizontal-layout>
- <div id="divScrollerDenuncias" style="width: 100%; height: 825px; flex-shrink: 0;"></div>
+ <vaadin-vertical-layout style="height: 90%; width: 100%;">
+  <div id="divScrollerDenuncias" style="width: 100%; height: 100%; flex-shrink: 0;"></div>
+ </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

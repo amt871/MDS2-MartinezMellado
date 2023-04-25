@@ -34,4 +34,15 @@
     <fullyQualifiedTypeName name="vistas.VistaPantalla_inicio"/>
     <fullyQualifiedTypeName name="vistas.VistaRegistro"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
+    <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion"/>
+    <fullyQualifiedTypeName name="vistas.VistaRecuperar_contrasenna"/>
+    <fullyQualifiedTypeName name="vistas.VistaConfirmar_codigo"/>
+    <fullyQualifiedTypeName name="vistas.VistaCabecera_usuario_no_registrado"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.web.servlet.error.ErrorController"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+    <fullyQualifiedTypeName name="vistas.VistaInicio_no_registrado_item"/>
+    <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
+    <fullyQualifiedTypeName name="vistas.VistaBuscar__no_registrado_"/>
+    <fullyQualifiedTypeName name="vistas.VistaMi_cabecera"/>
+    <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario"/>
 </qualifiedTypeNameHistroy>

@@ -20,7 +20,7 @@ export class VistaVideo_otro_usuario_item extends LitElement {
     return html`
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; padding: var(--lumo-space-m);">
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
-  <img id="idVideo" style="width: 100%; height: 100%;" src="../../resources/icons/video.svg">
+  <img id="idVideo" style="width: 100%; height: 100%;" src="icons/video.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
   <iron-icon style="width: 30%; height: 30%; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m);" icon="lumo:user"></iron-icon>Usuario 

@@ -68,12 +68,4 @@ public class VistaIniciar_sesion__administrador_ extends LitTemplate {
 		this.labelUsuario = labelUsuario;
 	}
 
-	public HorizontalLayout getPrincipalLayout() {
-		return principalLayout;
-	}
-
-	public void setPrincipalLayout(HorizontalLayout principalLayout) {
-		this.principalLayout = principalLayout;
-	}
-
 }

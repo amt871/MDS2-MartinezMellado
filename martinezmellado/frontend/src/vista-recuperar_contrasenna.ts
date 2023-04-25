@@ -17,15 +17,15 @@ export class VistaRecuperar_contrasenna extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
+<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 30%; align-items: center; justify-content: center;">
-  <img style="align-self: center;" src="../../resources/icons/toktok2.svg">
+  <img style="align-self: center;" src="icons/toktok2.svg">
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout theme="spacing" style="height: 100%; width: 100%; justify-content: center; align-items: center;">
-  Introduzca su correo electronico, le enviaremos un codigo de seguridad.
+   Introduzca su correo electronico, le enviaremos un codigo de seguridad. 
   <vaadin-text-field id="idCorreo" style="width: 70%;"></vaadin-text-field>
-  <vaadin-button id="idBoton" style="width: 20%;">
-   Enviar 
+  <vaadin-button id="bEnviar" style="width: 20%;">
+    Enviar 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>

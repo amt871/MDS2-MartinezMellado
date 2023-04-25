@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-busqueda__administrador_')
 export class VistaBusqueda__administrador_ extends LitElement {
@@ -17,10 +17,12 @@ export class VistaBusqueda__administrador_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <div id="divCabecera" style="width: 100%; height: 5%;"></div>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="height: 5%; width: 100%;">
+  <div id="divCabecera" style="width: 100%; height: 100%;"></div>
+ </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 100%;">
-  <vaadin-vertical-layout style="width: 100%; align-items: center; justify-content: flex-start;" theme="spacing">
+  <vaadin-vertical-layout style="width: 100%; align-items: center; justify-content: flex-start; height: 100%;" theme="spacing">
    <label style="margin-top: var(--lumo-space-m);">Videos de hashtag mas relevantes</label>
    <vaadin-horizontal-layout style="width: 100%; align-self: center; justify-content: space-around; align-items: center;">
     <vaadin-vertical-layout theme="spacing-xs" style="align-items: center; justify-content: center;">

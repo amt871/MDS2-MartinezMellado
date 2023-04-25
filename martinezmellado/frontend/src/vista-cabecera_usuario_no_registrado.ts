@@ -16,24 +16,24 @@ export class VistaCabecera_usuario_no_registrado extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; background-color: black;">
  <vaadin-horizontal-layout style="width: 100%; height: 100%;">
   <vaadin-horizontal-layout style="width: 100%; align-items: center; margin-left: var(--lumo-space-xl);">
-   <vaadin-button>
-    Inicio
+   <vaadin-button id="bInicio" style="background-color: white; color: black;">
+     Inicio 
    </vaadin-button>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 100%; justify-content: center; align-items: center;">
-   <vaadin-button>
-    Busqueda
+   <vaadin-button id="bBusqueda" style="background-color: white; color: black;">
+     Busqueda 
    </vaadin-button>
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout theme="spacing-xl" style="width: 100%; justify-content: flex-end; align-items: center; margin-right: var(--lumo-space-xl);">
-   <vaadin-button>
-    Iniciar sesion
+   <vaadin-button id="bIniciarSesion" style="background-color: white; color: black;">
+     Iniciar sesion 
    </vaadin-button>
-   <vaadin-button>
-    Registrarse
+   <vaadin-button id="bRegistrarse" style="background-color: white; color: black;">
+     Registrarse 
    </vaadin-button>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>

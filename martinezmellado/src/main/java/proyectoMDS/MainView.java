@@ -17,6 +17,8 @@ import com.vaadin.flow.server.PWA;
 import interfaz.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.servlet.error.ErrorController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * A sample Vaadin view class.
@@ -55,11 +57,16 @@ public class MainView extends VerticalLayout {
 		
 		/***********CREACION DE PANTALLAS************/
 		
+		//Cabeceras
+		
+		Cabecera__administrador_ cabeceraAdmin = new Cabecera__administrador_();
+		Cabecera_usuario_no_registrado cabeceraNoReg = new Cabecera_usuario_no_registrado();
+		Mi_cabecera cabeceraReg = new Mi_cabecera();
+		
 		//Administrador
 		
 		Iniciar_sesion__administrador_ inicioAdministrador = new Iniciar_sesion__administrador_();
 		Video_otro_usuario__administrador_ paginaPrincipalAdministrador = new Video_otro_usuario__administrador_();
-		Cabecera__administrador_ cabeceraAdmin = new Cabecera__administrador_();
 		Administrar administrar = new Administrar();
 		Busqueda__administrador_ busquedaAdmin = new Busqueda__administrador_();
 		
@@ -67,6 +74,12 @@ public class MainView extends VerticalLayout {
 		
 		Pantalla_inicio pantallaInicioCibernauta = new Pantalla_inicio();
 		Registro registroCibernauta = new Registro();
+		Iniciar_sesion iniciarSesionCibernauta = new Iniciar_sesion();
+		Recuperar_Contrasenna recContra = new Recuperar_Contrasenna();
+		Confirmar_codigo confCod = new Confirmar_codigo();
+		Inicio_no_registrado inicioNoRegistrado = new Inicio_no_registrado();
+		Buscar__no_registrado_ busquedaNoReg = new Buscar__no_registrado_();
+		Video_otro_usuario inicioRegistrado = new Video_otro_usuario();
 		
 		/***********CABECERAS FUNCIONALES************/
 		
@@ -93,7 +106,61 @@ public class MainView extends VerticalLayout {
 		
 		//Cabeceras cibernauta
 		
+		//Cabecera Usuario No Registrado
 		
+		cabeceraNoReg.getbInicio().addClickListener(event -> {
+			cambiarPantalla(inicioNoRegistrado);
+			inicioNoRegistrado.setCabecera(cabeceraNoReg);
+		});
+		
+		cabeceraNoReg.getbBusqueda().addClickListener(event -> {
+			cambiarPantalla(busquedaNoReg);
+			busquedaNoReg.setCabecera(cabeceraNoReg);
+		});
+		
+		cabeceraNoReg.getbIniciarSesion().addClickListener(event -> {
+			
+			cambiarPantalla(iniciarSesionCibernauta);
+			
+		});
+		
+		cabeceraNoReg.getbRegistrarse().addClickListener(event -> {
+			
+			cambiarPantalla(registroCibernauta);
+			
+		});
+		
+		//Cabecera Registrado
+		
+		cabeceraReg.getbInicio().addClickListener(event -> {
+			
+			cambiarPantalla(inicioRegistrado);
+			
+		});
+		
+		cabeceraReg.getbNotis().addClickListener(event -> {
+			
+			
+			
+		});
+		
+		cabeceraReg.getbBusqueda().addClickListener(event -> {
+			
+			
+			
+		});
+		
+		cabeceraReg.getbPublicar().addClickListener(event -> {
+			
+			
+			
+		});
+		
+		cabeceraReg.getbPerfil().addClickListener(event -> {
+			
+			
+			
+		});
 		
 		/*********BOTONES CAMBIO DE PANTALLA*********/
 		
@@ -102,16 +169,18 @@ public class MainView extends VerticalLayout {
 		
 		inicioAdministrador.getbIniciarSesion().addClickListener(event -> {
 			//inicioSesionAdministrador(paginaPrincipalAdministrador);
-			inicioAdministrador.inicioSesionAdministrador();
-			cambiarPantalla(paginaPrincipalAdministrador);
-			paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+			if(inicioAdministrador.inicioSesionAdministrador()) {
+				cambiarPantalla(paginaPrincipalAdministrador);
+				paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+			}
 		});
 				
 		inicioAdministrador.getInPass().addKeyPressListener(Key.ENTER, e -> {
 			//inicioSesionAdministrador(paginaPrincipalAdministrador);
-			inicioAdministrador.inicioSesionAdministrador();
-			cambiarPantalla(paginaPrincipalAdministrador);
-			paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+			if(inicioAdministrador.inicioSesionAdministrador()) {
+				cambiarPantalla(paginaPrincipalAdministrador);
+				paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
+			}
 		});
 		
 		//Cibernauta
@@ -122,10 +191,46 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
-		/**********SET CABECERA FUNCIONAL************/
+		pantallaInicioCibernauta.getbIniciarSesion().addClickListener(event -> {
+			
+			cambiarPantalla(iniciarSesionCibernauta);
+			
+		});
 		
-		//paginaPrincipalAdministrador.setCabecera(cabeceraAdmin);
-		//administrar.setCabecera(cabeceraAdmin);
+		pantallaInicioCibernauta.getbAcceder().addClickListener(event -> {
+			
+			cambiarPantalla(inicioNoRegistrado);
+			inicioNoRegistrado.setCabecera(cabeceraNoReg);
+			
+		});
+		
+		iniciarSesionCibernauta.getbIniciarSesion().addClickListener(event ->{
+			
+			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
+				cambiarPantalla(inicioRegistrado);
+			}
+			
+		});
+		
+		iniciarSesionCibernauta.getInPass().addKeyPressListener(Key.ENTER, e -> {
+			
+			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
+				cambiarPantalla(inicioRegistrado);
+			}
+			
+		});
+		
+		iniciarSesionCibernauta.getbRecuperarContrasenna().addClickListener(event -> {
+			
+			cambiarPantalla(recContra);
+			
+		});
+		
+		recContra.getbEnviar().addClickListener(event -> {
+			
+			cambiarPantalla(confCod);
+			
+		});
 		
 		/**************PANTALLA INICIAL**************/
 		
@@ -136,17 +241,15 @@ public class MainView extends VerticalLayout {
 		
 		//Puesta de pantalla en funcionamiento////////////////////////////////////////
 		
-		cambiarPantalla(inicioAdministrador);
-		inicioAdministrador.getInUser().focus();
+		//cambiarPantalla(inicioAdministrador);
+		//inicioAdministrador.getInUser().focus();
 		
 		//Cibernauta
 		
-		//cambiarPantalla(pantallaInicioCibernauta);
+		cambiarPantalla(pantallaInicioCibernauta);
 		
 		/********************************************/
 		
-		/********************TESTING**************************/
-		//cambiarPantalla(paginaPrincipalAdministrador);
 
 	}
 
