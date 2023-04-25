@@ -16,18 +16,18 @@ export class VistaPantalla_inicio extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout style="width: 100%; height: 100%; flex-direction: row; padding: var(--lumo-space-m); align-items: center; justify-content: center;" id="layoutPrincipal">
- <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; justify-content: center; align-items: center; align-self: center;">
-  <img id="img" style="width: 90%; height: 90%; margin: var(--lumo-space-m);" src="icons/toktok2.svg">
+<vaadin-horizontal-layout style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%;">
+ <vaadin-vertical-layout style="width: 50%; height: 100%; flex-shrink: 0; align-items: center; justify-content: center; flex-grow: 0;">
+  <img id="img" style="width: 90%; flex-shrink: 0; flex-grow: 0; height: 90%;" src="icons/toktok2.svg">
  </vaadin-vertical-layout>
- <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; align-items: center; justify-content: center; flex-shrink: 0; align-self: center;">
-  <vaadin-button style="width: 60%;" id="bRegistrarse">
+ <vaadin-vertical-layout theme="spacing" style="width: 50%; flex-shrink: 0; flex-grow: 0; height: 100%; align-items: center; justify-content: center; align-self: center;">
+  <vaadin-button style="flex-shrink: 0; width: 60%; flex-grow: 0;" id="bRegistrarse">
     Registrarse 
   </vaadin-button>
-  <vaadin-button style="width: 60%;" id="bIniciarSesion">
+  <vaadin-button style="flex-shrink: 0; width: 60%; flex-grow: 0;" id="bIniciarSesion">
     Iniciar Sesión 
   </vaadin-button>
-  <vaadin-button style="width: 60%;" id="bAcceder">
+  <vaadin-button style="flex-shrink: 0; width: 60%; flex-grow: 0;" id="bAcceder">
     Acceder 
   </vaadin-button>
  </vaadin-vertical-layout>

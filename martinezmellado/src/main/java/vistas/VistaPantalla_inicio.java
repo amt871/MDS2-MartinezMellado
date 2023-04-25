@@ -3,6 +3,7 @@ package vistas;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.dom.Element;
@@ -25,17 +26,15 @@ public class VistaPantalla_inicio extends LitTemplate {
 	private Button bIniciarSesion;
 	@Id("bAcceder")
 	private Button bAcceder;
-	@Id("layoutPrincipal")
-	private HorizontalLayout layoutPrincipal;
 	/**
      * Creates a new VistaPantalla_inicio.
      */
 	
     public VistaPantalla_inicio() {
         // You can initialise any data required for the connected UI components here.
-    	//this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
-    	//layoutPrincipal.setSizeFull();
-    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
+    	this.getElement().setAttribute("style", "height: 100%; width: 100%");
+    	//this.getElement().getStyle().set("height", "100%");
+    	//this.getElement().getStyle().set("width", "100%");
     }
     
 	public Button getbRegistrarse() {
