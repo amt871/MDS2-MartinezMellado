@@ -45,4 +45,17 @@
     <fullyQualifiedTypeName name="vistas.VistaBuscar__no_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_cabecera"/>
     <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario"/>
+    <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario_item"/>
+    <fullyQualifiedTypeName name="vistas.VistaNotificaciones_item"/>
+    <fullyQualifiedTypeName name="vistas.VistaNotificaciones"/>
+    <fullyQualifiedTypeName name="vistas.VistaBuscar__usuario_registrado_"/>
+    <fullyQualifiedTypeName name="vistas.VistaPublicar"/>
+    <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
+    <fullyQualifiedTypeName name="vistas.VistaCabecera_comercial"/>
+    <fullyQualifiedTypeName name="vistas.VistaMi_perfil"/>
+    <fullyQualifiedTypeName name="vistas.VistaConfigurar"/>
+    <fullyQualifiedTypeName name="vistas.VistaConfigurar_mi_perfil"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_mis_seguidores"/>
+    <fullyQualifiedTypeName name="interfaz.Configurar"/>
+    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
 </qualifiedTypeNameHistroy>

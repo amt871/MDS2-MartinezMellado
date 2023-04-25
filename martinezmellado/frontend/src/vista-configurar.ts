@@ -17,23 +17,23 @@ export class VistaConfigurar extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; background-color: #d8d8d8;">
  <vaadin-vertical-layout style="height: 50%; width: 100%; align-items: center; justify-content: center;">
-  <img style="width: 20%; height: 20%; margin-top: var(--lumo-space-xl);" src="../../resources/icons/user.svg">
+  <img style="width: 20%; height: 20%; margin-top: var(--lumo-space-xl);" src="icons/user.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="height: 50%; width: 100%; align-items: center; justify-content: center;">
-  <vaadin-button style="background-color: black; color: white;">
-   Siguiendo
+  <vaadin-button style="background-color: black; color: white;" id="bSiguiendo">
+    Siguiendo 
   </vaadin-button>
-  <vaadin-button style="background-color: black; color: white;">
-   Seguidores
+  <vaadin-button style="background-color: black; color: white;" id="bSeguidores">
+    Seguidores 
   </vaadin-button>
-  <vaadin-button style="background-color: black; color: white;">
-   Cambiar a cuenta privada/publica
+  <vaadin-button style="background-color: black; color: white;" id="bCambioPrivacidad">
+    Cambiar a cuenta privada/publica 
   </vaadin-button>
-  <vaadin-button style="margin-bottom: var(--lumo-space-xl); background-color: black; color: white;">
-   Modificar datos
+  <vaadin-button style="margin-bottom: var(--lumo-space-xl); background-color: black; color: white;" id="bModificarDatos">
+    Modificar datos 
   </vaadin-button>
-  <vaadin-button style="margin-top: var(--lumo-space-xl); background-color: red; color: white;">
-   Cerrar sesion
+  <vaadin-button style="margin-top: var(--lumo-space-xl); background-color: red; color: white;" id="bCerrarSesion">
+    Cerrar sesion 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>

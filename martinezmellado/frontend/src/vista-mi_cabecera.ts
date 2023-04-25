@@ -18,7 +18,7 @@ export class VistaMi_cabecera extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: center; align-items: center; background-color: black;">
- <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center; background-color: black; align-self: center;">
+ <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center; background-color: black; align-self: center; height: 100%;">
   <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; margin-left: var(--lumo-space-m); height: 100%;">
    <vaadin-button id="bInicio" style="background-color: white; color: black;">
      Inicio 

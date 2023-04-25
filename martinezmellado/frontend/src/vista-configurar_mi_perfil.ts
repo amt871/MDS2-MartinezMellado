@@ -1,11 +1,9 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import './vista-mi_cabecera';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-checkbox/src/vaadin-checkbox.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
-import './vista-configurar';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-configurar_mi_perfil')
 export class VistaConfigurar_mi_perfil extends LitElement {
@@ -20,23 +18,25 @@ export class VistaConfigurar_mi_perfil extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
- <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="width: 100%; height: 5%;">
+  <div id="divCabecera" style="width: 100%; height: 100%;"></div>
+ </vaadin-vertical-layout>
+ <vaadin-horizontal-layout style="width: 100%; height: 95%;">
   <vaadin-vertical-layout theme="spacing" style="height: 100%; width: 35%; align-items: center; justify-content: center;">
    <vaadin-text-field id="idUsuario" label="Usuario"></vaadin-text-field>
    <vaadin-text-field id="idNombre" label="Nombre"></vaadin-text-field>
    <vaadin-text-field id="idFechaDeNaciemiento" label="Fecha de nacimiento"></vaadin-text-field>
    <vaadin-text-field id="idCorreoElectronico" label="Correo electronico"></vaadin-text-field>
    <vaadin-text-field id="idDescripcion" label="Descipcion"></vaadin-text-field>
-   <vaadin-button id="icCambiarContraseña">
+   <vaadin-button id="bCambiarContrasenna">
      Cambiar contraseña 
    </vaadin-button>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 35%; height: 100%; align-items: center; justify-content: space-around;">
    <vaadin-vertical-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center;">
-    <img style="width: 40%;" src="../../resources/icons/user.svg">
-    <vaadin-button id="icCambiar">
+    <img style="width: 40%;" src="icons/user.svg">
+    <vaadin-button id="bCambiarFoto">
       Cambiar 
     </vaadin-button>
    </vaadin-vertical-layout>
@@ -50,7 +50,7 @@ export class VistaConfigurar_mi_perfil extends LitElement {
     </vaadin-checkbox>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
-  <vista-configurar style="width: 30%; height: 100%;"></vista-configurar>
+  <div id="divConfigurar" style="width: 30%; height: 100%;"></div>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

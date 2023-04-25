@@ -77,9 +77,28 @@ public class MainView extends VerticalLayout {
 		Iniciar_sesion iniciarSesionCibernauta = new Iniciar_sesion();
 		Recuperar_Contrasenna recContra = new Recuperar_Contrasenna();
 		Confirmar_codigo confCod = new Confirmar_codigo();
+		
+		//No registrado
+		
 		Inicio_no_registrado inicioNoRegistrado = new Inicio_no_registrado();
 		Buscar__no_registrado_ busquedaNoReg = new Buscar__no_registrado_();
+		
+		//Registrado
+		
 		Video_otro_usuario inicioRegistrado = new Video_otro_usuario();
+		Notificaciones notis = new Notificaciones();
+		Buscar__usuario_registrado_ busquedaRegistrado = new Buscar__usuario_registrado_();
+		Mi_perfil miPerfil = new Mi_perfil();
+		
+		//Configurar
+		
+		Configurar configurar = new Configurar();
+		Configurar_mi_perfil configPerf = new Configurar_mi_perfil();
+		Ver_mis_seguidores seguidores = new Ver_mis_seguidores();
+		
+		//Registrado y Comercial
+		
+		Publicar publicar = new Publicar();
 		
 		/***********CABECERAS FUNCIONALES************/
 		
@@ -135,28 +154,69 @@ public class MainView extends VerticalLayout {
 		cabeceraReg.getbInicio().addClickListener(event -> {
 			
 			cambiarPantalla(inicioRegistrado);
+			inicioRegistrado.setCabecera(cabeceraReg);
 			
 		});
 		
 		cabeceraReg.getbNotis().addClickListener(event -> {
 			
-			
+			cambiarPantalla(notis);
+			notis.setCabecera(cabeceraReg);
 			
 		});
 		
 		cabeceraReg.getbBusqueda().addClickListener(event -> {
 			
-			
+			cambiarPantalla(busquedaRegistrado);
+			busquedaRegistrado.setCabecera(cabeceraReg);
 			
 		});
 		
 		cabeceraReg.getbPublicar().addClickListener(event -> {
 			
-			
+			cambiarPantalla(publicar);
+			publicar.setCabecera(cabeceraReg);
 			
 		});
 		
 		cabeceraReg.getbPerfil().addClickListener(event -> {
+			
+			cambiarPantalla(miPerfil);
+			miPerfil.setCabecera(cabeceraReg);
+			
+		});
+		
+		/************PANTALLA CONFIGURAR*************/
+		
+		configurar.getbCerrarSesion().addClickListener(event -> {
+			
+			cambiarPantalla(pantallaInicioCibernauta);
+			
+		});
+		
+		configurar.getbModificarDatos().addClickListener(event -> {
+			
+			cambiarPantalla(configPerf);
+			configPerf.setCabecera(cabeceraReg);
+			configPerf.setConfig(configurar);
+			
+		});
+		
+		configurar.getbCambioPrivacidad().addClickListener(event -> {
+			
+			
+			
+		});
+
+		configurar.getbSeguidores().addClickListener(event -> {
+	
+			cambiarPantalla(seguidores);
+			seguidores.setCabecera(cabeceraReg);
+			seguidores.setConfig(configurar);
+	
+		});
+		
+		configurar.getbSiguiendo().addClickListener(event -> {
 			
 			
 			
@@ -208,6 +268,7 @@ public class MainView extends VerticalLayout {
 			
 			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
 				cambiarPantalla(inicioRegistrado);
+				inicioRegistrado.setCabecera(cabeceraReg);
 			}
 			
 		});
@@ -216,6 +277,7 @@ public class MainView extends VerticalLayout {
 			
 			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
 				cambiarPantalla(inicioRegistrado);
+				inicioRegistrado.setCabecera(cabeceraReg);
 			}
 			
 		});
@@ -229,6 +291,16 @@ public class MainView extends VerticalLayout {
 		recContra.getbEnviar().addClickListener(event -> {
 			
 			cambiarPantalla(confCod);
+			
+		});
+		
+		//Usuario Registrado
+		
+		miPerfil.getbConfigurar().addClickListener(event -> {
+			
+			cambiarPantalla(configPerf);
+			configPerf.setCabecera(cabeceraReg);
+			configPerf.setConfig(configurar);
 			
 		});
 		

@@ -1,6 +1,8 @@
 package interfaz;
 
-public class Cabecera_comercial extends Cabecera_usuario_registrado {
+import vistas.VistaCabecera_comercial;
+
+public class Cabecera_comercial extends VistaCabecera_comercial {
 //	private imageButton _cerrar_sesion;
 //	private Button _perfilB;
 //	private logOut _logOutL;

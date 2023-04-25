@@ -30,6 +30,10 @@ public class Video_otro_usuario__administrador_ extends VistaVideo_otro_usuario_
 
 	//private Cabecera__administrador_ cabecera;
 	//VerticalLayout layoutPrincipal;
+	
+	private Scroller scroller;
+	private VerticalLayout vl;
+	//private ArrayList<Video_otro_usuario__administrador__item> array;
 
 	public Video_otro_usuario__administrador_() {
 		
@@ -76,30 +80,51 @@ public class Video_otro_usuario__administrador_ extends VistaVideo_otro_usuario_
 //		
 //		layoutPrincipal.add(container);
 		
-		Scroller scroller = new Scroller();
+		/*Scroller */scroller = new Scroller();
+		vl = new VerticalLayout();
+		//array = new ArrayList<Video_otro_usuario__administrador__item>();
 
 		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
 
 		scroller.getStyle().set("width", "100%");
 		scroller.getStyle().set("height", "100%");
 
-		VerticalLayout vl = new VerticalLayout();
+		//VerticalLayout vl = new VerticalLayout();
 
 		scroller.setContent(vl);
 
 		vl.getStyle().set("width", "100%");
 		vl.getStyle().set("height", "100%");
 
-		ArrayList<Video_otro_usuario__administrador__item> array = new ArrayList<Video_otro_usuario__administrador__item>();
+		//ArrayList<Video_otro_usuario__administrador__item> array = new ArrayList<Video_otro_usuario__administrador__item>();
 
-		array.add(new Video_otro_usuario__administrador__item());
-		array.add(new Video_otro_usuario__administrador__item());
-
-		for (int i = 0; i < array.size(); i++)
-			vl.add(array.get(i));
-
+//		array.add(new Video_otro_usuario__administrador__item());
+//		array.add(new Video_otro_usuario__administrador__item());
+//
+//		for (int i = 0; i < array.size(); i++)
+//			vl.add(array.get(i));
+//
+//		this.getDivScroller().add(scroller);
 		this.getDivScroller().add(scroller);
+		
+		addItem();
 
+	}
+	
+	public void addItem() {
+		
+		//array.add(new Video_otro_usuario__administrador__item());
+		//array.add(new Video_otro_usuario__administrador__item());
+
+		//for (int i = 0; i < array.size(); i++)
+			//vl.add(array.get(i));
+
+		//this.getDivScroller().add(scroller);
+		//this.getDivScroller();
+		
+		vl.add(new Video_otro_usuario__administrador__item());
+		vl.add(new Video_otro_usuario__administrador__item());
+		
 	}
 
 	/*public Cabecera__administrador_ getCabecera() {

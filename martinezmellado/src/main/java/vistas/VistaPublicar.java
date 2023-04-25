@@ -3,6 +3,11 @@ package vistas;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.template.Id;
+
+import interfaz.Cabecera_comercial;
+import interfaz.Mi_cabecera;
 
 /**
  * A Designer generated component for the vista-publicar template.
@@ -14,11 +19,44 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 @JsModule("./src/vista-publicar.ts")
 public class VistaPublicar extends LitTemplate {
 
-    /**
+	private Mi_cabecera cabecera;
+	private Cabecera_comercial cabeceraCom;
+    @Id("divCabecera")
+	private Div divCabecera;
+
+	/**
      * Creates a new VistaPublicar.
      */
     public VistaPublicar() {
         // You can initialise any data required for the connected UI components here.
     }
+
+	public Div getDivCabecera() {
+		return divCabecera;
+	}
+
+	public void setDivCabecera(Div divCabecera) {
+		this.divCabecera = divCabecera;
+	}
+
+	public Mi_cabecera getCabecera() {
+		return cabecera;
+	}
+
+	public void setCabecera(Mi_cabecera cabecera) {
+		this.cabecera = cabecera;
+		getDivCabecera().add(cabecera);
+	}
+
+	public Cabecera_comercial getCabeceraCom() {
+		return cabeceraCom;
+	}
+
+	public void setCabeceraCom(Cabecera_comercial cabeceraCom) {
+		this.cabeceraCom = cabeceraCom;
+		getDivCabecera().add(cabeceraCom);
+	}
+    
+    
 
 }
