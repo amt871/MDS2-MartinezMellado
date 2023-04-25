@@ -18,11 +18,11 @@ export class VistaIniciar_sesion__administrador_ extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout class="content" style="align-items: center; justify-content: center; width: 100%; height: 100%;" id="principalLayout">
- <vaadin-vertical-layout style="width: 50%; height: 100%; align-items: center; align-self: center; justify-content: center;">
-  <img style="width: 90%; height: 90%; align-self: center; margin-top: var(--lumo-space-xl); padding-top: var(--lumo-space-xl);" src="icons/toktok2.svg">
+<vaadin-horizontal-layout class="content" style="align-items: center; justify-content: center; width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="width: 50%; height: 100%; align-items: center; justify-content: center; flex-shrink: 0;">
+  <img style="width: 90%; height: 90%;" src="icons/toktok2.svg">
  </vaadin-vertical-layout>
- <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; align-items: center; align-self: center;">
+ <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; align-items: center; flex-shrink: 0;">
   <label id="LabelUsuario" style="margin-top: 20%;">Administrador </label>
   <vaadin-text-field label="Usuario" id="inUser" style="flex-shrink: 0; flex-grow: 0; width: 60%; margin-top: 20%;"></vaadin-text-field>
   <vaadin-password-field label="Contraseña" value="secret1" id="inPass" style="width: 60%;" has-value></vaadin-password-field>

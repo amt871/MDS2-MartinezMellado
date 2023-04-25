@@ -31,4 +31,7 @@
     <fullyQualifiedTypeName name="vistas.VistaDenuncias_item"/>
     <fullyQualifiedTypeName name="vistas.VistaBusqueda__administrador_"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera__administrador_"/>
+    <fullyQualifiedTypeName name="vistas.VistaPantalla_inicio"/>
+    <fullyQualifiedTypeName name="vistas.VistaRegistro"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
 </qualifiedTypeNameHistroy>

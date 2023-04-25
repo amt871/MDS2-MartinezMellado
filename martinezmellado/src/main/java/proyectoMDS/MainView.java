@@ -136,12 +136,12 @@ public class MainView extends VerticalLayout {
 		
 		//Puesta de pantalla en funcionamiento////////////////////////////////////////
 		
-		//cambiarPantalla(inicioAdministrador);
-		//inicioAdministrador.getInUser().focus();
+		cambiarPantalla(inicioAdministrador);
+		inicioAdministrador.getInUser().focus();
 		
 		//Cibernauta
 		
-		cambiarPantalla(pantallaInicioCibernauta);
+		//cambiarPantalla(pantallaInicioCibernauta);
 		
 		/********************************************/
 		
