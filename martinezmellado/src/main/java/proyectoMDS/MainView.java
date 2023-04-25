@@ -95,6 +95,7 @@ public class MainView extends VerticalLayout {
 		Configurar configurar = new Configurar();
 		Configurar_mi_perfil configPerf = new Configurar_mi_perfil();
 		Ver_mis_seguidores seguidores = new Ver_mis_seguidores();
+		Ver_siguiendo siguiendo = new Ver_siguiendo();
 		
 		//Registrado y Comercial
 		
@@ -218,7 +219,9 @@ public class MainView extends VerticalLayout {
 		
 		configurar.getbSiguiendo().addClickListener(event -> {
 			
-			
+			cambiarPantalla(siguiendo);
+			siguiendo.setCabecera(cabeceraReg);
+			siguiendo.setConfig(configurar);
 			
 		});
 		
@@ -301,6 +304,12 @@ public class MainView extends VerticalLayout {
 			cambiarPantalla(configPerf);
 			configPerf.setCabecera(cabeceraReg);
 			configPerf.setConfig(configurar);
+			
+		});
+		
+		registroCibernauta.getbAtras().addClickListener(event -> {
+			
+			cambiarPantalla(pantallaInicioCibernauta);
 			
 		});
 		

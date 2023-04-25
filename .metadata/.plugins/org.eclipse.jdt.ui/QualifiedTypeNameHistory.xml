@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaInit"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.VaadinIcon"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.Icon"/>
     <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion__administrador_"/>
@@ -56,6 +55,9 @@
     <fullyQualifiedTypeName name="vistas.VistaConfigurar"/>
     <fullyQualifiedTypeName name="vistas.VistaConfigurar_mi_perfil"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_mis_seguidores"/>
+    <fullyQualifiedTypeName name="vistas.VistaMis_seguidores"/>
+    <fullyQualifiedTypeName name="vistas.VistaMis_seguidores_item"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_siguiendo"/>
     <fullyQualifiedTypeName name="interfaz.Configurar"/>
     <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
 </qualifiedTypeNameHistroy>

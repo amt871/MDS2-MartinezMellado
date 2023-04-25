@@ -41,6 +41,9 @@ export class VistaRegistro extends LitElement {
   <vaadin-button style="width: 80%; flex-shrink: 0;">
     Registrarse 
   </vaadin-button>
+  <vaadin-button id="bAtras" style="width: 80%;">
+   Atras 
+  </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>
 `;

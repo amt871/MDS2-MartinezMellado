@@ -16,9 +16,9 @@ export class VistaSiguiendo_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: center; align-items: center;">
+<vaadin-vertical-layout style="width: 100%; height: 20%; justify-content: center; align-items: center;">
  <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; justify-content: center; align-items: center;">
-  <img style="width: 20%; height: 20%;" src="icons/user.svg">
+  <img style="width: 20%; height: 100%;" src="icons/user.svg">
   <vaadin-vertical-layout style="width: 20%; height: 100%; padding-top: var(--lumo-space-xl); padding-bottom: var(--lumo-space-xl); justify-content: center;" theme="spacing-xl">
    <label>Usuario</label>
    <label>Seguidores</label>
