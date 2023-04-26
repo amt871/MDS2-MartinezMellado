@@ -19,6 +19,7 @@ public class VistaMis_seguidores extends LitTemplate {
      */
     public VistaMis_seguidores() {
         // You can initialise any data required for the connected UI components here.
+    	
     }
 
 }

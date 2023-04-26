@@ -1,9 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-mi_cabecera';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import './vista-siguiendo';
-import './vista-configurar';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-ver_siguiendo')
 export class VistaVer_siguiendo extends LitElement {
@@ -18,11 +16,13 @@ export class VistaVer_siguiendo extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="height: 5%; width: 100%;">
+  <div id="divCabecera" style="width: 100%; height: 100%;"></div>
+ </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
   <vista-siguiendo style="width: 70%; height: 100%;"></vista-siguiendo>
-  <vista-configurar style="width: 30%; height: 100%;"></vista-configurar>
+  <div id="divConfig" style="width: 30%; height: 100%;"></div>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

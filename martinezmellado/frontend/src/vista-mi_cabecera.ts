@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import '@polymer/iron-icon/iron-icon.js';
-import './vista-cabecera_usuario_registrado';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@polymer/iron-icon/iron-icon.js';
 
 @customElement('vista-mi_cabecera')
 export class VistaMi_cabecera extends LitElement {
@@ -17,30 +17,31 @@ export class VistaMi_cabecera extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center; height: 100%;">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; margin-left: var(--lumo-space-m);">
-  <vaadin-button>
-    Inicio 
-  </vaadin-button>
-  <vaadin-button>
-    Notificaciones 
-  </vaadin-button>
+<vaadin-vertical-layout style="width: 100%; height: 100%; justify-content: center; align-items: center; background-color: black;">
+ <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center; background-color: black; align-self: center; height: 100%;">
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; margin-left: var(--lumo-space-m); height: 100%;">
+   <vaadin-button id="bInicio" style="background-color: white; color: black;">
+     Inicio 
+   </vaadin-button>
+   <vaadin-button id="bNotis" style="background-color: white; color: black;">
+     Notificaciones 
+   </vaadin-button>
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center; height: 100%;">
+   <vaadin-button style="background-color: white; color: black;" id="bBusqueda">
+     Busqueda 
+   </vaadin-button>
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: flex-end; align-items: center; margin-right: var(--lumo-space-m); height: 100%;">
+   <vaadin-button id="bPublicar" style="background-color: white; color: black;">
+     Publicar 
+   </vaadin-button>
+   <vaadin-button theme="icon" aria-label="Add new" id="bPerfil" style="background-color: white; color: black;">
+    <iron-icon icon="lumo:user"></iron-icon>
+   </vaadin-button>
+  </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center;">
-  <vaadin-button style="padding: var(--lumo-space-s);">
-    Busqueda 
-  </vaadin-button>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: flex-end; align-items: center; margin-right: var(--lumo-space-m);">
-  <vista-cabecera_usuario_registrado id="idPublicar"></vista-cabecera_usuario_registrado>
-  <vaadin-button>
-    Perfil 
-  </vaadin-button>
-  <vaadin-button theme="icon" aria-label="Add new" id="iconPerfilButon">
-   <iron-icon icon="lumo:user"></iron-icon>
-  </vaadin-button>
- </vaadin-horizontal-layout>
-</vaadin-horizontal-layout>
+</vaadin-vertical-layout>
 `;
   }
 

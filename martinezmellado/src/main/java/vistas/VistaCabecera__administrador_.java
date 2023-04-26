@@ -5,6 +5,7 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.template.Id;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 /**
  * A Designer generated component for the vista-cabecera__administrador_ template.
@@ -16,63 +17,57 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-cabecera__administrador_.ts")
 public class VistaCabecera__administrador_ extends LitTemplate {
 
-	@Id("bSalir")
-	private Button bSalir;
-	@Id("bPerfil")
-	private Button bPerfil;
-	@Id("bAdministrar")
-	private Button bAdministrar;
-	@Id("bBusqueda")
-	private Button bBusqueda;
-	@Id("bInicio")
-	private Button bInicio;
+
+	@Id("bInicio2")
+	private Button bInicio2;
+	@Id("bBusqueda2")
+	private Button bBusqueda2;
+	@Id("bAdministrar2")
+	private Button bAdministrar2;
+	@Id("bSalir2")
+	private Button bSalir2;
 
 	/**
      * Creates a new VistaCabecera__administrador_.
      */
     public VistaCabecera__administrador_() {
         // You can initialise any data required for the connected UI components here.
+    	//this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     	
     }
 
-	public Button getbSalir() {
-		return bSalir;
+	public Button getbInicio2() {
+		return bInicio2;
 	}
 
-	public void setbSalir(Button bSalir) {
-		this.bSalir = bSalir;
+	public void setbInicio2(Button bInicio2) {
+		this.bInicio2 = bInicio2;
 	}
 
-	public Button getbPerfil() {
-		return bPerfil;
+	public Button getbBusqueda2() {
+		return bBusqueda2;
 	}
 
-	public void setbPerfil(Button bPerfil) {
-		this.bPerfil = bPerfil;
+	public void setbBusqueda2(Button bBusqueda2) {
+		this.bBusqueda2 = bBusqueda2;
 	}
 
-	public Button getbAdministrar() {
-		return bAdministrar;
+	public Button getbAdministrar2() {
+		return bAdministrar2;
 	}
 
-	public void setbAdministrar(Button bAdministrar) {
-		this.bAdministrar = bAdministrar;
+	public void setbAdministrar2(Button bAdministrar2) {
+		this.bAdministrar2 = bAdministrar2;
 	}
 
-	public Button getbBusqueda() {
-		return bBusqueda;
+	public Button getbSalir2() {
+		return bSalir2;
 	}
 
-	public void setbBusqueda(Button bBusqueda) {
-		this.bBusqueda = bBusqueda;
+	public void setbSalir2(Button bSalir2) {
+		this.bSalir2 = bSalir2;
 	}
 
-	public Button getbInicio() {
-		return bInicio;
-	}
-
-	public void setbInicio(Button bInicio) {
-		this.bInicio = bInicio;
-	}
+	
 
 }

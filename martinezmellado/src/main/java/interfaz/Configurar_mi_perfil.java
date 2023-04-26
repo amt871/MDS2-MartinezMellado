@@ -1,6 +1,8 @@
 package interfaz;
 
-public class Configurar_mi_perfil extends Configurar {
+import vistas.VistaConfigurar_mi_perfil;
+
+public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 //	private ImageIcon _fotoPerfilII;
 //	private Label _nombreUsuarioL;
 //	private Label _descrpcionL;
@@ -9,28 +11,28 @@ public class Configurar_mi_perfil extends Configurar {
 //	private Button _cambiar_privacidad_cuenta;
 //	private Button _modificarDatosB;
 //	private Button _cerrar_sesion;
-	public Mi_perfil _mi_perfil;
-	public Mis_seguidores _mis_seguidores;
-	public Siguiendo _siguiendo;
-	public Solicitudes _solicitudes;
-
-	public void mis_seguidores() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void siguiendo() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void cambiar_privacidad_cuenta() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void solicitudes() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void cerrar_sesion() {
-		throw new UnsupportedOperationException();
-	}
+//	public Mi_perfil _mi_perfil;
+//	public Mis_seguidores _mis_seguidores;
+//	public Siguiendo _siguiendo;
+//	public Solicitudes _solicitudes;
+//
+//	public void mis_seguidores() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void siguiendo() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void cambiar_privacidad_cuenta() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void solicitudes() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void cerrar_sesion() {
+//		throw new UnsupportedOperationException();
+//	}
 }

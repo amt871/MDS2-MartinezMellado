@@ -1,7 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-cabecera_comercial';
-import './vista-mi_cabecera';
 import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
@@ -22,17 +20,16 @@ export class VistaPublicar extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-horizontal-layout style="width: 100%; height: 5%;">
-  <vista-cabecera_comercial style="width: 100%;"></vista-cabecera_comercial>
-  <vista-mi_cabecera style="width: 100%;"></vista-mi_cabecera>
+  <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <vaadin-vertical-layout style="width: 60%; align-items: flex-start; margin-bottom: var(--lumo-space-xs); margin-left: var(--lumo-space-xs); height: 100%;">
-   <img style="height: 90%; width: 90%;" src="../../resources/icons/video.svg">
+  <vaadin-vertical-layout style="width: 60%; align-items: flex-start; margin-bottom: var(--lumo-space-xs); margin-left: var(--lumo-space-xs); height: 100%; justify-content: center;">
+   <img style="height: 90%; width: 90%;" src="icons/video.svg">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 40%; align-items: center; height: 100%;">
-   <iron-icon style="width: 20%; height: 20%;" src="../../resources/icons/user.svg"></iron-icon>
+   <iron-icon style="width: 20%; height: 20%;" src="icons/user.svg"></iron-icon>
    <vaadin-text-field label="Ubicacion" style="width: 60%;"></vaadin-text-field>
    <vaadin-text-area label="Descripcion" style="width: 60%; height: 40%;"></vaadin-text-area>
    <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center; margin-top: var(--lumo-space-xl);">

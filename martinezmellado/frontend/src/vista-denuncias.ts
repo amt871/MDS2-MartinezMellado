@@ -18,14 +18,16 @@ export class VistaDenuncias extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
  <vaadin-scroller style="width: 100%; height: 100%;">
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
-  <vista-denuncias_item style="height: 20%;"></vista-denuncias_item>
+  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
+  </vaadin-vertical-layout>
  </vaadin-scroller>
 </vaadin-vertical-layout>
 `;

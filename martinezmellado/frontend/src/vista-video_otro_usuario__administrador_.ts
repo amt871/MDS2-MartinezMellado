@@ -1,9 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import './vista-cabecera__administrador_';
 import '@vaadin/vaadin-icons/vaadin-icons.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
-import './vista-video_otro_usuario__administrador__item';
 
 @customElement('vista-video_otro_usuario__administrador_')
 export class VistaVideo_otro_usuario__administrador_ extends LitElement {
@@ -18,15 +16,13 @@ export class VistaVideo_otro_usuario__administrador_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vista-cabecera__administrador_ style="flex-grow: 0; width: 100%; height: 5%;" id="cabecera"></vista-cabecera__administrador_>
- <vaadin-vertical-layout style="width: 100%; height: 95%; flex-direction: row; align-self: center; align-items: center; justify-content: center;">
-  <vaadin-scroller style="width: 100%; height: 100%;" id="scroller">
-   <vista-video_otro_usuario__administrador__item></vista-video_otro_usuario__administrador__item>
-   <vista-video_otro_usuario__administrador__item></vista-video_otro_usuario__administrador__item>
-   <vista-video_otro_usuario__administrador__item></vista-video_otro_usuario__administrador__item>
-  </vaadin-scroller>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="height: 5%; width: 100%;">
+  <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-vertical-layout>
+ <vaadin-horizontal-layout style="width: 100%; height: 95%; flex-shrink: 0; flex-direction: column;">
+  <div id="divScroller" style="width: 100%; height: 100%; flex-shrink: 1; flex-grow: 0; align-self: stretch;"></div>
+ </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }

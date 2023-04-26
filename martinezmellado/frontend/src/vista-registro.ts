@@ -19,27 +19,30 @@ export class VistaRegistro extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
- <vaadin-vertical-layout style="width: 100%; justify-content: center;">
-  <img id="img" style="width: 100%; height: 100%; margin: var(--lumo-space-m);" src="../../resources/icons/toktok2.svg">
+<vaadin-horizontal-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="width: 50%; flex-shrink: 0; height: 100%; flex-grow: 0; justify-content: center; align-items: center;">
+  <img id="img" style="width: 90%; height: 90%; flex-shrink: 0;" src="icons/toktok2.svg">
  </vaadin-vertical-layout>
- <vaadin-vertical-layout style="width: 100%; justify-content: center; align-items: center; height: 100%; align-self: center;">
-  <vaadin-text-field id="idNombre" style="flex-shrink: 1; flex-grow: 0; width: 80%;" label="Nombre"></vaadin-text-field>
-  <vaadin-text-field id="idApellidos" style="width: 80%;" label="Apellidos"></vaadin-text-field>
-  <vaadin-text-field id="idUsuario" style="width: 80%;" label="Usuario"></vaadin-text-field>
-  <vaadin-text-field id="idContrasenna" style="width: 80%;" label="Contraseña"></vaadin-text-field>
-  <vaadin-text-field id="idCorreo" style="width: 80%;" label="Correo"></vaadin-text-field>
-  <vaadin-text-field id="idFechaNacimiento" style="width: 80%;" label="Fecha Nacimiento"></vaadin-text-field>
-  <vaadin-text-field id="idDescripcion" style="width: 80%;" label="Descripción"></vaadin-text-field>
-  <vaadin-horizontal-layout theme="spacing" style="width: 80%; align-self: center; align-items: center; justify-content: center;">
+ <vaadin-vertical-layout style="width: 50%; height: 100%; flex-shrink: 0; flex-grow: 0; align-self: center; align-items: center; justify-content: center;">
+  <vaadin-text-field id="idNombre" style="flex-shrink: 0; flex-grow: 0; width: 80%;" label="Nombre"></vaadin-text-field>
+  <vaadin-text-field id="idApellidos" style="width: 80%; flex-shrink: 0;" label="Apellidos"></vaadin-text-field>
+  <vaadin-text-field id="idUsuario" style="width: 80%; flex-shrink: 0;" label="Usuario"></vaadin-text-field>
+  <vaadin-text-field id="idContrasenna" style="width: 80%; flex-shrink: 0;" label="Contraseña"></vaadin-text-field>
+  <vaadin-text-field id="idCorreo" style="width: 80%; flex-shrink: 0;" label="Correo"></vaadin-text-field>
+  <vaadin-text-field id="idFechaNacimiento" style="width: 80%; flex-shrink: 0;" label="Fecha Nacimiento"></vaadin-text-field>
+  <vaadin-text-field id="idDescripcion" style="width: 80%; flex-shrink: 0;" label="Descripción"></vaadin-text-field>
+  <vaadin-horizontal-layout theme="spacing" style="width: 80%; align-items: center; justify-content: center; flex-shrink: 0;">
     Foto 
-   <vaadin-upload id="idImagen"></vaadin-upload>
+   <vaadin-upload id="idImagen" style="flex-shrink: 0;"></vaadin-upload>
   </vaadin-horizontal-layout>
-  <vaadin-checkbox id="usrComBool">
+  <vaadin-checkbox id="usrComBool" style="flex-shrink: 0;">
     Usuario Comercial 
   </vaadin-checkbox>
-  <vaadin-button style="width: 80%;">
+  <vaadin-button style="width: 80%; flex-shrink: 0;">
     Registrarse 
+  </vaadin-button>
+  <vaadin-button id="bAtras" style="width: 80%;">
+   Atras 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>

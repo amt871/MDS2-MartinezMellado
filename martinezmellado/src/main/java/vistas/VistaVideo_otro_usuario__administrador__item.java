@@ -40,6 +40,7 @@ public class VistaVideo_otro_usuario__administrador__item extends LitTemplate {
      */
     public VistaVideo_otro_usuario__administrador__item() {
         // You can initialise any data required for the connected UI components here.
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
 }

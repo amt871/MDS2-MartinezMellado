@@ -1,6 +1,8 @@
 package interfaz;
 
-public class Registro {
+import vistas.VistaRegistro;
+
+public class Registro  extends VistaRegistro{
 //	private TextField_ _nombreTF;
 //	private Label_ _nombreB;
 //	private TextField_ _apellidosTF;
@@ -21,11 +23,14 @@ public class Registro {
 //	private Label _esloganL;
 //	private Label _nombreAppL;
 //	private ImageIcon _logoII;
-	public Pantalla_inicio _pantalla_inicio;
-	public Cabecera_usuario_no_registrado _cabecera_usuario_no_registrado;
-	public Confirmar_correo _confirmar_correo;
-
-	public void confirmar_correo() {
-		throw new UnsupportedOperationException();
-	}
+//	public Pantalla_inicio _pantalla_inicio;
+//	public Cabecera_usuario_no_registrado _cabecera_usuario_no_registrado;
+//	public Confirmar_correo _confirmar_correo;
+//
+//	public void confirmar_correo() {
+//		throw new UnsupportedOperationException();
+//	}
+	
+	
+	
 }
