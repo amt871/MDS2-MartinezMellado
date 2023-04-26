@@ -1,8 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-mi_cabecera';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
-import './vista-video_otro_usuario_item';
 
 @customElement('vista-video_otro_usuario')
 export class VistaVideo_otro_usuario extends LitElement {
@@ -17,15 +15,13 @@ export class VistaVideo_otro_usuario extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
- <vista-mi_cabecera style="width: 100%; height: 5%;"></vista-mi_cabecera>
- <vaadin-scroller style="width: 100%; height: 95%;">
-  <vista-video_otro_usuario_item style="width: 100%; height: 100%; padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
-  <vista-video_otro_usuario_item style="padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
-  <vista-video_otro_usuario_item style="padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
-  <vista-video_otro_usuario_item style="padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
-  <vista-video_otro_usuario_item style="padding-top: var(--lumo-space-xl);"></vista-video_otro_usuario_item>
- </vaadin-scroller>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="width: 100%; height: 5%;">
+  <div id="divCabecera" style="height: 100%; width: 100%;"></div>
+ </vaadin-vertical-layout>
+ <vaadin-vertical-layout style="width: 100%; height: 95%;">
+  <vaadin-scroller style="width: 100%; height: 100%;" id="Scroller"></vaadin-scroller>
+ </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

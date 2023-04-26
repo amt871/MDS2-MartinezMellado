@@ -19,6 +19,7 @@ public class VistaDenuncias_item extends LitTemplate {
      */
     public VistaDenuncias_item() {
         // You can initialise any data required for the connected UI components here.
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
 }

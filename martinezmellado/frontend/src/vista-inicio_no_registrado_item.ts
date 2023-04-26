@@ -1,9 +1,9 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-icons/vaadin-icons.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-inicio_no_registrado_item')
 export class VistaInicio_no_registrado_item extends LitElement {
@@ -18,13 +18,16 @@ export class VistaInicio_no_registrado_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%;">
-  <vaadin-vertical-layout style="width: 60%; align-items: flex-start; justify-content: center;">
-   <img src="../../resources/icons/video.svg" style="height: 90%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <vaadin-vertical-layout style="width: 100%; height: 5%;">
+  <div id="divCabecera" style="height: 100%; width: 100%;"></div>
+ </vaadin-vertical-layout>
+ <vaadin-horizontal-layout theme="" style="width: 100%; height: 95%;">
+  <vaadin-vertical-layout style="width: 60%; align-items: center; justify-content: center;">
+   <img src="icons/video.svg" style="height: 90%; width: 90%;">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 40%; justify-content: center; align-items: center;">
-   <img style="height: 20%;" src="../../resources/icons/user.svg">
+   <img style="height: 20%;" src="icons/user.svg">
    <label>Usuario</label>
    <vaadin-horizontal-layout style="width: 100%; justify-content: space-around;">
     <vaadin-horizontal-layout style="width: 100%; justify-content: center; align-items: center;">
@@ -42,7 +45,7 @@ export class VistaInicio_no_registrado_item extends LitElement {
      <iron-icon icon="vaadin:heart"></iron-icon>
      <label>Me gustas</label>
      <vaadin-button>
-      Ver me gustas
+       Ver me gustas 
      </vaadin-button>
     </vaadin-vertical-layout>
     <vaadin-vertical-layout theme="spacing-xs" style="width: 100%; align-items: center;">

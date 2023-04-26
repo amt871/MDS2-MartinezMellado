@@ -28,15 +28,12 @@ public class VistaIniciar_sesion__administrador_ extends LitTemplate {
 	private TextField inUser;
 	@Id("LabelUsuario")
 	private Label labelUsuario;
-	@Id("principalLayout")
-	private HorizontalLayout principalLayout;
-
 	/**
      * Creates a new VistaIniciar_sesion__administrador_.
      */
     public VistaIniciar_sesion__administrador_() {
         // You can initialise any data required for the connected UI components here.
-    	this.getElement().setAttribute("style", "width: 100%");
+    	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
 	public Button getbIniciarSesion() {
@@ -69,14 +66,6 @@ public class VistaIniciar_sesion__administrador_ extends LitTemplate {
 
 	public void setLabelUsuario(Label labelUsuario) {
 		this.labelUsuario = labelUsuario;
-	}
-
-	public HorizontalLayout getPrincipalLayout() {
-		return principalLayout;
-	}
-
-	public void setPrincipalLayout(HorizontalLayout principalLayout) {
-		this.principalLayout = principalLayout;
 	}
 
 }

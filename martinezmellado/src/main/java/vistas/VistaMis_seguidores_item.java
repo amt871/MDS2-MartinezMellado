@@ -19,6 +19,7 @@ public class VistaMis_seguidores_item extends LitTemplate {
      */
     public VistaMis_seguidores_item() {
         // You can initialise any data required for the connected UI components here.
+    	this.getElement().setAttribute("style", "height: 100%; width: 100%");
     }
 
 }

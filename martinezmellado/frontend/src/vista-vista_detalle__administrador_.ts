@@ -24,10 +24,10 @@ export class VistaVista_detalle__administrador_ extends LitElement {
  <vista-cabecera__administrador_ style="width: 100%; align-self: center; flex-shrink: 1; height: 5%;"></vista-cabecera__administrador_>
  <vaadin-horizontal-layout style="height: 95%; width: 100%; flex-shrink: 1; flex-grow: 0; justify-content: center; align-items: center;">
   <vaadin-vertical-layout style="height: 95%; width: 60%; align-items: center; justify-content: center;">
-   <img style="height: 100%; width: 100%;" src="../../resources/icons/video.svg">
+   <img style="height: 90%; width: 90%;" src="icons/video.svg">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="align-items: center; justify-content: flex-start; flex-grow: 1; flex-shrink: 1; height: 90%; width: 40%;">
-   <iron-icon style="width: 25%; height: 25%; align-self: center;" src="../../resources/icons/user.svg"></iron-icon>
+   <iron-icon style="width: 25%; height: 25%; align-self: center;" src="icons/user.svg"></iron-icon>
    <label>Usuario de la publicacion</label>
    <vaadin-horizontal-layout style="margin-top: var(--lumo-space-m); align-self: center; justify-content: space-around; width: 100%;">
     <vaadin-horizontal-layout style="width: 50%; align-self: center; align-items: center; justify-content: center;">

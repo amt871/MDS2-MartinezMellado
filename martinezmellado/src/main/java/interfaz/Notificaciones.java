@@ -1,34 +1,70 @@
 package interfaz;
 
 import java.util.Vector;
-import interfaz.Notifiaciones_item;
 
-public class Notificaciones {
+import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
+import vistas.VistaNotificaciones;
+
+public class Notificaciones extends VistaNotificaciones {
 //	private event _comentarios;
 //	private event _todas__notificaciones_;
 //	private event _me_gustas;
 //	private event _seguidores;
 //	private event _menciones;
-	public Mi_cabecera _mi_cabecera;
-	public Vector<Notifiaciones_item> _item = new Vector<Notifiaciones_item>();
+//	public Mi_cabecera _mi_cabecera;
+//	public Vector<Notifiaciones_item> _item = new Vector<Notifiaciones_item>();
+//
+//	public void comentarios() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void todas__notificaciones_() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void me_gustas() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void seguidores() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void menciones() {
+//		throw new UnsupportedOperationException();
+//	}
+	
+	private Scroller scroller;
+	private VerticalLayout vl;
+	
+	public Notificaciones() {
+		
+		scroller = this.getScroller();
+		vl = new VerticalLayout();
 
-	public void comentarios() {
-		throw new UnsupportedOperationException();
-	}
+		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
 
-	public void todas__notificaciones_() {
-		throw new UnsupportedOperationException();
-	}
+		scroller.getStyle().set("width", "100%");
+		scroller.getStyle().set("height", "100%");
 
-	public void me_gustas() {
-		throw new UnsupportedOperationException();
-	}
+		scroller.setContent(vl);
 
-	public void seguidores() {
-		throw new UnsupportedOperationException();
-	}
+		vl.getStyle().set("width", "100%");
+		vl.getStyle().set("height", "100%");
+		
+		addItem();
 
-	public void menciones() {
-		throw new UnsupportedOperationException();
 	}
+	
+	public void addItem() {
+		
+		vl.add(new Notifiaciones_item());
+		vl.add(new Notifiaciones_item());
+		vl.add(new Notifiaciones_item());
+		vl.add(new Notifiaciones_item());
+		
+	}
+	
 }

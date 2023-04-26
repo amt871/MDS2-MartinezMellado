@@ -20,10 +20,10 @@ export class VistaVideo_otro_usuario__administrador__item extends LitElement {
     return html`
 <vaadin-horizontal-layout class="content" style="width: 100%; height: 100%;">
  <vaadin-vertical-layout style="width: 60%; height: 100%; align-self: center; align-items: center; justify-content: center;">
-  <img style="align-self: flex-start; width: 90%; height: 90%;" src="../../resources/icons/video.svg" id="video">
+  <img style="align-self: center; width: 80%; height: 80%;" src="icons/video.svg" id="video">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout style="width: 40%; height: 100%; align-self: center; align-items: center; justify-content: center;">
-  <img style="width: 30%;" src="../../resources/icons/user.svg" id="imgUsuario">
+  <img style="width: 30%;" src="icons/user.svg" id="imgUsuario">
   <label id="labelUsuario">Usuario</label>
   <vaadin-horizontal-layout theme="spacing-s" style="width: 100%; align-items: center; justify-content: center;">
    <vaadin-horizontal-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center; width: 50%;" id="labelubi">
@@ -45,7 +45,7 @@ export class VistaVideo_otro_usuario__administrador__item extends LitElement {
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
   <vaadin-button style="align-self: flex-end; margin-top: var(--lumo-space-xl); margin-right: var(--lumo-space-l); flex-shrink: 1;" id="bDenunciar">
-    Denunciar 
+   Eliminar
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>
