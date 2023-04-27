@@ -62,6 +62,7 @@ public class MainView extends VerticalLayout {
 		Cabecera__administrador_ cabeceraAdmin = new Cabecera__administrador_();
 		Cabecera_usuario_no_registrado cabeceraNoReg = new Cabecera_usuario_no_registrado();
 		Mi_cabecera cabeceraReg = new Mi_cabecera();
+		Cabecera_comercial cabeceraComercial = new Cabecera_comercial();
 		
 		//Administrador
 		
@@ -90,7 +91,7 @@ public class MainView extends VerticalLayout {
 		Buscar__usuario_registrado_ busquedaRegistrado = new Buscar__usuario_registrado_();
 		Mi_perfil miPerfil = new Mi_perfil();
 		
-		//Configurar
+		//Registrado -> Configurar
 		
 		Configurar configurar = new Configurar();
 		Configurar_mi_perfil configPerf = new Configurar_mi_perfil();
@@ -100,6 +101,11 @@ public class MainView extends VerticalLayout {
 		//Registrado y Comercial
 		
 		Publicar publicar = new Publicar();
+		
+		//Comercial
+		
+		Perfil_comercial perfilComercial = new Perfil_comercial();
+		Configurar_perfil_comercial configPerfilComercial = new Configurar_perfil_comercial();
 		
 		/***********CABECERAS FUNCIONALES************/
 		
@@ -124,8 +130,6 @@ public class MainView extends VerticalLayout {
 			busquedaAdmin.setCabecera(cabeceraAdmin);
 		});
 		
-		//Cabeceras cibernauta
-		
 		//Cabecera Usuario No Registrado
 		
 		cabeceraNoReg.getbInicio().addClickListener(event -> {
@@ -141,6 +145,7 @@ public class MainView extends VerticalLayout {
 		cabeceraNoReg.getbIniciarSesion().addClickListener(event -> {
 			
 			cambiarPantalla(iniciarSesionCibernauta);
+			iniciarSesionCibernauta.getInUser().focus();
 			
 		});
 		
@@ -178,12 +183,37 @@ public class MainView extends VerticalLayout {
 			cambiarPantalla(publicar);
 			publicar.setCabecera(cabeceraReg);
 			
+			
 		});
 		
 		cabeceraReg.getbPerfil().addClickListener(event -> {
 			
 			cambiarPantalla(miPerfil);
 			miPerfil.setCabecera(cabeceraReg);
+			
+		});
+		
+		//Cabecera comercial
+		
+		cabeceraComercial.getbSalir().addClickListener(event -> {
+			
+			cambiarPantalla(iniciarSesionCibernauta);
+			iniciarSesionCibernauta.getInUser().focus();
+			
+		});
+		
+		cabeceraComercial.getbPerfil().addClickListener(event -> {
+			
+			cambiarPantalla(perfilComercial);
+			perfilComercial.setCabecera(cabeceraComercial);
+			
+		});
+		
+		cabeceraComercial.getbPublicar().addClickListener(event -> {
+			
+			cambiarPantalla(publicar);
+			publicar.setCabecera(cabeceraComercial);
+			
 			
 		});
 		
@@ -257,6 +287,7 @@ public class MainView extends VerticalLayout {
 		pantallaInicioCibernauta.getbIniciarSesion().addClickListener(event -> {
 			
 			cambiarPantalla(iniciarSesionCibernauta);
+			iniciarSesionCibernauta.getInUser().focus();
 			
 		});
 		
@@ -272,7 +303,11 @@ public class MainView extends VerticalLayout {
 			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
-			}
+			} else if(iniciarSesionCibernauta.inicioSesionComercial()) {
+				cambiarPantalla(perfilComercial);
+				perfilComercial.setCabecera(cabeceraComercial);
+			} else
+				Notification.show("Credenciales incorrectas");
 			
 		});
 		
@@ -281,7 +316,11 @@ public class MainView extends VerticalLayout {
 			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
-			}
+			} else if(iniciarSesionCibernauta.inicioSesionComercial()) {
+				cambiarPantalla(perfilComercial);
+				perfilComercial.setCabecera(cabeceraComercial);
+			} else
+				Notification.show("Credenciales incorrectas");
 			
 		});
 		
@@ -313,6 +352,15 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
+		//Comercial
+		
+		perfilComercial.getbConfigurar().addClickListener(event -> {
+			
+			cambiarPantalla(configPerfilComercial);
+			configPerfilComercial.setCabecera(cabeceraComercial);
+			
+		});
+		
 		/**************PANTALLA INICIAL**************/
 		
 		//Administrador
@@ -322,12 +370,12 @@ public class MainView extends VerticalLayout {
 		
 		//Puesta de pantalla en funcionamiento////////////////////////////////////////
 		
-		//cambiarPantalla(inicioAdministrador);
-		//inicioAdministrador.getInUser().focus();
+		cambiarPantalla(inicioAdministrador);
+		inicioAdministrador.getInUser().focus();
 		
 		//Cibernauta
 		
-		cambiarPantalla(pantallaInicioCibernauta);
+		//cambiarPantalla(pantallaInicioCibernauta);
 		
 		/********************************************/
 		

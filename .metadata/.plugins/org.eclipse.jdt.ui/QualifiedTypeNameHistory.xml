@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.VaadinIcon"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.icon.Icon"/>
     <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion__administrador_"/>
     <fullyQualifiedTypeName name="interfaz.Iniciar_sesion__administrador_"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.ComponentEventListener"/>
@@ -21,7 +19,6 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
     <fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Unit"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
     <fullyQualifiedTypeName name="vistas.VistaAdministrar"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
@@ -49,7 +46,6 @@
     <fullyQualifiedTypeName name="vistas.VistaNotificaciones"/>
     <fullyQualifiedTypeName name="vistas.VistaBuscar__usuario_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaPublicar"/>
-    <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
     <fullyQualifiedTypeName name="vistas.VistaCabecera_comercial"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_perfil"/>
     <fullyQualifiedTypeName name="vistas.VistaConfigurar"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="vistas.VistaVer_siguiendo"/>
     <fullyQualifiedTypeName name="interfaz.Configurar"/>
     <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
+    <fullyQualifiedTypeName name="vistas.VistaPerfil_comercial"/>
+    <fullyQualifiedTypeName name="vistas.VistaConfigurar_perfil_comercial"/>
+    <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
 </qualifiedTypeNameHistroy>

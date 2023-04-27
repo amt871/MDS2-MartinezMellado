@@ -16,8 +16,12 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-cabecera_comercial.ts")
 public class VistaCabecera_comercial extends LitTemplate {
 
-    @Id("vaadinButton")
-	private Button vaadinButton;
+    @Id("bPublicar")
+	private Button bPublicar;
+	@Id("bSalir")
+	private Button bSalir;
+	@Id("bPerfil")
+	private Button bPerfil;
 
 	/**
      * Creates a new VistaCabecera_comercial.
@@ -25,5 +29,31 @@ public class VistaCabecera_comercial extends LitTemplate {
     public VistaCabecera_comercial() {
         // You can initialise any data required for the connected UI components here.
     }
+
+	public Button getbPublicar() {
+		return bPublicar;
+	}
+
+	public void setbPublicar(Button bPublicar) {
+		this.bPublicar = bPublicar;
+	}
+
+	public Button getbSalir() {
+		return bSalir;
+	}
+
+	public void setbSalir(Button bSalir) {
+		this.bSalir = bSalir;
+	}
+
+	public Button getbPerfil() {
+		return bPerfil;
+	}
+
+	public void setbPerfil(Button bPerfil) {
+		this.bPerfil = bPerfil;
+	}
+    
+    
 
 }

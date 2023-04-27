@@ -37,11 +37,28 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 			return true;
 		} else {
 			
-			Notification.show("Credenciales incorrectas");
+			//Notification.show("Credenciales incorrectas");
 			return false;
 			
 		}
 
+	}
+	
+	public boolean inicioSesionComercial() {
+		
+		if (getInUser().getValue().equals("comercial") && getInPass().getValue().equals("pass")) {
+			//cambiarPantalla(pantalla);
+			Notification.show("Acceso concedido");
+			getInUser().setValue("");
+			getInPass().setValue("");
+			return true;
+		} else {
+			
+			//Notification.show("Credenciales incorrectas");
+			return false;
+			
+		}
+		
 	}
 	
 }

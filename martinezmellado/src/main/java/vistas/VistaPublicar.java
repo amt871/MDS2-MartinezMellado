@@ -1,5 +1,6 @@
 package vistas;
 
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
@@ -19,8 +20,8 @@ import interfaz.Mi_cabecera;
 @JsModule("./src/vista-publicar.ts")
 public class VistaPublicar extends LitTemplate {
 
-	private Mi_cabecera cabecera;
-	private Cabecera_comercial cabeceraCom;
+	private Component cabecera;
+	//private Cabecera_comercial cabeceraCom;
     @Id("divCabecera")
 	private Div divCabecera;
 
@@ -40,20 +41,22 @@ public class VistaPublicar extends LitTemplate {
 	}
 
 	public Mi_cabecera getCabecera() {
-		return cabecera;
+		return (Mi_cabecera) cabecera;
 	}
 
 	public void setCabecera(Mi_cabecera cabecera) {
+		
 		this.cabecera = cabecera;
 		getDivCabecera().add(cabecera);
 	}
 
 	public Cabecera_comercial getCabeceraCom() {
-		return cabeceraCom;
+		return (Cabecera_comercial) cabecera;
 	}
 
-	public void setCabeceraCom(Cabecera_comercial cabeceraCom) {
-		this.cabeceraCom = cabeceraCom;
+	public void setCabecera(Cabecera_comercial cabeceraCom) {
+		
+		this.cabecera = cabeceraCom;
 		getDivCabecera().add(cabeceraCom);
 	}
     

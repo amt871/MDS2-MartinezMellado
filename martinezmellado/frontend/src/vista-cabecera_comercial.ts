@@ -18,15 +18,15 @@ export class VistaCabecera_comercial extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; background-color: blue;">
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-self: flex-end; align-items: center; justify-content: flex-end; margin-right: var(--lumo-space-s);">
-  <vaadin-button>
-   Perfil
+  <vaadin-button id="bPerfil" style="background-color: white; color: blue;">
+    Perfil 
   </vaadin-button>
-  <vaadin-button>
-   Publicar
+  <vaadin-button id="bPublicar" style="background-color: white; color: blue;">
+    Publicar 
   </vaadin-button>
-  <vaadin-button theme="icon" aria-label="Add new" id="vaadinButton">
+  <vaadin-button theme="icon" aria-label="Add new" id="bSalir" style="background-color: white; color: blue;">
    <iron-icon icon="vaadin:sign-out"></iron-icon>
   </vaadin-button>
  </vaadin-horizontal-layout>

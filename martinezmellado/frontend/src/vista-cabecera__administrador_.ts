@@ -18,7 +18,7 @@ export class VistaCabecera__administrador_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; background-color: black;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; background-color: grey;">
  <vaadin-horizontal-layout class="content" style="width: 100%; align-items: center; justify-content: space-between;">
   <vaadin-button style="margin-left: 1%; background-color: white; color: black;" id="bInicio2">
     Inicio 
