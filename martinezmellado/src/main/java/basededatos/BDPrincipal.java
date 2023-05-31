@@ -1,10 +1,16 @@
 package basededatos;
 
+import java.sql.Date;
 import java.util.List;
+
+import org.orm.PersistentException;
+
 import orm.*;
 
 public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado, iUsuario_no_registrado, iInicio_sesion_administrador, iAdministrador, iVer_perfil__usuario_no_registrado_, iVer_perfil_privado__usuario_no_registrado_, iVer_perfil_publico__usuario_no_registrado_, iVer_perfil__administrador_, iVer_perfil_publico__administrador_, iVer_perfil_privado__administrador_, iVer_perfil__usuario_registrado_, iVer_perfil_publico__usuario_registrado_, iVer_perfil_privado__usuario_registrado_ {
 
+	Usuarios_Registrados usuariosRegistrados = new Usuarios_Registrados();
+	
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario) {
 		throw new UnsupportedOperationException();
 	}
@@ -33,8 +39,16 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		throw new UnsupportedOperationException();
 	}
 
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
-		throw new UnsupportedOperationException();
+	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
+		
+		try {
+			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, aFechaNacimiento, aDescripcion, aFoto, aTipo);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			return false;
+		}
+		
 	}
 
 	public List buscarUsurios(String aBusqueda) {
@@ -122,6 +136,20 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public List listarDenunciasAdministrador() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
+			String aCorreoElectronico, String aDescripcion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
+			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

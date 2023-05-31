@@ -16,6 +16,7 @@ package basededatos;
 //import interfaz.inicio_sesion__adminstrador_;
 import interfaz.*;
 
+import java.sql.Date;
 import java.util.List;
 
 import interfaz.Administrador;
@@ -172,6 +173,12 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public Publicacion cargarVideo(String aVideo) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	@Override
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
+			String aCorreoElectronico, String aDescripcion) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	

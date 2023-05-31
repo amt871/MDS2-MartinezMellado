@@ -1,5 +1,6 @@
 package basededatos;
 
+import java.sql.Date;
 import java.util.List;
 
 import orm.*;
@@ -20,7 +21,7 @@ public interface iUsuario_Registrado {
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario);
 
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, String aFechaDeNaciemiento, String aCorreoElectronico, String aDescripcion);
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento, String aCorreoElectronico, String aDescripcion);
 
 	public List listarNitificaciones(String aUsuario);
 

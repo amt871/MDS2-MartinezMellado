@@ -38,11 +38,11 @@ export class VistaRegistro extends LitElement {
   <vaadin-checkbox id="usrComBool" style="flex-shrink: 0;">
     Usuario Comercial 
   </vaadin-checkbox>
-  <vaadin-button style="width: 80%; flex-shrink: 0;">
+  <vaadin-button style="width: 80%; flex-shrink: 0;" id="bRegistrar">
     Registrarse 
   </vaadin-button>
   <vaadin-button id="bAtras" style="width: 80%;">
-   Atras 
+    Atras 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>

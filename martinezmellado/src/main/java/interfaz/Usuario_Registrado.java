@@ -1,4 +1,4 @@
-package interfaz;
+/*package interfaz;
 
 //import basededatos.iUsuario_Registrado;
 
@@ -14,4 +14,4 @@ public class Usuario_Registrado {
 	public void video_otro_usuario() {
 		throw new UnsupportedOperationException();
 	}
-}
+}*/

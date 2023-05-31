@@ -1,8 +1,15 @@
 package basededatos;
 
+import java.sql.Date;
 import java.util.List;
 import java.util.Vector;
+
+import org.orm.PersistentException;
+import org.orm.PersistentTransaction;
+
+import orm.MartinezMelladoMDSPersistentManager;
 import orm.Usuario_Registrado;
+import orm.Usuario_RegistradoDAO;
 
 public class Usuarios_Registrados {
 	public Sistema _sis_usr_reg;
@@ -20,8 +27,29 @@ public class Usuarios_Registrados {
 		throw new UnsupportedOperationException();
 	}
 
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, String aFechaNaciemiento, String aDescripcion, String aFoto, String aTipo) {
-		throw new UnsupportedOperationException();
+	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNaciemiento, String aDescripcion, String aFoto, String aTipo) throws PersistentException {
+		
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+			
+			Usuario_Registrado nuevo = new Usuario_Registrado();
+			
+			nuevo.setNombre(aNombre);
+			nuevo.setApellido(aApellidos);
+			nuevo.setUsuario(aNomUsuario);
+			nuevo.setContrasenna(aContrasenna);
+			nuevo.setCorreo(aCorreo);
+			nuevo.setFechaNacimiento(aFechaNaciemiento);
+			nuevo.setDescripcion(aDescripcion);
+			nuevo.setFoto(aFoto);
+			nuevo.setComercial(aTipo);
+			
+			Usuario_RegistradoDAO.save(nuevo);
+			
+			t.commit();
+		} catch (Exception e) {
+			t.rollback();
+		}
 	}
 
 	public List buscarUsuarios(String aBusqueda) {
