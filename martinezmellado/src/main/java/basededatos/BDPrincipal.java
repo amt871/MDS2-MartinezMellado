@@ -1,6 +1,6 @@
 package basededatos;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import org.orm.PersistentException;
@@ -39,15 +39,15 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		throw new UnsupportedOperationException();
 	}
 
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
+	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
 		
 		try {
 			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, aFechaNacimiento, aDescripcion, aFoto, aTipo);
 		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
-			//return false;
+			return false;
 		}
+		
+		return true;
 		
 	}
 
@@ -139,7 +139,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.util.Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
 		// TODO Auto-generated method stub
 		

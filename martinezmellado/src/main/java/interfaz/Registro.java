@@ -1,6 +1,9 @@
 package interfaz;
 
-import java.sql.Date;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import org.orm.PersistentException;
 
@@ -83,15 +86,34 @@ public class Registro extends VistaRegistro {
 				return;
 			}
 
-	
-			/*if(datos.registrarse(this.getIdNombre().getValue(), this.getIdApellidos().getValue(), this.getIdUsuario().getValue(), this.getIdContrasenna().getValue(),
-					this.getIdCorreo().getValue(), this.getIdFechaNacimiento().getValue(), this.getIdDescripcion().getValue(),
+			//System.out.println(this.getIdFechaNacimiento().getValue());
+			
+			DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+			Date myDate = null;
+			//Date sqlDate = null;
+			try {
+				myDate = formatter.parse(this.getIdFechaNacimiento().getValue());
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+				Notification.show("Fecha incorrecta");
+				return;
+			}
+			//if(myDate!=null)
+				//sqlDate = new Date(myDate.getTime());
+			
+			if(!datos.registrarse(this.getIdNombre().getValue(), this.getIdApellidos().getValue(), this.getIdUsuario().getValue(), this.getIdContrasenna().getValue(),
+					this.getIdCorreo().getValue(), myDate, this.getIdDescripcion().getValue(),
 					"C:/Usuarios/UsuariosProyectoMDS2/"+this.getIdNombre().getValue()+"/imagen.jpg", 
 					this.getUsrComBool().getValue() ? "Comercial" : "Normal"))
-				Notification.show("Registro completo");
-			else
-				Notificacion.show("Registo no completado");*/
-					
+				//Notification.show("Registro completo");
+			/*else*/ {
+				Notification.show("Registo no completado");
+				return;
+			}
+			
+			
+			
 		});
 
 	}

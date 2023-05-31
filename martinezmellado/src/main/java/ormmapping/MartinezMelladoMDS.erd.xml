@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Model quotesql="1" tablecharset="" mysql_version="505" mssql_version="2005" derby_version="106" ingres_version="9">
+  <Entity name="Usuario_Registrado" Unlogged="false" PKClustered="0">
+    <Column name="Nombre">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Apellido">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Correo">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="FechaNacimiento">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>17</Type>
+      <Length>0</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Descripcion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Foto">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Comercial">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Privado">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Edad">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="UsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="AdministradorUsuarioID">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Administrador.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Comentario" Unlogged="false" PKClustered="0">
+    <Column name="ID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="PublicacionID">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Publicacion.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Autor">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Publicacion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Comentario">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="FechaPublicacion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>17</Type>
+      <Length>0</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Hashtag" Unlogged="false" PKClustered="0">
+    <Column name="ID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Hashtag">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Publicacion" Unlogged="false" PKClustered="0">
+    <Column name="ID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Descripcion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Ubicacion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Video">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Fecha">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>17</Type>
+      <Length>0</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Publicidad">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Notificacion" Unlogged="false" PKClustered="0">
+    <Column name="ID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Fecha">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>17</Type>
+      <Length>0</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Tipo">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Vista">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="UsuarioOrigen">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Publicacion">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Comentario">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>1</Type>
+      <Length>1</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Administrador" Unlogged="false" PKClustered="0">
+    <Column name="UsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Denuncia_Archivada" Unlogged="false" PKClustered="0">
+    <Column name="ID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="AdministradorUsuarioID">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Administrador.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="IdElemento">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Tipo">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario" Unlogged="false" PKClustered="0">
+    <Column name="ID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Usuario">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Contrasenna">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>255</Length>
+      <Nullable>true</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_Registrado_Usuario_Registrado" Unlogged="false" PKClustered="0">
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Usuario_RegistradoUsuarioID2">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_Registrado_Usuario_Registrado2" Unlogged="false" PKClustered="0">
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Usuario_RegistradoUsuarioID2">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_Registrado_Publicacion" Unlogged="false" PKClustered="0">
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="PublicacionID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Publicacion.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_Registrado_Publicacion2" Unlogged="false" PKClustered="0">
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="PublicacionID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Publicacion.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_Registrado_Comentario" Unlogged="false" PKClustered="0">
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="ComentarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Comentario.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario_Registrado_Comentario2" Unlogged="false" PKClustered="0">
+    <Column name="Usuario_RegistradoUsuarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario_Registrado.UsuarioID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="ComentarioID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Comentario.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Hashtag_Publicacion" Unlogged="false" PKClustered="0">
+    <Column name="HashtagID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Hashtag.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="PublicacionID">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Publicacion.ID</ReferencedColumn>
+      <Type>9</Type>
+      <Length>10</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <ForeignKey name="FKUsuario_Re430383">
+    <ReferenceTable>Usuario_Registrado</ReferenceTable>
+    <ReferencedTable>Usuario</ReferencedTable>
+    <Columns>
+      <Column>UsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKAdministra741035">
+    <ReferenceTable>Administrador</ReferenceTable>
+    <ReferencedTable>Usuario</ReferencedTable>
+    <Columns>
+      <Column>UsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re97652">
+    <ReferenceTable>Usuario_Registrado_Usuario_Registrado</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re552152">
+    <ReferenceTable>Usuario_Registrado_Usuario_Registrado</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID2</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re193506">
+    <ReferenceTable>Usuario_Registrado_Usuario_Registrado2</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re739005">
+    <ReferenceTable>Usuario_Registrado_Usuario_Registrado2</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID2</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKComentario595139">
+    <ReferenceTable>Comentario</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKPublicacio335975">
+    <ReferenceTable>Publicacion</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re22077">
+    <ReferenceTable>Usuario_Registrado_Publicacion</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re311393">
+    <ReferenceTable>Usuario_Registrado_Publicacion</ReferenceTable>
+    <ReferencedTable>Publicacion</ReferencedTable>
+    <Columns>
+      <Column>PublicacionID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re548893">
+    <ReferenceTable>Usuario_Registrado_Publicacion2</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re161790">
+    <ReferenceTable>Usuario_Registrado_Publicacion2</ReferenceTable>
+    <ReferencedTable>Publicacion</ReferencedTable>
+    <Columns>
+      <Column>PublicacionID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re308119">
+    <ReferenceTable>Usuario_Registrado_Comentario</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re135913">
+    <ReferenceTable>Usuario_Registrado_Comentario</ReferenceTable>
+    <ReferencedTable>Comentario</ReferencedTable>
+    <Columns>
+      <Column>ComentarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re384932">
+    <ReferenceTable>Usuario_Registrado_Comentario2</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario_Re142626">
+    <ReferenceTable>Usuario_Registrado_Comentario2</ReferenceTable>
+    <ReferencedTable>Comentario</ReferencedTable>
+    <Columns>
+      <Column>ComentarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKNotificaci243088">
+    <ReferenceTable>Notificacion</ReferenceTable>
+    <ReferencedTable>Usuario_Registrado</ReferencedTable>
+    <Columns>
+      <Column>Usuario_RegistradoUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKHashtag_Pu526373">
+    <ReferenceTable>Hashtag_Publicacion</ReferenceTable>
+    <ReferencedTable>Hashtag</ReferencedTable>
+    <Columns>
+      <Column>HashtagID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKHashtag_Pu680060">
+    <ReferenceTable>Hashtag_Publicacion</ReferenceTable>
+    <ReferencedTable>Publicacion</ReferencedTable>
+    <Columns>
+      <Column>PublicacionID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKDenuncia_A579174">
+    <ReferenceTable>Denuncia_Archivada</ReferenceTable>
+    <ReferencedTable>Administrador</ReferencedTable>
+    <Columns>
+      <Column>AdministradorUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKComentario115544">
+    <ReferenceTable>Comentario</ReferenceTable>
+    <ReferencedTable>Publicacion</ReferencedTable>
+    <Columns>
+      <Column>PublicacionID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>ID</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="Administrador_UsuarioRegistrado">
+    <ReferenceTable>Usuario_Registrado</ReferenceTable>
+    <ReferencedTable>Administrador</ReferencedTable>
+    <Columns>
+      <Column>AdministradorUsuarioID</Column>
+    </Columns>
+    <RefColumns>
+      <Column>UsuarioID</Column>
+    </RefColumns>
+  </ForeignKey>
+</Model>

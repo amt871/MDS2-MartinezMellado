@@ -1,10 +1,11 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-checkbox/src/vaadin-checkbox.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-upload/src/vaadin-upload.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-text-field/src/vaadin-password-field.js';
+import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 
 @customElement('vista-registro')
 export class VistaRegistro extends LitElement {
@@ -27,9 +28,9 @@ export class VistaRegistro extends LitElement {
   <vaadin-text-field id="idNombre" style="flex-shrink: 0; flex-grow: 0; width: 80%;" label="Nombre"></vaadin-text-field>
   <vaadin-text-field id="idApellidos" style="width: 80%; flex-shrink: 0;" label="Apellidos"></vaadin-text-field>
   <vaadin-text-field id="idUsuario" style="width: 80%; flex-shrink: 0;" label="Usuario"></vaadin-text-field>
-  <vaadin-text-field id="idContrasenna" style="width: 80%; flex-shrink: 0;" label="Contraseña"></vaadin-text-field>
+  <vaadin-password-field label="Password" value="secret1" id="idContrasenna" style="width: 80%;" has-value></vaadin-password-field>
   <vaadin-text-field id="idCorreo" style="width: 80%; flex-shrink: 0;" label="Correo"></vaadin-text-field>
-  <vaadin-text-field id="idFechaNacimiento" style="width: 80%; flex-shrink: 0;" label="Fecha Nacimiento"></vaadin-text-field>
+  <vaadin-text-field id="idFechaNacimiento" style="width: 80%; flex-shrink: 0;" label="Fecha Nacimiento" placeholder="Dia/Mes/Anno"></vaadin-text-field>
   <vaadin-text-field id="idDescripcion" style="width: 80%; flex-shrink: 0;" label="Descripción"></vaadin-text-field>
   <vaadin-horizontal-layout theme="spacing" style="width: 80%; align-items: center; justify-content: center; flex-shrink: 0;">
     Foto 

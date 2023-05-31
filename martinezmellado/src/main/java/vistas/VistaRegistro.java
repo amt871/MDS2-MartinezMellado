@@ -8,6 +8,7 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
 import com.vaadin.flow.component.checkbox.Checkbox;
+import com.vaadin.flow.component.textfield.PasswordField;
 
 /**
  * A Designer generated component for the vista-registro template.
@@ -28,7 +29,7 @@ public class VistaRegistro extends LitTemplate {
 	@Id("idUsuario")
 	private TextField idUsuario;
 	@Id("idContrasenna")
-	private TextField idContrasenna;
+	private PasswordField idContrasenna;
 	@Id("idCorreo")
 	private TextField idCorreo;
 	@Id("idFechaNacimiento")
@@ -82,11 +83,11 @@ public class VistaRegistro extends LitTemplate {
 		this.idUsuario = idUsuario;
 	}
 
-	public TextField getIdContrasenna() {
+	public PasswordField getIdContrasenna() {
 		return idContrasenna;
 	}
 
-	public void setIdContrasenna(TextField idContrasenna) {
+	public void setIdContrasenna(PasswordField idContrasenna) {
 		this.idContrasenna = idContrasenna;
 	}
 

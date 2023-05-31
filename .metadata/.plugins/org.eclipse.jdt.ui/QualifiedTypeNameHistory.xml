@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.Unit"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
-    <fullyQualifiedTypeName name="vistas.VistaAdministrar"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Div"/>
-    <fullyQualifiedTypeName name="vistas.VistaDenuncias"/>
-    <fullyQualifiedTypeName name="vistas.VistaDenuncias_item"/>
-    <fullyQualifiedTypeName name="vistas.VistaBusqueda__administrador_"/>
-    <fullyQualifiedTypeName name="interfaz.Cabecera__administrador_"/>
-    <fullyQualifiedTypeName name="vistas.VistaPantalla_inicio"/>
-    <fullyQualifiedTypeName name="vistas.VistaRegistro"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
     <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion"/>
     <fullyQualifiedTypeName name="vistas.VistaRecuperar_contrasenna"/>
@@ -52,12 +40,24 @@
     <fullyQualifiedTypeName name="org.orm.criteria.CollectionExpression"/>
     <fullyQualifiedTypeName name="org.hibernate.Criteria"/>
     <fullyQualifiedTypeName name="org.orm.PersistentSession"/>
-    <fullyQualifiedTypeName name="org.orm.PersistentException"/>
     <fullyQualifiedTypeName name="org.apache.catalina.session.PersistentManager"/>
     <fullyQualifiedTypeName name="org.orm.PersistentManager"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="orm.Administrador"/>
-    <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
+    <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="org.orm.PersistentTransaction"/>
+    <fullyQualifiedTypeName name="orm.Usuario_RegistradoDAO"/>
+    <fullyQualifiedTypeName name="org.orm.PersistentException"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.text.DateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.time.Period"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.time.Year"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.receivers.MemoryBuffer"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.Upload"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
 </qualifiedTypeNameHistroy>
