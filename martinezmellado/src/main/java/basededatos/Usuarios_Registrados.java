@@ -19,13 +19,30 @@ public class Usuarios_Registrados {
 		throw new UnsupportedOperationException();
 	}
 
-	public Usuario_Registrado iniciarSesion(String aUser, String aPass) {
-		throw new UnsupportedOperationException();
-	}
+	public Usuario_Registrado iniciarSesion(String aUser, String aPass) throws PersistentException {
+        Usuario_Registrado u = null;
+        PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+        try {
+            u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario=aUser and contrasenna=aPass", null);
+        }catch (Exception e) {
+            t.rollback();
+        }
+        return u;
 
-	public void cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) {
-		throw new UnsupportedOperationException();
-	}
+    }
+
+    public void cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) throws PersistentException {
+
+        PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+        try {
+            Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario=aNombreUsuario", null);
+            Usuario_RegistradoDAO.delete(u);
+            u.setContrasenna(aNuevaContrasenna);
+            Usuario_RegistradoDAO.save(u);
+        }catch (Exception e) {
+            t.rollback();
+        }
+    }
 
 	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNaciemiento, String aDescripcion, String aFoto, String aTipo) throws PersistentException {
 		
