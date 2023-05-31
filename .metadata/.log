@@ -14314,3 +14314,6 @@ Java Model Exception: Java Model Status [registrarse(String, String, String, Str
 
 !ENTRY com.vaadin.designer2 1 0 2023-05-31 19:29:30.278
 !MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-05-31 19:31:28.955
+!MESSAGE Heartbeat for: {0}

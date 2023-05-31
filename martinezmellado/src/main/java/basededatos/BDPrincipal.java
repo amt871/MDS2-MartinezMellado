@@ -46,7 +46,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		} catch (PersistentException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
-			return false;
+			//return false;
 		}
 		
 	}

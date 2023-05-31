@@ -84,13 +84,13 @@ public class Registro extends VistaRegistro {
 			}
 
 	
-			if(datos.registrarse(this.getIdNombre().getValue(), this.getIdApellidos().getValue(), this.getIdUsuario().getValue(), this.getIdContrasenna().getValue(),
+			/*if(datos.registrarse(this.getIdNombre().getValue(), this.getIdApellidos().getValue(), this.getIdUsuario().getValue(), this.getIdContrasenna().getValue(),
 					this.getIdCorreo().getValue(), this.getIdFechaNacimiento().getValue(), this.getIdDescripcion().getValue(),
 					"C:/Usuarios/UsuariosProyectoMDS2/"+this.getIdNombre().getValue()+"/imagen.jpg", 
 					this.getUsrComBool().getValue() ? "Comercial" : "Normal"))
 				Notification.show("Registro completo");
 			else
-				Notificacion.show("Registo no completado");
+				Notificacion.show("Registo no completado");*/
 					
 		});
 
