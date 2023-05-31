@@ -165,7 +165,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public void cambiarNotificacion(String aNotificacion) {
+	public void cambiarNotificacion(int aNotificacion) {
 		// TODO Auto-generated method stub
 		
 	}

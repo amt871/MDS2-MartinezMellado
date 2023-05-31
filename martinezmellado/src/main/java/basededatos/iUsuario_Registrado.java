@@ -25,7 +25,7 @@ public interface iUsuario_Registrado {
 
 	public List listarNitificaciones(String aUsuario);
 
-	public void cambiarNotificacion(String aNotificacion);
+	public void cambiarNotificacion(int aNotificacion);
 
 	public Publicacion cargarVideo(String aVideo);
 }

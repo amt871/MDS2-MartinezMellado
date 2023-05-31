@@ -83,7 +83,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		throw new UnsupportedOperationException();
 	}
 
-	public void cambiarNotificacion(String aNotificacion) {
+	public void cambiarNotificacion(int aNotificacion) {
 		throw new UnsupportedOperationException();
 	}
 
