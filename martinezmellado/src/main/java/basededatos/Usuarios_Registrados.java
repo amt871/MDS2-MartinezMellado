@@ -39,6 +39,7 @@ public class Usuarios_Registrados {
             Usuario_RegistradoDAO.delete(u);
             u.setContrasenna(aNuevaContrasenna);
             Usuario_RegistradoDAO.save(u);
+            t.commit();
         }catch (Exception e) {
             t.rollback();
         }

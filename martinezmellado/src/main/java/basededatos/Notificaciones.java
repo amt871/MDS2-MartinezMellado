@@ -40,6 +40,7 @@ public class Notificaciones {
 		    try {
 		        Notificacion u = NotificacionDAO.loadNotificacionByQuery("ID=" + aNotificacion, null);
 		        NotificacionDAO.delete(u);
+		        t.commit();
 		    }catch (Exception e) {
 		        t.rollback();
 		    }
