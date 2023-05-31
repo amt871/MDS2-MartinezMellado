@@ -1,0 +1,4 @@
+package basededatos;
+
+public interface iVer_perfil_privado__usuario_no_registrado_ extends iVer_perfil__usuario_no_registrado_ {
+}

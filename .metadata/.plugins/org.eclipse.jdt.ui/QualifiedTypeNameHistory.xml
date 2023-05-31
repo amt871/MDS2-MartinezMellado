@@ -1,22 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion__administrador_"/>
-    <fullyQualifiedTypeName name="interfaz.Iniciar_sesion__administrador_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.ComponentEventListener"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
-    <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario__administrador__item"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Section"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.H3"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextField"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.datepicker.DatePicker"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.textfield.TextArea"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
     <fullyQualifiedTypeName name="org.springframework.web.context.WebApplicationContext"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Unit"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.dom.Element"/>
@@ -60,4 +43,21 @@
     <fullyQualifiedTypeName name="vistas.VistaConfigurar_perfil_comercial"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
+    <fullyQualifiedTypeName name="interfaz.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="basededatos.Denuncia_Archivada"/>
+    <fullyQualifiedTypeName name="org.orm.criteria.IntegerExpression"/>
+    <fullyQualifiedTypeName name="org.orm.criteria.AbstractORMCriteria"/>
+    <fullyQualifiedTypeName name="org.orm.criteria.AssociationExpression"/>
+    <fullyQualifiedTypeName name="org.orm.criteria.StringExpression"/>
+    <fullyQualifiedTypeName name="org.orm.criteria.CollectionExpression"/>
+    <fullyQualifiedTypeName name="org.hibernate.Criteria"/>
+    <fullyQualifiedTypeName name="org.orm.PersistentSession"/>
+    <fullyQualifiedTypeName name="org.orm.PersistentException"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.session.PersistentManager"/>
+    <fullyQualifiedTypeName name="org.orm.PersistentManager"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="orm.Administrador"/>
+    <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
