@@ -67,7 +67,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		
 	}
 	@Override
-	public List listarVideoBusqueda() {
+	public List listarVideoBusqueda(String cadena) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -129,7 +129,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public List listarVideosBusqueda() {
+	public List listarVideosBusqueda(String cadena) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -165,7 +165,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public void cambiarNotificacion(String aNotificacion) {
+	public void cambiarNotificacion(int aNotificacion) {
 		// TODO Auto-generated method stub
 		
 	}

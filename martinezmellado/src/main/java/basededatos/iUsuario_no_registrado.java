@@ -7,7 +7,7 @@ public interface iUsuario_no_registrado {
 
 	public List cargarVideos();
 
-	public List listarVideoBusqueda();
+	public List listarVideoBusqueda(String cadena);
 
 	public List buscarUsuario(String aBusqueda);
 
