@@ -174,8 +174,9 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	@Override
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.sql.Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
 		// TODO Auto-generated method stub
 		

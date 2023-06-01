@@ -137,17 +137,18 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		// TODO Auto-generated method stub
 		return null;
 	}
+		
 
 	@Override
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.util.Date aFechaDeNaciemiento,
-			String aCorreoElectronico, String aDescripcion) {
+	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
+			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
-			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.sql.Date aFechaDeNaciemiento,
+			String aCorreoElectronico, String aDescripcion) {
 		// TODO Auto-generated method stub
 		
 	}

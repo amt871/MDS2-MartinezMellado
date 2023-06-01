@@ -64,6 +64,10 @@ public class Usuarios_Registrados {
 
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
+			
+			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='"+ aNomUsuario , null);
+			
+			if (u != null) return;
 
 			Usuario_Registrado nuevo = new Usuario_Registrado();
 
@@ -126,7 +130,7 @@ public class Usuarios_Registrados {
 		return u;
 	}
 
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, String aFechaDeNacimiento,
+	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento,
 			String aCorreoElectronico, String aDescripcion) {
 		throw new UnsupportedOperationException();
 	}
