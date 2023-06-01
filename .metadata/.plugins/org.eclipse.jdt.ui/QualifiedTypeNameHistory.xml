@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
-    <fullyQualifiedTypeName name="vistas.VistaIniciar_sesion"/>
-    <fullyQualifiedTypeName name="vistas.VistaRecuperar_contrasenna"/>
-    <fullyQualifiedTypeName name="vistas.VistaConfirmar_codigo"/>
-    <fullyQualifiedTypeName name="vistas.VistaCabecera_usuario_no_registrado"/>
     <fullyQualifiedTypeName name="org.springframework.boot.web.servlet.error.ErrorController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="vistas.VistaInicio_no_registrado_item"/>
@@ -44,11 +39,8 @@
     <fullyQualifiedTypeName name="org.orm.PersistentManager"/>
     <fullyQualifiedTypeName name="orm.Administrador"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
-    <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="org.orm.PersistentTransaction"/>
-    <fullyQualifiedTypeName name="orm.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="org.orm.PersistentException"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
     <fullyQualifiedTypeName name="java.text.DateFormat"/>
@@ -56,8 +48,16 @@
     <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.time.Year"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.receivers.MemoryBuffer"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.Upload"/>
+    <fullyQualifiedTypeName name="vistas.VistaConfirmar_correo"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
+    <fullyQualifiedTypeName name="orm.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.io.OutputStream"/>
+    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
+    <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
 </qualifiedTypeNameHistroy>

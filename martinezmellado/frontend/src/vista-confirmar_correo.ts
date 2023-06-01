@@ -16,15 +16,15 @@ export class VistaConfirmar_correo extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <vaadin-vertical-layout style="width: 100%; height: 30%; align-items: center; justify-content: center;">
-  <img src="../../resources/icons/toktok2.svg">
+  <img src="icons/toktok2.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 70%; align-items: center; justify-content: center;">
   <label>Introduzca el codigo que le hemos enviado </label>
-  <vaadin-text-field label="" placeholder="" style="width: 70%;"></vaadin-text-field>
-  <vaadin-button style="width: 20%;">
-   Enviar 
+  <vaadin-text-field label="" placeholder="" style="width: 70%;" id="bTextField"></vaadin-text-field>
+  <vaadin-button style="width: 20%;" id="bEnviar">
+    Enviar 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>
