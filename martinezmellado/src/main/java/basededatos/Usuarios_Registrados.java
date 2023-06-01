@@ -83,10 +83,12 @@ public class Usuarios_Registrados {
 
 			t.commit();
 			
-			File file = new File("C:\\UsuariosProyectoMDS2\\"+aNombre);
-			File videos = new File("C:\\UsuariosProyectoMDS2\\"+aNombre+"\\videos");
+			File file = new File("C:\\UsuariosProyectoMDS2\\"+aNomUsuario);
+			File videos = new File("C:\\UsuariosProyectoMDS2\\"+aNomUsuario+"\\videos");
 			file.mkdir();
 			videos.mkdir();
+			file = null;
+			videos = null;
 			
 		} catch (Exception e) {
 			t.rollback();

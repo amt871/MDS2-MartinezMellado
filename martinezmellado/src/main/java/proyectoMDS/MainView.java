@@ -361,6 +361,17 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
+		/*****************LISTENERS******************/
+		
+		registroCibernauta.getbRegistrar().addClickListener(event -> {
+			
+			if(registroCibernauta.registrarUsuario()) {
+				cambiarPantalla(confCod);
+			}
+				
+			
+		});
+		
 		/**************PANTALLA INICIAL**************/
 		
 		//Administrador
