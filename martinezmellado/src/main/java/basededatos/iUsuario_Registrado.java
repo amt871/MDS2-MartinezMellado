@@ -11,7 +11,7 @@ public interface iUsuario_Registrado {
 
 	public List cargarVideos();
 
-	public List listarVideosBusqueda();
+	public List listarVideosBusqueda(String cadena);
 
 	public List buscarHahsTag(String aBusqueda);
 

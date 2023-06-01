@@ -1,34 +1,120 @@
 package basededatos;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Vector;
+
+import org.orm.PersistentException;
+import org.orm.PersistentTransaction;
+
+import orm.MartinezMelladoMDSPersistentManager;
+import orm.Notificacion;
+import orm.NotificacionDAO;
 import orm.Publicacion;
+import orm.PublicacionDAO;
+import orm.Usuario_RegistradoDAO;
 
 public class Publicaciones {
 	public Sistema _sis_publi;
 	public Vector<Publicacion> _publicacion = new Vector<Publicacion>();
 
-	public List cargarVideos() {
-		throw new UnsupportedOperationException();
+	public List<Publicacion> cargarVideos() throws PersistentException {
+		 Publicacion[] u = null;
+		    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try {
+		        u = PublicacionDAO.listPublicacionByQuery(null, null);
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+		    List<Publicacion> aux = new ArrayList<Publicacion>();
+		    if (u != null) {
+		        for (Publicacion publicacion : u) {
+		            aux.add(publicacion);
+		        }
+		    }
+		    return aux;
 	}
 
-	public List listarVideosBusqueda() {
-		throw new UnsupportedOperationException();
+	public List<Publicacion> listarVideosBusqueda(String cadena) throws PersistentException {
+		List<Publicacion> aux = new ArrayList<Publicacion>();
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        String queryStr = "Descripcion like '%" + cadena + "%'";
+	        Publicacion[] publicaciones = PublicacionDAO.listPublicacionByQuery(queryStr, null);
+	        if (publicaciones != null) {
+	            aux = Arrays.asList(publicaciones);
+	        }
+	    }catch (Exception e) {
+	        t.rollback();
+	    }
+	    return aux;
 	}
 
-	public List videosHashTag(String aHashtag) {
-		throw new UnsupportedOperationException();
+	public List videosHashTag(String aHashtag) throws PersistentException {
+		List<Publicacion> aux = new ArrayList<Publicacion>();
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        String queryStr = "Hashtag like '%" + aHashtag + "%'";
+	        Publicacion[] publicaciones = PublicacionDAO.listPublicacionByQuery(queryStr, null);
+	        if (publicaciones != null) {
+	            aux = Arrays.asList(publicaciones);
+	        }
+	    }catch (Exception e) {
+	        t.rollback();
+	    }
+	    return aux;
 	}
 
-	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo, String aPropietario) {
-		throw new UnsupportedOperationException();
+	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo, String aPropietario) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        Publicacion aux = new Publicacion();
+	        aux.setDescripcion(aDescripcion);
+	        aux.setUbicacion(aUbicacion);
+	        aux.setVideo(aVideo);
+	        if (aFecha != null) {
+	        	aux.setFecha(Date.valueOf(LocalDate.now()));
+	        }
+	        aux.setPublicidad(aTipo);
+	        aux.setRealizada(Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("Propietario = '" + aPropietario + "'", null));
+	        PublicacionDAO.save(aux);
+	        t.commit();
+	    }catch (Exception e) {
+	        t.rollback();
+	    }
 	}
 
-	public List listarPublicacionesDenunciadas() {
-		throw new UnsupportedOperationException();
+	public List listarPublicacionesDenunciadas() throws PersistentException {
+		List<Publicacion> aux = new ArrayList<Publicacion>();
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        Publicacion[] publicaciones = PublicacionDAO.listPublicacionByQuery(null, null);
+	        if (publicaciones != null) {
+	            aux = Arrays.asList(publicaciones);
+	            for (Publicacion publicacion : aux) {
+					if (publicacion.es_denunciada.size() <= 0) {
+						aux.remove(publicacion);
+					}
+				}
+	        }
+	        
+	    }catch (Exception e) {
+	        t.rollback();
+	    }
+	    return aux;
 	}
 
-	public Publicacion cargarVideo(String aVideo) {
-		throw new UnsupportedOperationException();
+	public Publicacion cargarVideo(String aVideo) throws PersistentException {
+		 Publicacion u = null;
+		    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try {
+		        u = PublicacionDAO.loadPublicacionByQuery("ID = '" + aVideo + "'", aVideo);
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+		    return u;
 	}
 }

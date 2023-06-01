@@ -59,7 +59,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		throw new UnsupportedOperationException();
 	}
 
-	public List listarVideosBusqueda() {
+	public List listarVideosBusqueda(String cadena) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -91,7 +91,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		throw new UnsupportedOperationException();
 	}
 
-	public List listarVideoBusqueda() {
+	public List listarVideoBusqueda(String cadena) {
 		throw new UnsupportedOperationException();
 	}
 
