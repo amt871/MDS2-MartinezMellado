@@ -2,6 +2,8 @@ package basededatos;
 
 import java.time.Period;
 import java.time.Year;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -18,6 +20,9 @@ import com.vaadin.flow.component.upload.Upload;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
 
 import orm.MartinezMelladoMDSPersistentManager;
+import orm.Publicacion;
+import orm.PublicacionDAO;
+import orm.Usuario;
 import orm.Usuario_Registrado;
 import orm.Usuario_RegistradoDAO;
 
@@ -33,7 +38,7 @@ public class Usuarios_Registrados {
 		Usuario_Registrado u = null;
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
-			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario=aUser and contrasenna=aPass", null);
+			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='"+ aUser +" ' and contrasenna='" + aPass + "'", null);
 		} catch (Exception e) {
 			t.rollback();
 		}
@@ -42,13 +47,13 @@ public class Usuarios_Registrados {
 	}
 
 	public void cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) throws PersistentException {
-
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
-			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario=aNombreUsuario", null);
+			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='"+ aNombreUsuario , null);
 			Usuario_RegistradoDAO.delete(u);
 			u.setContrasenna(aNuevaContrasenna);
 			Usuario_RegistradoDAO.save(u);
+			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 		}
@@ -95,12 +100,30 @@ public class Usuarios_Registrados {
 		}
 	}
 
-	public List buscarUsuarios(String aBusqueda) {
-		throw new UnsupportedOperationException();
+	public List buscarUsuarios(String aBusqueda) throws PersistentException {
+		List<Usuario_Registrado> aux = new ArrayList<Usuario_Registrado>();
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        String queryStr = "Nombre like '%" + aBusqueda + "%'";
+	        Usuario_Registrado[] publicaciones = Usuario_RegistradoDAO.listUsuario_RegistradoByQuery(queryStr, null);
+	        if (publicaciones != null) {
+	            aux = Arrays.asList(publicaciones);
+	        }
+	    }catch (Exception e) {
+	        t.rollback();
+	    }
+	    return aux;
 	}
 
-	public Usuario_Registrado datosUsuario(String aNombreUsuario) {
-		throw new UnsupportedOperationException();
+	public Usuario_Registrado datosUsuario(String aNombreUsuario) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		Usuario_Registrado u = null;
+		try {
+			 u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='"+ aNombreUsuario , null);
+		} catch (Exception e) {
+			t.rollback();
+		}
+		return u;
 	}
 
 	public void guardarDatos(String aFoto, String aUsuario, String aNombre, String aFechaDeNacimiento,
