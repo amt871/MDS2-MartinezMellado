@@ -55,15 +55,18 @@ public class Registro extends VistaRegistro {
 	
 	BDPrincipal datos;
 	String pathImage;
-	MemoryBuffer memoryBuffer = new MemoryBuffer();
+	MemoryBuffer memoryBuffer;// = new MemoryBuffer();
 	InputStream fileData;
-	
+	Usuario_Registrado usuarioARegistrar;
+	Object[] cosas;
 	
 
 	public Registro() {
 		
 		datos = new BDPrincipal();
+		usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
+		cosas = new Object[4];
 		this.getIdImagen().setReceiver(memoryBuffer);
 		fileData = null;
 		this.getIdImagen().addSucceededListener(event -> {
@@ -72,45 +75,144 @@ public class Registro extends VistaRegistro {
 				fileData = memoryBuffer.getInputStream();
 			else
 				Notification.show("Solo se admiten imagenes en jpg");
-		    //String fileName = event.getFileName();
-		    //long contentLength = event.getContentLength();
-		    //String mimeType = event.getMIMEType();
-			
-		    //Notification.show(fileName);
-		    //Notification.show(mimeType);
-		    //Notification.show(fileData.toString());
 			
 		});
 		
-		/*this.getIdImagen().setReceiver(new Receiver() {
-		    @Override
-		    public OutputStream receiveUpload(String filename, String mimeType) {
-		        // Esta será tu ruta de archivo local.
-		        // Modifícala según donde quieras guardar el archivo.
-		        //String filePath = "local/path/to/your/file/" + filename;
-
-		        FileOutputStream fos; // Stream para escribir el archivo
-		        try {
-		            fos = new FileOutputStream(pathImage);
-		        } catch (final java.io.FileNotFoundException e) {
-		        	Notification.show("Error de imagen");
-		            return null;
-		        }
-		        return fos; // Devuelve el FileOutputStream
-		    }
-		}); // Obtén tu objeto Upload*/
-		
-		
-		/*this.getbRegistrar().addClickListener(event -> {
-			
-			if(registrarUsuario())
-				Notification.show("RegistroCompleto");
-			
-		});*/
 		
 	}
 	
-	public boolean registrarUsuario(){
+	public Object[] registrarUsuario(){
+
+		//this.getbRegistrar().addClickListener(event -> {
+
+			if (this.getIdNombre().isEmpty()) {
+
+				Notification.show("Introduce el Nombre");
+				cosas[0] = false;
+				return cosas;
+			}
+
+			if (this.getIdApellidos().isEmpty()) {
+
+				Notification.show("Introduce el Apellido");
+				cosas[0] = false;
+				return cosas;
+			}
+
+			if (this.getIdUsuario().isEmpty()) {
+
+				Notification.show("Introduce el Nombre de Usuario");
+				cosas[0] = false;
+				return cosas;
+			}
+
+			if (this.getIdContrasenna().isEmpty()) {
+
+				Notification.show("Introduce la Contrasenna");
+				cosas[0] = false;
+				return cosas;
+			}
+
+			if (this.getIdCorreo().isEmpty()) {
+
+				Notification.show("Introduce el Correo");
+				cosas[0] = false;
+				return cosas;
+			}
+
+			if (this.getIdFechaNacimiento().isEmpty()) {
+
+				Notification.show("Introduce la Fecha de Nacimiento");
+				cosas[0] = false;
+				return cosas;
+			}
+
+			//System.out.println(this.getIdFechaNacimiento().getValue());
+			
+			DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+			Date myDate = null;
+			//Date sqlDate = null;
+			try {
+				myDate = formatter.parse(this.getIdFechaNacimiento().getValue());
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+				Notification.show("Fecha incorrecta");
+				cosas[0] = false;
+				return cosas;
+			}
+			//if(myDate!=null)
+				//sqlDate = new Date(myDate.getTime());
+			
+			pathImage = "C:/UsuariosProyectoMDS2/"+this.getIdUsuario().getValue()+"/imagen.jpg";
+			
+			cosas[3] = pathImage;
+			
+			/*if(!datos.registrarse(this.getIdNombre().getValue(), this.getIdApellidos().getValue(), this.getIdUsuario().getValue(), this.getIdContrasenna().getValue(),
+					this.getIdCorreo().getValue(), myDate, this.getIdDescripcion().getValue(),
+					pathImage, this.getUsrComBool().getValue() ? "Comercial" : "Normal"))
+			{
+				Notification.show("Registo no completado");
+				cosas[0] = false;
+				return cosas;//***************************************DESCOMENTAR ESTO*********************************************************************
+			}*/
+			
+			usuarioARegistrar.setNombre(this.getIdNombre().getValue());
+			usuarioARegistrar.setApellido(this.getIdApellidos().getValue());
+			usuarioARegistrar.setUsuario(this.getIdUsuario().getValue());
+			usuarioARegistrar.setContrasenna(this.getIdContrasenna().getValue());
+			usuarioARegistrar.setCorreo(this.getIdCorreo().getValue());
+			usuarioARegistrar.setFechaNacimiento(myDate);
+			usuarioARegistrar.setDescripcion(this.getIdDescripcion().getValue());
+			usuarioARegistrar.setComercial(this.getUsrComBool().getValue() ? "Comercial" : "Normal");
+			
+			cosas[1] = usuarioARegistrar;
+			
+			if(fileData != null)
+				cosas[2] = fileData;
+			else
+				cosas[2] = null;
+			
+			cosas[0]=true;
+			
+			return cosas;
+			/*try {
+				
+				File image = new File(pathImage);
+				
+				//if(!image.exists())
+					image.createNewFile();
+					
+				OutputStream out = new FileOutputStream(pathImage);
+				
+				//fileData.transferTo(out);
+				
+				byte[] buf = new byte[1024];
+			    int length;
+			    while ((length = fileData.read(buf)) > 0) {
+			        out.write(buf, 0, length);
+			    }
+				//byte[] dataBytes = fileData.readAllBytes();
+				
+				fileData.close();
+				
+				//out.wri
+				out.flush();
+				out.close();
+				image = null;
+				
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				Notification.show("Error interno (No se ha cargado la Imagen)");
+			}
+			
+			Notification.show("Registro completado");
+			return true;*/
+
+	}
+	
+	/*public boolean registrarUsuario(){
 
 		//this.getbRegistrar().addClickListener(event -> {
 
@@ -171,32 +273,10 @@ public class Registro extends VistaRegistro {
 			if(!datos.registrarse(this.getIdNombre().getValue(), this.getIdApellidos().getValue(), this.getIdUsuario().getValue(), this.getIdContrasenna().getValue(),
 					this.getIdCorreo().getValue(), myDate, this.getIdDescripcion().getValue(),
 					pathImage, this.getUsrComBool().getValue() ? "Comercial" : "Normal"))
-				//Notification.show("Registro completo");
-			/*else*/ {
+			{
 				Notification.show("Registo no completado");
 				return false;
 			}
-			
-			/*this.getIdImagen().setReceiver(new Receiver() {
-			    @Override
-			    public OutputStream receiveUpload(String filename, String mimeType) {
-			        // Esta será tu ruta de archivo local.
-			        // Modifícala según donde quieras guardar el archivo.
-			        //String filePath = "local/path/to/your/file/" + filename;
-
-			        FileOutputStream fos; // Stream para escribir el archivo
-			        try {
-			            fos = new FileOutputStream(pathImage);
-			        } catch (final java.io.FileNotFoundException e) {
-			        	Notification.show("Error de imagen");
-			            return null;
-			        }
-			        return fos; // Devuelve el FileOutputStream
-			    }
-			}); // Obtén tu objeto Upload
-			
-			return true;*/
-		//});
 			
 			if(fileData != null)
 			try {
@@ -224,12 +304,7 @@ public class Registro extends VistaRegistro {
 				out.close();
 				image = null;
 				
-			/*} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				Notification.show("Error interno (Archivo no encontrado)");
-				
-			*/} catch (IOException e) {
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				Notification.show("Error interno (No se ha cargado la Imagen)");
@@ -238,6 +313,6 @@ public class Registro extends VistaRegistro {
 			Notification.show("Registro completado");
 			return true;
 
-	}
+	}*/
 
 }//LAS IMAGENES SON LAS QUE HAY EN META-INF

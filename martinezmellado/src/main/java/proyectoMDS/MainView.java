@@ -16,6 +16,8 @@ import com.vaadin.flow.server.PWA;
 
 import interfaz.*;
 
+import java.io.InputStream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -47,10 +49,14 @@ public class MainView extends VerticalLayout {
 	 */
 
 	private Component pantallaActual;
+	orm.Usuario_Registrado usuarioARegistrar;// = new orm.Usuario_Registrado();
+	InputStream imagen;
+	Object[] cosas;
 	//private Iniciar_sesion__administrador_ inicioAdministrador;
 
 	public MainView() {
 		
+		//this.cosas = new Object[3];
 		this.setPadding(false);
 		this.setMargin(false);
 		this.setSpacing(false);
@@ -78,6 +84,7 @@ public class MainView extends VerticalLayout {
 		Iniciar_sesion iniciarSesionCibernauta = new Iniciar_sesion();
 		Recuperar_Contrasenna recContra = new Recuperar_Contrasenna();
 		Confirmar_codigo confCod = new Confirmar_codigo();
+		Confirmar_correo confCorr = new Confirmar_correo();
 		
 		//No registrado
 		
@@ -365,10 +372,19 @@ public class MainView extends VerticalLayout {
 		
 		registroCibernauta.getbRegistrar().addClickListener(event -> {
 			
-			if(registroCibernauta.registrarUsuario()) {
-				cambiarPantalla(confCod);
+			cosas = registroCibernauta.registrarUsuario();
+			if((boolean)cosas[0]) {
+				cambiarPantalla(confCorr);
 			}
 				
+			
+		});
+		
+		confCorr.getbEnviar().addClickListener(event -> {
+			
+			if(confCorr.confirmarCodigo(cosas)) {
+				cambiarPantalla(iniciarSesionCibernauta);
+			}
 			
 		});
 		
