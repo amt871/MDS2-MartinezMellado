@@ -1,7 +1,5 @@
 package basededatos;
 
-import orm.Usuario_Registrado;
-
 public interface iCibernauta {
 
 	public boolean comprobarCredenciales(String aUser, String aPass);

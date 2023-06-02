@@ -10,13 +10,6 @@ import java.util.Vector;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import orm.MartinezMelladoMDSPersistentManager;
-import orm.Notificacion;
-import orm.NotificacionDAO;
-import orm.Publicacion;
-import orm.PublicacionDAO;
-import orm.Usuario_RegistradoDAO;
-
 public class Publicaciones {
 	public Sistema _sis_publi;
 	public Vector<Publicacion> _publicacion = new Vector<Publicacion>();

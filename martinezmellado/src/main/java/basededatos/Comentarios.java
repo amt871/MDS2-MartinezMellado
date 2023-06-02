@@ -8,12 +8,6 @@ import java.util.Vector;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import orm.Comentario;
-import orm.ComentarioDAO;
-import orm.MartinezMelladoMDSPersistentManager;
-import orm.Publicacion;
-import orm.PublicacionDAO;
-
 public class Comentarios {
 	public Sistema _sis_com;
 	public Vector<Comentario> _comentario = new Vector<Comentario>();

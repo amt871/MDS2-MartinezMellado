@@ -1,0 +1,69 @@
+/**
+ * "Visual Paradigm: DO NOT MODIFY THIS FILE!"
+ * 
+ * This is an automatic generated file. It will be regenerated every time 
+ * you generate persistence class.
+ * 
+ * Modifying its content may cause the program not work, or your work may lost.
+ */
+
+/**
+ * Licensee: Juanra(University of Almeria)
+ * License Type: Academic
+ */
+package basededatos;
+
+public interface ORMConstants extends org.orm.util.ORMBaseConstants {
+	final int KEY_ADMINISTRADOR_BLOQUEA = -1963993853;
+	
+	final int KEY_ADMINISTRADOR_HA_ATENDIDO = 1023554512;
+	
+	final int KEY_COMENTARIO_LE_GUSTA = -2013735222;
+	
+	final int KEY_COMENTARIO_ES_DENUNCIADA = 394454853;
+	
+	final int KEY_COMENTARIO_ES_PUBLICADO = 699250384;
+	
+	final int KEY_COMENTARIO_PERTENECE = 1394806505;
+	
+	final int KEY_DENUNCIA_ARCHIVADA_ATENDIDA = -339752756;
+	
+	final int KEY_HASHTAG_ESTA = 1608218702;
+	
+	final int KEY_NOTIFICACION_TIENE = -597658876;
+	
+	final int KEY_PUBLICACION_LE_GUSTA = -788627826;
+	
+	final int KEY_PUBLICACION_REALIZADA = 974810317;
+	
+	final int KEY_PUBLICACION_ES_DENUNCIADA = -245138943;
+	
+	final int KEY_PUBLICACION_PERTENECE = 718430117;
+	
+	final int KEY_PUBLICACION_TIENE = -350201019;
+	
+	final int KEY_USUARIO_REGISTRADO_DENUNCIADO = -1469818722;
+	
+	final int KEY_USUARIO_REGISTRADO_DENUNCIANTE = 1680269740;
+	
+	final int KEY_USUARIO_REGISTRADO_LE_GUSTA = 466423146;
+	
+	final int KEY_USUARIO_REGISTRADO_LE_GUSTA_A = 1556047564;
+	
+	final int KEY_USUARIO_REGISTRADO_REALIZA = -892577292;
+	
+	final int KEY_USUARIO_REGISTRADO_SEGUIDO = 734966;
+	
+	final int KEY_USUARIO_REGISTRADO_SEGUIDOR = 22784060;
+	
+	final int KEY_USUARIO_REGISTRADO_DENUNCIA = -213659469;
+	
+	final int KEY_USUARIO_REGISTRADO_DENUNCIAA = 1966491118;
+	
+	final int KEY_USUARIO_REGISTRADO_ENVIA = 1679474279;
+	
+	final int KEY_USUARIO_REGISTRADO_ES_BLOQUEADO = -1417660483;
+	
+	final int KEY_USUARIO_REGISTRADO_PUBLICA = 421718586;
+	
+}

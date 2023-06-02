@@ -1,7 +1,6 @@
 package basededatos;
 
 import java.util.List;
-import orm.*;
 
 public interface iUsuario_no_registrado {
 

@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.orm.PersistentException;
 
-import orm.*;
-
 public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado, iUsuario_no_registrado, iInicio_sesion_administrador, iAdministrador, iVer_perfil__usuario_no_registrado_, iVer_perfil_privado__usuario_no_registrado_, iVer_perfil_publico__usuario_no_registrado_, iVer_perfil__administrador_, iVer_perfil_publico__administrador_, iVer_perfil_privado__administrador_, iVer_perfil__usuario_registrado_, iVer_perfil_publico__usuario_registrado_, iVer_perfil_privado__usuario_registrado_ {
 
 	Usuarios_Registrados usuariosRegistrados = new Usuarios_Registrados();
@@ -76,7 +74,16 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario) {
-		throw new UnsupportedOperationException();
+		
+		Usuario_Registrado u = null;
+		
+		try {
+			u = this.usuariosRegistrados.datosUsuario(aNombreUsuario);
+		} catch (PersistentException e) {
+			//return u;
+		}
+		
+		return u;
 	}
 
 	public List listarNitificaciones(String aUsuario) {

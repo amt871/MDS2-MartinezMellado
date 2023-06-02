@@ -49,7 +49,7 @@ public class MainView extends VerticalLayout {
 	 */
 
 	private Component pantallaActual;
-	orm.Usuario_Registrado usuarioARegistrar;// = new orm.Usuario_Registrado();
+	basededatos.Usuario_Registrado usuarioARegistrar;// = new orm.Usuario_Registrado();
 	InputStream imagen;
 	Object[] cosas;
 	//private Iniciar_sesion__administrador_ inicioAdministrador;

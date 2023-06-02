@@ -7,12 +7,6 @@ import java.util.Vector;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import orm.Administrador;
-import orm.AdministradorDAO;
-import orm.MartinezMelladoMDSPersistentManager;
-import orm.Notificacion;
-import orm.NotificacionDAO;
-
 public class Notificaciones {
 	public Sistema _sis_not;
 	public Vector<Notificacion> _notificacion = new Vector<Notificacion>();

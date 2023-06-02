@@ -8,12 +8,6 @@ import java.util.Vector;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import orm.Denuncia_Archivada;
-import orm.Denuncia_ArchivadaDAO;
-import orm.MartinezMelladoMDSPersistentManager;
-import orm.Publicacion;
-import orm.PublicacionDAO;
-
 public class Denuncias_Archivadas {
 	public Sistema _sis_den;
 	public Vector<Denuncia_Archivada> _denuncia_Archivada = new Vector<Denuncia_Archivada>();

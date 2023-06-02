@@ -51,7 +51,6 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.receivers.MemoryBuffer"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.Upload"/>
     <fullyQualifiedTypeName name="vistas.VistaConfirmar_correo"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="orm.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
     <fullyQualifiedTypeName name="java.io.File"/>
@@ -59,5 +58,6 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
 </qualifiedTypeNameHistroy>

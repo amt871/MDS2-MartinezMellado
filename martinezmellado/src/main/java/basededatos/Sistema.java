@@ -20,8 +20,6 @@ import java.util.Date;
 import java.util.List;
 
 import interfaz.Administrador;
-import orm.Publicacion;
-import orm.Usuario_Registrado;
 
 public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_perfil__usuario_registrado_, iVer_perfil_privado__usuario_registrado_, iVer_perfil_privado__usuario_no_registrado_, iVer_perfil__usuario_no_registrado_, iVer_perfil_publico__usuario_no_registrado_, iVer_perfil_privado__administrador_, iVer_perfil__administrador_, iVer_perfil_publico__administrador_, iUsuario_Registrado, iComercial, iCibernauta, iUsuario_no_registrado, iInicio_sesion_administrador, iAdministrador {
 	public Usuarios_Registrados _usuarios_Registrados;
@@ -32,7 +30,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public Notificaciones _notificaciones;
 	public Publicaciones _publicaciones;
 	@Override
-	public orm.Administrador iniciarSesionAdministrador(String aUser, String aPass) {
+	public basededatos.Administrador iniciarSesionAdministrador(String aUser, String aPass) {
 		// TODO Auto-generated method stub
 		return null;
 	}

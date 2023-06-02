@@ -29,7 +29,7 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 	 */
 
 	//Object[] cosas;
-	orm.Usuario_Registrado usuarioARegistrar;
+	basededatos.Usuario_Registrado usuarioARegistrar;
 	InputStream fileData;
 	BDPrincipal datos;
 
@@ -45,7 +45,7 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 		if (this.getbTextField().getValue().equals("1111")) {
 			// Notification.show("Correo confirmado correctamente");
 
-			usuarioARegistrar = (orm.Usuario_Registrado) cosas[1];
+			usuarioARegistrar = (basededatos.Usuario_Registrado) cosas[1];
 
 			if (!datos.registrarse(usuarioARegistrar.getNombre(), usuarioARegistrar.getApellido(),
 					usuarioARegistrar.getUsuario(), usuarioARegistrar.getContrasenna(), usuarioARegistrar.getCorreo(),

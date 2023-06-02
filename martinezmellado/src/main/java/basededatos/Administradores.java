@@ -5,12 +5,6 @@ import java.util.Vector;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import orm.Administrador;
-import orm.AdministradorDAO;
-import orm.MartinezMelladoMDSPersistentManager;
-import orm.Usuario_Registrado;
-import orm.Usuario_RegistradoDAO;
-
 public class Administradores {
 	public Sistema _sis_admin;
 	public Vector<Administrador> _administrador = new Vector<Administrador>();

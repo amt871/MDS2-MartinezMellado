@@ -8,14 +8,6 @@ import java.util.Vector;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
 
-import orm.ComentarioSetCollection;
-import orm.Hashtag;
-import orm.HashtagDAO;
-import orm.HashtagSetCollection;
-import orm.MartinezMelladoMDSPersistentManager;
-import orm.Publicacion;
-import orm.PublicacionDAO;
-
 public class Hashtags {
 	public Sistema _sis_has;
 	public Vector<Hashtag> _hashtag = new Vector<Hashtag>();

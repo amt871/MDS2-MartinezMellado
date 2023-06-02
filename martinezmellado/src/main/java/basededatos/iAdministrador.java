@@ -2,8 +2,6 @@ package basededatos;
 
 import java.util.List;
 
-import orm.*;
-
 public interface iAdministrador {
 
 	public Administrador iniciarSesionAdministrador(String aUser, String aPass);

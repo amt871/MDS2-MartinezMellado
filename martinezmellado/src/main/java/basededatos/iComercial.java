@@ -1,7 +1,5 @@
 package basededatos;
 
-import orm.Usuario_Registrado;
-
 public interface iComercial {
 
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario);

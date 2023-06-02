@@ -3,8 +3,6 @@ package basededatos;
 import java.sql.Date;
 import java.util.List;
 
-import orm.*;
-
 public interface iUsuario_Registrado {
 
 	public List buscarUsurios(String aBusqueda);
