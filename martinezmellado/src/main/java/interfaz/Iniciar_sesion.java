@@ -2,9 +2,13 @@ package interfaz;
 
 import com.vaadin.flow.component.notification.Notification;
 
+import basededatos.BDPrincipal;
 import vistas.VistaIniciar_sesion;
 
 public class Iniciar_sesion extends VistaIniciar_sesion{
+	
+	private BDPrincipal datos = new BDPrincipal();
+	
 //	private event _entrar;
 //	private Label _usuarioL;
 //	private TextField _usuarioTF;
@@ -58,6 +62,18 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 			return false;
 			
 		}
+		
+	}
+	
+	public basededatos.Usuario_Registrado iniciarSesionBueno() {
+		
+		
+		if(!datos.comprobarCredenciales(this.getInUser().getValue(), this.getInPass().getValue())) {
+			Notification.show("Credenciales incorrectas");
+			return null;
+		}
+		
+		return datos.datosUsuario(this.getInUser().getValue());
 		
 	}
 	
