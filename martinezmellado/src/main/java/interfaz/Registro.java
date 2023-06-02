@@ -63,7 +63,7 @@ public class Registro extends VistaRegistro {
 		datos = new BDPrincipal();
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
-		cosas = new Object[4];
+		cosas = new Object[3];
 		this.getIdImagen().setReceiver(memoryBuffer);
 		fileData = null;
 		this.getIdImagen().addSucceededListener(event -> {
@@ -151,9 +151,9 @@ public class Registro extends VistaRegistro {
 		// if(myDate!=null)
 		// sqlDate = new Date(myDate.getTime());
 
-		pathImage = "C:/UsuariosProyectoMDS2/" + this.getIdUsuario().getValue() + "/imagen.jpg";
+		//pathImage = null;
 
-		cosas[3] = pathImage;
+		//cosas[3] = pathImage;
 
 		/*
 		 * if(!datos.registrarse(this.getIdNombre().getValue(),

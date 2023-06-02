@@ -8,6 +8,8 @@ import com.vaadin.flow.component.template.Id;
 
 import interfaz.Mi_cabecera;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.html.Label;
 
 /**
  * A Designer generated component for the vista-mi_perfil template.
@@ -24,6 +26,14 @@ public class VistaMi_perfil extends LitTemplate {
 	private Div divCabecera;
 	@Id("bConfigurar")
 	private Button bConfigurar;
+	@Id("idImagen")
+	private Image idImagen;
+	@Id("idUsuario")
+	private Label idUsuario;
+	@Id("idNumSeguidores")
+	private Label idNumSeguidores;
+	@Id("idNumMgs")
+	private Label idNumMgs;
 
 	/**
      * Creates a new VistaMi_perfil.
@@ -57,6 +67,39 @@ public class VistaMi_perfil extends LitTemplate {
 		this.bConfigurar = bConfigurar;
 	}
 
+	public Image getIdImagen() {
+		return idImagen;
+	}
+
+	public void setIdImagen(Image idImagen) {
+		this.idImagen = idImagen;
+	}
+
+	public Label getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Label idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public Label getIdNumSeguidores() {
+		return idNumSeguidores;
+	}
+
+	public void setIdNumSeguidores(Label idNumSeguidores) {
+		this.idNumSeguidores = idNumSeguidores;
+	}
+
+	public Label getIdNumMgs() {
+		return idNumMgs;
+	}
+
+	public void setIdNumMgs(Label idNumMgs) {
+		this.idNumMgs = idNumMgs;
+	}
+
+	
     
     
 }
