@@ -49,10 +49,11 @@ public class MainView extends VerticalLayout {
 	 */
 
 	private Component pantallaActual;
-	basededatos.Usuario_Registrado usuarioARegistrar;// = new orm.Usuario_Registrado();
+	basededatos.Usuario_Registrado usuario;// = new orm.Usuario_Registrado();
+	//basededatos.Usuario_Registrado myUser;
 	InputStream imagen;
 	Object[] cosas;
-	//private Iniciar_sesion__administrador_ inicioAdministrador;
+	//private Iniciar_sesion__administrador_ inicioAdministrador;type name = new type();
 
 	public MainView() {
 		
@@ -307,27 +308,47 @@ public class MainView extends VerticalLayout {
 		
 		iniciarSesionCibernauta.getbIniciarSesion().addClickListener(event ->{
 			
-			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
+			/*if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
 			} else if(iniciarSesionCibernauta.inicioSesionComercial()) {
 				cambiarPantalla(perfilComercial);
 				perfilComercial.setCabecera(cabeceraComercial);
 			} else
-				Notification.show("Credenciales incorrectas");
+				Notification.show("Credenciales incorrectas");*/
+			usuario = iniciarSesionCibernauta.iniciarSesionBueno();
+			if(usuario == null)
+				return;
+			if(usuario.getComercial().equals("Normal")) {
+				cambiarPantalla(inicioRegistrado);
+				inicioRegistrado.setCabecera(cabeceraReg);
+			}else if(usuario.getComercial().equals("Comercial")) {
+				cambiarPantalla(perfilComercial);
+				perfilComercial.setCabecera(cabeceraComercial);
+			}
 			
 		});
 		
 		iniciarSesionCibernauta.getInPass().addKeyPressListener(Key.ENTER, e -> {
 			
-			if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
+			/*if(iniciarSesionCibernauta.inicioSesionCibernauta()) {
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
 			} else if(iniciarSesionCibernauta.inicioSesionComercial()) {
 				cambiarPantalla(perfilComercial);
 				perfilComercial.setCabecera(cabeceraComercial);
 			} else
-				Notification.show("Credenciales incorrectas");
+				Notification.show("Credenciales incorrectas");*/
+			usuario = iniciarSesionCibernauta.iniciarSesionBueno();
+			if(usuario == null)
+				return;
+			if(usuario.getComercial().equals("Normal")) {
+				cambiarPantalla(inicioRegistrado);
+				inicioRegistrado.setCabecera(cabeceraReg);
+			}else if(usuario.getComercial().equals("Comercial")) {
+				cambiarPantalla(perfilComercial);
+				perfilComercial.setCabecera(cabeceraComercial);
+			}
 			
 		});
 		

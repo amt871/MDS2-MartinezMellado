@@ -26,7 +26,17 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	public boolean comprobarCredenciales(String aUser, String aPass) {
-		throw new UnsupportedOperationException();
+		
+		
+		try {
+			return this.usuariosRegistrados.comprobarCredenciales(aUser, aPass);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			return false;
+		}
+
+		
 	}
 
 	public Usuario_Registrado iniciarSesion(String aUser, String aPass) {

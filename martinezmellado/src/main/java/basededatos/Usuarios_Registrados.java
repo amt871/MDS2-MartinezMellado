@@ -24,8 +24,20 @@ public class Usuarios_Registrados {
 	public Sistema _sis_usr_reg;
 	public Vector<Usuario_Registrado> _usuario_Registrado = new Vector<Usuario_Registrado>();
 
-	public boolean comprobarCredenciales(String aUser, String aPass) {
-		throw new UnsupportedOperationException();
+	public boolean comprobarCredenciales(String aUser, String aPass) throws PersistentException {
+
+		Usuario_Registrado u = null;
+        Boolean aux = false;
+        PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+        try {
+            u = Usuario_RegistradoDAO
+                    .loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
+            if (u != null)  aux = true;
+        } catch (Exception e) {
+            t.rollback();
+        }
+        return aux;
+		
 	}
 
 	public Usuario_Registrado iniciarSesion(String aUser, String aPass) throws PersistentException {
