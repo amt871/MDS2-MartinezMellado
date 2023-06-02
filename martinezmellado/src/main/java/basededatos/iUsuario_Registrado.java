@@ -3,6 +3,8 @@ package basededatos;
 import java.sql.Date;
 import java.util.List;
 
+import org.orm.PersistentException;
+
 public interface iUsuario_Registrado {
 
 	public List buscarUsurios(String aBusqueda);
@@ -26,4 +28,8 @@ public interface iUsuario_Registrado {
 	public void cambiarNotificacion(int aNotificacion);
 
 	public Publicacion cargarVideo(String aVideo);
+	
+	public List listarSeguidos(String aNombreUsuario);
+	
+	public List listarSeguidores(String aNombreUsuario);
 }

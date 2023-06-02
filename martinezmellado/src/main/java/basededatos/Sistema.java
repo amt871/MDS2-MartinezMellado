@@ -151,12 +151,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
-	@Override
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, String aFechaDeNaciemiento,
-			String aCorreoElectronico, String aDescripcion) {
-		// TODO Auto-generated method stub
-		
-	}
+
 	@Override
 	public List listarNitificaciones(String aUsuario) {
 		// TODO Auto-generated method stub
@@ -178,6 +173,16 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 			String aCorreoElectronico, String aDescripcion) {
 		// TODO Auto-generated method stub
 		
+	}
+	@Override
+	public List listarSeguidos(String aNombreUsuario) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List listarSeguidores(String aNombreUsuario) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

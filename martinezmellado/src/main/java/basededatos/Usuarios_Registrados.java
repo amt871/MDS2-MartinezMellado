@@ -229,4 +229,36 @@ public class Usuarios_Registrados {
 			t.rollback();
 		}
 	}
+	
+	public List listarSeguidos(String aNombreUsuario) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		Usuario_Registrado u = null;
+		List<Usuario_RegistradoSetCollection> aux =  null;
+		try {
+			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
+			if (u != null) {
+				aux =  Arrays.asList(u.seguido);
+			}
+			
+		} catch (Exception e) {
+			t.rollback();
+		}
+		return aux;
+	}
+	
+	public List listarSeguidores(String aNombreUsuario) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		Usuario_Registrado u = null;
+		List<Usuario_RegistradoSetCollection> aux =  null;
+		try {
+			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
+			if (u != null) {
+				aux =  Arrays.asList(u.seguidor);
+			}
+			
+		} catch (Exception e) {
+			t.rollback();
+		}
+		return aux;
+	}
 }

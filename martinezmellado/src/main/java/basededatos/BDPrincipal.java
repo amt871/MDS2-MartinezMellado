@@ -5,29 +5,44 @@ import java.util.List;
 
 import org.orm.PersistentException;
 
+import interfaz.Comercial;
+
 public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado, iUsuario_no_registrado, iInicio_sesion_administrador, iAdministrador, iVer_perfil__usuario_no_registrado_, iVer_perfil_privado__usuario_no_registrado_, iVer_perfil_publico__usuario_no_registrado_, iVer_perfil__administrador_, iVer_perfil_publico__administrador_, iVer_perfil_privado__administrador_, iVer_perfil__usuario_registrado_, iVer_perfil_publico__usuario_registrado_, iVer_perfil_privado__usuario_registrado_ {
 
 	Usuarios_Registrados usuariosRegistrados = new Usuarios_Registrados();
+	Administradores administrador = new Administradores();
+	Comentarios comentario = new Comentarios();
+	Denuncias_Archivadas denunciaArchivada = new Denuncias_Archivadas();
+	Hashtags hashTag = new Hashtags();
+	Notificaciones notrificaciones = new Notificaciones();
+	Publicaciones publicaciones = new Publicaciones();
 	
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario) {
-		throw new UnsupportedOperationException();
-	}
-
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, String aFechaDeNacimiento, String aCorreoElectronico, String aDescripcion) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.usuariosRegistrados.datosUsuario(aNombreUsuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public void guardarNuevaContrasenna(String aNuevaContrasena, String aUsuario) {
-		throw new UnsupportedOperationException();
+		try {
+			this.usuariosRegistrados.guardarNuevaContrasenna(aNuevaContrasena, aUsuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo, String aPropietario) {
-		throw new UnsupportedOperationException();
+		try {
+			this.publicaciones.nuevaPublicacion(aDescripcion, aUbicacion, aVideo, aFecha, aTipo, aPropietario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public boolean comprobarCredenciales(String aUser, String aPass) {
-		
-		
 		try {
 			return this.usuariosRegistrados.comprobarCredenciales(aUser, aPass);
 		} catch (PersistentException e) {
@@ -35,16 +50,23 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			//e.printStackTrace();
 			return false;
 		}
-
-		
 	}
 
 	public Usuario_Registrado iniciarSesion(String aUser, String aPass) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.usuariosRegistrados.iniciarSesion(aUser, aPass);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public void cambiarContrasenna(Object aNuevaContrasenna, String aNombreUsuario) {
-		throw new UnsupportedOperationException();
+		try {
+			this.usuariosRegistrados.cambiarContrasenna(aNombreUsuario, aNombreUsuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
@@ -60,27 +82,57 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	public List buscarUsurios(String aBusqueda) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.usuariosRegistrados.buscarUsuarios(aBusqueda);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List cargarVideos() {
-		throw new UnsupportedOperationException();
+		try {
+			return this.publicaciones.cargarVideos();
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List listarVideosBusqueda(String cadena) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.publicaciones.listarVideosBusqueda(cadena);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List buscarHahsTag(String aBusqueda) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.hashTag.buscarHahsTag(aBusqueda);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List videosHashTag(String aHashTag) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.publicaciones.videosHashTag(aHashTag);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public boolean comprobarPrivacidad(String aUsuario) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.usuariosRegistrados.datosUsuario(aUsuario).getPrivado();
+		} catch (Exception e) {
+			// TODO: handle exception
+			return true;
+		}
 	}
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario) {
@@ -97,77 +149,167 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	public List listarNitificaciones(String aUsuario) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.notrificaciones.listarNotificaciones(aUsuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public void cambiarNotificacion(int aNotificacion) {
-		throw new UnsupportedOperationException();
+		try {
+			this.notrificaciones.cambiarNotificacion(aNotificacion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public Publicacion cargarVideo(String aVideo) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.publicaciones.cargarVideo(aVideo);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List listarVideoBusqueda(String cadena) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.publicaciones.listarVideosBusqueda(cadena);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List buscarUsuario(String aBusqueda) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.usuariosRegistrados.buscarUsuarios(aBusqueda);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List buscarHashTag(String aBusqueda) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.hashTag.buscarHahsTag(aBusqueda);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List buscarUsuarios(String aBusqueda) {
-		throw new UnsupportedOperationException();
+		try {
+			return this.usuariosRegistrados.buscarUsuarios(aBusqueda);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public List listarDenuncias() {
-		throw new UnsupportedOperationException();
+		try {
+			List aux = null;
+			aux.addAll(this.publicaciones.listarPublicacionesDenunciadas());
+			aux.addAll(this.usuariosRegistrados.listarUsuariosDenunciados());
+			aux.addAll(this.comentario.listarComentariosDenunciados());
+			return aux;
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public void archivarDenuncia(String aElemento, String aTipo) {
-		throw new UnsupportedOperationException();
+		try {
+			this.denunciaArchivada.ArchivarDenuncia(aElemento, aTipo);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
-	public Usuario_Registrado datosUsuarioPerfil() {
-		throw new UnsupportedOperationException();
+	public Usuario_Registrado datosUsuarioPerfil() { //no usar, usar cargar usuario
+		try {
+			return this.usuariosRegistrados.datosUsuario(null);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public void modificarEstadoUsuario(String aNombreUsuario) {
-		throw new UnsupportedOperationException();
+		try {
+			this.usuariosRegistrados.modificarEstadoUsuario(aNombreUsuario);;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public Administrador iniciarSesionAdministrador(String aUser, String aPass) {
-		// TODO Auto-generated method stub
-		return null;
+		try {
+			return this.administrador.iniciarSesion(aUser, aPass);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 	public String listarVideosBusquedaAdministrador() {
 		// TODO Auto-generated method stub
 		return null;
+		//No usar, usar el otro
 	}
 
 	public List listarDenunciasAdministrador() {
 		// TODO Auto-generated method stub
 		return null;
+		//No usar, usar el otr
 	}
 		
 
 	@Override
 	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
 			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
-		// TODO Auto-generated method stub
-		
+		try {
+			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, null, aDescripcion, aFoto, aTipo);;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	@Override
 	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.sql.Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
+		try {
+			this.usuariosRegistrados.guardarDatos(aFoto, aUsuario, aNombre, aFechaDeNaciemiento, aCorreoElectronico, aDescripcion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public List listarSeguidos(String aNombreUsuario) {
 		// TODO Auto-generated method stub
-		
+		try {
+			return this.usuariosRegistrados.listarSeguidos(aNombreUsuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+
+	@Override
+	public List listarSeguidores(String aNombreUsuario) {
+		// TODO Auto-generated method stub
+		try {
+			return this.usuariosRegistrados.listarSeguidores(aNombreUsuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
 	}
 
 }
