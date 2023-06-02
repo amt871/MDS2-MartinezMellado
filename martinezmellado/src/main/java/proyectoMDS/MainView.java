@@ -320,8 +320,11 @@ public class MainView extends VerticalLayout {
 			if(usuario == null)
 				return;
 			if(usuario.getComercial().equals("Normal")) {
+				
+				miPerfil.setUsuario(usuario);
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
+				
 			}else if(usuario.getComercial().equals("Comercial")) {
 				cambiarPantalla(perfilComercial);
 				perfilComercial.setCabecera(cabeceraComercial);
@@ -343,6 +346,8 @@ public class MainView extends VerticalLayout {
 			if(usuario == null)
 				return;
 			if(usuario.getComercial().equals("Normal")) {
+				
+				miPerfil.setUsuario(usuario);
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
 			}else if(usuario.getComercial().equals("Comercial")) {

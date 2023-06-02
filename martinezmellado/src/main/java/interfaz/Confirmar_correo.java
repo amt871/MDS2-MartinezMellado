@@ -28,14 +28,14 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 	 * public void volver_a_enviar() { throw new UnsupportedOperationException(); }
 	 */
 
-	//Object[] cosas;
+	// Object[] cosas;
 	basededatos.Usuario_Registrado usuarioARegistrar;
 	InputStream fileData;
 	BDPrincipal datos;
 
-	public Confirmar_correo(/*Object[] cosas*/) {
+	public Confirmar_correo(/* Object[] cosas */) {
 
-		//this.cosas = cosas;
+		// this.cosas = cosas;
 		this.datos = new BDPrincipal();
 
 	}
@@ -49,12 +49,14 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 
 			if (!datos.registrarse(usuarioARegistrar.getNombre(), usuarioARegistrar.getApellido(),
 					usuarioARegistrar.getUsuario(), usuarioARegistrar.getContrasenna(), usuarioARegistrar.getCorreo(),
-					usuarioARegistrar.getFechaNacimiento(), usuarioARegistrar.getDescripcion(), (String) cosas[3],
+					usuarioARegistrar.getFechaNacimiento(), usuarioARegistrar.getDescripcion(),
+					cosas[2] == null ? "icons/user.svg" : "Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg",
 					usuarioARegistrar.getComercial()))
 
 				return false;
 			else
 
+			if (cosas[2] != null)
 				try {
 
 					fileData = (InputStream) cosas[2];
