@@ -469,17 +469,17 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_7A_fAACpEe6eu_9cDOwb_Q" elementId="org.eclipse.ui.editorss" selectedElement="_7A_fAQCpEe6eu_9cDOwb_Q">
-      <children xsi:type="basic:PartStack" xmi:id="_7A_fAQCpEe6eu_9cDOwb_Q" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_S_xWEAFvEe660_kCP43VrA">
+      <children xsi:type="basic:PartStack" xmi:id="_7A_fAQCpEe6eu_9cDOwb_Q" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_919okAFfEe6AILPadG_2lQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <children xsi:type="basic:Part" xmi:id="_pPzc4AFfEe6AILPadG_2lQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MainView.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MainView.java&quot; partName=&quot;MainView.java&quot; title=&quot;MainView.java&quot; tooltip=&quot;martinezmellado/src/main/java/proyectoMDS/MainView.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/martinezmellado/src/main/java/proyectoMDS/MainView.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;10594&quot; selectionTopPixel=&quot;4408&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MainView.java&quot; partName=&quot;MainView.java&quot; title=&quot;MainView.java&quot; tooltip=&quot;martinezmellado/src/main/java/proyectoMDS/MainView.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/martinezmellado/src/main/java/proyectoMDS/MainView.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;7&quot; selectionOffset=&quot;10539&quot; selectionTopPixel=&quot;4768&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_919okAFfEe6AILPadG_2lQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Mi_perfil.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Mi_perfil.java&quot; partName=&quot;Mi_perfil.java&quot; title=&quot;Mi_perfil.java&quot; tooltip=&quot;martinezmellado/src/main/java/interfaz/Mi_perfil.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/martinezmellado/src/main/java/interfaz/Mi_perfil.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;947&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Mi_perfil.java&quot; partName=&quot;Mi_perfil.java&quot; title=&quot;Mi_perfil.java&quot; tooltip=&quot;martinezmellado/src/main/java/interfaz/Mi_perfil.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/martinezmellado/src/main/java/interfaz/Mi_perfil.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1523&quot; selectionTopPixel=&quot;3&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -521,7 +521,7 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_S_xWEAFvEe660_kCP43VrA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Confirmar_correo.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Confirmar_correo.java&quot; partName=&quot;Confirmar_correo.java&quot; title=&quot;Confirmar_correo.java&quot; tooltip=&quot;martinezmellado/src/main/java/interfaz/Confirmar_correo.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/martinezmellado/src/main/java/interfaz/Confirmar_correo.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1862&quot; selectionTopPixel=&quot;678&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Confirmar_correo.java&quot; partName=&quot;Confirmar_correo.java&quot; title=&quot;Confirmar_correo.java&quot; tooltip=&quot;martinezmellado/src/main/java/interfaz/Confirmar_correo.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/martinezmellado/src/main/java/interfaz/Confirmar_correo.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1862&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -877,7 +877,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7A_fnACpEe6eu_9cDOwb_Q" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_oNJPkAFrEe660_kCP43VrA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_7BAv_gCpEe6eu_9cDOwb_Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_fnfJoAIhEe6m-dxKaag2Jw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_7BAv_gCpEe6eu_9cDOwb_Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7A_fqQCpEe6eu_9cDOwb_Q" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -914,7 +914,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7A_gCwCpEe6eu_9cDOwb_Q" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_oNKdswFrEe660_kCP43VrA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_7BAvpgCpEe6eu_9cDOwb_Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_fng-0QIhEe6m-dxKaag2Jw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_7BAvpgCpEe6eu_9cDOwb_Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7A_gFgCpEe6eu_9cDOwb_Q" elementId="com.vaadin.designer2.eclipse.editors.flow.Polymer3FlowEditor" visible="false">
         <tags>Draggable</tags>
