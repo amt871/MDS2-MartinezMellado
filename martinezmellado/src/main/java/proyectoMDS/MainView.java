@@ -16,6 +16,8 @@ import com.vaadin.flow.server.PWA;
 
 import interfaz.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,6 +56,12 @@ public class MainView extends VerticalLayout {
 	InputStream imagen;
 	Object[] cosas;
 	//private Iniciar_sesion__administrador_ inicioAdministrador;type name = new type();
+	
+	//pantallas usuario
+	Mi_perfil miPerfil;
+	Configurar configurar;
+	Configurar_mi_perfil configPerf;
+	
 
 	public MainView() {
 		
@@ -97,12 +105,12 @@ public class MainView extends VerticalLayout {
 		Video_otro_usuario inicioRegistrado = new Video_otro_usuario();
 		Notificaciones notis = new Notificaciones();
 		Buscar__usuario_registrado_ busquedaRegistrado = new Buscar__usuario_registrado_();
-		Mi_perfil miPerfil = new Mi_perfil();
+		/*Mi_perfil*/ miPerfil = new Mi_perfil();
 		
 		//Registrado -> Configurar
 		
-		Configurar configurar = new Configurar();
-		Configurar_mi_perfil configPerf = new Configurar_mi_perfil();
+		/*Configurar*/ configurar = new Configurar();
+		/*Configurar_mi_perfil*/ configPerf = new Configurar_mi_perfil();
 		Ver_mis_seguidores seguidores = new Ver_mis_seguidores();
 		Ver_siguiendo siguiendo = new Ver_siguiendo();
 		
@@ -321,7 +329,11 @@ public class MainView extends VerticalLayout {
 				return;
 			if(usuario.getComercial().equals("Normal")) {
 				
-				miPerfil.setUsuario(usuario);
+				/*miPerfil.setUsuario(usuario);
+				configurar.setUsuario(usuario);*/
+				
+				inicializarPantallasUsuario(usuario);
+				
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
 				
@@ -347,7 +359,11 @@ public class MainView extends VerticalLayout {
 				return;
 			if(usuario.getComercial().equals("Normal")) {
 				
-				miPerfil.setUsuario(usuario);
+				/*miPerfil.setUsuario(usuario);
+				configurar.setUsuario(usuario);*/
+				
+				inicializarPantallasUsuario(usuario);
+				
 				cambiarPantalla(inicioRegistrado);
 				inicioRegistrado.setCabecera(cabeceraReg);
 			}else if(usuario.getComercial().equals("Comercial")) {
@@ -442,6 +458,14 @@ public class MainView extends VerticalLayout {
 		pantallaActual = pantalla;
 		add(pantallaActual);
 
+	}
+	
+	private void inicializarPantallasUsuario(basededatos.Usuario_Registrado usuario) {
+		
+		miPerfil.setUsuario(usuario);
+		configurar.setUsuario(usuario);
+		configPerf.setUsuario(usuario);
+		
 	}
 
 //	private void inicioSesionAdministrador(Component pantalla) {

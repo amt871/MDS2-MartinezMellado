@@ -1,5 +1,13 @@
 package interfaz;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.vaadin.flow.component.notification.Notification;
+
+import basededatos.Usuario_Registrado;
 import vistas.VistaConfigurar_mi_perfil;
 
 public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
@@ -35,4 +43,31 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 //	public void cerrar_sesion() {
 //		throw new UnsupportedOperationException();
 //	}
+	
+	Usuario_Registrado usuario;
+
+	public Usuario_Registrado getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario_Registrado usuario) {
+		this.usuario = usuario;
+		String fecha = String.valueOf(this.usuario.getFechaNacimiento()).substring(8, 10)+"/"+
+		String.valueOf(this.usuario.getFechaNacimiento()).substring(5,8)+"/"+
+		String.valueOf(this.usuario.getFechaNacimiento()).substring(0,4);
+		
+		this.getIdImagen().setSrc(this.usuario.getFoto());
+		this.getIdUsuario().setValue(this.usuario.getUsuario());
+		this.getIdUsuario().setReadOnly(true);
+		this.getIdNombre().setValue(this.usuario.getNombre());
+		this.getIdApellidos().setValue(this.usuario.getApellido());
+		this.getIdFechaDeNaciemiento().setValue(fecha);
+		this.getIdCorreoElectronico().setValue(this.usuario.getCorreo());
+		this.getIdDescripcion().setValue(this.usuario.getDescripcion());
+		
+		this.getIdNotis().setVisible(false);
+	}
+	
+	
+	
 }

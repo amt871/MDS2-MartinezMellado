@@ -65,7 +65,10 @@ public class Usuarios_Registrados {
 		} catch (Exception e) {
 			t.rollback();
 		}
+		
 	}
+	
+	
 
 	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
 			Date aFechaNaciemiento, String aDescripcion, String aFoto, String aTipo) throws PersistentException {
@@ -103,11 +106,14 @@ public class Usuarios_Registrados {
 			Usuario_RegistradoDAO.save(nuevo);
 
 			t.commit();
-
-			File file = new File("C:\\UsuariosProyectoMDS2\\" + aNomUsuario);
-			File videos = new File("C:\\UsuariosProyectoMDS2\\" + aNomUsuario + "\\videos");
-			file.mkdir();
-			videos.mkdir();
+			
+			File file = new File("src/main/webapp//Usuarios/" + aNomUsuario);
+			File videos = new File("src/main/webapp/Usuarios/" + aNomUsuario + "/videos");
+			
+			//System.out.println("Ruta del usuario: "+file.getAbsolutePath());
+			
+			/*System.out.println("Se crea el directorio del usuario: "+*/file.mkdir()/*)*/;
+			/*System.out.println("Se crea el directorio de videos: "+*/videos.mkdir()/*)*/;
 			file = null;
 			videos = null;
 

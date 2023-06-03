@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.server.VaadinService;
 
 import basededatos.BDPrincipal;
 import vistas.VistaConfirmar_correo;
@@ -43,6 +44,8 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 	public boolean confirmarCodigo(Object[] cosas) {
 
 		if (this.getbTextField().getValue().equals("1111")) {
+			
+			this.getbTextField().clear();
 			// Notification.show("Correo confirmado correctamente");
 
 			usuarioARegistrar = (basededatos.Usuario_Registrado) cosas[1];
@@ -60,12 +63,15 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 				try {
 
 					fileData = (InputStream) cosas[2];
-					File image = new File((String) cosas[3]);
+					File image = new File("src/main/webapp/Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg");
 
+					//System.out.println(image.getAbsolutePath());
+					
 					// if(!image.exists())
 					image.createNewFile();
+					image = null;
 
-					OutputStream out = new FileOutputStream((String) cosas[3]);
+					OutputStream out = new FileOutputStream("src/main/webapp/Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg");
 
 					// fileData.transferTo(out);
 
@@ -81,7 +87,6 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 					// out.wri
 					out.flush();
 					out.close();
-					image = null;
 
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

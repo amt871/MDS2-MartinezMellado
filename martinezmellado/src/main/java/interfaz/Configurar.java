@@ -1,5 +1,6 @@
 package interfaz;
 
+import basededatos.Usuario_Registrado;
 import vistas.VistaConfigurar;
 
 public class Configurar extends VistaConfigurar {
@@ -26,4 +27,18 @@ public class Configurar extends VistaConfigurar {
 //	public void cambiar_contrasenna() {
 //		throw new UnsupportedOperationException();
 //	}
+	
+	Usuario_Registrado usuario;
+
+	public Usuario_Registrado getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario_Registrado usuario) {
+		this.usuario = usuario;
+		this.getIdImagen().setSrc(this.usuario.getFoto());
+		this.getIdLabelPrivacidad().setText(this.usuario.getPrivado() ? "Usuario privado" : "Usuario publico");
+	}
+	
+	
 }
