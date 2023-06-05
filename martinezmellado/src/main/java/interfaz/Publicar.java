@@ -47,7 +47,6 @@ public class Publicar extends VistaPublicar {
 		datos = new BDPrincipal();
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
-		//this.getIconoUsr().setProperty("src", this.getUsr().getFoto());
 		cosas = new Object[3];
 		this.getUploader().setReceiver(memoryBuffer);
 		fileData = null;
@@ -122,5 +121,9 @@ public class Publicar extends VistaPublicar {
 
 			return false;
 		}
+	}
+	
+	public void cargarUsuario() {
+		this.getIconoUsr().setProperty("src", this.getUsr().getFoto());
 	}
 }
