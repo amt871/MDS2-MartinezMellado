@@ -11,6 +11,7 @@ import interfaz.Mi_cabecera;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-configurar_mi_perfil template.
@@ -44,6 +45,10 @@ public class VistaConfigurar_mi_perfil extends LitTemplate {
 	private TextField idDescripcion;
 	@Id("idNotis")
 	private Element idNotis;
+	@Id("idBGuardar")
+	private Button idBGuardar;
+	@Id("bCambiarContrasenna")
+	private Button bCambiarContrasenna;
 	/**
      * Creates a new VistaConfigurar_mi_perfil.
      */
@@ -147,6 +152,22 @@ public class VistaConfigurar_mi_perfil extends LitTemplate {
 
 	public void setIdNotis(Element idNotis) {
 		this.idNotis = idNotis;
+	}
+
+	public Button getIdBGuardar() {
+		return idBGuardar;
+	}
+
+	public void setIdBGuardar(Button idBGuardar) {
+		this.idBGuardar = idBGuardar;
+	}
+
+	public Button getbCambiarContrasenna() {
+		return bCambiarContrasenna;
+	}
+
+	public void setbCambiarContrasenna(Button bCambiarContrasenna) {
+		this.bCambiarContrasenna = bCambiarContrasenna;
 	}
     
     
