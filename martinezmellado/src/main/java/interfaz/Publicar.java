@@ -69,7 +69,10 @@ public class Publicar extends VistaPublicar {
 		}
 		String nombVideo = String.valueOf(nPubl + 1);
 
-		String directoryPath = "Usuarios/" + this.getUsr().getUsuario() + "/videos/" + nombVideo + ".mp4";
+		String directoryPath = "Usuarios/" + this.getUsr().getUsuario() + "/videos" ;
+		
+		String nvideo = "/" + nombVideo + ".mp4";
+		
 
 		Publicacion publicacion = new Publicacion();
 
@@ -95,7 +98,7 @@ public class Publicar extends VistaPublicar {
 			file.createNewFile();
 			file = null;
 
-			OutputStream out = new FileOutputStream(directoryPath);
+			OutputStream out = new FileOutputStream(directoryPath + nvideo);
 
 			byte[] buf = new byte[1024];
 			int length;
