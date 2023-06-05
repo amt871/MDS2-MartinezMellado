@@ -42,7 +42,7 @@ public class Mi_perfil extends VistaMi_perfil {
 		this.getIdImagen().setSrc(usuario.getFoto());
 		this.getIdUsuario().setText(this.usuario.getUsuario());
 		this.getIdNumSeguidores().setText(String.valueOf(usuario.getID())+" seguidores");
-		this.getIdNumMgs().setText("20 Me gustas");
+		//this.getIdNumMgs().setText("20 Me gustas");
 		this.getIdNumSeguidores().setText(this.usuario.seguido.size()+" seguidores");
 		this.getIdNumMgs().setText(this.usuario.le_gusta_a.size()+" me gusta");
 		
