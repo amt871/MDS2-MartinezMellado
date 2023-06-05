@@ -274,6 +274,15 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
+		configPerf.getIdBGuardar().addClickListener(event -> {
+			
+			basededatos.Usuario_Registrado nuevo = configPerf.cambiarDatos();
+			
+			if(nuevo != null)
+				this.inicializarPantallasUsuario(this.usuario);
+			
+		});
+		
 		/*********BOTONES CAMBIO DE PANTALLA*********/
 		
 		

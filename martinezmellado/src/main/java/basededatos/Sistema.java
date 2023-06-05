@@ -60,9 +60,9 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public void modificarEstadoUsuario(String aNombreUsuario) {
+	public boolean modificarEstadoUsuario(String aNombreUsuario) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 	@Override
 	public List listarVideoBusqueda(String cadena) {
@@ -95,10 +95,10 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		
 	}
 	@Override
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
+	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
 			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 	@Override
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario) {
@@ -169,12 +169,6 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	}
 
 	@Override
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.sql.Date aFechaDeNaciemiento,
-			String aCorreoElectronico, String aDescripcion) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
 	public List listarSeguidos(String aNombreUsuario) {
 		// TODO Auto-generated method stub
 		return null;
@@ -183,6 +177,18 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public List listarSeguidores(String aNombreUsuario) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	@Override
+	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
+			String aCorreoElectronico, String aDescripcion) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna,
+			String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	

@@ -1,11 +1,11 @@
 package basededatos;
-import java.sql.Date;
+import java.util.Date;
 
 public interface iComercial {
 
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario);
 
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento, String aCorreoElectronico, String aDescripcion);
+	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento, String aCorreoElectronico, String aDescripcion);
 
 	public void guardarNuevaContrasenna(String aNuevaContrasena, String aUsuario);
 

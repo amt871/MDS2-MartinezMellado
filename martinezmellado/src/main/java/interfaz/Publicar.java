@@ -92,7 +92,7 @@ public class Publicar extends VistaPublicar {
 			if (!directory.exists()) {
 				directory.mkdirs();
 			}
-			File file = new File(directoryPath);
+			File file = new File(directoryPath+nvideo);
 
 			// if(!file.exists())
 			file.createNewFile();
