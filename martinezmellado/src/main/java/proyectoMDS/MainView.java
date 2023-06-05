@@ -15,6 +15,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 
 import interfaz.*;
+import vistas.VistaPublicar;
 
 import java.io.File;
 import java.io.IOException;
@@ -61,6 +62,7 @@ public class MainView extends VerticalLayout {
 	Mi_perfil miPerfil;
 	Configurar configurar;
 	Configurar_mi_perfil configPerf;
+	Publicar publicar;
 	
 
 	public MainView() {
@@ -116,7 +118,7 @@ public class MainView extends VerticalLayout {
 		
 		//Registrado y Comercial
 		
-		Publicar publicar = new Publicar();
+		/*Publicar*/ publicar = new Publicar();
 		
 		//Comercial
 		
@@ -198,6 +200,7 @@ public class MainView extends VerticalLayout {
 			
 			cambiarPantalla(publicar);
 			publicar.setCabecera(cabeceraReg);
+			
 			
 			
 		});
@@ -465,8 +468,11 @@ public class MainView extends VerticalLayout {
 		miPerfil.setUsuario(usuario);
 		configurar.setUsuario(usuario);
 		configPerf.setUsuario(usuario);
+		publicar.setUsr(usuario);
 		
 	}
+	
+	
 
 //	private void inicioSesionAdministrador(Component pantalla) {
 //

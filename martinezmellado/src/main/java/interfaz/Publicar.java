@@ -76,15 +76,15 @@ public class Publicar extends VistaPublicar {
 
 		Publicacion publicacion = new Publicacion();
 
-		publicacion.setDescripcion(this.getDescripcion().getValue());
-		publicacion.setFecha(Date.valueOf(LocalDate.now()));
-		publicacion.setRealizada(this.getUsr());
-		publicacion.setORM_Realizada(this.getUsr());
-		publicacion.setUbicacion(this.getDescripcion().getValue());
-		publicacion.setVideo(pathImage);
+		String descripcion = this.getDescripcion().getValue();
+		Date fecha = Date.valueOf(LocalDate.now());
+		Usuario_Registrado autor = this.getUsr();
+		String ubicacio = this.getDescripcion().getValue();
+		String ruta = directoryPath + nvideo;
+		String propietario = this.getUsr().getUsuario();
+		System.out.println(this.getUsr().getComercial());
 
-		datos.nuevaPublicacion(publicacion.getDescripcion(), publicacion.getUbicacion(), publicacion.getVideo(), null,
-				publicacion.getPublicidad(), publicacion.getRealizada().getUsuario());
+		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.getUsr().getComercial(), propietario);
 
 		try {
 			

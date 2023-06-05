@@ -64,14 +64,12 @@ public class Publicaciones {
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo, String aPropietario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
-	    	Usuario_Registrado usr = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("Propietario = '" + aPropietario + "'", null);
+	    	Usuario_Registrado usr = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario = '" + aPropietario + "'", null);
 	        Publicacion aux = new Publicacion();
 	        aux.setDescripcion(aDescripcion);
 	        aux.setUbicacion(aUbicacion);
 	        aux.setVideo(aVideo);
-	        if (aFecha != null) {
-	        	aux.setFecha(Date.valueOf(LocalDate.now()));
-	        }
+	        aux.setFecha(Date.valueOf(LocalDate.now()));
 	        aux.setPublicidad(aTipo);
 	        aux.setRealizada(usr);
 	        aux.setORM_Realizada(usr);
