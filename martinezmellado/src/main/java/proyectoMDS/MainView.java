@@ -207,6 +207,7 @@ public class MainView extends VerticalLayout {
 		
 		cabeceraReg.getbPerfil().addClickListener(event -> {
 			
+			miPerfil.listarVideos();
 			cambiarPantalla(miPerfil);
 			miPerfil.setCabecera(cabeceraReg);
 			
@@ -240,6 +241,8 @@ public class MainView extends VerticalLayout {
 		
 		configurar.getbCerrarSesion().addClickListener(event -> {
 			
+			iniciarSesionCibernauta.clear();
+			configPerf.clear();
 			cambiarPantalla(pantallaInicioCibernauta);
 			
 		});
@@ -397,6 +400,12 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
+		registroCibernauta.getbAtras().addClickListener(event -> {
+			
+			cambiarPantalla(pantallaInicioCibernauta);
+			
+		});
+		
 		//Usuario Registrado
 		
 		miPerfil.getbConfigurar().addClickListener(event -> {
@@ -407,9 +416,14 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
-		registroCibernauta.getbAtras().addClickListener(event -> {
+		
+		
+		publicar.getSubirVideo().addClickListener(event -> {
 			
-			cambiarPantalla(pantallaInicioCibernauta);
+			if(publicar.bPublica()) {
+				cambiarPantalla(miPerfil);
+				miPerfil.setCabecera(cabeceraReg);
+			}
 			
 		});
 		

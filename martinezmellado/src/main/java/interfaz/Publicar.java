@@ -58,9 +58,9 @@ public class Publicar extends VistaPublicar {
 				Notification.show("Solo se admiten video en MP4");
 
 		});
-		this.getSubirVideo().addClickListener(event -> {
+		/*this.getSubirVideo().addClickListener(event -> {
 			bPublica();
-        });
+        });*/
 		
 	}
 
@@ -68,7 +68,7 @@ public class Publicar extends VistaPublicar {
 		
 		String nombVideo = LocalDateTime.now().toString().replace(":", "-");
 
-		String directoryPath = "src/main/webappUsuarios/" + this.getUsr().getUsuario() + "/videos" ;
+		String directoryPath = "src/main/webapp/Usuarios/" + this.getUsr().getUsuario() + "/videos" ;
 		
 		String nvideo = "/" + nombVideo + ".mp4";
 		
@@ -100,6 +100,9 @@ public class Publicar extends VistaPublicar {
 
 			byte[] buf = new byte[1024];
 			int length;
+			
+			Notification.show("Subiendo video...");
+			
 			while ((length = fileData.read(buf)) > 0) {
 				out.write(buf, 0, length);
 			}
@@ -111,6 +114,8 @@ public class Publicar extends VistaPublicar {
 			this.getUploader().getElement().setPropertyJson("files", Json.createArray());
 			this.getDescrpcion().setValue("");
 			this.getUbicacion().setValue("");
+			
+			Notification.show("Video subido");
 			
 			return true;
 

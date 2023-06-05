@@ -25,18 +25,6 @@ export class VistaMi_video extends LitElement {
    <vista-mi_video_item></vista-mi_video_item>
    <vista-mi_video_item></vista-mi_video_item>
   </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="width: 100%; height: 50%; justify-content: space-around;">
-   <vista-mi_video_item></vista-mi_video_item>
-   <vista-mi_video_item></vista-mi_video_item>
-   <vista-mi_video_item></vista-mi_video_item>
-   <vista-mi_video_item></vista-mi_video_item>
-  </vaadin-horizontal-layout>
-  <vaadin-horizontal-layout style="width: 100%; height: 50%; justify-content: space-around;">
-   <vista-mi_video_item></vista-mi_video_item>
-   <vista-mi_video_item></vista-mi_video_item>
-   <vista-mi_video_item></vista-mi_video_item>
-   <vista-mi_video_item></vista-mi_video_item>
-  </vaadin-horizontal-layout>
  </vaadin-scroller>
 </vaadin-vertical-layout>
 `;

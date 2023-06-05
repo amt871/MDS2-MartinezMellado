@@ -151,10 +151,13 @@ public class Usuarios_Registrados {
 
 	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento,
 			String aCorreoElectronico, String aDescripcion) throws PersistentException {
+		System.out.println("Estoy en Usuario_Registrados");
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
+			
+			//System.out.println("Solicito el usuario: "+aUsuario);
 
-			Usuario_Registrado nuevo = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombre +"'", null);
+			Usuario_Registrado nuevo = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aUsuario +"'", null);
 
 			LocalDate fechaNacimientoLocalDate = aFechaDeNacimiento.toInstant().atZone(ZoneId.systemDefault())
 					.toLocalDate();
@@ -164,20 +167,26 @@ public class Usuarios_Registrados {
 			
 			//Usuario_RegistradoDAO.delete(nuevo);
 			
+			//System.out.println("La base de datos me devuelve el usuario: "+ nuevo.getUsuario());
+			
 			nuevo.setUsuario(aUsuario);
 			nuevo.setNombre(aNombre);
 			nuevo.setFechaNacimiento(aFechaDeNacimiento);
 			nuevo.setCorreo(aCorreoElectronico);
 			nuevo.setDescripcion(aDescripcion);
+			nuevo.setEdad(periodo.getYears());
 
+			//System.out.println(Usuario_RegistradoDAO.save(nuevo));
 			Usuario_RegistradoDAO.save(nuevo);
 			
 			t.commit();
-			
+			//System.out.println("Usuarios_Registrados bien");
 			return true;
 
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
+			//System.out.println("Usuarios_Registrados excepcion");
 			return false;
 		}
 		

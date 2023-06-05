@@ -287,10 +287,13 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
 		try {
+			//System.out.println("Estoy en BDPrincipal");
 			this.usuariosRegistrados.guardarDatos(aFoto, aUsuario, aNombre, aFechaDeNaciemiento, aCorreoElectronico, aDescripcion);
+			//System.out.println("BDPrincipal correcto");
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
+			//System.out.println("BDPrincipal excepcion");
 			return false;
 		}
 	}

@@ -22,19 +22,22 @@ public class Video extends HtmlContainer implements ClickNotifier<com.vaadin.flo
 
         getElement().setProperty("controls", true);
 
-        getElement().setProperty("autoplay", true);
+        getElement().setProperty("autoplay", false);
 
     }
 
 
 
-    public Video(String src) {
+    public Video(String src, String altura, String anchura) {
 
         setSrc(src);
 
         getElement().setProperty("controls", true);
 
-        getElement().setProperty("autoplay", true);
+        getElement().setProperty("autoplay", false);
+        
+        this.setHeight(altura);
+        this.setWidth(anchura);
 
     }
 
@@ -51,7 +54,7 @@ public class Video extends HtmlContainer implements ClickNotifier<com.vaadin.flo
     public void setSrc(String src) {
 
         set(srcDescriptor, src);
-
+    	
     }
 
 }

@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Vector;
 
 import org.orm.PersistentException;
+import org.orm.PersistentSession;
 import org.orm.PersistentTransaction;
 
 public class Publicaciones {
@@ -112,5 +113,22 @@ public class Publicaciones {
 		    }
 		    return u;
 	}
+	
+	public Publicacion[] listarVideosUsuario(int id) throws PersistentException{
+		
+		return PublicacionDAO.listPublicacionByQuery("Usuario_RegistradoUsuarioID='"+id+"'", null);
+		
+	}
+	
+	/*public static Publicacion[] listPublicacionByQuery(String condition, String orderBy) throws PersistentException {
+		try {
+			PersistentSession session = MartinezMelladoMDSPersistentManager.instance().getSession();
+			return listPublicacionByQuery(session, condition, orderBy);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			throw new PersistentException(e);
+		}
+	}*/
 }
 

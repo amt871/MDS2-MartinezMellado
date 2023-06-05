@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat;
 import org.orm.PersistentException;
 
 import basededatos.*;
+import elemental.json.Json;
 
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.Receiver;
@@ -68,7 +69,7 @@ public class Registro extends VistaRegistro {
 		fileData = null;
 		this.getIdImagen().addSucceededListener(event -> {
 
-			if (event.getFileName().endsWith("jpg"))
+			if (event.getFileName().toLowerCase().endsWith("jpg"))
 				fileData = memoryBuffer.getInputStream();
 			else {
 				Notification.show("Solo se admiten imagenes en jpg");
@@ -185,6 +186,7 @@ public class Registro extends VistaRegistro {
 		this.getIdFechaNacimiento().clear();
 		this.getIdDescripcion().clear();
 		this.getUsrComBool().clear();
+		this.getIdImagen().getElement().setPropertyJson("files", Json.createArray());
 
 		cosas[1] = usuarioARegistrar;
 

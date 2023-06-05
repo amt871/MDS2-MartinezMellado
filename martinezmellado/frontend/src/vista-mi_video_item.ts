@@ -14,9 +14,11 @@ export class VistaMi_video_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing-xs" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
- <img style="width: 90%; height: 90%;" src="icons/video.svg">
- <label>Titulo </label>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+ <vaadin-vertical-layout id="layoutVideo" style="width: 100%; height: 95%; align-items: center; justify-content: center;"></vaadin-vertical-layout>
+ <vaadin-vertical-layout style="width: 100%; height: 5%; align-items: center; justify-content: center;">
+  <label id="labelTitulo" style="position: absolute;">Titulo </label>
+ </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

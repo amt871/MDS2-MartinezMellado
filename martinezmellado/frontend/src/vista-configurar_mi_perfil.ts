@@ -35,10 +35,10 @@ export class VistaConfigurar_mi_perfil extends LitElement {
      Cambiar contraseña 
    </vaadin-button>
    <vaadin-button id="idBGuardar">
-    Guardar 
+     Guardar 
    </vaadin-button>
   </vaadin-vertical-layout>
-  <vaadin-vertical-layout theme="spacing" style="width: 35%; height: 100%; align-items: center; justify-content: space-around;">
+  <vaadin-vertical-layout theme="spacing" style="width: 35%; height: 100%; align-items: center; justify-content: center;">
    <vaadin-vertical-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center;">
     <img style="width: 30%;" id="idImagen">
     <vaadin-button id="bCambiarFoto">

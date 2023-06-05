@@ -10,6 +10,9 @@ import interfaz.Mi_cabecera;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.dom.Element;
 
 /**
  * A Designer generated component for the vista-mi_perfil template.
@@ -34,6 +37,8 @@ public class VistaMi_perfil extends LitTemplate {
 	private Label idNumSeguidores;
 	@Id("idNumMgs")
 	private Label idNumMgs;
+	@Id("Scroller")
+	private Scroller scroller;
 
 	/**
      * Creates a new VistaMi_perfil.
@@ -99,7 +104,12 @@ public class VistaMi_perfil extends LitTemplate {
 		this.idNumMgs = idNumMgs;
 	}
 
-	
-    
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
+	}    
     
 }

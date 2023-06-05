@@ -70,10 +70,18 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 		
 		if(!datos.comprobarCredenciales(this.getInUser().getValue(), this.getInPass().getValue())) {
 			Notification.show("Credenciales incorrectas");
+			this.getInPass().clear();
 			return null;
 		}
 		
 		return datos.datosUsuario(this.getInUser().getValue());
+		
+	}
+	
+	public void clear() {
+		
+		this.getInUser().clear();
+		this.getInPass().clear();
 		
 	}
 	

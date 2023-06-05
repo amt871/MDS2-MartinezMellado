@@ -62,10 +62,10 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 			DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 			Date myDate = null;
 			try {
-				System.out.println(this.getIdFechaDeNaciemiento().getValue());
+				//System.out.println(this.getIdFechaDeNaciemiento().getValue());
 				myDate = formatter.parse(this.getIdFechaDeNaciemiento().getValue());
-				System.out.println("Fecha formateada correctamente");
-				System.out.println(myDate);
+				//System.out.println("Fecha formateada correctamente");
+				//System.out.println(myDate);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				// e.printStackTrace();
@@ -90,9 +90,13 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 			this.usuario.setFechaNacimiento(myDate);
 			this.usuario.setDescripcion(this.getIdDescripcion().getValue());
+			
+			//System.out.println("Se le introduce el usuario: "+this.usuario.getUsuario());
 
-			if(datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(), this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion()))
-				return this.usuario;
+			if(datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(), this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion())) {
+				Notification.show("Datos guardados correctamente");
+				return this.usuario;//No realiza cambios en la base de datos
+			}
 			
 			/*String aFoto, String aUsuario, String aNombre, java.sql.Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion*/
@@ -118,7 +122,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		if (this.getIdFechaDeNaciemiento().isEmpty()) {
 			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
 			fecha = "";
-			System.out.println("Hola: " + this.usuario.getFechaNacimiento());
+			//System.out.println("Hola: " + this.usuario.getFechaNacimiento());
 			items[2] = items[2].split(" ")[0];
 			if (items[2].length() < 2)
 				fecha += "0" + items[2] + "/";
@@ -145,6 +149,12 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 		this.getIdNotis().setVisible(false);
 
+	}
+	
+	public void clear() {
+		
+		this.getIdFechaDeNaciemiento().clear();
+		
 	}
 
 }
