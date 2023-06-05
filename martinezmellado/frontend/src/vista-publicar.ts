@@ -30,7 +30,7 @@ export class VistaPublicar extends LitElement {
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 40%; align-items: center; height: 100%;">
    <iron-icon style="width: 20%; height: 20%;" src="icons/user.svg" id="iconoUsr"></iron-icon>
-   <vaadin-text-field label="Ubicacion" style="width: 60%;" id="descripcion"></vaadin-text-field>
+   <vaadin-text-field label="Ubicacion" style="width: 60%;" id="ubicacion"></vaadin-text-field>
    <vaadin-text-area label="Descripcion" style="width: 60%; height: 40%;" id="descrpcion"></vaadin-text-area>
    <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center; margin-top: var(--lumo-space-xl);">
     <vaadin-button id="subirVideo">

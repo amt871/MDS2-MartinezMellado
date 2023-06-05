@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Date;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
@@ -15,6 +16,7 @@ import basededatos.BDPrincipal;
 import basededatos.Publicacion;
 import basededatos.Publicaciones;
 import basededatos.Usuario_Registrado;
+import elemental.json.Json;
 import vistas.VistaPublicar;
 
 public class Publicar extends VistaPublicar {
@@ -45,6 +47,7 @@ public class Publicar extends VistaPublicar {
 		datos = new BDPrincipal();
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
+		//this.getIconoUsr().setProperty("src", this.getUsr().getFoto());
 		cosas = new Object[3];
 		this.getUploader().setReceiver(memoryBuffer);
 		fileData = null;
@@ -63,26 +66,22 @@ public class Publicar extends VistaPublicar {
 	}
 
 	public boolean bPublica() {
-		int nPubl = 0;
-		if (!(this.getUsr().publica == null)) {
-			nPubl = this.getUsr().publica.size();
-		}
-		String nombVideo = String.valueOf(nPubl + 1);
+		
+		String nombVideo = LocalDateTime.now().toString().replace(":", "-");
 
-		String directoryPath = "Usuarios/" + this.getUsr().getUsuario() + "/videos" ;
+		String directoryPath = "src/main/webappUsuarios/" + this.getUsr().getUsuario() + "/videos" ;
 		
 		String nvideo = "/" + nombVideo + ".mp4";
 		
 
 		Publicacion publicacion = new Publicacion();
 
-		String descripcion = this.getDescripcion().getValue();
+		String descripcion = this.getDescrpcion().getValue();
 		Date fecha = Date.valueOf(LocalDate.now());
 		Usuario_Registrado autor = this.getUsr();
-		String ubicacio = this.getDescripcion().getValue();
+		String ubicacio = this.getUbicacion().getValue();
 		String ruta = directoryPath + nvideo;
 		String propietario = this.getUsr().getUsuario();
-		System.out.println(this.getUsr().getComercial());
 
 		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.getUsr().getComercial(), propietario);
 
@@ -110,6 +109,9 @@ public class Publicar extends VistaPublicar {
 
 			out.flush();
 			out.close();
+			this.getUploader().getElement().setPropertyJson("files", Json.createArray());
+			this.getDescrpcion().setValue("");
+			this.getUbicacion().setValue("");
 			
 			return true;
 

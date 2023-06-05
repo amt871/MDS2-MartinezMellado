@@ -37,8 +37,10 @@ public class VistaPublicar extends LitTemplate {
 	private Element iconoUsr;
 	@Id("uploader")
 	private Upload uploader;
-	@Id("descripcion")
-	private TextField descripcion;
+	@Id("ubicacion")
+	private TextField ubicacion;
+	@Id("descrpcion")
+	private TextArea descrpcion;
 	@Id("subirVideo")
 	private Button subirVideo;
 	@Id("prevVideo")
@@ -97,14 +99,6 @@ public class VistaPublicar extends LitTemplate {
 		this.uploader = uploader;
 	}
 
-	public TextField getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(TextField descripcion) {
-		this.descripcion = descripcion;
-	}
-
 	public Button getSubirVideo() {
 		return subirVideo;
 	}
@@ -127,6 +121,22 @@ public class VistaPublicar extends LitTemplate {
 	
 	public Usuario_Registrado getUsr() {
 		return this.usr;
+	}
+
+	public TextField getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(TextField ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+
+	public TextArea getDescrpcion() {
+		return descrpcion;
+	}
+
+	public void setDescrpcion(TextArea descrpcion) {
+		this.descrpcion = descrpcion;
 	}
     
 

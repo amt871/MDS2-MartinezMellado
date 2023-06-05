@@ -74,6 +74,8 @@ public class Publicaciones {
 	        aux.setRealizada(usr);
 	        aux.setORM_Realizada(usr);
 	        PublicacionDAO.save(aux);
+	        usr.realiza.add(aux);
+	        Usuario_RegistradoDAO.save(usr);
 	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
@@ -111,3 +113,4 @@ public class Publicaciones {
 		    return u;
 	}
 }
+
