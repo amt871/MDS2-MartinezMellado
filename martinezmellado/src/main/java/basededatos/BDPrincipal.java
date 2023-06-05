@@ -69,15 +69,15 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
+	@Override
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
 		
 		try {
-			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, aFechaNacimiento, aDescripcion, aFoto, aTipo);
+			return this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, aFechaNacimiento, aDescripcion, aFoto, aTipo);
 		} catch (PersistentException e) {
 			return false;
 		}
 		
-		return true;
 		
 	}
 
@@ -240,11 +240,12 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public void modificarEstadoUsuario(String aNombreUsuario) {
+	public boolean modificarEstadoUsuario(String aNombreUsuario) {
 		try {
-			this.usuariosRegistrados.modificarEstadoUsuario(aNombreUsuario);;
+			return this.usuariosRegistrados.modificarEstadoUsuario(aNombreUsuario);
 		} catch (Exception e) {
 			// TODO: handle exception
+			return false;
 		}
 	}
 
@@ -271,22 +272,26 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		
 
 	@Override
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
+	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
 			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
 		try {
-			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, null, aDescripcion, aFoto, aTipo);;
+			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, null, aDescripcion, aFoto, aTipo);
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
+			return false;
 		}
 	}
 
 	@Override
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, java.sql.Date aFechaDeNaciemiento,
+	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
 		try {
 			this.usuariosRegistrados.guardarDatos(aFoto, aUsuario, aNombre, aFechaDeNaciemiento, aCorreoElectronico, aDescripcion);
+			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
+			return false;
 		}
 	}
 
@@ -311,5 +316,4 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			return null;
 		}
 	}
-
 }

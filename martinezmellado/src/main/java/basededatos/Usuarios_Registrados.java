@@ -70,7 +70,7 @@ public class Usuarios_Registrados {
 	
 	
 
-	public void registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
+	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
 			Date aFechaNaciemiento, String aDescripcion, String aFoto, String aTipo) throws PersistentException {
 
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
@@ -116,9 +116,10 @@ public class Usuarios_Registrados {
 			/*System.out.println("Se crea el directorio de videos: "+*/videos.mkdir()/*)*/;
 			file = null;
 			videos = null;
-
+			return true;
 		} catch (Exception e) {
 			t.rollback();
+			return false;
 		}
 	}
 
@@ -148,7 +149,7 @@ public class Usuarios_Registrados {
 		return u;
 	}
 
-	public void guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento,
+	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento,
 			String aCorreoElectronico, String aDescripcion) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
@@ -161,7 +162,7 @@ public class Usuarios_Registrados {
 
 			Period periodo = Period.between(fechaNacimientoLocalDate, fechaActual);
 			
-			Usuario_RegistradoDAO.delete(nuevo);
+			//Usuario_RegistradoDAO.delete(nuevo);
 			
 			nuevo.setUsuario(aUsuario);
 			nuevo.setNombre(aNombre);
@@ -172,10 +173,14 @@ public class Usuarios_Registrados {
 			Usuario_RegistradoDAO.save(nuevo);
 			
 			t.commit();
+			
+			return true;
 
 		} catch (Exception e) {
 			t.rollback();
+			return false;
 		}
+		
 	}
 
 	public void guardarNuevaContrasenna(String aNuevaContrasenna, String aUsuario) throws PersistentException {
@@ -212,14 +217,11 @@ public class Usuarios_Registrados {
 	    return aux;
 	}
 
-	public void modificarEstadoUsuario(String aNombreUsuario) throws PersistentException {
+	public boolean modificarEstadoUsuario(String aNombreUsuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 
 			Usuario_Registrado nuevo = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario +"'", null);
-
-			
-			Usuario_RegistradoDAO.delete(nuevo);
 			
 			if (nuevo.getPrivado() == true) {
 				nuevo.setPrivado(false);
@@ -231,8 +233,10 @@ public class Usuarios_Registrados {
 			
 			t.commit();
 
+			return true;
 		} catch (Exception e) {
 			t.rollback();
+			return false;
 		}
 	}
 	

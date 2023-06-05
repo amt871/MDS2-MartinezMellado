@@ -22,5 +22,5 @@ public interface iAdministrador {
 
 	public Usuario_Registrado datosUsuarioPerfil();
 
-	public void modificarEstadoUsuario(String aNombreUsuario);
+	public boolean modificarEstadoUsuario(String aNombreUsuario);
 }
