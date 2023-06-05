@@ -8,6 +8,9 @@ import com.vaadin.flow.component.template.Id;
 
 import interfaz.Configurar;
 import interfaz.Mi_cabecera;
+import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.dom.Element;
 
 /**
  * A Designer generated component for the vista-configurar_mi_perfil template.
@@ -25,7 +28,22 @@ public class VistaConfigurar_mi_perfil extends LitTemplate {
 	private Div divCabecera;
 	@Id("divConfigurar")
 	private Div divConfigurar;
-
+	@Id("idImagen")
+	private Image idImagen;
+	@Id("idUsuario")
+	private TextField idUsuario;
+	@Id("idNombre")
+	private TextField idNombre;
+	@Id("idApellidos")
+	private TextField idApellidos;
+	@Id("idFechaDeNaciemiento")
+	private TextField idFechaDeNaciemiento;
+	@Id("idCorreoElectronico")
+	private TextField idCorreoElectronico;
+	@Id("idDescripcion")
+	private TextField idDescripcion;
+	@Id("idNotis")
+	private Element idNotis;
 	/**
      * Creates a new VistaConfigurar_mi_perfil.
      */
@@ -65,6 +83,70 @@ public class VistaConfigurar_mi_perfil extends LitTemplate {
 
 	public void setDivConfigurar(Div divConfigurar) {
 		this.divConfigurar = divConfigurar;
+	}
+
+	public Image getIdImagen() {
+		return idImagen;
+	}
+
+	public void setIdImagen(Image idImagen) {
+		this.idImagen = idImagen;
+	}
+
+	public TextField getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(TextField idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+	public TextField getIdNombre() {
+		return idNombre;
+	}
+
+	public void setIdNombre(TextField idNombre) {
+		this.idNombre = idNombre;
+	}
+
+	public TextField getIdApellidos() {
+		return idApellidos;
+	}
+
+	public void setIdApellidos(TextField idApellidos) {
+		this.idApellidos = idApellidos;
+	}
+
+	public TextField getIdFechaDeNaciemiento() {
+		return idFechaDeNaciemiento;
+	}
+
+	public void setIdFechaDeNaciemiento(TextField idFechaDeNaciemiento) {
+		this.idFechaDeNaciemiento = idFechaDeNaciemiento;
+	}
+
+	public TextField getIdCorreoElectronico() {
+		return idCorreoElectronico;
+	}
+
+	public void setIdCorreoElectronico(TextField idCorreoElectronico) {
+		this.idCorreoElectronico = idCorreoElectronico;
+	}
+
+	public TextField getIdDescripcion() {
+		return idDescripcion;
+	}
+
+	public void setIdDescripcion(TextField idDescripcion) {
+		this.idDescripcion = idDescripcion;
+	}
+
+	public Element getIdNotis() {
+		return idNotis;
+	}
+
+	public void setIdNotis(Element idNotis) {
+		this.idNotis = idNotis;
 	}
     
     

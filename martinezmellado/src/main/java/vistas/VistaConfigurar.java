@@ -5,6 +5,8 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.template.Id;
+import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.html.Label;
 
 /**
  * A Designer generated component for the vista-configurar template.
@@ -26,6 +28,10 @@ public class VistaConfigurar extends LitTemplate {
 	private Button bModificarDatos;
 	@Id("bCerrarSesion")
 	private Button bCerrarSesion;
+	@Id("idImagen")
+	private Image idImagen;
+	@Id("idLabelPrivacidad")
+	private Label idLabelPrivacidad;
 
 	/**
      * Creates a new VistaConfigurar.
@@ -72,6 +78,22 @@ public class VistaConfigurar extends LitTemplate {
 
 	public void setbCerrarSesion(Button bCerrarSesion) {
 		this.bCerrarSesion = bCerrarSesion;
+	}
+
+	public Image getIdImagen() {
+		return idImagen;
+	}
+
+	public void setIdImagen(Image idImagen) {
+		this.idImagen = idImagen;
+	}
+
+	public Label getIdLabelPrivacidad() {
+		return idLabelPrivacidad;
+	}
+
+	public void setIdLabelPrivacidad(Label idLabelPrivacidad) {
+		this.idLabelPrivacidad = idLabelPrivacidad;
 	}
 
     

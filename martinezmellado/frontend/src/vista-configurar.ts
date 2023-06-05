@@ -17,7 +17,8 @@ export class VistaConfigurar extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; background-color: #d8d8d8;">
  <vaadin-vertical-layout style="height: 50%; width: 100%; align-items: center; justify-content: center;">
-  <img style="width: 20%; height: 20%; margin-top: var(--lumo-space-xl);" src="icons/user.svg">
+  <img style="height: 20%; margin-top: var(--lumo-space-xl);" id="idImagen">
+  <label id="idLabelPrivacidad">Tipo usuario</label>
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="height: 50%; width: 100%; align-items: center; justify-content: center;">
   <vaadin-button style="background-color: black; color: white;" id="bSiguiendo">

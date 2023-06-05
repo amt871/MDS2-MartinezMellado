@@ -45,6 +45,7 @@ public class Mi_perfil extends VistaMi_perfil {
 		this.getIdNumMgs().setText("20 Me gustas");
 		this.getIdNumSeguidores().setText(this.usuario.seguido.size()+" seguidores");
 		this.getIdNumMgs().setText(this.usuario.le_gusta_a.size()+" me gusta");
+		
 		//System.out.println(this.usuario.getFoto());
 	}
 	

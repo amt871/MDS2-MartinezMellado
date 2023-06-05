@@ -70,8 +70,10 @@ public class Registro extends VistaRegistro {
 
 			if (event.getFileName().endsWith("jpg"))
 				fileData = memoryBuffer.getInputStream();
-			else
+			else {
 				Notification.show("Solo se admiten imagenes en jpg");
+			}
+			
 
 		});
 
@@ -174,6 +176,15 @@ public class Registro extends VistaRegistro {
 		usuarioARegistrar.setFechaNacimiento(myDate);
 		usuarioARegistrar.setDescripcion(this.getIdDescripcion().getValue());
 		usuarioARegistrar.setComercial(this.getUsrComBool().getValue() ? "Comercial" : "Normal");
+		
+		this.getIdNombre().clear();
+		this.getIdApellidos().clear();
+		this.getIdUsuario().clear();
+		this.getIdContrasenna().clear();
+		this.getIdCorreo().clear();
+		this.getIdFechaNacimiento().clear();
+		this.getIdDescripcion().clear();
+		this.getUsrComBool().clear();
 
 		cosas[1] = usuarioARegistrar;
 

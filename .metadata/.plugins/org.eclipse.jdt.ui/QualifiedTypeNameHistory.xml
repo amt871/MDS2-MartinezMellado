@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaInicio_no_registrado_item"/>
-    <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
-    <fullyQualifiedTypeName name="vistas.VistaBuscar__no_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_cabecera"/>
     <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario"/>
     <fullyQualifiedTypeName name="vistas.VistaVideo_otro_usuario_item"/>
@@ -56,8 +53,11 @@
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
-    <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinService"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
 </qualifiedTypeNameHistroy>

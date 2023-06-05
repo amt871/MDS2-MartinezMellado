@@ -26,7 +26,7 @@ export class VistaMi_perfil extends LitElement {
    <label id="idNumSeguidores">Numero de seguidores</label>
   </vaadin-horizontal-layout>
   <vaadin-vertical-layout style="align-items: center; align-self: center; justify-content: center;">
-   <img id="idImagen" style="height: 30%; width: 30%;">
+   <img id="idImagen" style="width: 30%;">
   </vaadin-vertical-layout>
   <vaadin-horizontal-layout style="width: 100%; height: 100%; align-self: center; align-items: center; justify-content: flex-start;">
    <label id="idNumMgs">Numero de me gustas</label>

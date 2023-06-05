@@ -3,6 +3,7 @@
 .settings
 .project
 .classpath
+/src/main/webapp/
 
 *.iml
 .DS_Store
