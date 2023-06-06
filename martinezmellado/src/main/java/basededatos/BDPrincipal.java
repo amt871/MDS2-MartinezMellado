@@ -402,4 +402,24 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			// TODO: handle exception
 		}
 	}
+
+	@Override
+	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		try {
+			this.publicaciones.denunciarPublicación(usuario, publicacion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
+		// TODO Auto-generated method stub
+		try {
+			this.usuariosRegistrados.denunciarUsuario(denunciante, denunciado);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 }

@@ -314,5 +314,20 @@ public class Usuarios_Registrados {
 			}
 	}
 	
-	
+	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) throws PersistentException {
+		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try { 
+		    	
+		    	denunciante.denunciado.add(denunciado);
+		    	denunciado.denunciante.add(denunciante);
+		    	
+		    	Usuario_RegistradoDAO.save(denunciante);
+		    	Usuario_RegistradoDAO.save(denunciado);	    	
+		    	
+		    	t.commit();
+		    	
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+	}
 }
