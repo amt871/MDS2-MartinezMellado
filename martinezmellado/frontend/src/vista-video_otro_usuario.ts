@@ -20,7 +20,7 @@ export class VistaVideo_otro_usuario extends LitElement {
   <div id="divCabecera" style="height: 100%; width: 100%;"></div>
  </vaadin-vertical-layout>
  <vaadin-vertical-layout style="width: 100%; height: 95%;">
-  <vaadin-scroller style="width: 100%; height: 100%;" id="Scroller"></vaadin-scroller>
+  <vaadin-scroller style="width: 100%; height: 100%; position: relative;" id="Scroller"></vaadin-scroller>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;

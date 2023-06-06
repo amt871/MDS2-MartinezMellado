@@ -8071,3 +8071,1434 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-06 12:01:26.013
 !MESSAGE Removed all models from server.
+!SESSION 2023-06-06 12:16:15.344 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.16.1
+java.vendor=Microsoft
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2023-06-06 12:16:28.352
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-06 12:16:28.352
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13fad0c7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24fb8317,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2023-06-06 12:16:30.642
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_video_item.java'.
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3203)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3214)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:999)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:964)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:405)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:332)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1209)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_video_item.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1018)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1284)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4182)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:262)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1479)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2544)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2517)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1410)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3172)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2290)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3189)
+	... 114 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2023-06-06 12:16:30.643
+!MESSAGE Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_video_item.java'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_video_item.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1018)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1284)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4182)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:262)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1479)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2544)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2517)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1410)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3172)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2290)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3189)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3214)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:999)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:964)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:405)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:332)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1209)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2023-06-06 12:16:30.644
+!MESSAGE Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_video_item.java'.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:30.959
+!MESSAGE Schedule fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:30.962
+!MESSAGE Schedule version update jobs
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-06-06 12:16:31.167
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-06-06 12:16:31.167
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-06-06 12:16:31.202
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Juanra'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.241
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.242
+!MESSAGE Requesting user info (notification settings URL)
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.915
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.957
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.957
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.959
+!MESSAGE Save JSON notifications content to cache file C:\MDS2-MartinezMellado\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:16:31.976
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-06-06 12:16:37.439
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-06-06 12:16:37.441
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:17:00.966
+!MESSAGE All vaadin 7+ projects : []
+
+!ENTRY org.eclipse.ui 4 4 2023-06-06 12:17:45.644
+!MESSAGE Unable to create part
+!STACK 1
+org.eclipse.ui.PartInitException: Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_perfil.java'.
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3203)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3214)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:999)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:964)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:405)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:332)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4742)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.lambda$4(StackRenderer.java:975)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:766)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3243)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1881)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:330)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_perfil.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1018)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1284)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4182)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:262)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1479)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2544)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2517)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1410)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3172)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:436)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$7(WorkbenchWindow.java:2345)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2343)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3189)
+	... 82 more
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2023-06-06 12:17:45.645
+!MESSAGE Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_perfil.java'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_perfil.java'.
+	at org.eclipse.core.internal.filebuffers.ResourceFileBuffer.create(ResourceFileBuffer.java:239)
+	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.connect(TextFileBufferManager.java:115)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.createFileInfo(TextFileDocumentProvider.java:563)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.createFileInfo(CompilationUnitDocumentProvider.java:1018)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.connect(TextFileDocumentProvider.java:481)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitDocumentProvider.connect(CompilationUnitDocumentProvider.java:1284)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4182)
+	at org.eclipse.ui.texteditor.StatusTextEditor.doSetInput(StatusTextEditor.java:262)
+	at org.eclipse.ui.texteditor.AbstractDecoratedTextEditor.doSetInput(AbstractDecoratedTextEditor.java:1479)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.internalDoSetInput(JavaEditor.java:2544)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.doSetInput(JavaEditor.java:2517)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.doSetInput(CompilationUnitEditor.java:1410)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.lambda$1(AbstractTextEditor.java:3172)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:436)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:352)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$7(WorkbenchWindow.java:2345)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2343)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3189)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3214)
+	at org.eclipse.ui.internal.EditorReference.initialize(EditorReference.java:353)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:344)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:999)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:964)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:405)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:332)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:202)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:104)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4742)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.lambda$4(StackRenderer.java:975)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1067)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:766)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3243)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1881)
+	at org.eclipse.swt.custom.CTabFolder.lambda$0(CTabFolder.java:330)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 2 org.eclipse.core.filebuffers 4 0 2023-06-06 12:17:45.645
+!MESSAGE Cannot determine URI for '/martinezmellado/src/main/java/interfaz/Mi_perfil.java'.
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-06 12:18:01.150
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-06 12:18:01.161
+!MESSAGE IvyDE plugin started
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.783
+!MESSAGE Remote preview available on http://192.168.0.17:52954. Designer running on http://localhost:52954.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.787
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.797
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/MDS2-MartinezMellado/martinezmellado/node_modules --port=52318 --hostPid=2004
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.799
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.800
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.801
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:58.816
+!MESSAGE Setting browser url to http://localhost:52954/flow/4bf0/frontend/src/vista-video_otro_usuario_item.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-06 12:18:59.341
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:59.623
+!MESSAGE Setting browser url to http://localhost:52954/flow/4bf0/frontend/src/vista-video_otro_usuario_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:18:59.624
+!MESSAGE Setting browser url to http://localhost:52954/flow/4bf0/frontend/src/vista-video_otro_usuario_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:19:01.029
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:19:02.531
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:20:11.084
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 2 0 2023-06-06 12:20:59.899
+!MESSAGE Selected object is not valid
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:21:21.089
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 2 0 2023-06-06 12:21:34.548
+!MESSAGE Selected object is not valid
+
+!ENTRY com.vaadin.designer2 2 0 2023-06-06 12:21:37.215
+!MESSAGE Selected object is not valid
+
+!ENTRY com.vaadin.designer2 2 0 2023-06-06 12:21:49.661
+!MESSAGE Selected object is not valid
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:22:31.123
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:23:41.180
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:24:51.268
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:26:01.322
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:27:11.381
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:28:21.437
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:29:31.500
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:30:41.586
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:31:52.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:33:46.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:35:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:36:47.510
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:37:54.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:39:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:40:47.515
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:42:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:43:47.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:44:52.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:46:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:47:55.225
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:49:05.278
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:50:15.309
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:51:25.356
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:52:35.418
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:53:45.452
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:54:55.508
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:56:06.211
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:57:46.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 12:59:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:01:46.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:02:48.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:03:50.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:05:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:07:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:09:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:10:49.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:11:53.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:13:46.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:15:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.163
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.164
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.165
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.165
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.168
+!MESSAGE Setting browser url to http://localhost:52954/flow/de58/frontend/src/vista-video_otro_usuario.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.380
+!MESSAGE Setting browser url to http://localhost:52954/flow/de58/frontend/src/vista-video_otro_usuario.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:19.380
+!MESSAGE Setting browser url to http://localhost:52954/flow/de58/frontend/src/vista-video_otro_usuario.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:20.275
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:20.806
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:16:53.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:17:23.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:18:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:18:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:20:12.419
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:20:14.509
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:21:18.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:21:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:22:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:23:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:24:46.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:25:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:26:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:27:46.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:27:56.204
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:28:49.209
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:28:58.206
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:30:10.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:30:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:31:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:32:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:33:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:34:43.956
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:34:56.203
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:35:46.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:35:58.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:36:50.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:37:09.200
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:37:58.204
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:38:12.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:39:46.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:39:46.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:40:48.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:40:55.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:41:51.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:42:04.154
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:42:53.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:43:06.208
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:43:55.165
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:44:44.325
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:44:56.205
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:45:59.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:46:38.515
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:47:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:47:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:49:46.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:49:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:52.779
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:53.829
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:53.830
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:53.831
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:53.832
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:53.835
+!MESSAGE Setting browser url to http://localhost:52954/flow/f542/frontend/src/vista-mi_video_item.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:54.057
+!MESSAGE Setting browser url to http://localhost:52954/flow/f542/frontend/src/vista-mi_video_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:54.057
+!MESSAGE Setting browser url to http://localhost:52954/flow/f542/frontend/src/vista-mi_video_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:54.937
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:50:55.423
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.429
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.431
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.431
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.432
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.435
+!MESSAGE Setting browser url to http://localhost:52954/flow/ca73/frontend/src/vista-mi_video.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.681
+!MESSAGE Setting browser url to http://localhost:52954/flow/ca73/frontend/src/vista-mi_video.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:06.682
+!MESSAGE Setting browser url to http://localhost:52954/flow/ca73/frontend/src/vista-mi_video.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:07.269
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:07.816
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:51:54.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:53:30.859
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:53:38.047
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:54:34.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:54:40.202
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:55:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:55:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:57:46.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:57:46.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:59:46.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 13:59:46.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:01:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:01:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:03:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:03:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:05:24.436
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:05:25.423
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:06:27.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:06:36.200
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:07:36.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:07:39.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:08:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:08:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:10:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:10:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:11:47.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:11:47.546
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:13:47.514
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:13:47.562
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:15:47.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:15:47.546
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:17:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:17:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:19:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:19:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:21:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:21:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:23:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:23:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:24:47.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:24:47.545
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:26:46.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:26:46.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:28:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:28:46.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:30:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:30:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:32:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:32:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:34:47.519
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:34:47.546
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:36:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:36:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:37:47.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:37:47.538
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:39:47.519
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:39:47.544
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:41:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:41:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:43:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:43:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:44:47.515
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:44:47.542
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:46:47.520
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:46:47.546
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:48:47.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:48:47.544
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:50:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:50:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:51:47.514
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:51:47.541
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:53:47.516
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:53:47.547
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:55:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:55:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:56:47.513
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:56:47.539
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:58:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:58:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:59:47.517
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 14:59:47.544
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:01:47.516
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:01:47.545
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:03:47.520
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:03:47.549
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:05:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:05:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:07:46.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:07:46.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:08:47.507
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:08:47.532
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:10:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:10:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:11:47.514
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:11:47.539
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:13:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:13:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:14:47.510
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:14:47.544
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:16:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:16:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:18:47.516
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:18:47.544
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:20:46.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:20:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:21:47.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:21:47.538
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:23:47.519
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:23:47.545
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:25:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:25:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:27:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:27:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:28:47.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:28:47.547
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:30:47.524
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:30:47.549
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:32:47.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:32:47.547
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:34:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:34:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:36:47.520
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:36:47.547
+!MESSAGE Heartbeat for: {0}

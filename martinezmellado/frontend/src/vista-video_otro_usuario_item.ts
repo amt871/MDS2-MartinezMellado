@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-icons/vaadin-icons.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@polymer/iron-icon/iron-icon.js';
 
 @customElement('vista-video_otro_usuario_item')
@@ -18,12 +18,13 @@ export class VistaVideo_otro_usuario_item extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; padding: var(--lumo-space-m);">
- <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
-  <img id="idVideo" style="width: 100%; height: 100%;" src="icons/video.svg">
- </vaadin-vertical-layout>
- <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
-  <iron-icon style="width: 30%; height: 30%; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m);" icon="lumo:user"></iron-icon>Usuario 
+<vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content:">
+ <vaadin-vertical-layout style="width: 50%; height: 100%; align-items: center; justify-content: center;" id="layoutVideo"></vaadin-vertical-layout>
+ <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; align-items: center; justify-content: center;">
+  <vaadin-button theme="icon" aria-label="Add new" id="usuarioButton" style="width: 30%; height: 30%;">
+   <img id="imageButton" style="width: 100%; height: 100%;">
+  </vaadin-button>
+  <label id="labelUsuario">Label</label>
   <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; justify-content: center; padding-top: var(--lumo-space-l); padding-bottom: var(--lumo-space-l);">
    <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; width: 100%; padding-left: var(--lumo-space-xl);">
     <label id="idUbicación" style="align-self: center; flex-grow: 0; flex-shrink: 1;">Ubicación</label>
@@ -46,11 +47,11 @@ export class VistaVideo_otro_usuario_item extends LitElement {
     <vaadin-button theme="icon" aria-label="Add new" id="idComentarios">
      <iron-icon icon="vaadin:comments"></iron-icon>
     </vaadin-button>
-    <label>nº comentario </label>
+    <label id="idNumComentarios">nº comentario </label>
    </vaadin-vertical-layout>
   </vaadin-horizontal-layout>
-  <vaadin-vertical-layout style="width: 100%; align-items: flex-end; padding-top: var(--lumo-space-l);">
-   <vaadin-button>
+  <vaadin-vertical-layout style="width: 100%; align-items: flex-end; padding-top: var(--lumo-space-l); padding-right: var(--lumo-space-l);">
+   <vaadin-button id="denunciarButton">
      Denuciar 
    </vaadin-button>
   </vaadin-vertical-layout>

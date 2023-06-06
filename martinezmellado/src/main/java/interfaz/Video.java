@@ -2,8 +2,6 @@ package interfaz;
 
 import com.vaadin.flow.component.*;
 
-
-
 @Tag("video")
 
 public class Video extends HtmlContainer implements ClickNotifier<com.vaadin.flow.component.html.Image> {

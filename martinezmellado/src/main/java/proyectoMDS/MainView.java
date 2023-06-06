@@ -52,17 +52,18 @@ public class MainView extends VerticalLayout {
 	 */
 
 	private Component pantallaActual;
-	basededatos.Usuario_Registrado usuario;// = new orm.Usuario_Registrado();
+	private basededatos.Usuario_Registrado usuario;// = new orm.Usuario_Registrado();
 	//basededatos.Usuario_Registrado myUser;
-	InputStream imagen;
-	Object[] cosas;
+	private InputStream imagen;
+	private Object[] cosas;
 	//private Iniciar_sesion__administrador_ inicioAdministrador;type name = new type();
 	
 	//pantallas usuario
-	Mi_perfil miPerfil;
-	Configurar configurar;
-	Configurar_mi_perfil configPerf;
-	Publicar publicar;
+	private Mi_perfil miPerfil;
+	private Configurar configurar;
+	private Configurar_mi_perfil configPerf;
+	private Publicar publicar;
+	private Video_otro_usuario inicioRegistrado;
 	
 
 	public MainView() {
@@ -104,7 +105,7 @@ public class MainView extends VerticalLayout {
 		
 		//Registrado
 		
-		Video_otro_usuario inicioRegistrado = new Video_otro_usuario();
+		/*Video_otro_usuario*/ inicioRegistrado = new Video_otro_usuario();
 		Notificaciones notis = new Notificaciones();
 		Buscar__usuario_registrado_ busquedaRegistrado = new Buscar__usuario_registrado_();
 		/*Mi_perfil*/ miPerfil = new Mi_perfil();
@@ -489,6 +490,7 @@ public class MainView extends VerticalLayout {
 	
 	private void inicializarPantallasUsuario(basededatos.Usuario_Registrado usuario) {
 		
+		inicioRegistrado.setUsuario(usuario);
 		miPerfil.setUsuario(usuario);
 		configurar.setUsuario(usuario);
 		configPerf.setUsuario(usuario);

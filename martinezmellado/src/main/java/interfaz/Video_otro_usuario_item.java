@@ -3,6 +3,9 @@ package interfaz;
 import vistas.VistaVideo_otro_usuario_item;
 
 public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
+	
+	private Video video;
+	
 //	private Video _videoV;
 //	private ImageButton _imagenPropietarioVideoIB;
 //	private Button _dar_me_gusta_a_video;
@@ -40,4 +43,16 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 //	public void me_gusta__otro_usuario_() {
 //		throw new UnsupportedOperationException();
 //	}
+	
+	public Video_otro_usuario_item(String src) {
+		
+		this.video = new Video(src);
+		
+		//this.video.setWidth("120%");
+		//this.video.setHeight("50%");
+		
+		this.getLayoutVideo().add(video);
+		
+	}
+	
 }
