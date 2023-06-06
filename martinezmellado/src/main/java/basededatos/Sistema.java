@@ -207,7 +207,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		
 	}
 	@Override
-	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) {
+	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -229,6 +229,16 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	}
 	@Override
 	public void segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
 		// TODO Auto-generated method stub
 		
 	}

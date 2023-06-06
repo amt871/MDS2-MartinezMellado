@@ -351,10 +351,10 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) {
+	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) {
 		// TODO Auto-generated method stub
 		try {
-			this.comentario.añadirComentario(usuario, publicacion, comentario);
+			this.comentario.annadirComentario(usuario, publicacion, comentario);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -398,6 +398,26 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		// TODO Auto-generated method stub
 		try {
 			this.segimiento(seguido, seguidor);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		try {
+			this.publicaciones.denunciarPublicación(usuario, publicacion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
+		// TODO Auto-generated method stub
+		try {
+			this.usuariosRegistrados.denunciarUsuario(denunciante, denunciado);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

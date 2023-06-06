@@ -58,6 +58,7 @@ public class Publicar extends VistaPublicar {
 		fileData = null;
 		this.getUploader().addSucceededListener(event -> {
 
+			
 			if (event.getFileName().endsWith("mp4"))
 				fileData = memoryBuffer.getInputStream();
 			else
@@ -71,6 +72,11 @@ public class Publicar extends VistaPublicar {
 	}
 
 	public boolean bPublica() {
+		
+		if (this.getUbicacion().isEmpty() || this.getDescrpcion().isEmpty()) {
+			Notification.show("Por favor rellene los campos");
+			return false;
+		}
 		
 		String nombVideo = LocalDateTime.now().toString().replace(":", "-");
 

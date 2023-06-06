@@ -148,5 +148,22 @@ public class Publicaciones {
 			t.rollback();
 		}
 	}
+	
+	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) throws PersistentException {
+		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try { 
+		    	
+		    	publicacion.es_denunciada.add(usuario);
+		    	usuario.denuncia.add(publicacion);;
+		    	
+		    	PublicacionDAO.save(publicacion);
+		    	Usuario_RegistradoDAO.save(usuario);	    	
+		    	
+		    	t.commit();
+		    	
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+	}
 }
 

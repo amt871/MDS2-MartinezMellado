@@ -35,7 +35,7 @@ public class Comentarios {
 	    return aux;
 	}
 	
-	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) throws PersistentException {
+	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) throws PersistentException {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try { 
 		    	Usuario_Registrado usr = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + usuario +"'", null);
