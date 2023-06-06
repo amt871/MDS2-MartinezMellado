@@ -126,7 +126,7 @@ public class Mi_perfil extends VistaMi_perfil {
 					if(contador == 0) {
 						//System.out.println(contador);
 						array.add(new HorizontalLayout());
-						System.out.println("Add horizontal");
+						//System.out.println("Add horizontal");
 						array.get(index).setJustifyContentMode(JustifyContentMode.CENTER);
 						array.get(index).setAlignItems(Alignment.CENTER);
 						array.get(index).getStyle().set("height", "100%");
