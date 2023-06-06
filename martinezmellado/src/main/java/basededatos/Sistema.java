@@ -221,6 +221,17 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void annadirNotificacion(String tipo, Usuario_Registrado receptor, Usuario_Registrado emisor,
+			Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	
 }

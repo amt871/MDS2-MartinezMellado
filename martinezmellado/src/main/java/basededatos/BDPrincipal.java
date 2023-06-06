@@ -380,4 +380,26 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			// TODO: handle exception
 		}
 	}
+
+	@Override
+	public void annadirNotificacion(String tipo, Usuario_Registrado receptor, Usuario_Registrado emisor,
+			Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		try {
+			this.notrificaciones.annadirNotificacion(tipo, receptor, emisor, publicacion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+	@Override
+	public void segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
+		// TODO Auto-generated method stub
+		try {
+			this.segimiento(seguido, seguidor);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 }

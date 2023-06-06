@@ -1,10 +1,12 @@
 package interfaz;
 
+import java.util.List;
 import java.util.Vector;
 
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.BDPrincipal;
 import vistas.VistaNotificaciones;
 
 public class Notificaciones extends VistaNotificaciones {
@@ -38,6 +40,7 @@ public class Notificaciones extends VistaNotificaciones {
 	
 	private Scroller scroller;
 	private VerticalLayout vl;
+	BDPrincipal datos;
 	
 	public Notificaciones() {
 		
@@ -60,10 +63,14 @@ public class Notificaciones extends VistaNotificaciones {
 	
 	public void addItem() {
 		
-		vl.add(new Notifiaciones_item());
-		vl.add(new Notifiaciones_item());
-		vl.add(new Notifiaciones_item());
-		vl.add(new Notifiaciones_item());
+		List listaNotificaciones = this.datos.listarNitificaciones(this.getUsr().getUsuario());
+		
+		if (listaNotificaciones != null) {
+			for (Object notificacion : listaNotificaciones) {
+				
+			}
+		}
+		
 		
 	}
 	
