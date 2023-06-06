@@ -200,6 +200,7 @@ public class MainView extends VerticalLayout {
 			
 			cambiarPantalla(publicar);
 			publicar.setCabecera(cabeceraReg);
+			publicar.cargarUsuario();
 			
 			
 			

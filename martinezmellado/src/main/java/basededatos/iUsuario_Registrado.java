@@ -38,4 +38,9 @@ public interface iUsuario_Registrado {
 	public void añadirComentario(String usuario, Publicacion publicacion, String comentario);
 	
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario);
+	
+	public void annadirNotificacion(String tipo, Usuario_Registrado receptor, Usuario_Registrado emisor, Publicacion publicacion);
+
+	public void segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor);
+	
 }

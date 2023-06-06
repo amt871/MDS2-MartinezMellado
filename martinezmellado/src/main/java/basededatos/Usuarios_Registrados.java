@@ -298,4 +298,30 @@ public class Usuarios_Registrados {
 			t.rollback();
 		}
 	}
+	
+	public void segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor) throws PersistentException {
+			PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+			try {
+				seguido.seguidor.add(seguidor);
+				seguidor.seguido.add(seguido);
+				
+				Usuario_RegistradoDAO.save(seguidor);
+				Usuario_RegistradoDAO.save(seguido);
+
+				t.commit();
+			} catch (Exception e) {
+				t.rollback();
+			}
+	}
+	
+	public Usuario_Registrado getUsr(String usr) throws PersistentException {
+		Usuario_Registrado aux = null;
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+			aux = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("Nombre = '" + usr + "'", null);
+		} catch (Exception e) {
+			t.rollback();
+		}
+		return aux;
+	}
 }

@@ -29,8 +29,14 @@ export class VistaNotificaciones_item extends LitElement {
   <img id="idVideoRelacionado" style="width: 40%; height: 15%;" src="icons/java.svg">
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; align-self: center; align-items: center;">
+  <vaadin-button id="bAceptar">
+   Aceptar
+  </vaadin-button>
   <vaadin-button id="idBotonVista">
     Vista 
+  </vaadin-button>
+  <vaadin-button id="bRechazar">
+   Rechazar
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>
