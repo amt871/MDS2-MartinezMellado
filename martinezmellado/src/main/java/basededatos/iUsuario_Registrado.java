@@ -35,7 +35,7 @@ public interface iUsuario_Registrado {
 	
 	public void añadirPublicacionHashTag(  String hashtag, Publicacion publicacion );
 	
-	public void añadirComentario(String usuario, Publicacion publicacion, String comentario);
+	public void annadirComentario(String usuario, Publicacion publicacion, String comentario);
 	
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario);
 	

@@ -351,10 +351,10 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) {
+	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) {
 		// TODO Auto-generated method stub
 		try {
-			this.comentario.añadirComentario(usuario, publicacion, comentario);
+			this.comentario.annadirComentario(usuario, publicacion, comentario);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

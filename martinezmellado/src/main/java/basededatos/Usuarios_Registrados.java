@@ -314,14 +314,5 @@ public class Usuarios_Registrados {
 			}
 	}
 	
-	public Usuario_Registrado getUsr(String usr) throws PersistentException {
-		Usuario_Registrado aux = null;
-		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
-		try {
-			aux = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("Nombre = '" + usr + "'", null);
-		} catch (Exception e) {
-			t.rollback();
-		}
-		return aux;
-	}
+	
 }
