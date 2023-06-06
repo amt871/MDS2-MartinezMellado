@@ -23,4 +23,10 @@ public interface iAdministrador {
 	public Usuario_Registrado datosUsuarioPerfil();
 
 	public boolean modificarEstadoUsuario(String aNombreUsuario);
+	
+	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario);
+	
+	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario);
+	
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado);
 }

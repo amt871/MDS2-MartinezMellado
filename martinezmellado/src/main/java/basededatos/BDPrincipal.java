@@ -316,4 +316,65 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			return null;
 		}
 	}
+
+	@Override
+	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario) {
+		// TODO Auto-generated method stub
+		try {
+			this.comentario.retirarDenunciaComentario(comentario, usuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario) {
+		// TODO Auto-generated method stub
+		try {
+			this.publicaciones.retirarDenunciaPublicacion(publicacion, usuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
+		// TODO Auto-generated method stub
+		try {
+			this.usuariosRegistrados.retirarDenunciaUsuario(denunciante, denunciado);;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) {
+		// TODO Auto-generated method stub
+		try {
+			this.comentario.añadirComentario(usuario, publicacion, comentario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+	@Override
+	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) {
+		// TODO Auto-generated method stub
+		try {
+			this.comentario.denunciarComentario(usuario, comentario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void añadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		try {
+			this.hashTag.añadirPublicacionHashTag(hashtag, publicacion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
 }

@@ -8,6 +8,11 @@ import java.io.OutputStream;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
@@ -16,6 +21,7 @@ import basededatos.BDPrincipal;
 import basededatos.Publicacion;
 import basededatos.Publicaciones;
 import basededatos.Usuario_Registrado;
+import ch.qos.logback.core.boolex.Matcher;
 import elemental.json.Json;
 import vistas.VistaPublicar;
 
@@ -84,6 +90,26 @@ public class Publicar extends VistaPublicar {
 
 		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.getUsr().getComercial(), propietario);
 
+		String texto = this.getDescrpcion().getValue();
+
+		// Usamos un Set en lugar de una lista para evitar duplicados
+		Set<String> hashtags = new HashSet<>();
+
+		for (String palabra : texto.split("\\s+")) {
+		    if (palabra.startsWith("#")) {
+		        // Si la palabra contiene múltiples hashtags seguidos, se separan
+		        Collections.addAll(hashtags, palabra.split("(?=#)"));
+		    }
+		}
+
+		// Convertimos el Set a ArrayList
+		ArrayList<String> hashtagsLista = new ArrayList<>(hashtags);
+
+        // Imprimimos todos los hashtags que encontramos
+        for (String hashtag : hashtagsLista) {
+        	if (!hashtag.matches(".*[a-zA-Z0-9]+.*")) continue;
+           this.datos.añadirPublicacionHashTag(hashtag, publicacion);
+        }
 		try {
 			
 			File directory = new File(directoryPath);
