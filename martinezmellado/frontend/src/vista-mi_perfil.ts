@@ -36,7 +36,9 @@ export class VistaMi_perfil extends LitElement {
  <vaadin-button style="height: 5%;" id="bConfigurar">
    Configurar 
  </vaadin-button>
- <vaadin-scroller id="Scroller" style="width: 100%; height: 65%;"></vaadin-scroller>
+ <div style="width: 100%; height: 65%;">
+  <vaadin-scroller id="Scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+ </div>
 </vaadin-vertical-layout>
 `;
   }

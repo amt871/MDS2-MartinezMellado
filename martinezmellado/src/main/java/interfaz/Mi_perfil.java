@@ -8,6 +8,7 @@ import org.orm.PersistentException;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.BoxSizing;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.Scroller;
@@ -80,6 +81,8 @@ public class Mi_perfil extends VistaMi_perfil {
 		vl.getStyle().set("width", "100%");
 		vl.getStyle().set("height", "100%");
 		
+		//vl.getStyle().set("background-color", "black");
+		
 		addItem();
 		
 
@@ -116,59 +119,38 @@ public class Mi_perfil extends VistaMi_perfil {
 			if(videos != null) {
 				int contador = 0;
 				int index = 0;
-				//ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
-				ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
+				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
+				//ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
 				for(int i = 0; i<videos.length; i++) {
 					//System.out.println(videos[i].getVideo());
-					/*if(contador == 0) {
+					if(contador == 0) {
 						//System.out.println(contador);
 						array.add(new HorizontalLayout());
+						System.out.println("Add horizontal");
 						array.get(index).setJustifyContentMode(JustifyContentMode.CENTER);
 						array.get(index).setAlignItems(Alignment.CENTER);
 						array.get(index).getStyle().set("height", "100%");
 						array.get(index).getStyle().set("width", "100%");
-						array.get(index).setPadding(false);
-						array.get(index).setMargin(false);
-						array.get(index).setSpacing(false);
+						array.get(index).setBoxSizing(BoxSizing.BORDER_BOX);
+//						array.get(index).setPadding(false);
+//						array.get(index).setMargin(false);
+//						array.get(index).setSpacing(false);
 						
-						array.get(index).getStyle().set("background-color", "black");
+						//array.get(index).getStyle().set("background-color", "black");
 						
 						vl.add(array.get(index));
 					}
 					
 					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
 					
-					array.get(index).add(new Mi_video_item(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%"));
+					array.get(index).add(new Mi_video_item(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "25%"));
 					contador++;
 					if(contador==4) {
 						index ++;
 						contador = 0;
-						break;
-					}*/
-					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
+						//break;
+					}
 					
-					if(contador == 0) {
-						array.add(new VistaMi_video());
-						array.get(index).getItem1().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
-						vl.add(array.get(index));
-						contador++;
-						continue;
-					}
-					if(contador == 1) {
-						array.get(index).getItem2().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
-						contador++;
-						continue;
-					}
-					if(contador == 2) {
-						array.get(index).getItem3().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
-						contador++;
-						continue;
-					}
-					if(contador == 3) {
-						array.get(index).getItem4().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
-						contador = 0;
-						index++;
-					}
 				}
 				
 			}

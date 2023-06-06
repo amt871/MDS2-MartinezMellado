@@ -40,6 +40,17 @@ public class Video extends HtmlContainer implements ClickNotifier<com.vaadin.flo
         this.setWidth(anchura);
 
     }
+    
+    public Video(String src) {
+
+        setSrc(src);
+
+        getElement().setProperty("controls", true);
+
+        getElement().setProperty("autoplay", false);
+   
+
+    }
 
 
 
