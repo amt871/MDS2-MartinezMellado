@@ -57,7 +57,7 @@ public class Notificaciones extends VistaNotificaciones {
 		vl.getStyle().set("width", "100%");
 		vl.getStyle().set("height", "100%");
 		
-		addItem();
+		//addItem();
 
 	}
 	
