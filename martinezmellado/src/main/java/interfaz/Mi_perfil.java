@@ -18,6 +18,7 @@ import basededatos.PublicacionDAO;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 import vistas.VistaMi_perfil;
+import vistas.VistaMi_video;
 
 public class Mi_perfil extends VistaMi_perfil {
 //	private Label _nSeguidoresL;
@@ -115,11 +116,12 @@ public class Mi_perfil extends VistaMi_perfil {
 			if(videos != null) {
 				int contador = 0;
 				int index = 0;
-				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
+				//ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
+				ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
 				for(int i = 0; i<videos.length; i++) {
 					//System.out.println(videos[i].getVideo());
-					if(contador == 0) {
-						System.out.println(contador);
+					/*if(contador == 0) {
+						//System.out.println(contador);
 						array.add(new HorizontalLayout());
 						array.get(index).setJustifyContentMode(JustifyContentMode.CENTER);
 						array.get(index).setAlignItems(Alignment.CENTER);
@@ -142,6 +144,30 @@ public class Mi_perfil extends VistaMi_perfil {
 						index ++;
 						contador = 0;
 						break;
+					}*/
+					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
+					
+					if(contador == 0) {
+						array.add(new VistaMi_video());
+						array.get(index).getItem1().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
+						vl.add(array.get(index));
+						contador++;
+						continue;
+					}
+					if(contador == 1) {
+						array.get(index).getItem2().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
+						contador++;
+						continue;
+					}
+					if(contador == 2) {
+						array.get(index).getItem3().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
+						contador++;
+						continue;
+					}
+					if(contador == 3) {
+						array.get(index).getItem4().setData(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "100%");
+						contador = 0;
+						index++;
 					}
 				}
 				

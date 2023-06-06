@@ -6508,3 +6508,165 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-06 01:29:19.672
 !MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:29:50.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:29:50.539
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.400
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/de2a
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.423
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/de58
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.519
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/f542
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.562
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/ca73
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.563
+!MESSAGE Jetty stopped at http://192.168.0.17:52954
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.579
+!MESSAGE Force stop the task with pid 7908
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.584
+!MESSAGE Force stop the task with pid 19928
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:09.584
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.366
+!MESSAGE Remote preview available on http://192.168.0.17:52954. Designer running on http://localhost:52954.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.367
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.373
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/MDS2-MartinezMellado/martinezmellado/node_modules --port=61028 --hostPid=10760
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.374
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.375
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.376
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:28.379
+!MESSAGE Setting browser url to http://localhost:52954/flow/ca73/frontend/src/vista-mi_video.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-06 01:30:28.539
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:29.184
+!MESSAGE Setting browser url to http://localhost:52954/flow/ca73/frontend/src/vista-mi_video.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:29.185
+!MESSAGE Setting browser url to http://localhost:52954/flow/ca73/frontend/src/vista-mi_video.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:29.580
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:30:30.147
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:31:40.177
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:32:50.228
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:34:00.297
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:35:10.335
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:36:20.409
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:37:30.484
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:38:40.561
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:39:50.634
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:41:00.714
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:42:10.787
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:43:20.860
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:44:30.917
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:45:33.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:46:49.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:48:49.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:50:49.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:52:49.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:54:49.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:55:50.515
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:57:49.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 01:59:49.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:01:49.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:02:50.513
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:04:49.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:06:49.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:24.553
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/ca73
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:24.554
+!MESSAGE Jetty stopped at http://192.168.0.17:52954
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:24.568
+!MESSAGE Force stop the task with pid 24440
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:24.572
+!MESSAGE Force stop the task with pid 23876
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:24.573
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:25.019
+!MESSAGE Jetty stopped at http://192.168.0.17:-1
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 02:07:25.020
+!MESSAGE Removed all models from server.

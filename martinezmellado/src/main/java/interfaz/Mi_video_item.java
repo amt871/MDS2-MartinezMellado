@@ -18,4 +18,11 @@ public class Mi_video_item extends VistaMi_video_item {
 		this.getLabelTitulo().setText(titulo);
 		
 	}
+	
+	public void data(String src,String titulo, String altura, String anchura) {
+		
+		this.getLayoutVideo().add(new Video(src, altura, anchura));
+		this.getLabelTitulo().setText(titulo);
+		
+	}
 }

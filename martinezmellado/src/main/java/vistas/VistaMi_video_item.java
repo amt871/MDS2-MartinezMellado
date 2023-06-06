@@ -9,6 +9,8 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.dom.Element;
 
+import interfaz.Video;
+
 /**
  * A Designer generated component for the vista-mi_video_item template.
  *
@@ -47,5 +49,9 @@ public class VistaMi_video_item extends LitTemplate {
 		this.layoutVideo = layoutVideo;
 	}
 
+	public void setData(String src,String titulo, String altura, String anchura) {
+		this.layoutVideo.add(new Video(src, altura, anchura));
+		this.labelTitulo.setText(titulo);
+	}
     
 }
