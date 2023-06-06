@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaVer_siguiendo"/>
-    <fullyQualifiedTypeName name="interfaz.Configurar"/>
-    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="vistas.VistaPerfil_comercial"/>
     <fullyQualifiedTypeName name="vistas.VistaConfigurar_perfil_comercial"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
     <fullyQualifiedTypeName name="interfaz.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="basededatos.Denuncia_Archivada"/>
     <fullyQualifiedTypeName name="org.orm.criteria.IntegerExpression"/>
@@ -38,26 +34,30 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="orm.Usuario_Registrado"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.server.VaadinService"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
-    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.hibernate.mapping.Set"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="basededatos.PublicacionDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_video_item"/>
     <fullyQualifiedTypeName name="org.apache.catalina.webresources.FileResource"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="interfaz.Mi_video_item"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_video"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
+    <fullyQualifiedTypeName name="vistas.VistaCambiar_contrasenna"/>
+    <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
 </qualifiedTypeNameHistroy>

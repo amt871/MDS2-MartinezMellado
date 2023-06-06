@@ -5,6 +5,7 @@ import '@vaadin/vaadin-radio-button/src/vaadin-radio-group.js';
 import '@vaadin/vaadin-radio-button/src/vaadin-radio-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-upload/src/vaadin-upload.js';
 
 @customElement('vista-configurar_mi_perfil')
 export class VistaConfigurar_mi_perfil extends LitElement {
@@ -41,6 +42,7 @@ export class VistaConfigurar_mi_perfil extends LitElement {
   <vaadin-vertical-layout theme="spacing" style="width: 35%; height: 100%; align-items: center; justify-content: center;">
    <vaadin-vertical-layout theme="spacing" style="align-self: center; align-items: center; justify-content: center;">
     <img style="width: 30%;" id="idImagen">
+    <vaadin-upload id="uploadImagen"></vaadin-upload>
     <vaadin-button id="bCambiarFoto">
       Cambiar 
     </vaadin-button>

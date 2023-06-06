@@ -53,17 +53,19 @@ public class Usuarios_Registrados {
 
 	}
 
-	public void cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) throws PersistentException {
+	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario + "'",
 					null);
-			Usuario_RegistradoDAO.delete(u);
+			//Usuario_RegistradoDAO.delete(u);
 			u.setContrasenna(aNuevaContrasenna);
 			Usuario_RegistradoDAO.save(u);
 			t.commit();
+			return true;
 		} catch (Exception e) {
 			t.rollback();
+			return false;
 		}
 		
 	}
@@ -178,6 +180,8 @@ public class Usuarios_Registrados {
 
 			//System.out.println(Usuario_RegistradoDAO.save(nuevo));
 			Usuario_RegistradoDAO.save(nuevo);
+			
+			Usuario_RegistradoDAO.refresh(nuevo);
 			
 			t.commit();
 			//System.out.println("Usuarios_Registrados bien");

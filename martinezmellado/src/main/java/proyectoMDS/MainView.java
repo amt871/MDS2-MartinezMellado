@@ -64,6 +64,7 @@ public class MainView extends VerticalLayout {
 	private Configurar_mi_perfil configPerf;
 	private Publicar publicar;
 	private Video_otro_usuario inicioRegistrado;
+	private Cambiar_contrasenna cambiarContra;
 	
 
 	public MainView() {
@@ -118,6 +119,7 @@ public class MainView extends VerticalLayout {
 		Ver_siguiendo siguiendo = new Ver_siguiendo();
 		
 		//Registrado y Comercial
+		cambiarContra = new Cambiar_contrasenna();
 		
 		/*Publicar*/ publicar = new Publicar();
 		
@@ -288,6 +290,50 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
+		configPerf.getbCambiarFoto().addClickListener(event -> {
+			
+			basededatos.Usuario_Registrado nuevo = configPerf.cambiarFoto();
+			
+			if(nuevo != null)
+				this.inicializarPantallasUsuario(this.usuario);
+			
+		});
+		
+		configPerf.getbCambiarContrasenna().addClickListener(event -> {
+			
+			if(this.usuario.getComercial().equals("Normal")) {
+				cambiarContra.setCabecera(cabeceraReg);
+				cambiarPantalla(cambiarContra);
+			} else {
+				cambiarContra.setCabecera(cabeceraComercial);
+				cambiarPantalla(cambiarContra);
+			}
+			
+		});
+		
+		cambiarContra.getbCancelar().addClickListener(event -> {
+			
+			if(this.usuario.getComercial().equals("Normal")) {
+				configPerf.setCabecera(cabeceraReg);
+				cambiarPantalla(configPerf);
+			} else {
+				perfilComercial.setCabecera(cabeceraComercial);
+				cambiarPantalla(perfilComercial);
+			}
+			
+		});
+		
+		cambiarContra.getbGuardar().addClickListener(event -> {
+			
+			if(this.cambiarContra.cambiarContrasenna()) {
+				Notification.show("Contrasenna cambiada"); 
+				configPerf.setCabecera(cabeceraReg);
+				cambiarPantalla(configPerf);
+			} else
+				Notification.show("No se ha podido cambiar la contrasenna");
+			
+		});
+		
 		/*********BOTONES CAMBIO DE PANTALLA*********/
 		
 		
@@ -438,6 +484,12 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
+		/*cambiarContra.getbGuardar().addClickListener(event ->{
+			
+			
+			
+		});*/
+		
 		/*****************LISTENERS******************/
 		
 		registroCibernauta.getbRegistrar().addClickListener(event -> {
@@ -490,12 +542,15 @@ public class MainView extends VerticalLayout {
 	
 	private void inicializarPantallasUsuario(basededatos.Usuario_Registrado usuario) {
 		
+		if(this.usuario!=null)
+			this.usuario=null;
+		this.usuario=usuario;
 		inicioRegistrado.setUsuario(usuario);
 		miPerfil.setUsuario(usuario);
 		configurar.setUsuario(usuario);
 		configPerf.setUsuario(usuario);
 		publicar.setUsr(usuario);
-		
+		cambiarContra.setUsuario(usuario);
 	}
 	
 	

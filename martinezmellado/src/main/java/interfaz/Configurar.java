@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.notification.Notification;
+
 import basededatos.BDPrincipal;
 import basededatos.Usuario_Registrado;
 import vistas.VistaConfigurar;
@@ -51,8 +53,11 @@ public class Configurar extends VistaConfigurar {
 		
 		//Cambiar privacidad
 		//Si devuelve true se cambia el label sino nada
-		if(datos.modificarEstadoUsuario(this.usuario.getUsuario()))
+		if(datos.modificarEstadoUsuario(this.usuario.getUsuario())) {
 			this.getIdLabelPrivacidad().setText(this.getIdLabelPrivacidad().getText().equals("Usuario publico") ? "Usuario privado" : "Usuario publico");
+			Notification.show("Privacidad cambiada");
+		}else
+			Notification.show("No se ha podido cambiar la privacidad");
 	}
 	
 	
