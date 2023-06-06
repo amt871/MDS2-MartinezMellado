@@ -1,5 +1,8 @@
 package basededatos;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,5 +33,65 @@ public class Comentarios {
 	        t.rollback();
 	    }
 	    return aux;
+	}
+	
+	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) throws PersistentException {
+		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try { 
+		    	Usuario_Registrado usr = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + usuario +"'", null);
+		    	Comentario coment = new Comentario();
+		    	
+		    	coment.setAutor(usr.getUsuario());
+		    	coment.setComentario(comentario);
+		    	coment.setEs_publicado(usr);
+		    	coment.setFechaPublicacion(Date.valueOf(LocalDate.now()));
+		    	coment.setPertenece(publicacion);
+		    	coment.setPublicacion(String.valueOf(publicacion.getID()));
+		    	
+		    	usr.publica.add(coment);
+		    	
+		    	ComentarioDAO.save(coment);
+		    	Usuario_RegistradoDAO.save(usr);	
+		    	
+		    	t.commit();
+		    	
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+	}
+	
+	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) throws PersistentException {
+		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try { 
+		    	
+		    	comentario.es_denunciada.add(usuario);
+		    	usuario.denunciaA.add(comentario);
+		    	
+		    	ComentarioDAO.save(comentario);
+		    	Usuario_RegistradoDAO.save(usuario);	    	
+		    	
+		    	t.commit();
+		    	
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+	}
+	
+	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario)
+			throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+
+			if (comentario.es_denunciada.contains(usuario))
+				comentario.es_denunciada.remove(usuario);
+			if (usuario.denunciaA.contains(comentario))
+				usuario.denunciaA.remove(comentario);
+
+			ComentarioDAO.save(comentario);
+			Usuario_RegistradoDAO.save(usuario);
+			t.commit();
+		} catch (Exception e) {
+			t.rollback();
+		}
 	}
 }

@@ -280,4 +280,22 @@ public class Usuarios_Registrados {
 		}
 		return aux;
 	}
+	
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado)
+			throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+
+			if (denunciado.denunciante.contains(denunciante))
+				denunciado.denunciante.remove(denunciante);
+			if (denunciante.denunciado.contains(denunciado))
+				denunciante.denunciado.remove(denunciado);
+
+			Usuario_RegistradoDAO.save(denunciante);
+			Usuario_RegistradoDAO.save(denunciado);
+			t.commit();
+		} catch (Exception e) {
+			t.rollback();
+		}
+	}
 }

@@ -190,6 +190,37 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return false;
 	}
+	@Override
+	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void añadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void añadirComentario(String usuario, Publicacion publicacion, String comentario) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	
 }

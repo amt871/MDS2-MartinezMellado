@@ -130,5 +130,23 @@ public class Publicaciones {
 			throw new PersistentException(e);
 		}
 	}*/
+
+	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario)
+			throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+
+			if (publicacion.es_denunciada.contains(usuario))
+				publicacion.es_denunciada.remove(usuario);
+			if (usuario.denuncia.contains(publicacion))
+				usuario.denuncia.remove(publicacion);
+
+			PublicacionDAO.save(publicacion);
+			Usuario_RegistradoDAO.save(usuario);
+			t.commit();
+		} catch (Exception e) {
+			t.rollback();
+		}
+	}
 }
 
