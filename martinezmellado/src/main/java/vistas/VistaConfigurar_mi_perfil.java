@@ -12,6 +12,7 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.upload.Upload;
 
 /**
  * A Designer generated component for the vista-configurar_mi_perfil template.
@@ -49,6 +50,10 @@ public class VistaConfigurar_mi_perfil extends LitTemplate {
 	private Button idBGuardar;
 	@Id("bCambiarContrasenna")
 	private Button bCambiarContrasenna;
+	@Id("uploadImagen")
+	private Upload uploadImagen;
+	@Id("bCambiarFoto")
+	private Button bCambiarFoto;
 	/**
      * Creates a new VistaConfigurar_mi_perfil.
      */
@@ -168,6 +173,22 @@ public class VistaConfigurar_mi_perfil extends LitTemplate {
 
 	public void setbCambiarContrasenna(Button bCambiarContrasenna) {
 		this.bCambiarContrasenna = bCambiarContrasenna;
+	}
+
+	public Upload getUploadImagen() {
+		return uploadImagen;
+	}
+
+	public void setUploadImagen(Upload uploadImagen) {
+		this.uploadImagen = uploadImagen;
+	}
+
+	public Button getbCambiarFoto() {
+		return bCambiarFoto;
+	}
+
+	public void setbCambiarFoto(Button bCambiarFoto) {
+		this.bCambiarFoto = bCambiarFoto;
 	}
     
     

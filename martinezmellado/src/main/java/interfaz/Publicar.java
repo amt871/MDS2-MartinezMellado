@@ -47,13 +47,13 @@ public class Publicar extends VistaPublicar {
 
 	InputStream fileData;
 
-	Object[] cosas;
+	//Object[] cosas;
 
 	public Publicar() {
 		datos = new BDPrincipal();
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
-		cosas = new Object[3];
+		//cosas = new Object[3];
 		this.getUploader().setReceiver(memoryBuffer);
 		fileData = null;
 		this.getUploader().addSucceededListener(event -> {

@@ -90,9 +90,9 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public void cambiarContrasenna(Object aNuevaContrasenna, String aNombreUsuario) {
+	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 	@Override
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,

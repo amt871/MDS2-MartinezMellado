@@ -61,11 +61,12 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public void cambiarContrasenna(Object aNuevaContrasenna, String aNombreUsuario) {
+	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) {
 		try {
-			this.usuariosRegistrados.cambiarContrasenna(aNombreUsuario, aNombreUsuario);
+			return this.usuariosRegistrados.cambiarContrasenna(aNuevaContrasenna, aNombreUsuario);
 		} catch (Exception e) {
 			// TODO: handle exception
+			return false;
 		}
 	}
 

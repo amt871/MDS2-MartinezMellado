@@ -8,7 +8,7 @@ public interface iCibernauta {
 
 	public Usuario_Registrado iniciarSesion(String aUser, String aPass);
 
-	public void cambiarContrasenna(Object aNuevaContrasenna, String aNombreUsuario);
+	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario);
 
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo);
 

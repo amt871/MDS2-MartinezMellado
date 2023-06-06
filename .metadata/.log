@@ -9502,3 +9502,2418 @@ org.eclipse.core.runtime.CoreException: Cannot determine URI for '/martinezmella
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-06 15:36:47.547
 !MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:38:47.519
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:38:47.545
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:38:47.621
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:38:47.621
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:38:47.652
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:38:47.652
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:38:47.659
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:38:47.659
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:38:47.665
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:38:47.665
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:40:47.516
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:40:47.542
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:40:47.616
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:40:47.617
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:40:47.618
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:40:47.618
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:40:47.621
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:40:47.621
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:40:47.622
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:40:47.622
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:42:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:42:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:43:47.516
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:43:47.519
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:43:47.519
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:43:47.521
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:43:47.521
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:43:47.523
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:43:47.523
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:43:47.525
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:43:47.525
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:43:47.542
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:45:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:45:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:47:47.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:47:47.548
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:47:47.621
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:47:47.621
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:47:47.622
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:141)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApiForComponentId(FlowServiceUtil.java:120)
+	at com.vaadin.designer2.services.outline.OutlineItem.shouldShowEditor(OutlineItem.java:234)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:122)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:47:47.622
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:47:47.624
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isAbstract(FlowComponentApiService.java:135)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:47:47.624
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 4 0 2023-06-06 15:47:47.626
+!MESSAGE Cannot check class flag.
+!STACK 1
+Java Model Exception: Java Model Status [InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:583)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:254)
+	at org.eclipse.jdt.internal.core.SourceRefElement.generateInfos(SourceRefElement.java:113)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
+	at org.eclipse.jdt.internal.core.Member.getFlags(Member.java:172)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.checkFlag(FlowComponentApiService.java:159)
+	at com.vaadin.designer2.eclipse.editors.flow.FlowComponentApiService$EclipseJavaClass.isPrivate(FlowComponentApiService.java:140)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$null$0(AbstractComponentApiService.java:74)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:165)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.lambda$walk$0(AbstractComponentApiService.java:166)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService$JavaClass.walk(AbstractComponentApiService.java:166)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.lambda$getComponentApis$1(AbstractComponentApiService.java:70)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.LinkedList$LLSpliterator.forEachRemaining(LinkedList.java:1239)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at com.vaadin.designer2.services.componentapi.flow.AbstractComponentApiService.getComponentApis(AbstractComponentApiService.java:69)
+	at com.vaadin.designer2.services.FlowServiceUtil.getComponentApis(FlowServiceUtil.java:180)
+	at com.vaadin.designer2.services.outline.OutlineItem.createJavaInfo(OutlineItem.java:168)
+	at com.vaadin.designer2.services.outline.OutlineItem.generateJavaInfo(OutlineItem.java:124)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:220)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.generateJavaInfo(FlowOutlineService.java:222)
+	at com.vaadin.designer2.services.outline.FlowOutlineService.updateJavaInfo(FlowOutlineService.java:204)
+	at com.vaadin.designer2.services.browser.BrowserServiceImpl.lambda$registerExternalSession$35(BrowserServiceImpl.java:848)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:47:47.626
+!MESSAGE InfiniteScrollerView.java [in interfaz [in src/main/java [in martinezmellado]]] does not exist
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:49:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:49:46.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:50:49.356
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:50:49.356
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 2 0 2023-06-06 15:51:01.340
+!MESSAGE Finding type hierarchy for type Usuario_Registrado (not open) [in Usuario_Registrado.java [in interfaz [in src/main/java [in martinezmellado]]]] failed with status Java Model Status [Usuario_Registrado [in Usuario_Registrado.java [in interfaz [in src/main/java [in martinezmellado]]]] does not exist]
+!STACK 1
+Java Model Exception: Java Model Status [Usuario_Registrado [in Usuario_Registrado.java [in interfaz [in src/main/java [in martinezmellado]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:858)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:809)
+	at com.vaadin.designer2.eclipse.JavaCompanionFileListener.isUIComponentRelatedChange(JavaCompanionFileListener.java:122)
+	at com.vaadin.designer2.eclipse.JavaCompanionFileListener.updateComponentHierarchy(JavaCompanionFileListener.java:105)
+	at com.vaadin.designer2.eclipse.JavaCompanionFileListener.lambda$0(JavaCompanionFileListener.java:71)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:67)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:51)
+	at com.vaadin.designer2.eclipse.JavaCompanionFileListener.resourceChanged(JavaCompanionFileListener.java:60)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:305)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:295)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:158)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:380)
+	at org.eclipse.core.internal.resources.Workspace.aboutToBuild(Workspace.java:308)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:603)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:116)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:470)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.lambda$1(ProjectConfigurationManager.java:358)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:179)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:153)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:101)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1370)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:357)
+	at org.eclipse.m2e.core.ui.internal.UpdateMavenProjectJob.runInWorkspace(UpdateMavenProjectJob.java:79)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:42)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2023-06-06 15:51:01.340
+!MESSAGE Usuario_Registrado [in Usuario_Registrado.java [in interfaz [in src/main/java [in martinezmellado]]]] does not exist
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:51:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:51:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:21.990
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/4bf0
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.109
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/de58
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.127
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/f542
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.210
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/ca73
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.210
+!MESSAGE Jetty stopped at http://192.168.0.17:52954
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.242
+!MESSAGE Force stop the task with pid 20320
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.249
+!MESSAGE Force stop the task with pid 2964
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:22.250
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.953
+!MESSAGE Remote preview available on http://192.168.0.17:52954. Designer running on http://localhost:52954.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.954
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.959
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/MDS2-MartinezMellado/martinezmellado/node_modules --port=52318 --hostPid=2004
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.961
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.962
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.962
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:25.965
+!MESSAGE Setting browser url to http://localhost:52954/flow/de2a/frontend/src/vista-mi_perfil.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-06 15:53:26.135
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:26.808
+!MESSAGE Setting browser url to http://localhost:52954/flow/de2a/frontend/src/vista-mi_perfil.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:26.808
+!MESSAGE Setting browser url to http://localhost:52954/flow/de2a/frontend/src/vista-mi_perfil.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:27.239
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:27.790
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:43.920
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:43.922
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:43.922
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:43.922
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:43.925
+!MESSAGE Setting browser url to http://localhost:52954/flow/c811/frontend/src/vista-configurar_mi_perfil.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:44.194
+!MESSAGE Setting browser url to http://localhost:52954/flow/c811/frontend/src/vista-configurar_mi_perfil.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:44.194
+!MESSAGE Setting browser url to http://localhost:52954/flow/c811/frontend/src/vista-configurar_mi_perfil.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:44.682
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:53:45.253
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:54:56.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:56:07.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:57:17.247
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:58:27.286
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 15:59:37.333
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:00:47.374
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:01:57.440
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:03:07.488
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:04:17.546
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:05:27.615
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:06:37.678
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:07:47.733
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:08:57.769
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:10:07.831
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:11:17.890
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:12:27.937
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:13:37.985
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:14:48.033
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:15:58.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:16:31.979
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:16:31.979
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:16:43.606
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:16:43.607
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:16:43.607
+!MESSAGE Save JSON notifications content to cache file C:\MDS2-MartinezMellado\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:17:46.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:19:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:21:46.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:23:47.516
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:25:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:26:47.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:28:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:30:46.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:43:53.129
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/de2a
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:43:53.142
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/c811
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:43:53.142
+!MESSAGE Jetty stopped at http://192.168.0.17:52954
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:43:53.157
+!MESSAGE Force stop the task with pid 9244
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:43:53.161
+!MESSAGE Force stop the task with pid 19960
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:43:53.161
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.337
+!MESSAGE Remote preview available on http://192.168.0.17:52954. Designer running on http://localhost:52954.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.338
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.343
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/MDS2-MartinezMellado/martinezmellado/node_modules --port=52318 --hostPid=2004
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.344
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.345
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.346
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:37.348
+!MESSAGE Setting browser url to http://localhost:52954/flow/2e24/frontend/src/vista-cambiar_contrasenna.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-06 16:44:37.488
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:38.168
+!MESSAGE Setting browser url to http://localhost:52954/flow/2e24/frontend/src/vista-cambiar_contrasenna.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:38.169
+!MESSAGE Setting browser url to http://localhost:52954/flow/2e24/frontend/src/vista-cambiar_contrasenna.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:38.859
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:44:39.168
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.404
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.405
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.405
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.406
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.409
+!MESSAGE Setting browser url to http://localhost:52954/flow/f018/frontend/src/vista-confirmar_codigo.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.614
+!MESSAGE Setting browser url to http://localhost:52954/flow/f018/frontend/src/vista-confirmar_codigo.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:31.614
+!MESSAGE Setting browser url to http://localhost:52954/flow/f018/frontend/src/vista-confirmar_codigo.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:32.472
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:32.985
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:45:40.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:46:43.042
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:46:46.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:47:53.111
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:48:47.519
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:49:03.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:50:06.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:50:46.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:51:38.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:51:47.515
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:52:42.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:52:51.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:22.836
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:22.838
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:22.838
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:22.839
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:22.842
+!MESSAGE Setting browser url to http://localhost:52954/flow/c811/frontend/src/vista-configurar_mi_perfil.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:23.086
+!MESSAGE Setting browser url to http://localhost:52954/flow/c811/frontend/src/vista-configurar_mi_perfil.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:23.087
+!MESSAGE Setting browser url to http://localhost:52954/flow/c811/frontend/src/vista-configurar_mi_perfil.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:23.939
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:24.479
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:45.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:53:52.227
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:54:28.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:55:02.279
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:55:46.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:55:46.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:56:12.328
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:56:49.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:56:57.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:57:22.350
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:58:24.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:58:44.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:58:44.538
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:59:26.227
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:59:46.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 16:59:46.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:00:36.288
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:01:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:01:46.345
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:01:47.524
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:02:56.413
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:03:46.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:03:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:04:06.468
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:05:16.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:05:46.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:05:46.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:06:26.564
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:06:47.526
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:07:28.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:07:46.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:08:29.229
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:08:46.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:08:47.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:09:39.313
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:10:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:10:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:10:49.386
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:11:47.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:11:59.459
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:12:47.524
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:13:09.504
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:13:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:14:19.564
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:14:46.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:15:22.741
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:15:30.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:15:54.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:16:26.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:16:33.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:16:58.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:17:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:17:46.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:18:47.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:18:47.545
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:19:46.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:20:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:20:46.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:21:44.136
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:22:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:22:44.134
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:23:47.654
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:24:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:24:44.134
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:25:45.460
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:25:45.487
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:26:45.459
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:27:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:27:44.138
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:28:44.131
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:29:44.130
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:29:44.130
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:30:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:31:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:31:44.138
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:31:45.461
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:33:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:33:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:33:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:34:45.461
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:34:45.486
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:34:45.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:36:44.130
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:36:44.131
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:36:44.131
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:38:44.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:38:45.449
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:38:45.475
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:39:49.132
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:39:49.777
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:39:50.132
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:40:52.139
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:40:53.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:41:00.180
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:42:11.139
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:42:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:42:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:43:44.141
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:43:45.459
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:44:45.465
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:45:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:45:44.130
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:46:45.457
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:46:45.483
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:47:45.460
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:48:44.132
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:48:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:49:25.863
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:49:45.459
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:50:44.125
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:50:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:51:44.139
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:51:45.461
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:51:45.487
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:53:44.136
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:53:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:53:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:55:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:55:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:55:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:56:45.463
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:56:45.494
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:56:45.520
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:58:44.136
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:58:44.136
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 17:58:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:00:45.451
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:00:45.482
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:00:45.504
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:02:44.131
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:02:44.132
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:02:44.132
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:04:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:04:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:04:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:05:45.458
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:05:45.484
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:05:45.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:07:45.458
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:07:45.484
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:07:45.509
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:09:45.464
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:09:45.498
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:09:45.525
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:11:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:11:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:11:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:13:45.455
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:13:45.482
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:13:45.508
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:15:44.136
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:15:45.451
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:15:45.479
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:17:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:17:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:17:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:18:45.460
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:18:45.486
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:18:45.514
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:20:45.467
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:20:45.493
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:20:45.520
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:22:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:22:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:22:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:23:45.464
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:23:45.493
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:23:45.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:25:44.132
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:25:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:25:45.460
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:26:45.464
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:26:45.492
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:27:44.138
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:28:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:28:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:29:45.462
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:29:45.628
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:29:45.631
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:31:44.125
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:31:45.465
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:31:45.491
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:32:45.458
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:33:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:33:44.130
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:34:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:35:45.461
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:35:45.488
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:35:45.514
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:37:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:37:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:37:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:38:45.461
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:38:45.486
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:38:45.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:40:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:40:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:40:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:41:45.458
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:41:45.586
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:41:45.589
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:43:44.139
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:43:44.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:43:44.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:45:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:45:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:45:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:47:45.460
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:47:45.485
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:47:45.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:49:44.130
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:49:44.131
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:49:44.131
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:51:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:51:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:51:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:52:45.457
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:52:45.482
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:52:45.508
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:54:44.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:54:44.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:54:44.141
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:56:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:56:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:56:44.133
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:57:45.466
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:57:45.492
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:57:45.519
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:59:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:59:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 18:59:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:01:44.136
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:01:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:01:44.137
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:03:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:03:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:03:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:04:45.472
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:04:45.499
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:05:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:06:44.138
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:06:44.138
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:07:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:08:45.464
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:08:45.499
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:08:45.525
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:10:44.126
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:10:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:10:44.127
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:11:45.459
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:11:45.491
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:11:45.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:13:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:13:44.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:13:44.129
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.451
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/2e24
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.470
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/f018
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.486
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/c811
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.487
+!MESSAGE Jetty stopped at http://192.168.0.17:52954
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.511
+!MESSAGE Force stop the task with pid 776
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.515
+!MESSAGE Force stop the task with pid 4400
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.516
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.969
+!MESSAGE Jetty stopped at http://192.168.0.17:-1
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-06 19:15:35.970
+!MESSAGE Removed all models from server.
