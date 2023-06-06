@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-mi_perfil')
 export class VistaMi_perfil extends LitElement {
@@ -36,9 +36,9 @@ export class VistaMi_perfil extends LitElement {
  <vaadin-button style="height: 5%;" id="bConfigurar">
    Configurar 
  </vaadin-button>
- <div style="width: 100%; height: 65%;">
+ <vaadin-vertical-layout style="height: 65%; width: 100%;">
   <vaadin-scroller id="Scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
- </div>
+ </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

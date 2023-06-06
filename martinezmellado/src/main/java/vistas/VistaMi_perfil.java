@@ -40,6 +40,7 @@ public class VistaMi_perfil extends LitTemplate {
 	@Id("Scroller")
 	private Scroller scroller;
 
+
 	/**
      * Creates a new VistaMi_perfil.
      */

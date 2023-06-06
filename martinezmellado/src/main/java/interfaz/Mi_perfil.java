@@ -73,13 +73,13 @@ public class Mi_perfil extends VistaMi_perfil {
 
 		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
 
-		scroller.getStyle().set("width", "100%");
-		scroller.getStyle().set("height", "100%");
+		//scroller.getStyle().set("width", "100%");
+		//scroller.getStyle().set("height", "65%");
 
 		scroller.setContent(vl);
 
-		vl.getStyle().set("width", "100%");
-		vl.getStyle().set("height", "100%");
+		//vl.getStyle().set("width", "100%");
+		//vl.getStyle().set("height", "100%");
 		
 		//vl.getStyle().set("background-color", "black");
 		
@@ -99,7 +99,7 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
-			vl.setHeight("50%");
+			//vl.setHeight("100%");
 			vl.setWidth("100%");
 			
 			//vl.add(new Video("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4"));
@@ -131,8 +131,10 @@ public class Mi_perfil extends VistaMi_perfil {
 						array.get(index).setAlignItems(Alignment.CENTER);
 						array.get(index).getStyle().set("height", "100%");
 						array.get(index).getStyle().set("width", "100%");
+						array.get(index).getStyle().set("position", "relative");
+						//array.get(index).getStyle().set("overflow", "auto");
 						array.get(index).setBoxSizing(BoxSizing.BORDER_BOX);
-//						array.get(index).setPadding(false);
+//						array.get(index).setPadding(true);
 //						array.get(index).setMargin(false);
 //						array.get(index).setSpacing(false);
 						
@@ -143,11 +145,13 @@ public class Mi_perfil extends VistaMi_perfil {
 					
 					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
 					
-					array.get(index).add(new Mi_video_item(videos[i].getVideo().replace("src/main/webapp/",""), titulo, "100%", "25%"));
+					array.get(index).add(new Mi_video_item(videos[i].getVideo().replace("src/main/webapp/",""), titulo)/*, "100%", "25%")*/);
+					//array.get(index).add(new)
 					contador++;
 					if(contador==4) {
 						index ++;
 						contador = 0;
+						//vl.add(array.get(0));
 						//break;
 					}
 					
