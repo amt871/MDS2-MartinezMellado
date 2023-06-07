@@ -1,6 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-mi_cabecera';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-ver_perfil__usuario_registrado_')
 export class VistaVer_perfil__usuario_registrado_ extends LitElement {
@@ -15,17 +16,26 @@ export class VistaVer_perfil__usuario_registrado_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center;">
- <vista-mi_cabecera style="width: 100%; height: 100%;"></vista-mi_cabecera>
- <vaadin-horizontal-layout style="height: 100%; justify-content: space-between; width: 100%;">
-  <vaadin-horizontal-layout style="width: 100%; align-self: center; justify-content: center; align-items: center; height: 100%;">
-   <label>Numero de seguidores</label>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; position: absolute;">
+ <vaadin-vertical-layout style="width: 100%; height: 5%;">
+  <div style="width: 100%; height: 100%;" id="divCabecera"></div>
+ </vaadin-vertical-layout>
+ <vaadin-horizontal-layout theme="" style="width: 100%; height: 20%;">
+  <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: flex-end;">
+   <label id="labelSeguidores">Seguidores</label>
   </vaadin-horizontal-layout>
-  <img style="height: 20%; width: 20%;" src="../../resources/icons/user.svg">
-  <vaadin-horizontal-layout style="width: 100%; align-self: center; align-items: center; justify-content: center; height: 100%;">
-   <label>Numero de me gustas</label>
+  <vaadin-vertical-layout style="align-items: center; justify-content: center;">
+   <img style="width: 30%;" id="image">
+  </vaadin-vertical-layout>
+  <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
+   <label id="labelMegustas">Me gustas</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
+ <label style="height: 5%;" id="labelUsuario">Usuario</label>
+ <vaadin-button style="height: 5%;" id="seguirButton">
+   Seguir 
+ </vaadin-button>
+ <div id="divVideos" style="width: 100%; height: 65%; position: relative;"></div>
 </vaadin-vertical-layout>
 `;
   }

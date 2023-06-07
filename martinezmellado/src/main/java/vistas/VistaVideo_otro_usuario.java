@@ -46,6 +46,7 @@ public class VistaVideo_otro_usuario extends LitTemplate {
 
 	public void setCabecera(Mi_cabecera cabecera) {
 		this.cabecera = cabecera;
+		//System.out.println("cabecera: " + this.getCabecera()==null);
 		getDivCabecera().add(cabecera);
 	}
 

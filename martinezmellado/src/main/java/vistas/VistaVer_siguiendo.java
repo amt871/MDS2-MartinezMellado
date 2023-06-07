@@ -8,6 +8,7 @@ import com.vaadin.flow.component.template.Id;
 
 import interfaz.Configurar;
 import interfaz.Mi_cabecera;
+import com.vaadin.flow.component.orderedlayout.Scroller;
 
 /**
  * A Designer generated component for the vista-ver_siguiendo template.
@@ -25,6 +26,11 @@ public class VistaVer_siguiendo extends LitTemplate {
 	private Div divCabecera;
 	@Id("divConfig")
 	private Div divConfig;
+	@Id("divSiguiendo")
+	private Div divSiguiendo;
+	@Id("idScroller")
+	private Scroller idScroller;
+
 
 	/**
      * Creates a new VistaVer_siguiendo.
@@ -67,5 +73,22 @@ public class VistaVer_siguiendo extends LitTemplate {
 		this.divConfig = divConfig;
 	}
 
+	public Div getDivSiguiendo() {
+		return divSiguiendo;
+	}
+
+	public void setDivSiguiendo(Div divSiguiendo) {
+		this.divSiguiendo = divSiguiendo;
+	}
+
+	public Scroller getIdScroller() {
+		return idScroller;
+	}
+
+	public void setIdScroller(Scroller idScroller) {
+		this.idScroller = idScroller;
+	}
+
+	
     
 }
