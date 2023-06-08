@@ -11,4 +11,6 @@ public interface iCibernauta {
 	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario);
 
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo);
+	
+	public Publicacion cargarVideoPorRuta(String ruta);
 }

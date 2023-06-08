@@ -415,4 +415,26 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 		return null;
 	}
+
+	@Override
+	public void annadirMeGusta(Publicacion publicacion, Usuario_Registrado usuario) {
+		// TODO Auto-generated method stub
+		try {
+			this.publicaciones.annadirMeGusta(publicacion, usuario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public Publicacion cargarVideoPorRuta(String ruta) {
+		// TODO Auto-generated method stub
+		try {
+			return this.publicaciones.cargarVideoPorRuta(ruta);
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+		
+	}
 }

@@ -3,6 +3,8 @@ package interfaz;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.notification.Notification;
 
+import basededatos.BDPrincipal;
+import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
 import vistas.VistaVideo_otro_usuario_item;
@@ -13,6 +15,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 	private Usuario_Registrado usuario;
 	private Component cabecera;
 	private MainView inicio;
+	BDPrincipal datos;
 	
 //	private Video _videoV;
 //	private ImageButton _imagenPropietarioVideoIB;
@@ -54,6 +57,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 	
 	public Video_otro_usuario_item(String src, Usuario_Registrado usuario, MainView inicio, Component cabecera) {
 		
+		this.datos = new BDPrincipal();
 		this.inicio = inicio;
 		this.cabecera = cabecera;
 		this.usuario = usuario;
@@ -65,10 +69,20 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 		this.video = new Video(src);
 		
+		
 		//this.video.setWidth("120%");
 		//this.video.setHeight("50%");
 		
 		this.getLayoutVideo().add(video);
+		
+		this.getIdBMeGusta().addClickListener(event -> {
+			
+			String ruta = "src/main/webapp/" + src;
+			Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + src);
+			//System.out.println(publicacion.getUbicacion());
+			this.datos.annadirMeGusta(publicacion, this.usuario);
+
+		});
 		
 	}
 	

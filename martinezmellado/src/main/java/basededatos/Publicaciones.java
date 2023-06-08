@@ -165,5 +165,34 @@ public class Publicaciones {
 		        t.rollback();
 		    }
 	}
+	
+	public void annadirMeGusta(Publicacion publicacion, Usuario_Registrado usuario) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try { 
+	    	
+	    	publicacion.le_gusta.add(usuario);
+	    	usuario.le_gusta.add(publicacion);;
+	    	
+	    	PublicacionDAO.save(publicacion);
+	    	Usuario_RegistradoDAO.save(usuario);	    	
+	    	
+	    	t.commit();
+	    	
+	    }catch (Exception e) {
+	        t.rollback();
+	    }
+	}
+	
+	public Publicacion cargarVideoPorRuta(String ruta) throws PersistentException {
+		 Publicacion u = null;
+		    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try {
+		        u = PublicacionDAO.loadPublicacionByQuery("Video = '" + ruta + "'", null);
+		        return u;
+		    }catch (Exception e) {
+		        t.rollback();
+		    }
+		    return u;
+	}
 }
 

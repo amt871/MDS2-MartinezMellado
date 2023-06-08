@@ -238,6 +238,16 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public void annadirMeGusta(Publicacion publicacion, Usuario_Registrado usuario) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public Publicacion cargarVideoPorRuta(String ruta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 }

@@ -40,6 +40,10 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 	private Button denunciarButton;
 	@Id("labelUsuario")
 	private Label labelUsuario;
+	@Id("idBComentarios")
+	private Button idBComentarios;
+	@Id("idBMeGusta")
+	private Button idBMeGusta;
 
 	/**
      * Creates a new VistaVideo_otro_usuario_item.
@@ -127,6 +131,22 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 
 	public void setLabelUsuario(Label labelUsuario) {
 		this.labelUsuario = labelUsuario;
+	}
+
+	public Button getIdBComentarios() {
+		return idBComentarios;
+	}
+
+	public void setIdBComentarios(Button idBComentarios) {
+		this.idBComentarios = idBComentarios;
+	}
+
+	public Button getIdBMeGusta() {
+		return idBMeGusta;
+	}
+
+	public void setIdBMeGusta(Button idBMeGusta) {
+		this.idBMeGusta = idBMeGusta;
 	}
     
     

@@ -29,4 +29,6 @@ public interface iAdministrador {
 	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario);
 	
 	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado);
+	
+	public Publicacion cargarVideoPorRuta(String ruta);
 }

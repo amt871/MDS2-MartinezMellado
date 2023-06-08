@@ -38,13 +38,13 @@ export class VistaVideo_otro_usuario_item extends LitElement {
   </vaadin-vertical-layout>
   <vaadin-horizontal-layout theme="spacing" style="align-items: center; padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl); width: 100%; justify-content: center; padding-top: var(--lumo-space-m); padding-bottom: var(--lumo-space-m);">
    <vaadin-vertical-layout theme="spacing" style="justify-content: center; align-items: center; padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);">
-    <vaadin-button theme="icon" aria-label="Add new" id="idMeGusta">
+    <vaadin-button theme="icon" aria-label="Add new" id="idBMeGusta">
      <iron-icon icon="vaadin:heart"></iron-icon>
     </vaadin-button>
     <label id="idNumMg">nº me gusta </label>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);">
-    <vaadin-button theme="icon" aria-label="Add new" id="idComentarios">
+    <vaadin-button theme="icon" aria-label="Add new" id="idBComentarios">
      <iron-icon icon="vaadin:comments"></iron-icon>
     </vaadin-button>
     <label id="idNumComentarios">nº comentario </label>
