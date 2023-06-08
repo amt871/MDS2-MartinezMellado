@@ -1,7 +1,9 @@
 package interfaz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Vector;
 
 import org.orm.PersistentException;
@@ -13,6 +15,8 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
+import basededatos.BDPrincipal;
+import basededatos.Publicacion;
 import basededatos.PublicacionDAO;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
@@ -28,6 +32,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
 	private MainView inicio;
+	BDPrincipal datos;
 	
 	public Video_otro_usuario(MainView inicio, Mi_cabecera cabeceraReg) {
 		
@@ -60,17 +65,21 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		//ArrayList<Video_otro_usuario_item> array = new ArrayList<Video_otro_usuario_item>();
 		
 		
-		basededatos.Publicacion[] videos = null;
+		this.datos = new BDPrincipal();
+		ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
+		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
 		
-		try {
-			videos = PublicacionDAO.listPublicacionByQuery("Usuario_RegistradoUsuarioID<>'" + this.usuario.getID() + "'", "Video desc");
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			Notification.show("Fallo al cargar los videos");
+		List<Usuario_Registrado> aux = this.datos.listarSeguidos(this.usuario.getUsuario());
+		if (aux != null) {
+			for (Object object : aux) {
+				seguidos.add((Usuario_Registrado) object);
+			}
+			for (Usuario_Registrado usuario_Registrado : seguidos) {
+				videos.addAll(Arrays.asList(this.datos.listarVideosUsuario(usuario_Registrado.getID())));
+			}
+			
 		}
-		
-		if(videos.length == 0) {
+		if(videos.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("No hay videos aun"));
@@ -85,23 +94,23 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 			
 			ArrayList<Video_otro_usuario_item> array = new ArrayList<Video_otro_usuario_item>();
 			
-			for(int i = 0; i<videos.length && i<20; i++) {
+			for(int i = 0; i<videos.size() && i<20; i++) {
 				
 				//System.out.println(this.getCabecera()==null);
 				
 				
-				array.add(new Video_otro_usuario_item(this.usuario, videos[i].getVideo().replace("src/main/webapp/", ""), videos[i].getRealizada(), this.inicio, this.getCabecera()));
+				array.add(new Video_otro_usuario_item(this.usuario, videos.get(i).getVideo().replace("src/main/webapp/", ""), videos.get(i).getRealizada(), this.inicio, this.getCabecera()));
 				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
 				array.get(i).getStyle().set("position", "relative");
 				array.get(i).getStyle().set("height", "100%");
 				array.get(i).getStyle().set("width", "100%");
-				array.get(i).getImageButton().setSrc(videos[i].getRealizada().getFoto());
-				array.get(i).getLabelUsuario().setText(videos[i].getRealizada().getUsuario());
-				array.get(i).getIdUbicación().setText(videos[i].getUbicacion());
-				array.get(i).getIdFecha().setText(videos[i].getFecha().toString());
-				array.get(i).getIdDescripcion().setText(videos[i].getDescripcion());
-				array.get(i).getIdNumMg().setText(String.valueOf(videos[i].le_gusta.size()));
-				array.get(i).getIdNumComentarios().setText(String.valueOf(videos[i].tiene.size()));
+				array.get(i).getImageButton().setSrc(videos.get(i).getRealizada().getFoto());
+				array.get(i).getLabelUsuario().setText(videos.get(i).getRealizada().getUsuario());
+				array.get(i).getIdUbicación().setText(videos.get(i).getUbicacion());
+				array.get(i).getIdFecha().setText(videos.get(i).getFecha().toString());
+				array.get(i).getIdDescripcion().setText(videos.get(i).getDescripcion());
+				array.get(i).getIdNumMg().setText(String.valueOf(videos.get(i).le_gusta.size()));
+				array.get(i).getIdNumComentarios().setText(String.valueOf(videos.get(i).tiene.size()));
 				
 				vl.add(array.get(i));
 			}

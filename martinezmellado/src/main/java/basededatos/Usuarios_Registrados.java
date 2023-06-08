@@ -256,11 +256,11 @@ public class Usuarios_Registrados {
 	public List listarSeguidos(String aNombreUsuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		Usuario_Registrado u = null;
-		List<Usuario_RegistradoSetCollection> aux =  null;
+		List<Usuario_Registrado> aux =  null;
 		try {
 			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
 			if (u != null) {
-				aux =  Arrays.asList(u.seguido);
+				aux =  Arrays.asList(u.seguido.toArray());
 			}
 			
 		} catch (Exception e) {

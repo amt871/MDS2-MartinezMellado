@@ -51,4 +51,6 @@ public interface iUsuario_Registrado {
 	
 	public Publicacion cargarVideoPorRuta(String ruta);
 	
+	public Publicacion[] listarVideosUsuario(int id);
+	
 }

@@ -437,4 +437,15 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 		
 	}
+
+	@Override
+	public Publicacion[] listarVideosUsuario(int id) {
+		// TODO Auto-generated method stub
+		try {
+			this.publicaciones.listarVideosUsuario(id);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
 }
