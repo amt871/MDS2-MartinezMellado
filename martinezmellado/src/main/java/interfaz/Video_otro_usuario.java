@@ -15,6 +15,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
 import basededatos.PublicacionDAO;
 import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaVideo_otro_usuario;
 
 public class Video_otro_usuario extends VistaVideo_otro_usuario{
@@ -26,6 +27,14 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 	private Scroller scroller;
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
+	private MainView inicio;
+	
+	public Video_otro_usuario(MainView inicio, Mi_cabecera cabeceraReg) {
+		
+		this.inicio = inicio;
+		this.setCabecera(cabeceraReg);
+		
+	}
 	
 	/*public Video_otro_usuario() {
 		
@@ -45,7 +54,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		addItem();
 
 	}*/
-	
+
 	public void addItem() {
 		
 		//ArrayList<Video_otro_usuario_item> array = new ArrayList<Video_otro_usuario_item>();
@@ -74,9 +83,10 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 			
 			for(int i = 0; i<videos.length && i<20; i++) {
 				
+				//System.out.println(this.getCabecera()==null);
 				
 				
-				array.add(new Video_otro_usuario_item(videos[i].getVideo().replace("src/main/webapp/", "")));
+				array.add(new Video_otro_usuario_item(videos[i].getVideo().replace("src/main/webapp/", ""), videos[i].getRealizada(), this.inicio, this.getCabecera()));
 				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
 				array.get(i).getStyle().set("position", "relative");
 				//array.get(i).getStyle().set("height", "20%");
@@ -113,7 +123,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		//scroller.getStyle().set("width", "100%");
 		//scroller.getStyle().set("height", "95%");
 
-		//scroller.getStyle().set("position", "relative");
+		scroller.getStyle().set("position", "relative");
 		
 		scroller.setContent(vl);
 
@@ -124,7 +134,6 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		
 		addItem();
 	}
-	
-	
+
 	
 }

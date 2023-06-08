@@ -8,6 +8,7 @@ import com.vaadin.flow.component.template.Id;
 
 import interfaz.Configurar;
 import interfaz.Mi_cabecera;
+import com.vaadin.flow.component.orderedlayout.Scroller;
 
 /**
  * A Designer generated component for the vista-ver_mis_seguidores template.
@@ -25,6 +26,8 @@ public class VistaVer_mis_seguidores extends LitTemplate {
 	private Div divCabecera;
 	@Id("divConfigurar")
 	private Div divConfigurar;
+	@Id("idScroller")
+	private Scroller idScroller;
 
 	/**
      * Creates a new VistaVer_mis_seguidores.
@@ -66,6 +69,22 @@ public class VistaVer_mis_seguidores extends LitTemplate {
 
 	public void setDivConfig(Div divConfig) {
 		this.divConfigurar = divConfigurar;
+	}
+
+	public Div getDivConfigurar() {
+		return divConfigurar;
+	}
+
+	public void setDivConfigurar(Div divConfigurar) {
+		this.divConfigurar = divConfigurar;
+	}
+
+	public Scroller getIdScroller() {
+		return idScroller;
+	}
+
+	public void setIdScroller(Scroller idScroller) {
+		this.idScroller = idScroller;
 	}
 
     

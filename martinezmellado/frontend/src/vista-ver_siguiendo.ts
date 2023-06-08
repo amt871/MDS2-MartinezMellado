@@ -1,7 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-siguiendo';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-ver_siguiendo')
 export class VistaVer_siguiendo extends LitElement {
@@ -21,7 +21,9 @@ export class VistaVer_siguiendo extends LitElement {
   <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <vista-siguiendo style="width: 70%; height: 100%;"></vista-siguiendo>
+  <div id="divSiguiendo" style="width: 70%; height: 100%; position: relative;">
+   <vaadin-scroller id="idScroller"></vaadin-scroller>
+  </div>
   <div id="divConfig" style="width: 30%; height: 100%;"></div>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>

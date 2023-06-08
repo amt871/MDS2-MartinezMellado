@@ -1,10 +1,18 @@
 package interfaz;
 
+import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.notification.Notification;
+
+import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaVideo_otro_usuario_item;
 
 public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 	
 	private Video video;
+	private Usuario_Registrado usuario;
+	private Component cabecera;
+	private MainView inicio;
 	
 //	private Video _videoV;
 //	private ImageButton _imagenPropietarioVideoIB;
@@ -44,7 +52,16 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Video_otro_usuario_item(String src) {
+	public Video_otro_usuario_item(String src, Usuario_Registrado usuario, MainView inicio, Component cabecera) {
+		
+		this.inicio = inicio;
+		this.cabecera = cabecera;
+		this.usuario = usuario;
+		this.getUsuarioButton().addClickListener(event -> {
+		
+			verPerfilOtroUsuario();
+			
+		});
 		
 		this.video = new Video(src);
 		
@@ -52,6 +69,21 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		//this.video.setHeight("50%");
 		
 		this.getLayoutVideo().add(video);
+		
+	}
+	
+	private void verPerfilOtroUsuario() {
+		
+		if(this.usuario.getPrivado()) {
+			
+			Notification.show("Aun no implementado");
+			
+		}else {
+			
+			this.inicio.cambiarPantalla(new Ver_perfil__usuario_registrado_(this.cabecera, this.usuario));
+			
+			
+		}
 		
 	}
 	

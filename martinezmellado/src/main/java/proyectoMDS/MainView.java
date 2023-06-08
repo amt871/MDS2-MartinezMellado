@@ -65,7 +65,9 @@ public class MainView extends VerticalLayout {
 	private Publicar publicar;
 	private Video_otro_usuario inicioRegistrado;
 	private Cambiar_contrasenna cambiarContra;
-	
+	private Ver_mis_seguidores seguidores;
+	private Ver_siguiendo siguiendo;
+	//private Mi_cabecera cabeceraReg;
 
 	public MainView() {
 		
@@ -106,7 +108,7 @@ public class MainView extends VerticalLayout {
 		
 		//Registrado
 		
-		/*Video_otro_usuario*/ inicioRegistrado = new Video_otro_usuario();
+		/*Video_otro_usuario*/ inicioRegistrado = new Video_otro_usuario(this, cabeceraReg);
 		Notificaciones notis = new Notificaciones();
 		Buscar__usuario_registrado_ busquedaRegistrado = new Buscar__usuario_registrado_();
 		/*Mi_perfil*/ miPerfil = new Mi_perfil();
@@ -115,8 +117,8 @@ public class MainView extends VerticalLayout {
 		
 		/*Configurar*/ configurar = new Configurar();
 		/*Configurar_mi_perfil*/ configPerf = new Configurar_mi_perfil();
-		Ver_mis_seguidores seguidores = new Ver_mis_seguidores();
-		Ver_siguiendo siguiendo = new Ver_siguiendo();
+		/*Ver_mis_seguidores*/ seguidores = new Ver_mis_seguidores();
+		/*Ver_siguiendo*/ siguiendo = new Ver_siguiendo();
 		
 		//Registrado y Comercial
 		cambiarContra = new Cambiar_contrasenna();
@@ -259,11 +261,11 @@ public class MainView extends VerticalLayout {
 			
 		});
 		
-		configurar.getbCambioPrivacidad().addClickListener(event -> {
+		/*configurar.getbCambioPrivacidad().addClickListener(event -> {
 			
 			
 			
-		});
+		});*/
 
 		configurar.getbSeguidores().addClickListener(event -> {
 	
@@ -531,7 +533,7 @@ public class MainView extends VerticalLayout {
 
 	}
 
-	private void cambiarPantalla(Component pantalla) {
+	public void cambiarPantalla(Component pantalla) {
 
 		if (getComponentCount() != 0)
 			remove(pantallaActual);
@@ -546,11 +548,14 @@ public class MainView extends VerticalLayout {
 			this.usuario=null;
 		this.usuario=usuario;
 		inicioRegistrado.setUsuario(usuario);
+		//inicioRegistrado.setCabecera(cabeceraReg);
 		miPerfil.setUsuario(usuario);
 		configurar.setUsuario(usuario);
 		configPerf.setUsuario(usuario);
 		publicar.setUsr(usuario);
 		cambiarContra.setUsuario(usuario);
+		seguidores.setUsuario(usuario);
+		siguiendo.setUsuario(usuario);
 	}
 	
 	
