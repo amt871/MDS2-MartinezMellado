@@ -76,8 +76,12 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 			vl.add(new Label("No hay videos aun"));
 		}else {
 			
-			vl.setAlignItems(Alignment.CENTER);
-			vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			//vl.setAlignItems(Alignment.CENTER);
+			//vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			vl.getStyle().set("position", "relative");
+			//vl.getStyle().set("top", "5%");
+			vl.setHeight("100%");
+			vl.setWidth("100%");
 			
 			ArrayList<Video_otro_usuario_item> array = new ArrayList<Video_otro_usuario_item>();
 			
@@ -89,7 +93,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 				array.add(new Video_otro_usuario_item(this.usuario, videos[i].getVideo().replace("src/main/webapp/", ""), videos[i].getRealizada(), this.inicio, this.getCabecera()));
 				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
 				array.get(i).getStyle().set("position", "relative");
-				//array.get(i).getStyle().set("height", "20%");
+				array.get(i).getStyle().set("height", "100%");
 				array.get(i).getStyle().set("width", "100%");
 				array.get(i).getImageButton().setSrc(videos[i].getRealizada().getFoto());
 				array.get(i).getLabelUsuario().setText(videos[i].getRealizada().getUsuario());
@@ -123,14 +127,17 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		//scroller.getStyle().set("width", "100%");
 		//scroller.getStyle().set("height", "95%");
 
-		scroller.getStyle().set("position", "relative");
+		//scroller.getStyle().set("position", "relative");
+		
+		//scroller.getStyle().set("top", "5%");
 		
 		scroller.setContent(vl);
 
-		vl.getStyle().set("width", "100%");
+		//vl.getStyle().set("width", "100%");
 		//vl.getStyle().set("height", "100%");
 		
 		//vl.getStyle().set("position", "relative");
+		//vl.getStyle().set("top", "5%");
 		
 		addItem();
 	}

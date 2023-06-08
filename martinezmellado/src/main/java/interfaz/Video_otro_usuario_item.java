@@ -70,7 +70,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 			
 		});
 		
-		this.video = new Video(src);
+		this.video = new Video(src,"100%");
 		
 		
 		//this.video.setWidth("120%");

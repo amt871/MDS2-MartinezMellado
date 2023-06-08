@@ -39,7 +39,7 @@ public class Mi_video_item extends VistaMi_video_item {
 		this.video = new Video(src);
 		this.getLayoutVideo().add(this.video);
 		this.video.setWidth("80%");
-		this.video.setHeight("100%");
+		this.video.setHeight("80%");
 		this.getLabelTitulo().setText(titulo);
 		this.getStyle().set("height", "100%");
 		this.getStyle().set("width", "25%");

@@ -14291,3 +14291,637 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-08 11:08:12.918
 !MESSAGE Removed all models from server.
+!SESSION 2023-06-08 11:12:07.418 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.16.1
+java.vendor=Microsoft
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2023-06-08 11:12:11.440
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-08 11:12:11.440
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@22f0e329,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b39bee2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:16.013
+!MESSAGE Schedule fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:16.016
+!MESSAGE Schedule version update jobs
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-06-08 11:12:16.252
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2023-06-08 11:12:16.254
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-06-08 11:12:16.316
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Juanra'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:16.396
+!MESSAGE Fetching all notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:16.397
+!MESSAGE Requesting user info (notification settings URL)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-06-08 11:12:17.129
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-06-08 11:12:17.131
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:28.076
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:28.117
+!MESSAGE HTTP Response code :200
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:28.118
+!MESSAGE Parse notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:28.120
+!MESSAGE Save JSON notifications content to cache file C:\MDS2-MartinezMellado\.metadata\.plugins\com.vaadin.integration.eclipse\notifications-cache.json
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:28.133
+!MESSAGE Schedule fetching new notifications
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:12:46.079
+!MESSAGE All vaadin 7+ projects : []
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.601
+!MESSAGE Remote preview available on http://192.168.0.17:52954. Designer running on http://localhost:52954.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.605
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.616
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/MDS2-MartinezMellado/martinezmellado/node_modules --port=54274 --hostPid=22492
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.619
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.620
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.621
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:12.638
+!MESSAGE Setting browser url to http://localhost:52954/flow/22c2/frontend/src/vista-ver_perfil_privado__usuario_no_registrado_.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-08 11:16:13.408
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:13.694
+!MESSAGE Setting browser url to http://localhost:52954/flow/22c2/frontend/src/vista-ver_perfil_privado__usuario_no_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:13.695
+!MESSAGE Setting browser url to http://localhost:52954/flow/22c2/frontend/src/vista-ver_perfil_privado__usuario_no_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:16.595
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.004
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.006
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.006
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.007
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.010
+!MESSAGE Setting browser url to http://localhost:52954/flow/e8c8/frontend/src/vista-ver_perfil_privado__usuario_registrado_.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.101
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/22c2
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.341
+!MESSAGE Setting browser url to http://localhost:52954/flow/e8c8/frontend/src/vista-ver_perfil_privado__usuario_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.342
+!MESSAGE Setting browser url to http://localhost:52954/flow/e8c8/frontend/src/vista-ver_perfil_privado__usuario_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:18.964
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:19.650
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.193
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.195
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.195
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.196
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.198
+!MESSAGE Setting browser url to http://localhost:52954/flow/03d2/frontend/src/vista-ver_perfil__usuario_registrado_.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.308
+!MESSAGE Removed model from server at http://192.168.0.17:52954/flow/e8c8
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-08 11:16:22.386
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.519
+!MESSAGE Setting browser url to http://localhost:52954/flow/03d2/frontend/src/vista-ver_perfil__usuario_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:22.520
+!MESSAGE Setting browser url to http://localhost:52954/flow/03d2/frontend/src/vista-ver_perfil__usuario_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:23.147
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:23.776
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:16:34.194
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:17:29.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:18:30.509
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:19:34.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-08 11:21:10.074
+!MESSAGE starting IvyDE plugin
+
+!ENTRY org.apache.ivyde.eclipse 1 0 2023-06-08 11:21:10.083
+!MESSAGE IvyDE plugin started
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:21:34.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:22:35.524
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:23:46.261
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:24:56.314
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:26:06.374
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:27:08.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:28:34.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:30:34.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:32:34.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:34:34.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:36:34.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:38:34.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:39:35.525
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:41:34.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:43:34.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:45:34.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:09.695
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:23.857
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:23.859
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:23.860
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:23.860
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:23.863
+!MESSAGE Setting browser url to http://localhost:52954/flow/de58/frontend/src/vista-video_otro_usuario.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-08 11:47:24.001
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:24.103
+!MESSAGE Setting browser url to http://localhost:52954/flow/de58/frontend/src/vista-video_otro_usuario.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:24.105
+!MESSAGE Setting browser url to http://localhost:52954/flow/de58/frontend/src/vista-video_otro_usuario.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:25.061
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:47:25.626
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:48:12.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:48:36.204
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:49:15.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:49:48.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:50:34.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:51:34.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:52:34.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:53:34.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:54:34.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:55:34.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:56:03.128
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:56:39.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:57:34.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:58:34.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 11:59:34.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:00:34.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:01:34.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:02:34.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:03:34.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:04:34.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:04:54.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.440
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.441
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.442
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.442
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.445
+!MESSAGE Setting browser url to http://localhost:52954/flow/124e/frontend/src/vista-video_otro_usuario__administrador__item.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-08 12:05:01.583
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.706
+!MESSAGE Setting browser url to http://localhost:52954/flow/124e/frontend/src/vista-video_otro_usuario__administrador__item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:01.707
+!MESSAGE Setting browser url to http://localhost:52954/flow/124e/frontend/src/vista-video_otro_usuario__administrador__item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:02.534
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:03.173
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.132
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.133
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.134
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.134
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.137
+!MESSAGE Setting browser url to http://localhost:52954/flow/4bf0/frontend/src/vista-video_otro_usuario_item.ts?mode=edit&editor#!edit
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.415
+!MESSAGE Setting browser url to http://localhost:52954/flow/4bf0/frontend/src/vista-video_otro_usuario_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.416
+!MESSAGE Setting browser url to http://localhost:52954/flow/4bf0/frontend/src/vista-video_otro_usuario_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:17.994
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:18.555
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:43.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:05:57.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:06:06.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:06:29.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:07:34.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:07:34.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:07:34.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:07:34.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:08:38.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:08:39.207
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:08:43.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:09:34.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:09:41.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:10:26.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:10:32.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:10:51.278
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:11:34.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:11:34.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:11:34.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:11:53.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:12:42.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:12:55.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:13:34.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:14:34.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:14:34.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:15:34.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:16:34.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:16:34.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:17:34.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:18:35.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:18:35.538
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:18:35.563
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:20:34.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:20:34.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:20:34.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:22:34.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:22:34.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:22:34.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:24:34.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:24:34.198
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:24:34.199
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:26:35.521
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:26:35.547
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:26:35.573
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:28:34.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:28:34.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:28:34.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:29:35.517
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:29:35.547
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-08 12:29:35.577
+!MESSAGE Heartbeat for: {0}

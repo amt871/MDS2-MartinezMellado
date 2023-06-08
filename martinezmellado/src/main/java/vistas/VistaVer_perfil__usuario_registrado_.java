@@ -8,6 +8,7 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.orderedlayout.Scroller;
 
 /**
  * A Designer generated component for the vista-ver_perfil__usuario_registrado_ template.
@@ -31,6 +32,10 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 	private Label labelSeguidores;
 	@Id("labelUsuario")
 	private Label labelUsuario;
+	@Id("divVideos")
+	private Div divVideos;
+	@Id("Scroller")
+	private Scroller scroller;
 
 	/**
      * Creates a new VistaVer_perfil__usuario_registrado_.
@@ -86,7 +91,22 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 	public void setLabelUsuario(Label labelUsuario) {
 		this.labelUsuario = labelUsuario;
 	}
-    
+
+	public Div getDivVideos() {
+		return divVideos;
+	}
+
+	public void setDivVideos(Div divVideos) {
+		this.divVideos = divVideos;
+	}
+
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
+	}
     
 
 }

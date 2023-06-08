@@ -2,6 +2,7 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-ver_perfil__usuario_registrado_')
 export class VistaVer_perfil__usuario_registrado_ extends LitElement {
@@ -35,7 +36,9 @@ export class VistaVer_perfil__usuario_registrado_ extends LitElement {
  <vaadin-button style="height: 5%;" id="seguirButton">
    Seguir 
  </vaadin-button>
- <div id="divVideos" style="width: 100%; height: 65%; position: relative;"></div>
+ <div id="divVideos" style="width: 100%; height: 65%; position: relative;">
+  <vaadin-scroller id="Scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+ </div>
 </vaadin-vertical-layout>
 `;
   }
