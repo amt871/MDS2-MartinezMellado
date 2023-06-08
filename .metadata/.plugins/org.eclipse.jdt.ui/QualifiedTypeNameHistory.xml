@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="basededatos.Denuncia_Archivada"/>
     <fullyQualifiedTypeName name="org.orm.criteria.IntegerExpression"/>
     <fullyQualifiedTypeName name="org.orm.criteria.AbstractORMCriteria"/>
     <fullyQualifiedTypeName name="org.orm.criteria.AssociationExpression"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_perfil_privado__usuario_registrado_"/>
 </qualifiedTypeNameHistroy>

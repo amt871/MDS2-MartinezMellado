@@ -18,22 +18,22 @@ export class VistaVer_perfil_privado__usuario_registrado_ extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute; align-items: center;">
  <vaadin-vertical-layout style="width: 100%; height: 5%;">
-  <div style="width: 100%; height: 100%;"></div>
+  <div style="width: 100%; height: 100%;" id="divCabecera"></div>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout style="width: 100%; height: 20%;">
+ <vaadin-horizontal-layout style="width: 100%; height: 20%; justify-content: center; align-items: center;">
   <vaadin-horizontal-layout style="align-items: center; justify-content: flex-end; width: 100%; height: 100%;">
-   <label>Seguidores</label>
+   <label id="labelSeguidores">Seguidores</label>
   </vaadin-horizontal-layout>
-  <vaadin-vertical-layout>
-   <img style="width: 30%;">
+  <vaadin-vertical-layout style="align-items: center; justify-content: center;">
+   <img style="width: 30%;" id="Image">
   </vaadin-vertical-layout>
   <vaadin-horizontal-layout style="width: 100%; height: 100%; justify-content: flex-start; align-items: center;">
-   <label>Me gustas</label>
+   <label id="labelMegustas">Me gustas</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <label style="height: 5%;">Usuario</label>
+ <label style="height: 5%;" id="labelUsuario">Usuario</label>
  <vaadin-button style="height: 5%;">
-  Seguir
+   Seguir 
  </vaadin-button>
  <label style="height: 5%;">Usuario privado</label>
 </vaadin-vertical-layout>

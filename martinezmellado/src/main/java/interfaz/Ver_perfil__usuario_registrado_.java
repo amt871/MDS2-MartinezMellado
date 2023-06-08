@@ -35,6 +35,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getLabelSeguidores().setText("Seguidores: "+String.valueOf(usuario.seguidor.size()));
 		this.getLabelMegustas().setText("Me gustas: "+String.valueOf(usuario.le_gusta.size()));
 		this.getImage().setSrc(usuario.getFoto());
+		this.getLabelUsuario().setText(usuario.getUsuario());
 		
 	}
 	

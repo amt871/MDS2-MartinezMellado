@@ -13,6 +13,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 	private Usuario_Registrado usuario;
 	private Component cabecera;
 	private MainView inicio;
+	private Usuario_Registrado miUsuario;
 	
 //	private Video _videoV;
 //	private ImageButton _imagenPropietarioVideoIB;
@@ -52,11 +53,13 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Video_otro_usuario_item(String src, Usuario_Registrado usuario, MainView inicio, Component cabecera) {
+	public Video_otro_usuario_item(Usuario_Registrado miUsuario, String src, Usuario_Registrado usuario, MainView inicio, Component cabecera) {
 		
 		this.inicio = inicio;
 		this.cabecera = cabecera;
 		this.usuario = usuario;
+		this.miUsuario = miUsuario;
+		
 		this.getUsuarioButton().addClickListener(event -> {
 		
 			verPerfilOtroUsuario();
@@ -76,7 +79,14 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 		if(this.usuario.getPrivado()) {
 			
-			Notification.show("Aun no implementado");
+			//System.out.println(miUsuario.getUsuario());
+			
+			//Notification.show("Aun no implementado");
+			if(this.miUsuario.seguido.contains(this.usuario))
+				this.inicio.cambiarPantalla(new Ver_perfil__usuario_registrado_(this.cabecera, this.usuario));
+			else
+				this.inicio.cambiarPantalla(new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
+			//this.inicio.cambiarPantalla(cabecera);
 			
 		}else {
 			
