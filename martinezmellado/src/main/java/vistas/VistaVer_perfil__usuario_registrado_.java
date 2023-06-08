@@ -29,6 +29,8 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 	private Image image;
 	@Id("labelSeguidores")
 	private Label labelSeguidores;
+	@Id("labelUsuario")
+	private Label labelUsuario;
 
 	/**
      * Creates a new VistaVer_perfil__usuario_registrado_.
@@ -75,6 +77,14 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 
 	public void setLabelSeguidores(Label labelSeguidores) {
 		this.labelSeguidores = labelSeguidores;
+	}
+
+	public Label getLabelUsuario() {
+		return labelUsuario;
+	}
+
+	public void setLabelUsuario(Label labelUsuario) {
+		this.labelUsuario = labelUsuario;
 	}
     
     
