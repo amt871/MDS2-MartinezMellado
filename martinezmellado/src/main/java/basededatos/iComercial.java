@@ -11,5 +11,4 @@ public interface iComercial {
 
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo, String aPropietario);
 	
-	public void añadirPublicacionHashTag(  String hashtag, Publicacion publicacion );
 }

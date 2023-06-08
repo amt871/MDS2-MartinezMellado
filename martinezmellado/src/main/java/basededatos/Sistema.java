@@ -35,7 +35,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public String listarVideosBusquedaAdministrador() {
+	public List listarVideosBusquedaAdministrador(String aBusqueda) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -44,11 +44,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
-	@Override
-	public List listarDenunciasAdministrador() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	@Override
 	public void archivarDenuncia(String aElemento, String aTipo) {
 		// TODO Auto-generated method stub
@@ -94,12 +90,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return false;
 	}
-	@Override
-	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
-			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+
 	@Override
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario) {
 		// TODO Auto-generated method stub
@@ -241,6 +232,11 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
 		// TODO Auto-generated method stub
 		
+	}
+	@Override
+	public List listarDenuncias() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

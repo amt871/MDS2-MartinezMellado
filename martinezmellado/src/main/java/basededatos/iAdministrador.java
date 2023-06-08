@@ -8,7 +8,7 @@ public interface iAdministrador {
 
 	public List cargarVideos();
 
-	public String listarVideosBusquedaAdministrador();
+	public List listarVideosBusquedaAdministrador(String aBusqueda);
 
 	public List buscarUsuarios(String aBusqueda);
 
@@ -16,7 +16,7 @@ public interface iAdministrador {
 
 	public List videosHashTag(String aHashtag);
 
-	public List listarDenunciasAdministrador();
+	public List listarDenuncias();
 
 	public void archivarDenuncia(String aElemento, String aTipo);
 

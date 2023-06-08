@@ -259,30 +259,12 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public String listarVideosBusquedaAdministrador() {
-		// TODO Auto-generated method stub
-		return null;
-		//No usar, usar el otro
-	}
-
 	public List listarDenunciasAdministrador() {
 		// TODO Auto-generated method stub
 		return null;
 		//No usar, usar el otr
 	}
 		
-
-	@Override
-	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo,
-			String aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
-		try {
-			this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, null, aDescripcion, aFoto, aTipo);
-			return true;
-		} catch (Exception e) {
-			// TODO: handle exception
-			return false;
-		}
-	}
 
 	@Override
 	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
@@ -422,5 +404,15 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
+	}
+
+	@Override
+	public List listarVideosBusquedaAdministrador(String aBusqueda) {
+		try {
+			this.publicaciones.listarVideosBusqueda(aBusqueda);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
 	}
 }
