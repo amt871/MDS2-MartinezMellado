@@ -1,5 +1,7 @@
 package interfaz;
 
+import basededatos.BDPrincipal;
+import basededatos.Usuario_Registrado;
 import vistas.VistaBuscar__usuario_registrado_;
 
 public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado_ {
@@ -20,5 +22,13 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 //		throw new UnsupportedOperationException();
 //	}
 	
+	private Usuario_Registrado usuario;
+	private BDPrincipal datos;
 	
+	public void setUsuario(Usuario_Registrado user) {
+		
+		this.usuario = user;
+		
+		
+	}
 }

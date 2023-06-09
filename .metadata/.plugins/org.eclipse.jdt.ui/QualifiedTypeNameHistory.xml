@@ -52,12 +52,12 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="vistas.VistaSiguiendo"/>
-    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil__usuario_registrado_"/>
-    <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil_privado__usuario_registrado_"/>
+    <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
 </qualifiedTypeNameHistroy>
