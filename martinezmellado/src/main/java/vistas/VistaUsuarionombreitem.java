@@ -6,6 +6,7 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-usuarionombreitem template.
@@ -17,10 +18,12 @@ import com.vaadin.flow.component.html.Label;
 @JsModule("./src/vista-usuarionombreitem.ts")
 public class VistaUsuarionombreitem extends LitTemplate {
 
-    @Id("imagen")
-	private Image imagen;
-	@Id("labelUsuario")
+    @Id("labelUsuario")
 	private Label labelUsuario;
+	@Id("imagen")
+	private Button imagen;
+	@Id("imageButton")
+	private Image imageButton;
 
 	/**
      * Creates a new VistaUsuarionombreitem.
@@ -29,11 +32,11 @@ public class VistaUsuarionombreitem extends LitTemplate {
         // You can initialise any data required for the connected UI components here.
     }
 
-	public Image getImagen() {
+	public Button getImagen() {
 		return imagen;
 	}
 
-	public void setImagen(Image imagen) {
+	public void setImagen(Button imagen) {
 		this.imagen = imagen;
 	}
 
@@ -43,6 +46,14 @@ public class VistaUsuarionombreitem extends LitTemplate {
 
 	public void setLabelUsuario(Label labelUsuario) {
 		this.labelUsuario = labelUsuario;
+	}
+
+	public Image getImageButton() {
+		return imageButton;
+	}
+
+	public void setImageButton(Image imageButton) {
+		this.imageButton = imageButton;
 	}
     
     

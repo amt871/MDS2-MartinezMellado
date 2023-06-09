@@ -68,6 +68,7 @@ public class MainView extends VerticalLayout {
 	private Ver_mis_seguidores seguidores;
 	private Ver_siguiendo siguiendo;
 	//private Mi_cabecera cabeceraReg;
+	private Buscar__usuario_registrado_ busquedaRegistrado;
 
 	public MainView() {
 		
@@ -110,7 +111,7 @@ public class MainView extends VerticalLayout {
 		
 		/*Video_otro_usuario*/ inicioRegistrado = new Video_otro_usuario(this, cabeceraReg);
 		Notificaciones notis = new Notificaciones();
-		Buscar__usuario_registrado_ busquedaRegistrado = new Buscar__usuario_registrado_();
+		/*Buscar__usuario_registrado_*/ busquedaRegistrado = new Buscar__usuario_registrado_();
 		/*Mi_perfil*/ miPerfil = new Mi_perfil();
 		
 		//Registrado -> Configurar
@@ -556,6 +557,7 @@ public class MainView extends VerticalLayout {
 		cambiarContra.setUsuario(usuario);
 		seguidores.setUsuario(usuario);
 		siguiendo.setUsuario(usuario);
+		busquedaRegistrado.setUsuario(usuario);
 	}
 	
 	

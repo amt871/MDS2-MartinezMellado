@@ -35,6 +35,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 	public void setUsuario(Usuario_Registrado user) {//Inicializar
 		
 		this.usuario = user;
+		this.datos = new BDPrincipal();
 		
 		VerticalLayout vlUsuarios = new VerticalLayout();
 		VerticalLayout vlVideos = new VerticalLayout();
@@ -52,16 +53,18 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			
 			if(this.usuario.seguido.contains(usuarios[i]))
 				continue;
-			if(i==0 || i%4==0) {
+			if(/*i==0 || */i%4==0) {
 				array.add(new HorizontalLayout());
-				array.get(i).setHeight("100%");
-				array.get(i).setWidth("100%");
-				array.get(i).setAlignItems(Alignment.CENTER);
-				array.get(i).setJustifyContentMode(JustifyContentMode.CENTER);
+				array.get(array.size()-1).setHeight("100%");
+				array.get(array.size()-1).setWidth("100%");
+				array.get(array.size()-1).getStyle().set("position", "relative");
+				array.get(array.size()-1).setAlignItems(Alignment.CENTER);
+				array.get(array.size()-1).setJustifyContentMode(JustifyContentMode.CENTER);
+				vlUsuarios.add(array.get(array.size()-1));
 			}
 			
-			array.get(i).add(new Usuarionombreitem(usuarios[i].getFoto(), usuarios[i].getUsuario()));
-
+			array.get(array.size()-1).add(new Usuarionombreitem(usuarios[i].getFoto(), usuarios[i].getUsuario()));
+			//System.out.println("annadido item");
 			
 		}
 		

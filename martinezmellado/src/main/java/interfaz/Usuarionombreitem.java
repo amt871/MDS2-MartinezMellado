@@ -7,7 +7,7 @@ public class Usuarionombreitem extends VistaUsuarionombreitem {
 	
 	public Usuarionombreitem(String src, String nombreUsuario) {
 		
-		this.getImagen().setSrc(src);
+		this.getImageButton().setSrc(src);
 		this.getLabelUsuario().setText(nombreUsuario);
 		
 	}
