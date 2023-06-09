@@ -69,7 +69,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
 		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
 		
-		List<Usuario_Registrado> aux = this.datos.listarSeguidores(this.usuario.getUsuario());
+		List<Usuario_Registrado> aux = this.datos.listarSeguidos(this.usuario.getUsuario());
 		if (aux != null) {
 			for (Usuario_Registrado object : aux) {
 				seguidos.add(object);
