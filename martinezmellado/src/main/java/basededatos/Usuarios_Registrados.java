@@ -14,6 +14,7 @@ import java.io.InputStream;
 import java.time.LocalDate;
 
 import org.orm.PersistentException;
+import org.orm.PersistentSession;
 import org.orm.PersistentTransaction;
 
 import com.vaadin.flow.component.notification.Notification;
@@ -278,6 +279,7 @@ public class Usuarios_Registrados {
 				}
 			}
 			t.commit();
+
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -355,5 +357,24 @@ public class Usuarios_Registrados {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
+	}
+	
+	public Usuario_Registrado[] listarUltimosUsuarios(String id) throws PersistentException {
+		
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		Usuario_Registrado[] usuarios;
+		try { 
+			usuarios = Usuario_RegistradoDAO.listUsuario_RegistradoByQuery("UsuarioID<>"+id, "UsuarioID DESC");
+			
+	    	t.commit();
+	    	
+	    	return usuarios;
+	    	
+	    }catch (Exception e) {
+	        t.rollback();
+	        return null;
+	    }
+		
+		
 	}
 }

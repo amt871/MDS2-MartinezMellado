@@ -448,4 +448,16 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 		return null;
 	}
+	
+	public Usuario_Registrado[] listarUltimosUsuarios(int id) {
+		try {
+			
+			return this.usuariosRegistrados.listarUltimosUsuarios(String.valueOf(id));
+			
+		}catch(Exception e) {
+			
+			return null;
+			
+		}
+	}
 }

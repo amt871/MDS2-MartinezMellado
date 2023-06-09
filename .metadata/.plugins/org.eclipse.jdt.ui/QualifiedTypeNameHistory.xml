@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.orm.criteria.IntegerExpression"/>
-    <fullyQualifiedTypeName name="org.orm.criteria.AbstractORMCriteria"/>
     <fullyQualifiedTypeName name="org.orm.criteria.AssociationExpression"/>
     <fullyQualifiedTypeName name="org.orm.criteria.StringExpression"/>
     <fullyQualifiedTypeName name="org.orm.criteria.CollectionExpression"/>
@@ -35,9 +33,6 @@
     <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
     <fullyQualifiedTypeName name="org.hibernate.mapping.Set"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="basededatos.PublicacionDAO"/>
@@ -46,11 +41,9 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
     <fullyQualifiedTypeName name="interfaz.Mi_video_item"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_video"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="vistas.VistaCambiar_contrasenna"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="vistas.VistaSiguiendo"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil__usuario_registrado_"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil_privado__usuario_registrado_"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
+    <fullyQualifiedTypeName name="basededatos.Usuario_RegistradoDAO"/>
+    <fullyQualifiedTypeName name="vistas.VistaUsuarionombreitem"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
 </qualifiedTypeNameHistroy>

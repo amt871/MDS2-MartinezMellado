@@ -25,11 +25,11 @@ export class VistaBuscar__usuario_registrado_ extends LitElement {
   <vaadin-vertical-layout style="width: 70%; height: 95%; justify-content: center; align-items: center;">
    <vaadin-vertical-layout style="justify-content: center; width: 100%; height: 45%; align-items: center; flex-shrink: 1; flex-grow: 0;">
     <label style="padding-bottom: var(--lumo-space-s);">Usuarios recientes</label>
-    <div id="divUsuarios" style="width: 100%; height: 100%;"></div>
+    <div id="divUsuarios" style="width: 100%; height: 100%; position: relative;"></div>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout style="width: 100%; align-items: center; justify-content: center; height: 45%;">
     <label style="padding-bottom: var(--lumo-space-s);">Videos mas recientes </label>
-    <div id="divVideos" style="width: 100%; height: 100%;"></div>
+    <div id="divVideos" style="width: 100%; height: 100%; position: relative;"></div>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 30%; height: 100%; align-items: center;">
@@ -38,7 +38,7 @@ export class VistaBuscar__usuario_registrado_ extends LitElement {
      Buscar usuario 
    </vaadin-button>
    <vaadin-button id="bHashtag">
-    Buscar Hashtag
+     Buscar Hashtag 
    </vaadin-button>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
