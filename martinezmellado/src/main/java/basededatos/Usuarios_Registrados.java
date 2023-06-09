@@ -256,15 +256,17 @@ public class Usuarios_Registrados {
 	public List listarSeguidos(String aNombreUsuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		Usuario_Registrado u = null;
-		List<Usuario_Registrado> aux =  null;
+		List<Usuario_Registrado> aux =  new ArrayList<Usuario_Registrado>();
 		try {
 			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
 			if (u != null) {
-				aux =  Arrays.asList(u.seguido.toArray());
+				for (Usuario_Registrado usuario_Registrado : u.seguido.toArray()) {
+					aux.add(usuario_Registrado);
+				}
 			}
-			
+			t.commit();
 		} catch (Exception e) {
-			t.rollback();
+			e.printStackTrace();
 		}
 		return aux;
 	}
@@ -276,11 +278,10 @@ public class Usuarios_Registrados {
 		try {
 			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
 			if (u != null) {
-				for (Usuario_Registrado usuario_Registrado : u.seguido.toArray()) {
+				for (Usuario_Registrado usuario_Registrado : u.seguidor.toArray()) {
 					aux.add(usuario_Registrado);
 				}
 			}
-			Usuario_RegistradoDAO.save(u);
 			t.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
