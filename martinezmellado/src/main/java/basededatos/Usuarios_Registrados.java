@@ -33,8 +33,10 @@ public class Usuarios_Registrados {
             u = Usuario_RegistradoDAO
                     .loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
             if (u != null)  aux = true;
+            t.commit();
         } catch (Exception e) {
             t.rollback();
+            e.printStackTrace();
         }
         return aux;
 		
@@ -46,8 +48,10 @@ public class Usuarios_Registrados {
 		try {
 			u = Usuario_RegistradoDAO
 					.loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
+			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 		return u;
 
@@ -65,6 +69,7 @@ public class Usuarios_Registrados {
 			return true;
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 			return false;
 		}
 		
@@ -121,6 +126,7 @@ public class Usuarios_Registrados {
 			return true;
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -134,8 +140,10 @@ public class Usuarios_Registrados {
 			if (publicaciones != null) {
 				aux = Arrays.asList(publicaciones);
 			}
+			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 		return aux;
 	}
@@ -145,8 +153,10 @@ public class Usuarios_Registrados {
 		Usuario_Registrado u = null;
 		try {
 			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
+			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 		return u;
 	}
@@ -207,6 +217,7 @@ public class Usuarios_Registrados {
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 	}
 
@@ -223,9 +234,10 @@ public class Usuarios_Registrados {
 					}
 				}
 	        }
-	        
+	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	    return aux;
 	}
@@ -249,6 +261,7 @@ public class Usuarios_Registrados {
 			return true;
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 			return false;
 		}
 	}
@@ -266,6 +279,7 @@ public class Usuarios_Registrados {
 			}
 			t.commit();
 		} catch (Exception e) {
+			t.rollback();
 			e.printStackTrace();
 		}
 		return aux;
@@ -284,6 +298,7 @@ public class Usuarios_Registrados {
 			}
 			t.commit();
 		} catch (Exception e) {
+			t.rollback();
 			e.printStackTrace();
 		}
 		return aux;
@@ -304,6 +319,7 @@ public class Usuarios_Registrados {
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 	}
 	
@@ -319,6 +335,7 @@ public class Usuarios_Registrados {
 				t.commit();
 			} catch (Exception e) {
 				t.rollback();
+				e.printStackTrace();
 			}
 	}
 	
@@ -329,13 +346,14 @@ public class Usuarios_Registrados {
 		    	denunciante.denunciado.add(denunciado);
 		    	denunciado.denunciante.add(denunciante);
 		    	
-		    	Usuario_RegistradoDAO.save(denunciante);
+		    	Usuario_RegistradoDAO.save(denunciado);
 		    	Usuario_RegistradoDAO.save(denunciado);	    	
 		    	
 		    	t.commit();
 		    	
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 	}
 }

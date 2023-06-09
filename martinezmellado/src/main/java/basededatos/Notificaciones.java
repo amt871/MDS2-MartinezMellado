@@ -18,8 +18,10 @@ public class Notificaciones {
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
 	        u = NotificacionDAO.listNotificacionByQuery(null, null);
+	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	    List<Notificacion> aux = new ArrayList<Notificacion>();
 	    if (u != null) {
@@ -39,6 +41,7 @@ public class Notificaciones {
 		        t.commit();
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 	}
 	
@@ -63,6 +66,7 @@ public class Notificaciones {
 	        
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	}
 	

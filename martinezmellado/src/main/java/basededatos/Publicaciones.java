@@ -20,8 +20,10 @@ public class Publicaciones {
 		    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try {
 		        u = PublicacionDAO.listPublicacionByQuery(null, null);
+		        t.commit();
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 		    List<Publicacion> aux = new ArrayList<Publicacion>();
 		    if (u != null) {
@@ -41,9 +43,12 @@ public class Publicaciones {
 	        if (publicaciones != null) {
 	            aux = Arrays.asList(publicaciones);
 	        }
+	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
+	    
 	    return aux;
 	}
 
@@ -56,9 +61,12 @@ public class Publicaciones {
 	        if (publicaciones != null) {
 	            aux = Arrays.asList(publicaciones);
 	        }
+	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
+	    
 	    return aux;
 	}
 
@@ -80,7 +88,9 @@ public class Publicaciones {
 	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
+	    
 	}
 
 	public List listarPublicacionesDenunciadas() throws PersistentException {
@@ -96,9 +106,10 @@ public class Publicaciones {
 					}
 				}
 	        }
-	        
+	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	    return aux;
 	}
@@ -108,8 +119,10 @@ public class Publicaciones {
 		    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try {
 		        u = PublicacionDAO.loadPublicacionByQuery("ID = '" + aVideo + "'", aVideo);
+		        t.commit();
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 		    return u;
 	}
@@ -141,11 +154,12 @@ public class Publicaciones {
 			if (usuario.denuncia.contains(publicacion))
 				usuario.denuncia.remove(publicacion);
 
-			PublicacionDAO.save(publicacion);
-			Usuario_RegistradoDAO.save(usuario);
+			PublicacionDAO.refresh(publicacion);
+			Usuario_RegistradoDAO.refresh(usuario);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 	}
 	
@@ -156,13 +170,14 @@ public class Publicaciones {
 		    	publicacion.es_denunciada.add(usuario);
 		    	usuario.denuncia.add(publicacion);;
 		    	
-		    	PublicacionDAO.save(publicacion);
-		    	Usuario_RegistradoDAO.save(usuario);	    	
+		    	PublicacionDAO.refresh(publicacion);
+		    	Usuario_RegistradoDAO.refresh(usuario);	    	
 		    	
 		    	t.commit();
 		    	
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 	}
 	
@@ -173,13 +188,14 @@ public class Publicaciones {
 	    	publicacion.le_gusta.add(usuario);
 	    	usuario.le_gusta.add(publicacion);;
 	    	
-	    	PublicacionDAO.save(publicacion);
-	    	Usuario_RegistradoDAO.save(usuario);	    	
+	    	PublicacionDAO.refresh(publicacion);
+	    	Usuario_RegistradoDAO.refresh(usuario);	    	
 	    	
 	    	t.commit();
 	    	
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	}
 	
@@ -188,9 +204,11 @@ public class Publicaciones {
 		    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try {
 		        u = PublicacionDAO.loadPublicacionByQuery("Video = '" + ruta + "'", null);
+		        t.commit();
 		        return u;
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 		    return u;
 	}

@@ -29,9 +29,11 @@ public class Hashtags {
 					}
 				}
 	        }
+	        t.commit();
 	        
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	    return aux;
 	}
@@ -55,6 +57,7 @@ public class Hashtags {
 	        
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	}
 }

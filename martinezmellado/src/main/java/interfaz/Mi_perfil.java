@@ -58,7 +58,6 @@ public class Mi_perfil extends VistaMi_perfil {
 		//this.setIdImagen(new Image("localhost:8080"+usuario.getFoto(), "Imagen no encontrada"));
 		this.getIdImagen().setSrc(usuario.getFoto());
 		this.getIdUsuario().setText(this.usuario.getUsuario());
-		this.getIdNumSeguidores().setText(String.valueOf(usuario.getID())+" seguidores");
 		//this.getIdNumMgs().setText("20 Me gustas");
 		this.getIdNumSeguidores().setText(this.usuario.seguido.size()+" seguidores");
 		this.getIdNumMgs().setText(this.usuario.le_gusta_a.size()+" me gusta");
@@ -108,13 +107,7 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 			basededatos.Publicacion[] videos = null;
 			
-			try {
-				videos = PublicacionDAO.listPublicacionByQuery("Usuario_RegistradoUsuarioID='" + this.usuario.getID() + "'", null);
-			} catch (PersistentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				Notification.show("Fallo al cargar los videos");
-			}
+			videos = datos.listarVideosUsuario(this.usuario.getID());
 			
 			if(videos != null) {
 				int contador = 0;

@@ -82,8 +82,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 			
 			String ruta = "src/main/webapp/" + src;
 			Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + src);
-			//System.out.println(publicacion.getUbicacion());
-			this.datos.annadirMeGusta(publicacion, this.usuario);
+			this.datos.annadirMeGusta(publicacion, this.miUsuario);
 
 		});
 		

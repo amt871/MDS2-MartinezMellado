@@ -28,7 +28,7 @@ public class Comentarios {
 					}
 				}
 	        }
-	        
+	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
 	    }
@@ -57,6 +57,7 @@ public class Comentarios {
 		    	
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 	}
 	
@@ -74,6 +75,7 @@ public class Comentarios {
 		    	
 		    }catch (Exception e) {
 		        t.rollback();
+		        e.printStackTrace();
 		    }
 	}
 	
@@ -92,6 +94,7 @@ public class Comentarios {
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 	}
 }
