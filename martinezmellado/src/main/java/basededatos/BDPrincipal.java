@@ -293,7 +293,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public List listarSeguidores(String aNombreUsuario) {
+	public List<Usuario_Registrado> listarSeguidores(String aNombreUsuario) {
 		// TODO Auto-generated method stub
 		try {
 			return this.usuariosRegistrados.listarSeguidores(aNombreUsuario);
@@ -442,7 +442,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public Publicacion[] listarVideosUsuario(int id) {
 		// TODO Auto-generated method stub
 		try {
-			this.publicaciones.listarVideosUsuario(id);
+			return this.publicaciones.listarVideosUsuario(id);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

@@ -69,10 +69,10 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
 		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
 		
-		List<Usuario_Registrado> aux = this.datos.listarSeguidos(this.usuario.getUsuario());
+		List<Usuario_Registrado> aux = this.datos.listarSeguidores(this.usuario.getUsuario());
 		if (aux != null) {
-			for (Object object : aux) {
-				seguidos.add((Usuario_Registrado) object);
+			for (Usuario_Registrado object : aux) {
+				seguidos.add(object);
 			}
 			for (Usuario_Registrado usuario_Registrado : seguidos) {
 				videos.addAll(Arrays.asList(this.datos.listarVideosUsuario(usuario_Registrado.getID())));
@@ -82,7 +82,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		if(videos.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
-			vl.add(new Label("No hay videos aun"));
+			vl.add(new Label("Los usurios que sigues aun no tiene publicaciones"));
 		}else {
 			
 			//vl.setAlignItems(Alignment.CENTER);

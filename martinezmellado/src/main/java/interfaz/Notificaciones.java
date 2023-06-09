@@ -61,7 +61,7 @@ public class Notificaciones extends VistaNotificaciones {
 
 	}
 	
-	public void addItem() {
+	public void addItem(String tipo) {
 		
 		List listaNotificaciones = this.datos.listarNitificaciones(this.getUsr().getUsuario());
 		
