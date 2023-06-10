@@ -53,4 +53,7 @@ public interface iUsuario_Registrado {
 	
 	public Publicacion[] listarVideosUsuario(int id);
 	
+	public Usuario_Registrado[] listarUltimosUsuarios(int id);
+	
+	public Publicacion[] listarUltimasPublicacions(int id);
 }

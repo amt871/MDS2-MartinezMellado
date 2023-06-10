@@ -448,16 +448,29 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 		return null;
 	}
-	
+
+	@Override
 	public Usuario_Registrado[] listarUltimosUsuarios(int id) {
+		// TODO Auto-generated method stub
 		try {
-			
-			return this.usuariosRegistrados.listarUltimosUsuarios(String.valueOf(id));
-			
-		}catch(Exception e) {
-			
-			return null;
-			
+			try {
+				
+				return this.usuariosRegistrados.listarUltimosUsuarios(id);
+				
+			}catch(Exception e) {
+				
+				return null;
+				
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
+		return null;
+	}
+
+	@Override
+	public Publicacion[] listarUltimasPublicacions(int id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

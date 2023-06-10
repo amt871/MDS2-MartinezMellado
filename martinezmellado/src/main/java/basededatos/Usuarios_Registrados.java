@@ -359,7 +359,7 @@ public class Usuarios_Registrados {
 		    }
 	}
 	
-	public Usuario_Registrado[] listarUltimosUsuarios(String id) throws PersistentException {
+	public Usuario_Registrado[] listarUltimosUsuarios(int id) throws PersistentException {
 		
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		Usuario_Registrado[] usuarios;
@@ -374,7 +374,5 @@ public class Usuarios_Registrados {
 	        t.rollback();
 	        return null;
 	    }
-		
-		
 	}
 }
