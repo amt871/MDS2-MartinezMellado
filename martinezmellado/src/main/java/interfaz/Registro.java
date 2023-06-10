@@ -15,6 +15,7 @@ import org.orm.PersistentException;
 
 import basededatos.*;
 import elemental.json.Json;
+import proyectoMDS.MainView;
 
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.Receiver;
@@ -52,21 +53,44 @@ public class Registro extends VistaRegistro {
 //		throw new UnsupportedOperationException();
 //	}
 
-	BDPrincipal datos;
+/*	BDPrincipal datos;
 	String pathImage;
 	MemoryBuffer memoryBuffer;// = new MemoryBuffer();
 	InputStream fileData;
 //	Usuario_Registrado usuarioARegistrar;
-	Object[] cosas;
+	Object[] cosas;*/
+	
+	private MainView vl;
+	private Pantalla_inicio inicio;
+	//private Confirmar_correo confCor;
+	private BDPrincipal datos;
+	//private String pathImage;
+	private MemoryBuffer memoryBuffer;// = new MemoryBuffer();
+	private InputStream fileData;
 
-	public Registro() {
+	public Registro(MainView vlMain, BDPrincipal datos, Pantalla_inicio inicio) {
+		
+		this.vl = vlMain;
+		this.datos = datos;
+		this.inicio = inicio;
 
-		datos = new BDPrincipal();
+		this.getbAtras().addClickListener(event -> {
+			
+			pantallaAnterior();
+			
+		});
+		
+		this.getbRegistrar().addClickListener(event -> {
+			
+			registrarUsuario();
+			
+		});
+		
 		// usuarioARegistrar = new Usuario_Registrado();
-		memoryBuffer = new MemoryBuffer();
-		cosas = new Object[3];
+		this.memoryBuffer = new MemoryBuffer();
+		//cosas = new Object[3];
 		this.getIdImagen().setReceiver(memoryBuffer);
-		fileData = null;
+		this.fileData = null;
 		this.getIdImagen().addSucceededListener(event -> {
 
 			if (event.getFileName().toLowerCase().endsWith("jpg"))
@@ -80,7 +104,17 @@ public class Registro extends VistaRegistro {
 
 	}
 
-	public Object[] registrarUsuario() {
+	private void pantallaAnterior() {
+		// TODO Auto-generated method stub
+		this.vl.removeAll();
+		this.vl.add(this.inicio);
+	}
+
+	/*public Registro(MainView vlMain) {
+		// TODO Auto-generated constructor stub
+	}*/
+
+	private void registrarUsuario() {
 
 		// this.getbRegistrar().addClickListener(event -> {
 
@@ -89,51 +123,44 @@ public class Registro extends VistaRegistro {
 		if (this.getIdNombre().isEmpty()) {
 
 			Notification.show("Introduce el Nombre");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		if (this.getIdApellidos().isEmpty()) {
 
 			Notification.show("Introduce el Apellido");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		if (this.getIdUsuario().isEmpty()) {
 
 			Notification.show("Introduce el Nombre de Usuario");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		usuarioARegistrar = datos.datosUsuario(this.getIdUsuario().getValue());
 
 		if (usuarioARegistrar != null) {
 			Notification.show("Usuario ya registrado");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		if (this.getIdContrasenna().isEmpty()) {
 
 			Notification.show("Introduce la Contrasenna");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		if (this.getIdCorreo().isEmpty()) {
 
 			Notification.show("Introduce el Correo");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		if (this.getIdFechaNacimiento().isEmpty()) {
 
 			Notification.show("Introduce la Fecha de Nacimiento");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
 
 		// System.out.println(this.getIdFechaNacimiento().getValue());
@@ -148,26 +175,8 @@ public class Registro extends VistaRegistro {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
 			Notification.show("Fecha incorrecta");
-			cosas[0] = false;
-			return cosas;
+			return;
 		}
-		// if(myDate!=null)
-		// sqlDate = new Date(myDate.getTime());
-
-		//pathImage = null;
-
-		//cosas[3] = pathImage;
-
-		/*
-		 * if(!datos.registrarse(this.getIdNombre().getValue(),
-		 * this.getIdApellidos().getValue(), this.getIdUsuario().getValue(),
-		 * this.getIdContrasenna().getValue(), this.getIdCorreo().getValue(), myDate,
-		 * this.getIdDescripcion().getValue(), pathImage,
-		 * this.getUsrComBool().getValue() ? "Comercial" : "Normal")) {
-		 * Notification.show("Registo no completado"); cosas[0] = false; return
-		 * cosas;//***************************************DESCOMENTAR
-		 * ESTO********************************************************************* }
-		 */
 
 		usuarioARegistrar.setNombre(this.getIdNombre().getValue());
 		usuarioARegistrar.setApellido(this.getIdApellidos().getValue());
@@ -188,41 +197,24 @@ public class Registro extends VistaRegistro {
 		this.getUsrComBool().clear();
 		this.getIdImagen().getElement().setPropertyJson("files", Json.createArray());
 
-		cosas[1] = usuarioARegistrar;
+//USUARIO A REGISTRAR, FILEDATA		
 
-		if (fileData != null)
+		/*if (fileData != null)
 			cosas[2] = fileData;
 		else
 			cosas[2] = null;
 
-		cosas[0] = true;
+		cosas[0] = true;*/
 
-		return cosas;
-		/*
-		 * try {
-		 * 
-		 * File image = new File(pathImage);
-		 * 
-		 * //if(!image.exists()) image.createNewFile();
-		 * 
-		 * OutputStream out = new FileOutputStream(pathImage);
-		 * 
-		 * //fileData.transferTo(out);
-		 * 
-		 * byte[] buf = new byte[1024]; int length; while ((length = fileData.read(buf))
-		 * > 0) { out.write(buf, 0, length); } //byte[] dataBytes =
-		 * fileData.readAllBytes();
-		 * 
-		 * fileData.close();
-		 * 
-		 * //out.wri out.flush(); out.close(); image = null;
-		 * 
-		 * } catch (IOException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace();
-		 * Notification.show("Error interno (No se ha cargado la Imagen)"); }
-		 * 
-		 * Notification.show("Registro completado"); return true;
-		 */
+		this.vl.removeAll();
+		this.vl.add(new Confirmar_correo(this.vl, usuarioARegistrar, this.fileData, this.datos));
+		try {
+			this.finalize();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("No me da la gana cerrarme");
+		}
 
 	}
 

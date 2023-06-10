@@ -82,7 +82,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		if(videos.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
-			vl.add(new Label("Los usurios que sigues aun no tiene publicaciones"));
+			vl.add(new Label("Los usuarios que sigues aun no tiene publicaciones"));
 		}else {
 			
 			//vl.setAlignItems(Alignment.CENTER);

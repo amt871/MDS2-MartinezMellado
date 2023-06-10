@@ -3,6 +3,7 @@ package interfaz;
 import com.vaadin.flow.component.notification.Notification;
 
 import basededatos.BDPrincipal;
+import proyectoMDS.MainView;
 import vistas.VistaIniciar_sesion;
 
 public class Iniciar_sesion extends VistaIniciar_sesion{
@@ -31,6 +32,10 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 //		throw new UnsupportedOperationException();
 //	}
 	
+	public Iniciar_sesion(MainView vl) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public boolean inicioSesionCibernauta() {
 
 		if (getInUser().getValue().equals("user") && getInPass().getValue().equals("pass")) {

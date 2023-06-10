@@ -32,9 +32,10 @@ public class VistaPantalla_inicio extends LitTemplate {
 	
     public VistaPantalla_inicio() {
         // You can initialise any data required for the connected UI components here.
-    	this.getElement().setAttribute("style", "height: 100%; width: 100%");
+    	//this.getElement().setAttribute("style", "height: 100%; width: 100%");
     	//this.getElement().getStyle().set("height", "100%");
     	//this.getElement().getStyle().set("width", "100%");
+ 
     }
     
 	public Button getbRegistrarse() {

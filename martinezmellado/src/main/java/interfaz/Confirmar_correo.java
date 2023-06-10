@@ -10,6 +10,8 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.server.VaadinService;
 
 import basededatos.BDPrincipal;
+import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaConfirmar_correo;
 
 public class Confirmar_correo extends VistaConfirmar_correo {
@@ -30,39 +32,41 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 	 */
 
 	// Object[] cosas;
-	basededatos.Usuario_Registrado usuarioARegistrar;
-	InputStream fileData;
-	BDPrincipal datos;
+	private Usuario_Registrado usuarioARegistrar;
+	private InputStream fileData;
+	private BDPrincipal datos;
+	private MainView vl;
 
-	public Confirmar_correo(/* Object[] cosas */) {
+	public Confirmar_correo(MainView vl, Usuario_Registrado user, InputStream image, BDPrincipal datos) {
 
-		// this.cosas = cosas;
-		this.datos = new BDPrincipal();
+		this.vl = vl;
+		this.usuarioARegistrar = user;
+		this.fileData = image;
+		this.datos = datos;
 
 	}
 
-	public boolean confirmarCodigo(Object[] cosas) {
+	private void confirmarCodigo() {
 
 		if (this.getbTextField().getValue().equals("1111")) {
 			
 			this.getbTextField().clear();
 			// Notification.show("Correo confirmado correctamente");
 
-			usuarioARegistrar = (basededatos.Usuario_Registrado) cosas[1];
 
 			if (!datos.registrarse(usuarioARegistrar.getNombre(), usuarioARegistrar.getApellido(),
 					usuarioARegistrar.getUsuario(), usuarioARegistrar.getContrasenna(), usuarioARegistrar.getCorreo(),
 					usuarioARegistrar.getFechaNacimiento(), usuarioARegistrar.getDescripcion(),
-					cosas[2] == null ? "icons/user.svg" : "Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg",
-					usuarioARegistrar.getComercial()))
+					this.fileData == null ? "icons/user.svg" : "Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg",
+					usuarioARegistrar.getComercial())) {
 
-				return false;
-			else
+				Notification.show("No se ha podido registrar el usuario");
+				
+			} else
 
-			if (cosas[2] != null)
+			if (this.fileData == null)
 				try {
 
-					fileData = (InputStream) cosas[2];
 					File image = new File("src/main/webapp/Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg");
 
 					//System.out.println(image.getAbsolutePath());
@@ -95,11 +99,12 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 				}
 
 			Notification.show("Registro completado");
-			return true;
+			this.vl.removeAll();
+			this.vl.add(new Iniciar_sesion(this.vl));
+			
+			
 		} else
 			Notification.show("Codigo incorrecto");
-
-		return false;
 
 	}
 }
