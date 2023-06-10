@@ -1,6 +1,8 @@
 package interfaz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -8,6 +10,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
 import basededatos.BDPrincipal;
+import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import vistas.VistaBuscar__usuario_registrado_;
 
@@ -68,6 +71,20 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			
 		}
 		
+		/*ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
+		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
+		
+		List<Usuario_Registrado> aux = this.datos.listarSeguidos(this.usuario.getUsuario());
+		
+		if (aux != null) {
+			for (Usuario_Registrado object : aux) {
+				seguidos.add(object);
+			}
+			for (Usuario_Registrado usuario_Registrado : seguidos) {
+				videos.addAll(Arrays.asList(this.datos.listarVideosUsuario(usuario_Registrado.getID())));
+			}
+			
+		}*/
 		
 		
 		
