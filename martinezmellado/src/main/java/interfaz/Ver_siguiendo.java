@@ -14,10 +14,17 @@ public class Ver_siguiendo extends VistaVer_siguiendo{
 	private basededatos.BDPrincipal datos;
 	private Scroller scroller;
 	
-	public void setUsuario(basededatos.Usuario_Registrado usuario) {
+	public Ver_siguiendo(Mi_cabecera cabecera, Configurar configurar) {
+		// TODO Auto-generated constructor stub
+//	}
+//
+//	public void setUsuario(basededatos.Usuario_Registrado usuario) {
 		
-		this.usuario = usuario;
-		this.datos = new basededatos.BDPrincipal();
+		this.usuario = cabecera.getUser();
+		this.datos = cabecera.getDatos();
+		
+		this.setCabecera(cabecera);
+		this.setConfig(configurar);
 		
 		cargarSiguiendo();
 		

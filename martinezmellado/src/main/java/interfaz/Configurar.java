@@ -33,11 +33,13 @@ public class Configurar extends VistaConfigurar {
 	
 	private Usuario_Registrado usuario;
 	private BDPrincipal datos; //= new BDPrincipal();
+	private Mi_cabecera cabecera;
 	
-	public Configurar(Usuario_Registrado usuario_Registrado, BDPrincipal bdPrincipal) {
+	public Configurar(Usuario_Registrado usuario_Registrado, BDPrincipal bdPrincipal, Mi_cabecera cabecera) {
 		
 		this.usuario = usuario_Registrado;
 		this.datos = bdPrincipal;
+		this.cabecera = cabecera;
 		
 //	}
 //
@@ -54,6 +56,30 @@ public class Configurar extends VistaConfigurar {
 			this.cambiarPrivacidad();
 			
 		});
+		
+		this.getbModificarDatos().addClickListener(event -> {
+			
+			//this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()));
+			this.getCabecera().setConfigPerf(new Configurar_mi_perfil(this.getCabecera(), this));
+			this.getCabecera().getVl().add(this.getCabecera().getConfigPerf());
+			
+		});
+		
+		this.getbSiguiendo().addClickListener(event -> {
+			
+			
+			this.getCabecera().setSiguiendo(new Ver_siguiendo(this.getCabecera(), this));
+			this.getCabecera().getVl().add(this.getCabecera().getSiguiendo());
+			
+		});
+		
+		this.getbSiguiendo().addClickListener(event -> {
+			
+			
+			this.getCabecera().setSeguidores(new Ver_mis_seguidores(this.getCabecera(), this));
+			this.getCabecera().getVl().add(this.getCabecera().getSeguidores());
+			
+		});
 	}
 	
 	public void cambiarPrivacidad() {
@@ -66,6 +92,15 @@ public class Configurar extends VistaConfigurar {
 		}else
 			Notification.show("No se ha podido cambiar la privacidad");
 	}
+
+	public Mi_cabecera getCabecera() {
+		return cabecera;
+	}
+
+	public void setCabecera(Mi_cabecera cabecera) {
+		this.cabecera = cabecera;
+	}
+	
 	
 	
 }

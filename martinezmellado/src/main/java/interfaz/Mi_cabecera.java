@@ -15,6 +15,8 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Mi_perfil perfil;
 	private Configurar config;
 	private Configurar_mi_perfil configPerf;
+	private Ver_mis_seguidores seguidores;// = new Ver_mis_seguidores();
+	private Ver_siguiendo siguiendo;// = new Ver_siguiendo();
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user) {
 		// TODO Auto-generated constructor stub
@@ -60,6 +62,30 @@ public class Mi_cabecera extends VistaMi_cabecera {
 			
 		});
 		
+		
+	}
+	
+	
+	public void cerrarSesion() {
+	
+		this.user = null;
+		this.pantallaInicio = null;
+		this.busqueda = null;
+		this.perfil = null;
+		this.config = null;
+		this.configPerf = null;
+		this.seguidores = null;
+		this.siguiendo = null;
+		
+		this.vl.removeAll();
+		this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+		
+		try {
+			this.finalize();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -125,6 +151,22 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public void setConfigPerf(Configurar_mi_perfil configPerf) {
 		this.configPerf = configPerf;
+	}
+
+	public Ver_mis_seguidores getSeguidores() {
+		return seguidores;
+	}
+
+	public void setSeguidores(Ver_mis_seguidores seguidores) {
+		this.seguidores = seguidores;
+	}
+
+	public Ver_siguiendo getSiguiendo() {
+		return siguiendo;
+	}
+
+	public void setSiguiendo(Ver_siguiendo siguiendo) {
+		this.siguiendo = siguiendo;
 	}
 	
 	

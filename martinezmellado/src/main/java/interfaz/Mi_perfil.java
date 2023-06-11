@@ -76,7 +76,7 @@ public class Mi_perfil extends VistaMi_perfil {
 					
 					
 					//);
-			this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()));
+			this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos(), mi_cabecera));
 			this.getCabecera().setConfigPerf(new Configurar_mi_perfil(mi_cabecera, this.getCabecera().getConfig()));
 			this.getCabecera().getVl().add(this.getCabecera().getConfigPerf());
 			

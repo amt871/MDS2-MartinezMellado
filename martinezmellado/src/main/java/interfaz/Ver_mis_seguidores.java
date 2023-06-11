@@ -15,10 +15,17 @@ public class Ver_mis_seguidores extends VistaVer_mis_seguidores {
 	private basededatos.BDPrincipal datos;
 	Scroller scroller;
 	
-	public void setUsuario(basededatos.Usuario_Registrado usuario) {
+	public Ver_mis_seguidores(Mi_cabecera cabecera, Configurar configurar) {
+		// TODO Auto-generated constructor stub
+//	}
+//
+//	public void setUsuario(basededatos.Usuario_Registrado usuario) {
 		
-		this.usuario = usuario;
-		this.datos = new basededatos.BDPrincipal();
+		this.usuario = cabecera.getUser();
+		this.datos = cabecera.getDatos();
+		
+		this.setCabecera(cabecera);
+		this.setConfig(configurar);
 		
 		cargarSeguidores();
 		
