@@ -17,6 +17,8 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Configurar_mi_perfil configPerf;
 	private Ver_mis_seguidores seguidores;// = new Ver_mis_seguidores();
 	private Ver_siguiendo siguiendo;// = new Ver_siguiendo();
+	private Notificaciones notis;
+	private Publicar publicar;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user) {
 		// TODO Auto-generated constructor stub
@@ -51,14 +53,14 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.getbNotis().addClickListener(event -> {
 			
 			this.vl.removeAll();
-			this.vl.add(new Notificaciones(this.vl, this));
+			this.vl.add(notis = new Notificaciones(this.vl, this));
 			
 		});
 		
 		this.getbPublicar().addClickListener(event -> {
 			
 			this.vl.removeAll();
-			this.vl.add(new Publicar(this.vl, this));
+			this.vl.add(publicar = new Publicar(this.vl, this));
 			
 		});
 		
@@ -76,6 +78,8 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.configPerf = null;
 		this.seguidores = null;
 		this.siguiendo = null;
+		this.notis = null;
+		this.publicar = null;
 		
 		this.vl.removeAll();
 		this.vl.add(new Pantalla_inicio(this.vl, this.datos));

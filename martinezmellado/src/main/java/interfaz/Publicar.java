@@ -49,6 +49,8 @@ public class Publicar extends VistaPublicar {
 	private InputStream fileData;
 	
 	private Usuario_Registrado user;
+	
+	private MainView inicio;
 
 	//Object[] cosas;
 
@@ -56,6 +58,7 @@ public class Publicar extends VistaPublicar {
 		
 		this.datos = mi_cabecera.getDatos();
 		this.user = mi_cabecera.getUser();
+		this.inicio = vl;
 		
 		this.setCabecera(mi_cabecera);
 		
@@ -75,17 +78,17 @@ public class Publicar extends VistaPublicar {
 				Notification.show("Solo se admiten video en MP4");
 
 		});
-		/*this.getSubirVideo().addClickListener(event -> {
+		this.getSubirVideo().addClickListener(event -> {
 			bPublica();
-        });*/
+        });
 		
 	}
 
-	public boolean bPublica() {
+	public void bPublica() {
 		
 		if (this.getUbicacion().isEmpty() || this.getDescrpcion().isEmpty()) {
 			Notification.show("Por favor rellene los campos");
-			return false;
+			return;
 		}
 		
 		String nombVideo = LocalDateTime.now().toString().replace(":", "-");
@@ -159,14 +162,17 @@ public class Publicar extends VistaPublicar {
 			
 			Notification.show("Video subido");
 			
-			return true;
+			this.getCabecera().setPerfil(new Mi_perfil(this.inicio, this.getCabecera()));
+			
+			this.inicio.removeAll();
+			this.inicio.add(this.getCabecera().getPerfil());
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Notification.show("Error interno (No se ha cargado el archivo)");
 
-			return false;
+			return;
 		}
 	}
 	
