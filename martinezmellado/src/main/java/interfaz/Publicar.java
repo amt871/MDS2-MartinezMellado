@@ -59,7 +59,7 @@ public class Publicar extends VistaPublicar {
 		
 		this.setCabecera(mi_cabecera);
 		
-		this.getIconoUsr().getStyle().set("src", this.user.getFoto());
+		this.getImguser().setSrc(this.user.getFoto());
 		
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
@@ -170,7 +170,7 @@ public class Publicar extends VistaPublicar {
 		}
 	}
 	
-	public void cargarUsuario() {
+	/*public void cargarUsuario() {
 		this.getIconoUsr().setProperty("src", this.getUsr().getFoto());
-	}
+	}*/
 }

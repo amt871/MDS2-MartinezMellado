@@ -1,6 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-area.js';
@@ -29,7 +28,7 @@ export class VistaPublicar extends LitElement {
    <img style="height: 90%; width: 90%;" src="icons/video.svg" id="prevVideo">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 40%; align-items: center; height: 100%;">
-   <iron-icon style="width: 20%; height: 20%;" src="icons/user.svg" id="iconoUsr"></iron-icon>
+   <img id="imguser" style="width: 20%; height: 20%;">
    <vaadin-text-field label="Ubicacion" style="width: 60%;" id="ubicacion"></vaadin-text-field>
    <vaadin-text-area label="Descripcion" style="width: 60%; height: 40%;" id="descrpcion"></vaadin-text-area>
    <vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: center; align-items: center; margin-top: var(--lumo-space-xl);">

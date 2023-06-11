@@ -33,8 +33,6 @@ public class VistaPublicar extends LitTemplate {
 	//private Cabecera_comercial cabeceraCom;
     @Id("divCabecera")
 	private Div divCabecera;
-	@Id("iconoUsr")
-	private Element iconoUsr;
 	@Id("uploader")
 	private Upload uploader;
 	@Id("ubicacion")
@@ -47,6 +45,8 @@ public class VistaPublicar extends LitTemplate {
 	private Image prevVideo;
 	
 	private Usuario_Registrado usr;
+	@Id("imguser")
+	private Image imguser;
 
 	/**
      * Creates a new VistaPublicar.
@@ -83,12 +83,12 @@ public class VistaPublicar extends LitTemplate {
 		getDivCabecera().add(cabeceraCom);
 	}
 
-	public Element getIconoUsr() {
-		return iconoUsr;
+	public Image getImguser() {
+		return imguser;
 	}
 
-	public void setIconoUsr(Element iconoUsr) {
-		this.iconoUsr = iconoUsr;
+	public void setImguser(Image imguser) {
+		this.imguser = imguser;
 	}
 
 	public Upload getUploader() {
