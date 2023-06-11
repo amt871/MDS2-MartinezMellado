@@ -46,6 +46,9 @@ public class Mi_perfil extends VistaMi_perfil {
 	private BDPrincipal datos;
 	private Scroller scroller;
 	private VerticalLayout vl;
+	//private MainView inicio;
+	//private Configurar configurar;
+	//private Configurar_mi_perfil configPerf;
 
 	public Mi_perfil(MainView vl2, Mi_cabecera mi_cabecera) {
 		// TODO Auto-generated constructor stub
@@ -61,6 +64,24 @@ public class Mi_perfil extends VistaMi_perfil {
 		this.datos = mi_cabecera.getDatos();
 		this.usuario = mi_cabecera.getUser();
 		this.setCabecera(mi_cabecera);
+		//this.inicio = vl2;
+		
+		this.getbConfigurar().addClickListener(event -> {
+			
+			//this.configurar = new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos());
+			//this.configPerf = new Configurar_mi_perfil(this.inicio, mi_cabecera, this.configurar = new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()));
+			//this.inicio
+			this.getCabecera().getVl().removeAll();
+			//this.getCabecera().getVl().add(this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()))
+					
+					
+					//);
+			this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()));
+			this.getCabecera().setConfigPerf(new Configurar_mi_perfil(mi_cabecera, this.getCabecera().getConfig()));
+			this.getCabecera().getVl().add(this.getCabecera().getConfigPerf());
+			
+		});
+		
 		//File image = new File("/icons/toktok2.svg");
 		//System.out.println(image.exists());
 		

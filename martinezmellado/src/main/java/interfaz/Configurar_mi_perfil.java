@@ -16,6 +16,7 @@ import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
 import basededatos.BDPrincipal;
 import basededatos.Usuario_Registrado;
 import elemental.json.Json;
+import proyectoMDS.MainView;
 import vistas.VistaConfigurar_mi_perfil;
 
 public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
@@ -61,6 +62,60 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 	private MemoryBuffer memoryBuffer;
 
 	private InputStream fileData;
+	//private MainView vl;
+	
+	
+	public Configurar_mi_perfil(/*MainView vl,*/Mi_cabecera cabecera, Configurar config) {
+		// TODO Auto-generated constructor stub
+		//this.vl=vl;
+		this.datos = cabecera.getDatos();
+		this.usuario = cabecera.getUser();
+		this.setCabecera(cabecera);
+		this.setConfig(config);
+
+		if (this.getIdFechaDeNaciemiento().isEmpty()) {
+			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
+			fecha = "";
+			// System.out.println("Hola: " + this.usuario.getFechaNacimiento());
+			items[2] = items[2].split(" ")[0];
+			if (items[2].length() < 2)
+				fecha += "0" + items[2] + "/";
+			else
+				fecha += items[2] + "/";
+
+			if (items[1].length() < 2)
+				fecha += "0" + items[1] + "/";
+			else
+				fecha += items[1] + "/";
+
+			fecha += items[0];
+		}
+
+		this.getIdImagen().setSrc(this.usuario.getFoto());
+		this.getIdUsuario().setValue(this.usuario.getUsuario());
+		this.getIdUsuario().setReadOnly(true);
+		this.getIdNombre().setValue(this.usuario.getNombre());
+		this.getIdApellidos().setValue(this.usuario.getApellido());
+		this.getIdFechaDeNaciemiento().setValue(fecha);
+		this.getIdCorreoElectronico().setValue(this.usuario.getCorreo());
+		this.getIdCorreoElectronico().setReadOnly(true);
+		this.getIdDescripcion().setValue(this.usuario.getDescripcion());
+
+		this.getIdNotis().setVisible(false);
+		
+		memoryBuffer = new MemoryBuffer();
+		this.getUploadImagen().setReceiver(memoryBuffer);
+
+		this.getUploadImagen().addSucceededListener(event -> {
+
+			if (event.getFileName().endsWith("jpg"))
+				fileData = memoryBuffer.getInputStream();
+			else
+				Notification.show("Solo se admiten imagenes jpg");
+			this.getElement().setPropertyJson("files", Json.createArray());
+
+		});
+	}
 
 	public Usuario_Registrado cambiarDatos() {
 
@@ -130,7 +185,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario_Registrado usuario) {// Inicializar
+	/*public void setUsuario(Usuario_Registrado usuario) {// Inicializar
 		datos = new BDPrincipal();
 		this.usuario = usuario;
 
@@ -175,7 +230,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 				Notification.show("Solo se admiten imagenes jpg");
 			this.getElement().setPropertyJson("files", Json.createArray());
 
-		});
+		});*/
 
 		/*this.getbCambiarFoto().addClickListener(event -> {
 
@@ -183,7 +238,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 		});*/
 
-	}
+	//}
 
 	public void clear() {
 

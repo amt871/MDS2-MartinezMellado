@@ -13,6 +13,8 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Video_otro_usuario pantallaInicio;
 	private Buscar__usuario_registrado_ busqueda;
 	private Mi_perfil perfil;
+	private Configurar config;
+	private Configurar_mi_perfil configPerf;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user) {
 		// TODO Auto-generated constructor stub
@@ -83,6 +85,46 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public void setUser(Usuario_Registrado user) {
 		this.user = user;
+	}
+
+	public Video_otro_usuario getPantallaInicio() {
+		return pantallaInicio;
+	}
+
+	public void setPantallaInicio(Video_otro_usuario pantallaInicio) {
+		this.pantallaInicio = pantallaInicio;
+	}
+
+	public Buscar__usuario_registrado_ getBusqueda() {
+		return busqueda;
+	}
+
+	public void setBusqueda(Buscar__usuario_registrado_ busqueda) {
+		this.busqueda = busqueda;
+	}
+
+	public Mi_perfil getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Mi_perfil perfil) {
+		this.perfil = perfil;
+	}
+
+	public Configurar getConfig() {
+		return config;
+	}
+
+	public void setConfig(Configurar config) {
+		this.config = config;
+	}
+
+	public Configurar_mi_perfil getConfigPerf() {
+		return configPerf;
+	}
+
+	public void setConfigPerf(Configurar_mi_perfil configPerf) {
+		this.configPerf = configPerf;
 	}
 	
 	

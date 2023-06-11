@@ -31,15 +31,22 @@ public class Configurar extends VistaConfigurar {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	Usuario_Registrado usuario;
-	BDPrincipal datos = new BDPrincipal();
-
-	public Usuario_Registrado getUsuario() {
-		return usuario;
-	}
-
-	public void setUsuario(Usuario_Registrado usuario) {//Inicializar
-		this.usuario = usuario;
+	private Usuario_Registrado usuario;
+	private BDPrincipal datos; //= new BDPrincipal();
+	
+	public Configurar(Usuario_Registrado usuario_Registrado, BDPrincipal bdPrincipal) {
+		
+		this.usuario = usuario_Registrado;
+		this.datos = bdPrincipal;
+		
+//	}
+//
+//	public Usuario_Registrado getUsuario() {
+//		return usuario;
+//	}
+//
+//	public void setUsuario(Usuario_Registrado usuario) {//Inicializar
+//		this.usuario = usuario;
 		this.getIdImagen().setSrc(this.usuario.getFoto());
 		this.getIdLabelPrivacidad().setText(this.usuario.getPrivado() ? "Usuario privado" : "Usuario publico");
 		this.getbCambioPrivacidad().addClickListener(event ->{
