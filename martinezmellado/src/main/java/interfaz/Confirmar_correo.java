@@ -100,8 +100,13 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 
 			Notification.show("Registro completado");
 			this.vl.removeAll();
-			this.vl.add(new Iniciar_sesion(this.vl));
-			
+			this.vl.add(new Iniciar_sesion(this.vl, this.datos));
+			try {
+				this.finalize();
+			} catch (Throwable e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 		} else
 			Notification.show("Codigo incorrecto");

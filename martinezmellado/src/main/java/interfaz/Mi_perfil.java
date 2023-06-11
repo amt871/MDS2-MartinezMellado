@@ -14,7 +14,10 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
+import basededatos.BDPrincipal;
 import basededatos.PublicacionDAO;
+import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
@@ -39,19 +42,24 @@ public class Mi_perfil extends VistaMi_perfil {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	private basededatos.Usuario_Registrado usuario;
-	private basededatos.BDPrincipal datos;
+	private Usuario_Registrado usuario;
+	private BDPrincipal datos;
 	private Scroller scroller;
 	private VerticalLayout vl;
 
-	public basededatos.Usuario_Registrado getUsuario() {
-		return usuario;
-	}
+	public Mi_perfil(MainView vl2, Mi_cabecera mi_cabecera) {
+		// TODO Auto-generated constructor stub
+	//}
 
-	public void setUsuario(basededatos.Usuario_Registrado usuario) {
+	//public basededatos.Usuario_Registrado getUsuario() {
+		//return usuario;
+	//}
 
-		datos = new basededatos.BDPrincipal();
-		this.usuario = usuario;
+	//public void setUsuario(basededatos.Usuario_Registrado usuario) {
+
+		//datos = new basededatos.BDPrincipal();
+		this.datos = mi_cabecera.getDatos();
+		this.usuario = mi_cabecera.getUser();
 		//File image = new File("/icons/toktok2.svg");
 		//System.out.println(image.exists());
 		

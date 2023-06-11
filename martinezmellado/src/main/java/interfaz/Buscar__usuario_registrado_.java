@@ -12,6 +12,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import basededatos.BDPrincipal;
 import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaBuscar__usuario_registrado_;
 
 public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado_ {
@@ -34,11 +35,18 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 	
 	private Usuario_Registrado usuario;
 	private BDPrincipal datos;
+	private MainView vl;
 	
-	public void setUsuario(Usuario_Registrado user) {//Inicializar
+	public Buscar__usuario_registrado_(MainView vl, Mi_cabecera mi_cabecera) {
+		// TODO Auto-generated constructor stub
+	//}
+
+	//public void setUsuario(Usuario_Registrado user) {//Inicializar
 		
-		this.usuario = user;
-		this.datos = new BDPrincipal();
+		this.usuario = mi_cabecera.getUser();
+		this.datos = mi_cabecera.getDatos();
+		this.setCabecera(mi_cabecera);
+		this.vl = vl;
 		
 		VerticalLayout vlUsuarios = new VerticalLayout();
 		VerticalLayout vlVideos = new VerticalLayout();

@@ -61,18 +61,18 @@ public class Registro extends VistaRegistro {
 	Object[] cosas;*/
 	
 	private MainView vl;
-	private Pantalla_inicio inicio;
+	//private Pantalla_inicio inicio;
 	//private Confirmar_correo confCor;
 	private BDPrincipal datos;
 	//private String pathImage;
 	private MemoryBuffer memoryBuffer;// = new MemoryBuffer();
 	private InputStream fileData;
 
-	public Registro(MainView vlMain, BDPrincipal datos, Pantalla_inicio inicio) {
+	public Registro(MainView vlMain, BDPrincipal datos/*, Pantalla_inicio inicio*/) {
 		
 		this.vl = vlMain;
 		this.datos = datos;
-		this.inicio = inicio;
+		//this.inicio = inicio;
 
 		this.getbAtras().addClickListener(event -> {
 			
@@ -107,7 +107,14 @@ public class Registro extends VistaRegistro {
 	private void pantallaAnterior() {
 		// TODO Auto-generated method stub
 		this.vl.removeAll();
-		this.vl.add(this.inicio);
+		this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+		
+		try {
+			this.finalize();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/*public Registro(MainView vlMain) {
@@ -213,7 +220,7 @@ public class Registro extends VistaRegistro {
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("No me da la gana cerrarme");
+			//System.out.println("No me da la gana cerrarme");
 		}
 
 	}

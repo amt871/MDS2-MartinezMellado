@@ -32,12 +32,25 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
 	private MainView inicio;
-	BDPrincipal datos;
+	private BDPrincipal datos;
 	
 	public Video_otro_usuario(MainView inicio, Mi_cabecera cabeceraReg) {
 		
 		this.inicio = inicio;
 		this.setCabecera(cabeceraReg);
+		
+		this.usuario = cabeceraReg.getUser();
+		this.datos = cabeceraReg.getDatos();
+
+		scroller = this.getScroller();
+		vl = new VerticalLayout();
+
+
+		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
+		
+		scroller.setContent(vl);
+		
+		addItem();
 		
 	}
 	
@@ -65,7 +78,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		//ArrayList<Video_otro_usuario_item> array = new ArrayList<Video_otro_usuario_item>();
 		
 		
-		this.datos = new BDPrincipal();
+		//this.datos = new BDPrincipal();
 		ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
 		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
 		
@@ -123,7 +136,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		return usuario;
 	}
 
-	public void setUsuario(Usuario_Registrado usuario) {
+	/*public void setUsuario(Usuario_Registrado usuario) {
 		this.usuario = usuario;
 
 
@@ -149,7 +162,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		//vl.getStyle().set("top", "5%");
 		
 		addItem();
-	}
+	}*/
 
 	
 }

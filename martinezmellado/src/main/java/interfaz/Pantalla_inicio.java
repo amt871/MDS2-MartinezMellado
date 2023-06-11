@@ -20,9 +20,9 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 	public Pantalla_inicio(MainView vl) {
 		
 		
-		vlMain = vl;
+		this.vlMain = vl;
 		
-		datos = new BDPrincipal();
+		this.datos = new BDPrincipal();
 		
 		//registro = new Registro(this.vlMain, this.datos, this);
 		
@@ -32,12 +32,55 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 			
 		});
 		
+		this.getbIniciarSesion().addClickListener(evente -> {
+			
+			inicioSesion();
+			
+		});
+		
+	}
+	
+	public Pantalla_inicio(MainView vl, BDPrincipal datos) {
+		
+		
+		this.vlMain = vl;
+		
+		this.datos = datos;
+		
+		//registro = new Registro(this.vlMain, this.datos, this);
+		
+		this.getbRegistrarse().addClickListener(event -> {
+			
+			registrarse();
+			
+		});
+		
+		this.getbIniciarSesion().addClickListener(event -> {
+			
+			inicioSesion();
+			
+		});
+		
+	}
+
+	private void inicioSesion() {
+		// TODO Auto-generated method stub
+		this.vlMain.removeAll();
+		this.vlMain.add(new Iniciar_sesion(this.vlMain, this.datos));
+		
+		try {
+			this.finalize();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	private void registrarse() {
 
 		this.vlMain.removeAll();
-		this.vlMain.add(new Registro(this.vlMain, this.datos, this));
+		this.vlMain.add(new Registro(this.vlMain, this.datos));
 		
 		try {
 			this.finalize();
