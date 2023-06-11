@@ -74,7 +74,7 @@ public class Configurar extends VistaConfigurar {
 			
 		});
 		
-		this.getbSiguiendo().addClickListener(event -> {
+		this.getbSeguidores().addClickListener(event -> {
 			
 			this.getCabecera().getVl().removeAll();
 			this.getCabecera().setSeguidores(new Ver_mis_seguidores(this.getCabecera(), this));
