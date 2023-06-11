@@ -60,6 +60,7 @@ public class Configurar extends VistaConfigurar {
 		this.getbModificarDatos().addClickListener(event -> {
 			
 			//this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()));
+			this.getCabecera().getVl().removeAll();
 			this.getCabecera().setConfigPerf(new Configurar_mi_perfil(this.getCabecera(), this));
 			this.getCabecera().getVl().add(this.getCabecera().getConfigPerf());
 			
@@ -67,7 +68,7 @@ public class Configurar extends VistaConfigurar {
 		
 		this.getbSiguiendo().addClickListener(event -> {
 			
-			
+			this.getCabecera().getVl().removeAll();
 			this.getCabecera().setSiguiendo(new Ver_siguiendo(this.getCabecera(), this));
 			this.getCabecera().getVl().add(this.getCabecera().getSiguiendo());
 			
@@ -75,9 +76,15 @@ public class Configurar extends VistaConfigurar {
 		
 		this.getbSiguiendo().addClickListener(event -> {
 			
-			
+			this.getCabecera().getVl().removeAll();
 			this.getCabecera().setSeguidores(new Ver_mis_seguidores(this.getCabecera(), this));
 			this.getCabecera().getVl().add(this.getCabecera().getSeguidores());
+			
+		});
+		
+		this.getbCerrarSesion().addClickListener(event -> {
+			
+			this.getCabecera().cerrarSesion();
 			
 		});
 	}

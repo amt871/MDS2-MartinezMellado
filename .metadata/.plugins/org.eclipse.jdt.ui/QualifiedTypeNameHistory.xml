@@ -57,7 +57,7 @@
     <fullyQualifiedTypeName name="vistas.VistaUsuarionombreitem"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
-    <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
+    <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
 </qualifiedTypeNameHistroy>

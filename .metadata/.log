@@ -1262,3 +1262,9 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY org.apache.ivyde.eclipse 1 0 2023-06-11 19:20:11.785
 !MESSAGE IvyDE plugin started
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-11 20:21:44.984
+!MESSAGE Jetty stopped at http://null:0
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-11 20:21:44.985
+!MESSAGE Removed all models from server.
