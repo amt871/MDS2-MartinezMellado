@@ -47,11 +47,19 @@ public class Publicar extends VistaPublicar {
 	private MemoryBuffer memoryBuffer;
 
 	private InputStream fileData;
+	
+	private Usuario_Registrado user;
 
 	//Object[] cosas;
 
 	public Publicar(MainView vl, Mi_cabecera mi_cabecera) {
-		datos = mi_cabecera.getDatos();
+		
+		this.datos = mi_cabecera.getDatos();
+		this.user = mi_cabecera.getUser();
+		
+		this.setCabecera(mi_cabecera);
+		
+		this.getIconoUsr().getStyle().set("src", this.user.getFoto());
 		
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
@@ -82,7 +90,7 @@ public class Publicar extends VistaPublicar {
 		
 		String nombVideo = LocalDateTime.now().toString().replace(":", "-");
 
-		String directoryPath = "src/main/webapp/Usuarios/" + this.getUsr().getUsuario() + "/videos" ;
+		String directoryPath = "src/main/webapp/Usuarios/" + this.user.getUsuario() + "/videos" ;
 		
 		String nvideo = "/" + nombVideo + ".mp4";
 		
@@ -91,12 +99,12 @@ public class Publicar extends VistaPublicar {
 
 		String descripcion = this.getDescrpcion().getValue();
 		Date fecha = Date.valueOf(LocalDate.now());
-		Usuario_Registrado autor = this.getUsr();
+		Usuario_Registrado autor = this.user;
 		String ubicacio = this.getUbicacion().getValue();
 		String ruta = directoryPath + nvideo;
 		String propietario = this.getUsr().getUsuario();
 
-		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.getUsr().getComercial(), propietario);
+		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.user.getComercial(), propietario);
 
 		String texto = this.getDescrpcion().getValue();
 
