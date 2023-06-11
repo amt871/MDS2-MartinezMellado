@@ -23,6 +23,7 @@ import basededatos.Publicaciones;
 import basededatos.Usuario_Registrado;
 import ch.qos.logback.core.boolex.Matcher;
 import elemental.json.Json;
+import proyectoMDS.MainView;
 import vistas.VistaPublicar;
 
 public class Publicar extends VistaPublicar {
@@ -39,18 +40,19 @@ public class Publicar extends VistaPublicar {
 //		throw new UnsupportedOperationException();
 //	}
 
-	BDPrincipal datos;
+	private BDPrincipal datos;
 
-	String pathImage;
+	private String pathImage;
 
-	MemoryBuffer memoryBuffer;
+	private MemoryBuffer memoryBuffer;
 
-	InputStream fileData;
+	private InputStream fileData;
 
 	//Object[] cosas;
 
-	public Publicar() {
-		datos = new BDPrincipal();
+	public Publicar(MainView vl, Mi_cabecera mi_cabecera) {
+		datos = mi_cabecera.getDatos();
+		
 		// usuarioARegistrar = new Usuario_Registrado();
 		memoryBuffer = new MemoryBuffer();
 		//cosas = new Object[3];

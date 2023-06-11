@@ -7,6 +7,8 @@ import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.BDPrincipal;
+import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaNotificaciones;
 
 public class Notificaciones extends VistaNotificaciones {
@@ -40,7 +42,9 @@ public class Notificaciones extends VistaNotificaciones {
 	
 	private Scroller scroller;
 	private VerticalLayout vl;
-	BDPrincipal datos;
+	private BDPrincipal datos;
+	private MainView inicio;
+	private Usuario_Registrado user;
 	
 	public Notificaciones() {
 		
@@ -61,6 +65,15 @@ public class Notificaciones extends VistaNotificaciones {
 
 	}
 	
+	public Notificaciones(MainView vl2, Mi_cabecera mi_cabecera) {
+		// TODO Auto-generated constructor stub
+		
+		this.inicio = vl2;
+		this.user = mi_cabecera.getUser();
+		this.datos = mi_cabecera.getDatos();
+		this.setCabecera(mi_cabecera);
+	}
+
 	public void addItem(String tipo) {
 		
 		List listaNotificaciones = this.datos.listarNitificaciones(this.getUsr().getUsuario());

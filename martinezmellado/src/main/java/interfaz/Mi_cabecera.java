@@ -44,6 +44,20 @@ public class Mi_cabecera extends VistaMi_cabecera {
 			
 		});
 		
+		this.getbNotis().addClickListener(event -> {
+			
+			this.vl.removeAll();
+			this.vl.add(new Notificaciones(this.vl, this));
+			
+		});
+		
+		this.getbPublicar().addClickListener(event -> {
+			
+			this.vl.removeAll();
+			this.vl.add(new Publicar(this.vl, this));
+			
+		});
+		
 		
 	}
 
