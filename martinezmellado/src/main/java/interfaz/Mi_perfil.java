@@ -60,6 +60,7 @@ public class Mi_perfil extends VistaMi_perfil {
 		//datos = new basededatos.BDPrincipal();
 		this.datos = mi_cabecera.getDatos();
 		this.usuario = mi_cabecera.getUser();
+		this.setCabecera(mi_cabecera);
 		//File image = new File("/icons/toktok2.svg");
 		//System.out.println(image.exists());
 		
