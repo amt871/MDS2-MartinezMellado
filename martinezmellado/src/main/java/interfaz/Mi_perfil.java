@@ -72,6 +72,8 @@ public class Mi_perfil extends VistaMi_perfil {
 		this.getIdNumMgs().setText(this.usuario.le_gusta_a.size()+" me gusta");
 		
 		//System.out.println(this.usuario.getFoto());
+		
+		listarVideos();
 	}
 	
 	public void listarVideos() {
