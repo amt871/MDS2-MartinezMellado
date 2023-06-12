@@ -41,7 +41,9 @@ export class VistaVideo_otro_usuario_item extends LitElement {
     <vaadin-button theme="icon" aria-label="Add new" id="idBMeGusta">
      <iron-icon icon="vaadin:heart"></iron-icon>
     </vaadin-button>
-    <label id="idNumMg">nº me gusta </label>
+    <div id="DivNumMegustas">
+     <label id="idNumMg">nº me gusta </label>
+    </div>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; padding-right: var(--lumo-space-xl); padding-left: var(--lumo-space-xl);">
     <vaadin-button theme="icon" aria-label="Add new" id="idBComentarios">

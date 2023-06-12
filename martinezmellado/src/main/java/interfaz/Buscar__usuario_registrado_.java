@@ -73,7 +73,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 				array.get(array.size()-1).setJustifyContentMode(JustifyContentMode.CENTER);
 				vlUsuarios.add(array.get(array.size()-1));
 			}
-			
+			if (array.size() == 0) break;
 			array.get(array.size()-1).add(new Usuarionombreitem(usuarios[i].getFoto(), usuarios[i].getUsuario()));
 			//System.out.println("annadido item");
 			

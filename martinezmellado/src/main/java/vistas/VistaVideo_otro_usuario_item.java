@@ -9,6 +9,7 @@ import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.html.Div;
 
 /**
  * A Designer generated component for the vista-video_otro_usuario_item template.
@@ -44,6 +45,8 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 	private Button idBComentarios;
 	@Id("idBMeGusta")
 	private Button idBMeGusta;
+	@Id("DivNumMegustas")
+	private Div divNumMegustas;
 
 	/**
      * Creates a new VistaVideo_otro_usuario_item.
@@ -147,6 +150,14 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 
 	public void setIdBMeGusta(Button idBMeGusta) {
 		this.idBMeGusta = idBMeGusta;
+	}
+
+	public Div getDivNumMegustas() {
+		return divNumMegustas;
+	}
+
+	public void setDivNumMegustas(Div divNumMegustas) {
+		this.divNumMegustas = divNumMegustas;
 	}
     
     
