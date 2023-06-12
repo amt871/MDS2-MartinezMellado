@@ -43,6 +43,12 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 		this.usuarioARegistrar = user;
 		this.fileData = image;
 		this.datos = datos;
+		
+		this.getbEnviar().addClickListener(event -> {
+			
+			confirmarCodigo();
+			
+		});
 
 	}
 
@@ -64,7 +70,7 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 				
 			} else
 
-			if (this.fileData == null)
+			if (this.fileData != null)
 				try {
 
 					File image = new File("src/main/webapp/Usuarios/" + usuarioARegistrar.getUsuario() + "/imagen.jpg");

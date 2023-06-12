@@ -122,6 +122,7 @@ public class Usuarios_Registrados {
 			
 			/*System.out.println("Se crea el directorio del usuario: "+*/file.mkdir()/*)*/;
 			/*System.out.println("Se crea el directorio de videos: "+*/videos.mkdir()/*)*/;
+
 			file = null;
 			videos = null;
 			return true;

@@ -97,6 +97,7 @@ public class Registro extends VistaRegistro {
 				fileData = memoryBuffer.getInputStream();
 			else {
 				Notification.show("Solo se admiten imagenes en jpg");
+				this.getIdImagen().getElement().setPropertyJson("files", Json.createArray());
 			}
 			
 
