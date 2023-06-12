@@ -36,13 +36,15 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 	private InputStream fileData;
 	private BDPrincipal datos;
 	private MainView vl;
+	private Pantalla_inicio inicio;
 
-	public Confirmar_correo(MainView vl, Usuario_Registrado user, InputStream image, BDPrincipal datos) {
+	public Confirmar_correo(MainView vl, Usuario_Registrado user, InputStream image, BDPrincipal datos, Pantalla_inicio pantalla_inicio) {
 
 		this.vl = vl;
 		this.usuarioARegistrar = user;
 		this.fileData = image;
 		this.datos = datos;
+		this.inicio = pantalla_inicio;
 		
 		this.getbEnviar().addClickListener(event -> {
 			
@@ -106,13 +108,15 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 
 			Notification.show("Registro completado");
 			this.vl.removeAll();
-			this.vl.add(new Iniciar_sesion(this.vl, this.datos));
-			try {
+			this.vl.add(this.inicio);
+			/*try {
 				this.finalize();
 			} catch (Throwable e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
+			this.inicio.clear();
+			
 			
 		} else
 			Notification.show("Codigo incorrecto");

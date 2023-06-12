@@ -19,13 +19,16 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Ver_siguiendo siguiendo;// = new Ver_siguiendo();
 	private Notificaciones notis;
 	private Publicar publicar;
+	private Pantalla_inicio pInicio;
 
-	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user) {
+	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
 		// TODO Auto-generated constructor stub
 		
 		this.vl = vl;
 		this.datos = datos;
 		this.user = user;
+		this.pInicio = pInicio;
+		//iniciar_sesion = null;
 		
 		this.getbInicio().addClickListener(event -> {
 			
@@ -64,6 +67,9 @@ public class Mi_cabecera extends VistaMi_cabecera {
 			
 		});
 		
+
+		//this.vl.removeAll();
+		//this.vl.add(pantallaInicio = new Video_otro_usuario(this.vl, this));
 		
 	}
 	
@@ -82,14 +88,16 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.publicar = null;
 		
 		this.vl.removeAll();
-		this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+		this.vl.add(this.pInicio);
 		
-		try {
+		this.pInicio.clear();
+		
+		/*try {
 			this.finalize();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 

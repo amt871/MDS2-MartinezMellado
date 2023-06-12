@@ -15,6 +15,10 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 	
 	private MainView vlMain;
 	private BDPrincipal datos;
+	private Registro registro;
+	private Confirmar_correo confCorr;
+	private Iniciar_sesion iniciarSesion;
+	private Mi_cabecera cabeceraReg;
 	//private Registro registro;
 	
 	public Pantalla_inicio(MainView vl) {
@@ -66,30 +70,37 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 	private void inicioSesion() {
 		// TODO Auto-generated method stub
 		this.vlMain.removeAll();
-		this.vlMain.add(new Iniciar_sesion(this.vlMain, this.datos));
+		this.vlMain.add(iniciarSesion = new Iniciar_sesion(this.vlMain, this.datos, this, this.cabeceraReg));
 		
-		try {
+		/*try {
 			this.finalize();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 	}
 
 	private void registrarse() {
 
 		this.vlMain.removeAll();
-		this.vlMain.add(new Registro(this.vlMain, this.datos));
+		this.vlMain.add(new Registro(this.vlMain, this.datos, this, this.confCorr));
 		
-		try {
+		/*try {
 			this.finalize();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 	
+	public void clear() {
+		
+		this.confCorr = null;
+		this.iniciarSesion = null;
+		this.cabeceraReg = null;
+		
+	}
 	
 //	private event _acceder;
 //	private Button _registrarseB;

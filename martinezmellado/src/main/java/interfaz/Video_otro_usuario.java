@@ -39,6 +39,8 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario{
 		this.inicio = inicio;
 		this.setCabecera(cabeceraReg);
 		
+		//this.getStyle().set("position", "absolute");
+		
 		this.usuario = cabeceraReg.getUser();
 		this.datos = cabeceraReg.getDatos();
 

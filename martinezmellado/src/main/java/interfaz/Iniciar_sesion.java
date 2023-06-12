@@ -14,7 +14,7 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 	private Usuario_Registrado user;
 	private Mi_cabecera cabeceraReg;
 	private Cabecera_comercial cabeceraComercial;
-	private Cabecera_usuario_no_registrado cabeceraNReg;
+	private Pantalla_inicio pantInicio;
 	
 //	private event _entrar;
 //	private Label _usuarioL;
@@ -38,11 +38,13 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Iniciar_sesion(MainView vl, BDPrincipal datos) {
+	public Iniciar_sesion(MainView vl, BDPrincipal datos, Pantalla_inicio pantalla_inicio, Mi_cabecera cabeceraReg2) {
 		// TODO Auto-generated constructor stub
 		
 		this.vl = vl;
 		this.datos = datos;
+		this.pantInicio = pantalla_inicio;
+		this.cabeceraReg = cabeceraReg2;
 		
 		this.getbIniciarSesion().addClickListener(event -> {
 			
@@ -57,7 +59,9 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 				
 				
 				this.vl.removeAll();
-				this.vl.add(new Video_otro_usuario(this.vl, new Mi_cabecera(this.vl, this.datos, this.user)));
+				this.cabeceraReg = new Mi_cabecera(this.vl, this.datos, this.user, this.pantInicio);
+				this.cabeceraReg.setPantallaInicio(new Video_otro_usuario(this.vl, this.cabeceraReg));
+				this.vl.add(this.cabeceraReg.getPantallaInicio());
 			}
 			
 		});

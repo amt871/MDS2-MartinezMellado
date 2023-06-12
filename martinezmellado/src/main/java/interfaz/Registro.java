@@ -67,11 +67,15 @@ public class Registro extends VistaRegistro {
 	//private String pathImage;
 	private MemoryBuffer memoryBuffer;// = new MemoryBuffer();
 	private InputStream fileData;
+	private Pantalla_inicio pantalla_inicio;
+	private Confirmar_correo confCorr;
 
-	public Registro(MainView vlMain, BDPrincipal datos/*, Pantalla_inicio inicio*/) {
+	public Registro(MainView vlMain, BDPrincipal datos/*, Pantalla_inicio inicio*/, Pantalla_inicio pantalla_inicio, Confirmar_correo confCorr) {
 		
 		this.vl = vlMain;
 		this.datos = datos;
+		this.pantalla_inicio = pantalla_inicio;
+		this.confCorr = confCorr;
 		//this.inicio = inicio;
 
 		this.getbAtras().addClickListener(event -> {
@@ -108,14 +112,16 @@ public class Registro extends VistaRegistro {
 	private void pantallaAnterior() {
 		// TODO Auto-generated method stub
 		this.vl.removeAll();
-		this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+		this.vl.add(this.pantalla_inicio);
 		
-		try {
+		this.pantalla_inicio.clear();
+		
+		/*try {
 			this.finalize();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 	/*public Registro(MainView vlMain) {
@@ -215,14 +221,14 @@ public class Registro extends VistaRegistro {
 		cosas[0] = true;*/
 
 		this.vl.removeAll();
-		this.vl.add(new Confirmar_correo(this.vl, usuarioARegistrar, this.fileData, this.datos));
-		try {
+		this.vl.add(confCorr = new Confirmar_correo(this.vl, usuarioARegistrar, this.fileData, this.datos, this.pantalla_inicio));
+		/*try {
 			this.finalize();
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			//System.out.println("No me da la gana cerrarme");
-		}
+		}*/
 
 	}
 
