@@ -40,6 +40,8 @@ public class Publicar extends VistaPublicar {
 //		throw new UnsupportedOperationException();
 //	}
 
+	private MainView vl;
+	
 	private BDPrincipal datos;
 
 	private String pathImage;
@@ -50,7 +52,6 @@ public class Publicar extends VistaPublicar {
 	
 	private Usuario_Registrado user;
 	
-	private MainView inicio;
 
 	//Object[] cosas;
 
@@ -58,7 +59,7 @@ public class Publicar extends VistaPublicar {
 		
 		this.datos = mi_cabecera.getDatos();
 		this.user = mi_cabecera.getUser();
-		this.inicio = vl;
+		this.vl = vl;
 		
 		this.setCabecera(mi_cabecera);
 		
@@ -105,7 +106,7 @@ public class Publicar extends VistaPublicar {
 		Usuario_Registrado autor = this.user;
 		String ubicacio = this.getUbicacion().getValue();
 		String ruta = directoryPath + nvideo;
-		String propietario = this.getUsr().getUsuario();
+		String propietario = this.getCabecera().getUser().getUsuario();
 
 		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.user.getComercial(), propietario);
 
@@ -162,10 +163,14 @@ public class Publicar extends VistaPublicar {
 			
 			Notification.show("Video subido");
 			
-			this.getCabecera().setPerfil(new Mi_perfil(this.inicio, this.getCabecera()));
-			
-			this.inicio.removeAll();
-			this.inicio.add(this.getCabecera().getPerfil());
+			this.vl.removeAll();
+			this.vl.add(new Mi_perfil(this.vl, this.getCabecera()));
+			try {
+				this.finalize();
+			} catch (Throwable e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
