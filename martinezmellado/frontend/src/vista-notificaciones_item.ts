@@ -17,9 +17,9 @@ export class VistaNotificaciones_item extends LitElement {
   render() {
     return html`
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; background-color: #d8d8d8;">
- <vaadin-vertical-layout theme="spacing" style="height: 100%; align-self: center; justify-content: center; width: 100%; align-items: center;">
-  <img id="idImagenUsr">
-  <label id="idNombreUsuario" style="align-self: center;">Nombre de usuario</label>
+ <vaadin-vertical-layout style="height: 100%; align-self: center; justify-content: center; width: 100%; align-items: center;">
+  <img id="idImagenUsr" style="width: 90%; height: 90%; align-self: center;">
+  <label id="idNombreUsuario" style="align-self: center; height: 10%;">Nombre de usuario</label>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%;">
   <label id="idTextoNotificación" style="align-self: center;">Texto de la notificacion</label>
