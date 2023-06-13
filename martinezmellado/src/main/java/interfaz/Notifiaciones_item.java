@@ -21,16 +21,22 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 
 	public Notifiaciones_item(String tipo, Usuario_Registrado emisor, Publicacion publicacion, boolean comentario, BDPrincipal datos) {
 		// TODO Auto-generated constructor stub
+		
+		this.getIdBotonVista().addClickListener(event -> {
+			datos.cambiarNotificacion(0);
+        });
 		switch (tipo) {
 		case "comentario":
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
 			this.getIdTextoNotificación().setText(datos.cargarComentario(emisor, publicacion).getComentario());;
+			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "me_gusta":
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
 			this.getIdTextoNotificación().setText("A " + emisor.getUsuario() + " le ha gustado tu video");
+			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "seguir":
 			this.getIdBotonVista().setVisible(false);

@@ -81,7 +81,6 @@ public class Notificaciones extends VistaNotificaciones {
 		List<Notificacion> listaNotificaciones = new ArrayList<Notificacion>();
 		listaNotificaciones.addAll(this.datos.listarNitificaciones(this.user.getUsuario()));
 		
-		System.out.println(listaNotificaciones.size());
 		if(listaNotificaciones.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
