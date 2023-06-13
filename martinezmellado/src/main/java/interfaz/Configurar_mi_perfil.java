@@ -121,8 +121,11 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		
 		this.getbCambiarFoto().addClickListener(event -> {
 			
-			if(this.cambiarFoto())
+			if(this.cambiarFoto()) {
+
 				this.getCabecera().getbPerfil().click();
+			
+			}
 			
 		});
 		
