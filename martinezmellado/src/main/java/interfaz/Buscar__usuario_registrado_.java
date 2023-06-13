@@ -82,6 +82,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			
 		}
 		
+		this.getDivItem1().add(new Video("Usuarios\\Juanra1997\\videos\\2023-06-05T23-00-09.914853900.mp4"));
 		/*ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
 		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
 		

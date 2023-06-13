@@ -30,6 +30,10 @@ public class VistaBuscar__usuario_registrado_ extends LitTemplate {
 	private Button bHashtag;
 	@Id("divVideos")
 	private Div divVideos;
+	@Id("item1")
+	private Button item1;
+	@Id("divItem1")
+	private Div divItem1;
 
 	/**
      * Creates a new VistaBuscar__usuario_registrado_.
@@ -85,6 +89,22 @@ public class VistaBuscar__usuario_registrado_ extends LitTemplate {
 
 	public void setDivVideos(Div divVideos) {
 		this.divVideos = divVideos;
+	}
+
+	public Button getItem1() {
+		return item1;
+	}
+
+	public void setItem1(Button item1) {
+		this.item1 = item1;
+	}
+
+	public Div getDivItem1() {
+		return divItem1;
+	}
+
+	public void setDivItem1(Div divItem1) {
+		this.divItem1 = divItem1;
 	}
 
     
