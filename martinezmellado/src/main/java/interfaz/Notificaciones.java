@@ -12,6 +12,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
 import basededatos.BDPrincipal;
 import basededatos.Notificacion;
+import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
 import vistas.VistaNotificaciones;
@@ -51,24 +52,6 @@ public class Notificaciones extends VistaNotificaciones {
 	private MainView inicio;
 	private Usuario_Registrado user;
 
-	public Notificaciones() {
-
-		scroller = this.getScroller();
-		vl = new VerticalLayout();
-
-		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
-
-		scroller.getStyle().set("width", "100%");
-		scroller.getStyle().set("height", "100%");
-
-		scroller.setContent(vl);
-
-		vl.getStyle().set("width", "100%");
-		vl.getStyle().set("height", "100%");
-
-		// addItem();
-
-	}
 
 	public Notificaciones(MainView vl2, Mi_cabecera mi_cabecera) {
 		// TODO Auto-generated constructor stub
@@ -77,22 +60,32 @@ public class Notificaciones extends VistaNotificaciones {
 		this.user = mi_cabecera.getUser();
 		this.datos = mi_cabecera.getDatos();
 		this.setCabecera(mi_cabecera);
+		
+
+		
+		//this.getStyle().set("position", "absolute");
+
+		scroller = this.getScroller();
+		vl = new VerticalLayout();
+
+
+		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
+		
+		scroller.setContent(vl);
+		
+		addItem();
 	}
 
-	public void addItem(String tipo) {
+	public void addItem() {
 
-		List<Notificacion> listaNotificaciones = this.datos.listarNitificaciones(this.getUsr().getUsuario());
-
-		if (listaNotificaciones != null) {
-			for (Notificacion notificacion : listaNotificaciones) {
-				listaNotificaciones.add(notificacion);
-			}
-		}
-
+		List<Notificacion> listaNotificaciones = new ArrayList<Notificacion>();
+		listaNotificaciones.addAll(this.datos.listarNitificaciones(this.user.getUsuario()));
+		
+		System.out.println(listaNotificaciones.size());
 		if(listaNotificaciones.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
-			vl.add(new Label("Los usuarios que sigues aun no tiene publicaciones"));
+			vl.add(new Label("No tienes notificaciones"));
 		}else {
 
 			//vl.setAlignItems(Alignment.CENTER);
@@ -108,16 +101,17 @@ public class Notificaciones extends VistaNotificaciones {
 
 				//System.out.println(this.getCabecera()==null);
 
-
+				Usuario_Registrado usr = this.datos.cargarDatosUsuario(listaNotificaciones.get(i).getUsuarioOrigen());
+				Publicacion publicacion =  this.datos.cargarVideoPoID(listaNotificaciones.get(i).getPublicacion());
 				array.add(new Notifiaciones_item(listaNotificaciones.get(i).getTipo(),
-						this.datos.cargarDatosUsuario(listaNotificaciones.get(i).getUsuarioOrigen()),
-						this.datos.cargarVideoPoID(listaNotificaciones.get(i).getPublicacion()),
+						usr,
+						publicacion,
 						listaNotificaciones.get(i).getComentario(), this.datos));
 				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
 				array.get(i).getStyle().set("position", "relative");
-				array.get(i).getStyle().set("height", "100%");
+				array.get(i).getStyle().set("height", "30%");
 				array.get(i).getStyle().set("width", "100%");
-				array.get(i).getIdFotoUsuario()
+				array.get(i).getIdImagenUsr().setSrc(usr.getFoto());
 //				array.get(i).getImageButton().setSrc(videos.get(i).getRealizada().getFoto());
 //				array.get(i).getLabelUsuario().setText(videos.get(i).getRealizada().getUsuario());
 //				array.get(i).getIdUbicación().setText(videos.get(i).getUbicacion());

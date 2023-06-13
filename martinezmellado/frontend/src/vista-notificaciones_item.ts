@@ -1,7 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import '@polymer/iron-icon/iron-icon.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-notificaciones_item')
@@ -19,7 +18,7 @@ export class VistaNotificaciones_item extends LitElement {
     return html`
 <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; background-color: #d8d8d8;">
  <vaadin-vertical-layout theme="spacing" style="height: 100%; align-self: center; justify-content: center; width: 100%; align-items: center;">
-  <iron-icon id="idFotoUsuario" style="width: 60%; height: 20%;" icon="lumo:user"></iron-icon>
+  <img id="idImagenUsr">
   <label id="idNombreUsuario" style="align-self: center;">Nombre de usuario</label>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%;">
@@ -30,13 +29,13 @@ export class VistaNotificaciones_item extends LitElement {
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; align-self: center; align-items: center;">
   <vaadin-button id="bAceptar">
-   Aceptar
+    Aceptar 
   </vaadin-button>
   <vaadin-button id="idBotonVista">
     Vista 
   </vaadin-button>
   <vaadin-button id="bRechazar">
-   Rechazar
+    Rechazar 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>

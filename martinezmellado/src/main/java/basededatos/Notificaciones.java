@@ -26,7 +26,9 @@ public class Notificaciones {
 	    List<Notificacion> aux = new ArrayList<Notificacion>();
 	    if (u != null) {
 	        for (Notificacion Noti : u) {
-	            aux.add(Noti);
+	            if (Noti.getTiene().getUsuario().equals(aUsuario)) {
+	            	aux.add(Noti);
+	            }
 	        }
 	    }
 	    return aux;

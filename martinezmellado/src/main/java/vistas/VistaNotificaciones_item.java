@@ -19,9 +19,7 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-notificaciones_item.ts")
 public class VistaNotificaciones_item extends LitTemplate {
 
-    @Id("idFotoUsuario")
-	private Element idFotoUsuario;
-	@Id("idNombreUsuario")
+    @Id("idNombreUsuario")
 	private Label idNombreUsuario;
 	@Id("idTextoNotificación")
 	private Label idTextoNotificación;
@@ -33,6 +31,8 @@ public class VistaNotificaciones_item extends LitTemplate {
 	private Button idBotonVista;
 	@Id("bRechazar")
 	private Button bRechazar;
+	@Id("idImagenUsr")
+	private Image idImagenUsr;
 
 	/**
      * Creates a new VistaNotificaciones_item.
@@ -41,14 +41,6 @@ public class VistaNotificaciones_item extends LitTemplate {
         // You can initialise any data required for the connected UI components here.
     	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
-
-	public Element getIdFotoUsuario() {
-		return idFotoUsuario;
-	}
-
-	public void setIdFotoUsuario(Element idFotoUsuario) {
-		this.idFotoUsuario = idFotoUsuario;
-	}
 
 	public Label getIdNombreUsuario() {
 		return idNombreUsuario;
@@ -96,6 +88,14 @@ public class VistaNotificaciones_item extends LitTemplate {
 
 	public void setbRechazar(Button bRechazar) {
 		this.bRechazar = bRechazar;
+	}
+
+	public Image getIdImagenUsr() {
+		return idImagenUsr;
+	}
+
+	public void setIdImagenUsr(Image idImagenUsr) {
+		this.idImagenUsr = idImagenUsr;
 	}
 
 }
