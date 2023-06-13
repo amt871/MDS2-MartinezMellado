@@ -4,30 +4,32 @@ import basededatos.BDPrincipal;
 import basededatos.Comentario;
 import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaNotificaciones_item;
 
 public class Notifiaciones_item extends VistaNotificaciones_item {
-//	private Button _vista;
-//	private Label _nombreUsuarioL;
-//	private ImageButton _fotoUsuarioIB;
-//	private Label _textoNotificacionL;
-//	public Notificaciones _notifiaciones;
-//
-//	public void vista() {
-//		throw new UnsupportedOperationException();
-//	}
+	private Usuario_Registrado usuario;
+	private Usuario_Registrado miUsuario;
+	private Mi_cabecera cabeceraUserReg;
+	private MainView inicio;
 	
 	
 
-	public Notifiaciones_item(String tipo, Usuario_Registrado emisor, Publicacion publicacion, boolean comentario, BDPrincipal datos, int id) {
+	public Notifiaciones_item(String tipo, Usuario_Registrado emisor, Publicacion publicacion, boolean comentario, BDPrincipal datos, int id, Mi_cabecera mi_cabecera, Usuario_Registrado miUsuario,MainView inicio) {
 		// TODO Auto-generated constructor stub
+		this.usuario = emisor;
+		this.miUsuario = miUsuario;
+		this.cabeceraUserReg = mi_cabecera;
+		this.inicio = inicio;
+		
+		
 		
 		this.getIdBotonVista().addClickListener(event -> {
 			datos.cambiarNotificacion(id);
         });
 		
 		this.getIdImagenUsr().addClickListener(event -> {
-			
+			verPerfilOtroUsuario();
         });
 		
 		switch (tipo) {
@@ -52,6 +54,35 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 
 		default:
 			break;
+		}
+	}
+	
+	private void verPerfilOtroUsuario() {
+
+		if (this.usuario.getPrivado()) {
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			if (this.miUsuario.seguido.contains(this.usuario)) {
+				this.cabeceraUserReg
+						.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.inicio.removeAll();
+				this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
+			} else {
+				this.cabeceraUserReg.setPerfilPrivado(
+						new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.inicio.removeAll();
+				this.inicio.add(this.cabeceraUserReg.getPerfilPrivado());
+				// this.inicio.cambiarPantalla(cabecera);
+			}
+		} else {
+
+			this.cabeceraUserReg
+					.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+			this.inicio.removeAll();
+			this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
+
 		}
 	}
 }

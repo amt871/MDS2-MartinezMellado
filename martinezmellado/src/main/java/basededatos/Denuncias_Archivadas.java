@@ -20,6 +20,7 @@ public class Denuncias_Archivadas {
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
+			e.printStackTrace();
 		}
 		List<Denuncia_Archivada> aux = new ArrayList<Denuncia_Archivada>();
 		if (u != null) {

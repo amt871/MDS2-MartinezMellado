@@ -77,15 +77,20 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 		//this.video.setWidth("120%");
 		//this.video.setHeight("50%");
+		Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + src);
 		
 		this.getLayoutVideo().add(video);
+		this.getIdNumMg().setText(String.valueOf(publicacion.le_gusta.size()));
 		
 		this.getIdBMeGusta().addClickListener(event -> {
 			
-			String ruta = "src/main/webapp/" + src;
-			Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + src);
-			this.datos.annadirMeGusta(publicacion, this.miUsuario);
-			this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacion);
+			if(publicacion.le_gusta.contains(miUsuario)) {
+				Notification.show("Ya le has dado me gusta a esta publicación");
+			}else {
+				this.datos.annadirMeGusta(publicacion.getID(), this.miUsuario.getID());
+				this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacion);
+			}
+			
 			
 
 		});

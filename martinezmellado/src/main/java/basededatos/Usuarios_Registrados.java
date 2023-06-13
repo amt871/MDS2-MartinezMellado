@@ -373,7 +373,10 @@ public class Usuarios_Registrados {
 	    	
 	    }catch (Exception e) {
 	        t.rollback();
-	        return null;
+	        e.printStackTrace();
+			return null;
 	    }
+		
+
 	}
 }

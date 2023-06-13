@@ -39,6 +39,8 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 	private List<Usuario_Registrado> aux;
 
 	public Video_otro_usuario(MainView inicio, Mi_cabecera cabeceraReg) {
+		
+		clear();
 
 		this.inicio = inicio;
 		this.setCabecera(cabeceraReg);
@@ -79,6 +81,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 	 */
 
 	public void addItem() {
+		
 
 		// ArrayList<Video_otro_usuario_item> array = new
 		// ArrayList<Video_otro_usuario_item>();

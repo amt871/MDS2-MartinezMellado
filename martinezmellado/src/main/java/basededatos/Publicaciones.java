@@ -181,16 +181,17 @@ public class Publicaciones {
 		}
 	}
 
-	public void annadirMeGusta(Publicacion publicacion, Usuario_Registrado usuario) throws PersistentException {
+	public void annadirMeGusta(int publicacion, int usuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
+			
+			Publicacion auxP = PublicacionDAO.loadPublicacionByQuery("ID = '" + publicacion + "'" , null);
+			Usuario_Registrado auxU = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("ID = '" + usuario + "'", null);
+			auxP.le_gusta.add(auxU);
+			auxU.le_gusta.add(auxP);
 
-			publicacion.le_gusta.add(usuario);
-			usuario.le_gusta.add(publicacion);
-			;
-
-			PublicacionDAO.refresh(publicacion);
-			Usuario_RegistradoDAO.refresh(usuario);
+			PublicacionDAO.refresh(auxP);
+			Usuario_RegistradoDAO.refresh(auxU);
 
 			t.commit();
 
@@ -247,7 +248,7 @@ public class Publicaciones {
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
-			throw new PersistentException(e);
+			e.printStackTrace();
 		}
 		return null;
 	}

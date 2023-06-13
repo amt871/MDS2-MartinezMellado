@@ -51,6 +51,7 @@ public class Notificaciones extends VistaNotificaciones {
 	private BDPrincipal datos;
 	private MainView inicio;
 	private Usuario_Registrado user;
+	private Mi_cabecera mi_cabecera;
 
 
 	public Notificaciones(MainView vl2, Mi_cabecera mi_cabecera) {
@@ -60,6 +61,7 @@ public class Notificaciones extends VistaNotificaciones {
 		this.user = mi_cabecera.getUser();
 		this.datos = mi_cabecera.getDatos();
 		this.setCabecera(mi_cabecera);
+		this.mi_cabecera = mi_cabecera;
 		
 
 		
@@ -107,7 +109,10 @@ public class Notificaciones extends VistaNotificaciones {
 						publicacion,
 						listaNotificaciones.get(i).getComentario(),
 						this.datos,
-						listaNotificaciones.get(i).getID()));
+						listaNotificaciones.get(i).getID(),
+						this.mi_cabecera,
+						this.user,
+						this.inicio));
 				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
 				array.get(i).getStyle().set("position", "relative");
 				array.get(i).getStyle().set("height", "30%");

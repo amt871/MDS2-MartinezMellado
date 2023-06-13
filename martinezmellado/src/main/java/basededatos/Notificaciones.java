@@ -62,7 +62,7 @@ public class Notificaciones {
 	        receptor.envia.add(notificacion);
 	        
 	        NotificacionDAO.save(notificacion);
-	        Usuario_RegistradoDAO.save(emisor);
+	        Usuario_RegistradoDAO.refresh(emisor);
 	        
 	        t.commit();
 	        

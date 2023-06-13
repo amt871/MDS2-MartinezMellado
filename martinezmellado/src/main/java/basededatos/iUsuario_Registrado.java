@@ -47,7 +47,7 @@ public interface iUsuario_Registrado {
 	
 	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado);
 	
-	public void annadirMeGusta(Publicacion publicacion, Usuario_Registrado usuario);
+	public void annadirMeGusta(int publicacion, int usuario);
 	
 	public Publicacion cargarVideoPorRuta(String ruta);
 	

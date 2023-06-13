@@ -31,6 +31,7 @@ public class Comentarios {
 	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
+	        e.printStackTrace();
 	    }
 	    return aux;
 	}

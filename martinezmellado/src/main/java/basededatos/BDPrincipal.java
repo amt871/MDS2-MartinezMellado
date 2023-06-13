@@ -417,7 +417,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public void annadirMeGusta(Publicacion publicacion, Usuario_Registrado usuario) {
+	public void annadirMeGusta(int publicacion, int usuario) {
 		// TODO Auto-generated method stub
 		try {
 			this.publicaciones.annadirMeGusta(publicacion, usuario);
