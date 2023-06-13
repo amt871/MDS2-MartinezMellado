@@ -20,6 +20,9 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Notificaciones notis;
 	private Publicar publicar;
 	private Pantalla_inicio pInicio;
+	private Ver_perfil__usuario_registrado_ perfilPublico;
+	private Ver_perfil_privado__usuario_registrado_ perfilPrivado;
+	private Cambiar_contrasenna cambiarContra;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
 		// TODO Auto-generated constructor stub
@@ -32,7 +35,13 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		
 		this.getbInicio().addClickListener(event -> {
 			
+			if(configPerf != null)
+				configPerf.clear();
 			
+			if(busqueda != null)
+				busqueda.clear();
+			
+			this.pantallaInicio.clear();
 			this.vl.removeAll();
 			this.vl.add(pantallaInicio = new Video_otro_usuario(this.vl, this));
 			
@@ -41,6 +50,14 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		
 		this.getbBusqueda().addClickListener(event ->{
 			
+			if(configPerf != null)
+				configPerf.clear();
+			
+			if(busqueda != null)
+				busqueda.clear();
+			
+			this.pantallaInicio.clear();
+			
 			this.vl.removeAll();
 			this.vl.add(busqueda = new Buscar__usuario_registrado_(this.vl, this));
 			
@@ -48,6 +65,13 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		
 		this.getbPerfil().addClickListener(event -> {
 			
+			if(configPerf != null)
+				configPerf.clear();
+			
+			if(busqueda != null)
+				busqueda.clear();
+			
+			this.pantallaInicio.clear();
 			this.vl.removeAll();
 			this.vl.add(perfil = new Mi_perfil(this.vl, this));
 			
@@ -55,12 +79,28 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		
 		this.getbNotis().addClickListener(event -> {
 			
+			if(configPerf != null)
+				configPerf.clear();
+			
+			if(busqueda != null)
+				busqueda.clear();
+			
+			this.pantallaInicio.clear();
+			
 			this.vl.removeAll();
 			this.vl.add(notis = new Notificaciones(this.vl, this));
 			
 		});
 		
 		this.getbPublicar().addClickListener(event -> {
+			
+			if(configPerf != null)
+				configPerf.clear();
+			
+			if(busqueda != null)
+				busqueda.clear();
+			
+			this.pantallaInicio.clear();
 			
 			this.vl.removeAll();
 			this.vl.add(publicar = new Publicar(this.vl, this));
@@ -76,6 +116,14 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	
 	public void cerrarSesion() {
 	
+		if(configPerf != null)
+			configPerf.clear();
+		
+		if(busqueda != null)
+			busqueda.clear();
+		
+		this.pantallaInicio.clear();
+		
 		this.user = null;
 		this.pantallaInicio = null;
 		this.busqueda = null;
@@ -86,6 +134,9 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.siguiendo = null;
 		this.notis = null;
 		this.publicar = null;
+		this.perfilPublico = null;
+		this.perfilPrivado = null;
+		this.cambiarContra = null;
 		
 		this.vl.removeAll();
 		this.vl.add(this.pInicio);
@@ -179,6 +230,66 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public void setSiguiendo(Ver_siguiendo siguiendo) {
 		this.siguiendo = siguiendo;
+	}
+
+
+	public Notificaciones getNotis() {
+		return notis;
+	}
+
+
+	public void setNotis(Notificaciones notis) {
+		this.notis = notis;
+	}
+
+
+	public Publicar getPublicar() {
+		return publicar;
+	}
+
+
+	public void setPublicar(Publicar publicar) {
+		this.publicar = publicar;
+	}
+
+
+	public Pantalla_inicio getpInicio() {
+		return pInicio;
+	}
+
+
+	public void setpInicio(Pantalla_inicio pInicio) {
+		this.pInicio = pInicio;
+	}
+
+
+	public Ver_perfil__usuario_registrado_ getPerfilPublico() {
+		return perfilPublico;
+	}
+
+
+	public void setPerfilPublico(Ver_perfil__usuario_registrado_ perfilPublico) {
+		this.perfilPublico = perfilPublico;
+	}
+
+
+	public Ver_perfil_privado__usuario_registrado_ getPerfilPrivado() {
+		return perfilPrivado;
+	}
+
+
+	public void setPerfilPrivado(Ver_perfil_privado__usuario_registrado_ perfilPrivado) {
+		this.perfilPrivado = perfilPrivado;
+	}
+
+
+	public Cambiar_contrasenna getCambiarContra() {
+		return cambiarContra;
+	}
+
+
+	public void setCambiarContra(Cambiar_contrasenna cambiarContra) {
+		this.cambiarContra = cambiarContra;
 	}
 	
 	

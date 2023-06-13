@@ -47,7 +47,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
 	
-	public Ver_perfil__usuario_registrado_(Component cabecera, basededatos.Usuario_Registrado usuario) {
+	public Ver_perfil__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
 	
 		this.getDivCabecera().add(cabecera);
 		this.getLabelSeguidores().setText("Seguidores: "+String.valueOf(usuario.seguidor.size()));

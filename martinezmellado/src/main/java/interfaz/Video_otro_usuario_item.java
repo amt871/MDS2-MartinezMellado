@@ -13,10 +13,11 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 	
 	private Video video;
 	private Usuario_Registrado usuario;
-	private Component cabecera;
+	private Mi_cabecera cabeceraUserReg;
 	private MainView inicio;
-	BDPrincipal datos;
+	private BDPrincipal datos;
 	private Usuario_Registrado miUsuario;
+	private Video_otro_usuario video_otro_usuario;
 	
 //	private Video _videoV;
 //	private ImageButton _imagenPropietarioVideoIB;
@@ -56,13 +57,14 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Video_otro_usuario_item(Usuario_Registrado miUsuario, String src, Usuario_Registrado usuario, MainView inicio, Component cabecera) {
+	public Video_otro_usuario_item(Usuario_Registrado miUsuario, String src, Usuario_Registrado usuario, MainView inicio, Mi_cabecera cabecera, Video_otro_usuario video_otro_usuario) {
 		
-		this.datos = new BDPrincipal();
+		this.datos = cabecera.getDatos();
 		this.inicio = inicio;
-		this.cabecera = cabecera;
+		this.cabeceraUserReg = cabecera;
 		this.usuario = usuario;
 		this.miUsuario = miUsuario;
+		this.video_otro_usuario = video_otro_usuario;
 		
 		this.getUsuarioButton().addClickListener(event -> {
 		
@@ -88,26 +90,33 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 	}
 	
-	/*private void verPerfilOtroUsuario() {
+	private void verPerfilOtroUsuario() {
 		
 		if(this.usuario.getPrivado()) {
 			
 			//System.out.println(miUsuario.getUsuario());
 			
 			//Notification.show("Aun no implementado");
-			if(this.miUsuario.seguido.contains(this.usuario))
-				this.inicio.cambiarPantalla(new Ver_perfil__usuario_registrado_(this.cabecera, this.usuario));
-			else
-				this.inicio.cambiarPantalla(new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
+			if(this.miUsuario.seguido.contains(this.usuario)) {
+				this.cabeceraUserReg.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.inicio.removeAll();
+				this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
+			}else {
+				this.cabeceraUserReg.setPerfilPrivado(new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.inicio.removeAll();
+				this.inicio.add(this.cabeceraUserReg.getPerfilPrivado());
 			//this.inicio.cambiarPantalla(cabecera);
-			
+			}
 		}else {
 			
-			this.inicio.cambiarPantalla(new Ver_perfil__usuario_registrado_(this.cabecera, this.usuario));
-			
+			this.cabeceraUserReg.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+			this.inicio.removeAll();
+			this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
 			
 		}
 		
-	}*/
+		this.video_otro_usuario.clear();
+		
+	}
 	
 }

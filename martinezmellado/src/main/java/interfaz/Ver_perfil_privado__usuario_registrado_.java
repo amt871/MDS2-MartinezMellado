@@ -8,7 +8,7 @@ import vistas.VistaVer_perfil_privado__usuario_registrado_;
 public class Ver_perfil_privado__usuario_registrado_ extends VistaVer_perfil_privado__usuario_registrado_ {
 //	private Label _usuarioPrivadoL;
 	
-	public Ver_perfil_privado__usuario_registrado_(Component cabecera, Usuario_Registrado usuario) {
+	public Ver_perfil_privado__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
 		
 		this.getDivCabecera().add(cabecera);
 		this.getLabelSeguidores().setText("Seguidores: "+String.valueOf(usuario.seguidor.size()));
