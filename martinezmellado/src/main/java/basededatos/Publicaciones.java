@@ -251,4 +251,18 @@ public class Publicaciones {
 		}
 		return null;
 	}
+	
+	public Publicacion cargarVideoPoID(int id) throws PersistentException {
+		Publicacion u = null;
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+			u = PublicacionDAO.loadPublicacionByQuery("ID = '" + id + "'", null);
+			t.commit();
+			return u;
+		} catch (Exception e) {
+			t.rollback();
+			e.printStackTrace();
+		}
+		return u;
+	}
 }

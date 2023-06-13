@@ -471,6 +471,33 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	@Override
 	public Publicacion[] listarUltimasPublicacions(int id) {
 		// TODO Auto-generated method stub
+		try {
+		return this.publicaciones.listarUltimasPublicacions(id);	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+
+	@Override
+	public Publicacion cargarVideoPoID(int id) {
+		// TODO Auto-generated method stub
+		try {
+			 return this.publicaciones.cargarVideoPoID(id);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+
+	@Override
+	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		try {
+			return this.cargarComentario(usuario, publicacion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 		return null;
 	}
 }
