@@ -19,12 +19,17 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 	
 	
 
-	public Notifiaciones_item(String tipo, Usuario_Registrado emisor, Publicacion publicacion, boolean comentario, BDPrincipal datos) {
+	public Notifiaciones_item(String tipo, Usuario_Registrado emisor, Publicacion publicacion, boolean comentario, BDPrincipal datos, int id) {
 		// TODO Auto-generated constructor stub
 		
 		this.getIdBotonVista().addClickListener(event -> {
-			datos.cambiarNotificacion(0);
+			datos.cambiarNotificacion(id);
         });
+		
+		this.getIdImagenUsr().addClickListener(event -> {
+			
+        });
+		
 		switch (tipo) {
 		case "comentario":
 			this.getbAceptar().setVisible(false);

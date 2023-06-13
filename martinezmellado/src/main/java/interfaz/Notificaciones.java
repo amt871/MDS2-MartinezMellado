@@ -105,7 +105,9 @@ public class Notificaciones extends VistaNotificaciones {
 				array.add(new Notifiaciones_item(listaNotificaciones.get(i).getTipo(),
 						usr,
 						publicacion,
-						listaNotificaciones.get(i).getComentario(), this.datos));
+						listaNotificaciones.get(i).getComentario(),
+						this.datos,
+						listaNotificaciones.get(i).getID()));
 				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
 				array.get(i).getStyle().set("position", "relative");
 				array.get(i).getStyle().set("height", "30%");
