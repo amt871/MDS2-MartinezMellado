@@ -97,4 +97,17 @@ public class Comentarios {
 			e.printStackTrace();
 		}
 	}
+	
+	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion) throws PersistentException {
+		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		    try { 
+		    	Comentario aux =  ComentarioDAO.loadComentarioByQuery("autor = '" + usuario.getUsuario() + "' and publicacion = '" + publicacion.getVideo() + '"', null);	    	
+		    	t.commit();
+		    	return aux;
+		    }catch (Exception e) {
+		        t.rollback();
+		        e.printStackTrace();
+		    }
+		    return null;
+	}
 }

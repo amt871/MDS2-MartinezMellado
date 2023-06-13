@@ -56,4 +56,8 @@ public interface iUsuario_Registrado {
 	public Usuario_Registrado[] listarUltimosUsuarios(int id);
 	
 	public Publicacion[] listarUltimasPublicacions(int id);
+	
+	public Publicacion cargarVideoPoID(int id);
+	
+	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion);
 }

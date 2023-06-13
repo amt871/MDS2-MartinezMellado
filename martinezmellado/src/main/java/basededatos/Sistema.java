@@ -263,6 +263,16 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public Publicacion cargarVideoPoID(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 }
