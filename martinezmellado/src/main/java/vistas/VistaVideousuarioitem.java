@@ -7,6 +7,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-videousuarioitem template.
@@ -20,9 +21,8 @@ public class VistaVideousuarioitem extends LitTemplate {
 
     @Id("divVideo")
 	private HorizontalLayout divVideo;
-	@Id("labelUsuario")
-	private Label labelUsuario;
-
+	@Id("buttonUsuario")
+	private Button buttonUsuario;
 	/**
      * Creates a new VistaVideousuarioitem.
      */
@@ -38,14 +38,13 @@ public class VistaVideousuarioitem extends LitTemplate {
 		this.divVideo = divVideo;
 	}
 
-	public Label getLabelUsuario() {
-		return labelUsuario;
+	public Button getButtonUsuario() {
+		return buttonUsuario;
 	}
 
-	public void setLabelUsuario(Label labelUsuario) {
-		this.labelUsuario = labelUsuario;
+	public void setButtonUsuario(Button buttonUsuario) {
+		this.buttonUsuario = buttonUsuario;
 	}
 
-    
-    
+
 }

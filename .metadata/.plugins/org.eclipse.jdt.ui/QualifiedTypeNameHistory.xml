@@ -32,7 +32,6 @@
     <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
     <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
     <fullyQualifiedTypeName name="org.hibernate.mapping.Set"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="basededatos.PublicacionDAO"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
 </qualifiedTypeNameHistroy>

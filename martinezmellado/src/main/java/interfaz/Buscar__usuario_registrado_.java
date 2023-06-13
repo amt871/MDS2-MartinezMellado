@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
@@ -101,9 +102,9 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		
 		for(int i = 0; i<publicaciones.length && cont < 8; i++) {
 			
-			if(this.usuario.seguido.contains(publicaciones[i].getRealizada()))
+			if(!this.usuario.seguido.contains(publicaciones[i].getRealizada()) && publicaciones[i].getRealizada().getPrivado())
 				continue;
-			if(/*i==0 || */i%4==0) {
+			if(/*i==0 || */cont%4==0) {
 				array.add(new HorizontalLayout());
 				array.get(array.size()-1).setHeight("100%");
 				array.get(array.size()-1).setWidth("100%");
@@ -113,11 +114,62 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 				vlVideos.add(array.get(array.size()-1));
 			}
 			if (array.size() == 0) break;
-			array.get(array.size()-1).add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			array.get(array.size()-1).add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", "")),this.getCabecera(),this));
+			cont++;
+			//System.out.println("annadido item");
+			//System.out.println(vlVideos.getComponentCount());
+		}
+		
+		if(vlVideos.getComponentCount()==0) {
+			vlVideos.setAlignItems(Alignment.CENTER);
+			vlVideos.setJustifyContentMode(JustifyContentMode.CENTER);
+			vlVideos.add(new Label("Ningun usuario publico a subido un video recientemente"));
+		}
+		
+		/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+		 
+
+			if (array.size() == 0) break;
+			
+			if(cont == 0) {
+				this.getDivVideo1().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 1) {
+				this.getDivVideo2().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 2) {
+				this.getDivVideo3().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 3) {
+				this.getDivVideo4().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 4) {
+				this.getDivVideo5().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 5) {
+				this.getDivVideo6().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 6) {
+				this.getDivVideo7().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 7) {
+				this.getDivVideo8().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
 			cont++;
 			//System.out.println("annadido item");
 			
 		}
+		  
+		  */
+		 
 		
 		/*ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
 		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
@@ -149,6 +201,8 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		if(array!=null)
 			this.array.clear();
 		this.array = null;
+		this.usuarios = null;
+		this.publicaciones = null;
 		
 	}
 	

@@ -165,7 +165,7 @@ public class Usuarios_Registrados {
 
 	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNacimiento,
 			String aCorreoElectronico, String aDescripcion) throws PersistentException {
-		System.out.println("Estoy en Usuario_Registrados");
+		//System.out.println("Estoy en Usuario_Registrados");
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			
@@ -194,9 +194,10 @@ public class Usuarios_Registrados {
 			Usuario_RegistradoDAO.save(nuevo);
 			
 			Usuario_RegistradoDAO.refresh(nuevo);
-			
 			t.commit();
 			//System.out.println("Usuarios_Registrados bien");
+			//MartinezMelladoMDSPersistentManager.instance().getSession().flush();
+			
 			return true;
 
 		} catch (Exception e) {
@@ -260,6 +261,8 @@ public class Usuarios_Registrados {
 			
 			t.commit();
 
+			//MartinezMelladoMDSPersistentManager.instance().getSession().flush();
+			
 			return true;
 		} catch (Exception e) {
 			t.rollback();
