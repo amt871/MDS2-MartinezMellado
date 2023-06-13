@@ -57,11 +57,12 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 	private String fecha;
 	private BDPrincipal datos;
 
-	private String pathImage;
+	//private String pathImage;
 
 	private MemoryBuffer memoryBuffer;
 
 	private InputStream fileData;
+	private Mi_cabecera cabecera;
 	//private MainView vl;
 	
 	
@@ -72,6 +73,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		this.usuario = cabecera.getUser();
 		this.setCabecera(cabecera);
 		this.setConfig(config);
+		this.cabecera = cabecera;
 
 		if (this.getIdFechaDeNaciemiento().isEmpty()) {
 			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
@@ -115,9 +117,37 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 			this.getElement().setPropertyJson("files", Json.createArray());
 
 		});
+		
+		
+		this.getbCambiarFoto().addClickListener(event -> {
+			
+			if(this.cambiarFoto()) {
+
+				this.getCabecera().getbPerfil().click();
+			
+			}
+			
+		});
+		
+		this.getIdBGuardar().addClickListener(event -> {
+		
+			if(cambiarDatos())
+				this.getCabecera().getbPerfil().click();
+			
+		});
+		
+		this.getbCambiarContrasenna().addClickListener(event -> {
+			
+			this.cabecera.setCambiarContra(new Cambiar_contrasenna(this.usuario, this.cabecera));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getCambiarContra());
+			
+		});
+		
+		
 	}
 
-	public Usuario_Registrado cambiarDatos() {
+	public boolean cambiarDatos() {
 
 		if (!this.getIdNombre().getValue().equals(this.usuario.getNombre())
 				|| !this.getIdApellidos().getValue().equals(this.usuario.getApellido())
@@ -139,7 +169,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 				// e.printStackTrace();
 				Notification.show("Fecha incorrecta");
 
-				return null;
+				return false;
 			}
 
 			String[] items = this.getIdFechaDeNaciemiento().getValue().split("/");
@@ -164,7 +194,8 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 			if (datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(),
 					this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion())) {
 				Notification.show("Datos guardados correctamente");
-				return this.usuario;// No realiza cambios en la base de datos
+				this.getCabecera().setUser(this.usuario);
+				return true;// No realiza cambios en la base de datos
 			}
 
 			/*
@@ -172,11 +203,11 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 			 * aFechaDeNaciemiento, String aCorreoElectronico, String aDescripcion
 			 */
 
-			return null;
+			return false;
 
 		} else {
 			Notification.show("Nada que cambiar");
-			return null;
+			return false;
 		}
 
 	}
@@ -240,13 +271,8 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 	//}
 
-	public void clear() {
 
-		this.getIdFechaDeNaciemiento().clear();
-
-	}
-
-	public Usuario_Registrado cambiarFoto() {
+	public boolean cambiarFoto() {
 
 		if (fileData != null) {
 
@@ -274,7 +300,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 				// TODO Auto-generated catch block
 				// e.printStackTrace();
 				Notification.show("Error interno al cargar la imagen");
-				return null;
+				return false;
 			}
 
 			this.getUploadImagen().getElement().setPropertyJson("files", Json.createArray());
@@ -286,18 +312,31 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 				if (!datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(),
 						this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion())) {
 					Notification.show("Error la guardar la imagen");
-					return null;
+					return false;
 				}
 
 
 			}
 			Notification.show("Datos guardados correctamente. Refresca la pagina para ver los cambios");
-			return this.usuario;
+			this.getCabecera().setUser(this.usuario);
+			return true;
 
 		}
 		
-		return null;
+		return false;
 
+	}
+	
+	public void clear() {
+		
+		if(this.memoryBuffer != null)
+			this.memoryBuffer = null;
+
+		if(this.fileData != null)
+			this.fileData = null;
+		
+		this.getIdFechaDeNaciemiento().clear();
+		
 	}
 
 }

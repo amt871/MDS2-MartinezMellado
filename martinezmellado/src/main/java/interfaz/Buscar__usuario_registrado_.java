@@ -36,6 +36,9 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 	private Usuario_Registrado usuario;
 	private BDPrincipal datos;
 	private MainView vl;
+	private VerticalLayout vlUsuarios;
+	private VerticalLayout vlVideos;
+	private ArrayList<HorizontalLayout> array;
 	
 	public Buscar__usuario_registrado_(MainView vl, Mi_cabecera mi_cabecera) {
 		// TODO Auto-generated constructor stub
@@ -48,10 +51,10 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		this.setCabecera(mi_cabecera);
 		this.vl = vl;
 		
-		VerticalLayout vlUsuarios = new VerticalLayout();
-		VerticalLayout vlVideos = new VerticalLayout();
+		this.vlUsuarios = new VerticalLayout();
+		this.vlVideos = new VerticalLayout();
 		
-		ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
+		this.array = new ArrayList<HorizontalLayout>();
 		//ArrayList<VerticalLayout> verticales = new ArrayList<VerticalLayout>();
 		
 		Usuario_Registrado[] usuarios = datos.listarUltimosUsuarios(this.usuario.getID());
@@ -74,7 +77,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 				vlUsuarios.add(array.get(array.size()-1));
 			}
 			if (array.size() == 0) break;
-			array.get(array.size()-1).add(new Usuarionombreitem(usuarios[i].getFoto(), usuarios[i].getUsuario()));
+			array.get(array.size()-1).add(new Usuarionombreitem(usuarios[i], this.getCabecera(), this.usuario, this));
 			//System.out.println("annadido item");
 			
 		}
@@ -101,4 +104,15 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		vlVideos.setWidth("100%");
 		
 	}
+	
+	public void clear() {
+		
+		this.vlUsuarios = null;
+		this.vlVideos = null;
+		if(array!=null)
+			this.array.clear();
+		this.array = null;
+		
+	}
+	
 }

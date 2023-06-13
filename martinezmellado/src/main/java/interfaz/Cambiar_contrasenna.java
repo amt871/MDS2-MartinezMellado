@@ -3,6 +3,7 @@ package interfaz;
 import com.vaadin.flow.component.notification.Notification;
 
 import basededatos.BDPrincipal;
+import basededatos.Usuario_Registrado;
 import vistas.VistaCambiar_contrasenna;
 
 public class Cambiar_contrasenna extends VistaCambiar_contrasenna{
@@ -13,13 +14,37 @@ public class Cambiar_contrasenna extends VistaCambiar_contrasenna{
 //		throw new UnsupportedOperationException();
 //	}
 	
-	private basededatos.Usuario_Registrado usuario;
-	private basededatos.BDPrincipal datos;
+	private Usuario_Registrado usuario;
+	private BDPrincipal datos;
 	
-	public void setUsuario(basededatos.Usuario_Registrado user) {//Inicializar
-		
+	public Cambiar_contrasenna(Usuario_Registrado user, Mi_cabecera cabecera) {
+		// TODO Auto-generated constructor stub
+//	}
+//
+//	public void setUsuario(basededatos.Usuario_Registrado user) {//Inicializar
+//		
 		this.usuario=user;
-		this.datos = new basededatos.BDPrincipal();
+		this.datos = cabecera.getDatos();
+		this.setCabecera(cabecera);
+		
+		this.getbGuardar().addClickListener(event -> {
+			
+			if(cambiarContrasenna())
+				if(this.getCabeceraCom()!=null)
+					this.getCabeceraCom().getbPerfil().click();
+				else
+					this.getCabecera().getPerfil().getbConfigurar().click();
+			
+		});
+		
+		this.getbCancelar().addClickListener(event -> {
+			
+			if(this.getCabeceraCom()!=null)
+				this.getCabeceraCom().getbPerfil().click();
+			else
+				this.getCabecera().getPerfil().getbConfigurar().click();
+			
+		});
 		
 	}
 	

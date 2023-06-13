@@ -23,8 +23,9 @@ import com.vaadin.flow.component.button.Button;
 @JsModule("./src/vista-cambiar_contrasenna.ts")
 public class VistaCambiar_contrasenna extends LitTemplate {
 
-	private Component cabecera;
-
+	private Mi_cabecera cabecera;
+	private Cabecera_comercial cabeceraCom;
+	
 	@Id("inPass")
 	private PasswordField inPass;
 	@Id("inPassRepeat")
@@ -69,7 +70,7 @@ public class VistaCambiar_contrasenna extends LitTemplate {
 
 	public void setCabecera(Cabecera_comercial cabeceraCom) {
 
-		this.cabecera = cabeceraCom;
+		this.cabeceraCom = cabeceraCom;
 		getDivCabecera().add(cabeceraCom);
 	}
 
@@ -89,20 +90,20 @@ public class VistaCambiar_contrasenna extends LitTemplate {
 		this.bGuardar = bGuardar;
 	}
 
-	public Component getCabecera() {
-		return cabecera;
-	}
-
-	public void setCabecera(Component cabecera) {
-		this.cabecera = cabecera;
-	}
-
 	public Button getbCancelar() {
 		return bCancelar;
 	}
 
 	public void setbCancelar(Button bCancelar) {
 		this.bCancelar = bCancelar;
+	}
+
+	public Cabecera_comercial getCabeceraCom() {
+		return cabeceraCom;
+	}
+
+	public Mi_cabecera getCabecera() {
+		return cabecera;
 	}
 
 	
