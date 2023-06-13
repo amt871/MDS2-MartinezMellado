@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
-import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-button/src/vaadin-button.js';
 
 @customElement('vista-buscar__usuario_registrado_')
 export class VistaBuscar__usuario_registrado_ extends LitElement {
@@ -29,38 +29,7 @@ export class VistaBuscar__usuario_registrado_ extends LitElement {
    </vaadin-vertical-layout>
    <vaadin-vertical-layout style="width: 100%; align-items: center; justify-content: center; height: 45%;">
     <label style="padding-bottom: var(--lumo-space-s);">Videos mas recientes </label>
-    <div id="divVideos" style="width: 100%; height: 100%; position: relative;">
-     <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; margin-left: var(--lumo-space-s);">
-      <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-       <vaadin-button id="item1" style="width: 25%; height: 100%;">
-        <div id="divItem1" style="width: 100%; height: 100%;"></div>
-       </vaadin-button>
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-      </vaadin-horizontal-layout>
-      <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-       <vaadin-button style="width: 25%; height: 100%;">
-         Button 
-       </vaadin-button>
-      </vaadin-horizontal-layout>
-     </vaadin-vertical-layout>
-    </div>
+    <div id="divVideos" style="width: 100%; height: 100%; position: relative;"></div>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 30%; height: 100%; align-items: center;">

@@ -245,11 +245,18 @@ public class Publicaciones {
 			}
 
 			t.commit();
+			
+			Publicacion[] devolver = new Publicacion[listaDevolucion.size()];
+			
+			for(int i = 0; i<devolver.length; i++)
+				devolver[i] = listaDevolucion.get(i);
+			return devolver;
+				
 		} catch (Exception e) {
 			t.rollback();
 			throw new PersistentException(e);
 		}
-		return null;
+		
 	}
 	
 	public Publicacion cargarVideoPoID(int id) throws PersistentException {
