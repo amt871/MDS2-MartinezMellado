@@ -60,7 +60,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		vlUsuarios.setHeight("100%");
 		vlUsuarios.setWidth("100%");
 		
-		for(int i = 0; i<usuarios.length; i++) {
+		for(int i = 0; i<usuarios.length || i < 8; i++) {
 			
 			if(this.usuario.seguido.contains(usuarios[i]))
 				continue;
