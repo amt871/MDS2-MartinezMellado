@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
@@ -39,6 +40,8 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 	private VerticalLayout vlUsuarios;
 	private VerticalLayout vlVideos;
 	private ArrayList<HorizontalLayout> array;
+	private Usuario_Registrado[] usuarios;
+	private Publicacion[] publicaciones;
 	
 	public Buscar__usuario_registrado_(MainView vl, Mi_cabecera mi_cabecera) {
 		// TODO Auto-generated constructor stub
@@ -57,13 +60,15 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		this.array = new ArrayList<HorizontalLayout>();
 		//ArrayList<VerticalLayout> verticales = new ArrayList<VerticalLayout>();
 		
-		Usuario_Registrado[] usuarios = datos.listarUltimosUsuarios(this.usuario.getID());
+		this.usuarios = datos.listarUltimosUsuarios(this.usuario.getID());
 		
 		this.getDivUsuarios().add(vlUsuarios);
 		vlUsuarios.setHeight("100%");
 		vlUsuarios.setWidth("100%");
 		
-		for(int i = 0; i<usuarios.length && i < 8; i++) {
+		int cont = 0;
+		
+		for(int i = 0; i<usuarios.length && cont < 8; i++) {
 			
 			if(this.usuario.seguido.contains(usuarios[i]))
 				continue;
@@ -78,9 +83,93 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			}
 			if (array.size() == 0) break;
 			array.get(array.size()-1).add(new Usuarionombreitem(usuarios[i], this.getCabecera(), this.usuario, this));
+			cont++;
 			//System.out.println("annadido item");
 			
 		}
+		
+		//this.getDivItem1().add(new Video("Usuarios\\Juanra1997\\videos\\2023-06-05T23-00-09.914853900.mp4"));
+		
+		this.publicaciones = this.datos.listarUltimasPublicacions(this.usuario.getID());
+		
+		this.getDivVideos().add(vlVideos);
+		vlVideos.setHeight("100%");
+		vlVideos.setWidth("100%");
+		
+		cont = 0;
+		
+		//System.out.println(this.publicaciones == null);
+		
+		for(int i = 0; i<publicaciones.length && cont < 8; i++) {
+			
+			if(!this.usuario.seguido.contains(publicaciones[i].getRealizada()) && publicaciones[i].getRealizada().getPrivado())
+				continue;
+			if(/*i==0 || */cont%4==0) {
+				array.add(new HorizontalLayout());
+				array.get(array.size()-1).setHeight("100%");
+				array.get(array.size()-1).setWidth("100%");
+				array.get(array.size()-1).getStyle().set("position", "relative");
+				array.get(array.size()-1).setAlignItems(Alignment.CENTER);
+				array.get(array.size()-1).setJustifyContentMode(JustifyContentMode.CENTER);
+				vlVideos.add(array.get(array.size()-1));
+			}
+			if (array.size() == 0) break;
+			array.get(array.size()-1).add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", "")),this.getCabecera(),this));
+			cont++;
+			//System.out.println("annadido item");
+			//System.out.println(vlVideos.getComponentCount());
+		}
+		
+		if(vlVideos.getComponentCount()==0) {
+			vlVideos.setAlignItems(Alignment.CENTER);
+			vlVideos.setJustifyContentMode(JustifyContentMode.CENTER);
+			vlVideos.add(new Label("Ningun usuario publico a subido un video recientemente"));
+		}
+		
+		/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+		 
+
+			if (array.size() == 0) break;
+			
+			if(cont == 0) {
+				this.getDivVideo1().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 1) {
+				this.getDivVideo2().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 2) {
+				this.getDivVideo3().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 3) {
+				this.getDivVideo4().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 4) {
+				this.getDivVideo5().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 5) {
+				this.getDivVideo6().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 6) {
+				this.getDivVideo7().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			if(cont == 7) {
+				this.getDivVideo8().add(new Videousuarioitem(publicaciones[i].getRealizada(), new Video(publicaciones[i].getVideo().replace("src/main/webapp/", ""))));
+			}
+			
+			cont++;
+			//System.out.println("annadido item");
+			
+		}
+		  
+		  */
+		 
 		
 		/*ArrayList<Publicacion> videos = new ArrayList<Publicacion>();
 		ArrayList<Usuario_Registrado> seguidos = new ArrayList<Usuario_Registrado>();
@@ -112,6 +201,8 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		if(array!=null)
 			this.array.clear();
 		this.array = null;
+		this.usuarios = null;
+		this.publicaciones = null;
 		
 	}
 	
