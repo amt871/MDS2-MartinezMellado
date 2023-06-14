@@ -98,7 +98,8 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 			for (Usuario_Registrado usuario_Registrado : seguidos) {
 				videos.addAll(Arrays.asList(this.datos.listarVideosUsuario(usuario_Registrado.getID())));
 			}
-
+			
+			Collections.reverse(videos);
 		}
 		if (videos.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
