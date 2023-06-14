@@ -260,7 +260,6 @@ public class Publicaciones {
 			e.printStackTrace();
 			return null;
 		}
-		return null;
 		
 	}
 	
