@@ -377,12 +377,14 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public void segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
+	public boolean segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
 		// TODO Auto-generated method stub
 		try {
-			this.segimiento(seguido, seguidor);
+			return this.usuariosRegistrados.segimiento(seguido, seguidor);
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
+			return false;
 		}
 	}
 

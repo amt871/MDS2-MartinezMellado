@@ -41,7 +41,7 @@ public interface iUsuario_Registrado {
 	
 	public void annadirNotificacion(String tipo, Usuario_Registrado receptor, Usuario_Registrado emisor, Publicacion publicacion);
 
-	public void segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor);
+	public boolean segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor);
 	
 	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion);
 	

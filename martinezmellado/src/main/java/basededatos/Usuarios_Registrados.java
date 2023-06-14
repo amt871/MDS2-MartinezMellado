@@ -329,20 +329,45 @@ public class Usuarios_Registrados {
 		}
 	}
 	
-	public void segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor) throws PersistentException {
+	public boolean segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor) throws PersistentException {
 			PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 			try {
-				seguido.seguidor.add(seguidor);
-				seguidor.seguido.add(seguido);
+				
+				//System.out.println()
+				
+				seguido = Usuario_RegistradoDAO.getUsuario_RegistradoByORMID(seguido.getID());
+				seguidor = Usuario_RegistradoDAO.getUsuario_RegistradoByORMID(seguidor.getID());
+				
+				//System.out.println(seguido.seguidor.contains(seguidor));
+				//System.out.println(seguidor.seguido.contains(seguido));
+				
+				if(!seguido.seguidor.contains(seguidor)){
+					seguido.seguidor.add(seguidor);
+					//System.out.println("Añado seguidor");
+				}
+				else {
+					seguido.seguidor.remove(seguidor);
+					//System.out.println("Elimino seguidor");
+				}
+				
+				//System.out.println(seguido.seguidor.contains(seguidor));
+				//System.out.println(seguidor.seguido.contains(seguido));
 				
 				Usuario_RegistradoDAO.save(seguidor);
+				//Usuario_RegistradoDAO.refresh(seguidor);
+				
 				Usuario_RegistradoDAO.save(seguido);
+				//Usuario_RegistradoDAO.refresh(seguido);
 
 				t.commit();
+
 			} catch (Exception e) {
 				t.rollback();
 				e.printStackTrace();
+				return false;
 			}
+			
+			return true;
 	}
 	
 	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) throws PersistentException {

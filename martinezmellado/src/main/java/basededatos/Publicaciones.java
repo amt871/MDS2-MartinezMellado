@@ -199,6 +199,7 @@ public class Publicaciones {
 			t.rollback();
 			e.printStackTrace();
 		}
+		
 	}
 
 	public Publicacion cargarVideoPorRuta(String ruta) throws PersistentException {
@@ -256,6 +257,7 @@ public class Publicaciones {
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
+			return null;
 		}
 		
 	}

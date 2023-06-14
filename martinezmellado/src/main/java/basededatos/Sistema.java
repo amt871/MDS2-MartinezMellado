@@ -219,9 +219,9 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		
 	}
 	@Override
-	public void segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
+	public boolean segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 	@Override
 	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) {
