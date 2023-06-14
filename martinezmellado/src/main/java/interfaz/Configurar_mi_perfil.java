@@ -318,7 +318,8 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 			}
 			Notification.show("Datos guardados correctamente. Refresca la pagina para ver los cambios");
-			this.getCabecera().setUser(this.usuario);
+			this.getCabecera().setUser(null);
+			this.getCabecera().setUser(this.datos.cargarDatosUsuario(this.usuario.getUsuario()));
 			return true;
 
 		}

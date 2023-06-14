@@ -423,6 +423,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			this.publicaciones.annadirMeGusta(publicacion, usuario);
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 

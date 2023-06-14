@@ -187,11 +187,12 @@ public class Publicaciones {
 			
 			Publicacion auxP = PublicacionDAO.loadPublicacionByQuery("ID = '" + publicacion + "'" , null);
 			Usuario_Registrado auxU = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("ID = '" + usuario + "'", null);
+			
 			auxP.le_gusta.add(auxU);
 			auxU.le_gusta.add(auxP);
 
-			PublicacionDAO.refresh(auxP);
-			Usuario_RegistradoDAO.refresh(auxU);
+			PublicacionDAO.save(auxP);
+			Usuario_RegistradoDAO.save(auxU);
 
 			t.commit();
 
@@ -257,6 +258,7 @@ public class Publicaciones {
 			t.rollback();
 			e.printStackTrace();
 		}
+		return null;
 		
 	}
 	

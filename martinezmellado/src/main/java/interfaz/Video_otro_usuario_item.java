@@ -68,7 +68,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 		this.getUsuarioButton().addClickListener(event -> {
 		
-			//verPerfilOtroUsuario();
+			verPerfilOtroUsuario();
 			
 		});
 		
@@ -83,15 +83,18 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		this.getIdNumMg().setText(String.valueOf(publicacion.le_gusta.size()));
 		
 		this.getIdBMeGusta().addClickListener(event -> {
-			
-			if(publicacion.le_gusta.contains(miUsuario)) {
+			boolean flag = false;
+			for (Usuario_Registrado usuarios : publicacion.le_gusta.toArray()) {
+				if (usuarios.getUsuario().equals(miUsuario.getUsuario())) {
+					flag = true;
+				}
+			}
+			if(flag) {
 				Notification.show("Ya le has dado me gusta a esta publicación");
 			}else {
 				this.datos.annadirMeGusta(publicacion.getID(), this.miUsuario.getID());
 				this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacion);
-			}
-			
-			
+			}	
 
 		});
 		
