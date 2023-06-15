@@ -343,10 +343,12 @@ public class Usuarios_Registrados {
 				
 				if(!seguido.seguidor.contains(seguidor)){
 					seguido.seguidor.add(seguidor);
+					seguidor.seguido.add(seguido);
 					//System.out.println("Añado seguidor");
 				}
 				else {
 					seguido.seguidor.remove(seguidor);
+					seguidor.seguido.remove(seguido);
 					//System.out.println("Elimino seguidor");
 				}
 				
