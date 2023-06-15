@@ -62,7 +62,7 @@ public class Mi_perfil extends VistaMi_perfil {
 
 		//datos = new basededatos.BDPrincipal();
 		this.datos = mi_cabecera.getDatos();
-		this.usuario = mi_cabecera.getUser();
+		this.usuario = this.datos.cargarDatosUsuario(mi_cabecera.getUser().getUsuario());
 		this.setCabecera(mi_cabecera);
 		//this.inicio = vl2;
 		

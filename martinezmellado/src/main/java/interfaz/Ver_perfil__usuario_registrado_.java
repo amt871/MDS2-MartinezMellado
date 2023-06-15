@@ -75,10 +75,13 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getSeguirButton().addClickListener(event ->{
 			
 			if(this.cabecera.getDatos().segimiento(this.usuario, this.cabecera.getUser()))
-				if(this.getSeguirButton().getText().equals("Seguir"))
+				if(this.getSeguirButton().getText().equals("Seguir")) {
 					this.getSeguirButton().setText("Dejar de seguir");
-				else
+					this.cabecera.getDatos().annadirNotificacion("seguir", this.usuario, this.cabecera.getUser(), null);
+				}else {
 					this.getSeguirButton().setText("Seguir");
+				}
+					
 			//Notification.show("Siguiendo");
 		});
 		

@@ -32,6 +32,14 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 			verPerfilOtroUsuario();
         });
 		
+		this.getbAceptar().addClickListener(event -> {
+			datos.segimiento(emisor, miUsuario);
+        });
+		
+		this.getbRechazar().addClickListener(event -> {
+			datos.cambiarNotificacion(id);
+        });
+		
 		switch (tipo) {
 		case "comentario":
 			this.getbAceptar().setVisible(false);
@@ -46,10 +54,17 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "seguir":
-			this.getIdBotonVista().setVisible(false);
-			this.getIdTextoNotificación().setText("El usuario " + emisor.getUsuario() + "ha solicitado seguirte");
+			if (miUsuario.getPrivado()) {
+				this.getIdBotonVista().setVisible(false);
+				this.getIdTextoNotificación().setText("El usuario " + emisor.getUsuario() + " ha solicitado seguirte");
+			}else {
+				this.getbAceptar().setVisible(false);
+				this.getbRechazar().setVisible(false);
+				this.getIdTextoNotificación().setText("El usuario " + emisor.getUsuario() + " ha empezado a seguirte");
+			}
 			this.getIdVideoRelacionado().setSrc(emisor.getFoto());
 			this.getIdNombreUsuario().setText(emisor.getUsuario());
+			this.getIdVideoRelacionado().setVisible(false);
 			break;
 
 		default:

@@ -52,18 +52,21 @@ public class Notificaciones {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
 	        Notificacion notificacion = NotificacionDAO.createNotificacion();
+	        Usuario_Registrado auxReceptor = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(receptor.getORMID());
+	        Usuario_Registrado auxEmisor = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(emisor.getORMID());
+	        
 	        notificacion.setTipo(tipo);
 	        notificacion.setFecha(Date.valueOf(LocalDate.now()));
 	        if (!(tipo == "seguir")) {
 	        	notificacion.setPublicacion(publicacion.getID());
 	        }
-	        notificacion.setTiene(receptor);
-	        notificacion.setUsuarioOrigen(emisor.getUsuario());
+	        notificacion.setTiene(auxReceptor);
+	        notificacion.setUsuarioOrigen(auxEmisor.getUsuario());
 	        
-	        receptor.envia.add(notificacion);
+	        auxReceptor.envia.add(notificacion);
 	        
 	        NotificacionDAO.save(notificacion);
-	        Usuario_RegistradoDAO.refresh(emisor);
+	        Usuario_RegistradoDAO.refresh(auxEmisor);
 	        
 	        t.commit();
 	        
