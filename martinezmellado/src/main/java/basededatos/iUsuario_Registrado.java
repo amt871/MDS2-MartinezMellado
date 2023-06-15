@@ -35,7 +35,7 @@ public interface iUsuario_Registrado {
 	
 	public void añadirPublicacionHashTag(  String hashtag, Publicacion publicacion );
 	
-	public void annadirComentario(String usuario, Publicacion publicacion, String comentario);
+	public boolean annadirComentario(String usuario, Publicacion publicacion, String comentario);
 	
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario);
 	
@@ -60,4 +60,6 @@ public interface iUsuario_Registrado {
 	public Publicacion cargarVideoPoID(int id);
 	
 	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion);
+	
+	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion);
 }

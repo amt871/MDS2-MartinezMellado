@@ -3,6 +3,7 @@ import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-vista_detalle__usuario_registrado_')
 export class VistaVista_detalle__usuario_registrado_ extends LitElement {
@@ -25,16 +26,18 @@ export class VistaVista_detalle__usuario_registrado_ extends LitElement {
    <img style="width: 20%; height: 12%;" id="imgUser">
    <label id="labelUsuario">Usuario</label>
    <vaadin-horizontal-layout style="height: 5%; width: 60%; align-items: center; justify-content: space-around;">
-    <label id="labelFecha">Fecha</label>
     <label id="labelUbi">Ubicacion</label>
+    <label id="labelFecha">Fecha</label>
    </vaadin-horizontal-layout>
    <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center;">
     <label id="labelDescripcion">Descripcion</label>
    </vaadin-horizontal-layout>
-   <div id="divComentarios" style="width: 90%; height: 50%;"></div>
+   <div id="divComentarios" style="width: 90%; height: 50%; position: relative;">
+    <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+   </div>
    <vaadin-horizontal-layout style="justify-content: center; align-items: center; width: 90%;">
     <vaadin-vertical-layout style="width: 100%;">
-     <vaadin-text-field label="Escribe tu comentario" style="width: 100%;"></vaadin-text-field>
+     <vaadin-text-field label="Escribe tu comentario" style="width: 100%;" id="fieldComentario"></vaadin-text-field>
      <vaadin-button style="align-self: flex-end;" id="bAddComentario">
        Añadir comentario 
      </vaadin-button>

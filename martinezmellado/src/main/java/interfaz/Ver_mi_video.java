@@ -8,7 +8,7 @@ public class Ver_mi_video {
 //	private Label _comentarios;
 	public Mi_video_item _mi_video;
 	public Mis_me_gusta _mis_me_gusta;
-	public Comentario _comentario;
+//	public Comentario _comentario;
 
 	public void mis_me_gusta() {
 		throw new UnsupportedOperationException();

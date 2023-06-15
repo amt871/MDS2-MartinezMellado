@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.orm.criteria.CollectionExpression"/>
-    <fullyQualifiedTypeName name="org.hibernate.Criteria"/>
-    <fullyQualifiedTypeName name="org.orm.PersistentSession"/>
     <fullyQualifiedTypeName name="org.apache.catalina.session.PersistentManager"/>
     <fullyQualifiedTypeName name="org.orm.PersistentManager"/>
     <fullyQualifiedTypeName name="orm.Administrador"/>
@@ -40,24 +37,27 @@
     <fullyQualifiedTypeName name="vistas.VistaMi_video"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="vistas.VistaCambiar_contrasenna"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
     <fullyQualifiedTypeName name="vistas.VistaSiguiendo"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil__usuario_registrado_"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil_privado__usuario_registrado_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaUsuarionombreitem"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
-    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
     <fullyQualifiedTypeName name="vistas.VistaVista_detalle__usuario_registrado_"/>
     <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
+    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
+    <fullyQualifiedTypeName name="vistas.VistaComentario_item"/>
+    <fullyQualifiedTypeName name="basededatos.Comentario"/>
 </qualifiedTypeNameHistroy>

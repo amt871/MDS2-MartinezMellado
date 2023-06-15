@@ -35,8 +35,10 @@ public class Comentarios {
 	    return aux;
 	}
 	
-	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) throws PersistentException {
+	public boolean annadirComentario(String usuario, Publicacion publicacion, String comentario) throws PersistentException {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		 boolean flag = false;
+		 
 		    try { 
 		    	Usuario_Registrado usr = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + usuario +"'", null);
 		    	Comentario coment = new Comentario();
@@ -55,11 +57,13 @@ public class Comentarios {
 		    	
 		    	t.commit();
 		    	
+		    	flag = true;
 		    }catch (Exception e) {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
 		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		    return flag;
 	}
 	
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) throws PersistentException {
@@ -113,5 +117,17 @@ public class Comentarios {
 		        e.printStackTrace();
 		    }
 		    return aux;
+	}
+	
+	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion) throws PersistentException {
+		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		 
+		    try { 
+		    	return ComentarioDAO.listComentarioByQuery("publicacionID = '" + publicacion.getID()+"'", "ID DESC");	    	
+		    }catch (Exception e) {
+		        t.rollback();
+		        e.printStackTrace();
+		    }
+		    return null;
 	}
 }

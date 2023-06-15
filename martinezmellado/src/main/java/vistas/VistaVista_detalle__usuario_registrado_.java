@@ -10,6 +10,9 @@ import interfaz.Mi_cabecera;
 
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.textfield.TextField;
 
 /**
  * A Designer generated component for the vista-vista_detalle__usuario_registrado_ template.
@@ -38,6 +41,12 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	private Label labelDescripcion;
 	@Id("divComentarios")
 	private Div divComentarios;
+	@Id("scroller")
+	private Scroller scroller;
+	@Id("bAddComentario")
+	private Button bAddComentario;
+	@Id("fieldComentario")
+	private TextField fieldComentario;
 
 	/**
      * Creates a new VistaVista_detalle__usuario_registrado_.
@@ -117,6 +126,30 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	public void setCabecera(Mi_cabecera cabecera) {
 		this.cabecera = cabecera;
 		this.getDivCabecera().add(cabecera);
+	}
+
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
+	}
+
+	public Button getbAddComentario() {
+		return bAddComentario;
+	}
+
+	public void setbAddComentario(Button bAddComentario) {
+		this.bAddComentario = bAddComentario;
+	}
+
+	public TextField getFieldComentario() {
+		return fieldComentario;
+	}
+
+	public void setFieldComentario(TextField fieldComentario) {
+		this.fieldComentario = fieldComentario;
 	}
 
 

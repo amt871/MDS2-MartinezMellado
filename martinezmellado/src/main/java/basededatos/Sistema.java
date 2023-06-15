@@ -198,9 +198,9 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		
 	}
 	@Override
-	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) {
+	public boolean annadirComentario(String usuario, Publicacion publicacion, String comentario) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 	@Override
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) {
@@ -272,6 +272,11 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public void annadirMeGusta(int publicacion, int usuario) {
 		// TODO Auto-generated method stub
 		
+	}
+	@Override
+	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

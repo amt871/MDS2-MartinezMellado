@@ -94,6 +94,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 			}else {
 				this.datos.annadirMeGusta(publicacion.getID(), this.miUsuario.getID());
 				this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacion);
+				this.getIdNumMg().setText(String.valueOf(publicacion.le_gusta.size()));
 			}	
 
 		});

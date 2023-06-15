@@ -335,14 +335,14 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public void annadirComentario(String usuario, Publicacion publicacion, String comentario) {
+	public boolean annadirComentario(String usuario, Publicacion publicacion, String comentario) {
 		// TODO Auto-generated method stub
 		try {
-			this.comentario.annadirComentario(usuario, publicacion, comentario);
+			return this.comentario.annadirComentario(usuario, publicacion, comentario);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+		return false;
 	}
 
 	@Override
@@ -501,6 +501,18 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			return this.cargarComentario(usuario, publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
+		}
+		return null;
+	}
+
+	@Override
+	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		try {
+			return this.comentario.cargarComentariosPublicacion(publicacion);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return null;
 	}
