@@ -1,6 +1,7 @@
 package interfaz;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,6 +53,7 @@ public class Publicar extends VistaPublicar {
 	
 	private Usuario_Registrado user;
 	
+	
 
 	//Object[] cosas;
 
@@ -73,9 +75,52 @@ public class Publicar extends VistaPublicar {
 		this.getUploader().addSucceededListener(event -> {
 
 			
-			if (event.getFileName().endsWith("mp4"))
+			if (event.getFileName().endsWith("mp4")) {
 				fileData = memoryBuffer.getInputStream();
-			else
+				
+				File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+				file.mkdir();
+				try {
+					file2.createNewFile();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				OutputStream out;
+				try {
+					out = new FileOutputStream(file2);
+				
+
+				byte[] buf = new byte[1024];
+				int length;
+				
+				//Notification.show("Subiendo video...");
+				
+				while ((length = fileData.read(buf)) > 0) {
+					out.write(buf, 0, length);
+				}
+				
+				fileData.reset();
+				
+				out.close();
+				
+				this.getLayoutVideo().removeAll();
+				this.getLayoutVideo().add(new Video("Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4", "90%","90%"));
+				
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				file = null;
+				file2 = null;
+				
+			}else
 				Notification.show("Solo se admiten video en MP4");
 
 		});
@@ -162,6 +207,16 @@ public class Publicar extends VistaPublicar {
 			this.getUbicacion().setValue("");
 			
 			Notification.show("Video subido");
+			
+			File file3 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+			File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+			
+			if(file2.exists())
+				file2.delete();
+			if(file3.exists())
+				file3.delete();
+			file2 = null;
+			file3 = null;
 			
 			this.vl.removeAll();
 			this.vl.add(new Mi_perfil(this.vl, this.getCabecera()));

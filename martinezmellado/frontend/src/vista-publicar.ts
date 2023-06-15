@@ -24,7 +24,7 @@ export class VistaPublicar extends LitElement {
   <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <vaadin-vertical-layout style="width: 60%; align-items: flex-start; margin-bottom: var(--lumo-space-xs); margin-left: var(--lumo-space-xs); height: 100%; justify-content: center;">
+  <vaadin-vertical-layout style="width: 60%; align-items: center; margin-bottom: var(--lumo-space-xs); margin-left: var(--lumo-space-xs); height: 100%; justify-content: center;" id="layoutVideo">
    <img style="height: 90%; width: 90%;" src="icons/video.svg" id="prevVideo">
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 40%; align-items: center; height: 100%; justify-content: center;">

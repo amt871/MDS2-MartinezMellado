@@ -1,5 +1,7 @@
 package interfaz;
 
+import java.io.File;
+
 import basededatos.BDPrincipal;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
@@ -34,7 +36,16 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.pInicio = pInicio;
 		//iniciar_sesion = null;
 		
+		File file = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp");
+		File file2 = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp/tmp.mp4");
+		
+		if(file2.exists())
+			file2.delete();
+		if(file.exists())
+			file.delete();
+		
 		this.getbInicio().addClickListener(event -> {
+			
 			
 			if(configPerf != null)
 				configPerf.clear();

@@ -2,6 +2,7 @@ package interfaz;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import org.orm.PersistentException;
 
@@ -141,12 +142,14 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 			videos = datos.listarVideosUsuario(this.usuario.getID());
 			
+			//videos
+			
 			if(videos != null) {
 				int contador = 0;
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
 				//ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
-				for(int i = 0; i<videos.length; i++) {
+				for(int i = videos.length-1; i>-1; i--) {
 					//System.out.println(videos[i].getVideo());
 					if(contador == 0) {
 						//System.out.println(contador);

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.apache.catalina.session.PersistentManager"/>
     <fullyQualifiedTypeName name="org.orm.PersistentManager"/>
     <fullyQualifiedTypeName name="orm.Administrador"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -35,7 +34,6 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
     <fullyQualifiedTypeName name="interfaz.Mi_video_item"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_video"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="vistas.VistaCambiar_contrasenna"/>
     <fullyQualifiedTypeName name="vistas.VistaSiguiendo"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil__usuario_registrado_"/>
@@ -52,7 +50,6 @@
     <fullyQualifiedTypeName name="vistas.VistaVista_detalle__usuario_registrado_"/>
     <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
     <fullyQualifiedTypeName name="vistas.VistaComentario_item"/>
     <fullyQualifiedTypeName name="basededatos.Comentario"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
 </qualifiedTypeNameHistroy>

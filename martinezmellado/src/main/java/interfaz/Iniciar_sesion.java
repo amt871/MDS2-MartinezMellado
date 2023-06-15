@@ -1,5 +1,6 @@
 package interfaz;
 
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.notification.Notification;
 
 import basededatos.BDPrincipal;
@@ -45,6 +46,18 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 		this.datos = datos;
 		this.pantInicio = pantalla_inicio;
 		this.cabeceraReg = cabeceraReg2;
+		
+		this.getInPass().addKeyPressListener(Key.ENTER, e -> {
+		
+			this.getbIniciarSesion().click();
+			
+		});
+		
+		this.getInUser().addKeyPressListener(Key.ENTER, e -> {
+			
+			this.getbIniciarSesion().click();
+			
+		});
 		
 		this.getbIniciarSesion().addClickListener(event -> {
 			

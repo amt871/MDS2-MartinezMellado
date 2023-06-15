@@ -4,6 +4,7 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.template.Id;
 
@@ -47,6 +48,8 @@ public class VistaPublicar extends LitTemplate {
 	private Usuario_Registrado usr;
 	@Id("imguser")
 	private Image imguser;
+	@Id("layoutVideo")
+	private VerticalLayout layoutVideo;
 
 	/**
      * Creates a new VistaPublicar.
@@ -138,6 +141,19 @@ public class VistaPublicar extends LitTemplate {
 	public void setDescrpcion(TextArea descrpcion) {
 		this.descrpcion = descrpcion;
 	}
+
+	public void setCabecera(Component cabecera) {
+		this.cabecera = cabecera;
+	}
+
+	public VerticalLayout getLayoutVideo() {
+		return layoutVideo;
+	}
+
+	public void setLayoutVideo(VerticalLayout layoutVideo) {
+		this.layoutVideo = layoutVideo;
+	}
     
+	
 
 }
