@@ -67,11 +67,16 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		vlUsuarios.setWidth("100%");
 		
 		int cont = 0;
-		
+		boolean salir = false;
 		for(int i = 0; i<usuarios.length && cont < 8; i++) {
-			
-			if(this.usuario.seguido.contains(usuarios[i]))
-				continue;
+			for (Usuario_Registrado seguido : this.usuario.seguido.toArray()) {
+				for (Usuario_Registrado listado : this.usuarios) {
+					if(seguido.getUsuario().equals(listado.getUsuario())) {
+						salir = true;
+					}
+				}
+			}
+			if (salir) continue;
 			if(/*i==0 || */i%4==0) {
 				array.add(new HorizontalLayout());
 				array.get(array.size()-1).setHeight("100%");
@@ -86,6 +91,12 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			cont++;
 			//System.out.println("annadido item");
 			
+		}
+		
+		if(vlUsuarios.getComponentCount()==0) {
+			vlUsuarios.setAlignItems(Alignment.CENTER);
+			vlUsuarios.setJustifyContentMode(JustifyContentMode.CENTER);
+			vlUsuarios.add(new Label("Ningun usuario publico a subido un video recientemente"));
 		}
 		
 		//this.getDivItem1().add(new Video("Usuarios\\Juanra1997\\videos\\2023-06-05T23-00-09.914853900.mp4"));

@@ -34,7 +34,6 @@ public class Usuarios_Registrados {
             u = Usuario_RegistradoDAO
                     .loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
             if (u != null)  aux = true;
-            t.commit();
         } catch (Exception e) {
             t.rollback();
             e.printStackTrace();
@@ -49,7 +48,6 @@ public class Usuarios_Registrados {
 		try {
 			u = Usuario_RegistradoDAO
 					.loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
-			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -60,6 +58,7 @@ public class Usuarios_Registrados {
 
 	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		boolean flag = false;
 		try {
 			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario + "'",
 					null);
@@ -67,12 +66,13 @@ public class Usuarios_Registrados {
 			u.setContrasenna(aNuevaContrasenna);
 			Usuario_RegistradoDAO.save(u);
 			t.commit();
-			return true;
+			flag = true;
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
-			return false;
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		return flag;
 		
 	}
 	
@@ -82,6 +82,7 @@ public class Usuarios_Registrados {
 			Date aFechaNaciemiento, String aDescripcion, String aFoto, String aTipo) throws PersistentException {
 
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		boolean flag = false;
 		try {
 
 //			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNomUsuario + "'",
@@ -125,12 +126,13 @@ public class Usuarios_Registrados {
 
 			file = null;
 			videos = null;
-			return true;
+			flag = true;
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
-			return false;
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		return flag;
 	}
 
 	public List buscarUsuarios(String aBusqueda) throws PersistentException {
@@ -155,7 +157,6 @@ public class Usuarios_Registrados {
 		Usuario_Registrado u = null;
 		try {
 			u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario+"'", null);
-			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -167,6 +168,7 @@ public class Usuarios_Registrados {
 			String aCorreoElectronico, String aDescripcion) throws PersistentException {
 		//System.out.println("Estoy en Usuario_Registrados");
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		Boolean flag = false;
 		try {
 			
 			//System.out.println("Solicito el usuario: "+aUsuario);
@@ -198,14 +200,15 @@ public class Usuarios_Registrados {
 			//System.out.println("Usuarios_Registrados bien");
 			//MartinezMelladoMDSPersistentManager.instance().getSession().flush();
 			
-			return true;
+			flag = true;
 
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
 			//System.out.println("Usuarios_Registrados excepcion");
-			return false;
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		return flag;
 		
 	}
 
@@ -222,6 +225,7 @@ public class Usuarios_Registrados {
 			t.rollback();
 			e.printStackTrace();
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 
 	public List listarUsuariosDenunciados() throws PersistentException {
@@ -237,7 +241,6 @@ public class Usuarios_Registrados {
 					}
 				}
 	        }
-	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
 	        e.printStackTrace();
@@ -247,6 +250,7 @@ public class Usuarios_Registrados {
 
 	public boolean modificarEstadoUsuario(String aNombreUsuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		boolean flag = false;
 		try {
 
 			Usuario_Registrado nuevo = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNombreUsuario +"'", null);
@@ -263,12 +267,14 @@ public class Usuarios_Registrados {
 
 			//MartinezMelladoMDSPersistentManager.instance().getSession().flush();
 			
-			return true;
+			flag = true;
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
-			return false;
+
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		return flag;
 	}
 	
 	public List listarSeguidos(String aNombreUsuario) throws PersistentException {
@@ -282,8 +288,6 @@ public class Usuarios_Registrados {
 					aux.add(usuario_Registrado);
 				}
 			}
-			t.commit();
-
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -302,7 +306,6 @@ public class Usuarios_Registrados {
 					aux.add(usuario_Registrado);
 				}
 			}
-			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -314,23 +317,27 @@ public class Usuarios_Registrados {
 			throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
+			Usuario_Registrado auxDenunciante = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(denunciante.getORMID());
+			Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(denunciado.getORMID());
+			
+			if (auxDenunciado.denunciante.contains(auxDenunciante))
+				auxDenunciado.denunciante.remove(auxDenunciante);
+			if (auxDenunciante.denunciado.contains(auxDenunciado))
+				auxDenunciante.denunciado.remove(auxDenunciado);
 
-			if (denunciado.denunciante.contains(denunciante))
-				denunciado.denunciante.remove(denunciante);
-			if (denunciante.denunciado.contains(denunciado))
-				denunciante.denunciado.remove(denunciado);
-
-			Usuario_RegistradoDAO.save(denunciante);
-			Usuario_RegistradoDAO.save(denunciado);
+			Usuario_RegistradoDAO.save(auxDenunciante);
+			Usuario_RegistradoDAO.save(auxDenunciado);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	public boolean segimiento(Usuario_Registrado seguido , Usuario_Registrado seguidor) throws PersistentException {
 			PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+			boolean flag = false;
 			try {
 				
 				//System.out.println()
@@ -360,25 +367,27 @@ public class Usuarios_Registrados {
 				//Usuario_RegistradoDAO.refresh(seguido);
 
 				t.commit();
+				flag = true;
 
 			} catch (Exception e) {
 				t.rollback();
 				e.printStackTrace();
-				return false;
 			}
-			
-			return true;
+			MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+			return flag;
 	}
 	
 	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) throws PersistentException {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try { 
+		    	Usuario_Registrado auxDenunciante = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(denunciante.getORMID());
+				Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(denunciado.getORMID());
 		    	
-		    	denunciante.denunciado.add(denunciado);
-		    	denunciado.denunciante.add(denunciante);
+				auxDenunciante.denunciado.add(auxDenunciado);
+				//auxDenunciado.denunciante.add(auxDenunciante);
 		    	
-		    	Usuario_RegistradoDAO.save(denunciado);
-		    	Usuario_RegistradoDAO.save(denunciado);	    	
+		    	Usuario_RegistradoDAO.save(auxDenunciado);
+		    	Usuario_RegistradoDAO.save(auxDenunciante);	    	
 		    	
 		    	t.commit();
 		    	
@@ -386,25 +395,23 @@ public class Usuarios_Registrados {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
+		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	public Usuario_Registrado[] listarUltimosUsuarios(int id) throws PersistentException {
 		
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
-		Usuario_Registrado[] usuarios;
+		Usuario_Registrado[] usuarios = null;;
 		try { 
 			usuarios = Usuario_RegistradoDAO.listUsuario_RegistradoByQuery("UsuarioID<>"+id, "UsuarioID DESC");
-			
-	    	t.commit();
 	    	
-	    	return usuarios;
+	    	
 	    	
 	    }catch (Exception e) {
 	        t.rollback();
 	        e.printStackTrace();
 			return null;
 	    }
-		
-
+		return usuarios;
 	}
 }

@@ -39,12 +39,13 @@ public class Notificaciones {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try {
 		        Notificacion u = NotificacionDAO.loadNotificacionByQuery("ID=" + aNotificacion, null);
-		        NotificacionDAO.delete(u);
+		        NotificacionDAO.deleteAndDissociate(u);
 		        t.commit();
 		    }catch (Exception e) {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
+		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	public void annadirNotificacion(String tipo, Usuario_Registrado receptor, Usuario_Registrado emisor, Publicacion publicacion) throws PersistentException {
@@ -70,6 +71,7 @@ public class Notificaciones {
 	        t.rollback();
 	        e.printStackTrace();
 	    }
+	    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	

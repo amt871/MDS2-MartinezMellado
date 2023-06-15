@@ -17,7 +17,6 @@ public class Denuncias_Archivadas {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			u = Denuncia_ArchivadaDAO.listDenuncia_ArchivadaByQuery(null, null);
-			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -26,7 +25,6 @@ public class Denuncias_Archivadas {
 		if (u != null) {
 			aux = Arrays.asList(u);
 		}
-
 		return aux;
 	}
 
@@ -43,5 +41,6 @@ public class Denuncias_Archivadas {
 			t.rollback();
 			e.printStackTrace();
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}	
 }

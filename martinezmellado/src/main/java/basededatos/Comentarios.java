@@ -28,7 +28,6 @@ public class Comentarios {
 					}
 				}
 	        }
-	        t.commit();
 	    }catch (Exception e) {
 	        t.rollback();
 	        e.printStackTrace();
@@ -60,6 +59,7 @@ public class Comentarios {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
+		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) throws PersistentException {
@@ -78,37 +78,40 @@ public class Comentarios {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
+		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario)
 			throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
+			Comentario auxCom = ComentarioDAO.loadComentarioByORMID(comentario.getORMID());
+			Usuario_Registrado auxRegistrado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
 
-			if (comentario.es_denunciada.contains(usuario))
-				comentario.es_denunciada.remove(usuario);
-			if (usuario.denunciaA.contains(comentario))
-				usuario.denunciaA.remove(comentario);
+			if (auxCom.es_denunciada.contains(auxRegistrado))
+				auxCom.es_denunciada.remove(auxRegistrado);
+			if (auxRegistrado.denunciaA.contains(auxCom))
+				auxRegistrado.denunciaA.remove(auxCom);
 
-			ComentarioDAO.save(comentario);
-			Usuario_RegistradoDAO.save(usuario);
+			ComentarioDAO.save(auxCom);
+			Usuario_RegistradoDAO.save(auxRegistrado);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
 		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
 	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion) throws PersistentException {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		 Comentario aux = null;
 		    try { 
-		    	Comentario aux =  ComentarioDAO.loadComentarioByQuery("autor = '" + usuario.getUsuario() + "' and publicacion = '" + publicacion.getVideo() + '"', null);	    	
-		    	t.commit();
-		    	return aux;
+		    	aux =  ComentarioDAO.loadComentarioByQuery("autor = '" + usuario.getUsuario() + "' and publicacion = '" + publicacion.getVideo() + '"', null);	    	
 		    }catch (Exception e) {
 		        t.rollback();
 		        e.printStackTrace();
 		    }
-		    return null;
+		    return aux;
 	}
 }

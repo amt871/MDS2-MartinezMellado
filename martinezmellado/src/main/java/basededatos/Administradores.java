@@ -15,7 +15,6 @@ public class Administradores {
         PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
         try {
             u = AdministradorDAO.loadAdministradorByQuery("usuario=aUser and contrasenna=aPass", null);
-            t.commit();
         }catch (Exception e) {
             t.rollback();
             e.printStackTrace();

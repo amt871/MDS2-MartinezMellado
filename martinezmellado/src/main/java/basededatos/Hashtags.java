@@ -59,5 +59,6 @@ public class Hashtags {
 	        t.rollback();
 	        e.printStackTrace();
 	    }
+	    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 }
