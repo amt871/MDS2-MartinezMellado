@@ -65,7 +65,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 				flag = false;
 			}
 		}
-		System.out.println(flag);
+		//System.out.println(flag);
 		if(flag) {
 			this.getSeguirButton().setText("Seguir");
 		}else {
