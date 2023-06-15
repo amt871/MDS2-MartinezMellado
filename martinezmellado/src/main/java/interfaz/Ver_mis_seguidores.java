@@ -21,7 +21,7 @@ public class Ver_mis_seguidores extends VistaVer_mis_seguidores {
 //
 //	public void setUsuario(basededatos.Usuario_Registrado usuario) {
 		
-		this.usuario = cabecera.getUser();
+		this.usuario = cabecera.getDatos().cargarDatosUsuario(cabecera.getUser().getUsuario());
 		this.datos = cabecera.getDatos();
 		
 		this.setCabecera(cabecera);

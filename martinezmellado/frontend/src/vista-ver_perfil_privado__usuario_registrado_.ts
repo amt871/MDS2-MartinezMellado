@@ -32,7 +32,7 @@ export class VistaVer_perfil_privado__usuario_registrado_ extends LitElement {
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
  <label style="height: 5%;" id="labelUsuario">Usuario</label>
- <vaadin-button style="height: 5%;">
+ <vaadin-button style="height: 5%;" id="bSolictarSeguimiento">
    Seguir 
  </vaadin-button>
  <label style="height: 5%;">Usuario privado</label>

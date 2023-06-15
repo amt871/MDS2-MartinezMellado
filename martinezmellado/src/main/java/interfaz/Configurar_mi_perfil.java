@@ -1,5 +1,6 @@
 package interfaz;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -102,6 +103,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		this.getIdCorreoElectronico().setValue(this.usuario.getCorreo());
 		this.getIdCorreoElectronico().setReadOnly(true);
 		this.getIdDescripcion().setValue(this.usuario.getDescripcion());
+		
 
 		this.getIdNotis().setVisible(false);
 		
@@ -122,7 +124,6 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		this.getbCambiarFoto().addClickListener(event -> {
 			
 			if(this.cambiarFoto()) {
-
 				this.getCabecera().getbPerfil().click();
 			
 			}
@@ -277,6 +278,12 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		if (fileData != null) {
 
 			try {
+				
+				File file = new File("src/main/webapp/Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
+				if (!file.exists()) {
+					file.createNewFile();
+				}
+				file = null;
 				OutputStream out = new FileOutputStream(
 						"src/main/webapp/Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
 
@@ -300,14 +307,17 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 				// TODO Auto-generated catch block
 				// e.printStackTrace();
 				Notification.show("Error interno al cargar la imagen");
+				e.printStackTrace();
 				return false;
 			}
 
 			this.getUploadImagen().getElement().setPropertyJson("files", Json.createArray());
 
-			if (!this.usuario.getFoto().contains("user")) {// Cambiar el valor en la base de datos
+			if (this.usuario.getFoto().equals("icons/user.svg")){// Cambiar el valor en la base de datos
 				
+				System.out.println("Lo intenta");
 				this.usuario.setFoto("Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
+				System.out.println(this.usuario.getFoto());
 				
 				if (!datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(),
 						this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion())) {

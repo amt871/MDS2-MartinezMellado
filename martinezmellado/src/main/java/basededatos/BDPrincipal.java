@@ -277,6 +277,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		} catch (Exception e) {
 			// TODO: handle exception
 			//System.out.println("BDPrincipal excepcion");
+			e.printStackTrace();
 			return false;
 		}
 	}

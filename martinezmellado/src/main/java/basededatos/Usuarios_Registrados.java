@@ -191,6 +191,7 @@ public class Usuarios_Registrados {
 			nuevo.setCorreo(aCorreoElectronico);
 			nuevo.setDescripcion(aDescripcion);
 			nuevo.setEdad(periodo.getYears());
+			nuevo.setFoto(aFoto);
 
 			//System.out.println(Usuario_RegistradoDAO.save(nuevo));
 			Usuario_RegistradoDAO.save(nuevo);

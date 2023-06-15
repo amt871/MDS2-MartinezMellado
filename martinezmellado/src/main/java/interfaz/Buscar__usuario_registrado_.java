@@ -93,11 +93,11 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			
 		}
 		
-//		if(vlUsuarios.getComponentCount()==0) {
-//			vlUsuarios.setAlignItems(Alignment.CENTER);
-//			vlUsuarios.setJustifyContentMode(JustifyContentMode.CENTER);
-//			vlUsuarios.add(new Label("Usted sigue a todos los usuario"));
-//		}
+		if(vlUsuarios.getComponentCount()==0) {
+			vlUsuarios.setAlignItems(Alignment.CENTER);
+			vlUsuarios.setJustifyContentMode(JustifyContentMode.CENTER);
+			vlUsuarios.add(new Label("Usted sigue a todos los usuarios"));
+		}
 		
 		//this.getDivItem1().add(new Video("Usuarios\\Juanra1997\\videos\\2023-06-05T23-00-09.914853900.mp4"));
 		

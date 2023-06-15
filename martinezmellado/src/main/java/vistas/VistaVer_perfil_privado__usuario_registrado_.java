@@ -7,6 +7,7 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-ver_perfil_privado__usuario_registrado_ template.
@@ -28,6 +29,8 @@ public class VistaVer_perfil_privado__usuario_registrado_ extends LitTemplate {
 	private Label labelMegustas;
 	@Id("labelUsuario")
 	private Label labelUsuario;
+	@Id("bSolictarSeguimiento")
+	private Button bSolictarSeguimiento;
 
 	/**
      * Creates a new VistaVer_perfil_privado__usuario_registrado_.
@@ -74,6 +77,14 @@ public class VistaVer_perfil_privado__usuario_registrado_ extends LitTemplate {
 
 	public void setLabelUsuario(Label labelUsuario) {
 		this.labelUsuario = labelUsuario;
+	}
+
+	public Button getbSolictarSeguimiento() {
+		return bSolictarSeguimiento;
+	}
+
+	public void setbSolictarSeguimiento(Button bSolictarSeguimiento) {
+		this.bSolictarSeguimiento = bSolictarSeguimiento;
 	}
 
     

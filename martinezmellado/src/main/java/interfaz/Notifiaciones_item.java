@@ -26,6 +26,7 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 		
 		this.getIdBotonVista().addClickListener(event -> {
 			datos.cambiarNotificacion(id);
+			this.setVisible(false);
         });
 		
 		this.getIdImagenUsr().addClickListener(event -> {
@@ -33,11 +34,14 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
         });
 		
 		this.getbAceptar().addClickListener(event -> {
-			datos.segimiento(emisor, miUsuario);
+			datos.segimiento(miUsuario, emisor);
+			datos.cambiarNotificacion(id);
+			this.setVisible(false);
         });
 		
 		this.getbRechazar().addClickListener(event -> {
 			datos.cambiarNotificacion(id);
+			this.setVisible(false);
         });
 		
 		switch (tipo) {
