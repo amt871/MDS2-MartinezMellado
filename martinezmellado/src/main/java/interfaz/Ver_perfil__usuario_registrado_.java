@@ -58,10 +58,6 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		this.usuario = usuario;
 		
-		if(this.cabecera.getUser().seguido.contains(usuario))
-			this.getSeguirButton().setText("Dejar de seguir");
-		else
-			this.getSeguirButton().setText("Seguir");
 		
 		this.getSeguirButton().addClickListener(event ->{
 			
