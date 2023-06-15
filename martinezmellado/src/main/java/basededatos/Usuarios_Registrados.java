@@ -208,7 +208,9 @@ public class Usuarios_Registrados {
 			e.printStackTrace();
 			//System.out.println("Usuarios_Registrados excepcion");
 		}
+		
 		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		MartinezMelladoMDSPersistentManager.instance().getSession().clear();
 		return flag;
 		
 	}

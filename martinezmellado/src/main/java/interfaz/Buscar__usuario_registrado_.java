@@ -85,12 +85,12 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 				array.get(array.size()-1).setAlignItems(Alignment.CENTER);
 				array.get(array.size()-1).setJustifyContentMode(JustifyContentMode.CENTER);
 				vlUsuarios.add(array.get(array.size()-1));
-			}
+			
 			if (array.size() == 0) break;
 			array.get(array.size()-1).add(new Usuarionombreitem(usuarios[i], this.getCabecera(), this.usuario, this));
 			cont++;
 			//System.out.println("annadido item");
-			
+			}
 		}
 		
 		if(vlUsuarios.getComponentCount()==0) {

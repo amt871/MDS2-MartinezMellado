@@ -121,7 +121,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 				// System.out.println(this.getCabecera()==null);
 
 				this.array.add(new Video_otro_usuario_item(this.usuario,
-						videos.get(i).getVideo().replace("src/main/webapp/", ""), videos.get(i).getRealizada(),
+						videos.get(i), videos.get(i).getRealizada(),
 						this.inicio, this.getCabecera(), this));
 				// array.get(i).getLayoutVideo().add(new
 				// Video(videos[i].getVideo().replace("src/main/webapp/", "")));

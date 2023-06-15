@@ -57,7 +57,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Video_otro_usuario_item(Usuario_Registrado miUsuario, String src, Usuario_Registrado usuario, MainView inicio, Mi_cabecera cabecera, Video_otro_usuario video_otro_usuario) {
+	public Video_otro_usuario_item(Usuario_Registrado miUsuario, Publicacion publicacion, Usuario_Registrado usuario, MainView inicio, Mi_cabecera cabecera, Video_otro_usuario video_otro_usuario) {
 		
 		this.datos = cabecera.getDatos();
 		this.inicio = inicio;
@@ -72,12 +72,12 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 			
 		});
 		
-		this.video = new Video(src,"100%","90%");
+		this.video = new Video(publicacion.getVideo().replace("src/main/webapp", ""),"100%","90%");
 		
 		
 		//this.video.setWidth("120%");
 		//this.video.setHeight("50%");
-		Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + src);
+		//Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + publicacion2);
 		
 		this.getLayoutVideo().add(video);
 		this.getIdNumMg().setText(String.valueOf(publicacion.le_gusta.size()));
@@ -96,6 +96,14 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 				this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacion);
 			}	
 
+		});
+		
+		this.getIdBComentarios().addClickListener(event -> {
+			
+			this.cabeceraUserReg.setDetalle(new Vista_detalle__usuario_registrado_(this.cabeceraUserReg, this.usuario, publicacion));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getDetalle());
+			
 		});
 		
 	}

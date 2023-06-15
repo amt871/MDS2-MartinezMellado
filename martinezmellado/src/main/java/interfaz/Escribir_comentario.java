@@ -1,4 +1,4 @@
-package interfaz;
+/*package interfaz;
 
 public class Escribir_comentario extends Vista_detalle__usuario_registrado_ {
 //	private Button _a�adir_comentario;
@@ -8,4 +8,4 @@ public class Escribir_comentario extends Vista_detalle__usuario_registrado_ {
 	public void annadir_comentario() {
 		throw new UnsupportedOperationException();
 	}
-}
+}*/

@@ -23,6 +23,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Ver_perfil__usuario_registrado_ perfilPublico;
 	private Ver_perfil_privado__usuario_registrado_ perfilPrivado;
 	private Cambiar_contrasenna cambiarContra;
+	private Vista_detalle__usuario_registrado_ detalle;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
 		// TODO Auto-generated constructor stub
@@ -137,6 +138,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.perfilPublico = null;
 		this.perfilPrivado = null;
 		this.cambiarContra = null;
+		this.detalle = null;
 		
 		this.vl.removeAll();
 		this.vl.add(this.pInicio);
@@ -290,6 +292,16 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public void setCambiarContra(Cambiar_contrasenna cambiarContra) {
 		this.cambiarContra = cambiarContra;
+	}
+
+
+	public Vista_detalle__usuario_registrado_ getDetalle() {
+		return detalle;
+	}
+
+
+	public void setDetalle(Vista_detalle__usuario_registrado_ detalle) {
+		this.detalle = detalle;
 	}
 	
 	
