@@ -258,10 +258,9 @@ public class Publicaciones {
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
-			return null;
 		}
-		//return null;
-		
+
+		return null;
 	}
 	
 	public Publicacion cargarVideoPoID(int id) throws PersistentException {

@@ -1,6 +1,7 @@
 package interfaz;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import org.orm.PersistentException;
 
@@ -52,13 +53,25 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 	
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
-		this.getLabelSeguidores().setText("Seguidores: "+String.valueOf(usuario.seguidor.size()));
-		this.getLabelMegustas().setText("Me gustas: "+String.valueOf(usuario.le_gusta.size()));
+		this.getLabelSeguidores().setText("Seguidores: "+ usuario.seguidor.size());
+		this.getLabelMegustas().setText("Me gustas dados: " + usuario.le_gusta.size());
 		this.getImage().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		this.usuario = usuario;
 		
-		
+		boolean flag = true;
+		for (Usuario_Registrado usr : usuario.seguidor.toArray()) {
+			if (usr.getUsuario().equals(this.cabecera.getUser().getUsuario())) {
+				flag = false;
+			}
+		}
+		System.out.println(flag);
+		if(flag) {
+			this.getSeguirButton().setText("Seguir");
+		}else {
+			this.getSeguirButton().setText("Dejar de seguir");
+		}
+			
 		this.getSeguirButton().addClickListener(event ->{
 			
 			if(this.cabecera.getDatos().segimiento(this.usuario, this.cabecera.getUser()))
@@ -67,7 +80,6 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 				else
 					this.getSeguirButton().setText("Seguir");
 			//Notification.show("Siguiendo");
-			
 		});
 		
 		listarVideos();
