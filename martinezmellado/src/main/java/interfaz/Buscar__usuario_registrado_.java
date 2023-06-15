@@ -75,7 +75,6 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 						salir = true;
 				}
 			}
-			System.out.println(salir);
 			if (salir) continue;
 			if(/*i==0 || */cont%4==0) {
 				array.add(new HorizontalLayout());

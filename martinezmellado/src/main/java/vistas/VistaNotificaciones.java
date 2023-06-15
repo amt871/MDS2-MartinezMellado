@@ -29,8 +29,6 @@ public class VistaNotificaciones extends LitTemplate {
 	private Scroller scroller;
 	@Id("idTodas")
 	private Button idTodas;
-	@Id("idMenciones")
-	private Button idMenciones;
 	@Id("idSeguidores")
 	private Button idSeguidores;
 	@Id("idMeGusta")
@@ -39,6 +37,8 @@ public class VistaNotificaciones extends LitTemplate {
 	private Button idComentarios;
 
 	private Usuario_Registrado usr;
+	@Id("idMenciones")
+	private Button idMenciones;
 	/**
      * Creates a new VistaNotificaciones.
      */

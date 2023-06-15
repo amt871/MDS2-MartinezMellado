@@ -16,12 +16,12 @@ export class VistaVer_siguiendo extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+<vaadin-vertical-layout style="width: 100%; height: 100%;position: absolute;">
  <vaadin-vertical-layout style="height: 5%; width: 100%;">
   <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <div id="divSiguiendo" style="width: 70%; height: 100%; position: relative;">
+  <div id="divSiguiendo" style="width: 70%; height: 100%; ">
    <vaadin-scroller id="idScroller"></vaadin-scroller>
   </div>
   <div id="divConfig" style="width: 30%; height: 100%;"></div>

@@ -18,16 +18,16 @@ export class VistaMis_seguidores_item extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 20%; justify-content: center; align-items: center;">
  <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; justify-content: center; align-items: center;">
-  <img style="width: 20%; height: 100%;" src="icons/user.svg">
+  <img style="width: 20%; height: 100%;" id="fotoUsr">
   <vaadin-vertical-layout style="width: 20%; height: 100%; justify-content: center; padding-bottom: var(--lumo-space-xl); padding-top: var(--lumo-space-xl);" theme="spacing-xl">
-   <label>Usuario </label>
-   <label>Seguidores</label>
+   <label id="nUsuario">Usuario </label>
+   <label id="nSeguidoresUsr">Seguidores</label>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 60%; height: 100%; padding-right: var(--lumo-space-m); justify-content: center; align-items: flex-end;">
-   <vaadin-button style="width: 20%;">
+   <vaadin-button style="width: 20%;" id="bSeguir">
      Seguir 
    </vaadin-button>
-   <vaadin-button style="width: 20%;">
+   <vaadin-button style="width: 20%;" id="bEliminar">
      Eliminar 
    </vaadin-button>
   </vaadin-vertical-layout>
