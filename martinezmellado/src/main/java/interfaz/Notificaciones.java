@@ -10,6 +10,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
+import antlr.debug.Event;
 import basededatos.BDPrincipal;
 import basededatos.Notificacion;
 import basededatos.Publicacion;
@@ -63,36 +64,51 @@ public class Notificaciones extends VistaNotificaciones {
 		this.setCabecera(mi_cabecera);
 		this.mi_cabecera = mi_cabecera;
 		
-
+		this.getIdComentarios().addClickListener(Event -> {
+			addItem("comentario");
+		});	
+		
+		this.getIdMeGusta().addClickListener(Event -> {
+			addItem("me_gusta");
+		});	
+		
+		this.getIdSeguidores().addClickListener(Event -> {
+			addItem("seguir");
+		});	
+		
+		this.getIdTodas().addClickListener(Event -> {
+			addItem("todo");
+		});	
+		
 		
 		//this.getStyle().set("position", "absolute");
 
 		scroller = this.getScroller();
 		vl = new VerticalLayout();
 
+		this.getIdMenciones().setVisible(false);
 
 		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
 		
 		scroller.setContent(vl);
 		
-		addItem();
+		addItem("todo");
 	}
 
-	public void addItem() {
+	public void addItem(String filtro) {
 
 		List<Notificacion> listaNotificaciones = new ArrayList<Notificacion>();
 		listaNotificaciones.addAll(this.datos.listarNitificaciones(this.user.getUsuario()));
+		
+		vl.removeAll();
 		
 		if(listaNotificaciones.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("No tienes notificaciones"));
 		}else {
-
-			//vl.setAlignItems(Alignment.CENTER);
-			//vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			
 			vl.getStyle().set("position", "relative");
-			//vl.getStyle().set("top", "5%");
 			vl.setHeight("100%");
 			vl.setWidth("100%");
 
@@ -100,33 +116,21 @@ public class Notificaciones extends VistaNotificaciones {
 
 			for(int i = 0; i<listaNotificaciones.size() && i<20; i++) {
 
-				//System.out.println(this.getCabecera()==null);
-
 				Usuario_Registrado usr = this.datos.cargarDatosUsuario(listaNotificaciones.get(i).getUsuarioOrigen());
 				Publicacion publicacion =  this.datos.cargarVideoPoID(listaNotificaciones.get(i).getPublicacion());
-				array.add(new Notifiaciones_item(listaNotificaciones.get(i).getTipo(),
-						usr,
-						publicacion,
-						listaNotificaciones.get(i).getComentario(),
-						this.datos,
-						listaNotificaciones.get(i).getID(),
-						this.mi_cabecera,
-						this.user,
-						this.inicio));
-				//array.get(i).getLayoutVideo().add(new Video(videos[i].getVideo().replace("src/main/webapp/", "")));
-				array.get(i).getStyle().set("position", "relative");
-				array.get(i).getStyle().set("height", "30%");
-				array.get(i).getStyle().set("width", "100%");
-				array.get(i).getIdImagenUsr().setSrc(usr.getFoto());
-//				array.get(i).getImageButton().setSrc(videos.get(i).getRealizada().getFoto());
-//				array.get(i).getLabelUsuario().setText(videos.get(i).getRealizada().getUsuario());
-//				array.get(i).getIdUbicación().setText(videos.get(i).getUbicacion());
-//				array.get(i).getIdFecha().setText(videos.get(i).getFecha().toString());
-//				array.get(i).getIdDescripcion().setText(videos.get(i).getDescripcion());
-//				array.get(i).getIdNumMg().setText(String.valueOf(videos.get(i).le_gusta.size()));
-//				array.get(i).getIdNumComentarios().setText(String.valueOf(videos.get(i).tiene.size()));
-
-				vl.add(array.get(i));
+				if (listaNotificaciones.get(i).getTipo().equals(filtro) || filtro == "todo") {
+					array.add(new Notifiaciones_item(listaNotificaciones.get(i).getTipo(),
+							usr,
+							publicacion,
+							listaNotificaciones.get(i).getComentario(),
+							this.datos,
+							listaNotificaciones.get(i).getID(),
+							this.mi_cabecera,
+							this.user,
+							this.inicio));
+					array.get(i).getIdImagenUsr().setSrc(usr.getFoto());
+					vl.add(array.get(i));
+				}
 			}
 		}
 	}

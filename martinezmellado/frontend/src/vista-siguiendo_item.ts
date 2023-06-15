@@ -18,13 +18,13 @@ export class VistaSiguiendo_item extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 20%; justify-content: center; align-items: center;">
  <vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; justify-content: center; align-items: center;">
-  <img style="width: 20%; height: 100%;" src="icons/user.svg">
+  <img style="width: 20%; height: 100%;" id="fotoUsr">
   <vaadin-vertical-layout style="width: 20%; height: 100%; padding-top: var(--lumo-space-xl); padding-bottom: var(--lumo-space-xl); justify-content: center;" theme="spacing-xl">
-   <label>Usuario</label>
-   <label>Seguidores</label>
+   <label id="nUsuario">Usuario</label>
+   <label id="nSeguidores">Seguidores</label>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout style="width: 60%; height: 100%; align-items: flex-end; justify-content: center; padding-right: var(--lumo-space-xl);">
-   <vaadin-button>
+   <vaadin-button id="bDejarDeSeguir">
      Dejar de seguir 
    </vaadin-button>
   </vaadin-vertical-layout>
