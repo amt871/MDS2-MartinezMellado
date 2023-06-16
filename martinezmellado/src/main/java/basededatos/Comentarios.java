@@ -69,12 +69,14 @@ public class Comentarios {
 	public void denunciarComentario(Usuario_Registrado usuario, Comentario comentario) throws PersistentException {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		    try { 
+		    	Comentario auxCom = ComentarioDAO.loadComentarioByORMID(comentario.getORMID());
+				Usuario_Registrado auxRegistrado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
 		    	
-		    	comentario.es_denunciada.add(usuario);
-		    	usuario.denunciaA.add(comentario);
+//		    	comentario.es_denunciada.add(auxRegistrado);
+		    	usuario.denunciaA.add(auxCom);
 		    	
-		    	ComentarioDAO.save(comentario);
-		    	Usuario_RegistradoDAO.save(usuario);	    	
+//		    	ComentarioDAO.save(auxCom);
+		    	Usuario_RegistradoDAO.save(auxRegistrado);	    	
 		    	
 		    	t.commit();
 		    	

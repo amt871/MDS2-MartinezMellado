@@ -12,7 +12,7 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 	private Usuario_Registrado miUsuario;
 	private Mi_cabecera cabeceraUserReg;
 	private MainView inicio;
-	
+	private Publicacion publicacion;
 	
 
 	public Notifiaciones_item(String tipo, Usuario_Registrado emisor, Publicacion publicacion, boolean comentario, BDPrincipal datos, int id, Mi_cabecera mi_cabecera, Usuario_Registrado miUsuario,MainView inicio) {
@@ -44,15 +44,21 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 			this.setVisible(false);
         });
 		
+		this.getIdVideoRelacionado().addClickListener(event -> {
+			verVideoRelacionado();
+		});
+		
 		switch (tipo) {
 		case "comentario":
 			Comentario aux = datos.cargarComentario(emisor, publicacion);
+			this.publicacion = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
-			this.getIdTextoNotificación().setText(aux.getComentario());;
+			this.getIdTextoNotificación().setText("Ha comentado: " + aux.getComentario());;
 			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "me_gusta":
+			this.publicacion = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
 			this.getIdTextoNotificación().setText("A " + emisor.getUsuario() + " le ha gustado tu video");
@@ -104,5 +110,11 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 			this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
 
 		}
+	}
+	
+	private void verVideoRelacionado() {
+		this.cabeceraUserReg.setDetalle(new Vista_detalle__usuario_registrado_(cabeceraUserReg, this.miUsuario, this.publicacion));
+		this.inicio.removeAll();
+		this.inicio.add(this.cabeceraUserReg.getDetalle());
 	}
 }

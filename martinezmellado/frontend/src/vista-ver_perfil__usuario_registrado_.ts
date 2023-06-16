@@ -39,6 +39,9 @@ export class VistaVer_perfil__usuario_registrado_ extends LitElement {
  <div id="divVideos" style="width: 100%; height: 65%; position: relative;">
   <vaadin-scroller id="Scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
  </div>
+ <vaadin-button id="bDenuncia" style="align-self: flex-end;">
+  Denunciar
+ </vaadin-button>
 </vaadin-vertical-layout>
 `;
   }

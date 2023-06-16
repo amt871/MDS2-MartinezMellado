@@ -48,6 +48,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
 	private Mi_cabecera cabecera;
+	private Usuario_Registrado miUsuario_Registrado;
 	
 	public Ver_perfil__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
 	
@@ -58,8 +59,23 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getImage().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
-		Usuario_Registrado miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
+		this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
 		
+		this.getbDenuncia().addClickListener(event ->{
+			this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
+			this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
+			boolean flag = true;
+			for (Usuario_Registrado denunciate : this.usuario.denunciante.toArray()) {;
+				if(denunciate.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
+					flag = false;
+				}
+			}
+			if (flag) {
+				this.cabecera.getDatos().denunciarUsuario(miUsuario_Registrado, usuario);
+			}else{
+				Notification.show("Ya has denunciado este usuario");
+			}
+		});
 		boolean flag = true;
 		for (Usuario_Registrado seguidor : usuario.seguidor.toArray()) {
 			if (seguidor.getUsuario().equals(miUsuario_Registrado.getUsuario())) {

@@ -170,8 +170,8 @@ public class Publicaciones {
 			//auxUsuario_Registrado.denuncia.add(auxPublicacion);
 			;
 
-			PublicacionDAO.refresh(auxPublicacion);
-			Usuario_RegistradoDAO.refresh(auxUsuario_Registrado);
+			PublicacionDAO.save(auxPublicacion);
+			Usuario_RegistradoDAO.save(auxUsuario_Registrado);
 
 			t.commit();
 

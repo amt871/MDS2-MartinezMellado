@@ -45,6 +45,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	private VerticalLayout vl;
 	private BDPrincipal datos;
 	private Publicacion publicacion;
+	private Mi_cabecera cabeceraUserReg;
 	
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg) {
 		// TODO Auto-generated constructor stub
@@ -53,7 +54,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg, Usuario_Registrado usuario, Publicacion publicacion) {
 		// TODO Auto-generated constructor stub
-		
+		this.cabeceraUserReg = cabeceraUserReg;
 		this.datos = cabeceraUserReg.getDatos();
 		this.publicacion = publicacion;
 		this.setCabecera(cabeceraUserReg);
@@ -103,7 +104,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		Comentario[] comentarios = this.datos.cargarComentariosPublicacion(publicacion);
 		
 		for(int i=0; i<comentarios.length; i++)
-		vl.add(new Comentario_item(comentarios[i]));
+		vl.add(new Comentario_item(comentarios[i], this.cabeceraUserReg));
 		
 		
 	}

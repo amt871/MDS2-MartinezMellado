@@ -63,12 +63,30 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		this.inicio = inicio;
 		this.cabeceraUserReg = cabecera;
 		this.usuario = usuario;
-		this.miUsuario = miUsuario;
+		this.miUsuario = this.datos.cargarDatosUsuario(miUsuario.getUsuario());
 		this.video_otro_usuario = video_otro_usuario;
 		
 		this.getUsuarioButton().addClickListener(event -> {
 		
 			verPerfilOtroUsuario();
+			
+		});
+		
+		this.getDenunciarButton().addClickListener(event -> {
+			boolean flag = true;
+			for (Usuario_Registrado denunciante : this.datos.cargarVideoPoID(publicacion.getID()).es_denunciada.toArray()) {
+				if (denunciante.getUsuario().equals(this.miUsuario.getUsuario())) {
+					
+					flag = false;
+				}
+			}
+			
+			if (flag) {
+				this.datos.denunciarPublicación(this.miUsuario, publicacion);
+			}else{
+				Notification.show("Ya has denunciado esta publicación");
+			}
+			
 			
 		});
 		

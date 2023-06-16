@@ -36,6 +36,8 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 	private Div divVideos;
 	@Id("Scroller")
 	private Scroller scroller;
+	@Id("bDenuncia")
+	private Button bDenuncia;
 
 	/**
      * Creates a new VistaVer_perfil__usuario_registrado_.
@@ -106,6 +108,14 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 
 	public void setScroller(Scroller scroller) {
 		this.scroller = scroller;
+	}
+
+	public Button getbDenuncia() {
+		return bDenuncia;
+	}
+
+	public void setbDenuncia(Button bDenuncia) {
+		this.bDenuncia = bDenuncia;
 	}
     
 
