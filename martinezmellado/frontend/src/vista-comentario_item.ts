@@ -20,7 +20,7 @@ export class VistaComentario_item extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; position: relative;">
  <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center;">
   <vaadin-horizontal-layout style="width: 20%; height: 100%;">
-   <img style="width: 100%;" id="imgUser">
+   <img style="max-width: 100%; max-height: 100%;" id="imgUser">
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 60%; height: 100%; align-items: center; margin-left: var(--lumo-space-s);">
    <label id="labelComentario">Comentario</label>

@@ -41,7 +41,6 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaUsuarionombreitem"/>
-    <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="vistas.VistaVista_detalle__usuario_registrado_"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="vistas.VistaComentario_item"/>
@@ -55,9 +54,10 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
     <fullyQualifiedTypeName name="vistas.VistaUsuario__usuario_registrado__item"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
 </qualifiedTypeNameHistroy>

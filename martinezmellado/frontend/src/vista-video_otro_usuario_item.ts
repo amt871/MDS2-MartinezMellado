@@ -21,7 +21,7 @@ export class VistaVideo_otro_usuario_item extends LitElement {
 <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: position: relative;">
  <vaadin-vertical-layout style="width: 50%; height: 100%; align-items: center; justify-content: center; position: relative;" id="layoutVideo"></vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; align-items: center; justify-content: center;">
-  <vaadin-button theme="icon" aria-label="Add new" id="usuarioButton" style="width: 30%; height: 30%;">
+  <vaadin-button theme="icon" aria-label="Add new" id="usuarioButton" style="max-width: 30%; max-height: 30%; background-color:white;">
    <img id="imageButton" style="width: 100%; height: 100%;">
   </vaadin-button>
   <label id="labelUsuario">Label</label>

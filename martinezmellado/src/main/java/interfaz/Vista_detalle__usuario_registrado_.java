@@ -62,7 +62,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.getLabelUsuario().setText(publicacion.getRealizada().getUsuario());
 		this.getLabelFecha().setText(publicacion.getFecha().toString());
 		this.getLabelUbi().setText(publicacion.getUbicacion());
-		this.getDivVideo().add(new Video(publicacion.getVideo().replace("src/main/webapp/", ""),"90%", "90%"));
+		this.getLayoutVideo().add(new Video(publicacion.getVideo().replace("src/main/webapp/", ""),"90%", "90%"));
 		
 		this.getbAddComentario().addClickListener(event -> {
 			if (this.datos.cargarComentario(this.getCabecera().getUser(), publicacion) != null) {

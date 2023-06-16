@@ -135,6 +135,9 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		if(busqueda != null)
 			busqueda.clear();
 		
+		if(busquedaUsuarios != null)
+			busquedaUsuarios.clear();
+		
 		this.pantallaInicio.clear();
 		
 		this.user = null;
@@ -151,6 +154,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.perfilPrivado = null;
 		this.cambiarContra = null;
 		this.detalle = null;
+		this.busquedaUsuarios = null;
 		
 		this.vl.removeAll();
 		this.vl.add(this.pInicio);
