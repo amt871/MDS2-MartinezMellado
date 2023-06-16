@@ -111,7 +111,7 @@ public class Comentarios {
 		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		 Comentario aux = null;
 		    try { 
-		    	aux =  ComentarioDAO.loadComentarioByQuery("autor = '" + usuario.getUsuario() + "' and publicacion = '" + publicacion.getVideo() + '"', null);	    	
+		    	aux =  ComentarioDAO.loadComentarioByQuery("autor = '" + usuario.getUsuario() + "' and publicacion = '" + publicacion.getID() + "'" , null);	    	
 		    }catch (Exception e) {
 		        t.rollback();
 		        e.printStackTrace();

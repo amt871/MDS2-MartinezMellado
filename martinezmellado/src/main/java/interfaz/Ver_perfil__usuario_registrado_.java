@@ -57,11 +57,12 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getLabelMegustas().setText("Me gustas dados: " + usuario.le_gusta.size());
 		this.getImage().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
-		this.usuario = usuario;
+		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
+		Usuario_Registrado miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
 		
 		boolean flag = true;
-		for (Usuario_Registrado usr : usuario.seguidor.toArray()) {
-			if (usr.getUsuario().equals(this.cabecera.getUser().getUsuario())) {
+		for (Usuario_Registrado seguidor : usuario.seguidor.toArray()) {
+			if (seguidor.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
 				flag = false;
 			}
 		}
@@ -133,13 +134,7 @@ public void listarVideos() {
 			
 			basededatos.Publicacion[] videos = null;
 			
-			try {
-				videos = PublicacionDAO.listPublicacionByQuery("Usuario_RegistradoUsuarioID='" + this.usuario.getID() + "'", null);
-			} catch (PersistentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-				Notification.show("Fallo al cargar los videos");
-			}
+			videos = this.cabecera.getDatos().listarVideosUsuario(this.usuario.getID());
 			
 			if(videos != null) {
 				int contador = 0;

@@ -457,19 +457,11 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public Usuario_Registrado[] listarUltimosUsuarios(int id) {
 		// TODO Auto-generated method stub
 		try {
-			try {
-				
-				return this.usuariosRegistrados.listarUltimosUsuarios(id);
-				
-			}catch(Exception e) {
-				
-				return null;
-				
-			}
+			return this.usuariosRegistrados.listarUltimosUsuarios(id);
 		} catch (Exception e) {
 			// TODO: handle exception
+			return null;
 		}
-		return null;
 	}
 
 	@Override
@@ -498,7 +490,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion) {
 		// TODO Auto-generated method stub
 		try {
-			return this.cargarComentario(usuario, publicacion);
+			return this.comentario.cargarComentario(usuario, publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

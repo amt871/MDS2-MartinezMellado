@@ -46,9 +46,10 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 		
 		switch (tipo) {
 		case "comentario":
+			Comentario aux = datos.cargarComentario(emisor, publicacion);
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
-			this.getIdTextoNotificación().setText(datos.cargarComentario(emisor, publicacion).getComentario());;
+			this.getIdTextoNotificación().setText(aux.getComentario());;
 			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "me_gusta":

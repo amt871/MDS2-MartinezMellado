@@ -409,13 +409,9 @@ public class Usuarios_Registrados {
 		Usuario_Registrado[] usuarios = null;;
 		try { 
 			usuarios = Usuario_RegistradoDAO.listUsuario_RegistradoByQuery("UsuarioID<>"+id, "UsuarioID DESC");
-	    	
-	    	
-	    	
 	    }catch (Exception e) {
 	        t.rollback();
 	        e.printStackTrace();
-			return null;
 	    }
 		return usuarios;
 	}

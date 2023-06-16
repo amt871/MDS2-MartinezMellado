@@ -5,14 +5,15 @@ import proyectoMDS.MainView;
 import vistas.VistaUsuarionombreitem;
 
 public class Usuarionombreitem extends VistaUsuarionombreitem {
-	
+
 	private Usuario_Registrado usuario;
 	private Usuario_Registrado miUsuario;
 	private Mi_cabecera cabeceraUserReg;
 	private MainView inicio;
 	private Buscar__usuario_registrado_ buscar__usuario_registrado_;
 
-	public Usuarionombreitem(Usuario_Registrado usuario, Mi_cabecera mi_cabecera, Usuario_Registrado miUsuario, Buscar__usuario_registrado_ buscar__usuario_registrado_) {
+	public Usuarionombreitem(Usuario_Registrado usuario, Mi_cabecera mi_cabecera, Usuario_Registrado miUsuario,
+			Buscar__usuario_registrado_ buscar__usuario_registrado_) {
 
 		this.usuario = usuario;
 		this.miUsuario = miUsuario;
@@ -25,7 +26,7 @@ public class Usuarionombreitem extends VistaUsuarionombreitem {
 		this.getImagen().addClickListener(event -> {
 
 			this.verPerfilOtroUsuario();
-			
+
 		});
 
 	}

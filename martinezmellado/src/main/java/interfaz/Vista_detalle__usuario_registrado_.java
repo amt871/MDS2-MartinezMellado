@@ -2,6 +2,7 @@ package interfaz;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 import com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection;
@@ -64,12 +65,16 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.getDivVideo().add(new Video(publicacion.getVideo().replace("src/main/webapp/", ""),"90%", "90%"));
 		
 		this.getbAddComentario().addClickListener(event -> {
-			
-			if(addComentario()) {
-				this.vl.removeAll();
-				addItems();
+			if (this.datos.cargarComentario(this.getCabecera().getUser(), publicacion) != null) {
+				Notification.show("Ya has comentado esta publicacion ateriormente");
+			}else {
+				if(addComentario()) {
+					this.datos.annadirNotificacion("comentario", usuario, cabeceraUserReg.getUser(), publicacion);
+					this.vl.removeAll();
+					addItems();
+				}
+				this.getFieldComentario().clear();
 			}
-			this.getFieldComentario().clear();
 			
 		});
 		
