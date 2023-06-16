@@ -21,7 +21,11 @@ export class VistaVista_detalle__usuario_registrado_ extends LitElement {
 <vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <div id="divCabecera" style="width: 100%; height: 5%;"></div>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
-  <div id="divVideo" style="width: 60%; height: 100%; margin-left: var(--lumo-space-s);"></div>
+  <div id="divVideo" style="width: 60%; height: 100%; margin-left: var(--lumo-space-s);">
+   <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+    <vaadin-horizontal-layout id="layoutVideo" style="width: 100%; height: 100%; align-items: center; justify-content: center;"></vaadin-horizontal-layout>
+   </vaadin-vertical-layout>
+  </div>
   <vaadin-vertical-layout style="width: 40%; height: 100%; align-items: center; justify-content: center;">
    <img style="width: 20%; height: 12%;" id="imgUser">
    <label id="labelUsuario">Usuario</label>

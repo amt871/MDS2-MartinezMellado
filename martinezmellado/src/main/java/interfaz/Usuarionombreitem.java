@@ -22,7 +22,10 @@ public class Usuarionombreitem extends VistaUsuarionombreitem {
 		this.buscar__usuario_registrado_ = buscar__usuario_registrado_;
 		this.getImageButton().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
-		this.getStyle().set("width", "25%");
+		//this.getStyle().set("width", "25%");
+		//this.getStyle().set("height", "50%");
+		//this.getImageButton().setHeight("100%");
+		//this.getImageButton().setWidth("100%");
 		this.getImagen().addClickListener(event -> {
 
 			this.verPerfilOtroUsuario();

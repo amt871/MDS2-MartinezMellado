@@ -34,8 +34,10 @@ public class Video extends HtmlContainer implements ClickNotifier<com.vaadin.flo
 
         getElement().setProperty("autoplay", false);
         
-        this.setHeight(altura);
-        this.setWidth(anchura);
+        //this.setHeight(altura);
+        //this.setWidth(anchura);
+        this.setMaxHeight(altura);
+        this.setMaxWidth(anchura);
 
     }
     

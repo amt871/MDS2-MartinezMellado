@@ -24,8 +24,8 @@ export class VistaVer_perfil_privado__usuario_registrado_ extends LitElement {
   <vaadin-horizontal-layout style="align-items: center; justify-content: flex-end; width: 100%; height: 100%;">
    <label id="labelSeguidores">Seguidores</label>
   </vaadin-horizontal-layout>
-  <vaadin-vertical-layout style="align-items: center; justify-content: center;">
-   <img style="width: 30%;" id="Image">
+  <vaadin-vertical-layout style="align-items: center; justify-content: center; width: 100%; height: 100%;">
+   <img style="max-width: 95%; max-height: 95%;" id="Image">
   </vaadin-vertical-layout>
   <vaadin-horizontal-layout style="width: 100%; height: 100%; justify-content: flex-start; align-items: center;">
    <label id="labelMegustas">Me gustas</label>

@@ -13,6 +13,7 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 /**
  * A Designer generated component for the vista-vista_detalle__usuario_registrado_ template.
@@ -47,6 +48,8 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	private Button bAddComentario;
 	@Id("fieldComentario")
 	private TextField fieldComentario;
+	@Id("layoutVideo")
+	private HorizontalLayout layoutVideo;
 
 	/**
      * Creates a new VistaVista_detalle__usuario_registrado_.
@@ -152,6 +155,14 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 		this.fieldComentario = fieldComentario;
 	}
 
+	public HorizontalLayout getLayoutVideo() {
+		return layoutVideo;
+	}
 
+	public void setLayoutVideo(HorizontalLayout layoutVideo) {
+		this.layoutVideo = layoutVideo;
+	}
+
+	
     
 }

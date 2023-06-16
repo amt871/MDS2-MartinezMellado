@@ -56,8 +56,10 @@ public class Buscar_usuario__usuario_registrado_ extends VistaBuscar_usuario__us
 		
 		usuarios = this.cabecera.getDatos().buscarUsuarios(user);
 		
-		System.out.println(user);
-		System.out.println(usuarios.size());
+		//System.out.println(user);
+		//System.out.println(usuarios.size());
+		
+		this.content.removeAll();
 		
 		if(usuarios.isEmpty()) {
 			
@@ -67,10 +69,13 @@ public class Buscar_usuario__usuario_registrado_ extends VistaBuscar_usuario__us
 			
 		}else {
 			
+			this.content.setAlignItems(null);
+			this.content.setJustifyContentMode(JustifyContentMode.START);
+			
 			items = new ArrayList<Usuario__usuario_registrado__item>();
 			
 			for(Usuario_Registrado usu : usuarios)
-				items.add(new Usuario__usuario_registrado__item(usu));
+				items.add(new Usuario__usuario_registrado__item(usu,this.cabecera));
 			for(int i=0; i<items.size(); i++)
 				this.content.add(items.get(i));
 			

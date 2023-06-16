@@ -6,6 +6,7 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-usuario__usuario_registrado__item template.
@@ -25,6 +26,8 @@ public class VistaUsuario__usuario_registrado__item extends LitTemplate {
 	private Label labelSeguidores;
 	@Id("labelDescripcion")
 	private Label labelDescripcion;
+	@Id("bUser")
+	private Button bUser;
 
 	/**
      * Creates a new VistaUsuario__usuario_registrado__item.
@@ -63,6 +66,14 @@ public class VistaUsuario__usuario_registrado__item extends LitTemplate {
 
 	public void setLabelDescripcion(Label labelDescripcion) {
 		this.labelDescripcion = labelDescripcion;
+	}
+
+	public Button getbUser() {
+		return bUser;
+	}
+
+	public void setbUser(Button bUser) {
+		this.bUser = bUser;
 	}
     
     

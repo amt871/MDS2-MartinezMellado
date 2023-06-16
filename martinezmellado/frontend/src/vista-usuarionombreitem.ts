@@ -18,8 +18,8 @@ export class VistaUsuarionombreitem extends LitElement {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; position: relative;">
  <vaadin-horizontal-layout style="align-items: center; justify-content: center; width: 100%; height: 95%;">
-  <vaadin-button theme="icon" aria-label="Add new" id="imagen" style="width: 40%; height: 40%;">
-   <img id="imageButton" style="width: 100%; height: 100%;">
+  <vaadin-button theme="icon" aria-label="Add new" id="imagen" style="width: 100%; height: 100%;">
+   <img id="imageButton" style="max-width: 50%; max-height: 50%;">
   </vaadin-button>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="justify-content: center; align-items: center; height: 5%; width: 100%;">
