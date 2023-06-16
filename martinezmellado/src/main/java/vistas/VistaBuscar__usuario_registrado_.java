@@ -8,6 +8,7 @@ import com.vaadin.flow.component.template.Id;
 
 import interfaz.Mi_cabecera;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.textfield.TextField;
 
 /**
  * A Designer generated component for the vista-buscar__usuario_registrado_ template.
@@ -30,6 +31,8 @@ public class VistaBuscar__usuario_registrado_ extends LitTemplate {
 	private Button bHashtag;
 	@Id("divVideos")
 	private Div divVideos;
+	@Id("inTextField")
+	private TextField inTextField;
 
 	/**
      * Creates a new VistaBuscar__usuario_registrado_.
@@ -87,6 +90,14 @@ public class VistaBuscar__usuario_registrado_ extends LitTemplate {
 		this.divVideos = divVideos;
 	}
 
+	public TextField getInTextField() {
+		return inTextField;
+	}
 
+	public void setInTextField(TextField inTextField) {
+		this.inTextField = inTextField;
+	}
+
+	
     
 }

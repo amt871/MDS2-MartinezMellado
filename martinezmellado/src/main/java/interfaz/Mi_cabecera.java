@@ -26,6 +26,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Ver_perfil_privado__usuario_registrado_ perfilPrivado;
 	private Cambiar_contrasenna cambiarContra;
 	private Vista_detalle__usuario_registrado_ detalle;
+	private Buscar_usuario__usuario_registrado_ busquedaUsuarios;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
 		// TODO Auto-generated constructor stub
@@ -313,6 +314,16 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public void setDetalle(Vista_detalle__usuario_registrado_ detalle) {
 		this.detalle = detalle;
+	}
+
+
+	public Buscar_usuario__usuario_registrado_ getBusquedaUsuarios() {
+		return busquedaUsuarios;
+	}
+
+
+	public void setBusquedaUsuarios(Buscar_usuario__usuario_registrado_ busquedaUsuarios) {
+		this.busquedaUsuarios = busquedaUsuarios;
 	}
 	
 	
