@@ -139,7 +139,7 @@ public class Usuarios_Registrados {
 		List<Usuario_Registrado> aux = new ArrayList<Usuario_Registrado>();
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
-			String queryStr = "Nombre like '%" + aBusqueda + "%'";
+			String queryStr = "usuario like '%" + aBusqueda + "%'";
 			Usuario_Registrado[] publicaciones = Usuario_RegistradoDAO.listUsuario_RegistradoByQuery(queryStr, null);
 			if (publicaciones != null) {
 				aux = Arrays.asList(publicaciones);

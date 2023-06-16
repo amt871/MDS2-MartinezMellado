@@ -7,6 +7,7 @@ import java.util.List;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
@@ -208,7 +209,20 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		this.getDivVideos().add(vlVideos);
 		vlVideos.setHeight("100%");
 		vlVideos.setWidth("100%");
-
+		
+		this.getbUsuario().addClickListener(event -> {
+			
+			if(this.getInTextField().isEmpty()) {
+				Notification.show("Ningun usuario introducido");
+				return;
+			}
+			
+			this.getCabecera().getVl().removeAll();
+			this.getCabecera().setBusquedaUsuarios(new Buscar_usuario__usuario_registrado_(this.getCabecera(),this.getInTextField().getValue()));
+			this.getCabecera().getVl().add(this.getCabecera().getBusquedaUsuarios());
+			
+		});
+		
 	}
 
 	public void clear() {
