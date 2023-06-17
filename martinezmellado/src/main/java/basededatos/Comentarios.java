@@ -41,13 +41,14 @@ public class Comentarios {
 		 
 		    try { 
 		    	Usuario_Registrado usr = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + usuario +"'", null);
+		    	Publicacion auxPublicacion = PublicacionDAO.loadPublicacionByORMID(publicacion.getORMID());
 		    	Comentario coment = new Comentario();
 		    	
 		    	coment.setAutor(usr.getUsuario());
 		    	coment.setComentario(comentario);
 		    	coment.setEs_publicado(usr);
 		    	coment.setFechaPublicacion(Date.valueOf(LocalDate.now()));
-		    	coment.setPertenece(publicacion);
+		    	coment.setPertenece(auxPublicacion);
 		    	coment.setPublicacion(String.valueOf(publicacion.getID()));
 		    	
 		    	usr.publica.add(coment);
