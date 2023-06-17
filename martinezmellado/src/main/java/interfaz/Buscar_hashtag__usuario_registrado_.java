@@ -73,6 +73,8 @@ public class Buscar_hashtag__usuario_registrado_ extends VistaBuscar_hashtag__us
 
 	private void buscarHashtag(String hashtag) {
 		// TODO Auto-generated method stub
+		if(!hashtag.startsWith("#"))
+			hashtag = "#"+hashtag;
 		hashtags = this.cabecera.getDatos().buscarHashTag(hashtag);
 
 		// System.out.println(user);
