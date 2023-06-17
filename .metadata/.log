@@ -6267,3 +6267,48 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-17 17:34:04.152
 !MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:36:04.140
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:36:05.500
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:36:05.563
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:04.149
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:04.150
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:04.151
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.225
+!MESSAGE Removed model from server at http://192.168.56.1:54664/flow/8f9c
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.265
+!MESSAGE Removed model from server at http://192.168.56.1:54664/flow/43d0
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.429
+!MESSAGE Removed model from server at http://192.168.56.1:54664/flow/c0f6
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.430
+!MESSAGE Jetty stopped at http://192.168.56.1:54664
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.487
+!MESSAGE Force stop the task with pid 6384
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.496
+!MESSAGE Force stop the task with pid 6832
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:55.497
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:56.405
+!MESSAGE Jetty stopped at http://192.168.56.1:-1
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-17 17:38:56.407
+!MESSAGE Removed all models from server.

@@ -78,7 +78,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			if (salir)
 				continue;
 			if (/* i==0 || */cont % 4 == 0) {
-				System.out.println("despues");
+				//System.out.println("despues");
 				array.add(new HorizontalLayout());
 				array.get(array.size() - 1).setHeight("100%");
 				array.get(array.size() - 1).setWidth("100%");

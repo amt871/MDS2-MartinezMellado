@@ -67,7 +67,7 @@ public class Ver_siguiendo extends VistaVer_siguiendo{
 			for(int i = 0; i<listaSeguidos.length; i++) {
 
 				//System.out.println(this.getCabecera()==null);
-				System.out.println(listaSeguidos[i].getUsuario());
+				//System.out.println(listaSeguidos[i].getUsuario());
 
 				Usuario_Registrado usr = this.datos.cargarDatosUsuario(listaSeguidos[i].getUsuario());
 				array.add(new Siguiendo_item(usr, this.user, this.datos, this.mi_cabecera, this.mi_cabecera.getVl()));

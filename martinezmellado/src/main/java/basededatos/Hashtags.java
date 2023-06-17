@@ -45,7 +45,7 @@ public class Hashtags {
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
 	        Hashtag[] hashtags = HashtagDAO.listHashtagByQuery("hashtag like '"+aBusqueda+"'", null);
-	        System.out.println(hashtags.length);
+	        //System.out.println(hashtags.length);
 	        if (hashtags != null) {
 	            for(int i = 0; i<hashtags.length; i++)
 	            	aux.add(hashtags[i]);
