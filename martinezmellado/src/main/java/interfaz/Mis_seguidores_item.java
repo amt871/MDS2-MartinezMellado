@@ -68,7 +68,7 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 				flag = false;
 			}
 		}
-		System.out.println(flag);
+		//System.out.println(flag);
 		if(flag) {
 			this.getbSeguir().setText("Seguir");
 		}else {

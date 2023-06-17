@@ -315,9 +315,9 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 			if (this.usuario.getFoto().equals("icons/user.svg")){// Cambiar el valor en la base de datos
 				
-				System.out.println("Lo intenta");
+				//System.out.println("Lo intenta");
 				this.usuario.setFoto("Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
-				System.out.println(this.usuario.getFoto());
+				//System.out.println(this.usuario.getFoto());
 				
 				if (!datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(),
 						this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion())) {

@@ -78,7 +78,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			if (salir)
 				continue;
 			if (/* i==0 || */cont % 4 == 0) {
-				System.out.println("despues");
+				//System.out.println("despues");
 				array.add(new HorizontalLayout());
 				array.get(array.size() - 1).setHeight("100%");
 				array.get(array.size() - 1).setWidth("100%");
@@ -220,6 +220,19 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			this.getCabecera().getVl().removeAll();
 			this.getCabecera().setBusquedaUsuarios(new Buscar_usuario__usuario_registrado_(this.getCabecera(),this.getInTextField().getValue()));
 			this.getCabecera().getVl().add(this.getCabecera().getBusquedaUsuarios());
+			
+		});
+		
+		this.getbHashtag().addClickListener(event -> {
+			
+			if(this.getInTextField().isEmpty()) {
+				Notification.show("Ningun hashtag introducido");
+				return;
+			}
+			
+			this.getCabecera().getVl().removeAll();
+			this.getCabecera().setBusquedaHashtag(new Buscar_hashtag__usuario_registrado_(this.getCabecera(),this.getInTextField().getValue()));
+			this.getCabecera().getVl().add(this.getCabecera().getBusquedaHashtag());
 			
 		});
 		

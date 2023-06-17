@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="org.orm.PersistentTransaction"/>
-    <fullyQualifiedTypeName name="org.orm.PersistentException"/>
-    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.text.DateFormat"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -47,9 +41,7 @@
     <fullyQualifiedTypeName name="basededatos.Comentario"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
-    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="vistas.VistaBuscar_usuario__usuario_registrado_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
@@ -60,4 +52,12 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
+    <fullyQualifiedTypeName name="vistas.VistaBuscar_hashtag__usuario_registrado_"/>
+    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
+    <fullyQualifiedTypeName name="basededatos.Hashtags"/>
+    <fullyQualifiedTypeName name="basededatos.HashtagDAO"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="basededatos.Hashtag"/>
+    <fullyQualifiedTypeName name="vistas.VistaHashtag__usuario_registrado__item"/>
 </qualifiedTypeNameHistroy>
