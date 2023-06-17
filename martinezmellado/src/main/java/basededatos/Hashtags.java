@@ -12,6 +12,7 @@ public class Hashtags {
 	public Sistema _sis_has;
 	public Vector<Hashtag> _hashtag = new Vector<Hashtag>();
 
+	/*** REVISAR
 	public List buscarHahsTag(String aBusqueda) throws PersistentException {
 		List<Publicacion> aux = new ArrayList<Publicacion>();
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
@@ -37,7 +38,26 @@ public class Hashtags {
 	    }
 	    return aux;
 	}
-	
+	REVISAR*///
+	///Borrar el de abajo
+	public List buscarHahsTag(String aBusqueda) throws PersistentException {
+		List<Hashtag> aux = new ArrayList<Hashtag>();
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        Hashtag[] hashtags = HashtagDAO.listHashtagByQuery("Hashtag like '"+aBusqueda+"'", null);
+	        if (hashtags != null) {
+	            for(int i = 0; i<hashtags.length; i++)
+	            	aux.add(hashtags[i]);
+	        }
+	        t.commit();
+	        
+	    }catch (Exception e) {
+	        t.rollback();
+	        e.printStackTrace();
+	    }
+	    return aux;
+	}
+	///Borrar el de arriba, no nos pasemos
 	public void añadirPublicacionHashTag(  String hashtag, Publicacion publicacion ) throws PersistentException {
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {

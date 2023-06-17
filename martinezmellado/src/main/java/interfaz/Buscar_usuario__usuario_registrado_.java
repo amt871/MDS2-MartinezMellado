@@ -6,6 +6,7 @@ import java.util.List;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
@@ -42,13 +43,29 @@ public class Buscar_usuario__usuario_registrado_ extends VistaBuscar_usuario__us
 		this.content.setHeight("100%");
 		this.scroller.setContent(this.content);
 		
-		buscarUsuario(user);
+		
 		
 		this.getbBuscarUsuario().addClickListener(event ->{
 			
-			buscarUsuario(this.getTfIn().getValue());
+			if(this.getTfIn().isEmpty())
+				Notification.show("Ningun usuario a buscar");
+			else
+				buscarUsuario(this.getTfIn().getValue());
 			
 		});
+		
+		this.getbBuscarHashtag().addClickListener(event ->{
+			
+			if(this.getTfIn().isEmpty())
+				Notification.show("Ningun usuario a buscar");
+			else {
+				this.getCabecera().setBusquedaHashtag(new Buscar_hashtag__usuario_registrado_(this.getCabecera(), this.getTfIn().getValue()));
+				this.getCabecera().getVl().removeAll();
+				this.getCabecera().getVl().add(this.getCabecera().getBusquedaHashtag());
+			}
+		});
+		
+		buscarUsuario(user);
 		
 	}
 	

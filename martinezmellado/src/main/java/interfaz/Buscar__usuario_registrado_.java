@@ -223,6 +223,19 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 			
 		});
 		
+		this.getbHashtag().addClickListener(event -> {
+			
+			if(this.getInTextField().isEmpty()) {
+				Notification.show("Ningun hashtag introducido");
+				return;
+			}
+			
+			this.getCabecera().getVl().removeAll();
+			this.getCabecera().setBusquedaHashtag(new Buscar_hashtag__usuario_registrado_(this.getCabecera(),this.getInTextField().getValue()));
+			this.getCabecera().getVl().add(this.getCabecera().getBusquedaHashtag());
+			
+		});
+		
 	}
 
 	public void clear() {
