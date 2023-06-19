@@ -16,7 +16,7 @@ export class VistaVideo_hashtag__usuario_registrado_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <div id="divCabecera" style="width: 100%; height: 5%;"></div>
  <vaadin-vertical-layout style="width: 100%; height: 95%; align-items: center;">
   <vaadin-horizontal-layout style="align-items: center; width: 100%; height: 5%; justify-content: center;">

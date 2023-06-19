@@ -10,6 +10,7 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.dom.Element;
 
 import interfaz.Video;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-mi_video_item template.
@@ -21,10 +22,12 @@ import interfaz.Video;
 @JsModule("./src/vista-mi_video_item.ts")
 public class VistaMi_video_item extends LitTemplate {
 
-	@Id("labelTitulo")
-	private Label labelTitulo;
 	@Id("layoutVideo")
 	private VerticalLayout layoutVideo;
+	@Id("button")
+	private Button button;
+	@Id("labelDescripcion")
+	private Label labelDescripcion;
 
 	/**
      * Creates a new VistaMi_video_item.
@@ -33,13 +36,13 @@ public class VistaMi_video_item extends LitTemplate {
         // You can initialise any data required for the connected UI components here.
     }
 
-	public Label getLabelTitulo() {
+	/*public Label getLabelTitulo() {
 		return labelTitulo;
 	}
 
 	public void setLabelTitulo(Label labelTitulo) {
 		this.labelTitulo = labelTitulo;
-	}
+	}*/
 
 	public VerticalLayout getLayoutVideo() {
 		return layoutVideo;
@@ -49,9 +52,27 @@ public class VistaMi_video_item extends LitTemplate {
 		this.layoutVideo = layoutVideo;
 	}
 
-	public void setData(String src,String titulo, String altura, String anchura) {
+	public void setData(String src, String altura, String anchura) {
 		this.layoutVideo.add(new Video(src, altura, anchura));
-		this.labelTitulo.setText(titulo);
+		//this.labelTitulo.setText(titulo);
 	}
+
+	public Button getButton() {
+		return button;
+	}
+
+	public void setButton(Button button) {
+		this.button = button;
+	}
+
+	public Label getLabelDescripcion() {
+		return labelDescripcion;
+	}
+
+	public void setLabelDescripcion(Label labelDescripcion) {
+		this.labelDescripcion = labelDescripcion;
+	}
+	
+	
     
 }

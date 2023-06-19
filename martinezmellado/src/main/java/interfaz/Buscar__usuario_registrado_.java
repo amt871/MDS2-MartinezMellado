@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.vaadin.flow.component.orderedlayout.BoxSizing;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.html.Label;
@@ -85,6 +86,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 				array.get(array.size() - 1).getStyle().set("position", "relative");
 				array.get(array.size() - 1).setAlignItems(Alignment.CENTER);
 				array.get(array.size() - 1).setJustifyContentMode(JustifyContentMode.CENTER);
+				array.get(array.size() - 1).setBoxSizing(BoxSizing.BORDER_BOX);
 				vlUsuarios.add(array.get(array.size() - 1));
 			}
 			array.get(array.size() - 1).add(new Usuarionombreitem(usuarios[i], this.getCabecera(), this.usuario, this));

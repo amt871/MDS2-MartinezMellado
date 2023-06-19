@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.time.Year"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.receivers.MemoryBuffer"/>
@@ -49,7 +48,6 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Label"/>
     <fullyQualifiedTypeName name="vistas.VistaUsuario__usuario_registrado__item"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment"/>
     <fullyQualifiedTypeName name="vistas.VistaBuscar_hashtag__usuario_registrado_"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.notification.Notification"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="basededatos.Hashtag"/>
     <fullyQualifiedTypeName name="vistas.VistaVideo_hashtag__usuario_registrado_"/>
+    <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
+    <fullyQualifiedTypeName name="basededatos.Publicacion"/>
 </qualifiedTypeNameHistroy>

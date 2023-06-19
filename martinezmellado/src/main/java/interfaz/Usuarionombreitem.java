@@ -24,8 +24,10 @@ public class Usuarionombreitem extends VistaUsuarionombreitem {
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		//this.getStyle().set("width", "25%");
 		//this.getStyle().set("height", "50%");
-		//this.getImageButton().setHeight("100%");
-		//this.getImageButton().setWidth("100%");
+		//this.getImagen().setHeight("50%");
+		//this.getImagen().setWidth("50%");
+		this.getImagen().setMaxHeight("100%");
+		this.getImagen().setMaxWidth("50%");
 		this.getImagen().addClickListener(event -> {
 
 			this.verPerfilOtroUsuario();

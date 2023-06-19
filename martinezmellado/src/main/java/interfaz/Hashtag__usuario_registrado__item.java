@@ -25,7 +25,9 @@ public class Hashtag__usuario_registrado__item extends VistaHashtag__usuario_reg
 		
 		this.getbHashtag().addClickListener(event ->{
 			
-			this.cabecera.setHashtags(new Video_hashtag__usuario_registrado_(this.hashtag));
+			this.cabecera.setHashtags(new Video_hashtag__usuario_registrado_(this.hashtag, this.cabecera));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getHashtags());
 			
 		});
 		
