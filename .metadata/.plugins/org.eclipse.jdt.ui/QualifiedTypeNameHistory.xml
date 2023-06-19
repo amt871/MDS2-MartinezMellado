@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="java.time.Period"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.time.Year"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="vistas.VistaHashtag__usuario_registrado__item"/>
     <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="basededatos.Hashtag"/>
+    <fullyQualifiedTypeName name="vistas.VistaVideo_hashtag__usuario_registrado_"/>
 </qualifiedTypeNameHistroy>
