@@ -73,11 +73,8 @@ public class Hashtags {
 	        	
 	        	aux.esta.add(publicacionAux);
 	        	
-	        	System.out.println(publicacionAux.getDescripcion());
-	        	System.out.println(publicacionAux.getID());
 	        	HashtagDAO.save(aux);
-	        	System.out.println("hola");
-	        	System.out.println(aux.esta.size());
+
 	        	t.commit();
 	        
 	    }catch (Exception e) {
