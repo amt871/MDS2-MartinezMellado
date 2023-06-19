@@ -13,6 +13,7 @@ public class Comentario_item extends VistaComentario_item {
 	private Usuario_Registrado miUsuario;
 	private Usuario_Registrado usuario;
 	private Mi_cabecera cabeceraUserReg;
+	private Cabecera_comercial cabeceraCom;
 	private Comentario comentario;
 	public Comentario_item(Comentario comentario, Mi_cabecera cabecera) {
 		
@@ -53,11 +54,51 @@ public class Comentario_item extends VistaComentario_item {
 			}
 		});
 	}
+	
+	public Comentario_item(Comentario comentario2, Cabecera_comercial cabeceraCom) {
+		// TODO Auto-generated constructor stub
+		this.cabeceraCom = cabeceraCom;
+		this.miUsuario = this.cabeceraCom.getDatos().cargarDatosUsuario(this.cabeceraCom.getUser().getUsuario());
+		
+		this.usuario = this.cabeceraCom.getDatos().cargarDatosUsuario(comentario2.getAutor());
+		
+		this.comentario = this.cabeceraCom.getDatos().cargarComentario(this.usuario, this.cabeceraCom.getDatos().cargarVideoPoID(Integer.valueOf(comentario2.getPublicacion())));
+		// TODO Auto-generated constructor stub
+		
+		this.getImgUser().setSrc("Usuarios/"+comentario2.getAutor()+"/imagen.jpg");
+		this.getLabelComentario().setText(comentario2.getComentario());
+		this.getStyle().set("width", "100%");
+		this.getStyle().set("height", "20%");
+		//this.getStyle().set("position", "relative");
+		
+		this.getbDenunciar().addClickListener(event -> {
+			Usuario_Registrado miUsr = cabeceraCom.getDatos().cargarDatosUsuario(cabeceraCom.getUser().getUsuario());
+			Usuario_Registrado usr = cabeceraCom.getDatos().cargarDatosUsuario(comentario2.getAutor());
+			Publicacion publi = cabeceraCom.getDatos().cargarVideoPoID(Integer.valueOf(comentario2.getPublicacion()));
+			Comentario aux = cabeceraCom.getDatos().cargarComentario(usr, publi);
+			
+			boolean flag = true;
+			for (Usuario_Registrado denunciante : aux.es_denunciada.toArray()){
+				if (denunciante.getUsuario().equals(miUsr.getUsuario())) {
+					flag = false;
+				}
+			}
+			
+			
+			if (flag) {
+				cabeceraCom.getDatos().denunciarComentario(miUsr, comentario2);
+			}else{
+				Notification.show("Ya has denunciado este comentario");
+			}
+		});
+	}
+	
 	private void verPerfilPropietario() {
 		if (this.usuario.getUsuario().equals(this.miUsuario.getUsuario())) {
-			this.cabeceraUserReg.setPerfil(new Mi_perfil(this.cabeceraUserReg.getVl(), cabeceraUserReg));
-			this.cabeceraUserReg.getVl().removeAll();
-			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfil());
+				if(cabeceraUserReg != null) 
+					this.cabeceraUserReg.setPerfil(new Mi_perfil(this.cabeceraUserReg.getVl(), cabeceraUserReg));
+					this.cabeceraUserReg.getVl().removeAll();
+					this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfil());
 		}else if (this.usuario.getPrivado()) {
 
 			// System.out.println(miUsuario.getUsuario());

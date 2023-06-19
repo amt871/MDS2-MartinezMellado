@@ -27,7 +27,7 @@ export class VistaVista_detalle__usuario_registrado_ extends LitElement {
    </vaadin-vertical-layout>
   </div>
   <vaadin-vertical-layout style="width: 40%; height: 100%; align-items: center; justify-content: center;">
-   <img style="width: 20%; height: 12%;" id="imgUser">
+   <img style="max-width: 20%; max-height: 12%;" id="imgUser">
    <label id="labelUsuario">Usuario</label>
    <vaadin-horizontal-layout style="height: 5%; width: 60%; align-items: center; justify-content: space-around;">
     <label id="labelUbi">Ubicacion</label>

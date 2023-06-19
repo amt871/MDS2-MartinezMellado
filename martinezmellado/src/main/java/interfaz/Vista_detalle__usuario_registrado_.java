@@ -46,21 +46,18 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	private BDPrincipal datos;
 	private Publicacion publicacion;
 	private Mi_cabecera cabeceraUserReg;
+	private Cabecera_comercial cabeceraCom;
 	private Usuario_Registrado miUsuario;
-	
-	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg) {
-		// TODO Auto-generated constructor stub
-		this.setCabecera(cabeceraUserReg);
-	}
 
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg, Usuario_Registrado usuario, Publicacion publicacion) {
 		// TODO Auto-generated constructor stub
+		this.miUsuario = null;
 		this.cabeceraUserReg = cabeceraUserReg;
 		this.datos = cabeceraUserReg.getDatos();
 		this.publicacion = publicacion;
 		this.miUsuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
 		this.setCabecera(cabeceraUserReg);
-		this.getImgUser().setSrc(usuario.getFoto());
+		this.getImgUser().setSrc(this.miUsuario.getFoto());
 		this.getLabelDescripcion().setText(publicacion.getDescripcion());
 		this.getLabelUsuario().setText(publicacion.getRealizada().getUsuario());
 		this.getLabelFecha().setText(publicacion.getFecha().toString());
@@ -104,12 +101,66 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		//this.getLabelDescripcion()
 	}
 	
+	public Vista_detalle__usuario_registrado_(Cabecera_comercial cabeceraCom, Usuario_Registrado user,
+			Publicacion publi) {
+		// TODO Auto-generated constructor stub
+		this.miUsuario = null;
+		this.cabeceraCom = cabeceraCom;
+		this.datos = cabeceraCom.getDatos();
+		this.publicacion = publi;
+		this.miUsuario = this.cabeceraCom.getDatos().cargarDatosUsuario(this.cabeceraCom.getUser().getUsuario());
+		this.setCabeceraCom(cabeceraCom);
+		this.getImgUser().setSrc(user.getFoto());
+		this.getLabelDescripcion().setText(publicacion.getDescripcion());
+		this.getLabelUsuario().setText(publicacion.getRealizada().getUsuario());
+		this.getLabelFecha().setText(publicacion.getFecha().toString());
+		this.getLabelUbi().setText(publicacion.getUbicacion());
+		this.getLayoutVideo().add(new Video(publicacion.getVideo().replace("src/main/webapp/", ""),"90%", "90%"));
+		this.getImgUser().addClickListener(event -> {
+			verPerfilPropietario();
+		});
+		
+		this.getbAddComentario().addClickListener(event -> {
+			if (this.datos.cargarComentario(this.getCabecera().getUser(), publicacion) != null) {
+				Notification.show("Ya has comentado esta publicacion ateriormente");
+			}else {
+				if(addComentario()) {
+					this.datos.annadirNotificacion("comentario", user, cabeceraCom.getUser(), publicacion);
+					this.vl.removeAll();
+					addItems();
+				}
+				this.getFieldComentario().clear();
+			}
+			
+		});
+		
+		this.vl = new VerticalLayout();
+		
+		scroller = this.getScroller();
+		
+		scroller.setScrollDirection(ScrollDirection.VERTICAL);
+		scroller.setContent(vl);
+		vl.setHeight("100%");
+		vl.setWidth("100%");
+		vl.setAlignItems(Alignment.CENTER);
+		//vl.setJustifyContentMode(JustifyContentMode.CENTER);
+		
+		if(this.datos.cargarComentariosPublicacion(publicacion).length == 0) {
+			vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			vl.add(new Label("Esta publicacion no tiene comentarios"));
+		}else
+			addItems();
+	}
+
 	private void addItems() {
 		
 		Comentario[] comentarios = this.datos.cargarComentariosPublicacion(publicacion);
 		
 		for(int i=0; i<comentarios.length; i++)
-		vl.add(new Comentario_item(comentarios[i], this.cabeceraUserReg));
+			if(this.cabeceraUserReg !=null)
+				vl.add(new Comentario_item(comentarios[i], this.cabeceraUserReg));
+			else
+				vl.add(new Comentario_item(comentarios[i], this.cabeceraCom));
 		
 		
 	}

@@ -15,6 +15,7 @@ public class Mi_video_item extends VistaMi_video_item {
 	}*/
 	
 	private Mi_cabecera cabecera;
+	private Cabecera_comercial cabeceraCom;
 	private Video video;
 	private Publicacion publi;
 	
@@ -58,6 +59,28 @@ public class Mi_video_item extends VistaMi_video_item {
 			this.cabecera.setDetalle(new Vista_detalle__usuario_registrado_(this.cabecera, this.cabecera.getUser(), this.publi));
 			this.cabecera.getVl().removeAll();
 			this.cabecera.getVl().add(this.cabecera.getDetalle());
+			
+		});
+	}
+
+	public Mi_video_item(Publicacion publi2, Cabecera_comercial cabecera2) {
+		// TODO Auto-generated constructor stub
+		this.video = new Video(publi2.getVideo().replace("src/main/webapp/",""));
+		this.publi = publi2;
+		this.getLabelDescripcion().setText(publi.getDescripcion().length()<15 ? publi.getDescripcion() : publi.getDescripcion().substring(0, 11)+"...");
+		this.getLayoutVideo().add(this.video);
+		this.cabeceraCom = cabecera2;
+		this.video.setWidth("80%");
+		this.video.setHeight("80%");
+		//this.getLabelTitulo().setText(titulo);
+		this.getStyle().set("height", "100%");
+		this.getStyle().set("width", "25%");
+		
+		this.getButton().addClickListener(event ->{
+			
+			this.cabeceraCom.setDetalle(new Vista_detalle__usuario_registrado_(this.cabeceraCom, this.cabeceraCom.getUser(), this.publi));
+			this.cabeceraCom.getVl().removeAll();
+			this.cabeceraCom.getVl().add(this.cabeceraCom.getDetalle());
 			
 		});
 	}

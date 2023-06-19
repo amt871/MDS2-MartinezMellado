@@ -6,6 +6,7 @@ import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.template.Id;
 
+import interfaz.Cabecera_comercial;
 import interfaz.Mi_cabecera;
 
 import com.vaadin.flow.component.html.Image;
@@ -26,6 +27,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 
 	private Mi_cabecera cabecera;
+	private Cabecera_comercial cabeceraCom;
     @Id("divCabecera")
 	private Div divCabecera;
 	@Id("divVideo")
@@ -161,6 +163,15 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 
 	public void setLayoutVideo(HorizontalLayout layoutVideo) {
 		this.layoutVideo = layoutVideo;
+	}
+
+	public Cabecera_comercial getCabeceraCom() {
+		return cabeceraCom;
+	}
+
+	public void setCabeceraCom(Cabecera_comercial cabeceraCom) {
+		this.cabeceraCom = cabeceraCom;
+		this.getDivCabecera().add(cabeceraCom);
 	}
 
 	
