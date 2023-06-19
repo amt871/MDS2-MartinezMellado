@@ -71,7 +71,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		// TODO Auto-generated constructor stub
 		//this.vl=vl;
 		this.datos = cabecera.getDatos();
-		this.usuario = cabecera.getUser();
+		this.usuario = this.datos.cargarDatosUsuario(cabecera.getUser().getUsuario());
 		this.setCabecera(cabecera);
 		this.setConfig(config);
 		this.cabecera = cabecera;

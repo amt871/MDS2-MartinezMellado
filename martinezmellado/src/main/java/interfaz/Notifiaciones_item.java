@@ -34,7 +34,7 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
         });
 		
 		this.getbAceptar().addClickListener(event -> {
-			datos.segimiento(emisor, miUsuario);
+			datos.segimiento(miUsuario, emisor);
 			datos.cambiarNotificacion(id);
 			this.setVisible(false);
         });

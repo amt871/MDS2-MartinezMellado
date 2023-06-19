@@ -2,6 +2,8 @@ package interfaz;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import com.vaadin.flow.component.orderedlayout.BoxSizing;
@@ -105,6 +107,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		// Video("Usuarios\\Juanra1997\\videos\\2023-06-05T23-00-09.914853900.mp4"));
 
 		this.publicaciones = this.datos.listarUltimasPublicacions(this.usuario.getID());
+		
 
 		this.getDivVideos().add(vlVideos);
 		vlVideos.setHeight("100%");
