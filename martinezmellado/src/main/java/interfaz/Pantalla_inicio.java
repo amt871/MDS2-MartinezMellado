@@ -20,6 +20,7 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 	private Iniciar_sesion iniciarSesion;
 	private Mi_cabecera cabeceraReg;
 	//private Registro registro;
+	private Cabecera_comercial cabeceraCom;
 	
 	public Pantalla_inicio(MainView vl) {
 		
@@ -36,7 +37,7 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 			
 		});
 		
-		this.getbIniciarSesion().addClickListener(evente -> {
+		this.getbIniciarSesion().addClickListener(event -> {
 			
 			inicioSesion();
 			
@@ -70,7 +71,7 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 	private void inicioSesion() {
 		// TODO Auto-generated method stub
 		this.vlMain.removeAll();
-		this.vlMain.add(iniciarSesion = new Iniciar_sesion(this.vlMain, this.datos, this, this.cabeceraReg));
+		this.vlMain.add(iniciarSesion = new Iniciar_sesion(this.vlMain, this.datos, this, this.cabeceraReg, this.cabeceraCom));
 		
 		/*try {
 			this.finalize();
@@ -99,6 +100,7 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 		this.confCorr = null;
 		this.iniciarSesion = null;
 		this.cabeceraReg = null;
+		this.cabeceraCom = null;
 		
 	}
 	

@@ -14,7 +14,7 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 	private MainView vl;
 	private Usuario_Registrado user;
 	private Mi_cabecera cabeceraReg;
-	private Cabecera_comercial cabeceraComercial;
+	private Cabecera_comercial cabeceraCom;
 	private Pantalla_inicio pantInicio;
 	
 //	private event _entrar;
@@ -39,13 +39,14 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Iniciar_sesion(MainView vl, BDPrincipal datos, Pantalla_inicio pantalla_inicio, Mi_cabecera cabeceraReg2) {
+	public Iniciar_sesion(MainView vl, BDPrincipal datos, Pantalla_inicio pantalla_inicio, Mi_cabecera cabeceraReg2, Cabecera_comercial cabeceraCom) {
 		// TODO Auto-generated constructor stub
 		
 		this.vl = vl;
 		this.datos = datos;
 		this.pantInicio = pantalla_inicio;
 		this.cabeceraReg = cabeceraReg2;
+		this.cabeceraCom = cabeceraCom;
 		
 		this.getInPass().addKeyPressListener(Key.ENTER, e -> {
 		
@@ -75,6 +76,13 @@ public class Iniciar_sesion extends VistaIniciar_sesion{
 				this.cabeceraReg = new Mi_cabecera(this.vl, this.datos, this.user, this.pantInicio);
 				this.cabeceraReg.setPantallaInicio(new Video_otro_usuario(this.vl, this.cabeceraReg));
 				this.vl.add(this.cabeceraReg.getPantallaInicio());
+			} else {
+				
+				this.vl.removeAll();
+				this.cabeceraCom = new Cabecera_comercial(this.vl, this.datos, this.user, this.pantInicio);
+				this.cabeceraCom.setPerfil(new Perfil_comercial(this.cabeceraCom));
+				this.vl.add(this.cabeceraCom.getPerfil());
+				
 			}
 			
 		});

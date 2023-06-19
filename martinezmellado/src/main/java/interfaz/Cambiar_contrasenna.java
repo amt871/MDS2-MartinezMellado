@@ -48,6 +48,34 @@ public class Cambiar_contrasenna extends VistaCambiar_contrasenna{
 		
 	}
 	
+	public Cambiar_contrasenna(Usuario_Registrado user, Cabecera_comercial cabecera) {
+		// TODO Auto-generated constructor stub
+	
+		this.usuario=user;
+		this.datos = cabecera.getDatos();
+		this.setCabecera(cabecera);
+		
+		this.getbGuardar().addClickListener(event -> {
+			
+			if(cambiarContrasenna())
+				if(this.getCabeceraCom()!=null)
+					this.getCabeceraCom().getbPerfil().click();
+				else
+					this.getCabecera().getPerfil().getbConfigurar().click();
+			
+		});
+		
+		this.getbCancelar().addClickListener(event -> {
+			
+			if(this.getCabeceraCom()!=null)
+				this.getCabeceraCom().getbPerfil().click();
+			else
+				this.getCabecera().getPerfil().getbConfigurar().click();
+			
+		});
+		
+	}
+	
 	public boolean cambiarContrasenna() {
 		
 		if(this.getInPass().isEmpty() || this.getInPassRepeat().isEmpty()) {

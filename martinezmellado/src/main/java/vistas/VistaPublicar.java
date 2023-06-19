@@ -30,7 +30,8 @@ import com.vaadin.flow.component.html.Image;
 @JsModule("./src/vista-publicar.ts")
 public class VistaPublicar extends LitTemplate {
 
-	private Component cabecera;
+	private Cabecera_comercial cabeceraCom;
+	private Mi_cabecera cabecera;
 	//private Cabecera_comercial cabeceraCom;
     @Id("divCabecera")
 	private Div divCabecera;
@@ -67,7 +68,7 @@ public class VistaPublicar extends LitTemplate {
 	}
 
 	public Mi_cabecera getCabecera() {
-		return (Mi_cabecera) cabecera;
+		return cabecera;
 	}
 
 	public void setCabecera(Mi_cabecera cabecera) {
@@ -77,12 +78,12 @@ public class VistaPublicar extends LitTemplate {
 	}
 
 	public Cabecera_comercial getCabeceraCom() {
-		return (Cabecera_comercial) cabecera;
+		return cabeceraCom;
 	}
 
 	public void setCabecera(Cabecera_comercial cabeceraCom) {
 		
-		this.cabecera = cabeceraCom;
+		this.cabeceraCom = cabeceraCom;
 		getDivCabecera().add(cabeceraCom);
 	}
 
@@ -140,10 +141,6 @@ public class VistaPublicar extends LitTemplate {
 
 	public void setDescrpcion(TextArea descrpcion) {
 		this.descrpcion = descrpcion;
-	}
-
-	public void setCabecera(Component cabecera) {
-		this.cabecera = cabecera;
 	}
 
 	public VerticalLayout getLayoutVideo() {

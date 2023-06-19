@@ -129,6 +129,79 @@ public class Publicar extends VistaPublicar {
         });
 		
 	}
+	
+	public Publicar(Cabecera_comercial cabecera) {
+		
+		this.datos = cabecera.getDatos();
+		this.user = cabecera.getUser();
+		this.vl = cabecera.getVl();
+		
+		this.setCabecera(cabecera);
+		
+		this.getImguser().setSrc(this.user.getFoto());
+		
+		// usuarioARegistrar = new Usuario_Registrado();
+		memoryBuffer = new MemoryBuffer();
+		//cosas = new Object[3];
+		this.getUploader().setReceiver(memoryBuffer);
+		fileData = null;
+		this.getUploader().addSucceededListener(event -> {
+
+			
+			if (event.getFileName().endsWith("mp4")) {
+				fileData = memoryBuffer.getInputStream();
+				
+				File file = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp");
+				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/tmp.mp4");
+				file.mkdir();
+				try {
+					file2.createNewFile();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				OutputStream out;
+				try {
+					out = new FileOutputStream(file2);
+				
+
+				byte[] buf = new byte[1024];
+				int length;
+				
+				//Notification.show("Subiendo video...");
+				
+				while ((length = fileData.read(buf)) > 0) {
+					out.write(buf, 0, length);
+				}
+				
+				fileData.reset();
+				
+				out.close();
+				
+				this.getLayoutVideo().removeAll();
+				this.getLayoutVideo().add(new Video("Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/tmp.mp4", "90%","90%"));
+				
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				file = null;
+				file2 = null;
+				
+			}else
+				Notification.show("Solo se admiten video en MP4");
+
+		});
+		this.getSubirVideo().addClickListener(event -> {
+			bPublica();
+        });
+		
+	}
 
 	public void bPublica() {
 		
@@ -151,7 +224,11 @@ public class Publicar extends VistaPublicar {
 		Usuario_Registrado autor = this.user;
 		String ubicacio = this.getUbicacion().getValue();
 		String ruta = directoryPath + nvideo;
-		String propietario = this.getCabecera().getUser().getUsuario();
+		String propietario="";
+		if(this.getCabecera()!=null)
+			propietario = this.getCabecera().getUser().getUsuario();
+		if(this.getCabeceraCom()!=null)
+			propietario = this.getCabeceraCom().getUser().getUsuario();
 
 		datos.nuevaPublicacion(descripcion, ubicacio, ruta, null, this.user.getComercial(), propietario);
 
@@ -208,8 +285,18 @@ public class Publicar extends VistaPublicar {
 			
 			Notification.show("Video subido");
 			
-			File file3 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
-			File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+			File file3=null;
+			File file2=null;
+			
+			if(this.getCabecera()!=null) {
+				file3 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+				file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+			}
+			
+			if(this.getCabeceraCom()!=null) {
+				file3 = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp");
+				file2 = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/tmp.mp4");
+			}
 			
 			if(file2.exists())
 				file2.delete();
@@ -219,7 +306,11 @@ public class Publicar extends VistaPublicar {
 			file3 = null;
 			
 			this.vl.removeAll();
-			this.vl.add(new Mi_perfil(this.vl, this.getCabecera()));
+			if(this.getCabecera()!=null)
+				this.vl.add(new Mi_perfil(this.vl, this.getCabecera()));
+			if(this.getCabeceraCom()!=null)
+				this.vl.add(new Perfil_comercial(this.getCabeceraCom()));
+			
 			try {
 				this.finalize();
 			} catch (Throwable e) {
