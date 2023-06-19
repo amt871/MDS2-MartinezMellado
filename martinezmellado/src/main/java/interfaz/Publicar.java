@@ -173,7 +173,7 @@ public class Publicar extends VistaPublicar {
         // Imprimimos todos los hashtags que encontramos
         for (String hashtag : hashtagsLista) {
         	if (!hashtag.matches(".*[a-zA-Z0-9]+.*")) continue;
-           this.datos.añadirPublicacionHashTag(hashtag, publicacion);
+           this.datos.añadirPublicacionHashTag(hashtag, this.datos.cargarVideoPorRuta(ruta));
         }
 		try {
 			

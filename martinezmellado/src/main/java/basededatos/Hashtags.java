@@ -63,17 +63,21 @@ public class Hashtags {
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
 	        	Hashtag aux = HashtagDAO.loadHashtagByQuery("hashtag= '" + hashtag + "'" , null);
-	        	publicacion = PublicacionDAO.loadPublicacionByQuery("Video= '" + publicacion.getVideo() + "'" , null);
+	        	Publicacion publicacionAux = PublicacionDAO.loadPublicacionByQuery("video = '" + publicacion.getVideo() + "'", null);
+	        	System.out.println(publicacion.getVideo());
 	        	if (aux == null) {
 	        		aux = HashtagDAO.createHashtag();
 	        		aux.setHashtag(hashtag);
 	        		
 	        	}
 	        	
-	        	aux.esta.add(publicacion);
+	        	aux.esta.add(publicacionAux);
 	        	
+	        	System.out.println(publicacionAux.getDescripcion());
+	        	System.out.println(publicacionAux.getID());
 	        	HashtagDAO.save(aux);
-	        	
+	        	System.out.println("hola");
+	        	System.out.println(aux.esta.size());
 	        	t.commit();
 	        
 	    }catch (Exception e) {

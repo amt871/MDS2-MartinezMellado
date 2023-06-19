@@ -227,7 +227,7 @@ public class Publicaciones {
 		try {
 			publicaciones = PublicacionDAO.listPublicacionByQuery(null, null);
 			Usuario = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("UsuarioID=" + id, null);
-			banList = Usuario.seguidor.toArray();
+			banList = Usuario.seguido.toArray();
 
 			for (Publicacion publicacion : publicaciones) {
 				boolean banPublicacion = false;

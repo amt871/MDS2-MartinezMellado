@@ -59,8 +59,8 @@ public class Notificaciones extends VistaNotificaciones {
 		// TODO Auto-generated constructor stub
 
 		this.inicio = vl2;
-		this.user = mi_cabecera.getUser();
 		this.datos = mi_cabecera.getDatos();
+		this.user = this.datos.cargarDatosUsuario(mi_cabecera.getUser().getUsuario());
 		this.setCabecera(mi_cabecera);
 		this.mi_cabecera = mi_cabecera;
 		
@@ -113,6 +113,8 @@ public class Notificaciones extends VistaNotificaciones {
 			vl.setWidth("100%");
 
 			ArrayList<Notifiaciones_item> array = new ArrayList<Notifiaciones_item>();
+			
+			int cont = 0;
 
 			for(int i = 0; i<listaNotificaciones.size() && i<20; i++) {
 
@@ -128,8 +130,9 @@ public class Notificaciones extends VistaNotificaciones {
 							this.mi_cabecera,
 							this.user,
 							this.inicio));
-					array.get(i).getIdImagenUsr().setSrc(usr.getFoto());
-					vl.add(array.get(i));
+					array.get(cont).getIdImagenUsr().setSrc(usr.getFoto());
+					vl.add(array.get(cont));
+					cont++;
 				}
 			}
 		}
