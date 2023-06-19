@@ -16,7 +16,7 @@ export class VistaHashtag__usuario_registrado__item extends LitElement {
   render() {
     return html`
 <vaadin-horizontal-layout style="width: 100%; height: 5%; align-items: center; justify-content: center;">
- <vaadin-button style="width: 100%;" id="bHashtag">
+ <vaadin-button style="width: 100%; flex-shrink: 0; flex-grow: 1; margin-left: var(--lumo-space-s);" id="bHashtag">
    Nombre Hashtag 
  </vaadin-button>
  <label style="flex-shrink: 0; flex-grow: 0; margin-right: var(--lumo-space-s);" id="labelVideos">Numero de videos </label>
