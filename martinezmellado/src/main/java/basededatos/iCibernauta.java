@@ -13,4 +13,6 @@ public interface iCibernauta {
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo);
 	
 	public Publicacion cargarVideoPorRuta(String ruta);
+	
+	public Usuario_Registrado cargarUsuarioCorreo(String correo);
 }

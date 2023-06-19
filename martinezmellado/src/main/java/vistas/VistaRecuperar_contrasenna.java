@@ -5,6 +5,7 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.template.Id;
+import com.vaadin.flow.component.textfield.TextField;
 
 /**
  * A Designer generated component for the vista-recuperar_contrasenna template.
@@ -18,6 +19,8 @@ public class VistaRecuperar_contrasenna extends LitTemplate {
 
     @Id("bEnviar")
 	private Button bEnviar;
+	@Id("idCorreo")
+	private TextField idCorreo;
 
 	/**
      * Creates a new VistaRecuperar_contrasenna.
@@ -32,6 +35,14 @@ public class VistaRecuperar_contrasenna extends LitTemplate {
 
 	public void setbEnviar(Button bEnviar) {
 		this.bEnviar = bEnviar;
+	}
+
+	public TextField getIdCorreo() {
+		return idCorreo;
+	}
+
+	public void setIdCorreo(TextField idCorreo) {
+		this.idCorreo = idCorreo;
 	}
     
     

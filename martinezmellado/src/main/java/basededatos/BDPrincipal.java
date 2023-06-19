@@ -508,4 +508,15 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 		return null;
 	}
+
+	@Override
+	public Usuario_Registrado cargarUsuarioCorreo(String correo) {
+		// TODO Auto-generated method stub
+		try {
+			return this.usuariosRegistrados.cargarUsuarioCorreo(correo);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
 }

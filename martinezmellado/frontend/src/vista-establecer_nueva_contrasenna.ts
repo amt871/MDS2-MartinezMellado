@@ -17,16 +17,16 @@ export class VistaEstablecer_nueva_contrasenna extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
+<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;position: absolute;">
  <vaadin-horizontal-layout theme="spacing" style="height: 20%; width: 100%; align-items: center; justify-content: center;">
-  <img src="../../resources/icons/toktok2.svg">
+  <img src="icons/toktok2.svg">
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; width: 100%; height: 100%;">
-  Nueva contraseña
+   Nueva contraseña 
   <vaadin-text-field id="idPass1" style="width: 70%;"></vaadin-text-field>Confirma contraseña 
   <vaadin-text-field id="idPass2" style="width: 70%;"></vaadin-text-field>
   <vaadin-button id="idBoton" style="width: 20%;">
-   Aceptar
+    Aceptar 
   </vaadin-button>
  </vaadin-vertical-layout>
 </vaadin-vertical-layout>

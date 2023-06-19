@@ -5,6 +5,7 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.template.Id;
+import com.vaadin.flow.component.textfield.TextField;
 
 /**
  * A Designer generated component for the vista-confirmar_codigo template.
@@ -18,6 +19,8 @@ public class VistaConfirmar_codigo extends LitTemplate {
 
     @Id("bEnviar")
 	private Button bEnviar;
+	@Id("idCodigo")
+	private TextField idCodigo;
 
 	/**
      * Creates a new VistaConfirmar_codigo.
@@ -32,6 +35,14 @@ public class VistaConfirmar_codigo extends LitTemplate {
 
 	public void setbEnviar(Button bEnviar) {
 		this.bEnviar = bEnviar;
+	}
+
+	public TextField getIdCodigo() {
+		return idCodigo;
+	}
+
+	public void setIdCodigo(TextField idCodigo) {
+		this.idCodigo = idCodigo;
 	}
 
     

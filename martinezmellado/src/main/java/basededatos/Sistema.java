@@ -278,6 +278,11 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public Usuario_Registrado cargarUsuarioCorreo(String correo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 	
 }

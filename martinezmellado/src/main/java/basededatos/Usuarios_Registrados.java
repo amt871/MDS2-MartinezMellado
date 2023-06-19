@@ -417,4 +417,16 @@ public class Usuarios_Registrados {
 	    }
 		return usuarios;
 	}
-}
+	
+	public Usuario_Registrado cargarUsuarioCorreo(String correo) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		Usuario_Registrado usuario = null;;
+		try { 
+			usuario = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("Correo = '"+ correo + "'", null);
+	    }catch (Exception e) {
+	        t.rollback();
+	        e.printStackTrace();
+	    }
+		return usuario;
+	}
+	}

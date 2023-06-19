@@ -51,7 +51,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 	private Usuario_Registrado miUsuario_Registrado;
 	
 	public Ver_perfil__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
-	
+		
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
 		this.getLabelSeguidores().setText("Seguidores: "+ usuario.seguidor.size());
@@ -95,8 +95,18 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 				if(this.getSeguirButton().getText().equals("Seguir")) {
 					this.getSeguirButton().setText("Dejar de seguir");
 					this.cabecera.getDatos().annadirNotificacion("seguir", this.usuario, this.cabecera.getUser(), null);
+					int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) + 1;
+					this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
 				}else {
 					this.getSeguirButton().setText("Seguir");
+					int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) - 1;
+					this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
+					if (this.usuario.getPrivado() == true) {
+						this.cabecera.setPerfilPrivado(
+								new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
+						this.cabecera.getVl().removeAll();
+						this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+					}
 				}
 					
 			//Notification.show("Siguiendo");
