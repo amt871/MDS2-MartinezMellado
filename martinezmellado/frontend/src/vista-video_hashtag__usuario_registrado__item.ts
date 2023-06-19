@@ -1,4 +1,5 @@
 import { LitElement, html, css, customElement } from 'lit-element';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 
 @customElement('vista-video_hashtag__usuario_registrado__item')
 export class VistaVideo_hashtag__usuario_registrado__item extends LitElement {
@@ -13,9 +14,13 @@ export class VistaVideo_hashtag__usuario_registrado__item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;" theme="spacing-s">
- <img style="height: 90%; width: 90%;" src="../../resources/icons/video.svg">
- <label>Descripcion</label>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;" theme="">
+ <vaadin-horizontal-layout style="width: 100%; height: 95%; align-items: center; justify-content: center;">
+  <vaadin-horizontal-layout id="layoutVideo" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+ </vaadin-horizontal-layout>
+ <vaadin-horizontal-layout style="width: 100%; height: 5%; align-items: center; justify-content: center;">
+  <label id="labelDescripcion">Descripcion</label>
+ </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;
   }

@@ -96,7 +96,7 @@ public class Buscar_hashtag__usuario_registrado_ extends VistaBuscar_hashtag__us
 			items = new ArrayList<Hashtag__usuario_registrado__item>();
 
 			for (Hashtag has : hashtags)
-				items.add(new Hashtag__usuario_registrado__item(has.getHashtag(), has.esta.size(), this.cabecera));
+				items.add(new Hashtag__usuario_registrado__item(has, this.cabecera));
 			for (int i = 0; i < items.size(); i++)
 				this.content.add(items.get(i));
 
