@@ -46,6 +46,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	private BDPrincipal datos;
 	private Publicacion publicacion;
 	private Mi_cabecera cabeceraUserReg;
+	private Usuario_Registrado miUsuario;
 	
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg) {
 		// TODO Auto-generated constructor stub
@@ -57,6 +58,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.cabeceraUserReg = cabeceraUserReg;
 		this.datos = cabeceraUserReg.getDatos();
 		this.publicacion = publicacion;
+		this.miUsuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
 		this.setCabecera(cabeceraUserReg);
 		this.getImgUser().setSrc(usuario.getFoto());
 		this.getLabelDescripcion().setText(publicacion.getDescripcion());
@@ -64,6 +66,9 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.getLabelFecha().setText(publicacion.getFecha().toString());
 		this.getLabelUbi().setText(publicacion.getUbicacion());
 		this.getLayoutVideo().add(new Video(publicacion.getVideo().replace("src/main/webapp/", ""),"90%", "90%"));
+		this.getImgUser().addClickListener(event -> {
+			verPerfilPropietario();
+		});
 		
 		this.getbAddComentario().addClickListener(event -> {
 			if (this.datos.cargarComentario(this.getCabecera().getUser(), publicacion) != null) {
@@ -118,5 +123,33 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		
 		//return true;
 		
+	}
+	
+	private void verPerfilPropietario() {
+		if (publicacion.getRealizada().getPrivado()) {
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			if (this.miUsuario.seguido.contains(publicacion.getRealizada())) {
+				this.cabeceraUserReg
+						.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, publicacion.getRealizada()));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+			} else {
+				this.cabeceraUserReg.setPerfilPrivado(
+						new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, publicacion.getRealizada()));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPrivado());
+				// this.inicio.cambiarPantalla(cabecera);
+			}
+		} else {
+
+			this.cabeceraUserReg
+					.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, publicacion.getRealizada()));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+
+		}
 	}
 }

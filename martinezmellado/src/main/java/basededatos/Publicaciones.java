@@ -225,7 +225,7 @@ public class Publicaciones {
 		List<Publicacion> listaDevolucion = new ArrayList<>();
 		Publicacion[] devolver = null;
 		try {
-			publicaciones = PublicacionDAO.listPublicacionByQuery(null, null);
+			publicaciones = PublicacionDAO.listPublicacionByQuery(null, "video DESC");
 			Usuario = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("UsuarioID=" + id, null);
 			banList = Usuario.seguido.toArray();
 

@@ -116,7 +116,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 
 			this.array = new ArrayList<Video_otro_usuario_item>();
 
-			for (int i = 0; i < videos.size() && i < 20; i++) {
+			for (int i = 0; i < videos.size() ; i++) {
 
 				// System.out.println(this.getCabecera()==null);
 

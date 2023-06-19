@@ -10,8 +10,21 @@ import vistas.VistaComentario_item;
 
 public class Comentario_item extends VistaComentario_item {
 
+	private Usuario_Registrado miUsuario;
+	private Usuario_Registrado usuario;
+	private Mi_cabecera cabeceraUserReg;
+	private Comentario comentario;
 	public Comentario_item(Comentario comentario, Mi_cabecera cabecera) {
+		
+		this.cabeceraUserReg = cabecera;
+		this.miUsuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
+		this.usuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(comentario.getAutor());
+		this.comentario = this.cabeceraUserReg.getDatos().cargarComentario(this.usuario, this.cabeceraUserReg.getDatos().cargarVideoPoID(Integer.valueOf(comentario.getPublicacion())));
 		// TODO Auto-generated constructor stub
+		
+		this.getImgUser().addClickListener(event -> {
+			verPerfilPropietario();
+		});
 		
 		this.getImgUser().setSrc("Usuarios/"+comentario.getAutor()+"/imagen.jpg");
 		this.getLabelComentario().setText(comentario.getComentario());
@@ -40,14 +53,36 @@ public class Comentario_item extends VistaComentario_item {
 			}
 		});
 	}
-//	private Button _denunciarB;
-//	private ImageButton _imagenUsuarioIB;
-//	private Label _nombreUsuarioL;
-//	public Comentario _comentario;
-//	public Perfil_otro_usuario _perfil_otro_usuario;
-//
-//	public void perfil_otro_usuario() {
-//		throw new UnsupportedOperationException();
-//	}
+	private void verPerfilPropietario() {
+		if (this.usuario.getUsuario().equals(this.miUsuario.getUsuario())) {
+			this.cabeceraUserReg.setPerfil(new Mi_perfil(this.cabeceraUserReg.getVl(), cabeceraUserReg));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfil());
+		}else if (this.usuario.getPrivado()) {
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			if (this.miUsuario.seguido.contains(this.usuario)) {
+				this.cabeceraUserReg
+						.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+			} else {
+				this.cabeceraUserReg.setPerfilPrivado(
+						new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPrivado());
+				// this.inicio.cambiarPantalla(cabecera);
+			}
+		} else {
+
+			this.cabeceraUserReg
+					.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+
+		}
+	}
 
 }
