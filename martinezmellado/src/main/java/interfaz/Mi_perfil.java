@@ -173,7 +173,7 @@ public class Mi_perfil extends VistaMi_perfil {
 					
 					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
 					
-					array.get(index).add(new Mi_video_item(videos[i].getVideo().replace("src/main/webapp/",""), titulo)/*, "100%", "25%")*/);
+					array.get(index).add(new Mi_video_item(videos[i], this.getCabecera())/*, "100%", "25%")*/);
 					//array.get(index).add(new)
 					contador++;
 					if(contador==4) {

@@ -192,11 +192,13 @@ public class Usuarios_Registrados {
 			nuevo.setDescripcion(aDescripcion);
 			nuevo.setEdad(periodo.getYears());
 			nuevo.setFoto(aFoto);
+			
+			//System.out.println(aFoto);
 
 			//System.out.println(Usuario_RegistradoDAO.save(nuevo));
 			Usuario_RegistradoDAO.save(nuevo);
 			
-			Usuario_RegistradoDAO.refresh(nuevo);
+			//Usuario_RegistradoDAO.refresh(nuevo);
 			t.commit();
 			//System.out.println("Usuarios_Registrados bien");
 			//MartinezMelladoMDSPersistentManager.instance().getSession().flush();
@@ -210,7 +212,7 @@ public class Usuarios_Registrados {
 		}
 		
 		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
-		MartinezMelladoMDSPersistentManager.instance().getSession().clear();
+		//MartinezMelladoMDSPersistentManager.instance().getSession().clear();
 		return flag;
 		
 	}

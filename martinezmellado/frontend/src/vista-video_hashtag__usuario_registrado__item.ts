@@ -14,11 +14,11 @@ export class VistaVideo_hashtag__usuario_registrado__item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;" theme="">
- <vaadin-horizontal-layout style="width: 100%; height: 95%; align-items: center; justify-content: center;">
-  <vaadin-horizontal-layout id="layoutVideo" style="width: 100%; height: 100%;"></vaadin-horizontal-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: flex-start; justify-content: center;" theme="">
+ <vaadin-horizontal-layout style="width: 100%; height: 95%; align-items: flex-start; justify-content: center;">
+  <vaadin-horizontal-layout id="layoutVideo" style="max-width: 100%; max-height: 100%;"></vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <vaadin-horizontal-layout style="width: 100%; height: 5%; align-items: center; justify-content: center;">
+ <vaadin-horizontal-layout style="width: 100%; height: 5%; align-items: flex-start; justify-content: center;">
   <label id="labelDescripcion">Descripcion</label>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
