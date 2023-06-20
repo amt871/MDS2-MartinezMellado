@@ -103,8 +103,6 @@ public class Buscar_usuario__usuario_registrado_ extends VistaBuscar_usuario__us
 	}
 	
 	public void clear() {
-		if(this.usuarios != null)
-			this.usuarios.clear();
 		if(this.items != null)
 			this.items.clear();
 		

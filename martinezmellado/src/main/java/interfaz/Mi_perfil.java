@@ -2,7 +2,9 @@ package interfaz;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 
 import org.orm.PersistentException;
 
@@ -16,6 +18,7 @@ import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.BDPrincipal;
+import basededatos.Publicacion;
 import basededatos.PublicacionDAO;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
@@ -141,6 +144,12 @@ public class Mi_perfil extends VistaMi_perfil {
 			basededatos.Publicacion[] videos = null;
 			
 			videos = this.usuario.realiza.toArray();
+			
+			Arrays.sort(videos, new Comparator<Publicacion>() {
+			    public int compare(Publicacion p1, Publicacion p2) {
+			        return Integer.compare(p1.getID(), p2.getID());
+			    }
+			});
 			
 			//videos
 			

@@ -1,6 +1,10 @@
 package interfaz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 
 import org.orm.PersistentException;
@@ -15,6 +19,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
+import basededatos.Publicacion;
 import basededatos.PublicacionDAO;
 import basededatos.Usuario_Registrado;
 import vistas.VistaVer_perfil__usuario_registrado_;
@@ -170,6 +175,12 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 			basededatos.Publicacion[] videos = null;
 			
 			videos = this.usuario.realiza.toArray();
+			
+			Arrays.sort(videos, new Comparator<Publicacion>() {
+			    public int compare(Publicacion p1, Publicacion p2) {
+			        return Integer.compare(p2.getID(), p1.getID());
+			    }
+			});
 			
 			if(videos != null) {
 				int contador = 0;

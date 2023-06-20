@@ -3,6 +3,7 @@ package interfaz;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Vector;
 
@@ -89,18 +90,44 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 		// this.datos = new BDPrincipal();
 		this.videos = new ArrayList<Publicacion>();
 		this.seguidos = new ArrayList<Usuario_Registrado>();
+		
+		ArrayList<Usuario_Registrado> comerciales = new ArrayList<Usuario_Registrado>();
+		for (Object users :  this.datos.buscarUsuario("").toArray()) {
+			Usuario_Registrado aux = (Usuario_Registrado) users;
+			if (aux.getComercial().equals("Comercial")) {
+				comerciales.add(aux);
+			}
+		}
+		
+		ArrayList<Publicacion> videosPublicidad = new ArrayList<Publicacion>();
+				
+		if (comerciales != null) {
+			for (Usuario_Registrado comercial : comerciales) {
+				for (Publicacion publicacion : comercial.realiza.toArray()) {
+					videosPublicidad.add(publicacion);
+				}
+			}
+		}
+		Collections.shuffle(videosPublicidad);
+		
 
 		this.aux = this.usuario.seguidor.toArray();
 		if (aux != null) {
-			for (Usuario_Registrado object : aux) {
+			for (Usuario_Registrado object : this.usuario.seguido.toArray()) {
 				seguidos.add(object);
 			}
 			for (Usuario_Registrado usuario_Registrado : seguidos) {
 				videos.addAll(Arrays.asList(usuario_Registrado.realiza.toArray()));
 			}
 			
-			Collections.reverse(videos);
+			videos.sort(new Comparator<Publicacion>() {
+			    public int compare(Publicacion p1, Publicacion p2) {
+			        return Integer.compare(p2.getID(), p1.getID());
+			    }
+			});
 		}
+		
+		int contPubli = 0;
 		if (videos.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
@@ -113,32 +140,53 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 			// vl.getStyle().set("top", "5%");
 			vl.setHeight("100%");
 			vl.setWidth("100%");
-
+			int indPubli = videosPublicidad.size() - 1 ;
+			int indVideo = 0 ;
 			this.array = new ArrayList<Video_otro_usuario_item>();
-
-			for (int i = 0; i < videos.size() ; i++) {
-
-				// System.out.println(this.getCabecera()==null);
-
-				this.array.add(new Video_otro_usuario_item(this.usuario,
-						videos.get(i), videos.get(i).getRealizada(),
-						this.inicio, this.getCabecera(), this));
-				// array.get(i).getLayoutVideo().add(new
-				// Video(videos[i].getVideo().replace("src/main/webapp/", "")));
-				this.array.get(i).getStyle().set("position", "relative");
-				this.array.get(i).getStyle().set("height", "100%");
-				this.array.get(i).getStyle().set("width", "100%");
-				this.array.get(i).getImageButton().setSrc(videos.get(i).getRealizada().getFoto());
-				this.array.get(i).getLabelUsuario().setText(videos.get(i).getRealizada().getUsuario());
-				this.array.get(i).getIdUbicación().setText(videos.get(i).getUbicacion());
-				this.array.get(i).getIdFecha().setText(videos.get(i).getFecha().toString());
-				this.array.get(i).getIdDescripcion().setText(videos.get(i).getDescripcion());
-				this.array.get(i).getIdNumMg().setText(String.valueOf(videos.get(i).le_gusta.size()));
-				this.array.get(i).getIdNumComentarios().setText(String.valueOf(videos.get(i).tiene.size()));
-
-				vl.add(array.get(i));
-			}
-
+			int limite = videos.size();
+				
+				for (int i = 0; i < limite ; i++) {
+					
+					if (contPubli == 3) {
+						if (indPubli < 0) indPubli = videosPublicidad.size() - 1;
+						
+						this.array.add(new Video_otro_usuario_item(this.usuario,
+								videosPublicidad.get(indPubli), videosPublicidad.get(indPubli).getRealizada(),
+								this.inicio, this.getCabecera(), this));
+						this.array.get(i).getStyle().set("position", "relative");
+						this.array.get(i).getStyle().set("height", "100%");
+						this.array.get(i).getStyle().set("width", "100%");
+						this.array.get(i).getImageButton().setSrc(videosPublicidad.get(indPubli).getRealizada().getFoto());
+						this.array.get(i).getLabelUsuario().setText(videosPublicidad.get(indPubli).getRealizada().getUsuario());
+						this.array.get(i).getIdUbicación().setText(videosPublicidad.get(indPubli).getUbicacion());
+						this.array.get(i).getIdFecha().setText(videosPublicidad.get(indPubli).getFecha().toString());
+						this.array.get(i).getIdDescripcion().setText("PUBLICIDAD\n" +videosPublicidad.get(indPubli).getDescripcion());
+						this.array.get(i).getIdNumMg().setText(String.valueOf(videosPublicidad.get(indPubli).le_gusta.size()));
+						this.array.get(i).getIdNumComentarios().setText(String.valueOf(videosPublicidad.get(indPubli).tiene.size()));
+						vl.add(array.get(i));
+						
+						indPubli--;
+						limite++;
+						contPubli = 0;
+					}else {
+						this.array.add(new Video_otro_usuario_item(this.usuario,
+								videos.get(indVideo), videos.get(indVideo).getRealizada(),
+								this.inicio, this.getCabecera(), this));
+						this.array.get(i).getStyle().set("position", "relative");
+						this.array.get(i).getStyle().set("height", "100%");
+						this.array.get(i).getStyle().set("width", "100%");
+						this.array.get(i).getImageButton().setSrc(videos.get(indVideo).getRealizada().getFoto());
+						this.array.get(i).getLabelUsuario().setText(videos.get(indVideo).getRealizada().getUsuario());
+						this.array.get(i).getIdUbicación().setText(videos.get(indVideo).getUbicacion());
+						this.array.get(i).getIdFecha().setText(videos.get(indVideo).getFecha().toString());
+						this.array.get(i).getIdDescripcion().setText(videos.get(indVideo).getDescripcion());
+						this.array.get(i).getIdNumMg().setText(String.valueOf(videos.get(indVideo).le_gusta.size()));
+						this.array.get(i).getIdNumComentarios().setText(String.valueOf(videos.get(indVideo).tiene.size()));
+						contPubli++;
+						indVideo++;
+						vl.add(array.get(i));	
+					}
+				}
 		}
 
 	}

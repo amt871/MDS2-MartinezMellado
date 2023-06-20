@@ -74,7 +74,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		for (int i = 0; i < usuarios.length && cont < 8; i++) {
 			boolean salir = false;
 			for (Usuario_Registrado seguido : this.usuario.seguido.toArray()) {
-				if (seguido.getUsuario().equals(usuarios[i].getUsuario())) {
+				if (seguido.getUsuario().equals(usuarios[i].getUsuario()) || usuarios[i].getComercial().equals("Comercial")) {
 					salir = true;
 				}
 			}

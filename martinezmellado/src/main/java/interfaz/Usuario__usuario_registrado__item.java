@@ -31,7 +31,11 @@ public class Usuario__usuario_registrado__item extends VistaUsuario__usuario_reg
 		this.inicio = cabecera.getVl();
 		this.getLabelDescripcion().setText(usu.getDescripcion().isEmpty() ? "Usuario sin descricpion" : usu.getDescripcion());
 		this.getLabelSeguidores().setText("Seguidores: "+usu.seguidor.size());
-		this.getLabelUsuario().setText(usu.getUsuario());
+		if (usu.getComercial().equals("Comercial")) {
+			this.getLabelUsuario().setText(usu.getUsuario() + " (Empresa)");
+		} else {
+			this.getLabelUsuario().setText(usu.getUsuario());
+		}
 		this.getImageUser().setSrc(usu.getFoto());
 		
 		this.getbUser().addClickListener(event ->{
