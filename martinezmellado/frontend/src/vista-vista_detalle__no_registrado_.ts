@@ -1,8 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-cabecera_usuario_no_registrado';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-comentario__no_registrado_';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-vista_detalle__no_registrado_')
 export class VistaVista_detalle__no_registrado_ extends LitElement {
@@ -18,19 +17,21 @@ export class VistaVista_detalle__no_registrado_ extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
- <vista-cabecera_usuario_no_registrado style="width: 100%; height: 5%;"></vista-cabecera_usuario_no_registrado>
+ <div id="divCabecera" style="width: 100%; height: 5%;"></div>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
-   <img src="../../resources/icons/video.svg">
+  <vaadin-vertical-layout style="width: 50%; height: 100%; align-items: center; justify-content: center;">
+   <vaadin-vertical-layout id="vlVideo" style="align-items: center; justify-content: center; max-width: 100%; max-height: 100%;"></vaadin-vertical-layout>
   </vaadin-vertical-layout>
-  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
-   <img style="width: 20%; height: 12%;" src="../../resources/icons/user.svg">
-   <label>Usuario</label>
+  <vaadin-vertical-layout theme="spacing" style="width: 50%; height: 100%; align-items: center; justify-content: center;">
+   <img style="max-width: 20%; max-height: 20%;" id="image">
+   <label id="labelUsuario">Usuario</label>
    <vaadin-horizontal-layout style="height: 5%; width: 60%; align-items: center; justify-content: space-around;">
-    <label>Fecha</label>
-    <label>Ubicacion</label>
+    <label id="labelFecha">Fecha</label>
+    <label id="labelUbicacion">Ubicacion</label>
    </vaadin-horizontal-layout>
-   <vista-comentario__no_registrado_ style="width: 100%; height: 40%;"></vista-comentario__no_registrado_>
+   <div style="width: 100%; height: 40%;">
+    <vaadin-scroller id="scroller"></vaadin-scroller>
+   </div>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>

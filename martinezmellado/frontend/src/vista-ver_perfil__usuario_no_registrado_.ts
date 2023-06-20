@@ -16,18 +16,25 @@ export class VistaVer_perfil__usuario_no_registrado_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
- <vista-cabecera_usuario_no_registrado style="width: 100%; height: 5%;"></vista-cabecera_usuario_no_registrado>
- <vaadin-horizontal-layout style="height: 10%; justify-content: space-between; width: 100%;">
-  <vaadin-horizontal-layout style="width: 100%; align-self: center; justify-content: center; align-items: center;">
-   <label>Numero de seguidores</label>
+<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; position: absolute;">
+ <div id="divCabecera" style="width: 100%; height: 5%;"></div>
+ <vaadin-horizontal-layout style="width: 100%; height: 20%;">
+  <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: flex-end;">
+   <label id="labelSeguidores">Label</label>
   </vaadin-horizontal-layout>
-  <img style="height: 100%;" src="../../resources/icons/user.svg">
-  <vaadin-horizontal-layout style="width: 100%; align-self: center; align-items: center; justify-content: center;">
-   <label>Numero de me gustas</label>
+  <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+   <img id="image" style="max-width: 100%; max-height: 100%;">
+  </vaadin-vertical-layout>
+  <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
+   <label id="labelMeGustas">Label</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
- <vista-video_otro_usuario__no_registrado_></vista-video_otro_usuario__no_registrado_>
+ <vaadin-horizontal-layout style="width: 100%; height: 5%; align-items: center; justify-content: center;">
+  <label id="labelUsuario">Label</label>
+ </vaadin-horizontal-layout>
+ <div style="width: 100%; height: 70%;">
+  <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+ </div>
 </vaadin-vertical-layout>
 `;
   }

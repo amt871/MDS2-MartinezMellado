@@ -1,8 +1,8 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 
 @customElement('vista-buscar__no_registrado_')
 export class VistaBuscar__no_registrado_ extends LitElement {
@@ -21,93 +21,27 @@ export class VistaBuscar__no_registrado_ extends LitElement {
  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 5%;">
   <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-vertical-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 95%; padding-top: var(--lumo-space-m);">
+ <vaadin-horizontal-layout style="width: 100%; height: 95%; padding-top: var(--lumo-space-m);">
   <vaadin-vertical-layout style="width: 70%; height: 100%; justify-content: flex-start; align-items: center;">
-   <label>Videos de Hastag relacionados relevantes</label>
-   <vaadin-vertical-layout style="width: 100%; align-items: center; justify-content: flex-start; height: 45%;">
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%;">
-     <vaadin-vertical-layout theme="spacing-xs" style="align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing-xs" style="align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing-xs" style="align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing-xs" style="align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
+   <vaadin-vertical-layout style="width: 100%; height: 50%; align-items: center; flex-wrap: wrap;">
+    <vaadin-horizontal-layout style="width: 100%; height: 10%; align-items: center; justify-content: center;">
+     <label theme="spacing">Usuarios recientes</label>
     </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 50%;">
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-    </vaadin-horizontal-layout>
+    <div id="divUsuarios" style="width: 100%; height: 90%;"></div>
    </vaadin-vertical-layout>
-   <label>Videos de Hastag mas relevantes</label>
-   <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 45%; align-items: center; justify-content: center; padding-top: var(--lumo-space-xl);">
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 50%;">
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
+   <vaadin-vertical-layout style="width: 100%; height: 50%;">
+    <vaadin-horizontal-layout style="width: 100%; height: 10%; align-items: center; justify-content: center;">
+     <label>Videos mas recientes</label>
     </vaadin-horizontal-layout>
-    <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 50%;">
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-     <vaadin-vertical-layout theme="spacing" style="width: 25%; height: 100%; align-items: center; justify-content: center;">
-      <img style="width: 75%;" src="icons/video.png">
-      <label id="idNombreUsuario">Usuario</label>
-     </vaadin-vertical-layout>
-    </vaadin-horizontal-layout>
+    <div id="divVideos" style="width: 100%; height: 90%;"></div>
    </vaadin-vertical-layout>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 30%; height: 100%; align-items: center; justify-content: flex-start;">
-   <vaadin-text-field></vaadin-text-field>
-   <vaadin-button id="idBuscarUsuario">
+   <vaadin-text-field id="inTextField"></vaadin-text-field>
+   <vaadin-button id="bBuscarUsuario">
      Buscar usuario 
    </vaadin-button>
-   <vaadin-button id="idBUscarHastag">
+   <vaadin-button id="bBUscarHastag">
      Buscar Hastag 
    </vaadin-button>
   </vaadin-vertical-layout>

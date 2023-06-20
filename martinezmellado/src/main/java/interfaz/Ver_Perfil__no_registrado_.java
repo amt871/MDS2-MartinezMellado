@@ -7,5 +7,5 @@ public class Ver_Perfil__no_registrado_ {
 	public Usuario__no_registrado__item _usuario__no_registrado_;
 	public Comentario__no_registrado__item _comentario__no_registrado_;
 	public Ver_perfil__usuario_no_registrado_ _ver_perfil_privado__usuario_no_registrado_;
-	public Ver_perfil_publico__usuario_no_registrado_ _ver_perfil_publico__usuario_no_registrado_;
+	//public Ver_perfil_publico__usuario_no_registrado_ _ver_perfil_publico__usuario_no_registrado_;
 }

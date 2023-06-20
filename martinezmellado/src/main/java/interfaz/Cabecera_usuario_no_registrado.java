@@ -37,6 +37,9 @@ public class Cabecera_usuario_no_registrado extends VistaCabecera_usuario_no_reg
 	private Pantalla_inicio pantInicio;
 	private Inicio_no_registrado inicio;
 	private Buscar__no_registrado_ buscar;
+	private Ver_perfil_privado__usuario_no_registrado_ perfilPrivado;
+	private Ver_perfil__usuario_no_registrado_ perfilPublico;
+	private Vista_detalle__no_registrado_ detalle;
 	
 	public Cabecera_usuario_no_registrado(MainView vlMain, BDPrincipal datos, Pantalla_inicio pantalla_inicio) {
 		// TODO Auto-generated constructor stub
@@ -103,6 +106,39 @@ public class Cabecera_usuario_no_registrado extends VistaCabecera_usuario_no_reg
 	public void setInicio(Inicio_no_registrado inicio) {
 		this.inicio = inicio;
 	}
+
+	public Buscar__no_registrado_ getBuscar() {
+		return buscar;
+	}
+
+	public void setBuscar(Buscar__no_registrado_ buscar) {
+		this.buscar = buscar;
+	}
+
+	public Ver_perfil_privado__usuario_no_registrado_ getPerfilPrivado() {
+		return perfilPrivado;
+	}
+
+	public void setPerfilPrivado(Ver_perfil_privado__usuario_no_registrado_ perfilPrivado) {
+		this.perfilPrivado = perfilPrivado;
+	}
+
+	public Ver_perfil__usuario_no_registrado_ getPerfilPublico() {
+		return perfilPublico;
+	}
+
+	public void setPerfilPublico(Ver_perfil__usuario_no_registrado_ perfilPublico) {
+		this.perfilPublico = perfilPublico;
+	}
+
+	public Vista_detalle__no_registrado_ getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(Vista_detalle__no_registrado_ detalle) {
+		this.detalle = detalle;
+	}
+	
 	
 	
 }
