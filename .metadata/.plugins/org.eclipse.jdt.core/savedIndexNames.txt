@@ -190,7 +190,6 @@ INDEX VERSION 1.131+C:\Users\Juanra\Desktop\MDS2-MartinezMellado\.metadata\.plug
 1917568230.index
 3586842023.index
 3377965727.index
-351714694.index
 924208301.index
 927407766.index
 2456630251.index

@@ -32,149 +32,16 @@ public class Video_otro_usuario__administrador_ extends VistaVideo_otro_usuario_
 	//VerticalLayout layoutPrincipal;
 	
 	private Scroller scroller;
-	private VerticalLayout vl;
+	private VerticalLayout content;
+	
 	//private ArrayList<Video_otro_usuario__administrador__item> array;
 
-	public Video_otro_usuario__administrador_() {
+	public Video_otro_usuario__administrador_(Cabecera__administrador_ cabecera__administrador_) {
 		
-		//layoutPrincipal = this.getLayoutPrincipal();
-
-		//cabecera = new Cabecera__administrador_();
-
-//		VerticalLayout layoutPrincipal = this.getLayoutPrincipal();
-//
-//		cabecera.getStyle().set("width", "100%");
-//		cabecera.getStyle().set("height", "0px");
-//
-//		layoutPrincipal.add(cabecera);
-
-//		VerticalLayout container = new VerticalLayout();
-//		
-//		container.getStyle().set("width", "100%");
-//		container.getStyle().set("height", "835px");
-//		
-//		Scroller scroller = new Scroller();
-//		
-//		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
-//		
-//		scroller.getStyle().set("width", "100%");
-//		scroller.getStyle().set("height", "100%");
-//		
-//		VerticalLayout vl = new VerticalLayout();
-//		
-//		scroller.setContent(vl);
-//		
-//		vl.getStyle().set("width", "100%");
-//		vl.getStyle().set("height", "100%");
-//		
-//		ArrayList<Video_otro_usuario__administrador__item> array = new ArrayList<Video_otro_usuario__administrador__item>();
-//		
-//		array.add(new Video_otro_usuario__administrador__item());
-//		array.add(new Video_otro_usuario__administrador__item());
-//		
-//		for(int i=0; i<array.size(); i++)
-//			vl.add(array.get(i));
-//		
-//		
-//		container.add(scroller);
-//		
-//		layoutPrincipal.add(container);
 		
-		/*Scroller */scroller = new Scroller();
-		vl = new VerticalLayout();
-		//array = new ArrayList<Video_otro_usuario__administrador__item>();
-
-		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
-
-		scroller.getStyle().set("width", "100%");
-		scroller.getStyle().set("height", "100%");
-
-		//VerticalLayout vl = new VerticalLayout();
-
-		scroller.setContent(vl);
-
-		vl.getStyle().set("width", "100%");
-		vl.getStyle().set("height", "100%");
-
-		//ArrayList<Video_otro_usuario__administrador__item> array = new ArrayList<Video_otro_usuario__administrador__item>();
-
-//		array.add(new Video_otro_usuario__administrador__item());
-//		array.add(new Video_otro_usuario__administrador__item());
-//
-//		for (int i = 0; i < array.size(); i++)
-//			vl.add(array.get(i));
-//
-//		this.getDivScroller().add(scroller);
-		this.getDivScroller().add(scroller);
-		
-		addItem();
-
-	}
-	
-	public void addItem() {
-		
-		//array.add(new Video_otro_usuario__administrador__item());
-		//array.add(new Video_otro_usuario__administrador__item());
-
-		//for (int i = 0; i < array.size(); i++)
-			//vl.add(array.get(i));
-
-		//this.getDivScroller().add(scroller);
-		//this.getDivScroller();
-		
-		vl.add(new Video_otro_usuario__administrador__item());
-		vl.add(new Video_otro_usuario__administrador__item());
 		
 	}
 
-	/*public Cabecera__administrador_ getCabecera() {
-		return cabecera;
-	}
 
-	public void setCabecera(Cabecera__administrador_ cabecera) {
-		this.cabecera = cabecera;
-
-		cabecera.getStyle().set("width", "100%");
-		cabecera.getStyle().set("height", "0px");
-
-		layoutPrincipal.add(cabecera);
-		
-		addScroller();
-	}
-
-	public void addScroller() {
-
-		VerticalLayout container = new VerticalLayout();
-
-		container.getStyle().set("width", "100%");
-		container.getStyle().set("height", "835px");
-
-		Scroller scroller = new Scroller();
-
-		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
-
-		scroller.getStyle().set("width", "100%");
-		scroller.getStyle().set("height", "100%");
-
-		VerticalLayout vl = new VerticalLayout();
-
-		scroller.setContent(vl);
-
-		vl.getStyle().set("width", "100%");
-		vl.getStyle().set("height", "100%");
-
-		ArrayList<Video_otro_usuario__administrador__item> array = new ArrayList<Video_otro_usuario__administrador__item>();
-
-		array.add(new Video_otro_usuario__administrador__item());
-		array.add(new Video_otro_usuario__administrador__item());
-
-		for (int i = 0; i < array.size(); i++)
-			vl.add(array.get(i));
-
-		container.add(scroller);
-
-		layoutPrincipal.add(container);
-
-	}*/
 
 }

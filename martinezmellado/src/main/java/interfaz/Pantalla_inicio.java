@@ -19,8 +19,9 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 	private Confirmar_correo confCorr;
 	private Iniciar_sesion iniciarSesion;
 	private Mi_cabecera cabeceraReg;
-	//private Registro registro;
 	private Cabecera_comercial cabeceraCom;
+	private Cabecera_usuario_no_registrado cabeceraNoReg;
+	private Inicio_no_registrado inicioNoReg;
 	
 	public Pantalla_inicio(MainView vl) {
 		
@@ -40,6 +41,12 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 		this.getbIniciarSesion().addClickListener(event -> {
 			
 			inicioSesion();
+			
+		});
+		
+		this.getbAcceder().addClickListener(event ->{
+			
+			acceder();
 			
 		});
 		
@@ -66,10 +73,17 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 			
 		});
 		
+		this.getbAcceder().addClickListener(event ->{
+			
+			acceder();
+			
+		});
+		
 	}
 
-	private void inicioSesion() {
+	public void inicioSesion() {
 		// TODO Auto-generated method stub
+		this.clear();
 		this.vlMain.removeAll();
 		this.vlMain.add(iniciarSesion = new Iniciar_sesion(this.vlMain, this.datos, this, this.cabeceraReg, this.cabeceraCom));
 		
@@ -82,10 +96,11 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 		
 	}
 
-	private void registrarse() {
+	public void registrarse() {
 
+		this.clear();
 		this.vlMain.removeAll();
-		this.vlMain.add(new Registro(this.vlMain, this.datos, this, this.confCorr));
+		this.vlMain.add(registro = new Registro(this.vlMain, this.datos, this, this.confCorr));
 		
 		/*try {
 			this.finalize();
@@ -95,12 +110,23 @@ public class Pantalla_inicio extends VistaPantalla_inicio {
 		}*/
 	}
 	
+	private void acceder() {
+		this.clear();
+		this.cabeceraNoReg = new Cabecera_usuario_no_registrado(this.vlMain, this.datos, this);
+		this.cabeceraNoReg.setInicio(this.inicioNoReg = new Inicio_no_registrado(this.cabeceraNoReg));
+		this.vlMain.removeAll();
+		this.vlMain.add(this.cabeceraNoReg.getInicio());
+		
+	}
+	
 	public void clear() {
 		
+		this.registro = null;
 		this.confCorr = null;
 		this.iniciarSesion = null;
 		this.cabeceraReg = null;
 		this.cabeceraCom = null;
+		this.cabeceraNoReg = null;
 		
 	}
 	

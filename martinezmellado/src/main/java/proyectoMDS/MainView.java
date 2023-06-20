@@ -64,7 +64,20 @@ public class MainView extends VerticalLayout {
 		
 		this.removeAll();
 		
-		add(new Pantalla_inicio(this));
+		
+		int select = 0;
+		switch(select) {
+
+		case 0:
+			//Usuarios administradores
+			add(new Iniciar_sesion__administrador_(this));
+			break;
+		
+		default:
+			//Usuarios normales
+			add(new Pantalla_inicio(this));
+			break;
+		}
 		
 	}
 	

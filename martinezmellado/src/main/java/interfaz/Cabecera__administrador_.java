@@ -1,5 +1,7 @@
 package interfaz;
 
+import basededatos.BDPrincipal;
+import proyectoMDS.MainView;
 import vistas.VistaCabecera__administrador_;
 
 public class Cabecera__administrador_ extends VistaCabecera__administrador_{
@@ -28,8 +30,30 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 //	public void busqueda__administrador_() {
 //		throw new UnsupportedOperationException();
 //	}
+//	
+//	public Cabecera__administrador_() {
+//		
+//	}
+
+	private MainView vl;
+	private BDPrincipal datos;
+	private Iniciar_sesion__administrador_ iniciarSesion;
+	private Video_otro_usuario__administrador_ inicio;
 	
-	public Cabecera__administrador_() {
+	public Cabecera__administrador_(MainView vl, BDPrincipal datos,
+			Iniciar_sesion__administrador_ iniciar_sesion__administrador_) {
+		// TODO Auto-generated constructor stub
+		this.vl = vl;
+		this.datos = datos;
+		this.iniciarSesion = iniciar_sesion__administrador_;
 		
+		this.getbAdministrar2().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(this.inicio = new Video_otro_usuario__administrador_(this));
+			
+		});
 	}
+	
+	
 }

@@ -1,8 +1,11 @@
 package interfaz;
 
+import basededatos.BDPrincipal;
+import proyectoMDS.MainView;
 import vistas.VistaCabecera_usuario_no_registrado;
 
 public class Cabecera_usuario_no_registrado extends VistaCabecera_usuario_no_registrado {
+
 //	private Button _busquedaB;
 //	private Button _iniciarSesionB;
 //	private Button _inicioB;
@@ -29,6 +32,77 @@ public class Cabecera_usuario_no_registrado extends VistaCabecera_usuario_no_reg
 //		throw new UnsupportedOperationException();
 //	}
 	
+	private MainView vl;
+	private BDPrincipal datos;
+	private Pantalla_inicio pantInicio;
+	private Inicio_no_registrado inicio;
+	private Buscar__no_registrado_ buscar;
+	
+	public Cabecera_usuario_no_registrado(MainView vlMain, BDPrincipal datos, Pantalla_inicio pantalla_inicio) {
+		// TODO Auto-generated constructor stub
+		
+		this.vl = vlMain;
+		this.datos = datos;
+		this.pantInicio = pantalla_inicio;
+		
+		this.getbIniciarSesion().addClickListener(event ->{
+			
+			this.pantInicio.inicioSesion();
+			
+		});
+		
+		this.getbRegistrarse().addClickListener(event ->{
+			
+			this.pantInicio.registrarse();
+			
+		});
+		
+		this.getbInicio().addClickListener(event -> {
+			
+			this.vl.removeAll();
+			this.vl.add(this.inicio = new Inicio_no_registrado(this));
+			
+		});
+		
+		this.getbBusqueda().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(this.buscar = new Buscar__no_registrado_(this));
+			
+		});
+	}
+
+	public MainView getVl() {
+		return vl;
+	}
+
+	public void setVl(MainView vl) {
+		this.vl = vl;
+	}
+
+	public BDPrincipal getDatos() {
+		return datos;
+	}
+
+	public void setDatos(BDPrincipal datos) {
+		this.datos = datos;
+	}
+
+	public Pantalla_inicio getPantInicio() {
+		return pantInicio;
+	}
+
+	public void setPantInicio(Pantalla_inicio pantInicio) {
+		this.pantInicio = pantInicio;
+	}
+
+	public Inicio_no_registrado getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Inicio_no_registrado inicio) {
+		this.inicio = inicio;
+	}
 	
 	
 }

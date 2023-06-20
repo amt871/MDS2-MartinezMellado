@@ -9,6 +9,8 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLink;
 
+import basededatos.BDPrincipal;
+import proyectoMDS.MainView;
 import vistas.VistaIniciar_sesion__administrador_;
 import vistas.VistaVideo_otro_usuario__administrador_;
 
@@ -35,6 +37,37 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 //		VerticalLayout vl = this.getVaadinVerticalLayout().as(VerticalLayout.class);
 //	}
 	
+	private MainView vl;
+	private BDPrincipal datos;
+	private Cabecera__administrador_ cabecera;
+	
+	public Iniciar_sesion__administrador_(MainView mainView) {
+		// TODO Auto-generated constructor stub
+		this.vl = mainView;
+		this.datos = new BDPrincipal();
+		
+		this.getInUser().focus();
+		
+		this.getbIniciarSesion().addClickListener(event ->{
+			
+			if(this.getInUser().isEmpty()) {
+				Notification.show("Introduce el usuario");
+				return;
+			}
+			
+			if(this.getInPass().isEmpty()) {
+				Notification.show("Introduce la contraseña");
+				return;
+			}
+			
+			if(this.inicioSesionAdministrador()) {
+				this.vl.removeAll();
+				this.cabecera = new Cabecera__administrador_(this.vl, this.datos, this);
+			}
+			
+		});
+	}
+
 	public boolean inicioSesionAdministrador() {
 
 		if (getInUser().getValue().equals("admin") && getInPass().getValue().equals("prueba")) {

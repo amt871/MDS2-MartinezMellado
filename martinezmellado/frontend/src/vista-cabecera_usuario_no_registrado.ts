@@ -16,7 +16,7 @@ export class VistaCabecera_usuario_no_registrado extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; background-color: black;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; background-color: #00a8cc;">
  <vaadin-horizontal-layout style="width: 100%; height: 100%;">
   <vaadin-horizontal-layout style="width: 100%; align-items: center; margin-left: var(--lumo-space-xl);">
    <vaadin-button id="bInicio" style="background-color: white; color: black;">
