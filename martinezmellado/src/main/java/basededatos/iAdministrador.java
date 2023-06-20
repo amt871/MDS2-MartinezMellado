@@ -14,7 +14,11 @@ public interface iAdministrador {
 
 	public List buscarHashTag(String aBusqueda);
 
-	public List listarDenuncias();
+	public List listarPublicacionesDenunciadas();
+	
+	public List listarUsuariosDenunciados();
+	
+	public List listarComentariosDenunciados();
 
 	public void archivarDenuncia(String aElemento, String aTipo);
 

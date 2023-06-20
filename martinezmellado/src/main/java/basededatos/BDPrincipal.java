@@ -7,7 +7,12 @@ import org.orm.PersistentException;
 
 import interfaz.Comercial;
 
-public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado, iUsuario_no_registrado, iInicio_sesion_administrador, iAdministrador, iVer_perfil__usuario_no_registrado_, iVer_perfil_privado__usuario_no_registrado_, iVer_perfil_publico__usuario_no_registrado_, iVer_perfil__administrador_, iVer_perfil_publico__administrador_, iVer_perfil_privado__administrador_, iVer_perfil__usuario_registrado_, iVer_perfil_publico__usuario_registrado_, iVer_perfil_privado__usuario_registrado_ {
+public class BDPrincipal
+		implements iComercial, iCibernauta, iUsuario_Registrado, iUsuario_no_registrado, iInicio_sesion_administrador,
+		iAdministrador, iVer_perfil__usuario_no_registrado_, iVer_perfil_privado__usuario_no_registrado_,
+		iVer_perfil_publico__usuario_no_registrado_, iVer_perfil__administrador_, iVer_perfil_publico__administrador_,
+		iVer_perfil_privado__administrador_, iVer_perfil__usuario_registrado_, iVer_perfil_publico__usuario_registrado_,
+		iVer_perfil_privado__usuario_registrado_ {
 
 	Usuarios_Registrados usuariosRegistrados = new Usuarios_Registrados();
 	Administradores administrador = new Administradores();
@@ -16,7 +21,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	Hashtags hashTag = new Hashtags();
 	Notificaciones notrificaciones = new Notificaciones();
 	Publicaciones publicaciones = new Publicaciones();
-	
+
 	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario) {
 		try {
 			return this.usuariosRegistrados.datosUsuario(aNombreUsuario);
@@ -34,7 +39,8 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo, String aPropietario) {
+	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo,
+			String aPropietario) {
 		try {
 			this.publicaciones.nuevaPublicacion(aDescripcion, aUbicacion, aVideo, aFecha, aTipo, aPropietario);
 		} catch (Exception e) {
@@ -47,7 +53,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			return this.usuariosRegistrados.comprobarCredenciales(aUser, aPass);
 		} catch (PersistentException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			// e.printStackTrace();
 			return false;
 		}
 	}
@@ -71,15 +77,16 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna, String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
-		
+	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna,
+			String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
+
 		try {
-			return this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo, aFechaNacimiento, aDescripcion, aFoto, aTipo);
+			return this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo,
+					aFechaNacimiento, aDescripcion, aFoto, aTipo);
 		} catch (PersistentException e) {
 			return false;
 		}
-		
-		
+
 	}
 
 	public List buscarUsurios(String aBusqueda) {
@@ -128,15 +135,15 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario) {
-		
+
 		Usuario_Registrado u = null;
-		
+
 		try {
 			u = this.usuariosRegistrados.datosUsuario(aNombreUsuario);
 		} catch (PersistentException e) {
-			//return u;
+			// return u;
 		}
-		
+
 		return u;
 	}
 
@@ -193,13 +200,27 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public List listarDenuncias() {
+	public List listarPublicacionesDenunciadas() {
 		try {
-			List aux = null;
-			aux.addAll(this.publicaciones.listarPublicacionesDenunciadas());
-			aux.addAll(this.usuariosRegistrados.listarUsuariosDenunciados());
-			aux.addAll(this.comentario.listarComentariosDenunciados());
-			return aux;
+			return this.publicaciones.listarPublicacionesDenunciadas();
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+	
+	public List listarUsuariosDenunciados(){
+		try {
+			return this.usuariosRegistrados.listarUsuariosDenunciados();
+		} catch (Exception e) {
+			// TODO: handle exception
+			return null;
+		}
+	}
+	
+	public List listarComentariosDenunciados() {
+		try {
+			return this.comentario.listarComentariosDenunciados();
 		} catch (Exception e) {
 			// TODO: handle exception
 			return null;
@@ -214,7 +235,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public Usuario_Registrado datosUsuarioPerfil() { //no usar, usar cargar usuario
+	public Usuario_Registrado datosUsuarioPerfil() { // no usar, usar cargar usuario
 		try {
 			return this.usuariosRegistrados.datosUsuario(null);
 		} catch (Exception e) {
@@ -244,21 +265,21 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public List listarDenunciasAdministrador() {
 		// TODO Auto-generated method stub
 		return null;
-		//No usar, usar el otr
+		// No usar, usar el otr
 	}
-		
 
 	@Override
 	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
 		try {
-			//System.out.println("Estoy en BDPrincipal");
-			this.usuariosRegistrados.guardarDatos(aFoto, aUsuario, aNombre, aFechaDeNaciemiento, aCorreoElectronico, aDescripcion);
-			//System.out.println("BDPrincipal correcto");
+			// System.out.println("Estoy en BDPrincipal");
+			this.usuariosRegistrados.guardarDatos(aFoto, aUsuario, aNombre, aFechaDeNaciemiento, aCorreoElectronico,
+					aDescripcion);
+			// System.out.println("BDPrincipal correcto");
 			return true;
 		} catch (Exception e) {
 			// TODO: handle exception
-			//System.out.println("BDPrincipal excepcion");
+			// System.out.println("BDPrincipal excepcion");
 			e.printStackTrace();
 			return false;
 		}
@@ -288,7 +309,8 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
 		// TODO Auto-generated method stub
 		try {
-			this.usuariosRegistrados.retirarDenunciaUsuario(denunciante, denunciado);;
+			this.usuariosRegistrados.retirarDenunciaUsuario(denunciante, denunciado);
+			;
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -334,7 +356,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		
+
 	}
 
 	@Override
@@ -399,7 +421,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			// TODO: handle exception
 			return null;
 		}
-		
+
 	}
 
 	@Override
@@ -417,7 +439,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public Publicacion[] listarUltimasPublicacions(int id) {
 		// TODO Auto-generated method stub
 		try {
-		return this.publicaciones.listarUltimasPublicacions(id);	
+			return this.publicaciones.listarUltimasPublicacions(id);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -428,7 +450,7 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	public Publicacion cargarVideoPoID(int id) {
 		// TODO Auto-generated method stub
 		try {
-			 return this.publicaciones.cargarVideoPoID(id);
+			return this.publicaciones.cargarVideoPoID(id);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
