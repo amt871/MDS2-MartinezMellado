@@ -91,6 +91,13 @@ public class Iniciar_sesion extends VistaIniciar_sesion {
 
 		});
 		
+		this.getInicio().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(this.pantInicio);
+			
+		});
+		
 		this.getInUser().focus();
 
 	}

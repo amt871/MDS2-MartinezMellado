@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.Upload"/>
     <fullyQualifiedTypeName name="vistas.VistaConfirmar_correo"/>
     <fullyQualifiedTypeName name="orm.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="vistas.VistaInicio_no_registrado"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.UI"/>
 </qualifiedTypeNameHistroy>

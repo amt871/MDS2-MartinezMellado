@@ -33,6 +33,8 @@ public class VistaIniciar_sesion extends LitTemplate {
 	private Button bRecuperarContrasenna;
 	@Id("inPass")
 	private PasswordField inPass;
+	@Id("inicio")
+	private Button inicio;
 
 	/**
      * Creates a new VistaIniciar_sesion.
@@ -71,6 +73,14 @@ public class VistaIniciar_sesion extends LitTemplate {
 
 	public void setbRecuperarContrasenna(Button bRecuperarContrasenna) {
 		this.bRecuperarContrasenna = bRecuperarContrasenna;
+	}
+
+	public Button getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Button inicio) {
+		this.inicio = inicio;
 	}
 	
     

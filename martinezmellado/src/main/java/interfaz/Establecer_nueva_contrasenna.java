@@ -27,6 +27,13 @@ public class Establecer_nueva_contrasenna extends VistaEstablecer_nueva_contrase
 		this.getIdBoton().addClickListener(event ->{
 			confirmar();
 		});
+		
+		this.getInicio().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+			
+		});
 	}
 
 	public void confirmar() {

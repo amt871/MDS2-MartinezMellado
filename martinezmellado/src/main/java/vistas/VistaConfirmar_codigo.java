@@ -21,6 +21,8 @@ public class VistaConfirmar_codigo extends LitTemplate {
 	private Button bEnviar;
 	@Id("idCodigo")
 	private TextField idCodigo;
+	@Id("inicio")
+	private Button inicio;
 
 	/**
      * Creates a new VistaConfirmar_codigo.
@@ -43,6 +45,14 @@ public class VistaConfirmar_codigo extends LitTemplate {
 
 	public void setIdCodigo(TextField idCodigo) {
 		this.idCodigo = idCodigo;
+	}
+
+	public Button getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Button inicio) {
+		this.inicio = inicio;
 	}
 
     

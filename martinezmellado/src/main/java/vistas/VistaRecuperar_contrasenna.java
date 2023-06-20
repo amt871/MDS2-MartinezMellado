@@ -21,6 +21,8 @@ public class VistaRecuperar_contrasenna extends LitTemplate {
 	private Button bEnviar;
 	@Id("idCorreo")
 	private TextField idCorreo;
+	@Id("inicio")
+	private Button inicio;
 
 	/**
      * Creates a new VistaRecuperar_contrasenna.
@@ -43,6 +45,14 @@ public class VistaRecuperar_contrasenna extends LitTemplate {
 
 	public void setIdCorreo(TextField idCorreo) {
 		this.idCorreo = idCorreo;
+	}
+
+	public Button getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Button inicio) {
+		this.inicio = inicio;
 	}
     
     

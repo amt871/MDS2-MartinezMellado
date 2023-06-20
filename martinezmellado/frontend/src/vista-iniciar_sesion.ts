@@ -29,6 +29,9 @@ export class VistaIniciar_sesion extends LitElement {
   <vaadin-button id="bIniciarSesion" style="width: 60%; margin-top: 5%;">
     Iniciar sesion 
   </vaadin-button>
+  <vaadin-button id="inicio" style="width: 60%;">
+   Atras 
+  </vaadin-button>
   <vaadin-vertical-layout style="width: 100%; flex-grow: 1; align-items: stretch; justify-content: flex-end;">
    <vaadin-horizontal-layout theme="spacing-xl" style="align-items: flex-end; padding: var(--lumo-space-xl);">
     <vaadin-button style="flex-grow: 0; flex-shrink: 0; height: 100%;" id="bRecuperarContrasenna">

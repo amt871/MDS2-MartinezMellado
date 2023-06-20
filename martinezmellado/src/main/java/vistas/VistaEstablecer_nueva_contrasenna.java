@@ -24,6 +24,8 @@ public class VistaEstablecer_nueva_contrasenna extends LitTemplate {
 	private PasswordField idPass1;
 	@Id("idPass2")
 	private PasswordField idPass2;
+	@Id("inicio")
+	private Button inicio;
 
 	/**
      * Creates a new VistaEstablecer_nueva_contrasenna.
@@ -55,5 +57,15 @@ public class VistaEstablecer_nueva_contrasenna extends LitTemplate {
 	public PasswordField getIdPass2() {
 		return idPass2;
 	}
+
+	public Button getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Button inicio) {
+		this.inicio = inicio;
+	}
+	
+	
 
 }

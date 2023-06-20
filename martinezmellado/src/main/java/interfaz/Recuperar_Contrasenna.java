@@ -35,6 +35,13 @@ public class Recuperar_Contrasenna extends VistaRecuperar_contrasenna {
 				Notification.show("Introduzca su correo electronico en el campo de texto");
 			}
 		});
+		
+		this.getInicio().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+			
+		});
 	}
 
 }
