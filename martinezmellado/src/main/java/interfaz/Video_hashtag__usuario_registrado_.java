@@ -90,11 +90,11 @@ public void listarVideos() {
 				
 				Arrays.sort(aux, new Comparator<Publicacion>() {
 				    public int compare(Publicacion p1, Publicacion p2) {
-				        return Integer.compare(p1.getID(), p2.getID());
+				        return Integer.compare(p2.getID(), p1.getID());
 				    }
 				});
 				
-				for(int i = 0; i< aux.length; i++) {
+				for(int i = 0; i< aux.length ; i++) {
 					//System.out.println(videos[i].getVideo());
 					if(contador == 0) {
 						//System.out.println(contador);
@@ -116,7 +116,7 @@ public void listarVideos() {
 						vl.add(array.get(index));
 					}
 					
-					String titulo = this.hashtag.esta.toArray()[i].getDescripcion().length() > 15 ? aux[i].getDescripcion().substring(0,11)+"..." : aux[i].getDescripcion();
+					String titulo = aux[i].getDescripcion().length() > 15 ? aux[i].getDescripcion().substring(0,11)+"..." : aux[i].getDescripcion();
 					
 					array.get(index).add(new Mi_video_item(aux[i], this.cabecera)/*, "100%", "25%")*/);
 					//array.get(index).add(new)
