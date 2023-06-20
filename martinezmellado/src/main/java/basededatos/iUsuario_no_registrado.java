@@ -12,7 +12,5 @@ public interface iUsuario_no_registrado {
 
 	public List buscarHashTag(String aBusqueda);
 
-	public List videosHashTag(String aHashtag);
-
 	public Usuario_Registrado datosUsuario(String aNombreUsuario);
 }

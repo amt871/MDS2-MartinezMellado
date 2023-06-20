@@ -84,7 +84,7 @@ public class Perfil_comercial extends VistaPerfil_comercial {
 			
 			basededatos.Publicacion[] videos = null;
 			
-			videos = this.getCabecera().getDatos().listarVideosUsuario(this.cabecera.getUser().getID());
+			videos = this.cabecera.getUser().realiza.toArray();
 			
 			//videos
 			

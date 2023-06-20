@@ -168,10 +168,10 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 			// "Ninna gritona", "100%", "25%"));
 
 			basededatos.Publicacion[] videos = null;
-
-			videos = this.cabecera.getDatos().listarVideosUsuario(this.usuario.getID());
-
-			if (videos != null) {
+			
+			videos = this.usuario.realiza.toArray();
+			
+			if(videos != null) {
 				int contador = 0;
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
