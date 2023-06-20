@@ -18,7 +18,9 @@ export class VistaConfirmar_codigo extends LitElement {
     return html`
 <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; position: absolute;">
  <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; height: 30%; width: 100%;">
-  <img src="icons/toktok2.svg">
+  <vaadin-button id="inicio" style="width: 20%; height: 50%; max-width: 100%; max-height: 100%;">
+   <img src="icons/toktok2.svg">
+  </vaadin-button>
  </vaadin-vertical-layout>
  <vaadin-vertical-layout theme="spacing" style="height: 100%; width: 100%; align-items: center; justify-content: center;">
    Introduzca el codigo que le hemos enviado 

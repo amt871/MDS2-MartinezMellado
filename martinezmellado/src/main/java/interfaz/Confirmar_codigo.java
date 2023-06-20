@@ -41,6 +41,13 @@ public class Confirmar_codigo extends VistaConfirmar_codigo {
 				Notification.show("Introduzca el codigo que se la ha enviado a su correo electronico");
 			}
 		});
+		
+		this.getInicio().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(new Pantalla_inicio(this.vl, this.datos));
+			
+		});
 	}
 		
 	

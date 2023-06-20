@@ -15,6 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
@@ -242,8 +243,6 @@ public class Publicar extends VistaPublicar {
 				Notification.show("Solo se admiten video en MP4");
 
 		});
-		
-		this.getUploader().add
 		
 		this.getUploader().addFileRejectedListener(event ->{
 			
