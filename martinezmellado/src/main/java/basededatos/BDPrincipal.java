@@ -118,15 +118,6 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 		}
 	}
 
-	public List videosHashTag(String aHashTag) {
-		try {
-			return this.publicaciones.videosHashTag(aHashTag);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
 	public boolean comprobarPrivacidad(String aUsuario) {
 		try {
 			return this.usuariosRegistrados.datosUsuario(aUsuario).getPrivado();
@@ -163,15 +154,6 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			this.notrificaciones.cambiarNotificacion(aNotificacion);
 		} catch (Exception e) {
 			// TODO: handle exception
-		}
-	}
-
-	public Publicacion cargarVideo(String aVideo) {
-		try {
-			return this.publicaciones.cargarVideo(aVideo);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
 		}
 	}
 
@@ -279,28 +261,6 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			//System.out.println("BDPrincipal excepcion");
 			e.printStackTrace();
 			return false;
-		}
-	}
-
-	@Override
-	public List listarSeguidos(String aNombreUsuario) {
-		// TODO Auto-generated method stub
-		try {
-			return this.usuariosRegistrados.listarSeguidos(aNombreUsuario);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
-	@Override
-	public List<Usuario_Registrado> listarSeguidores(String aNombreUsuario) {
-		// TODO Auto-generated method stub
-		try {
-			return this.usuariosRegistrados.listarSeguidores(aNombreUsuario);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
 		}
 	}
 
@@ -443,17 +403,6 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 	}
 
 	@Override
-	public Publicacion[] listarVideosUsuario(int id) {
-		// TODO Auto-generated method stub
-		try {
-			return this.publicaciones.listarVideosUsuario(id);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-		return null;
-	}
-
-	@Override
 	public Usuario_Registrado[] listarUltimosUsuarios(int id) {
 		// TODO Auto-generated method stub
 		try {
@@ -493,18 +442,6 @@ public class BDPrincipal implements iComercial, iCibernauta, iUsuario_Registrado
 			return this.comentario.cargarComentario(usuario, publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
-		}
-		return null;
-	}
-
-	@Override
-	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion) {
-		// TODO Auto-generated method stub
-		try {
-			return this.comentario.cargarComentariosPublicacion(publicacion);
-		} catch (PersistentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		return null;
 	}

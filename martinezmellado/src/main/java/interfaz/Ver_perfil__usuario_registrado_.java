@@ -160,7 +160,7 @@ public void listarVideos() {
 			
 			basededatos.Publicacion[] videos = null;
 			
-			videos = this.cabecera.getDatos().listarVideosUsuario(this.usuario.getID());
+			videos = this.usuario.realiza.toArray();
 			
 			if(videos != null) {
 				int contador = 0;

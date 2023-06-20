@@ -128,11 +128,6 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public List videosHashTag(String aHashTag) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
 	public boolean comprobarPrivacidad(String aUsuario) {
 		// TODO Auto-generated method stub
 		return false;
@@ -153,22 +148,8 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public Publicacion cargarVideo(String aVideo) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	@Override
-	public List listarSeguidos(String aNombreUsuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List listarSeguidores(String aNombreUsuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	@Override
 	public boolean guardarDatos(String aFoto, String aUsuario, String aNombre, Date aFechaDeNaciemiento,
 			String aCorreoElectronico, String aDescripcion) {
@@ -244,11 +225,6 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
-	public Publicacion[] listarVideosUsuario(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
 	public Usuario_Registrado[] listarUltimosUsuarios(int id) {
 		// TODO Auto-generated method stub
 		return null;
@@ -272,11 +248,6 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public void annadirMeGusta(int publicacion, int usuario) {
 		// TODO Auto-generated method stub
 		
-	}
-	@Override
-	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 	@Override
 	public Usuario_Registrado cargarUsuarioCorreo(String correo) {

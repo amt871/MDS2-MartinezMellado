@@ -140,7 +140,7 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 			basededatos.Publicacion[] videos = null;
 			
-			videos = datos.listarVideosUsuario(this.usuario.getID());
+			videos = this.usuario.realiza.toArray();
 			
 			//videos
 			

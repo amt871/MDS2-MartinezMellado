@@ -15,8 +15,6 @@ public interface iUsuario_Registrado {
 
 	public List buscarHahsTag(String aBusqueda);
 
-	public List videosHashTag(String aHashTag);
-
 	public boolean comprobarPrivacidad(String aUsuario);
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario);
@@ -26,12 +24,6 @@ public interface iUsuario_Registrado {
 	public List listarNitificaciones(String aUsuario);
 
 	public void cambiarNotificacion(int aNotificacion);
-
-	public Publicacion cargarVideo(String aVideo);
-	
-	public List listarSeguidos(String aNombreUsuario);
-	
-	public List listarSeguidores(String aNombreUsuario);
 	
 	public void añadirPublicacionHashTag(  String hashtag, Publicacion publicacion );
 	
@@ -49,9 +41,7 @@ public interface iUsuario_Registrado {
 	
 	public void annadirMeGusta(int publicacion, int usuario);
 	
-	public Publicacion cargarVideoPorRuta(String ruta);
-	
-	public Publicacion[] listarVideosUsuario(int id);
+	public Publicacion cargarVideoPorRuta(String ruta);	
 	
 	public Usuario_Registrado[] listarUltimosUsuarios(int id);
 	
@@ -61,5 +51,4 @@ public interface iUsuario_Registrado {
 	
 	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion);
 	
-	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion);
 }
