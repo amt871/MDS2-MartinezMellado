@@ -100,4 +100,52 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 		}*/
 		
 	}
+
+	public MainView getVl() {
+		return vl;
+	}
+
+	public void setVl(MainView vl) {
+		this.vl = vl;
+	}
+
+	public BDPrincipal getDatos() {
+		return datos;
+	}
+
+	public void setDatos(BDPrincipal datos) {
+		this.datos = datos;
+	}
+
+	public Iniciar_sesion__administrador_ getIniciarSesion() {
+		return iniciarSesion;
+	}
+
+	public void setIniciarSesion(Iniciar_sesion__administrador_ iniciarSesion) {
+		this.iniciarSesion = iniciarSesion;
+	}
+
+	public Video_otro_usuario__administrador_ getInicio() {
+		return inicio;
+	}
+
+	public void setInicio(Video_otro_usuario__administrador_ inicio) {
+		this.inicio = inicio;
+	}
+
+	public Busqueda__administrador_ getBusqueda() {
+		return busqueda;
+	}
+
+	public void setBusqueda(Busqueda__administrador_ busqueda) {
+		this.busqueda = busqueda;
+	}
+
+	public Administrar getAdministrar() {
+		return administrar;
+	}
+
+	public void setAdministrar(Administrar administrar) {
+		this.administrar = administrar;
+	}
 }

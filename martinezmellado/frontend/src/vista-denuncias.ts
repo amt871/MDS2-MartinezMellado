@@ -1,7 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
-import './vista-denuncias_item';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-denuncias')
 export class VistaDenuncias extends LitElement {
@@ -17,18 +16,7 @@ export class VistaDenuncias extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-scroller style="width: 100%; height: 100%;">
-  <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%;">
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-   <vista-denuncias_item style="height: 20%; width: 100%;"></vista-denuncias_item>
-  </vaadin-vertical-layout>
- </vaadin-scroller>
+ <vaadin-scroller style="width: 100%; height: 100%;" id="scroller"></vaadin-scroller>
 </vaadin-vertical-layout>
 `;
   }
