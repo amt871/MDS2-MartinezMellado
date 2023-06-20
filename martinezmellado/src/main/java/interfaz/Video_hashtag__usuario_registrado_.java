@@ -1,6 +1,8 @@
 package interfaz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Vector;
 
 import com.vaadin.flow.component.html.Label;
@@ -12,6 +14,7 @@ import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
 import basededatos.Hashtag;
+import basededatos.Publicacion;
 import vistas.VistaVideo_hashtag__usuario_registrado_;
 
 public class Video_hashtag__usuario_registrado_ extends VistaVideo_hashtag__usuario_registrado_{
@@ -82,7 +85,16 @@ public void listarVideos() {
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
 				//ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
-				for(int i = 0; i<this.hashtag.esta.size(); i++) {
+				
+				Publicacion[] aux = this.hashtag.esta.toArray();
+				
+				Arrays.sort(aux, new Comparator<Publicacion>() {
+				    public int compare(Publicacion p1, Publicacion p2) {
+				        return Integer.compare(p1.getID(), p2.getID());
+				    }
+				});
+				
+				for(int i = 0; i< aux.length; i++) {
 					//System.out.println(videos[i].getVideo());
 					if(contador == 0) {
 						//System.out.println(contador);
@@ -104,9 +116,9 @@ public void listarVideos() {
 						vl.add(array.get(index));
 					}
 					
-					String titulo = this.hashtag.esta.toArray()[i].getDescripcion().length() > 15 ? this.hashtag.esta.toArray()[i].getDescripcion().substring(0,11)+"..." : this.hashtag.esta.toArray()[i].getDescripcion();
+					String titulo = this.hashtag.esta.toArray()[i].getDescripcion().length() > 15 ? aux[i].getDescripcion().substring(0,11)+"..." : aux[i].getDescripcion();
 					
-					array.get(index).add(new Mi_video_item(this.hashtag.esta.toArray()[i], this.cabecera)/*, "100%", "25%")*/);
+					array.get(index).add(new Mi_video_item(aux[i], this.cabecera)/*, "100%", "25%")*/);
 					//array.get(index).add(new)
 					contador++;
 					if(contador==4) {
