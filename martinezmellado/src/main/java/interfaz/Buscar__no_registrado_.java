@@ -53,19 +53,19 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 		this.array = new ArrayList<HorizontalLayout>();
 		// ArrayList<VerticalLayout> verticales = new ArrayList<VerticalLayout>();
 
-		//this.usuarios = this.cabecera.getDatos().listarUltimosUsuarios();
+		this.usuarios = this.cabecera.getDatos().listarTodosUsuarios();
 
 		this.getDivUsuarios().add(vlUsuarios);
 		vlUsuarios.setHeight("100%");
 		vlUsuarios.setWidth("100%");
 
 		int cont = 0;
-		/*for (int i = 0; i < usuarios.length && cont < 8; i++) {
+		for (int i = 0; i < usuarios.length && cont < 8; i++) {
 			
-			
-			if (usuarios[i].getComercial().equalsIgnoreCase("comercial"));
+			/*if (usuarios[i].getComercial().equalsIgnoreCase("comercial"));
 				continue;*/
-			/*if (cont % 4 == 0) {
+				
+			if (cont % 4 == 0) {
 				//System.out.println("despues");
 				array.add(new HorizontalLayout());
 				array.get(array.size() - 1).setHeight("100%");
@@ -78,31 +78,30 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 			}
 			array.get(array.size() - 1).add(new Usuarionombreitem(usuarios[i], this.getCabecera(), this));
 			cont++;
-			// System.out.println("annadido item");
+			// System.out.println("annadido item")
+		}
 
-		}*/
-
-		/*if (vlUsuarios.getComponentCount() == 0) {
+		if (vlUsuarios.getComponentCount() == 0) {
 			vlUsuarios.setAlignItems(Alignment.CENTER);
 			vlUsuarios.setJustifyContentMode(JustifyContentMode.CENTER);
 			vlUsuarios.add(new Label("Usted sigue a todos los usuarios"));
-		}*/
+		}
 
 		// this.getDivItem1().add(new
 		// Video("Usuarios\\Juanra1997\\videos\\2023-06-05T23-00-09.914853900.mp4"));
 
-		//this.publicaciones = cabecera.getDatos().listarUltimasPublicacions();
+		this.publicaciones = cabecera.getDatos().listarTodasPublicaciones();
 		
 
 		//this.getDivVideos().add(vlVideos);
-		/*vlVideos.setHeight("100%");
-		vlVideos.setWidth("100%");}
+		vlVideos.setHeight("100%");
+		vlVideos.setWidth("100%");
 
-		//cont = 0;
+		cont = 0;
 
 		// System.out.println(this.publicaciones == null);
 
-		/*for (int i = 0; i < publicaciones.length && cont < 8; i++) {
+		for (int i = 0; i < publicaciones.length && cont < 8; i++) {
 
 			
 			if (publicaciones[i].getRealizada().getPrivado())

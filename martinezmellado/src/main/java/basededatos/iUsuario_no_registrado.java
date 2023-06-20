@@ -13,4 +13,8 @@ public interface iUsuario_no_registrado {
 	public List buscarHashTag(String aBusqueda);
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario);
+	
+	public Publicacion[] listarTodasPublicaciones();
+	
+	public Usuario_Registrado[] listarTodosUsuarios();
 }

@@ -478,4 +478,28 @@ public class BDPrincipal
 		}
 		return null;
 	}
+
+	@Override
+	public Publicacion[] listarTodasPublicaciones() {
+		// TODO Auto-generated method stub
+		try {
+			return this.publicaciones.listarTodasPublicaciones();
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	@Override
+	public Usuario_Registrado[] listarTodosUsuarios() {
+		// TODO Auto-generated method stub
+		try {
+			return this.usuariosRegistrados.listarTodosUsuarios();
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
+	}
 }
