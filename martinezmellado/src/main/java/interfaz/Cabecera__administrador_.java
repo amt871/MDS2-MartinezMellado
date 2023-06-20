@@ -43,6 +43,7 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 	private Busqueda__administrador_ busqueda;
 	private Administrar administrar;
 	private Administrador administardor;
+
 	
 	public Cabecera__administrador_(MainView vl, BDPrincipal datos,
 			Iniciar_sesion__administrador_ iniciar_sesion__administrador_, Administrador administardor) {
@@ -69,7 +70,7 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 		this.getbAdministrar2().addClickListener(event ->{
 			
 			this.vl.removeAll();
-			this.vl.add(this.administrar = new Administrar(this));
+//			this.vl.add(this.administrar = new Administrar(this));
 			
 		});
 		
@@ -89,7 +90,7 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 		
 		this.inicio = null;
 		this.busqueda = null;
-		this.administrar = null;
+//		this.administrar = null;
 		
 		this.vl.removeAll();
 		this.vl.add(this.iniciarSesion);

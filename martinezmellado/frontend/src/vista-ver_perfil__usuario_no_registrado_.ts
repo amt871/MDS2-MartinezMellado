@@ -16,7 +16,7 @@ export class VistaVer_perfil__usuario_no_registrado_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; position: absolute;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
  <div id="divCabecera" style="width: 100%; height: 5%;"></div>
  <vaadin-horizontal-layout style="width: 100%; height: 20%;">
   <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: flex-end;">

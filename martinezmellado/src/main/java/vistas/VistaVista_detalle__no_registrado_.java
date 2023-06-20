@@ -12,6 +12,7 @@ import interfaz.Cabecera_usuario_no_registrado;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 /**
  * A Designer generated component for the vista-vista_detalle__no_registrado_ template.
@@ -27,7 +28,7 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
     @Id("divCabecera")
 	private Div divCabecera;
 	@Id("vlVideo")
-	private Element vlVideo;
+	private VerticalLayout vlVideo;
 	@Id("image")
 	private Image image;
 	@Id("labelUsuario")
@@ -38,6 +39,8 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
 	private Label labelUbicacion;
 	@Id("labelFecha")
 	private Label labelFecha;
+	@Id("labelDescripcion")
+	private Label labelDescripcion;
 	/**
      * Creates a new VistaVista_detalle__no_registrado_.
      */
@@ -57,10 +60,10 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
 	public void setDivCabecera(Div divCabecera) {
 		this.divCabecera = divCabecera;
 	}
-	public Element getVlVideo() {
+	public VerticalLayout getVlVideo() {
 		return vlVideo;
 	}
-	public void setVlVideo(Element vlVideo) {
+	public void setVlVideo(VerticalLayout vlVideo) {
 		this.vlVideo = vlVideo;
 	}
 	public Image getImage() {

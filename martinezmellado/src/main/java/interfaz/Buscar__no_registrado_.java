@@ -58,12 +58,12 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 		this.getDivUsuarios().add(vlUsuarios);
 		vlUsuarios.setHeight("100%");
 		vlUsuarios.setWidth("100%");
-
+		
 		int cont = 0;
-		for (int i = 0; i < usuarios.length && cont < 8; i++) {
+		for (int i = usuarios.length-1; i >= 0 && cont < 8; i--) {
 			
-			/*if (usuarios[i].getComercial().equalsIgnoreCase("comercial"));
-				continue;*/
+			if (usuarios[i].getComercial().equalsIgnoreCase("comercial"))
+				continue;
 				
 			if (cont % 4 == 0) {
 				//System.out.println("despues");
@@ -99,12 +99,10 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 
 		cont = 0;
 
-		// System.out.println(this.publicaciones == null);
+		for (int i = publicaciones.length-1; i >= 0 && cont < 8; i--) {
 
-		for (int i = 0; i < publicaciones.length && cont < 8; i++) {
-
-			
-			if (publicaciones[i].getRealizada().getPrivado())
+			//System.out.println(i);
+			if (publicaciones[i].getRealizada().getPrivado() || publicaciones[i].getRealizada().getComercial().equalsIgnoreCase("comercial"))
 				continue;
 			if (cont % 4 == 0) {
 				array.add(new HorizontalLayout());
@@ -134,7 +132,7 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 		this.getDivVideos().add(vlVideos);
 		vlVideos.setHeight("100%");
 		vlVideos.setWidth("100%");
-		/*
+		
 		this.getbBuscarUsuario().addClickListener(event -> {
 			
 			if(this.getInTextField().isEmpty()) {
@@ -143,7 +141,7 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 			}
 			
 			this.getCabecera().getVl().removeAll();
-			this.getCabecera().setBusquedaUsuarios(new Buscar_usuario__usuario_registrado_(this.getCabecera(),this.getInTextField().getValue()));
+			this.getCabecera().setBusquedaUsuarios(new Buscar_usuario__no_registrado_(this.getCabecera(),this.getInTextField().getValue()));
 			this.getCabecera().getVl().add(this.getCabecera().getBusquedaUsuarios());
 			
 		});
@@ -156,10 +154,10 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 			}
 			
 			this.getCabecera().getVl().removeAll();
-			this.getCabecera().setBusquedaHashtag(new Buscar_hashtag__usuario_registrado_(this.getCabecera(),this.getInTextField().getValue()));
+			this.getCabecera().setBusquedaHashtag(new Buscar_hashtag__no_registrado_(this.getCabecera(),this.getInTextField().getValue()));
 			this.getCabecera().getVl().add(this.getCabecera().getBusquedaHashtag());
 			
-		});*/
+		});
 		
 	}
 

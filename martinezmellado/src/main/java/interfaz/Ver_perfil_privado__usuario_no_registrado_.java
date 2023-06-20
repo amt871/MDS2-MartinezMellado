@@ -20,7 +20,7 @@ public class Ver_perfil_privado__usuario_no_registrado_ extends VistaVer_perfil_
 		
 		this.getLabelMeGustas().setText("Me gustas dados: "+usuario.le_gusta.size());
 		this.getLabelSeguidores().setText("Seguidores: "+usuario.seguidor.size());
-		this.getLabelUsuario().setText(usuario.getUsuario());
+		this.getLabelUsuario().setText(usuario.getUsuario()+" -> Privado");
 		this.getImage().setSrc(usuario.getFoto());
 		
 	}

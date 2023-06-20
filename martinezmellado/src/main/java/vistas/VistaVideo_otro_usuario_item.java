@@ -21,9 +21,7 @@ import com.vaadin.flow.component.html.Div;
 @JsModule("./src/vista-video_otro_usuario_item.ts")
 public class VistaVideo_otro_usuario_item extends LitTemplate {
 
-    @Id("layoutVideo")
-	private VerticalLayout layoutVideo;
-	@Id("usuarioButton")
+    @Id("usuarioButton")
 	private Button usuarioButton;
 	@Id("imageButton")
 	private Image imageButton;
@@ -47,6 +45,8 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 	private Button idBMeGusta;
 	@Id("DivNumMegustas")
 	private Div divNumMegustas;
+	@Id("layoutVideo")
+	private VerticalLayout layoutVideo;
 
 	/**
      * Creates a new VistaVideo_otro_usuario_item.

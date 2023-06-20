@@ -245,11 +245,12 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return null;
 	}
 	@Override
+
 	public void eliminarComentario(Comentario comentario) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
+	
 	public Publicacion[] listarTodasPublicaciones() {
 		// TODO Auto-generated method stub
 		return null;
@@ -259,6 +260,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
 	@Override
 	public void retirarDenunciaComentario(Comentario comentario) {
 		// TODO Auto-generated method stub
@@ -289,6 +291,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		
 	}
+
 
 	
 }
