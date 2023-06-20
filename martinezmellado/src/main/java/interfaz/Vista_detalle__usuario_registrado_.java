@@ -92,7 +92,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		vl.setAlignItems(Alignment.CENTER);
 		//vl.setJustifyContentMode(JustifyContentMode.CENTER);
 		
-		if(this.datos.cargarComentariosPublicacion(publicacion).length == 0) {
+		if(this.publicacion.tiene.toArray().length == 0) {
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("Esta publicacion no tiene comentarios"));
 		}else
@@ -121,6 +121,12 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		});
 		
 		this.getbAddComentario().addClickListener(event -> {
+			boolean flag = false;
+			for (Comentario comen : this.publicacion.tiene.toArray()) {
+				if (comen.getAutor().equals(user.getUsuario())) {
+					flag = true;
+				}
+			}
 			if (this.datos.cargarComentario(this.getCabecera().getUser(), publicacion) != null) {
 				Notification.show("Ya has comentado esta publicacion ateriormente");
 			}else {
@@ -145,7 +151,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		vl.setAlignItems(Alignment.CENTER);
 		//vl.setJustifyContentMode(JustifyContentMode.CENTER);
 		
-		if(this.datos.cargarComentariosPublicacion(publicacion).length == 0) {
+		if(this.publicacion.tiene.toArray().length == 0) {
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("Esta publicacion no tiene comentarios"));
 		}else
@@ -154,7 +160,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 
 	private void addItems() {
 		
-		Comentario[] comentarios = this.datos.cargarComentariosPublicacion(publicacion);
+		Comentario[] comentarios = this.publicacion.tiene.toArray();
 		
 		for(int i=0; i<comentarios.length; i++)
 			if(this.cabeceraUserReg !=null)

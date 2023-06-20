@@ -36,7 +36,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 	private ArrayList<Video_otro_usuario_item> array;
 	private ArrayList<Publicacion> videos;
 	private ArrayList<Usuario_Registrado> seguidos;
-	private List<Usuario_Registrado> aux;
+	private Usuario_Registrado[] aux;
 
 	public Video_otro_usuario(MainView inicio, Mi_cabecera cabeceraReg) {
 		
@@ -47,7 +47,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 
 		// this.getStyle().set("position", "absolute");
 
-		this.usuario = cabeceraReg.getUser();
+		this.usuario = this.getCabecera().getDatos().cargarDatosUsuario(getCabecera().getUser().getUsuario());
 		this.datos = cabeceraReg.getDatos();
 
 		scroller = this.getScroller();
@@ -90,13 +90,13 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 		this.videos = new ArrayList<Publicacion>();
 		this.seguidos = new ArrayList<Usuario_Registrado>();
 
-		this.aux = this.datos.listarSeguidos(this.usuario.getUsuario());
+		this.aux = this.usuario.seguidor.toArray();
 		if (aux != null) {
 			for (Usuario_Registrado object : aux) {
 				seguidos.add(object);
 			}
 			for (Usuario_Registrado usuario_Registrado : seguidos) {
-				videos.addAll(Arrays.asList(this.datos.listarVideosUsuario(usuario_Registrado.getID())));
+				videos.addAll(Arrays.asList(usuario_Registrado.realiza.toArray()));
 			}
 			
 			Collections.reverse(videos);
@@ -156,9 +156,6 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 		
 		if (seguidos != null)
 			this.seguidos.clear();
-		
-		if (aux != null)
-			this.aux.clear();
 
 		this.array = null;
 		this.videos = null;

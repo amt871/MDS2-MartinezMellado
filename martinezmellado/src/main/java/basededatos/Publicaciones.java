@@ -50,22 +50,6 @@ public class Publicaciones {
 		return aux;
 	}
 
-	public List videosHashTag(String aHashtag) throws PersistentException {
-		List<Publicacion> aux = new ArrayList<Publicacion>();
-		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
-		try {
-			String queryStr = "Hashtag like '%" + aHashtag + "%'";
-			Publicacion[] publicaciones = PublicacionDAO.listPublicacionByQuery(queryStr, null);
-			if (publicaciones != null) {
-				aux = Arrays.asList(publicaciones);
-			}
-		} catch (Exception e) {
-			t.rollback();
-			e.printStackTrace();
-		}
-
-		return aux;
-	}
 
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo,
 			String aPropietario) throws PersistentException {
@@ -111,32 +95,6 @@ public class Publicaciones {
 		}
 		return aux;
 	}
-
-	public Publicacion cargarVideo(String aVideo) throws PersistentException {
-		Publicacion u = null;
-		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
-		try {
-			u = PublicacionDAO.loadPublicacionByQuery("ID = '" + aVideo + "'", aVideo);
-		} catch (Exception e) {
-			t.rollback();
-			e.printStackTrace();
-		}
-		return u;
-	}
-
-	public Publicacion[] listarVideosUsuario(int id) throws PersistentException {
-
-		return PublicacionDAO.listPublicacionByQuery("Usuario_RegistradoUsuarioID='" + id + "'", null);
-
-	}
-
-	/*
-	 * public static Publicacion[] listPublicacionByQuery(String condition, String
-	 * orderBy) throws PersistentException { try { PersistentSession session =
-	 * MartinezMelladoMDSPersistentManager.instance().getSession(); return
-	 * listPublicacionByQuery(session, condition, orderBy); } catch (Exception e) {
-	 * e.printStackTrace(); throw new PersistentException(e); } }
-	 */
 
 	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario)
 			throws PersistentException {

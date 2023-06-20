@@ -121,16 +121,4 @@ public class Comentarios {
 		    }
 		    return aux;
 	}
-	
-	public Comentario[] cargarComentariosPublicacion(Publicacion publicacion) throws PersistentException {
-		 PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
-		 
-		    try { 
-		    	return ComentarioDAO.listComentarioByQuery("publicacionID = '" + publicacion.getID()+"'", "ID DESC");	    	
-		    }catch (Exception e) {
-		        t.rollback();
-		        e.printStackTrace();
-		    }
-		    return null;
-	}
 }

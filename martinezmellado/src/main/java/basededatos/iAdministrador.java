@@ -14,8 +14,6 @@ public interface iAdministrador {
 
 	public List buscarHashTag(String aBusqueda);
 
-	public List videosHashTag(String aHashtag);
-
 	public List listarDenuncias();
 
 	public void archivarDenuncia(String aElemento, String aTipo);
