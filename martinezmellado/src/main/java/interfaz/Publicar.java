@@ -15,6 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
 
@@ -53,6 +54,8 @@ public class Publicar extends VistaPublicar {
 	
 	private Usuario_Registrado user;
 	
+	private Image image;
+	
 	
 
 	//Object[] cosas;
@@ -78,6 +81,8 @@ public class Publicar extends VistaPublicar {
 			if (event.getFileName().endsWith("mp4")) {
 				fileData = memoryBuffer.getInputStream();
 				
+				image = null;
+				
 				File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
 				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
 				
@@ -86,6 +91,10 @@ public class Publicar extends VistaPublicar {
 				if(file.exists())
 					file.delete();
 				
+				this.getLayoutVideo().removeAll();
+				Image image = new Image();
+				image.setSrc("icons/video.svg");
+				this.getLayoutVideo().add(image);
 				
 				file.mkdir();
 				try {
@@ -131,6 +140,24 @@ public class Publicar extends VistaPublicar {
 				Notification.show("Solo se admiten video en MP4");
 
 		});
+		
+		this.getUploader().addFileRejectedListener(event ->{
+			
+			File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+			File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+			
+			if(file2.exists())
+				file2.delete();
+			if(file.exists())
+				file.delete();
+			this.getLayoutVideo().removeAll();
+			Image image = new Image();
+			image.setSrc("icons/video.svg");
+			this.getLayoutVideo().add(image);
+			
+			
+		});
+		
 		this.getSubirVideo().addClickListener(event -> {
 			bPublica();
         });
@@ -160,6 +187,17 @@ public class Publicar extends VistaPublicar {
 				
 				File file = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp");
 				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/tmp.mp4");
+				
+				if(file2.exists())
+					file2.delete();
+				if(file.exists())
+					file.delete();
+				
+				this.getLayoutVideo().removeAll();
+				Image image = new Image();
+				image.setSrc("icons/video.svg");
+				this.getLayoutVideo().add(image);
+				
 				file.mkdir();
 				try {
 					file2.createNewFile();
@@ -204,6 +242,26 @@ public class Publicar extends VistaPublicar {
 				Notification.show("Solo se admiten video en MP4");
 
 		});
+		
+		this.getUploader().add
+		
+		this.getUploader().addFileRejectedListener(event ->{
+			
+			File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+			File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+			
+			if(file2.exists())
+				file2.delete();
+			if(file.exists())
+				file.delete();
+			this.getLayoutVideo().removeAll();
+			Image image = new Image();
+			image.setSrc("icons/video.svg");
+			this.getLayoutVideo().add(image);
+			
+			
+		});
+		
 		this.getSubirVideo().addClickListener(event -> {
 			bPublica();
         });

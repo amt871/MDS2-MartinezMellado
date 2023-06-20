@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="basededatos.PublicacionDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_video_item"/>
     <fullyQualifiedTypeName name="org.apache.catalina.webresources.FileResource"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
     <fullyQualifiedTypeName name="interfaz.Mi_video_item"/>
     <fullyQualifiedTypeName name="vistas.VistaMi_video"/>
     <fullyQualifiedTypeName name="vistas.VistaCambiar_contrasenna"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
     <fullyQualifiedTypeName name="vistas.VistaInicio_no_registrado"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.html.Image"/>
 </qualifiedTypeNameHistroy>
