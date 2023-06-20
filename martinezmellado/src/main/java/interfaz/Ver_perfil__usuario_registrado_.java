@@ -30,49 +30,48 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 //	private Label _nMeGustasL;
 //	public iVer_perfil__usuario_registrado_ _iVer_perfil__usuario_registrado_;
 
-/*	public void denunciar_perfil() {
-		throw new UnsupportedOperationException();
-	}
+	/*
+	 * public void denunciar_perfil() { throw new UnsupportedOperationException(); }
+	 * 
+	 * public void dejar_de_seguir() { throw new UnsupportedOperationException(); }
+	 * 
+	 * public void seguir_solicitar_seguir() { throw new
+	 * UnsupportedOperationException(); }
+	 */
 
-	public void dejar_de_seguir() {
-		throw new UnsupportedOperationException();
-	}
+	// private basededatos.Usuario_Registrado usuario;
 
-	public void seguir_solicitar_seguir() {
-		throw new UnsupportedOperationException();
-	}*/
-	
-	//private basededatos.Usuario_Registrado usuario;
-	
 	private Scroller scroller;
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
 	private Mi_cabecera cabecera;
 	private Usuario_Registrado miUsuario_Registrado;
-	
+
 	public Ver_perfil__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
-		
+
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
-		this.getLabelSeguidores().setText("Seguidores: "+ usuario.seguidor.size());
+		this.getLabelSeguidores().setText("Seguidores: " + usuario.seguidor.size());
 		this.getLabelMegustas().setText("Me gustas dados: " + usuario.le_gusta.size());
 		this.getImage().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
 		this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
-		
-		this.getbDenuncia().addClickListener(event ->{
+
+		this.getbDenuncia().addClickListener(event -> {
 			this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
-			this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
+			this.miUsuario_Registrado = this.cabecera.getDatos()
+					.cargarDatosUsuario(this.cabecera.getUser().getUsuario());
 			boolean flag = true;
-			for (Usuario_Registrado denunciate : this.usuario.denunciante.toArray()) {;
-				if(denunciate.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
+			for (Usuario_Registrado denunciate : this.usuario.denunciante.toArray()) {
+				;
+				if (denunciate.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
 					flag = false;
 				}
 			}
 			if (flag) {
 				this.cabecera.getDatos().denunciarUsuario(miUsuario_Registrado, usuario);
-			}else{
+			} else {
 				Notification.show("Ya has denunciado este usuario");
 			}
 		});
@@ -82,130 +81,142 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 				flag = false;
 			}
 		}
-		//System.out.println(flag);
-		if(flag) {
+		// System.out.println(flag);
+		if (flag) {
 			this.getSeguirButton().setText("Seguir");
-		}else {
+		} else {
 			this.getSeguirButton().setText("Dejar de seguir");
 		}
-			
-		this.getSeguirButton().addClickListener(event ->{
-			
-			if(this.cabecera.getDatos().segimiento(this.usuario, this.cabecera.getUser()))
-				if(this.getSeguirButton().getText().equals("Seguir")) {
-					this.getSeguirButton().setText("Dejar de seguir");
-					this.cabecera.getDatos().annadirNotificacion("seguir", this.usuario, this.cabecera.getUser(), null);
-					int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) + 1;
-					this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
-				}else {
-					this.getSeguirButton().setText("Seguir");
-					int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) - 1;
-					this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
-					if (this.usuario.getPrivado() == true) {
-						this.cabecera.setPerfilPrivado(
-								new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
-						this.cabecera.getVl().removeAll();
-						this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+
+		if (!usuario.getComercial().equalsIgnoreCase("comercial")) {
+
+			this.getSeguirButton().addClickListener(event -> {
+
+				if (this.cabecera.getDatos().segimiento(this.usuario, this.cabecera.getUser()))
+					if (this.getSeguirButton().getText().equals("Seguir")) {
+						this.getSeguirButton().setText("Dejar de seguir");
+						this.cabecera.getDatos().annadirNotificacion("seguir", this.usuario, this.cabecera.getUser(),
+								null);
+						int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) + 1;
+						this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
+					} else {
+						this.getSeguirButton().setText("Seguir");
+						int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) - 1;
+						this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
+						if (this.usuario.getPrivado() == true) {
+							this.cabecera.setPerfilPrivado(
+									new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
+							this.cabecera.getVl().removeAll();
+							this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+						}
 					}
-				}
-					
-			//Notification.show("Siguiendo");
-		});
-		
+
+				// Notification.show("Siguiendo");
+			});
+
+		} else {
+			this.getSeguirButton().setVisible(false);
+			this.getDivVideos().setHeight("65%");
+		}
+
 		listarVideos();
-		
+
 	}
-	
-public void listarVideos() {
-		
+
+	public void listarVideos() {
+
 		scroller = this.getScroller();
 		vl = new VerticalLayout();
 
 		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
 
-		//scroller.getStyle().set("width", "100%");
-		//scroller.getStyle().set("height", "65%");
+		// scroller.getStyle().set("width", "100%");
+		// scroller.getStyle().set("height", "65%");
 
 		scroller.setContent(vl);
 
-		//vl.getStyle().set("width", "100%");
-		//vl.getStyle().set("height", "100%");
-		
-		//vl.getStyle().set("background-color", "black");
-		
+		// vl.getStyle().set("width", "100%");
+		// vl.getStyle().set("height", "100%");
+
+		// vl.getStyle().set("background-color", "black");
+
 		addItem();
-		
 
 	}
-	
+
 	public void addItem() {
-		
-		//System.out.println(this.usuario.realiza.size());
-		if(this.usuario.realiza.size()==0) {
+
+		// System.out.println(this.usuario.realiza.size());
+		if (this.usuario.realiza.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("Este usuario no ha subido videos aun"));
-		}else {
-			
+		} else {
+
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.getStyle().set("position", "relative");
-			//vl.getStyle().set("top", "35%");
-			//vl.setHeight("100%");
-			//vl.setWidth("100%");
-			
-			//vl.add(new Video("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4"));
-			
-			//vl.add(new Mi_video_item("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4", "Ninna gritona", "100%", "25%"));
-			
+			// vl.getStyle().set("top", "35%");
+			// vl.setHeight("100%");
+			// vl.setWidth("100%");
+
+			// vl.add(new
+			// Video("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4"));
+
+			// vl.add(new
+			// Mi_video_item("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4",
+			// "Ninna gritona", "100%", "25%"));
+
 			basededatos.Publicacion[] videos = null;
-			
+
 			videos = this.cabecera.getDatos().listarVideosUsuario(this.usuario.getID());
-			
-			if(videos != null) {
+
+			if (videos != null) {
 				int contador = 0;
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
-				//ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
-				for(int i = 0; i<videos.length; i++) {
-					//System.out.println(videos[i].getVideo());
-					if(contador == 0) {
-						//System.out.println(contador);
+				// ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
+				for (int i = 0; i < videos.length; i++) {
+					// System.out.println(videos[i].getVideo());
+					if (contador == 0) {
+						// System.out.println(contador);
 						array.add(new HorizontalLayout());
-						//System.out.println("Add horizontal");
+						// System.out.println("Add horizontal");
 						array.get(index).setJustifyContentMode(JustifyContentMode.CENTER);
 						array.get(index).setAlignItems(Alignment.CENTER);
 						array.get(index).getStyle().set("height", "100%");
 						array.get(index).getStyle().set("width", "100%");
 						array.get(index).getStyle().set("position", "relative");
-						//array.get(index).getStyle().set("overflow", "auto");
+						// array.get(index).getStyle().set("overflow", "auto");
 						array.get(index).setBoxSizing(BoxSizing.BORDER_BOX);
 //						array.get(index).setPadding(true);
 //						array.get(index).setMargin(false);
 //						array.get(index).setSpacing(false);
-						
-						//array.get(index).getStyle().set("background-color", "black");
-						
+
+						// array.get(index).getStyle().set("background-color", "black");
+
 						vl.add(array.get(index));
 					}
-					
-					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
-					
-					array.get(index).add(new Mi_video_item(videos[i], this.cabecera)/*, "100%", "25%")*/);
-					//array.get(index).add(new)
+
+					String titulo = videos[i].getDescripcion().length() > 15
+							? videos[i].getDescripcion().substring(0, 11) + "..."
+							: videos[i].getDescripcion();
+
+					array.get(index).add(new Mi_video_item(videos[i], this.cabecera)/* , "100%", "25%") */);
+					// array.get(index).add(new)
 					contador++;
-					if(contador==4) {
-						index ++;
+					if (contador == 4) {
+						index++;
 						contador = 0;
-						//vl.add(array.get(0));
-						//break;
+						// vl.add(array.get(0));
+						// break;
 					}
-					
+
 				}
-				
+
 			}
-			
+
 		}
 	}
-	
+
 }

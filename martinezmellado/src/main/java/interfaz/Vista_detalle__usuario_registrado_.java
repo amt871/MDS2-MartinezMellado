@@ -57,7 +57,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.publicacion = publicacion;
 		this.miUsuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
 		this.setCabecera(cabeceraUserReg);
-		this.getImgUser().setSrc(this.miUsuario.getFoto());
+		this.getImgUser().setSrc(publicacion.getRealizada().getFoto());
 		this.getLabelDescripcion().setText(publicacion.getDescripcion());
 		this.getLabelUsuario().setText(publicacion.getRealizada().getUsuario());
 		this.getLabelFecha().setText(publicacion.getFecha().toString());
@@ -110,7 +110,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.publicacion = publi;
 		this.miUsuario = this.cabeceraCom.getDatos().cargarDatosUsuario(this.cabeceraCom.getUser().getUsuario());
 		this.setCabeceraCom(cabeceraCom);
-		this.getImgUser().setSrc(user.getFoto());
+		this.getImgUser().setSrc(publicacion.getRealizada().getFoto());
 		this.getLabelDescripcion().setText(publicacion.getDescripcion());
 		this.getLabelUsuario().setText(publicacion.getRealizada().getUsuario());
 		this.getLabelFecha().setText(publicacion.getFecha().toString());
