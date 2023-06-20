@@ -80,6 +80,13 @@ public class Publicar extends VistaPublicar {
 				
 				File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
 				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
+				
+				if(file2.exists())
+					file2.delete();
+				if(file.exists())
+					file.delete();
+				
+				
 				file.mkdir();
 				try {
 					file2.createNewFile();
