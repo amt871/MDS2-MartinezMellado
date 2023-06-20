@@ -215,11 +215,6 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		
 	}
 	@Override
-	public List listarDenuncias() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
 	public Publicacion cargarVideoPorRuta(String ruta) {
 		// TODO Auto-generated method stub
 		return null;
@@ -251,6 +246,21 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	}
 	@Override
 	public Usuario_Registrado cargarUsuarioCorreo(String correo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List listarPublicacionesDenunciadas() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List listarUsuariosDenunciados() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List listarComentariosDenunciados() {
 		// TODO Auto-generated method stub
 		return null;
 	}
