@@ -39,6 +39,8 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 	private BDPrincipal datos;
 	private Iniciar_sesion__administrador_ iniciarSesion;
 	private Video_otro_usuario__administrador_ inicio;
+	private Busqueda__administrador_ busqueda;
+	private Administrar administrar;
 	
 	public Cabecera__administrador_(MainView vl, BDPrincipal datos,
 			Iniciar_sesion__administrador_ iniciar_sesion__administrador_) {
@@ -47,13 +49,55 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 		this.datos = datos;
 		this.iniciarSesion = iniciar_sesion__administrador_;
 		
-		this.getbAdministrar2().addClickListener(event ->{
+		this.getbInicio2().addClickListener(event ->{
 			
 			this.vl.removeAll();
 			this.vl.add(this.inicio = new Video_otro_usuario__administrador_(this));
 			
 		});
+		
+		this.getbBusqueda2().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(this.busqueda = new Busqueda__administrador_(this));
+			
+		});
+		
+		this.getbAdministrar2().addClickListener(event ->{
+			
+			this.vl.removeAll();
+			this.vl.add(this.administrar = new Administrar(this));
+			
+		});
+		
+		this.getbSalir2().addClickListener(event ->{
+			
+			this.cerrarSesion();
+			
+		});
+		
+		this.getbInicio2().click();
 	}
 	
-	
+	public void cerrarSesion() {
+		
+		if(busqueda != null)
+			busqueda.clear();
+		
+		this.inicio = null;
+		this.busqueda = null;
+		this.administrar = null;
+		
+		this.vl.removeAll();
+		this.vl.add(this.iniciarSesion);
+		
+		
+		/*try {
+			this.finalize();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		
+	}
 }

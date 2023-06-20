@@ -38,6 +38,7 @@ public class Video_otro_usuario__administrador_ extends VistaVideo_otro_usuario_
 
 	public Video_otro_usuario__administrador_(Cabecera__administrador_ cabecera__administrador_) {
 		
+		this.setCabecera(cabecera__administrador_);
 		
 		
 	}

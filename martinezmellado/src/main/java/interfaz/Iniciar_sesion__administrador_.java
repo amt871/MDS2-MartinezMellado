@@ -66,6 +66,18 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 			}
 			
 		});
+		
+		this.getInUser().addKeyPressListener(Key.ENTER, event ->{
+			
+			this.getbIniciarSesion().click();
+			
+		});
+		
+		this.getInPass().addKeyPressListener(Key.ENTER, event ->{
+			
+			this.getbIniciarSesion().click();
+			
+		});
 	}
 
 	public boolean inicioSesionAdministrador() {

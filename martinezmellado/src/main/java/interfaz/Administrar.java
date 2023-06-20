@@ -16,7 +16,9 @@ public class Administrar extends VistaAdministrar {
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Administrar() {
+	public Administrar(Cabecera__administrador_ cabecera__administrador_) {
+		
+		this.setCabecera(cabecera__administrador_);
 
 		Scroller scroller = new Scroller();
 
@@ -53,6 +55,5 @@ public class Administrar extends VistaAdministrar {
 		this.getDivScrollerDenuncias().add(scroller);
 		
 	}
-
 	
 }

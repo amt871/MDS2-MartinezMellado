@@ -90,6 +90,8 @@ public class Iniciar_sesion extends VistaIniciar_sesion {
 			}
 
 		});
+		
+		this.getInUser().focus();
 
 	}
 

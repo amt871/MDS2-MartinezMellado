@@ -3,6 +3,7 @@ package interfaz;
 import vistas.VistaBusqueda__administrador_;
 
 public class Busqueda__administrador_ extends VistaBusqueda__administrador_{
+
 //	private TextField _buscadoTF;
 //	private Button _buscarUsuarioB;
 //	private Button _buscarHastagB;
@@ -26,4 +27,12 @@ public class Busqueda__administrador_ extends VistaBusqueda__administrador_{
 //	public void vista_detalle__administrador_() {
 //		throw new UnsupportedOperationException();
 //	}
+	public Busqueda__administrador_(Cabecera__administrador_ cabecera__administrador_) {
+		// TODO Auto-generated constructor stub
+		this.setCabecera(cabecera__administrador_);
+	}
+	
+	public void clear() {
+		
+	}
 }

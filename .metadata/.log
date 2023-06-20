@@ -9752,3 +9752,141 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-20 11:29:23.188
 !MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:31:23.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:31:23.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:31:23.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:31:23.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:33:23.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:33:23.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:33:23.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:33:23.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:35:23.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:35:23.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:35:23.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:35:23.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:37:23.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:37:23.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:37:23.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:37:23.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:39:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:39:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:39:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:39:23.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:41:23.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:41:23.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:41:23.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:41:23.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:43:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:43:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:43:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:43:23.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:45:23.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:45:23.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:45:23.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:45:23.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:47:23.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:47:23.187
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:47:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:47:23.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:13.670
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/7355
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:13.776
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/10ca
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:13.878
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/4e3d
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:14.436
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/8d2f
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:14.436
+!MESSAGE Jetty stopped at http://192.168.0.17:53486
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:14.568
+!MESSAGE Force stop the task with pid 21196
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:14.573
+!MESSAGE Force stop the task with pid 8612
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:14.573
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:32.023
+!MESSAGE Jetty stopped at http://192.168.0.17:-1
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-20 11:48:32.024
+!MESSAGE Removed all models from server.

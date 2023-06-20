@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.time.Year"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.receivers.MemoryBuffer"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.upload.Upload"/>
     <fullyQualifiedTypeName name="vistas.VistaConfirmar_correo"/>
     <fullyQualifiedTypeName name="orm.Usuario_RegistradoDAO"/>
@@ -58,6 +56,8 @@
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="basededatos.Publicacion"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
-    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
+    <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
+    <fullyQualifiedTypeName name="vistas.VistaInicio_no_registrado"/>
+    <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
 </qualifiedTypeNameHistroy>
