@@ -15,6 +15,8 @@ public class Comentario_item extends VistaComentario_item {
 	private Mi_cabecera cabeceraUserReg;
 	private Cabecera_comercial cabeceraCom;
 	private Comentario comentario;
+	private Cabecera_usuario_no_registrado cabeceraNoReg;
+	
 	public Comentario_item(Comentario comentario, Mi_cabecera cabecera) {
 		
 		this.cabeceraUserReg = cabecera;
@@ -98,6 +100,10 @@ public class Comentario_item extends VistaComentario_item {
 		
 		//this.cabeceraCom = cabeceraCom;
 		//this.miUsuario = this.cabeceraCom.getDatos().cargarDatosUsuario(this.cabeceraCom.getUser().getUsuario());
+		this.cabeceraNoReg = cabecera;
+		this.getImgUser().addClickListener(event -> {
+			verPerfilPropietarioNoReg();
+		});
 		
 		this.usuario = cabecera.getDatos().cargarDatosUsuario(comentario2.getAutor());
 		
@@ -164,6 +170,31 @@ public class Comentario_item extends VistaComentario_item {
 			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
 
 		}
+	}
+	
+	private void verPerfilPropietarioNoReg() {
+
+		if (this.usuario.getPrivado()) {
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			
+				this.cabeceraNoReg.setPerfilPrivado(
+						new Ver_perfil_privado__usuario_no_registrado_(this.cabeceraNoReg, this.usuario));
+				this.cabeceraNoReg.getVl().removeAll();
+				this.cabeceraNoReg.getVl().add(this.cabeceraNoReg.getPerfilPrivado());
+				// this.inicio.cambiarPantalla(cabecera);
+			
+		} else {
+
+			this.cabeceraNoReg
+					.setPerfilPublico(new Ver_perfil__usuario_no_registrado_(this.cabeceraNoReg, this.usuario));
+			this.cabeceraNoReg.getVl().removeAll();
+			this.cabeceraNoReg.getVl().add(this.cabeceraNoReg.getPerfilPublico());
+
+		}
+
 	}
 
 }

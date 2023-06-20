@@ -9,6 +9,7 @@ import com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection;
 
 import basededatos.Comentario;
 import basededatos.Publicacion;
+import basededatos.Usuario_Registrado;
 import vistas.VistaVista_detalle__no_registrado_;
 
 public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_registrado_ {
@@ -40,16 +41,25 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 	private Scroller scroller;
 	private Publicacion publicacion;
 	private Cabecera_usuario_no_registrado cabecera;
+	private Usuario_Registrado propietario;
 
 	public Vista_detalle__no_registrado_(Cabecera_usuario_no_registrado cabeceraNoReg, Publicacion publi) {
 		// TODO Auto-generated constructor stub
 		
+		this.propietario = publi.getRealizada();
 		this.cabecera = cabeceraNoReg;
 		this.setCabecera(cabeceraNoReg);
 		this.getLabelFecha().setText(publi.getFecha().toString());
 		this.getLabelUbicacion().setText(publi.getUbicacion());
 		this.getLabelUsuario().setText(publi.getRealizada().getUsuario());
 		this.getImage().setSrc(publi.getRealizada().getFoto());
+		this.getVlVideo().add(new Video(publi.getVideo().replace("src/main/webapp/", ""),"90%","90%"));
+		
+		this.getImage().addClickListener(event ->{
+			
+			verPerfilOtroUsuarioNoReg();
+			
+		});
 		
 		this.publicacion = publi;
 		this.vl = new VerticalLayout();
@@ -79,5 +89,28 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 		
 		
 	}
+	
+	private void verPerfilOtroUsuarioNoReg() {
 
+		if (this.propietario.getPrivado()) {
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			
+				this.cabecera.setPerfilPrivado(
+						new Ver_perfil_privado__usuario_no_registrado_(this.cabecera, this.propietario));
+				this.cabecera.getVl().removeAll();
+				this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+				// this.inicio.cambiarPantalla(cabecera);
+			
+		} else {
+
+			this.cabecera
+					.setPerfilPublico(new Ver_perfil__usuario_no_registrado_(this.cabecera, this.propietario));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getPerfilPublico());
+
+		}
+	}
 }

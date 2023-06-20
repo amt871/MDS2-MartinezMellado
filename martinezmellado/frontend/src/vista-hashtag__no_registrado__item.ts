@@ -15,11 +15,11 @@ export class VistaHashtag__no_registrado__item extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout theme="spacing" style="width: 100%; justify-content: space-between; padding: var(--lumo-space-m);">
- <vaadin-button style="width: 100%;">
-  Nombre Hashtag
+<vaadin-horizontal-layout style="width: 100%; justify-content: center; height: 5%; align-items: center;">
+ <vaadin-button style="width: 100%;" id="bHashtag">
+   Nombre Hashtag 
  </vaadin-button>
- <label style="flex-shrink: 0; flex-grow: 0; margin-right: var(--lumo-space-s); align-self: center;">Numero de videos</label>
+ <label style="flex-shrink: 0; flex-grow: 0; margin-right: var(--lumo-space-s); align-self: center;" id="labelVideos">Numero de videos</label>
 </vaadin-horizontal-layout>
 `;
   }
