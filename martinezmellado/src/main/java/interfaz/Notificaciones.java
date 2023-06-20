@@ -63,25 +63,24 @@ public class Notificaciones extends VistaNotificaciones {
 		this.user = this.datos.cargarDatosUsuario(mi_cabecera.getUser().getUsuario());
 		this.setCabecera(mi_cabecera);
 		this.mi_cabecera = mi_cabecera;
-		
+
 		this.getIdComentarios().addClickListener(Event -> {
 			addItem("comentario");
-		});	
-		
+		});
+
 		this.getIdMeGusta().addClickListener(Event -> {
 			addItem("me_gusta");
-		});	
-		
+		});
+
 		this.getIdSeguidores().addClickListener(Event -> {
 			addItem("seguir");
-		});	
-		
+		});
+
 		this.getIdTodas().addClickListener(Event -> {
 			addItem("todo");
-		});	
-		
-		
-		//this.getStyle().set("position", "absolute");
+		});
+
+		// this.getStyle().set("position", "absolute");
 
 		scroller = this.getScroller();
 		vl = new VerticalLayout();
@@ -89,9 +88,9 @@ public class Notificaciones extends VistaNotificaciones {
 		this.getIdMenciones().setVisible(false);
 
 		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
-		
+
 		scroller.setContent(vl);
-		
+
 		addItem("todo");
 	}
 
@@ -99,37 +98,31 @@ public class Notificaciones extends VistaNotificaciones {
 
 		List<Notificacion> listaNotificaciones = new ArrayList<Notificacion>();
 		listaNotificaciones.addAll(this.datos.listarNitificaciones(this.user.getUsuario()));
-		
+
 		vl.removeAll();
-		
-		if(listaNotificaciones.size() == 0) {
+
+		if (listaNotificaciones.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("No tienes notificaciones"));
-		}else {
-			
+		} else {
+
 			vl.getStyle().set("position", "relative");
 			vl.setHeight("100%");
 			vl.setWidth("100%");
 
 			ArrayList<Notifiaciones_item> array = new ArrayList<Notifiaciones_item>();
-			
+
 			int cont = 0;
 
-			for(int i = 0; i<listaNotificaciones.size() && i<20; i++) {
+			for (int i = 0; i < listaNotificaciones.size(); i++) {
 
 				Usuario_Registrado usr = this.datos.cargarDatosUsuario(listaNotificaciones.get(i).getUsuarioOrigen());
-				Publicacion publicacion =  this.datos.cargarVideoPoID(listaNotificaciones.get(i).getPublicacion());
+				Publicacion publicacion = this.datos.cargarVideoPoID(listaNotificaciones.get(i).getPublicacion());
 				if (listaNotificaciones.get(i).getTipo().equals(filtro) || filtro == "todo") {
-					array.add(new Notifiaciones_item(listaNotificaciones.get(i).getTipo(),
-							usr,
-							publicacion,
-							listaNotificaciones.get(i).getComentario(),
-							this.datos,
-							listaNotificaciones.get(i).getID(),
-							this.mi_cabecera,
-							this.user,
-							this.inicio));
+					array.add(new Notifiaciones_item(listaNotificaciones.get(i).getTipo(), usr, publicacion,
+							listaNotificaciones.get(i).getComentario(), this.datos, listaNotificaciones.get(i).getID(),
+							this.mi_cabecera, this.user, this.inicio));
 					array.get(cont).getIdImagenUsr().setSrc(usr.getFoto());
 					vl.add(array.get(cont));
 					cont++;
@@ -137,4 +130,4 @@ public class Notificaciones extends VistaNotificaciones {
 			}
 		}
 	}
-	}
+}

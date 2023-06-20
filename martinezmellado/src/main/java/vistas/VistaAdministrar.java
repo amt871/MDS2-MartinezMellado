@@ -8,6 +8,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.template.Id;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.orderedlayout.Scroller;
 
 /**
  * A Designer generated component for the vista-administrar template.
@@ -33,6 +34,9 @@ public class VistaAdministrar extends LitTemplate {
 	private Div divCabecera;
 	@Id("divScrollerDenuncias")
 	private Div divScrollerDenuncias;
+
+	@Id("scroller")
+	private Scroller scroller;
 
 	/**
      * Creates a new VistaAdministrar.
@@ -97,6 +101,14 @@ public class VistaAdministrar extends LitTemplate {
 
 	public void setDivScrollerDenuncias(Div divScrollerDenuncias) {
 		this.divScrollerDenuncias = divScrollerDenuncias;
+	}
+
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
 	}
 	
 	

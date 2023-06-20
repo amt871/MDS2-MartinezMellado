@@ -230,4 +230,16 @@ public class Publicaciones {
 		}
 		return u;
 	}
+	
+	public Publicacion[] listarTodasPublicaciones() throws PersistentException {
+		Publicacion[] u = null;
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+			u = PublicacionDAO.listPublicacionByQuery(null, null);
+		} catch (Exception e) {
+			t.rollback();
+			e.printStackTrace();
+		}
+		return u;
+	}
 }

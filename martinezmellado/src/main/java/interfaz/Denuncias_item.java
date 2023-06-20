@@ -1,21 +1,55 @@
 package interfaz;
 
+import java.util.ArrayList;
+
+import antlr.debug.Event;
+import basededatos.Comentario;
+import basededatos.Publicacion;
+import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
 import vistas.VistaDenuncias_item;
 
-public class Denuncias_item extends VistaDenuncias_item{
-//	private Button _posponer_denuncia;
-//	private Button _rechazar_denuncia;
-//	private Button _aceptar_denuncia;
-//	private ImageButton _fotoUsuarioIB;
-//	private Label _nombreUsuarioL;
-//	private ImageButton _previsualizacionVideoIB;
-//	private Label _textoComentarioL;
-//	private Label _fechaDeAceptacionL;
-//	public Denuncias _denuncias;
-//	public Vista_detalle__administrador_ _vista_detalle__administrador_;
-//	public Ver_perfil__administrador_ _ver_perfil__administrador_;
-//	public Ver_perfil_Bloqueado _ver_perfil_Bloqueado;
-//	public Ver_perfil__administrador_ _unnamed_Ver_perfil__administrador__;
+public class Denuncias_item extends VistaDenuncias_item {
+
+	private Comentario comentario;
+	private Publicacion publicacion;
+	private Usuario_Registrado usuario;
+	private Cabecera__administrador_ cabecera;
+	private MainView inicio;
+
+	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Comentario comentario, ArrayList<Comentario> ComDenuVist) {
+
+		this.cabecera = cabecera;
+		this.inicio = inicio;
+		this.comentario = comentario;
+		this.getImagen().setSrc("icons/video.png");
+		this.getTexto().setText("Video de procedencia");
+		this.getTextoDescripcion().setText("Comentario denuciado: " + this.comentario.getComentario());
+		
+		this.getbPosponer().addClickListener(event -> {
+			this.setVisible(false);
+			ComDenuVist.add(comentario);
+		});
+		
+		this.getbAceptar().addClickListener(event -> {
+			
+		});
+		
+	}
+
+	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Publicacion publicacion, ArrayList<Publicacion> PubDenuVist) {
+
+		this.cabecera = cabecera;
+		this.inicio = inicio;
+		this.publicacion = publicacion;
+	}
+
+	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Usuario_Registrado usuario, ArrayList<Usuario_Registrado> UsrDenuVist) {
+
+		this.cabecera = cabecera;
+		this.inicio = inicio;
+		this.usuario = usuario;
+	}
 
 //	public void vista_detalle__administrador_() {
 //		throw new UnsupportedOperationException();
@@ -40,4 +74,5 @@ public class Denuncias_item extends VistaDenuncias_item{
 //	public void ver_perfil_Bloqueado() {
 //		throw new UnsupportedOperationException();
 //	}
+
 }

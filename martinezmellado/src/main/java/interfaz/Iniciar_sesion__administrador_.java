@@ -81,8 +81,9 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 	}
 
 	public boolean inicioSesionAdministrador() {
+		basededatos.Administrador aux = this.datos.iniciarSesionAdministrador(getInUser().getValue(), getInPass().getValue());
 
-		if (getInUser().getValue().equals("admin") && getInPass().getValue().equals("prueba")) {
+		if (aux != null) {
 			//cambiarPantalla(pantalla);
 			Notification.show("Acceso concedido");
 			getInUser().setValue("");
