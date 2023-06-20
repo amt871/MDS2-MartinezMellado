@@ -22,7 +22,7 @@ export class VistaVideo_hashtag__usuario_registrado_ extends LitElement {
   <vaadin-horizontal-layout style="align-items: center; width: 100%; height: 5%; justify-content: center;">
    <label id="labelHashtag">HashTag</label>
   </vaadin-horizontal-layout>
-  <div style="width: 100%; height: 100%;">
+  <div style="width: 100%; height: 95%;">
    <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
   </div>
  </vaadin-vertical-layout>
