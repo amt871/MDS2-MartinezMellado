@@ -227,9 +227,9 @@ public class BDPrincipal
 		}
 	}
 
-	public void archivarDenuncia(String aElemento, String aTipo) {
+	public void archivarDenuncia(String aElemento, String aTipo, Administrador encargado) {
 		try {
-			this.denunciaArchivada.ArchivarDenuncia(aElemento, aTipo);
+			this.denunciaArchivada.ArchivarDenuncia(aElemento, aTipo, encargado);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -286,30 +286,30 @@ public class BDPrincipal
 	}
 
 	@Override
-	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario) {
+	public void retirarDenunciaComentario(Comentario comentario) {
 		// TODO Auto-generated method stub
 		try {
-			this.comentario.retirarDenunciaComentario(comentario, usuario);
+			this.comentario.retirarDenunciaComentario(comentario);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
 
 	@Override
-	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario) {
+	public void retirarDenunciaPublicacion(Publicacion publicacion) {
 		// TODO Auto-generated method stub
 		try {
-			this.publicaciones.retirarDenunciaPublicacion(publicacion, usuario);
+			this.publicaciones.retirarDenunciaPublicacion(publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
 
 	@Override
-	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado) {
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciado) {
 		// TODO Auto-generated method stub
 		try {
-			this.usuariosRegistrados.retirarDenunciaUsuario(denunciante, denunciado);
+			this.usuariosRegistrados.retirarDenunciaUsuario(denunciado);
 			;
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -500,6 +500,36 @@ public class BDPrincipal
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
+		}
+	}
+
+	@Override
+	public void eliminarComentario(Comentario comentario) {
+		// TODO Auto-generated method stub
+		try {
+			this.comentario.eliminarComentario(comentario);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void eliminarPublicaion(Publicacion publicaion) {
+		// TODO Auto-generated method stub
+		try {
+			this.publicaciones.eliminarPublicaion(publicaion);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+	@Override
+	public void bloquearUsuario(Usuario_Registrado usuario, Administrador adminstrador) {
+		// TODO Auto-generated method stub
+		try {
+			this.usuariosRegistrados.bloquearUsuario(usuario, adminstrador);
+		} catch (Exception e) {
+			// TODO: handle exception
 		}
 	}
 }

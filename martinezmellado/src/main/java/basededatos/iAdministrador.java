@@ -20,17 +20,23 @@ public interface iAdministrador {
 	
 	public List listarComentariosDenunciados();
 
-	public void archivarDenuncia(String aElemento, String aTipo);
+	public void archivarDenuncia(String aElemento, String aTipo, Administrador encargado);
 
 	public Usuario_Registrado datosUsuarioPerfil();
 
 	public boolean modificarEstadoUsuario(String aNombreUsuario);
 	
-	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario);
+	public void retirarDenunciaComentario(Comentario comentario);
 	
-	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario);
+	public void retirarDenunciaPublicacion(Publicacion publicacion);
 	
-	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado);
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciado);
 	
 	public Publicacion cargarVideoPorRuta(String ruta);
+	
+	public void eliminarComentario(Comentario comentario);
+	
+	public void eliminarPublicaion(Publicacion publicaion);
+	
+	public void bloquearUsuario(Usuario_Registrado usuario, Administrador adminstrador);
 }

@@ -241,10 +241,9 @@ public class Usuarios_Registrados {
 		try {
 			Usuario_Registrado[] usuarios = Usuario_RegistradoDAO.listUsuario_RegistradoByQuery(null, null);
 			if (usuarios != null) {
-				aux = Arrays.asList(usuarios);
-				for (Usuario_Registrado usuario : aux) {
-					if (usuario.denunciado.size() <= 0) {
-						aux.remove(usuario);
+				for (Usuario_Registrado usuario : usuarios) {
+					if (usuario.denunciante.size() > 0) {
+						aux.add(usuario);
 					}
 				}
 			}
@@ -285,21 +284,15 @@ public class Usuarios_Registrados {
 		return flag;
 	}
 
-	public void retirarDenunciaUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado)
-			throws PersistentException {
+	public void retirarDenunciaUsuario(Usuario_Registrado denunciado) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
-			Usuario_Registrado auxDenunciante = Usuario_RegistradoDAO
-					.loadUsuario_RegistradoByORMID(denunciante.getORMID());
+
 			Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO
 					.loadUsuario_RegistradoByORMID(denunciado.getORMID());
 
-			if (auxDenunciado.denunciante.contains(auxDenunciante))
-				auxDenunciado.denunciante.remove(auxDenunciante);
-			if (auxDenunciante.denunciado.contains(auxDenunciado))
-				auxDenunciante.denunciado.remove(auxDenunciado);
+			auxDenunciado.denunciante.clear();
 
-			Usuario_RegistradoDAO.save(auxDenunciante);
 			Usuario_RegistradoDAO.save(auxDenunciado);
 			t.commit();
 		} catch (Exception e) {
@@ -402,7 +395,7 @@ public class Usuarios_Registrados {
 		}
 		return usuario;
 	}
-	
+
 	public Usuario_Registrado[] listarTodosUsuarios() throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		Usuario_Registrado[] aux = null;
@@ -414,5 +407,23 @@ public class Usuarios_Registrados {
 			e.printStackTrace();
 		}
 		return aux;
+	}
+
+	public void bloquearUsuario(Usuario_Registrado usuario, Administrador adminstrador) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+
+			Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
+			Administrador auxAdministrador = AdministradorDAO.loadAdministradorByORMID(adminstrador.getORMID());
+
+			auxDenunciado.setEs_bloqueado(auxAdministrador);
+
+			Usuario_RegistradoDAO.save(auxDenunciado);
+			t.commit();
+		} catch (Exception e) {
+			t.rollback();
+			e.printStackTrace();
+		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 }

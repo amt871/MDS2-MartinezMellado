@@ -1,5 +1,6 @@
 package interfaz;
 
+import basededatos.Administrador;
 import basededatos.BDPrincipal;
 import proyectoMDS.MainView;
 import vistas.VistaCabecera__administrador_;
@@ -41,13 +42,15 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 	private Video_otro_usuario__administrador_ inicio;
 	private Busqueda__administrador_ busqueda;
 	private Administrar administrar;
+	private Administrador administardor;
 	
 	public Cabecera__administrador_(MainView vl, BDPrincipal datos,
-			Iniciar_sesion__administrador_ iniciar_sesion__administrador_) {
+			Iniciar_sesion__administrador_ iniciar_sesion__administrador_, Administrador administardor) {
 		// TODO Auto-generated constructor stub
 		this.vl = vl;
 		this.datos = datos;
 		this.iniciarSesion = iniciar_sesion__administrador_;
+		this.administardor = administardor;
 		
 		this.getbInicio2().addClickListener(event ->{
 			
@@ -147,5 +150,13 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 
 	public void setAdministrar(Administrar administrar) {
 		this.administrar = administrar;
+	}
+
+	public Administrador getAdministardor() {
+		return administardor;
+	}
+
+	public void setAdministardor(Administrador administardor) {
+		this.administardor = administardor;
 	}
 }

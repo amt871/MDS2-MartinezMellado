@@ -9,6 +9,7 @@ import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.RouterLink;
 
+import basededatos.Administrador;
 import basededatos.BDPrincipal;
 import proyectoMDS.MainView;
 import vistas.VistaIniciar_sesion__administrador_;
@@ -40,6 +41,7 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 	private MainView vl;
 	private BDPrincipal datos;
 	private Cabecera__administrador_ cabecera;
+	private Administrador admin;
 	
 	public Iniciar_sesion__administrador_(MainView mainView) {
 		// TODO Auto-generated constructor stub
@@ -62,7 +64,7 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 			
 			if(this.inicioSesionAdministrador()) {
 				this.vl.removeAll();
-				this.cabecera = new Cabecera__administrador_(this.vl, this.datos, this);
+				this.cabecera = new Cabecera__administrador_(this.vl, this.datos, this, this.admin);
 			}
 			
 		});
@@ -81,10 +83,11 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 	}
 
 	public boolean inicioSesionAdministrador() {
-		basededatos.Administrador aux = this.datos.iniciarSesionAdministrador(getInUser().getValue(), getInPass().getValue());
+		this.admin = this.datos.iniciarSesionAdministrador(getInUser().getValue(), getInPass().getValue());
 
-		if (aux != null) {
+		if (this.admin != null) {
 			//cambiarPantalla(pantalla);
+			
 			Notification.show("Acceso concedido");
 			getInUser().setValue("");
 			getInPass().setValue("");

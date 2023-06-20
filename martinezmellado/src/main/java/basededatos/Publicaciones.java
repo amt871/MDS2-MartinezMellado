@@ -50,7 +50,6 @@ public class Publicaciones {
 		return aux;
 	}
 
-
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo,
 			String aPropietario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
@@ -73,7 +72,7 @@ public class Publicaciones {
 			t.rollback();
 			e.printStackTrace();
 		}
-		 MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 
 	public List listarPublicacionesDenunciadas() throws PersistentException {
@@ -81,14 +80,11 @@ public class Publicaciones {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Publicacion[] publicaciones = PublicacionDAO.listPublicacionByQuery(null, null);
-			if (publicaciones != null) {
-				aux = Arrays.asList(publicaciones);
-				for (Publicacion publicacion : aux) {
-					if (publicacion.es_denunciada.size() <= 0) {
-						aux.remove(publicacion);
+				for (Publicacion publicacion : publicaciones) {
+					if (publicacion.es_denunciada.size() > 0) {
+						aux.add(publicacion);
 					}
 				}
-			}
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -96,36 +92,31 @@ public class Publicaciones {
 		return aux;
 	}
 
-	public void retirarDenunciaPublicacion(Publicacion publicacion, Usuario_Registrado usuario)
-			throws PersistentException {
+	public void retirarDenunciaPublicacion(Publicacion publicacion) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Publicacion auxPublicacion = PublicacionDAO.loadPublicacionByORMID(publicacion.getORMID());
-			Usuario_Registrado auxUsuario_Registrado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID()); 
 
-			if (auxPublicacion.es_denunciada.contains(auxUsuario_Registrado))
-				auxPublicacion.es_denunciada.remove(auxUsuario_Registrado);
-			if (auxUsuario_Registrado.denuncia.contains(auxPublicacion))
-				auxUsuario_Registrado.denuncia.remove(auxPublicacion);
+			auxPublicacion.es_denunciada.clear();
 
-			PublicacionDAO.refresh(auxPublicacion);
-			Usuario_RegistradoDAO.refresh(auxUsuario_Registrado);
+			PublicacionDAO.save(auxPublicacion);
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
 		}
-		 MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 
 	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Publicacion auxPublicacion = PublicacionDAO.loadPublicacionByORMID(publicacion.getORMID());
-			Usuario_Registrado auxUsuario_Registrado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID()); 
+			Usuario_Registrado auxUsuario_Registrado = Usuario_RegistradoDAO
+					.loadUsuario_RegistradoByORMID(usuario.getORMID());
 
 			auxPublicacion.es_denunciada.add(auxUsuario_Registrado);
-			//auxUsuario_Registrado.denuncia.add(auxPublicacion);
+			// auxUsuario_Registrado.denuncia.add(auxPublicacion);
 			;
 
 			PublicacionDAO.save(auxPublicacion);
@@ -143,10 +134,11 @@ public class Publicaciones {
 	public void annadirMeGusta(int publicacion, int usuario) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
-			
-			Publicacion auxP = PublicacionDAO.loadPublicacionByQuery("ID = '" + publicacion + "'" , null);
-			Usuario_Registrado auxU = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("ID = '" + usuario + "'", null);
-			
+
+			Publicacion auxP = PublicacionDAO.loadPublicacionByQuery("ID = '" + publicacion + "'", null);
+			Usuario_Registrado auxU = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("ID = '" + usuario + "'",
+					null);
+
 			auxP.le_gusta.add(auxU);
 			auxU.le_gusta.add(auxP);
 
@@ -160,7 +152,7 @@ public class Publicaciones {
 			e.printStackTrace();
 		}
 		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
-		
+
 	}
 
 	public Publicacion cargarVideoPorRuta(String ruta) throws PersistentException {
@@ -205,12 +197,12 @@ public class Publicaciones {
 					listaDevolucion.add(publicacion);
 				}
 			}
-			
+
 			devolver = new Publicacion[listaDevolucion.size()];
-			
-			for(int i = 0; i<devolver.length; i++)
+
+			for (int i = 0; i < devolver.length; i++)
 				devolver[i] = listaDevolucion.get(i);
-				
+
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();
@@ -218,7 +210,7 @@ public class Publicaciones {
 
 		return devolver;
 	}
-	
+
 	public Publicacion cargarVideoPoID(int id) throws PersistentException {
 		Publicacion u = null;
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
@@ -230,7 +222,7 @@ public class Publicaciones {
 		}
 		return u;
 	}
-	
+
 	public Publicacion[] listarTodasPublicaciones() throws PersistentException {
 		Publicacion[] u = null;
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
@@ -241,5 +233,18 @@ public class Publicaciones {
 			e.printStackTrace();
 		}
 		return u;
+	}
+
+	public void eliminarPublicaion(Publicacion publicaion) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		try {
+			Publicacion aux = PublicacionDAO.loadPublicacionByORMID(publicaion.getORMID());
+
+			PublicacionDAO.deleteAndDissociate(aux);
+		} catch (Exception e) {
+			t.rollback();
+			e.printStackTrace();
+		}
+		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 }

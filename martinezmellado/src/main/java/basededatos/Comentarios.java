@@ -20,14 +20,11 @@ public class Comentarios {
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
 	        Comentario[] comentarios = ComentarioDAO.listComentarioByQuery(null, null);
-	        if (comentarios != null) {
-	            aux = Arrays.asList(comentarios);
-	            for (Comentario comentario : aux) {
-					if (comentario.es_denunciada.size() <= 0) {
-						aux.remove(comentario);
-					}
+	        for (Comentario comentario : comentarios) {
+				if (comentario.es_denunciada.size() > 0) {
+					aux.add(comentario);
 				}
-	        }
+			}
 	    }catch (Exception e) {
 	        t.rollback();
 	        e.printStackTrace();
@@ -88,20 +85,17 @@ public class Comentarios {
 		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 	
-	public void retirarDenunciaComentario(Comentario comentario, Usuario_Registrado usuario)
+	public void retirarDenunciaComentario(Comentario comentario)
 			throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Comentario auxCom = ComentarioDAO.loadComentarioByORMID(comentario.getORMID());
-			Usuario_Registrado auxRegistrado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
 
-			if (auxCom.es_denunciada.contains(auxRegistrado))
-				auxCom.es_denunciada.remove(auxRegistrado);
-			if (auxRegistrado.denunciaA.contains(auxCom))
-				auxRegistrado.denunciaA.remove(auxCom);
+			auxCom.es_denunciada.clear();
 
+			System.out.println(auxCom.es_denunciada.size());
 			ComentarioDAO.save(auxCom);
-			Usuario_RegistradoDAO.save(auxRegistrado);
+			System.out.println("Quite las denuncias");
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
@@ -120,5 +114,20 @@ public class Comentarios {
 		        e.printStackTrace();
 		    }
 		    return aux;
+	}
+	
+	public void eliminarComentario(Comentario comentario) throws PersistentException {
+		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+		 Comentario aux = null;
+		    try { 
+		    	aux =  ComentarioDAO.loadComentarioByORMID(comentario.getORMID());    
+		    	
+		    	ComentarioDAO.deleteAndDissociate(aux);
+		    	System.out.println("te elimine puto");
+		    }catch (Exception e) {
+		        t.rollback();
+		        e.printStackTrace();
+		    }
+		    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 }

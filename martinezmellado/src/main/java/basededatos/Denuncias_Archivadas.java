@@ -28,13 +28,14 @@ public class Denuncias_Archivadas {
 		return aux;
 	}
 
-	public void ArchivarDenuncia(String aElemento, String aTipo) throws PersistentException {
+	public void ArchivarDenuncia(String aElemento, String aTipo, Administrador encargado) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Denuncia_Archivada aux = new Denuncia_Archivada();
+			Administrador usrAux = AdministradorDAO.getAdministradorByORMID(encargado.getORMID());
 			aux.setIdElemento(Integer.valueOf(aElemento));
 			aux.setTipo(aTipo);
-			aux.setAtendida(null);
+			aux.setAtendida(usrAux);
 			Denuncia_ArchivadaDAO.save(aux);
 			t.commit();
 		} catch (Exception e) {
