@@ -79,7 +79,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		if (this.getIdFechaDeNaciemiento().isEmpty()) {
 			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
 			fecha = "";
-			System.out.println("Hola: " + this.usuario.getFechaNacimiento());
+			//System.out.println("Hola: " + this.usuario.getFechaNacimiento());
 			items[2] = items[2].split(" ")[0];
 			if (items[2].length() < 2)
 				fecha += "0" + items[2] + "/";

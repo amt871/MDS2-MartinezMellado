@@ -45,7 +45,7 @@ public class Configurar_perfil_comercial extends VistaConfigurar_perfil_comercia
 		if (this.getTfFechaNac().isEmpty()) {
 			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
 			fecha = "";
-			System.out.println("Hola: " + this.usuario.getFechaNacimiento());
+			//System.out.println("Hola: " + this.usuario.getFechaNacimiento());
 			items[2] = items[2].split(" ")[0];
 			if (items[2].length() < 2)
 				fecha += "0" + items[2] + "/";

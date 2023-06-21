@@ -64,7 +64,7 @@ public class Hashtags {
 	    try {
 	        	Hashtag aux = HashtagDAO.loadHashtagByQuery("hashtag= '" + hashtag + "'" , null);
 	        	Publicacion publicacionAux = PublicacionDAO.loadPublicacionByQuery("video = '" + publicacion.getVideo() + "'", null);
-	        	System.out.println(publicacion.getVideo());
+	        	//System.out.println(publicacion.getVideo());
 	        	if (aux == null) {
 	        		aux = HashtagDAO.createHashtag();
 	        		aux.setHashtag(hashtag);

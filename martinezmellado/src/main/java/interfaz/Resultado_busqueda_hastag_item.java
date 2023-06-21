@@ -22,7 +22,7 @@ public class Resultado_busqueda_hastag_item extends VistaResultado_busqueda_hast
 		this.hashtag = has;
 		this.getbHashtag().setText(hashtag.getHashtag());
 		this.getLabelVideos().setText("Publicaciones: "+hashtag.esta.size());
-		System.out.println(hashtag.esta.size());
+		//System.out.println(hashtag.esta.size());
 		this.getStyle().set("width", "90%");
 		
 		this.getbHashtag().addClickListener(event ->{

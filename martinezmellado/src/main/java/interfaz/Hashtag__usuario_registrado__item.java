@@ -20,7 +20,7 @@ public class Hashtag__usuario_registrado__item extends VistaHashtag__usuario_reg
 		this.hashtag = hashtag;
 		this.getbHashtag().setText(hashtag.getHashtag());
 		this.getLabelVideos().setText("Publicaciones: "+hashtag.esta.size());
-		System.out.println(hashtag.esta.size());
+		//System.out.println(hashtag.esta.size());
 		this.getStyle().set("width", "90%");
 		
 		this.getbHashtag().addClickListener(event ->{
