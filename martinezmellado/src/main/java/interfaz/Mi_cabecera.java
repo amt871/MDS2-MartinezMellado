@@ -1,6 +1,9 @@
 package interfaz;
 
 import java.io.File;
+import java.io.IOException;
+
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 
 import basededatos.BDPrincipal;
 import basededatos.Usuario_Registrado;
@@ -40,12 +43,22 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		//iniciar_sesion = null;
 		
 		File file = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp");
-		File file2 = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp/tmp.mp4");
+		//File file2 = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp/tmp.mp4");
 		
-		if(file2.exists())
-			file2.delete();
-		if(file.exists())
+		
+		//if(file2.exists())
+			//file2.delete();
+		if(file.exists()) {
+			try {
+				FileUtils.cleanDirectory(file);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			file.delete();
+		}
+		
+		file = null;
 		
 		this.getbInicio().addClickListener(event -> {
 			

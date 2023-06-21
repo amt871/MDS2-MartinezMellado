@@ -15,6 +15,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.notification.Notification;
@@ -69,6 +71,22 @@ public class Publicar extends VistaPublicar {
 		
 		this.setCabecera(mi_cabecera);
 		
+		File tempDir = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+		
+		if(tempDir.exists()) {
+			try {
+				FileUtils.cleanDirectory(tempDir);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			tempDir.delete();
+		}
+		
+		tempDir = null;
+		
+		
+		
 		this.getImguser().setSrc(this.user.getFoto());
 		
 		// usuarioARegistrar = new Usuario_Registrado();
@@ -84,18 +102,21 @@ public class Publicar extends VistaPublicar {
 				
 				image = null;
 				
+				String nombVideo = LocalDateTime.now().toString().replace(":", "-");
+				
 				File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
-				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
 				
-				if(file2.exists())
-					file2.delete();
-				if(file.exists())
+				if(file.exists()) {
+					try {
+						FileUtils.cleanDirectory(file);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					file.delete();
+				}
 				
-				this.getLayoutVideo().removeAll();
-				Image image = new Image();
-				image.setSrc("icons/video.svg");
-				this.getLayoutVideo().add(image);
+				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/"+nombVideo+".mp4");
 				
 				file.mkdir();
 				try {
@@ -122,9 +143,8 @@ public class Publicar extends VistaPublicar {
 				fileData.reset();
 				
 				out.close();
-				
 				this.getLayoutVideo().removeAll();
-				this.getLayoutVideo().add(new Video("Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4", "90%","90%"));
+				this.getLayoutVideo().add(new Video(file2.getPath().replace("src\\main\\webapp\\", ""), "90%","90%"));
 				
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
