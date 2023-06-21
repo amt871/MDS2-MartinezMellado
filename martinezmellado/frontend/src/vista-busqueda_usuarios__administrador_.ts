@@ -1,10 +1,9 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-cabecera__administrador_';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-resultado_busqueda_usuarios';
 import '@vaadin/vaadin-text-field/src/vaadin-text-field.js';
 import '@vaadin/vaadin-button/src/vaadin-button.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-busqueda_usuarios__administrador_')
 export class VistaBusqueda_usuarios__administrador_ extends LitElement {
@@ -19,19 +18,21 @@ export class VistaBusqueda_usuarios__administrador_ extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vista-cabecera__administrador_ style="width: 100%; height: 5%;"></vista-cabecera__administrador_>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;">
+ <div id="divCabecera" style="width: 100%; height: 5%;"></div>
  <vaadin-horizontal-layout style="width: 100%; height: 95%;">
   <vaadin-vertical-layout style="width: 60%; height: 100%;">
-   <vista-resultado_busqueda_usuarios></vista-resultado_busqueda_usuarios>
+   <div style="width: 100%; height: 100%;">
+    <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+   </div>
   </vaadin-vertical-layout>
   <vaadin-vertical-layout theme="spacing" style="width: 40%; height: 100%; align-items: center; justify-content: center;">
-   <vaadin-text-field style="width: 60%;"></vaadin-text-field>
-   <vaadin-button style="width: 60%;">
-    Buscar Usuario
+   <vaadin-text-field style="width: 60%;" id="tfIn"></vaadin-text-field>
+   <vaadin-button style="width: 60%;" id="bBuscarUsuario">
+     Buscar Usuario 
    </vaadin-button>
-   <vaadin-button style="width: 60%;">
-    Buscar Hashtag
+   <vaadin-button style="width: 60%;" id="bBuscarHashtag">
+     Buscar Hashtag 
    </vaadin-button>
   </vaadin-vertical-layout>
  </vaadin-horizontal-layout>

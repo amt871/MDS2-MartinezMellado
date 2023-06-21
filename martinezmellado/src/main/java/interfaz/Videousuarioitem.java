@@ -11,6 +11,8 @@ public class Videousuarioitem extends VistaVideousuarioitem{
 	private Buscar__usuario_registrado_ buscar__usuario_registrado_;
 	private Cabecera_usuario_no_registrado cabeceraNoReg;
 	private Buscar__no_registrado_ buscar__no_registrado_;
+	private Cabecera__administrador_ cabeceraAdmin;
+	private Busqueda__administrador_ busqueda__administrador_;
 	
 	public Videousuarioitem(Usuario_Registrado propietario, Video video, Mi_cabecera mi_cabecera, Buscar__usuario_registrado_ buscar__usuario_registrado_) {
 		
@@ -55,6 +57,29 @@ public class Videousuarioitem extends VistaVideousuarioitem{
 		this.getButtonUsuario().addClickListener(event -> {
 			
 			this.verPerfilOtroUsuarioNoReg();
+			
+		});
+	}
+
+	public Videousuarioitem(Usuario_Registrado realizada, Video video2, Cabecera__administrador_ cabecera2,
+			Busqueda__administrador_ busqueda__administrador_) {
+		// TODO Auto-generated constructor stub
+		this.getStyle().set("position", "relative");
+		
+		this.video = video2;
+		this.propietario = realizada;
+		this.cabeceraAdmin = cabecera2;
+		this.busqueda__administrador_ = busqueda__administrador_;
+		
+		this.getDivVideo().add(this.video);
+		this.getButtonUsuario().setText(this.propietario.getUsuario());
+		
+		//this.video.setHeight("25%");
+		this.video.setWidth("25%");
+		
+		this.getButtonUsuario().addClickListener(event -> {
+			
+			this.verPerfilOtroUsuarioAdmin();
 			
 		});
 	}
@@ -117,5 +142,23 @@ public class Videousuarioitem extends VistaVideousuarioitem{
 		this.buscar__no_registrado_.clear();
 
 	}
+	
+	private void verPerfilOtroUsuarioAdmin() {
+
+
+		// System.out.println(miUsuario.getUsuario());
+
+		// Notification.show("Aun no implementado");
+		
+			this.cabeceraAdmin.setPerfil(
+					new Ver_perfil__administrador_(this.cabeceraAdmin, this.propietario));
+			this.cabeceraAdmin.getVl().removeAll();
+			this.cabeceraAdmin.getVl().add(this.cabeceraAdmin.getPerfil());
+			// this.inicio.cambiarPantalla(cabecera);
+			
+		this.busqueda__administrador_.clear();
+		
+
+}
 
 }

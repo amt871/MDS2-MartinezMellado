@@ -22,6 +22,10 @@ public class Perfil_comercial extends VistaPerfil_comercial {
 		// TODO Auto-generated constructor stub
 		
 		this.cabecera = cabecera_comercial;
+		
+		this.cabecera.setUser(this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario()));
+		
+
 		this.setCabecera(cabecera_comercial);
 		this.scroller = this.getScroller();
 		

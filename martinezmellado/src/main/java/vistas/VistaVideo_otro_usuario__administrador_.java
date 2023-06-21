@@ -23,12 +23,15 @@ import com.vaadin.flow.component.html.Div;
 @JsModule("./src/vista-video_otro_usuario__administrador_.ts")
 public class VistaVideo_otro_usuario__administrador_ extends LitTemplate {
 
-	private VistaCabecera__administrador_ cabecera;
+	private Cabecera__administrador_ cabecera;
 
 	@Id("divCabecera")
 	private Div divCabecera;
 	@Id("divScroller")
 	private Div divScroller;
+
+	@Id("scroller")
+	private Scroller scroller;
 
 	/**
      * Creates a new VistaVideo_otro_usuario__administrador_.
@@ -55,13 +58,21 @@ public class VistaVideo_otro_usuario__administrador_ extends LitTemplate {
 		this.divScroller = divScroller;
 	}
 
-	public VistaCabecera__administrador_ getCabecera() {
+	public Cabecera__administrador_ getCabecera() {
 		return cabecera;
 	}
 
-	public void setCabecera(VistaCabecera__administrador_ cabecera) {
+	public void setCabecera(Cabecera__administrador_ cabecera) {
 		this.cabecera = cabecera;
 		this.divCabecera.add(this.cabecera);
+	}
+
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
 	}
 
     

@@ -1,5 +1,21 @@
 package interfaz;
 
+import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
+import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
+import basededatos.BDPrincipal;
+import basededatos.Comentario;
+import basededatos.Publicacion;
+import basededatos.Usuario_Registrado;
+import vistas.VistaAdministrar;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Administrar extends VistaAdministrar{
 
 	private Scroller scroller;
 	private VerticalLayout vl;

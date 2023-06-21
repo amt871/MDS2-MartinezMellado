@@ -16,12 +16,12 @@ export class VistaResultado_busqueda_hastag_item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
  <vaadin-horizontal-layout class="content" style="justify-content: space-between; width: 100%;" theme="spacing">
-  <vaadin-button style="margin-left: var(--lumo-space-s); width: 100%;">
+  <vaadin-button style="margin-left: var(--lumo-space-s); width: 100%;" id="bHashtag">
     Nombre Hashtag 
   </vaadin-button>
-  <label style="flex-shrink: 0; flex-grow: 0; margin-right: var(--lumo-space-s); align-self: center;">Numero de videos </label>
+  <label style="flex-shrink: 0; flex-grow: 0; margin-right: var(--lumo-space-s); align-self: center;" id="labelVideos">Numero de videos </label>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

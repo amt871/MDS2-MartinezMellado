@@ -19,6 +19,7 @@ public class Mi_video_item extends VistaMi_video_item {
 	private Video video;
 	private Publicacion publi;
 	private Cabecera_usuario_no_registrado cabeceraNoReg;
+	private Cabecera__administrador_ cabeceraAdmin;
 	
 	/*public Mi_video_item(String src,String titulo, String altura, String anchura, MainView vl) {
 		
@@ -104,6 +105,29 @@ public class Mi_video_item extends VistaMi_video_item {
 			this.cabeceraNoReg.setDetalle(new Vista_detalle__no_registrado_(this.cabeceraNoReg, this.publi));
 			this.cabeceraNoReg.getVl().removeAll();
 			this.cabeceraNoReg.getVl().add(this.cabeceraNoReg.getDetalle());
+			
+		});
+	}
+
+	public Mi_video_item(Publicacion publi2, Cabecera__administrador_ cabecera2) {
+		// TODO Auto-generated constructor stub
+		
+		this.video = new Video(publi2.getVideo().replace("src/main/webapp/",""));
+		this.publi = publi2;
+		this.getLabelDescripcion().setText(publi.getDescripcion().length()<15 ? publi.getDescripcion() : publi.getDescripcion().substring(0, 11)+"...");
+		this.getLayoutVideo().add(this.video);
+		this.cabeceraAdmin = cabecera2;
+		this.video.setWidth("80%");
+		this.video.setHeight("80%");
+		//this.getLabelTitulo().setText(titulo);
+		this.getStyle().set("height", "100%");
+		this.getStyle().set("width", "25%");
+		
+		this.getButton().addClickListener(event ->{
+			
+			this.cabeceraAdmin.setDetalle(new Vista_detalle__administrador_(this.cabeceraAdmin, this.publi));
+			this.cabeceraAdmin.getVl().removeAll();
+			this.cabeceraAdmin.getVl().add(this.cabeceraAdmin.getDetalle());
 			
 		});
 	}

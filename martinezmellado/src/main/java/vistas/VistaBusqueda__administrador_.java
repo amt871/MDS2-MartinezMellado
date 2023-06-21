@@ -7,6 +7,8 @@ import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.template.Id;
 
 import interfaz.Cabecera__administrador_;
+import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-busqueda__administrador_ template.
@@ -21,6 +23,16 @@ public class VistaBusqueda__administrador_ extends LitTemplate {
 	private Cabecera__administrador_ cabecera;
     @Id("divCabecera")
 	private Div divCabecera;
+	@Id("divUsuarios")
+	private Div divUsuarios;
+	@Id("divVideos")
+	private Div divVideos;
+	@Id("tfIn")
+	private TextField tfIn;
+	@Id("bBuscarUsuario")
+	private Button bBuscarUsuario;
+	@Id("bBuscarHashtag")
+	private Button bBuscarHashtag;
 
 	/**
      * Creates a new VistaBusqueda__administrador_.
@@ -45,6 +57,46 @@ public class VistaBusqueda__administrador_ extends LitTemplate {
 	public void setCabecera(Cabecera__administrador_ cabecera) {
 		this.cabecera = cabecera;
 		this.divCabecera.add(this.cabecera);
+	}
+
+	public Div getDivUsuarios() {
+		return divUsuarios;
+	}
+
+	public void setDivUsuarios(Div divUsuarios) {
+		this.divUsuarios = divUsuarios;
+	}
+
+	public Div getDivVideos() {
+		return divVideos;
+	}
+
+	public void setDivVideos(Div divVideos) {
+		this.divVideos = divVideos;
+	}
+
+	public TextField getTfIn() {
+		return tfIn;
+	}
+
+	public void setTfIn(TextField tfIn) {
+		this.tfIn = tfIn;
+	}
+
+	public Button getbBuscarUsuario() {
+		return bBuscarUsuario;
+	}
+
+	public void setbBuscarUsuario(Button bBuscarUsuario) {
+		this.bBuscarUsuario = bBuscarUsuario;
+	}
+
+	public Button getbBuscarHashtag() {
+		return bBuscarHashtag;
+	}
+
+	public void setbBuscarHashtag(Button bBuscarHashtag) {
+		this.bBuscarHashtag = bBuscarHashtag;
 	}
     
     
