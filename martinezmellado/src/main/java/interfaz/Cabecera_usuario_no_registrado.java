@@ -43,6 +43,7 @@ public class Cabecera_usuario_no_registrado extends VistaCabecera_usuario_no_reg
 	private Buscar_hashtag__no_registrado_ busquedaHashtag;
 	private Buscar_usuario__no_registrado_ busquedaUsuarios;
 	private Videos_hashtag__no_registrado_ hashtags;
+	private Ver_me_gustas__no_registrado_ verMeGustas;
 	
 	public Cabecera_usuario_no_registrado(MainView vlMain, BDPrincipal datos, Pantalla_inicio pantalla_inicio) {
 		// TODO Auto-generated constructor stub
@@ -164,6 +165,14 @@ public class Cabecera_usuario_no_registrado extends VistaCabecera_usuario_no_reg
 
 	public void setHashtags(Videos_hashtag__no_registrado_ hashtags) {
 		this.hashtags = hashtags;
+	}
+
+	public Ver_me_gustas__no_registrado_ getVerMeGustas() {
+		return verMeGustas;
+	}
+
+	public void setVerMeGustas(Ver_me_gustas__no_registrado_ verMeGustas) {
+		this.verMeGustas = verMeGustas;
 	}
 	
 	

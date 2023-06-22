@@ -32,6 +32,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Buscar_usuario__usuario_registrado_ busquedaUsuarios;
 	private Buscar_hashtag__usuario_registrado_ busquedaHashtag;
 	private Video_hashtag__usuario_registrado_ hashtags;
+	private Ver_me_gustas__otro_usuario_ verMeGustas;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
 		// TODO Auto-generated constructor stub
@@ -171,6 +172,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.detalle = null;
 		this.busquedaUsuarios = null;
 		this.hashtags = null;
+		this.verMeGustas = null;
 		
 		this.vl.removeAll();
 		this.vl.add(this.pInicio);
@@ -364,6 +366,17 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public void setHashtags(Video_hashtag__usuario_registrado_ hashtags) {
 		this.hashtags = hashtags;
+	}
+
+
+	public void setVerMeGustas(Ver_me_gustas__otro_usuario_ verMeGustas) {
+		// TODO Auto-generated method stub
+		this.verMeGustas = verMeGustas;
+	}
+
+
+	public Ver_me_gustas__otro_usuario_ getVerMeGustas() {
+		return verMeGustas;
 	}
 	
 	

@@ -29,7 +29,7 @@ public class Comentario_item extends VistaComentario_item {
 			verPerfilPropietario();
 		});
 		
-		this.getImgUser().setSrc("Usuarios/"+comentario.getAutor()+"/imagen.jpg");
+		this.getImgUser().setSrc(comentario.getEs_publicado().getFoto());
 		this.getLabelComentario().setText(comentario.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");
@@ -67,7 +67,7 @@ public class Comentario_item extends VistaComentario_item {
 		this.comentario = this.cabeceraCom.getDatos().cargarComentario(this.usuario, this.cabeceraCom.getDatos().cargarVideoPoID(Integer.valueOf(comentario2.getPublicacion())));
 		// TODO Auto-generated constructor stub
 		
-		this.getImgUser().setSrc("Usuarios/"+comentario2.getAutor()+"/imagen.jpg");
+		this.getImgUser().setSrc(comentario2.getEs_publicado().getFoto());
 		this.getLabelComentario().setText(comentario2.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");
@@ -110,7 +110,7 @@ public class Comentario_item extends VistaComentario_item {
 		this.comentario = cabecera.getDatos().cargarComentario(this.usuario, cabecera.getDatos().cargarVideoPoID(Integer.valueOf(comentario2.getPublicacion())));
 		// TODO Auto-generated constructor stub
 		
-		this.getImgUser().setSrc("Usuarios/"+comentario2.getAutor()+"/imagen.jpg");
+		this.getImgUser().setSrc(comentario2.getEs_publicado().getFoto());
 		this.getLabelComentario().setText(comentario2.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");

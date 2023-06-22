@@ -13,6 +13,7 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.button.Button;
 
 /**
  * A Designer generated component for the vista-vista_detalle__no_registrado_ template.
@@ -41,6 +42,10 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
 	private Label labelFecha;
 	@Id("labelDescripcion")
 	private Label labelDescripcion;
+	@Id("bVerMeGustas")
+	private Button bVerMeGustas;
+	@Id("labelMeGustas")
+	private Label labelMeGustas;
 	/**
      * Creates a new VistaVista_detalle__no_registrado_.
      */
@@ -95,6 +100,24 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
 	}
 	public void setLabelFecha(Label labelFecha) {
 		this.labelFecha = labelFecha;
+	}
+	public Label getLabelDescripcion() {
+		return labelDescripcion;
+	}
+	public void setLabelDescripcion(Label labelDescripcion) {
+		this.labelDescripcion = labelDescripcion;
+	}
+	public Button getbVerMeGustas() {
+		return bVerMeGustas;
+	}
+	public void setbVerMeGustas(Button bVerMeGustas) {
+		this.bVerMeGustas = bVerMeGustas;
+	}
+	public Label getLabelMeGustas() {
+		return labelMeGustas;
+	}
+	public void setLabelMeGustas(Label labelMeGustas) {
+		this.labelMeGustas = labelMeGustas;
 	}
     
     

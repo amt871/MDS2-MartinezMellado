@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaSiguiendo"/>
-    <fullyQualifiedTypeName name="vistas.VistaVer_perfil__usuario_registrado_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.Component"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil_privado__usuario_registrado_"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_RegistradoDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaUsuarionombreitem"/>
     <fullyQualifiedTypeName name="vistas.VistaVista_detalle__usuario_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaComentario_item"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
     <fullyQualifiedTypeName name="vistas.VistaBuscar_usuario__usuario_registrado_"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection"/>
@@ -20,7 +15,6 @@
     <fullyQualifiedTypeName name="basededatos.Hashtags"/>
     <fullyQualifiedTypeName name="basededatos.HashtagDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaHashtag__usuario_registrado__item"/>
-    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="basededatos.Hashtag"/>
     <fullyQualifiedTypeName name="vistas.VistaVideo_hashtag__usuario_registrado_"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
@@ -38,11 +32,9 @@
     <fullyQualifiedTypeName name="vistas.VistaHashtag__no_registrado__item"/>
     <fullyQualifiedTypeName name="vistas.VistaVideos_hashtag__no_registrado_"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
-    <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileUtils"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="basededatos.Comentario"/>
-    <fullyQualifiedTypeName name="basededatos.Publicacion"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="vistas.VistaAdministrar"/>
     <fullyQualifiedTypeName name="java.util.List"/>
@@ -51,7 +43,6 @@
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Html"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_perfil__administrador_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="vistas.VistaComentario__administrador__item"/>
     <fullyQualifiedTypeName name="basededatos.Usuario_Registrado"/>
     <fullyQualifiedTypeName name="vistas.VistaBusqueda_usuarios__administrador_"/>
@@ -60,4 +51,13 @@
     <fullyQualifiedTypeName name="vistas.VistaResultado_busqueda_hastag_item"/>
     <fullyQualifiedTypeName name="vistas.VistaPublicaciones_asociadas_a_un_hastag"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera__administrador_"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="basededatos.Publicacion"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileUtils"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_me_gustas__otro_usuario_"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="vistas.VistaMe_gusta__otro_usuario__item"/>
 </qualifiedTypeNameHistroy>

@@ -54,10 +54,22 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 		this.getLabelUsuario().setText(publi.getRealizada().getUsuario());
 		this.getImage().setSrc(publi.getRealizada().getFoto());
 		this.getVlVideo().add(new Video(publi.getVideo().replace("src/main/webapp/", ""),"90%","90%"));
+		/*int megustas = 0;
+		for(Publicacion publicacion : publi.getRealizada().realiza.toArray())
+			megustas += publicacion.le_gusta.size();*/
+		this.getLabelMeGustas().setText(publi.le_gusta.size()+" me gustas");
 		
 		this.getImage().addClickListener(event ->{
 			
 			verPerfilOtroUsuarioNoReg();
+			
+		});
+		
+		this.getbVerMeGustas().addClickListener(e ->{
+			
+			this.cabecera.setVerMeGustas(new Ver_me_gustas__no_registrado_(this.cabecera, this.publicacion));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getVerMeGustas());
 			
 		});
 		

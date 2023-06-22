@@ -178,6 +178,13 @@ public class Publicar extends VistaPublicar {
 			bPublica();
         });
 		
+		/*this.getDescrpcion().addInputListener(e ->{
+			
+			//e.getSource().setHelperText(e.getSource()..length()+"/255");
+			this.getDescrpcion().setHelperText(this.getDescrpcion().getValue().length()+"/255");
+			
+		});*/
+		
 	}
 	
 	public Publicar(Cabecera_comercial cabecera) {
@@ -282,6 +289,12 @@ public class Publicar extends VistaPublicar {
 		this.getSubirVideo().addClickListener(event -> {
 			bPublica();
         });
+		
+		/*this.getDescrpcion().addValueChangeListener(e ->{
+			
+			e.getSource().setHelperText(e.getValue().length()+"/255");
+			
+		});*/
 		
 	}
 
