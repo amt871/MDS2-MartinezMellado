@@ -7390,3 +7390,481 @@ java.lang.Error: SWT Resource was not properly disposed
 
 !ENTRY com.vaadin.designer2 1 0 2023-06-22 19:20:08.196
 !MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:20:14.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:20:23.206
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:21:08.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:21:08.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:22:08.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:22:08.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:22:08.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:23:08.185
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:23:08.186
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:24:09.512
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:24:09.572
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:24:09.619
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:24:09.648
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 19:24:09.681
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:11.886
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/af45
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:12.373
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/0154
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:12.484
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/a4d1
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:12.799
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/5131
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:13.052
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/4131
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:13.053
+!MESSAGE Jetty stopped at http://192.168.0.17:53486
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:13.125
+!MESSAGE Force stop the task with pid 11224
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:13.129
+!MESSAGE Force stop the task with pid 25640
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:13.130
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.023
+!MESSAGE Remote preview available on http://192.168.0.17:53486. Designer running on http://localhost:53486.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.024
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.029
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/Users/Juanra/Desktop/MDS2-MartinezMellado/martinezmellado/node_modules --port=62738 --hostPid=24904
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.030
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.031
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.031
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.034
+!MESSAGE Setting browser url to http://localhost:53486/flow/03d2/frontend/src/vista-ver_perfil__usuario_registrado_.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-22 20:11:27.188
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.459
+!MESSAGE Setting browser url to http://localhost:53486/flow/03d2/frontend/src/vista-ver_perfil__usuario_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:27.460
+!MESSAGE Setting browser url to http://localhost:53486/flow/03d2/frontend/src/vista-ver_perfil__usuario_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:28.242
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:11:28.835
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:12:38.921
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:13:48.973
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:14:59.005
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:16:09.044
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.068
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.069
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.069
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.070
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.072
+!MESSAGE Setting browser url to http://localhost:53486/flow/7e1c/frontend/src/vista-ver_seguidores_otro_usuario.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-22 20:17:11.204
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.669
+!MESSAGE Setting browser url to http://localhost:53486/flow/7e1c/frontend/src/vista-ver_seguidores_otro_usuario.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:11.669
+!MESSAGE Setting browser url to http://localhost:53486/flow/7e1c/frontend/src/vista-ver_seguidores_otro_usuario.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:12.369
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:12.896
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:17:19.183
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:18:22.930
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:19:08.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:19:32.981
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:20:43.014
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:21:08.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:21:53.057
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:23:03.107
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:23:09.509
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:24:13.141
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:25:08.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:25:23.200
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:26:33.263
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:27:08.184
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:27:43.300
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:28:53.348
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:29:08.181
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY org.eclipse.jface 4 2 2023-06-22 20:29:32.448
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jface".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.corext.dom.ASTNodes.getParent(ASTNodes.java:2471)
+	at org.eclipse.jdt.internal.corext.refactoring.structure.ASTNodeSearchUtil.getMethodDeclarationNode(ASTNodeSearchUtil.java:129)
+	at org.eclipse.jdt.internal.corext.refactoring.RefactoringAvailabilityTester.isCanonicalConstructor(RefactoringAvailabilityTester.java:208)
+	at org.eclipse.jdt.internal.corext.refactoring.RefactoringAvailabilityTester.isIntroduceParameterObjectAvailable(RefactoringAvailabilityTester.java:1250)
+	at org.eclipse.jdt.internal.ui.actions.IntroduceParameterObjectAction.selectionChanged(IntroduceParameterObjectAction.java:74)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchSelectionChanged(SelectionDispatchAction.java:262)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.selectionChanged(SelectionDispatchAction.java:257)
+	at org.eclipse.jface.viewers.Viewer$1.run(Viewer.java:151)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:148)
+	at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2132)
+	at org.eclipse.jface.viewers.StructuredViewer.setSelection(StructuredViewer.java:1662)
+	at org.eclipse.jface.viewers.TreeViewer.setSelection(TreeViewer.java:1084)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaOutlinePage.select(JavaOutlinePage.java:1127)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.synchronizeOutlinePage(JavaEditor.java:2153)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.synchronizeOutlinePage(JavaEditor.java:2141)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor.selectionChanged(JavaEditor.java:2248)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaEditor$EditorSelectionChangedListener.selectionChanged(JavaEditor.java:308)
+	at org.eclipse.jface.text.TextViewer.firePostSelectionChanged(TextViewer.java:2638)
+	at org.eclipse.jface.text.TextViewer.firePostSelectionChanged(TextViewer.java:2585)
+	at org.eclipse.jface.text.TextViewer$2.run(TextViewer.java:2564)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3256)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3624)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:30:03.413
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:30:09.510
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:31:13.458
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:32:09.511
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:32:23.515
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:33:33.573
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:08.191
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.120
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.121
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.122
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.122
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.125
+!MESSAGE Setting browser url to http://localhost:53486/flow/ca06/frontend/src/vista-ver_seguidores_otro_usuario_item.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-22 20:34:21.260
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.760
+!MESSAGE Setting browser url to http://localhost:53486/flow/ca06/frontend/src/vista-ver_seguidores_otro_usuario_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:21.761
+!MESSAGE Setting browser url to http://localhost:53486/flow/ca06/frontend/src/vista-ver_seguidores_otro_usuario_item.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:22.405
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:22.985
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:34:45.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:35:33.035
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:36:08.188
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:36:08.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:36:43.055
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:37:53.096
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:38:08.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:38:08.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:39:03.142
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:40:09.509
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:40:09.535
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:40:13.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:41:23.252
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:42:09.518
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:42:09.544
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:42:33.300
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:43:43.332
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:44:08.189
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:44:08.190
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:44:46.195
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:46:08.193
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:46:08.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:46:08.194
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:48:08.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:48:08.196
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:48:08.197
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:03.236
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/03d2
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:03.657
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/7e1c
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:04.119
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/ca06
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:04.119
+!MESSAGE Jetty stopped at http://192.168.0.17:53486
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:04.245
+!MESSAGE Force stop the task with pid 8684
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:04.251
+!MESSAGE Force stop the task with pid 23748
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:04.252
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.283
+!MESSAGE Remote preview available on http://192.168.0.17:53486. Designer running on http://localhost:53486.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.284
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.289
+!MESSAGE Starting node process: cmd /C node ./dist/server.js --rootPath=C:/Users/Juanra/Desktop/MDS2-MartinezMellado/martinezmellado/node_modules --port=62738 --hostPid=24904
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.290
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.291
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.291
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.294
+!MESSAGE Setting browser url to http://localhost:53486/flow/4d50/frontend/src/vista-ver_perfil__usuario_no_registrado_.ts?mode=edit&editor#!edit
+
+!ENTRY org.eclipse.lsp4e 1 0 2023-06-22 20:50:32.437
+!MESSAGE [Info]	ESLint server running in node v14.15.4
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.683
+!MESSAGE Setting browser url to http://localhost:53486/flow/4d50/frontend/src/vista-ver_perfil__usuario_no_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:32.684
+!MESSAGE Setting browser url to http://localhost:53486/flow/4d50/frontend/src/vista-ver_perfil__usuario_no_registrado_.ts?mode=preview&editor#!preview
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:33.481
+!MESSAGE AppShellConfigurator class not found. Please use Vaadin 19+ for Custom Theme feature.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:50:34.038
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:51:44.081
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:52:54.125
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:54:04.163
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:55:14.226
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:56:25.192
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 20:58:08.514
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:08.182
+!MESSAGE Heartbeat for: {0}
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:32.791
+!MESSAGE Removed model from server at http://192.168.0.17:53486/flow/4d50
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:32.791
+!MESSAGE Jetty stopped at http://192.168.0.17:53486
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:32.804
+!MESSAGE Force stop the task with pid 25808
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:32.809
+!MESSAGE Force stop the task with pid 23968
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:32.809
+!MESSAGE Stop Vaadin Designer node server.
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:33.229
+!MESSAGE Jetty stopped at http://192.168.0.17:-1
+
+!ENTRY com.vaadin.designer2 1 0 2023-06-22 21:00:33.229
+!MESSAGE Removed all models from server.

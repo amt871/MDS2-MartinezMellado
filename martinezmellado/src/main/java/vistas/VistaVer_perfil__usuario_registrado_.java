@@ -9,6 +9,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 /**
  * A Designer generated component for the vista-ver_perfil__usuario_registrado_ template.
@@ -38,7 +39,8 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 	private Scroller scroller;
 	@Id("bDenuncia")
 	private Button bDenuncia;
-
+	@Id("layoutSeguidores")
+	private HorizontalLayout layoutSeguidores;
 	/**
      * Creates a new VistaVer_perfil__usuario_registrado_.
      */
@@ -117,6 +119,15 @@ public class VistaVer_perfil__usuario_registrado_ extends LitTemplate {
 	public void setbDenuncia(Button bDenuncia) {
 		this.bDenuncia = bDenuncia;
 	}
+
+	public HorizontalLayout getLayoutSeguidores() {
+		return layoutSeguidores;
+	}
+
+	public void setLayoutSeguidores(HorizontalLayout layoutSeguidores) {
+		this.layoutSeguidores = layoutSeguidores;
+	}
     
+	
 
 }

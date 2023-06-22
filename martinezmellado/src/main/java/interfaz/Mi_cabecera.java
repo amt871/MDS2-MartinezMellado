@@ -33,6 +33,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Buscar_hashtag__usuario_registrado_ busquedaHashtag;
 	private Video_hashtag__usuario_registrado_ hashtags;
 	private Ver_me_gustas__otro_usuario_ verMeGustas;
+	private Ver_seguidores_otro_usuario seguidoresOtroUsuario;
 
 	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
 		// TODO Auto-generated constructor stub
@@ -173,6 +174,7 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.busquedaUsuarios = null;
 		this.hashtags = null;
 		this.verMeGustas = null;
+		this.seguidoresOtroUsuario = null;
 		
 		this.vl.removeAll();
 		this.vl.add(this.pInicio);
@@ -377,6 +379,17 @@ public class Mi_cabecera extends VistaMi_cabecera {
 
 	public Ver_me_gustas__otro_usuario_ getVerMeGustas() {
 		return verMeGustas;
+	}
+
+
+	public void setSeguidoresOtroUsuario(Ver_seguidores_otro_usuario ver_seguidores_otro_usuario) {
+		// TODO Auto-generated method stub
+		this.seguidoresOtroUsuario = ver_seguidores_otro_usuario;
+	}
+
+
+	public Ver_seguidores_otro_usuario getSeguidoresOtroUsuario() {
+		return seguidoresOtroUsuario;
 	}
 	
 	

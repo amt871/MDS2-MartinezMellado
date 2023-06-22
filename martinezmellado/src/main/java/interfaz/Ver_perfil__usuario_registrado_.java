@@ -128,6 +128,14 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 			this.getSeguirButton().setVisible(false);
 			this.getDivVideos().setHeight("65%");
 		}
+		
+		this.getLayoutSeguidores().addClickListener(e->{
+			
+			this.cabecera.setSeguidoresOtroUsuario(new Ver_seguidores_otro_usuario(this.cabecera, this.usuario));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getSeguidoresOtroUsuario());
+			
+		});
 
 		listarVideos();
 

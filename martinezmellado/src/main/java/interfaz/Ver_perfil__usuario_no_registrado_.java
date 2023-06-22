@@ -47,6 +47,14 @@ public class Ver_perfil__usuario_no_registrado_ extends VistaVer_perfil__usuario
 		this.scroller = this.getScroller();
 		this.usuario = usuario;
 		
+		this.getLayoutSeguidores().addClickListener(e ->{
+			
+			cabeceraNoReg.setSeguidoresOtroUsuario(new Ver_seguidores_otro_usuario(cabeceraNoReg, this.usuario));
+			cabeceraNoReg.getVl().removeAll();
+			cabeceraNoReg.getVl().add(cabeceraNoReg.getSeguidoresOtroUsuario());
+			
+		});
+		
 		listarVideos();
 	}
 	

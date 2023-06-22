@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaVer_perfil_privado__usuario_registrado_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
-    <fullyQualifiedTypeName name="basededatos.Usuario_RegistradoDAO"/>
-    <fullyQualifiedTypeName name="vistas.VistaUsuarionombreitem"/>
     <fullyQualifiedTypeName name="vistas.VistaVista_detalle__usuario_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaComentario_item"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
@@ -31,8 +27,6 @@
     <fullyQualifiedTypeName name="vistas.VistaBuscar_hashtag__no_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaHashtag__no_registrado__item"/>
     <fullyQualifiedTypeName name="vistas.VistaVideos_hashtag__no_registrado_"/>
-    <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
     <fullyQualifiedTypeName name="basededatos.BDPrincipal"/>
     <fullyQualifiedTypeName name="basededatos.Comentario"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -56,8 +50,14 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="org.apache.tomcat.util.http.fileupload.FileUtils"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
-    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_me_gustas__otro_usuario_"/>
-    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
     <fullyQualifiedTypeName name="vistas.VistaMe_gusta__otro_usuario__item"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_me_gustas__no_registrado_"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.VerticalLayout"/>
+    <fullyQualifiedTypeName name="vistas.VistaMe_gusta__no_registrado__item"/>
+    <fullyQualifiedTypeName name="interfaz.Mi_cabecera"/>
+    <fullyQualifiedTypeName name="interfaz.Cabecera_usuario_no_registrado"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_seguidores_otro_usuario"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
+    <fullyQualifiedTypeName name="vistas.VistaVer_seguidores_otro_usuario_item"/>
 </qualifiedTypeNameHistroy>
