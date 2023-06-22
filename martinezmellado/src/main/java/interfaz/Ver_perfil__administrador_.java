@@ -59,7 +59,12 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 		this.setCabecera(cabecera);
 		this.cabecera = cabecera;
 		this.getLabelSeguidores().setText("Seguidores: "+propietario.seguidor.size());
-		this.getLabelMeGustas().setText("Me gustas dados: "+propietario.le_gusta.size());
+		
+		int megustas = 0;
+		for(Publicacion publi : propietario.realiza.toArray())
+			megustas += publi.le_gusta.size();
+		
+		this.getLabelMeGustas().setText(megustas + " me gustas");
 		this.getImage().setSrc(propietario.getFoto());
 		this.getLabelUsuario().setText(propietario.getUsuario());
 		if(!propietario.getPrivado()) this.getLabelPrivado().setVisible(false);

@@ -57,7 +57,12 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
 		this.getLabelSeguidores().setText("Seguidores: " + usuario.seguidor.size());
-		this.getLabelMegustas().setText("Me gustas dados: " + usuario.le_gusta.size());
+		
+		int megustas = 0;
+		for(Publicacion publi : usuario.realiza.toArray())
+			megustas += publi.le_gusta.size();
+		
+		this.getLabelMegustas().setText(megustas + " me gustas");
 		this.getImage().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());

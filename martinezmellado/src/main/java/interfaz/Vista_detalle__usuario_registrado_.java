@@ -67,6 +67,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			verPerfilPropietario();
 		});
 		
+		if(!this.miUsuario.getComercial().equalsIgnoreCase("comercial")){
 		this.getbAddComentario().addClickListener(event -> {
 			if (this.datos.cargarComentario(this.getCabecera().getUser(), publicacion) != null) {
 				Notification.show("Ya has comentado esta publicacion ateriormente");
@@ -80,6 +81,9 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			}
 			
 		});
+		} else {
+			
+		}
 		
 		this.vl = new VerticalLayout();
 		
@@ -117,10 +121,11 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.getLabelUbi().setText(publicacion.getUbicacion());
 		this.getLayoutVideo().add(new Video(publicacion.getVideo().replace("src/main/webapp/", ""),"90%", "90%"));
 		this.getImgUser().addClickListener(event -> {
-			verPerfilPropietario();
+			cabeceraCom.getbPerfil().click();
+			
 		});
 		
-		this.getbAddComentario().addClickListener(event -> {
+		/*this.getbAddComentario().addClickListener(event -> {
 			boolean flag = false;
 			for (Comentario comen : this.publicacion.tiene.toArray()) {
 				if (comen.getAutor().equals(user.getUsuario())) {
@@ -138,7 +143,10 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 				this.getFieldComentario().clear();
 			}
 			
-		});
+		});*/
+		
+		this.getbAddComentario().setVisible(false);
+		this.getFieldComentario().setVisible(false);
 		
 		this.vl = new VerticalLayout();
 		

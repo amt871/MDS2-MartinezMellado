@@ -1,5 +1,6 @@
 package interfaz;
 
+import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import interfaz.Ver_perfil__usuario_no_registrado_;
 import vistas.VistaVer_perfil_privado__usuario_no_registrado_;
@@ -18,7 +19,11 @@ public class Ver_perfil_privado__usuario_no_registrado_ extends VistaVer_perfil_
 		
 		this.setCabecera(cabeceraNoReg);
 		
-		this.getLabelMeGustas().setText("Me gustas dados: "+usuario.le_gusta.size());
+		int megustas = 0;
+		for(Publicacion publi : usuario.realiza.toArray())
+			megustas += publi.le_gusta.size();
+		
+		this.getLabelMeGustas().setText(megustas + " me gustas");
 		this.getLabelSeguidores().setText("Seguidores: "+usuario.seguidor.size());
 		this.getLabelUsuario().setText(usuario.getUsuario()+" -> Privado");
 		this.getImage().setSrc(usuario.getFoto());

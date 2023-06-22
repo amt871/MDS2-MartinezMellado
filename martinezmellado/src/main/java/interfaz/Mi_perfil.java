@@ -95,7 +95,12 @@ public class Mi_perfil extends VistaMi_perfil {
 		this.getIdUsuario().setText(this.usuario.getUsuario());
 		//this.getIdNumMgs().setText("20 Me gustas");
 		this.getIdNumSeguidores().setText(this.usuario.seguido.size()+" seguidores");
-		this.getIdNumMgs().setText(this.usuario.le_gusta_a.size()+" me gusta");
+		
+		int megustas = 0;
+		for(Publicacion publi : this.usuario.realiza.toArray())
+			megustas += publi.le_gusta.size();
+		
+		this.getIdNumMgs().setText(megustas+" me gusta");
 		
 		//System.out.println(this.usuario.getFoto());
 		
@@ -142,7 +147,7 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 			//vl.add(new Mi_video_item("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4", "Ninna gritona", "100%", "25%"));
 			
-			basededatos.Publicacion[] videos = null;
+			Publicacion[] videos = null;
 			
 			videos = this.usuario.realiza.toArray();
 			
