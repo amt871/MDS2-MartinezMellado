@@ -176,6 +176,27 @@ public class Registro extends VistaRegistro {
 			Notification.show("Introduce la Fecha de Nacimiento");
 			return;
 		}
+		
+		if(this.getIdContrasenna().getValue().length()!=12) {
+			Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+			return;
+		}
+			
+		int contMayus=0;
+		int contMinus=0;
+		
+		for(int i = 0; i<this.getIdContrasenna().getValue().length(); i++) {
+			if(Character.isUpperCase(this.getIdContrasenna().getValue().charAt(i)))
+				contMayus++;
+			if(Character.isLowerCase(this.getIdContrasenna().getValue().charAt(i)))
+				contMinus++;
+		}
+		
+		if(contMayus<2 || contMinus<2) {
+			Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+			return;
+		}
+		//int contDigits=0;
 
 		// System.out.println(this.getIdFechaNacimiento().getValue());
 
