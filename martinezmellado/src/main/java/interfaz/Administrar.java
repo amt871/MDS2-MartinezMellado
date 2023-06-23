@@ -1,6 +1,30 @@
 package interfaz;
 
+import java.util.ArrayList;
+import java.util.List;
 
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
+import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
+
+import basededatos.BDPrincipal;
+import basededatos.Comentario;
+import basededatos.Notificacion;
+import basededatos.Publicacion;
+import basededatos.Usuario_Registrado;
+import proyectoMDS.MainView;
+import vistas.VistaAdministrar;
+
+public class Administrar extends VistaAdministrar {
+
+	// private Cabecera__administrador_ cabecera;
+	// public Denuncias _denuncias;
+//	public void denuncias() {
+//		throw new UnsupportedOperationException();
+//	}
 	private Scroller scroller;
 	private VerticalLayout vl;
 	private BDPrincipal datos;
