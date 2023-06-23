@@ -38,8 +38,10 @@ public class Comentario__administrador__item extends VistaComentario__administra
 		//this.getStyle().set("position", "relative");
 		
 		this.getbEliminar().addClickListener(event -> {
-			
+			this.cabecera.getDatos().eliminarComentario(comentario);
+			this.setVisible(false);
 		});
+		
 			
 		
 	}

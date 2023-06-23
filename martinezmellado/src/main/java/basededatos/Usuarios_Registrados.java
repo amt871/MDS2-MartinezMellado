@@ -291,6 +291,12 @@ public class Usuarios_Registrados {
 			Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO
 					.loadUsuario_RegistradoByORMID(denunciado.getORMID());
 
+			for (Usuario_Registrado usuario_Registrado : auxDenunciado.denunciante.toArray()) {
+				usuario_Registrado.denunciado.remove(auxDenunciado);
+				Usuario_RegistradoDAO.save(usuario_Registrado);
+			}
+			;
+
 			auxDenunciado.denunciante.clear();
 
 			Usuario_RegistradoDAO.save(auxDenunciado);
@@ -415,6 +421,24 @@ public class Usuarios_Registrados {
 
 			Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
 			Administrador auxAdministrador = AdministradorDAO.loadAdministradorByORMID(adminstrador.getORMID());
+
+			for (Comentario comentario : auxDenunciado.publica.toArray()) {
+				ComentarioDAO.deleteAndDissociate(comentario);
+			}
+
+			for (Publicacion publicacion : auxDenunciado.realiza.toArray()) {
+				PublicacionDAO.deleteAndDissociate(publicacion);
+			}
+			
+			for (Usuario_Registrado usuario_Registrado : auxDenunciado.seguido.toArray()) {
+				usuario_Registrado.seguidor.remove(auxDenunciado);
+			}
+			auxDenunciado.seguido.clear();
+			
+			for (Usuario_Registrado usuario_Registrado : auxDenunciado.seguidor.toArray()) {
+				usuario_Registrado.seguido.remove(auxDenunciado);
+			}
+			auxDenunciado.seguidor.clear();
 
 			auxDenunciado.setEs_bloqueado(auxAdministrador);
 

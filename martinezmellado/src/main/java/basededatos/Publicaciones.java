@@ -96,6 +96,11 @@ public class Publicaciones {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Publicacion auxPublicacion = PublicacionDAO.loadPublicacionByORMID(publicacion.getORMID());
+			
+			for (Usuario_Registrado denunciante : auxPublicacion.es_denunciada.toArray()) {
+				denunciante.denuncia.remove(auxPublicacion);
+				Usuario_RegistradoDAO.save(denunciante);
+			}
 
 			auxPublicacion.es_denunciada.clear();
 
@@ -241,6 +246,7 @@ public class Publicaciones {
 			Publicacion aux = PublicacionDAO.loadPublicacionByORMID(publicaion.getORMID());
 
 			PublicacionDAO.deleteAndDissociate(aux);
+			t.commit();
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();

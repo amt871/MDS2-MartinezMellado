@@ -39,4 +39,6 @@ public interface iAdministrador {
 	public void eliminarPublicaion(Publicacion publicaion);
 	
 	public void bloquearUsuario(Usuario_Registrado usuario, Administrador adminstrador);
+	
+	public List listarDenunciasArchivadas();
 }

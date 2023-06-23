@@ -7,6 +7,7 @@ import com.vaadin.flow.component.notification.Notification;
 
 import antlr.debug.Event;
 import basededatos.Comentario;
+import basededatos.Denuncia_Archivada;
 import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
@@ -19,6 +20,15 @@ public class Denuncias_item extends VistaDenuncias_item {
 	private Usuario_Registrado usuario;
 	private Cabecera__administrador_ cabecera;
 	private MainView inicio;
+	
+	public Denuncias_item(Denuncia_Archivada denuncia) {
+		this.getbAceptar().setVisible(false);
+		this.getbPosponer().setVisible(false);
+		this.getbRechazar().setVisible(false);
+		this.getImagen().setVisible(false);
+		this.getTexto().setVisible(false);
+		this.getTextoDescripcion().setText(denuncia.getTipo());
+	}
 
 	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Comentario comentario,
 			ArrayList<Comentario> ComDenuVist) {
@@ -32,7 +42,9 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 		this.getbPosponer().addClickListener(event -> {
 			this.setVisible(false);
-			ComDenuVist.add(comentario);
+			if (!ComDenuVist.contains(comentario)) {
+				ComDenuVist.add(comentario);
+			}
 		});
 
 		this.getbAceptar().addClickListener(event -> {
@@ -48,7 +60,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		});
 
 		this.getbRechazar().addClickListener(event -> {
-			this.cabecera.getDatos().eliminarComentario(comentario);
+			this.cabecera.getDatos().retirarDenunciaComentario(comentario);
 			Notification.show("Denuncia rechazada");
 			this.setVisible(false);
 		});
@@ -69,14 +81,16 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 		this.getbPosponer().addClickListener(event -> {
 			this.setVisible(false);
-			PubDenuVist.add(publicacion);
+			if(!PubDenuVist.contains(publicacion)) {
+				PubDenuVist.add(publicacion);
+			}
 		});
 
 		this.getbAceptar().addClickListener(event -> {
 			this.cabecera.getDatos().retirarDenunciaPublicacion(publicacion);
 			String texto = "La publicación con descripción: " + this.publicacion.getDescripcion()
 					+ ". Publicado por el usuario: " + this.publicacion.getRealizada().getUsuario()
-					+ " ha sido borrado a fecha de " + LocalDate.now().toString() + "por "
+					+ " ha sido borrada a fecha de " + LocalDate.now().toString() + "por "
 					+ this.cabecera.getAdministardor().getUsuario() + ".";
 			this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.publicacion.getID()), texto,
 					this.cabecera.getAdministardor());
@@ -106,7 +120,9 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 		this.getbPosponer().addClickListener(event -> {
 			this.setVisible(false);
-			UsrDenuVist.add(usuario);
+			if (!UsrDenuVist.contains(usuario)) {
+				UsrDenuVist.add(usuario);
+			}
 		});
 
 		this.getbAceptar().addClickListener(event -> {
