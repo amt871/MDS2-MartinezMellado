@@ -17,4 +17,6 @@ public interface iUsuario_no_registrado {
 	public Publicacion[] listarTodasPublicaciones();
 	
 	public Usuario_Registrado[] listarTodosUsuarios();
+	
+	public Hashtag ObtenerHahsTag(String aBusqueda);
 }

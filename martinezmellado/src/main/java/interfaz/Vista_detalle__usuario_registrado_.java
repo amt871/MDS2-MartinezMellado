@@ -6,10 +6,12 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.Scroller.ScrollDirection;
 
 import basededatos.BDPrincipal;
 import basededatos.Comentario;
+import basededatos.Hashtag;
 import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import vistas.VistaVista_detalle__usuario_registrado_;
@@ -51,6 +53,9 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	private Usuario_Registrado miUsuario;
 	private Usuario_Registrado usuario;
 
+	private final String codigoHashtag = "AS0]kMrHs++T|ig]rkXU";
+	private final String codigoMention = "=5iY~HYqmGV6qHoDHxY0";
+
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg, Usuario_Registrado usuario,
 			Publicacion publicacion) {
 		// TODO Auto-generated constructor stub
@@ -63,7 +68,9 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 				.cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
 		this.setCabecera(cabeceraUserReg);
 		this.getImgUser().setSrc(this.publicacion.getRealizada().getFoto());
-		this.getLabelDescripcion().setText(this.publicacion.getDescripcion());
+		// this.getLabelDescripcion().setText(this.publicacion.getDescripcion());//////////////////////////////////////////
+		setDescripcion();
+		///////////////////////////////////////////////////////
 		this.getLabelUsuario().setText(this.publicacion.getRealizada().getUsuario());
 		this.getLabelFecha().setText(this.publicacion.getFecha().toString());
 		this.getLabelUbi().setText(this.publicacion.getUbicacion());
@@ -72,11 +79,11 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			verPerfilPropietario();
 		});
 
-		if(this.miUsuario.getID()==this.publicacion.getRealizada().getID())
+		if (this.miUsuario.getID() == this.publicacion.getRealizada().getID())
 			this.getVaadinButton().setEnabled(false);
 		else
-			this.getVaadinButton().addClickListener(e->{
-				
+			this.getVaadinButton().addClickListener(e -> {
+
 				Publicacion publicacionAux = this.datos.cargarVideoPoID(this.publicacion.getID());
 				boolean flag = false;
 				for (Usuario_Registrado usuarios : publicacionAux.le_gusta.toArray()) {
@@ -84,26 +91,28 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 						flag = true;
 					}
 				}
-				if(flag) {
+				if (flag) {
 					Notification.show("Ya le has dado me gusta a esta publicación");
-				}else {
+				} else {
 					this.usuario = this.datos.cargarDatosUsuario(usuario.getUsuario());
 					this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());
 					this.datos.annadirMeGusta(publicacionAux.getID(), this.miUsuario.getID());
 					this.datos.annadirNotificacion("me_gusta", this.usuario, miUsuario, publicacionAux);
-					this.getLabelMeGustas().setText(String.valueOf(Integer.parseInt(this.getLabelMeGustas().getText()) + 1));
+					this.getLabelMeGustas()
+							.setText(String.valueOf(Integer.parseInt(this.getLabelMeGustas().getText()) + 1));
 				}
-				
+
 			});
-			
+
 		this.getLabelMeGustas().setText(String.valueOf(publicacion.le_gusta.size()));
-		
+
 		this.getbAddComentario().addClickListener(event -> {
 			if (this.datos.cargarComentario(this.getCabecera().getUser(), this.publicacion) != null) {
 				Notification.show("Ya has comentado esta publicacion ateriormente");
 			} else {
 				if (addComentario()) {
-					this.datos.annadirNotificacion("comentario", this.usuario, cabeceraUserReg.getUser(), this.publicacion);
+					this.datos.annadirNotificacion("comentario", this.usuario, cabeceraUserReg.getUser(),
+							this.publicacion);
 					this.vl.removeAll();
 					this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());
 					addItems();
@@ -112,13 +121,14 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			}
 
 		});
-		
-		this.getbVerMeGustas().addClickListener(e ->{
-			
-			this.cabeceraUserReg.setVerMeGustas(new Ver_me_gustas__otro_usuario_(this.cabeceraUserReg, this.publicacion));
+
+		this.getbVerMeGustas().addClickListener(e -> {
+
+			this.cabeceraUserReg
+					.setVerMeGustas(new Ver_me_gustas__otro_usuario_(this.cabeceraUserReg, this.publicacion));
 			this.cabeceraUserReg.getVl().removeAll();
 			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getVerMeGustas());
-			
+
 		});
 
 		this.vl = new VerticalLayout();
@@ -222,14 +232,22 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	}
 
 	private void verPerfilPropietario() {
+
+		if (this.miUsuario.getID() == this.usuario.getID()) {
+			this.cabeceraUserReg.setPerfil(new Mi_perfil(this.cabeceraUserReg.getVl(), this.cabeceraUserReg));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfil());
+			return;
+		}
+
 		if (this.usuario.getPrivado()) {
 
 			// System.out.println(miUsuario.getUsuario());
 
 			// Notification.show("Aun no implementado");
 			if (this.miUsuario.seguido.contains(this.usuario)) {
-				this.cabeceraUserReg.setPerfilPublico(
-						new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+				this.cabeceraUserReg
+						.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
 				this.cabeceraUserReg.getVl().removeAll();
 				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
 			} else {
@@ -241,11 +259,120 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			}
 		} else {
 
-			this.cabeceraUserReg.setPerfilPublico(
-					new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+			this.cabeceraUserReg
+					.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
 			this.cabeceraUserReg.getVl().removeAll();
 			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
 
 		}
+	}
+
+	private void otroUsuario(Usuario_Registrado userAVisitar) {
+
+		// System.out.println("Hola " + user);
+
+		// Usuario_Registrado userAVisitar = this.datos.cargarDatosUsuario(user);
+
+		if (userAVisitar == null)
+			return;
+
+		if (this.miUsuario.getID() == userAVisitar.getID()) {
+			this.cabeceraUserReg.setPerfil(new Mi_perfil(this.cabeceraUserReg.getVl(), this.cabeceraUserReg));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfil());
+			return;
+		}
+
+		if (userAVisitar.getPrivado()) {
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			if (this.miUsuario.seguido.contains(userAVisitar)) {
+				this.cabeceraUserReg
+						.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, userAVisitar));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+			} else {
+				this.cabeceraUserReg.setPerfilPrivado(
+						new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, userAVisitar));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPrivado());
+				// this.inicio.cambiarPantalla(cabecera);
+			}
+		} else {
+
+			this.cabeceraUserReg
+					.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, userAVisitar));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+
+		}
+	}
+
+	private void setDescripcion() {
+
+		this.getLabelDescripcion().setVisible(false);
+
+		// this.getLayoutDescripcion().spa
+
+		String[] items = this.publicacion.getDescripcion().split(" ");
+		// String descpricion = "";
+		// int contHashtag = 0;
+		// int contMention = 0;
+
+		String cadena = "";
+
+		for (String item : items) {
+			if (item.startsWith("#")) {
+				HorizontalLayout horizontalLayout = new HorizontalLayout();
+				horizontalLayout.add(new Label(item));
+				Hashtag has = this.datos.ObtenerHahsTag(item);
+				if (has != null) {
+					horizontalLayout.getStyle().set("color", "blue");
+					horizontalLayout.addClickListener(e -> {
+						// System.out.println(((Label)e.getSource().getComponentAt(0)).getText());
+						// Hashtag has = this.cabeceraUserReg.getDatos().h
+
+						this.cabeceraUserReg
+								.setHashtags(new Video_hashtag__usuario_registrado_(has, this.cabeceraUserReg));
+						this.cabeceraUserReg.getVl().removeAll();
+						this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getHashtags());
+
+					});
+				}
+				if (!cadena.equals(""))
+					this.getLayoutDescripcion().add(new Label(cadena));
+				cadena = "";
+				this.getLayoutDescripcion().add(horizontalLayout);
+				// this.getLayoutDescripcion().add(" ");
+				continue;
+			}
+
+			if (item.startsWith("@")) {
+				HorizontalLayout horizontalLayout = new HorizontalLayout();
+				horizontalLayout.add(new Label(item));
+				Usuario_Registrado userAVisitar = this.datos.cargarDatosUsuario(item.replace("@", ""));
+				if (userAVisitar != null) {
+					horizontalLayout.getStyle().set("color", "blue");
+					horizontalLayout.addClickListener(e -> {
+						// System.out.println(((Label)e.getSource().getComponentAt(0)).getText());
+						otroUsuario(userAVisitar);
+					});
+				}
+				if (!cadena.equals(""))
+					this.getLayoutDescripcion().add(new Label(cadena));
+				cadena = "";
+				this.getLayoutDescripcion().add(horizontalLayout);
+				// this.getLayoutDescripcion().add(" ");
+				continue;
+			}
+
+			cadena += item + " ";
+
+		}
+
+		this.getLayoutDescripcion().add(new Label(cadena));
+
 	}
 }

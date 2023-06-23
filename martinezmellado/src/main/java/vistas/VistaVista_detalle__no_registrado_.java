@@ -14,6 +14,7 @@ import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 /**
  * A Designer generated component for the vista-vista_detalle__no_registrado_ template.
@@ -46,6 +47,8 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
 	private Button bVerMeGustas;
 	@Id("labelMeGustas")
 	private Label labelMeGustas;
+	@Id("layoutDescripcion")
+	private HorizontalLayout layoutDescripcion;
 	/**
      * Creates a new VistaVista_detalle__no_registrado_.
      */
@@ -118,6 +121,12 @@ public class VistaVista_detalle__no_registrado_ extends LitTemplate {
 	}
 	public void setLabelMeGustas(Label labelMeGustas) {
 		this.labelMeGustas = labelMeGustas;
+	}
+	public HorizontalLayout getLayoutDescripcion() {
+		return layoutDescripcion;
+	}
+	public void setLayoutDescripcion(HorizontalLayout layoutDescripcion) {
+		this.layoutDescripcion = layoutDescripcion;
 	}
     
     

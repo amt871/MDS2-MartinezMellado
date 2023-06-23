@@ -35,7 +35,7 @@ export class VistaVista_detalle__usuario_registrado_ extends LitElement {
     <label id="labelUbi">Ubicacion</label>
     <label id="labelFecha">Fecha</label>
    </vaadin-horizontal-layout>
-   <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center;">
+   <vaadin-horizontal-layout style="width: 100%; align-items: center; justify-content: center;" id="layoutDescripcion">
     <label id="labelDescripcion">Descripcion</label>
    </vaadin-horizontal-layout>
    <div id="divComentarios" style="width: 90%; height: 50%; position: relative;">

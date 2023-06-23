@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="vistas.VistaVista_detalle__usuario_registrado_"/>
     <fullyQualifiedTypeName name="vistas.VistaComentario_item"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.Key"/>
     <fullyQualifiedTypeName name="vistas.VistaBuscar_usuario__usuario_registrado_"/>
@@ -11,7 +10,6 @@
     <fullyQualifiedTypeName name="basededatos.Hashtags"/>
     <fullyQualifiedTypeName name="basededatos.HashtagDAO"/>
     <fullyQualifiedTypeName name="vistas.VistaHashtag__usuario_registrado__item"/>
-    <fullyQualifiedTypeName name="basededatos.Hashtag"/>
     <fullyQualifiedTypeName name="vistas.VistaVideo_hashtag__usuario_registrado_"/>
     <fullyQualifiedTypeName name="proyectoMDS.MainView"/>
     <fullyQualifiedTypeName name="interfaz.Cabecera_comercial"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="vistas.VistaVer_seguidores_otro_usuario"/>
     <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.Scroller"/>
     <fullyQualifiedTypeName name="vistas.VistaVer_seguidores_otro_usuario_item"/>
+    <fullyQualifiedTypeName name="com.vaadin.flow.component.orderedlayout.HorizontalLayout"/>
+    <fullyQualifiedTypeName name="basededatos.Hashtag"/>
 </qualifiedTypeNameHistroy>

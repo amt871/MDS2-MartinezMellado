@@ -58,6 +58,8 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	private Label labelMeGustas;
 	@Id("bVerMeGustas")
 	private Button bVerMeGustas;
+	@Id("layoutDescripcion")
+	private HorizontalLayout layoutDescripcion;
 
 	/**
      * Creates a new VistaVista_detalle__usuario_registrado_.
@@ -202,6 +204,14 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 
 	public void setbVerMeGustas(Button bVerMeGustas) {
 		this.bVerMeGustas = bVerMeGustas;
+	}
+
+	public HorizontalLayout getLayoutDescripcion() {
+		return layoutDescripcion;
+	}
+
+	public void setLayoutDescripcion(HorizontalLayout layoutDescripcion) {
+		this.layoutDescripcion = layoutDescripcion;
 	}
 
 	

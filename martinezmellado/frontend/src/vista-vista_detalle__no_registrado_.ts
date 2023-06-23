@@ -32,7 +32,9 @@ export class VistaVista_detalle__no_registrado_ extends LitElement {
     <label id="labelFecha">Fecha</label>
     <label id="labelUbicacion">Ubicacion</label>
    </vaadin-horizontal-layout>
-   <label id="labelDescripcion">Label</label>
+   <vaadin-horizontal-layout id="layoutDescripcion" style="width: 100%; align-items: center; justify-content: center;">
+    <label id="labelDescripcion">Label</label>
+   </vaadin-horizontal-layout>
    <div style="width: 100%; height: 40%;">
     <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
    </div>
