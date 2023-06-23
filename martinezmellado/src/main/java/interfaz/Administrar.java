@@ -1,5 +1,8 @@
 package interfaz;
 
+
+import java.util.ArrayList;
+import java.util.List;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
@@ -15,8 +18,14 @@ import vistas.VistaAdministrar;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Administrar extends VistaAdministrar{
 
+public class Administrar extends VistaAdministrar {
+
+	// private Cabecera__administrador_ cabecera;
+	// public Denuncias _denuncias;
+//	public void denuncias() {
+//		throw new UnsupportedOperationException();
+//	}
 	private Scroller scroller;
 	private VerticalLayout vl;
 	private BDPrincipal datos;

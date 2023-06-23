@@ -55,7 +55,7 @@ public class Notificaciones extends VistaNotificaciones {
 	private Mi_cabecera mi_cabecera;
 
 
-	public Notificaciones(MainView vl2, Mi_cabecera mi_cabecera) {
+	public Notificaciones(MainView vl2, Mi_cabecera mi_cabecera) { 
 		// TODO Auto-generated constructor stub
 
 		this.inicio = vl2;
