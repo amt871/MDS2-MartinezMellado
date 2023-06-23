@@ -72,6 +72,10 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 
 		int cont = 0;
 		for (int i = 0; i < usuarios.length && cont < 8; i++) {
+			if(usuarios[i].getEs_bloqueado()!=null)
+				continue;
+			if (usuarios[i].getComercial().equalsIgnoreCase("comercial"))
+				continue;
 			boolean salir = false;
 			for (Usuario_Registrado seguido : this.usuario.seguido.toArray()) {
 				if (seguido.getUsuario().equals(usuarios[i].getUsuario()) || usuarios[i].getComercial().equals("Comercial")) {
@@ -118,7 +122,8 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 		// System.out.println(this.publicaciones == null);
 
 		for (int i = 0; i < publicaciones.length && cont < 8; i++) {
-
+			if(publicaciones[i].getRealizada().getEs_bloqueado()!=null)
+				continue;
 			boolean seguido = false;
 			for (Usuario_Registrado usrSeguido : this.usuario.seguido.toArray()) {
 				if (publicaciones[i].getRealizada().getUsuario().equals(usrSeguido.getUsuario())){

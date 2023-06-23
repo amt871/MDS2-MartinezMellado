@@ -62,6 +62,9 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 		int cont = 0;
 		for (int i = usuarios.length-1; i >= 0 && cont < 8; i--) {
 			
+			if (usuarios[i].getEs_bloqueado()!=null)
+				continue;
+			
 			if (usuarios[i].getComercial().equalsIgnoreCase("comercial"))
 				continue;
 				
@@ -101,6 +104,8 @@ public class Buscar__no_registrado_ extends VistaBuscar__no_registrado_ {
 
 		for (int i = publicaciones.length-1; i >= 0 && cont < 8; i--) {
 
+			if (publicaciones[i].getRealizada().getEs_bloqueado()!=null)
+				continue;
 			//System.out.println(i);
 			if (publicaciones[i].getRealizada().getPrivado() || publicaciones[i].getRealizada().getComercial().equalsIgnoreCase("comercial"))
 				continue;

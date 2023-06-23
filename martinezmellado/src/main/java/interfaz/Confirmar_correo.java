@@ -37,6 +37,7 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 	private BDPrincipal datos;
 	private MainView vl;
 	private Pantalla_inicio inicio;
+	//private String codigo;
 
 	public Confirmar_correo(MainView vl, Usuario_Registrado user, InputStream image, BDPrincipal datos, Pantalla_inicio pantalla_inicio) {
 
@@ -45,6 +46,7 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 		this.fileData = image;
 		this.datos = datos;
 		this.inicio = pantalla_inicio;
+		//this.codigo = codigo;
 		
 		this.getbEnviar().addClickListener(event -> {
 			

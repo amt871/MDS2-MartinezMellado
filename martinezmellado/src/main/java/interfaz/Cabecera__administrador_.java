@@ -75,7 +75,7 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 		this.getbAdministrar2().addClickListener(event ->{
 			
 			this.vl.removeAll();
-//			this.vl.add(this.administrar = new Administrar(this));
+			this.vl.add(this.administrar = new Administrar(this));
 			
 		});
 		

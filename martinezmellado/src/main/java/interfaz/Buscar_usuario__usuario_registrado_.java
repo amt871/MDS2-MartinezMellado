@@ -78,6 +78,7 @@ public class Buscar_usuario__usuario_registrado_ extends VistaBuscar_usuario__us
 		
 		this.content.removeAll();
 		
+		
 		if(usuarios.isEmpty()) {
 			
 			this.content.setAlignItems(Alignment.CENTER);
@@ -85,6 +86,14 @@ public class Buscar_usuario__usuario_registrado_ extends VistaBuscar_usuario__us
 			this.content.add(new Label("No hay usuarios"));
 			
 		}else {
+			
+			if(usuarios.size()==1 && usuarios.get(0).getEs_bloqueado()!=null) {
+				this.content.setAlignItems(Alignment.CENTER);
+				this.content.setJustifyContentMode(JustifyContentMode.CENTER);
+				this.content.add(new Label("No hay usuarios"));
+				return;
+			}
+				
 			
 			this.content.setAlignItems(null);
 			this.content.setJustifyContentMode(JustifyContentMode.START);
