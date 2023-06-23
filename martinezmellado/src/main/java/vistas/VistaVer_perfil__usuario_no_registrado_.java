@@ -11,6 +11,7 @@ import interfaz.Cabecera_usuario_no_registrado;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 
 /**
  * A Designer generated component for the vista-ver_perfil__usuario_no_registrado_ template.
@@ -36,6 +37,9 @@ public class VistaVer_perfil__usuario_no_registrado_ extends LitTemplate {
 	private Label labelUsuario;
 	@Id("scroller")
 	private Scroller scroller;
+
+	@Id("layoutSeguidores")
+	private HorizontalLayout layoutSeguidores;
 
 	/**
      * Creates a new VistaVer_perfil__usuario_no_registrado_.
@@ -100,5 +104,15 @@ public class VistaVer_perfil__usuario_no_registrado_ extends LitTemplate {
 		this.cabecera = cabecera;
 		this.getDivCabecera().add(cabecera);
 	}
+
+	public HorizontalLayout getLayoutSeguidores() {
+		return layoutSeguidores;
+	}
+
+	public void setLayoutSeguidores(HorizontalLayout layoutSeguidores) {
+		this.layoutSeguidores = layoutSeguidores;
+	}
+	
+	
     
 }

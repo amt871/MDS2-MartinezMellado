@@ -1,5 +1,10 @@
 package interfaz;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+
 import basededatos.BDPrincipal;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
@@ -24,6 +29,21 @@ public class Cabecera_comercial extends VistaCabecera_comercial {
 		this.datos = datos;
 		this.user = user;
 		this.pantInicio = pantInicio;
+		
+		
+		File file = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp");
+		
+		if(file.exists()) {
+			try {
+				FileUtils.cleanDirectory(file);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			file.delete();
+		}
+		
+		file = null;
 		
 		this.getbPerfil().addClickListener(event ->{
 			

@@ -1,5 +1,8 @@
 package interfaz;
 
+import basededatos.Publicacion;
+import basededatos.Usuario_Registrado;
+
 import vistas.VistaVideo_otro_usuario__administrador__item;
 
 public class Video_otro_usuario__administrador__item extends VistaVideo_otro_usuario__administrador__item {
@@ -36,7 +39,47 @@ public class Video_otro_usuario__administrador__item extends VistaVideo_otro_usu
 //		throw new UnsupportedOperationException();
 //	}
 	
-	public Video_otro_usuario__administrador__item() {
+
+	private Cabecera__administrador_ cabecera;
+	private Publicacion publi;
+	private Usuario_Registrado propietario;
+	
+	public Video_otro_usuario__administrador__item(Cabecera__administrador_ cabecera, Publicacion publicacion) {
+		// TODO Auto-generated constructor stub
+		this.cabecera = cabecera;
+		this.publi = publicacion;
+		this.propietario = publi.getRealizada();
 		
+		this.getImage().addClickListener(e ->{
+			
+			verPerfilOtroUsuarioAdmin();
+			
+		});
+		
+		this.getbComentarios().addClickListener(e ->{
+			
+			this.cabecera.setDetalle(new Vista_detalle__administrador_(this.cabecera, this.publi));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getDetalle());
+			
+		});
+		
+		
+	}
+	
+	private void verPerfilOtroUsuarioAdmin() {
+
+
+			// System.out.println(miUsuario.getUsuario());
+
+			// Notification.show("Aun no implementado");
+			
+				this.cabecera.setPerfil(
+						new Ver_perfil__administrador_(this.cabecera, this.propietario));
+				this.cabecera.getVl().removeAll();
+				this.cabecera.getVl().add(this.cabecera.getPerfil());
+				// this.inicio.cambiarPantalla(cabecera);
+			
+
 	}
 }

@@ -2,6 +2,7 @@ import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-icons/vaadin-icons.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-video_otro_usuario__administrador_')
 export class VistaVideo_otro_usuario__administrador_ extends LitElement {
@@ -21,7 +22,9 @@ export class VistaVideo_otro_usuario__administrador_ extends LitElement {
   <div id="divCabecera" style="width: 100%; height: 100%;"></div>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="width: 100%; height: 95%; flex-shrink: 0; flex-direction: column;">
-  <div id="divScroller" style="width: 100%; height: 100%; flex-shrink: 1; flex-grow: 0; align-self: stretch;"></div>
+  <div id="divScroller" style="width: 100%; height: 100%; flex-shrink: 1; flex-grow: 0; align-self: stretch;">
+   <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+  </div>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
 `;

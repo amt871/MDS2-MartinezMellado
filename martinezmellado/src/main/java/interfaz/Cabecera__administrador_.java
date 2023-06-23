@@ -43,6 +43,11 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 	private Busqueda__administrador_ busqueda;
 	private Administrar administrar;
 	private Administrador administardor;
+	private Ver_perfil__administrador_ perfil;
+	private Vista_detalle__administrador_ detalle;
+	private Busqueda_usuarios__administrador_ busquedaUsuarios;
+	private Busqueda_hastag__administrador_ busquedaHashtag;
+	private Publicaciones_asociadas_a_un_hastag hashtags;
 
 	
 	public Cabecera__administrador_(MainView vl, BDPrincipal datos,
@@ -160,4 +165,47 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 	public void setAdministardor(Administrador administardor) {
 		this.administardor = administardor;
 	}
+
+	public Ver_perfil__administrador_ getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Ver_perfil__administrador_ perfil) {
+		this.perfil = perfil;
+	}
+
+	public Vista_detalle__administrador_ getDetalle() {
+		return detalle;
+	}
+
+	public void setDetalle(Vista_detalle__administrador_ detalle) {
+		this.detalle = detalle;
+	}
+
+	public Busqueda_usuarios__administrador_ getBusquedaUsuarios() {
+		return busquedaUsuarios;
+	}
+
+	public void setBusquedaUsuarios(Busqueda_usuarios__administrador_ busquedaUsuarios) {
+		this.busquedaUsuarios = busquedaUsuarios;
+	}
+
+	public Busqueda_hastag__administrador_ getBusquedaHashtag() {
+		return busquedaHashtag;
+	}
+
+	public void setBusquedaHashtag(Busqueda_hastag__administrador_ busquedaHashtag) {
+		this.busquedaHashtag = busquedaHashtag;
+	}
+
+	public Publicaciones_asociadas_a_un_hastag getHashtags() {
+		return hashtags;
+	}
+
+	public void setHashtags(Publicaciones_asociadas_a_un_hastag hashtags) {
+		this.hashtags = hashtags;
+	}
+	
+	
+	
 }

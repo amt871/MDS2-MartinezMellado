@@ -291,6 +291,11 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public Hashtag ObtenerHahsTag(String aBusqueda) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 
 	

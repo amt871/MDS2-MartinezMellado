@@ -6,6 +6,7 @@ import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.notification.Notification;
 
 import basededatos.Notificacion;
+import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import vistas.VistaVer_perfil_privado__usuario_registrado_;
 
@@ -21,7 +22,10 @@ public class Ver_perfil_privado__usuario_registrado_ extends VistaVer_perfil_pri
 		
 		this.getDivCabecera().add(cabecera);
 		this.getLabelSeguidores().setText("Seguidores: "+String.valueOf(this.usuario.seguidor.size()));
-		this.getLabelMegustas().setText("Me gustas: "+String.valueOf(this.usuario.le_gusta.size()));
+		int megustas = 0;
+		for(Publicacion publi : usuario.realiza.toArray())
+			megustas += publi.le_gusta.size();
+		this.getLabelMegustas().setText(megustas+" me gustas");
 		this.getImage().setSrc(this.usuario.getFoto());
 		this.getLabelUsuario().setText(this.usuario.getUsuario());
 		this.getbSolictarSeguimiento().addClickListener(event -> {

@@ -45,7 +45,7 @@ public class Configurar_perfil_comercial extends VistaConfigurar_perfil_comercia
 		if (this.getTfFechaNac().isEmpty()) {
 			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
 			fecha = "";
-			System.out.println("Hola: " + this.usuario.getFechaNacimiento());
+			//System.out.println("Hola: " + this.usuario.getFechaNacimiento());
 			items[2] = items[2].split(" ")[0];
 			if (items[2].length() < 2)
 				fecha += "0" + items[2] + "/";
@@ -126,11 +126,27 @@ public class Configurar_perfil_comercial extends VistaConfigurar_perfil_comercia
 
 			String[] items = this.getTfFechaNac().getValue().split("/");
 			fecha = "";
+			
+			if(items[0].length()>=3) {
+				Notification.show("Fecha incorrecta");
+				return false;
+			}
+			
+			if(items[1].length()>=3) {
+				Notification.show("Fecha incorrecta");
+				return false;
+			}
+			
+			if(items[2].length()!=4) {
+				Notification.show("Fecha incorrecta");
+				return false;
+			}
+			
 			if (items[0].length() < 2)
 				fecha += "0" + items[0] + "/";
 			else
 				fecha += items[0] + "/";
-
+			
 			if (items[1].length() < 2)
 				fecha += "0" + items[1] + "/";
 			else
@@ -139,7 +155,7 @@ public class Configurar_perfil_comercial extends VistaConfigurar_perfil_comercia
 			fecha += items[2];
 
 			this.usuario.setFechaNacimiento(myDate);
-			this.usuario.setDescripcion(this.getTfFechaNac().getValue());
+			this.usuario.setDescripcion(this.getTfDescripcion().getValue());
 
 			// System.out.println("Se le introduce el usuario: "+this.usuario.getUsuario());
 

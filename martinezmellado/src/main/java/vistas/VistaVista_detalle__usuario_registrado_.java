@@ -52,6 +52,14 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	private TextField fieldComentario;
 	@Id("layoutVideo")
 	private HorizontalLayout layoutVideo;
+	@Id("vaadinButton")
+	private Button vaadinButton;
+	@Id("labelMeGustas")
+	private Label labelMeGustas;
+	@Id("bVerMeGustas")
+	private Button bVerMeGustas;
+	@Id("layoutDescripcion")
+	private HorizontalLayout layoutDescripcion;
 
 	/**
      * Creates a new VistaVista_detalle__usuario_registrado_.
@@ -172,6 +180,38 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	public void setCabeceraCom(Cabecera_comercial cabeceraCom) {
 		this.cabeceraCom = cabeceraCom;
 		this.getDivCabecera().add(cabeceraCom);
+	}
+
+	public Button getVaadinButton() {
+		return vaadinButton;
+	}
+
+	public void setVaadinButton(Button vaadinButton) {
+		this.vaadinButton = vaadinButton;
+	}
+
+	public Label getLabelMeGustas() {
+		return labelMeGustas;
+	}
+
+	public void setLabelMeGustas(Label labelMeGustas) {
+		this.labelMeGustas = labelMeGustas;
+	}
+
+	public Button getbVerMeGustas() {
+		return bVerMeGustas;
+	}
+
+	public void setbVerMeGustas(Button bVerMeGustas) {
+		this.bVerMeGustas = bVerMeGustas;
+	}
+
+	public HorizontalLayout getLayoutDescripcion() {
+		return layoutDescripcion;
+	}
+
+	public void setLayoutDescripcion(HorizontalLayout layoutDescripcion) {
+		this.layoutDescripcion = layoutDescripcion;
 	}
 
 	

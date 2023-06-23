@@ -1,7 +1,6 @@
 import { LitElement, html, css, customElement } from 'lit-element';
-import '@polymer/iron-icon/iron-icon.js';
-import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
 
 @customElement('vista-resultado_busqueda_usuarios_item')
 export class VistaResultado_busqueda_usuarios_item extends LitElement {
@@ -16,19 +15,21 @@ export class VistaResultado_busqueda_usuarios_item extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout class="content" style="width: 100%; align-items: center;">
- <iron-icon style="width: 30%; height: 100%;" icon="lumo:user"></iron-icon>
- <vaadin-vertical-layout theme="spacing-s" style="align-items: flex-start; justify-content: center; height: 100%;">
-  <label>Usuario </label>
-  <label>Seguidores</label>
- </vaadin-vertical-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; justify-content: center; align-self: center;">
-  <label style="margin-left: var(--lumo-space-xl); flex-grow: 0; flex-shrink: 1;">Descripcion</label>
+<vaadin-horizontal-layout class="content" style="width: 100%; align-items: center; height: 100%; position: relative;">
+ <vaadin-horizontal-layout style="width: 20%; height: 100%; align-items: center; justify-content: center;">
+  <img id="image" style="max-width: 100%; max-height: 100%;">
  </vaadin-horizontal-layout>
- <vaadin-vertical-layout theme="spacing-xs" style="flex-shrink: 0; align-self: center; align-items: flex-end; margin-top: var(--lumo-space-m); justify-content: center; margin-right: var(--lumo-space-m);">
-  <img style="width: 20%;" src="../../resources/icons/video.png">
-  <label>Ultima Publicacion </label>
+ <vaadin-vertical-layout theme="spacing-s" style="align-items: flex-start; justify-content: center; height: 100%; width: 20%;">
+  <vaadin-horizontal-layout theme="spacing" style="align-items: center; justify-content: flex-start; width: 100%; height: 50%;">
+   <label id="nombreUsuario">Usuario </label>
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 50%;">
+   <label id="seguidores">Seguidores</label>
+  </vaadin-horizontal-layout>
  </vaadin-vertical-layout>
+ <vaadin-horizontal-layout style="width: 60%; align-items: center; justify-content: center; align-self: center; height: 100%;">
+  <label style="margin-left: var(--lumo-space-xl); flex-grow: 0; flex-shrink: 1;" id="descripcion">Descripcion</label>
+ </vaadin-horizontal-layout>
 </vaadin-horizontal-layout>
 `;
   }

@@ -15,11 +15,15 @@ export class VistaMe_gusta__otro_usuario__item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
- <vaadin-horizontal-layout style="width: 100%; height: 100%;">
-  <img style="height: 100%; width: 20%;" src="../../resources/icons/user.svg">
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; position: relative;">
+ <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center;">
+  <vaadin-horizontal-layout style="width: 20%; height: 100%;">
+   <img style="max-width: 100%; max-height: 100%;" id="img">
+  </vaadin-horizontal-layout>
   <vaadin-horizontal-layout style="width: 80%; height: 100%; justify-content: center; align-items: center;">
-   <label>Usuario</label>
+   <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
+    <label id="labelUsuario">Usuario</label>
+   </vaadin-horizontal-layout>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>

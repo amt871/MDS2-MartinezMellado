@@ -93,9 +93,9 @@ public class Comentarios {
 
 			auxCom.es_denunciada.clear();
 
-			System.out.println(auxCom.es_denunciada.size());
+			//System.out.println(auxCom.es_denunciada.size());
 			ComentarioDAO.save(auxCom);
-			System.out.println("Quite las denuncias");
+			//System.out.println("Quite las denuncias");
 			t.commit();
 		} catch (Exception e) {
 			t.rollback();
@@ -123,7 +123,7 @@ public class Comentarios {
 		    	aux =  ComentarioDAO.loadComentarioByORMID(comentario.getORMID());    
 		    	
 		    	ComentarioDAO.deleteAndDissociate(aux);
-		    	System.out.println("te elimine puto");
+		    	//System.out.println("te elimine puto");
 		    }catch (Exception e) {
 		        t.rollback();
 		        e.printStackTrace();

@@ -1,8 +1,7 @@
 import { LitElement, html, css, customElement } from 'lit-element';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-vertical-layout.js';
-import './vista-cabecera__administrador_';
 import '@vaadin/vaadin-ordered-layout/src/vaadin-horizontal-layout.js';
-import './vista-publicaciones_asociadas_a_un_hastag_item';
+import '@vaadin/vaadin-ordered-layout/src/vaadin-scroller.js';
 
 @customElement('vista-publicaciones_asociadas_a_un_hastag')
 export class VistaPublicaciones_asociadas_a_un_hastag extends LitElement {
@@ -17,19 +16,16 @@ export class VistaPublicaciones_asociadas_a_un_hastag extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;" theme="spacing">
- <vista-cabecera__administrador_ style="width: 100%; height: 5%;"></vista-cabecera__administrador_>
- <label style="align-self: center;">Hashtag </label>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-self: center; align-items: center; justify-content: center; margin-right: var(--lumo-space-m); margin-left: var(--lumo-space-m);">
-  <vista-publicaciones_asociadas_a_un_hastag_item style="align-self: center;"></vista-publicaciones_asociadas_a_un_hastag_item>
-  <vista-publicaciones_asociadas_a_un_hastag_item></vista-publicaciones_asociadas_a_un_hastag_item>
-  <vista-publicaciones_asociadas_a_un_hastag_item></vista-publicaciones_asociadas_a_un_hastag_item>
- </vaadin-horizontal-layout>
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; margin-right: var(--lumo-space-m); margin-left: var(--lumo-space-m); align-self: center; align-items: center; justify-content: center;">
-  <vista-publicaciones_asociadas_a_un_hastag_item></vista-publicaciones_asociadas_a_un_hastag_item>
-  <vista-publicaciones_asociadas_a_un_hastag_item></vista-publicaciones_asociadas_a_un_hastag_item>
-  <vista-publicaciones_asociadas_a_un_hastag_item></vista-publicaciones_asociadas_a_un_hastag_item>
- </vaadin-horizontal-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%; position: absolute;" theme="spacing">
+ <div id="divCabecera" style="width: 100%; height: 5%;"></div>
+ <vaadin-vertical-layout style="width: 100%; height: 95%;">
+  <vaadin-horizontal-layout style="width: 100%; height: 5%; align-items: center; justify-content: center;">
+   <label style="align-self: center;" id="labelHashtag">Hashtag </label>
+  </vaadin-horizontal-layout>
+  <div style="width: 100%; height: 95%;">
+   <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
+  </div>
+ </vaadin-vertical-layout>
 </vaadin-vertical-layout>
 `;
   }

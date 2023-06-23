@@ -4,7 +4,16 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.littemplate.LitTemplate;
 import com.vaadin.flow.dom.Element;
+
+import interfaz.Cabecera__administrador_;
+
 import com.vaadin.flow.component.template.Id;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.Image;
+import com.vaadin.flow.component.html.Label;
+import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 /**
  * A Designer generated component for the vista-vista_detalle__administrador_ template.
@@ -16,6 +25,27 @@ import com.vaadin.flow.component.template.Id;
 @JsModule("./src/vista-vista_detalle__administrador_.ts")
 public class VistaVista_detalle__administrador_ extends LitTemplate {
 
+	private Cabecera__administrador_ cabecera;
+	@Id("divCabecera")
+	private Div divCabecera;
+	@Id("layoutVideo")
+	private VerticalLayout layoutVideo;
+	@Id("image")
+	private Image image;
+	@Id("labelUsuario")
+	private Label labelUsuario;
+	@Id("labelUbi")
+	private Label labelUbi;
+	@Id("labelFecha")
+	private Label labelFecha;
+	@Id("labelDescripcion")
+	private Label labelDescripcion;
+	@Id("labelMeGustas")
+	private Label labelMeGustas;
+	@Id("bEliminar")
+	private Button bEliminar;
+	@Id("scroller")
+	private Scroller scroller;
 
 	/**
      * Creates a new VistaVista_detalle__administrador_.
@@ -25,4 +55,95 @@ public class VistaVista_detalle__administrador_ extends LitTemplate {
     	this.getElement().setAttribute("style", "heigth: 100%; width: 100%");
     }
 
+	public Div getDivCabecera() {
+		return divCabecera;
+	}
+
+	public void setDivCabecera(Div divCabecera) {
+		this.divCabecera = divCabecera;
+	}
+
+	public VerticalLayout getLayoutVideo() {
+		return layoutVideo;
+	}
+
+	public void setLayoutVideo(VerticalLayout layoutVideo) {
+		this.layoutVideo = layoutVideo;
+	}
+
+	public Image getImage() {
+		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
+	}
+
+	public Label getLabelUsuario() {
+		return labelUsuario;
+	}
+
+	public void setLabelUsuario(Label labelUsuario) {
+		this.labelUsuario = labelUsuario;
+	}
+
+	public Label getLabelUbi() {
+		return labelUbi;
+	}
+
+	public void setLabelUbi(Label labelUbi) {
+		this.labelUbi = labelUbi;
+	}
+
+	public Label getLabelFecha() {
+		return labelFecha;
+	}
+
+	public void setLabelFecha(Label labelFecha) {
+		this.labelFecha = labelFecha;
+	}
+
+	public Label getLabelDescripcion() {
+		return labelDescripcion;
+	}
+
+	public void setLabelDescripcion(Label labelDescripcion) {
+		this.labelDescripcion = labelDescripcion;
+	}
+
+	public Label getLabelMeGustas() {
+		return labelMeGustas;
+	}
+
+	public void setLabelMeGustas(Label labelMeGustas) {
+		this.labelMeGustas = labelMeGustas;
+	}
+
+	public Button getbEliminar() {
+		return bEliminar;
+	}
+
+	public void setbEliminar(Button bEliminar) {
+		this.bEliminar = bEliminar;
+	}
+
+	public Scroller getScroller() {
+		return scroller;
+	}
+
+	public void setScroller(Scroller scroller) {
+		this.scroller = scroller;
+	}
+
+	public Cabecera__administrador_ getCabecera() {
+		return cabecera;
+	}
+
+	public void setCabecera(Cabecera__administrador_ cabecera) {
+		this.cabecera = cabecera;
+		this.getDivCabecera().add(cabecera);
+	}
+
+    
+    
 }

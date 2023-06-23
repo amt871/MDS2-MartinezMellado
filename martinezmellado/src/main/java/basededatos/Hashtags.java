@@ -64,7 +64,7 @@ public class Hashtags {
 	    try {
 	        	Hashtag aux = HashtagDAO.loadHashtagByQuery("hashtag= '" + hashtag + "'" , null);
 	        	Publicacion publicacionAux = PublicacionDAO.loadPublicacionByQuery("video = '" + publicacion.getVideo() + "'", null);
-	        	System.out.println(publicacion.getVideo());
+	        	//System.out.println(publicacion.getVideo());
 	        	if (aux == null) {
 	        		aux = HashtagDAO.createHashtag();
 	        		aux.setHashtag(hashtag);
@@ -82,5 +82,20 @@ public class Hashtags {
 	        e.printStackTrace();
 	    }
 	    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+	}
+	
+	public Hashtag ObtenerHahsTag(String aBusqueda) throws PersistentException {
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    Hashtag hashtag = null;
+	    try {
+	    	hashtag = HashtagDAO.loadHashtagByQuery("hashtag = '"+aBusqueda+"'", null);
+
+	        t.commit();
+	        
+	    }catch (Exception e) {
+	        t.rollback();
+	        e.printStackTrace();
+	    }
+	    return hashtag;
 	}
 }

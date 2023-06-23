@@ -532,4 +532,16 @@ public class BDPrincipal
 			// TODO: handle exception
 		}
 	}
+
+	@Override
+	public Hashtag ObtenerHahsTag(String aBusqueda) {
+		// TODO Auto-generated method stub
+		try {
+			return this.hashTag.ObtenerHahsTag(aBusqueda);
+		} catch (PersistentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

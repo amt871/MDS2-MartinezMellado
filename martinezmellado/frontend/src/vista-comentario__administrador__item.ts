@@ -17,15 +17,16 @@ export class VistaComentario__administrador__item extends LitElement {
   render() {
     return html`
 <vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;">
- <img style="height: 10%; width: 10%;" src="icons/user.svg">
+ <vaadin-horizontal-layout theme="spacing" style="width: 20%; height: 100%;"></vaadin-horizontal-layout>
+ <img style="max-width: 100%; max-height: 100%;" id="image">
  <vaadin-horizontal-layout style="width: 100%; align-self: center; height: 100%; justify-content: center;">
-  <label style="align-self: center;">Texto Comentario</label>
+  <label style="align-self: center;" id="labelcomentario">Texto Comentario</label>
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout style="align-self: center; align-items: center; flex-direction: column; flex-shrink: 1; flex-grow: 0; height: 100%; margin-right: var(--lumo-space-s); justify-content: center; width: 50%;">
-  <vaadin-button style="width: 100%;">
+  <vaadin-button style="width: 100%;" id="bEliminar">
     Eliminar 
   </vaadin-button>
-  <label style="align-self: center;">Me gustas</label>
+  <label style="align-self: center;" id="labelMeGustas">Me gustas</label>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>
 `;

@@ -1,12 +1,18 @@
 package interfaz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.BoxSizing;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+
+import basededatos.Publicacion;
+
 import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
 import com.vaadin.flow.component.orderedlayout.FlexComponent.JustifyContentMode;
 
@@ -22,11 +28,20 @@ public class Perfil_comercial extends VistaPerfil_comercial {
 		// TODO Auto-generated constructor stub
 		
 		this.cabecera = cabecera_comercial;
+		
+		this.cabecera.setUser(this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario()));
+		
+
 		this.setCabecera(cabecera_comercial);
 		this.scroller = this.getScroller();
 		
 		this.getLabelSeguidores().setText("Seguidores: "+cabecera.getUser().seguidor.size());
-		this.getLabelMeGustas().setText("Me gustas dados: "+cabecera.getUser().le_gusta.size());
+		
+		int megustas = 0;
+		for(Publicacion publi : cabecera.getUser().realiza.toArray())
+			megustas += publi.le_gusta.size();
+		
+		this.getLabelMeGustas().setText(megustas+" me gustas");
 		this.getLabelUsuario().setText(cabecera.getUser().getUsuario());
 		this.getImagen().setSrc(cabecera.getUser().getFoto());
 		
@@ -82,9 +97,15 @@ public class Perfil_comercial extends VistaPerfil_comercial {
 			
 			//vl.add(new Mi_video_item("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4", "Ninna gritona", "100%", "25%"));
 			
-			basededatos.Publicacion[] videos = null;
+			Publicacion[] videos = null;
 			
 			videos = this.cabecera.getUser().realiza.toArray();
+			
+			Arrays.sort(videos, new Comparator<Publicacion>() {
+			    public int compare(Publicacion p1, Publicacion p2) {
+			        return Integer.compare(p1.getID(), p2.getID());
+			    }
+			});
 			
 			//videos
 			

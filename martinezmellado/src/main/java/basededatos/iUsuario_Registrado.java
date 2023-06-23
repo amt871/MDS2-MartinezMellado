@@ -51,4 +51,6 @@ public interface iUsuario_Registrado {
 	
 	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion);
 	
+	public Hashtag ObtenerHahsTag(String aBusqueda);
+	
 }

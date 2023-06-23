@@ -15,6 +15,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Pattern;
 
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.notification.Notification;
@@ -47,15 +49,12 @@ public class Publicar extends VistaPublicar {
 	
 	private BDPrincipal datos;
 
-	private String pathImage;
 
 	private MemoryBuffer memoryBuffer;
 
 	private InputStream fileData;
 	
 	private Usuario_Registrado user;
-	
-	private Image image;
 	
 	
 
@@ -68,6 +67,22 @@ public class Publicar extends VistaPublicar {
 		this.vl = vl;
 		
 		this.setCabecera(mi_cabecera);
+		
+		File tempDir = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+		
+		if(tempDir.exists()) {
+			try {
+				FileUtils.cleanDirectory(tempDir);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			tempDir.delete();
+		}
+		
+		tempDir = null;
+		
+		
 		
 		this.getImguser().setSrc(this.user.getFoto());
 		
@@ -82,20 +97,21 @@ public class Publicar extends VistaPublicar {
 			if (event.getFileName().endsWith("mp4")) {
 				fileData = memoryBuffer.getInputStream();
 				
-				image = null;
+				String nombVideo = LocalDateTime.now().toString().replace(":", "-");
 				
 				File file = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
-				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4");
 				
-				if(file2.exists())
-					file2.delete();
-				if(file.exists())
+				if(file.exists()) {
+					try {
+						FileUtils.cleanDirectory(file);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					file.delete();
+				}
 				
-				this.getLayoutVideo().removeAll();
-				Image image = new Image();
-				image.setSrc("icons/video.svg");
-				this.getLayoutVideo().add(image);
+				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/"+nombVideo+".mp4");
 				
 				file.mkdir();
 				try {
@@ -122,9 +138,8 @@ public class Publicar extends VistaPublicar {
 				fileData.reset();
 				
 				out.close();
-				
 				this.getLayoutVideo().removeAll();
-				this.getLayoutVideo().add(new Video("Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp/tmp.mp4", "90%","90%"));
+				this.getLayoutVideo().add(new Video(file2.getPath().replace("src\\main\\webapp\\", ""), "90%","90%"));
 				
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -162,6 +177,13 @@ public class Publicar extends VistaPublicar {
 		this.getSubirVideo().addClickListener(event -> {
 			bPublica();
         });
+		
+		/*this.getDescrpcion().addInputListener(e ->{
+			
+			//e.getSource().setHelperText(e.getSource()..length()+"/255");
+			this.getDescrpcion().setHelperText(this.getDescrpcion().getValue().length()+"/255");
+			
+		});*/
 		
 	}
 	
@@ -186,18 +208,21 @@ public class Publicar extends VistaPublicar {
 			if (event.getFileName().endsWith("mp4")) {
 				fileData = memoryBuffer.getInputStream();
 				
+				String nombVideo = LocalDateTime.now().toString().replace(":", "-");
+				
 				File file = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp");
-				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/tmp.mp4");
 				
-				if(file2.exists())
-					file2.delete();
-				if(file.exists())
+				if(file.exists()) {
+					try {
+						FileUtils.cleanDirectory(file);
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 					file.delete();
+				}
 				
-				this.getLayoutVideo().removeAll();
-				Image image = new Image();
-				image.setSrc("icons/video.svg");
-				this.getLayoutVideo().add(image);
+				File file2 = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/"+nombVideo+".mp4");
 				
 				file.mkdir();
 				try {
@@ -226,7 +251,7 @@ public class Publicar extends VistaPublicar {
 				out.close();
 				
 				this.getLayoutVideo().removeAll();
-				this.getLayoutVideo().add(new Video("Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp/tmp.mp4", "90%","90%"));
+				this.getLayoutVideo().add(new Video(file2.getPath().replace("src\\main\\webapp\\", ""), "90%","90%"));
 				
 				} catch (FileNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -264,6 +289,12 @@ public class Publicar extends VistaPublicar {
 		this.getSubirVideo().addClickListener(event -> {
 			bPublica();
         });
+		
+		/*this.getDescrpcion().addValueChangeListener(e ->{
+			
+			e.getSource().setHelperText(e.getValue().length()+"/255");
+			
+		});*/
 		
 	}
 
@@ -349,7 +380,7 @@ public class Publicar extends VistaPublicar {
 			
 			Notification.show("Video subido");
 			
-			File file3=null;
+			/*File file3=null;
 			File file2=null;
 			
 			if(this.getCabecera()!=null) {
@@ -367,7 +398,19 @@ public class Publicar extends VistaPublicar {
 			if(file3.exists())
 				file3.delete();
 			file2 = null;
-			file3 = null;
+			file3 = null;*/
+			
+			File tempDirectory;
+			
+			if(this.getCabecera()!=null)
+				tempDirectory = new File("src/main/webapp/Usuarios/"+this.getCabecera().getUser().getUsuario()+"/tmp");
+			else
+				tempDirectory = new File("src/main/webapp/Usuarios/"+this.getCabeceraCom().getUser().getUsuario()+"/tmp");
+				
+			if(tempDirectory.exists())
+				FileUtils.cleanDirectory(tempDirectory);
+		
+			tempDirectory = null;
 			
 			this.vl.removeAll();
 			if(this.getCabecera()!=null)

@@ -6,10 +6,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.nio.file.Files;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
+
+import org.apache.tomcat.util.http.fileupload.FileUtils;
 
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
@@ -79,7 +83,7 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 		if (this.getIdFechaDeNaciemiento().isEmpty()) {
 			String[] items = String.valueOf(this.usuario.getFechaNacimiento()).split("-");
 			fecha = "";
-			System.out.println("Hola: " + this.usuario.getFechaNacimiento());
+			//System.out.println("Hola: " + this.usuario.getFechaNacimiento());
 			items[2] = items[2].split(" ")[0];
 			if (items[2].length() < 2)
 				fecha += "0" + items[2] + "/";
@@ -175,6 +179,22 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 			String[] items = this.getIdFechaDeNaciemiento().getValue().split("/");
 			fecha = "";
+			
+			if(items[0].length()>=3) {
+				Notification.show("Fecha incorrecta");
+				return false;
+			}
+			
+			if(items[1].length()>=3) {
+				Notification.show("Fecha incorrecta");
+				return false;
+			}
+			
+			if(items[2].length()!=4) {
+				Notification.show("Fecha incorrecta");
+				return false;
+			}
+			
 			if (items[0].length() < 2)
 				fecha += "0" + items[0] + "/";
 			else
@@ -276,17 +296,28 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 	public boolean cambiarFoto() {
 
 		if (fileData != null) {
+			
+			String nombImage= LocalDateTime.now().toString().replace(":", "-");
 
 			try {
 				
-				File file = new File("src/main/webapp/Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
+				if (!this.usuario.getFoto().equals("icons/user.svg")) {
+				
+					File fotoAEliminar = new File("src/main/webapp/"+this.usuario.getFoto());
+					fotoAEliminar.delete();
+					fotoAEliminar = null;
+					
+				}
+				
+				File file = new File("src/main/webapp/Usuarios/" + this.usuario.getUsuario() + "/"+nombImage+".jpg");
 				if (!file.exists()) {
 					file.createNewFile();
 				}
-				file = null;
-				OutputStream out = new FileOutputStream(
-						"src/main/webapp/Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
+				
+				OutputStream out = new FileOutputStream(file.getPath());
 
+				file = null;
+				
 				byte[] buf = new byte[1024];
 				int length;
 
@@ -313,21 +344,21 @@ public class Configurar_mi_perfil extends VistaConfigurar_mi_perfil {
 
 			this.getUploadImagen().getElement().setPropertyJson("files", Json.createArray());
 
-			if (this.usuario.getFoto().equals("icons/user.svg")){// Cambiar el valor en la base de datos
+			//if (this.usuario.getFoto().equals("icons/user.svg")){// Cambiar el valor en la base de datos
 				
 				//System.out.println("Lo intenta");
-				this.usuario.setFoto("Usuarios/" + this.usuario.getUsuario() + "/imagen.jpg");
+				this.usuario.setFoto("Usuarios/" + this.usuario.getUsuario() + "/"+nombImage+".jpg");
 				//System.out.println(this.usuario.getFoto());
 				
 				if (!datos.guardarDatos(this.usuario.getFoto(), this.usuario.getUsuario(), this.usuario.getNombre(),
 						this.usuario.getFechaNacimiento(), this.usuario.getCorreo(), this.usuario.getDescripcion())) {
-					Notification.show("Error la guardar la imagen");
+					Notification.show("Error al guardar la imagen");
 					return false;
 				}
 
 
-			}
-			Notification.show("Datos guardados correctamente. Refresca la pagina para ver los cambios");
+			//}
+			Notification.show("Datos guardados correctamente");
 			this.getCabecera().setUser(null);
 			this.getCabecera().setUser(this.datos.cargarDatosUsuario(this.usuario.getUsuario()));
 			return true;

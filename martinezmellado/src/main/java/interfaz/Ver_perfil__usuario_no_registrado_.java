@@ -35,13 +35,25 @@ public class Ver_perfil__usuario_no_registrado_ extends VistaVer_perfil__usuario
 		// TODO Auto-generated constructor stub
 		
 		this.setCabecera(cabeceraNoReg);
-		this.getLabelMeGustas().setText("Me gustas dados: "+usuario.le_gusta.size());
+		int megustas = 0;
+		for(Publicacion publi : usuario.realiza.toArray())
+			megustas += publi.le_gusta.size();
+		
+		this.getLabelMeGustas().setText(megustas + " me gustas");
 		this.getLabelSeguidores().setText("Seguidores: "+usuario.seguidor.size());
 		this.getLabelUsuario().setText(usuario.getUsuario());
 		this.getImage().setSrc(usuario.getFoto());
 		
 		this.scroller = this.getScroller();
 		this.usuario = usuario;
+		
+		this.getLayoutSeguidores().addClickListener(e ->{
+			
+			cabeceraNoReg.setSeguidoresOtroUsuario(new Ver_seguidores_otro_usuario(cabeceraNoReg, this.usuario));
+			cabeceraNoReg.getVl().removeAll();
+			cabeceraNoReg.getVl().add(cabeceraNoReg.getSeguidoresOtroUsuario());
+			
+		});
 		
 		listarVideos();
 	}

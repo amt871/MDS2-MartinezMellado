@@ -37,7 +37,11 @@ public class Video_hashtag__usuario_registrado_ extends VistaVideo_hashtag__usua
 		
 	}
 	
-public void listarVideos() {
+    /*public Video_hashtag__usuario_registrado_(String has, Mi_cabecera cabecera) {
+		// TODO Auto-generated constructor stub
+	}*/
+
+    public void listarVideos() {
 		
 		scroller = this.getScroller();
 		vl = new VerticalLayout();
