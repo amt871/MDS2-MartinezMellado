@@ -544,4 +544,15 @@ public class BDPrincipal
 		}
 		return null;
 	}
+
+	@Override
+	public List listarDenunciasArchivadas() {
+		// TODO Auto-generated method stub
+		try {
+			return this.denunciaArchivada.listarDenunciasArchivadas();
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
 }

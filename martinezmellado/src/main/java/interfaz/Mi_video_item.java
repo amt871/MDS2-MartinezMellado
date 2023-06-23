@@ -58,7 +58,7 @@ public class Mi_video_item extends VistaMi_video_item {
 		
 		this.getButton().addClickListener(event ->{
 			
-			this.cabecera.setDetalle(new Vista_detalle__usuario_registrado_(this.cabecera, this.cabecera.getUser(), this.publi));
+			this.cabecera.setDetalle(new Vista_detalle__usuario_registrado_(this.cabecera, this.publi.getRealizada(), this.publi));
 			this.cabecera.getVl().removeAll();
 			this.cabecera.getVl().add(this.cabecera.getDetalle());
 			

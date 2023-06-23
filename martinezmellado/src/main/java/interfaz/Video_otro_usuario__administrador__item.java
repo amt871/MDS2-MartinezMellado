@@ -64,6 +64,10 @@ public class Video_otro_usuario__administrador__item extends VistaVideo_otro_usu
 			
 		});
 		
+		this.getbEliminar().addClickListener(even ->{
+			this.cabecera.getDatos().eliminarPublicaion(publicacion);
+			this.setVisible(false);
+		});
 		
 	}
 	

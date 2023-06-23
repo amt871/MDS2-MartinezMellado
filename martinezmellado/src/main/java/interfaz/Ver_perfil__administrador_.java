@@ -52,24 +52,24 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 	private VerticalLayout vl;
 	private Usuario_Registrado usuario;
 	private Cabecera__administrador_ cabecera;
+	private Usuario_Registrado propietario;
 
 	public Ver_perfil__administrador_(Cabecera__administrador_ cabecera, Usuario_Registrado propietario) {
 		// TODO Auto-generated constructor stub
-		
 		this.setCabecera(cabecera);
 		this.cabecera = cabecera;
-		this.getLabelSeguidores().setText("Seguidores: "+propietario.seguidor.size());
+		this.propietario = this.cabecera.getDatos().cargarDatosUsuario(this.propietario.getUsuario());
+		this.getLabelSeguidores().setText("Seguidores: "+this.propietario.seguidor.size());
 		
 		int megustas = 0;
-		for(Publicacion publi : propietario.realiza.toArray())
+		for(Publicacion publi : this.propietario.realiza.toArray())
 			megustas += publi.le_gusta.size();
 		
 		this.getLabelMeGustas().setText(megustas + " me gustas");
-		this.getImage().setSrc(propietario.getFoto());
-		this.getLabelUsuario().setText(propietario.getUsuario());
-		if(!propietario.getPrivado()) this.getLabelPrivado().setVisible(false);
+		this.getImage().setSrc(this.propietario.getFoto());
+		this.getLabelUsuario().setText(this.propietario.getUsuario());
+		if(!this.propietario.getPrivado()) this.getLabelPrivado().setVisible(false);
 		
-		this.usuario = propietario;
 		
 		listarVideos();
 	}

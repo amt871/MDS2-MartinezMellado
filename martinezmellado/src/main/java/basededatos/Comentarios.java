@@ -91,6 +91,10 @@ public class Comentarios {
 		try {
 			Comentario auxCom = ComentarioDAO.loadComentarioByORMID(comentario.getORMID());
 
+			for (Usuario_Registrado denunciante : auxCom.es_denunciada.toArray()) {
+				denunciante.denunciaA.remove(auxCom);
+				Usuario_RegistradoDAO.save(denunciante);
+			}
 			auxCom.es_denunciada.clear();
 
 			//System.out.println(auxCom.es_denunciada.size());
@@ -123,7 +127,7 @@ public class Comentarios {
 		    	aux =  ComentarioDAO.loadComentarioByORMID(comentario.getORMID());    
 		    	
 		    	ComentarioDAO.deleteAndDissociate(aux);
-		    	//System.out.println("te elimine puto");
+		    	t.commit();
 		    }catch (Exception e) {
 		        t.rollback();
 		        e.printStackTrace();

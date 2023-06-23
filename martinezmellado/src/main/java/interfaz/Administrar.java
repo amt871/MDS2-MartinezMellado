@@ -11,6 +11,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 
 import basededatos.BDPrincipal;
 import basededatos.Comentario;
+import basededatos.Denuncia_Archivada;
 import basededatos.Publicacion;
 import basededatos.Usuario_Registrado;
 import vistas.VistaAdministrar;
@@ -41,19 +42,17 @@ public class Administrar extends VistaAdministrar {
 		this.datos = this.cabecera.getDatos();
 
 		this.getbTodas().addClickListener(Event -> {
-//			addItem("comentario");
+			addItem("todo");;
 		});
 
 		this.getbVistas().addClickListener(Event -> {
-//			addItem("me_gusta");
+			addItem("");
 		});
 
-		this.getbPendientes().addClickListener(Event -> {
-//			addItem("seguir");
-		});
+		this.getbPendientes().setVisible(false);
 
 		this.getbAplicadas().addClickListener(Event -> {
-//			addItem("todo");
+			listarDenunciasArchivadas();
 		});
 
 		scroller = this.getScroller();
@@ -67,39 +66,181 @@ public class Administrar extends VistaAdministrar {
 	}
 
 	public void addItem(String filtro) {
+		
 
-		List ComDenuAux = this.datos.listarComentariosDenunciados();
-		List PubDenuAux = this.datos.listarPublicacionesDenunciadas();
-		List UsrDenuAux = this.datos.listarUsuariosDenunciados();
-		ArrayList<Comentario> ComDenu = new ArrayList<Comentario>();
-		ArrayList<Publicacion> PubDenu = new ArrayList<Publicacion>();
-		ArrayList<Usuario_Registrado> UsrDenu = new ArrayList<Usuario_Registrado>();
+		if (filtro == "todo") {
+			List ComDenuAux = this.datos.listarComentariosDenunciados();
+			List PubDenuAux = this.datos.listarPublicacionesDenunciadas();
+			List UsrDenuAux = this.datos.listarUsuariosDenunciados();
+			ArrayList<Comentario> ComDenu = new ArrayList<Comentario>();
+			ArrayList<Publicacion> PubDenu = new ArrayList<Publicacion>();
+			ArrayList<Usuario_Registrado> UsrDenu = new ArrayList<Usuario_Registrado>();
 
-		for (Object Comentario : ComDenuAux) {
-			ComDenu.add((Comentario) Comentario);
+			for (Object Comentario : ComDenuAux) {
+				ComDenu.add((Comentario) Comentario);
+			}
+
+			for (Object Publicacion : PubDenuAux) {
+				PubDenu.add((Publicacion) Publicacion);
+			}
+
+			for (Object Usuario_Registrado : UsrDenuAux) {
+				UsrDenu.add((Usuario_Registrado) Usuario_Registrado);
+			}
+
+			int tamT = ComDenu.size() + PubDenu.size() + UsrDenu.size();
+			int contCom = 0;
+			int contPub = 0;
+			int contUsr = 0;
+
+			vl.removeAll();
+
+			int tipo = 0;
+
+			if (tamT == 0) {
+				vl.setAlignItems(Alignment.CENTER);
+				vl.setJustifyContentMode(JustifyContentMode.CENTER);
+				vl.add(new Label("No tienes denuncias que revisar"));
+			} else {
+
+				vl.getStyle().set("position", "relative");
+				vl.setHeight("100%");
+				vl.setWidth("100%");
+
+				ArrayList<Denuncias_item> array = new ArrayList<Denuncias_item>();
+
+				int cont = 0;
+
+				for (int i = 0; i < tamT;) {
+
+					if (tipo == 0 && contCom < ComDenu.size()) {
+
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), ComDenu.get(contCom),
+								this.ComDenuVist));
+						vl.add(array.get(cont));
+						cont++;
+						contCom++;
+						tipo++;
+						i++;
+						continue;
+					} 
+					if (tipo == 1 && contPub < PubDenu.size()) {
+
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), PubDenu.get(contPub),
+								this.PubDenuVist));
+						vl.add(array.get(cont));
+						cont++;
+						contPub++;
+						tipo++;
+						i++;
+						continue;
+					} 
+					if (tipo == 2 && contUsr < UsrDenu.size()) {
+
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), UsrDenu.get(contUsr),
+								this.UsrDenuVist));
+						vl.add(array.get(cont));
+						cont++;
+						contUsr++;
+						tipo = 0;
+						i++;
+						continue;
+					}
+
+						tipo++;
+						if (tipo == 3) {
+							tipo = 0;
+						}
+				}
+			}
+			
+		}else {
+			vl.removeAll();
+			
+			int tamT = this.ComDenuVist.size() + this.PubDenuVist.size() + this.UsrDenuVist.size();
+
+			
+			int contCom = 0;
+			int contPub = 0;
+			int contUsr = 0;
+			
+			if (tamT == 0) {
+				vl.setAlignItems(Alignment.CENTER);
+				vl.setJustifyContentMode(JustifyContentMode.CENTER);
+				vl.add(new Label("No has postpuesto ninguana denuncia"));
+			} else {
+
+				vl.getStyle().set("position", "relative");
+				vl.setHeight("100%");
+				vl.setWidth("100%");
+
+				ArrayList<Denuncias_item> array = new ArrayList<Denuncias_item>();
+
+				int cont = 0;
+				
+				int tipo = 0;
+
+				for (int i = 0; i < tamT;) {
+
+					if (tipo == 0 && contCom < this.ComDenuVist.size()) {
+
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.ComDenuVist.get(contCom),
+								this.ComDenuVist));
+						vl.add(array.get(cont));
+						cont++;
+						contCom++;
+						tipo++;
+						i++;
+						continue;
+					} 
+					if (tipo == 1 && contPub < this.PubDenuVist.size()) {
+
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.PubDenuVist.get(contPub),
+								this.PubDenuVist));
+						vl.add(array.get(cont));
+						cont++;
+						contPub++;
+						tipo++;
+						i++;
+						continue;
+					} 
+					if (tipo == 2 && contUsr < this.UsrDenuVist.size()) {
+
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.UsrDenuVist.get(contUsr),
+								this.UsrDenuVist));
+						vl.add(array.get(cont));
+						cont++;
+						contUsr++;
+						tipo = 0;
+						i++;
+						continue;
+					}
+
+					tipo++;
+					if (tipo == 3) {
+						tipo = 0;
+					}
+				}
+			}
 		}
-
-		for (Object Publicacion : PubDenuAux) {
-			PubDenu.add((Publicacion) Publicacion);
-		}
-
-		for (Object Usuario_Registrado : UsrDenuAux) {
-			UsrDenu.add((Usuario_Registrado) Usuario_Registrado);
-		}
-
-		int tamT = ComDenu.size() + PubDenu.size() + UsrDenu.size();
-		int contCom = 0;
-		int contPub = 0;
-		int contUsr = 0;
-
+	}
+	
+	public void listarDenunciasArchivadas() {
+		System.out.println("hola yo lo intento");
+		
 		vl.removeAll();
-
-		int tipo = 0;
-
-		if (tamT == 0) {
+		
+		List denunciasArchivadasAux = this.datos.listarDenunciasArchivadas();
+		ArrayList<Denuncia_Archivada> denunciasArchivadas = new ArrayList<Denuncia_Archivada>();
+		for (Object denuncia_Archivada : denunciasArchivadasAux.toArray()) {
+			denunciasArchivadas.add((Denuncia_Archivada) denuncia_Archivada);
+		}
+		
+		
+		if (denunciasArchivadas.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
-			vl.add(new Label("No tienes notificaciones"));
+			vl.add(new Label("No has postpuesto ninugana denuncia"));
 		} else {
 
 			vl.getStyle().set("position", "relative");
@@ -108,43 +249,13 @@ public class Administrar extends VistaAdministrar {
 
 			ArrayList<Denuncias_item> array = new ArrayList<Denuncias_item>();
 
-			int cont = 0;
 
-			for (int i = 0; i < tamT; i++) {
-
-				if (tipo == 0 && contCom < ComDenu.size()) {
-
-					array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), ComDenu.get(contCom),
-							this.ComDenuVist));
-					vl.add(array.get(cont));
-					cont++;
-					contCom++;
-					tipo++;
-					continue;
-				} 
-				if (tipo == 1 && contPub < PubDenu.size()) {
-
-					array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), PubDenu.get(contPub),
-							this.PubDenuVist));
-					vl.add(array.get(cont));
-					cont++;
-					contPub++;
-					tipo++;
-					continue;
-				} 
-				if (tipo == 2 && contUsr < UsrDenu.size()) {
-
-					array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), UsrDenu.get(contUsr),
-							this.UsrDenuVist));
-					vl.add(array.get(cont));
-					cont++;
-					contUsr++;
-					tipo = 0;
-					continue;
-				}
-
-					tipo = 0;
+			for (int i = 0; i < denunciasArchivadas.size(); i++) {
+				array.add(new Denuncias_item(denunciasArchivadas.get(i)));
+				vl.add(array.get(i));
+				
 			}
 		}
+		
 	}
 }

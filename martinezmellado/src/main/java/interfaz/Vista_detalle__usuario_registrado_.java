@@ -59,10 +59,9 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg, Usuario_Registrado usuario,
 			Publicacion publicacion) {
 		// TODO Auto-generated constructor stub
-		this.usuario = usuario;
-		this.miUsuario = null;
 		this.cabeceraUserReg = cabeceraUserReg;
 		this.datos = cabeceraUserReg.getDatos();
+		this.usuario = this.datos.cargarDatosUsuario(usuario.getUsuario());
 		this.publicacion = publicacion;
 		this.miUsuario = this.cabeceraUserReg.getDatos()
 				.cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
@@ -111,7 +110,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 				Notification.show("Ya has comentado esta publicacion ateriormente");
 			} else {
 				if (addComentario()) {
-					this.datos.annadirNotificacion("comentario", this.usuario, cabeceraUserReg.getUser(),
+					this.datos.annadirNotificacion("comentario", this.usuario, miUsuario,
 							this.publicacion);
 					this.vl.removeAll();
 					this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());

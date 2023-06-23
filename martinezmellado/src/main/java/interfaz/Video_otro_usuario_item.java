@@ -128,7 +128,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 	}
 	
-	private void verPerfilOtroUsuario() {
+	private void verPerfilOtroUsuario() { 
 		
 		if(this.usuario.getPrivado()) {
 			
