@@ -62,7 +62,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.cabeceraUserReg = cabeceraUserReg;
 		this.datos = cabeceraUserReg.getDatos();
 		this.usuario = this.datos.cargarDatosUsuario(usuario.getUsuario());
-		this.publicacion = publicacion;
+		this.publicacion = this.datos.cargarVideoPoID(publicacion.getID());
 		this.miUsuario = this.cabeceraUserReg.getDatos()
 				.cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
 		this.setCabecera(cabeceraUserReg);

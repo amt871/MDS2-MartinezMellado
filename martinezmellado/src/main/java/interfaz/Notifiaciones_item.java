@@ -46,7 +46,13 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 		
 		switch (tipo) {
 		case "comentario":
+			System.out.println(emisor);
+			System.out.println(publicacion);
 			Comentario aux = datos.cargarComentario(emisor, publicacion);
+			if (aux == null) {
+				break;
+			}
+			System.out.println(aux);
 			this.publicacion = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);

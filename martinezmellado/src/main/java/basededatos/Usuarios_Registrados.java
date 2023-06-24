@@ -416,38 +416,54 @@ public class Usuarios_Registrados {
 	}
 
 	public void bloquearUsuario(Usuario_Registrado usuario, Administrador adminstrador) throws PersistentException {
-		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
-		try {
+	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
+	    try {
+	        Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
+	        Administrador auxAdministrador = AdministradorDAO.loadAdministradorByORMID(adminstrador.getORMID());
 
-			Usuario_Registrado auxDenunciado = Usuario_RegistradoDAO.loadUsuario_RegistradoByORMID(usuario.getORMID());
-			Administrador auxAdministrador = AdministradorDAO.loadAdministradorByORMID(adminstrador.getORMID());
+	        Comentario[] comentarios = auxDenunciado.publica.toArray();
+	        Publicacion[] publicaciones = auxDenunciado.realiza.toArray();
+	        Usuario_Registrado[] seguidos = auxDenunciado.seguido.toArray();
+	        Usuario_Registrado[] seguidores = auxDenunciado.seguidor.toArray();
 
-			for (Comentario comentario : auxDenunciado.publica.toArray()) {
-				ComentarioDAO.deleteAndDissociate(comentario);
-			}
+	        for (Comentario comentario : comentarios) {
+	            auxDenunciado.publica.remove(comentario);
+	            ComentarioDAO.deleteAndDissociate(comentario);
+	        }
 
-			for (Publicacion publicacion : auxDenunciado.realiza.toArray()) {
-				PublicacionDAO.deleteAndDissociate(publicacion);
-			}
-			
-			for (Usuario_Registrado usuario_Registrado : auxDenunciado.seguido.toArray()) {
-				usuario_Registrado.seguidor.remove(auxDenunciado);
-			}
-			auxDenunciado.seguido.clear();
-			
-			for (Usuario_Registrado usuario_Registrado : auxDenunciado.seguidor.toArray()) {
-				usuario_Registrado.seguido.remove(auxDenunciado);
-			}
-			auxDenunciado.seguidor.clear();
+	        for (Publicacion publicacion : publicaciones) {
+	            Comentario[] comentariosDePublicacion = publicacion.tiene.toArray();
+	            for (Comentario comentario : comentariosDePublicacion) {
+	                publicacion.tiene.remove(comentario);
+	                ComentarioDAO.deleteAndDissociate(comentario);
+	            }
+	            auxDenunciado.realiza.remove(publicacion);
+	            PublicacionDAO.deleteAndDissociate(publicacion);
+	        }
+	        
+	        for (Usuario_Registrado usuarioSeguido : seguidos) {
+	            usuarioSeguido.seguidor.remove(auxDenunciado);
+	            auxDenunciado.seguido.remove(usuarioSeguido);
+	            Usuario_RegistradoDAO.save(usuarioSeguido);
+	        }
+	        
+	        for (Usuario_Registrado usuarioSeguidor : seguidores) {
+	            usuarioSeguidor.seguido.remove(auxDenunciado);
+	            auxDenunciado.seguidor.remove(usuarioSeguidor);
+	            Usuario_RegistradoDAO.save(usuarioSeguidor);
+	        }
 
-			auxDenunciado.setEs_bloqueado(auxAdministrador);
+	        auxDenunciado.setEs_bloqueado(auxAdministrador);
 
-			Usuario_RegistradoDAO.save(auxDenunciado);
-			t.commit();
-		} catch (Exception e) {
-			t.rollback();
-			e.printStackTrace();
-		}
-		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
+	        Usuario_RegistradoDAO.save(auxDenunciado);
+	        
+	        t.commit();
+	    } catch (Exception e) {
+	        t.rollback();
+	        e.printStackTrace();
+	    }
+	    MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
+
+
 }

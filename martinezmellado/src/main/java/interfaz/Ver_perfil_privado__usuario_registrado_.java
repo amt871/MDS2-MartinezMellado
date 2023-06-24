@@ -23,7 +23,7 @@ public class Ver_perfil_privado__usuario_registrado_ extends VistaVer_perfil_pri
 		this.getDivCabecera().add(cabecera);
 		this.getLabelSeguidores().setText("Seguidores: "+String.valueOf(this.usuario.seguidor.size()));
 		int megustas = 0;
-		for(Publicacion publi : usuario.realiza.toArray())
+		for(Publicacion publi : this.usuario.realiza.toArray())
 			megustas += publi.le_gusta.size();
 		this.getLabelMegustas().setText(megustas+" me gustas");
 		this.getImage().setSrc(this.usuario.getFoto());

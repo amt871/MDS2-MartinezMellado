@@ -36,6 +36,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.cabecera = cabecera;
 		this.inicio = inicio;
 		this.comentario = comentario;
+		this.publicacion = this.cabecera.getDatos().cargarVideoPoID(Integer.valueOf(this.comentario.getPublicacion()));
 		this.getImagen().setSrc("icons/video.png");
 		this.getTexto().setText("Video de procedencia");
 		this.getTextoDescripcion().setText("Comentario denuciado: " + this.comentario.getComentario());
@@ -50,6 +51,10 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 		this.getbRechazar().addClickListener(event -> {
 			bRechazaC();
+		});
+		
+		this.getImagen().addClickListener(event -> {
+			verPublicacion();
 		});
 
 	}
@@ -77,6 +82,10 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.getbRechazar().addClickListener(event -> {
 			bRechazaP();
 		});
+		
+		this.getImagen().addClickListener(event -> {
+			verPublicacion();
+		});
 	}
 
 	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Usuario_Registrado usuario,
@@ -101,6 +110,10 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 		this.getbRechazar().addClickListener(event -> {
 			bRechazaU();
+		});
+		
+		this.getImagen().addClickListener(envet -> {
+			verPerfilAdministrador();
 		});
 	}
 
@@ -180,5 +193,18 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.cabecera.getDatos().retirarDenunciaUsuario(this.usuario);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
+	}
+	
+	private void verPerfilAdministrador() {
+		this.cabecera.setPerfil(
+				new Ver_perfil__administrador_(this.cabecera, this.usuario));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getPerfil());
+	}
+	
+	private void verPublicacion() {
+		this.cabecera.setDetalle(new Vista_detalle__administrador_(this.cabecera, this.publicacion));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getDetalle());
 	}
 }

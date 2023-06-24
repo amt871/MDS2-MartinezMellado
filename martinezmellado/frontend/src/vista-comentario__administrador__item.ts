@@ -26,7 +26,6 @@ export class VistaComentario__administrador__item extends LitElement {
   <vaadin-button style="width: 100%;" id="bEliminar">
     Eliminar 
   </vaadin-button>
-  <label style="align-self: center;" id="labelMeGustas">Me gustas</label>
  </vaadin-vertical-layout>
 </vaadin-horizontal-layout>
 `;

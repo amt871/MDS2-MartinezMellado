@@ -35,11 +35,10 @@ public class Comentario__administrador__item extends VistaComentario__administra
 		this.getLabelcomentario().setText(comentario.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");
-		//this.getStyle().set("position", "relative");
+		this.setVisible(false);
 		
 		this.getbEliminar().addClickListener(event -> {
-			this.cabecera.getDatos().eliminarComentario(comentario);
-			this.setVisible(false);
+			bEliminar();
 		});
 		
 			
@@ -61,5 +60,8 @@ public class Comentario__administrador__item extends VistaComentario__administra
 		
 
 }
+	private void bEliminar() {
+		this.cabecera.getDatos().eliminarComentario(comentario);
+	}
 
 }

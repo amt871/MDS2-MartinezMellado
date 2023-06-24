@@ -54,25 +54,25 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 
 	public Ver_perfil__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
 
+		this.miUsuario_Registrado = cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
-		this.getLabelSeguidores().setText("Seguidores: " + usuario.seguidor.size());
+		this.getLabelSeguidores().setText("Seguidores: " + this.miUsuario_Registrado.seguidor.size());
 
 		int megustas = 0;
-		for (Publicacion publi : usuario.realiza.toArray())
+		for (Publicacion publi : this.miUsuario_Registrado.realiza.toArray())
 			megustas += publi.le_gusta.size();
 
 		this.getLabelMegustas().setText(megustas + " me gustas");
-		this.getImage().setSrc(usuario.getFoto());
-		this.getLabelUsuario().setText(usuario.getUsuario());
-		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
-		this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
+		this.getImage().setSrc(this.miUsuario_Registrado.getFoto());
+		this.getLabelUsuario().setText(this.miUsuario_Registrado.getUsuario());
+		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(this.miUsuario_Registrado.getUsuario());
 
 		this.getbDenuncia().addClickListener(event -> {
 			bDenuncia();
 		});
 		boolean flag = true;
-		for (Usuario_Registrado seguidor : usuario.seguidor.toArray()) {
+		for (Usuario_Registrado seguidor : this.miUsuario_Registrado.seguidor.toArray()) {
 			if (seguidor.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
 				flag = false;
 			}

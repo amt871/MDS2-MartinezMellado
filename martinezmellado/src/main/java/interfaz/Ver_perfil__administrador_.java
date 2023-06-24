@@ -47,10 +47,9 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 //	public void bloquear_cuenta() {
 //		throw new UnsupportedOperationException();
 //	}
-	
+
 	private Scroller scroller;
 	private VerticalLayout vl;
-	private Usuario_Registrado usuario;
 	private Cabecera__administrador_ cabecera;
 	private Usuario_Registrado propietario;
 
@@ -58,22 +57,36 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 		// TODO Auto-generated constructor stub
 		this.setCabecera(cabecera);
 		this.cabecera = cabecera;
-		this.propietario = this.cabecera.getDatos().cargarDatosUsuario(this.propietario.getUsuario());
-		this.getLabelSeguidores().setText("Seguidores: "+this.propietario.seguidor.size());
-		
+		this.propietario = this.cabecera.getDatos().cargarDatosUsuario(propietario.getUsuario());
+		this.getLabelSeguidores().setText("Seguidores: " + this.propietario.seguidor.size());
+
 		int megustas = 0;
-		for(Publicacion publi : this.propietario.realiza.toArray())
+		for (Publicacion publi : this.propietario.realiza.toArray())
 			megustas += publi.le_gusta.size();
-		
+
 		this.getLabelMeGustas().setText(megustas + " me gustas");
 		this.getImage().setSrc(this.propietario.getFoto());
 		this.getLabelUsuario().setText(this.propietario.getUsuario());
-		if(!this.propietario.getPrivado()) this.getLabelPrivado().setVisible(false);
-		
-		
-		listarVideos();
+		if (!this.propietario.getPrivado())
+			this.getLabelPrivado().setVisible(false);
+
+		this.getbBloquear().addClickListener(envent -> {
+			bBloquear();
+		});
+
+		if (this.propietario.getEs_bloqueado() == null) {
+			listarVideos();
+		} else {
+			scroller = this.getScroller();
+			vl = new VerticalLayout();
+			scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
+			scroller.setContent(vl);
+			vl.setAlignItems(Alignment.CENTER);
+			vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			vl.add(new Label("Este usuario fue bloqueado por " + this.cabecera.getAdministardor().getUsuario()));
+		}
 	}
-	
+
 	public void listarVideos() {
 
 		scroller = this.getScroller();
@@ -98,7 +111,7 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 	public void addItem() {
 
 		// System.out.println(this.usuario.realiza.size());
-		if (this.usuario.realiza.size() == 0) {
+		if (this.propietario.realiza.size() == 0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("Este usuario no ha subido videos aun"));
@@ -119,16 +132,16 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 			// "Ninna gritona", "100%", "25%"));
 
 			basededatos.Publicacion[] videos = null;
-			
-			videos = this.usuario.realiza.toArray();
-			
+
+			videos = this.propietario.realiza.toArray();
+
 			Arrays.sort(videos, new Comparator<Publicacion>() {
-			    public int compare(Publicacion p1, Publicacion p2) {
-			        return Integer.compare(p2.getID(), p1.getID());
-			    }
+				public int compare(Publicacion p1, Publicacion p2) {
+					return Integer.compare(p2.getID(), p1.getID());
+				}
 			});
-			
-			if(videos != null) {
+
+			if (videos != null) {
 				int contador = 0;
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
@@ -176,5 +189,10 @@ public class Ver_perfil__administrador_ extends VistaVer_perfil__administrador_ 
 		}
 	}
 
+	private void bBloquear() {
+		this.cabecera.getbInicio2().click();
+		this.cabecera.getDatos().bloquearUsuario(propietario, this.cabecera.getAdministardor());
+
+	}
 
 }

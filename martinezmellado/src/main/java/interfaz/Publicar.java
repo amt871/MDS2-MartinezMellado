@@ -364,6 +364,10 @@ public class Publicar extends VistaPublicar {
 			byte[] buf = new byte[1024];
 			int length;
 			
+			if (fileData == null) {
+				Notification.show("No hay ningun video para subir");
+				return;
+			}
 			Notification.show("Subiendo video...");
 			
 			while ((length = fileData.read(buf)) > 0) {
