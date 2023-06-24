@@ -4,10 +4,6 @@ import java.util.List;
 
 public interface iUsuario_no_registrado {
 
-	public List cargarVideos();
-
-	public List listarVideoBusqueda(String cadena);
-
 	public List buscarUsuario(String aBusqueda);
 
 	public List buscarHashTag(String aBusqueda);
@@ -19,4 +15,13 @@ public interface iUsuario_no_registrado {
 	public Usuario_Registrado[] listarTodosUsuarios();
 	
 	public Hashtag ObtenerHahsTag(String aBusqueda);
+	
+	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario);
+	
+	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario);
+	
+	public List buscarUsuarios(String aBusqueda);
+	
+	public Publicacion cargarVideoPoID(int id);
+	
 }

@@ -34,11 +34,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
-	@Override
-	public List listarVideosBusquedaAdministrador(String aBusqueda) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	@Override
 	public List buscarUsuarios(String aBusqueda) {
 		// TODO Auto-generated method stub
@@ -46,20 +42,11 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	}
 	
 	@Override
-	public Usuario_Registrado datosUsuarioPerfil() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
 	public boolean modificarEstadoUsuario(String aNombreUsuario) {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	@Override
-	public List listarVideoBusqueda(String cadena) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	@Override
 	public List buscarUsuario(String aBusqueda) {
 		// TODO Auto-generated method stub
@@ -75,11 +62,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return false;
 	}
-	@Override
-	public Usuario_Registrado iniciarSesion(String aUser, String aPass) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	@Override
 	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) {
 		// TODO Auto-generated method stub
@@ -91,42 +74,14 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		// TODO Auto-generated method stub
 		return null;
 	}
-	@Override
-	public void guardarNuevaContrasenna(String aNuevaContrasena, String aUsuario) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 	@Override
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo,
 			String aPropietario) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
-	public List buscarUsurios(String aBusqueda) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List cargarVideos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List listarVideosBusqueda(String cadena) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public List buscarHahsTag(String aBusqueda) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	@Override
-	public boolean comprobarPrivacidad(String aUsuario) {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 	@Override
 	public Usuario_Registrado datosUsuario(String aNombreUsuario) {
 		// TODO Auto-generated method stub
@@ -158,11 +113,6 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return false;
 	}
 	
-	@Override
-	public void añadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
-		// TODO Auto-generated method stub
-		
-	}
 	@Override
 	public boolean annadirComentario(String usuario, Publicacion publicacion, String comentario) {
 		// TODO Auto-generated method stub
@@ -300,6 +250,12 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 	public List listarDenunciasArchivadas() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void annadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

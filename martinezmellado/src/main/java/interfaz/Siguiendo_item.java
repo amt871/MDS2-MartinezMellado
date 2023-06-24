@@ -29,8 +29,7 @@ public class Siguiendo_item extends VistaSiguiendo_item {
 		});
 		
 		this.getbDejarDeSeguir().addClickListener(event ->{
-			datos.segimiento(this.seguido, usuario);
-			this.setVisible(false);
+			bDejarDeSeguir(datos);
 		});
 		
 		
@@ -68,5 +67,10 @@ public class Siguiendo_item extends VistaSiguiendo_item {
 			this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
 
 		}
+	}
+	
+	public void bDejarDeSeguir(BDPrincipal datos) {
+		datos.segimiento(this.seguido, usuario);
+		this.setVisible(false);
 	}
 }

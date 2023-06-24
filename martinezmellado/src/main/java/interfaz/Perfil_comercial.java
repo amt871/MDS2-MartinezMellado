@@ -47,9 +47,7 @@ public class Perfil_comercial extends VistaPerfil_comercial {
 		
 		this.getbConfigurar().addClickListener(event ->{
 			
-			this.cabecera.getVl().removeAll();
-			this.cabecera.setConfigPerfil(new Configurar_perfil_comercial(this.cabecera));
-			this.cabecera.getVl().add(this.cabecera.getConfigPerfil());
+			bConfigurar();
 			
 		});
 		
@@ -154,6 +152,12 @@ public class Perfil_comercial extends VistaPerfil_comercial {
 			
 		}
 		
+	}
+	
+	public void bConfigurar() {
+		this.cabecera.getVl().removeAll();
+		this.cabecera.setConfigPerfil(new Configurar_perfil_comercial(this.cabecera));
+		this.cabecera.getVl().add(this.cabecera.getConfigPerfil());
 	}
 	
 }

@@ -38,7 +38,7 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 //	public void comentario__no_registrado_() {
 //		throw new UnsupportedOperationException();
 //	}
-	
+
 	private VerticalLayout vl;
 	private Scroller scroller;
 	private Publicacion publicacion;
@@ -47,7 +47,7 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 
 	public Vista_detalle__no_registrado_(Cabecera_usuario_no_registrado cabeceraNoReg, Publicacion publi) {
 		// TODO Auto-generated constructor stub
-		
+
 		this.propietario = publi.getRealizada();
 		this.cabecera = cabeceraNoReg;
 		this.publicacion = publi;
@@ -56,56 +56,53 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 		this.getLabelUbicacion().setText(publi.getUbicacion());
 		this.getLabelUsuario().setText(publi.getRealizada().getUsuario());
 		this.getImage().setSrc(publi.getRealizada().getFoto());
-		this.getVlVideo().add(new Video(publi.getVideo().replace("src/main/webapp/", ""),"90%","90%"));
+		this.getVlVideo().add(new Video(publi.getVideo().replace("src/main/webapp/", ""), "90%", "90%"));
 		setDescripcion();
-		/*int megustas = 0;
-		for(Publicacion publicacion : publi.getRealizada().realiza.toArray())
-			megustas += publicacion.le_gusta.size();*/
-		this.getLabelMeGustas().setText(publi.le_gusta.size()+" me gustas");
-		
-		this.getImage().addClickListener(event ->{
-			
+		/*
+		 * int megustas = 0; for(Publicacion publicacion :
+		 * publi.getRealizada().realiza.toArray()) megustas +=
+		 * publicacion.le_gusta.size();
+		 */
+		this.getLabelMeGustas().setText(publi.le_gusta.size() + " me gustas");
+
+		this.getImage().addClickListener(event -> {
+
 			verPerfilOtroUsuarioNoReg();
-			
+
 		});
-		
-		this.getbVerMeGustas().addClickListener(e ->{
-			
-			this.cabecera.setVerMeGustas(new Ver_me_gustas__no_registrado_(this.cabecera, this.publicacion));
-			this.cabecera.getVl().removeAll();
-			this.cabecera.getVl().add(this.cabecera.getVerMeGustas());
-			
+
+		this.getbVerMeGustas().addClickListener(e -> {
+			bVerMeGustas();
 		});
-		
+
 		this.publicacion = publi;
 		this.vl = new VerticalLayout();
-		
+
 		scroller = this.getScroller();
-		
+
 		scroller.setScrollDirection(ScrollDirection.VERTICAL);
 		scroller.setContent(vl);
 		vl.setHeight("100%");
 		vl.setWidth("100%");
 		vl.setAlignItems(Alignment.CENTER);
-		//vl.setJustifyContentMode(JustifyContentMode.CENTER);
-		
-		if(publi.tiene.toArray().length == 0) {
+		// vl.setJustifyContentMode(JustifyContentMode.CENTER);
+
+		if (publi.tiene.toArray().length == 0) {
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("Esta publicacion no tiene comentarios"));
-		}else
+		} else
 			addItems();
 	}
 
 	private void addItems() {
-		
+
 		Comentario[] comentarios = this.publicacion.tiene.toArray();
-		
-		for(int i=0; i<comentarios.length; i++)
-				vl.add(new Comentario_item(comentarios[i], this.cabecera));
-		
-		
+
+		for (int i = 0; i < comentarios.length; i++)
+			vl.add(new Comentario_item(comentarios[i], this.cabecera));
+
 	}
-	
+
 	private void verPerfilOtroUsuarioNoReg() {
 
 		if (this.propietario.getPrivado()) {
@@ -113,23 +110,22 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 			// System.out.println(miUsuario.getUsuario());
 
 			// Notification.show("Aun no implementado");
-			
-				this.cabecera.setPerfilPrivado(
-						new Ver_perfil_privado__usuario_no_registrado_(this.cabecera, this.propietario));
-				this.cabecera.getVl().removeAll();
-				this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
-				// this.inicio.cambiarPantalla(cabecera);
-			
-		} else {
 
 			this.cabecera
-					.setPerfilPublico(new Ver_perfil__usuario_no_registrado_(this.cabecera, this.propietario));
+					.setPerfilPrivado(new Ver_perfil_privado__usuario_no_registrado_(this.cabecera, this.propietario));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+			// this.inicio.cambiarPantalla(cabecera);
+
+		} else {
+
+			this.cabecera.setPerfilPublico(new Ver_perfil__usuario_no_registrado_(this.cabecera, this.propietario));
 			this.cabecera.getVl().removeAll();
 			this.cabecera.getVl().add(this.cabecera.getPerfilPublico());
 
 		}
 	}
-	
+
 	private void otroUsuarioNoReg(Usuario_Registrado userAVisitar) {
 
 		if (userAVisitar.getPrivado()) {
@@ -137,23 +133,21 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 			// System.out.println(miUsuario.getUsuario());
 
 			// Notification.show("Aun no implementado");
-			
-				this.cabecera.setPerfilPrivado(
-						new Ver_perfil_privado__usuario_no_registrado_(this.cabecera, userAVisitar));
-				this.cabecera.getVl().removeAll();
-				this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
-				// this.inicio.cambiarPantalla(cabecera);
-			
+
+			this.cabecera.setPerfilPrivado(new Ver_perfil_privado__usuario_no_registrado_(this.cabecera, userAVisitar));
+			this.cabecera.getVl().removeAll();
+			this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+			// this.inicio.cambiarPantalla(cabecera);
+
 		} else {
 
-			this.cabecera
-					.setPerfilPublico(new Ver_perfil__usuario_no_registrado_(this.cabecera, userAVisitar));
+			this.cabecera.setPerfilPublico(new Ver_perfil__usuario_no_registrado_(this.cabecera, userAVisitar));
 			this.cabecera.getVl().removeAll();
 			this.cabecera.getVl().add(this.cabecera.getPerfilPublico());
 
 		}
 	}
-	
+
 	private void setDescripcion() {
 
 		this.getLabelDescripcion().setVisible(false);
@@ -178,8 +172,7 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 						// System.out.println(((Label)e.getSource().getComponentAt(0)).getText());
 						// Hashtag has = this.cabeceraUserReg.getDatos().h
 
-						this.cabecera
-								.setHashtags(new Videos_hashtag__no_registrado_(has, this.cabecera));
+						this.cabecera.setHashtags(new Videos_hashtag__no_registrado_(has, this.cabecera));
 						this.cabecera.getVl().removeAll();
 						this.cabecera.getVl().add(this.cabecera.getHashtags());
 
@@ -217,6 +210,13 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 		}
 
 		this.getLayoutDescripcion().add(new Label(cadena));
+
+	}
+
+	public void bVerMeGustas() {
+		this.cabecera.setVerMeGustas(new Ver_me_gustas__no_registrado_(this.cabecera, this.publicacion));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getVerMeGustas());
 
 	}
 }

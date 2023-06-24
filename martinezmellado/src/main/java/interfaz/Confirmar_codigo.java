@@ -30,24 +30,30 @@ public class Confirmar_codigo extends VistaConfirmar_codigo {
 		this.datos = datos;
 		this.vl = vl;
 		this.getbEnviar().addClickListener(event -> {
-			if (!this.getIdCodigo().isEmpty()) {
-				if (this.getIdCodigo().getValue().equals("1111")) {
-					this.vl.removeAll();
-					this.vl.add(new Establecer_nueva_contrasenna(vl, datos, correo));
-				}else {
-					Notification.show("El codigo introducino no es el correcto");
-				}
-			}else {
-				Notification.show("Introduzca el codigo que se la ha enviado a su correo electronico");
-			}
+			bEnviar(correo);
 		});
 		
 		this.getInicio().addClickListener(event ->{
-			
-			this.vl.removeAll();
-			this.vl.add(new Pantalla_inicio(this.vl, this.datos));
-			
+			bInicio();
 		});
+	}
+	
+	private void bEnviar(String correo) {
+		if (!this.getIdCodigo().isEmpty()) {
+			if (this.getIdCodigo().getValue().equals("1111")) {
+				this.vl.removeAll();
+				this.vl.add(new Establecer_nueva_contrasenna(vl, datos, correo));
+			}else {
+				Notification.show("El codigo introducino no es el correcto");
+			}
+		}else {
+			Notification.show("Introduzca el codigo que se la ha enviado a su correo electronico");
+		}
+	}
+	
+	private void bInicio() {
+		this.vl.removeAll();
+		this.vl.add(new Pantalla_inicio(this.vl, this.datos));
 	}
 		
 	

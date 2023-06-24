@@ -57,11 +57,11 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
 		this.getLabelSeguidores().setText("Seguidores: " + usuario.seguidor.size());
-		
+
 		int megustas = 0;
-		for(Publicacion publi : usuario.realiza.toArray())
+		for (Publicacion publi : usuario.realiza.toArray())
 			megustas += publi.le_gusta.size();
-		
+
 		this.getLabelMegustas().setText(megustas + " me gustas");
 		this.getImage().setSrc(usuario.getFoto());
 		this.getLabelUsuario().setText(usuario.getUsuario());
@@ -69,21 +69,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
 
 		this.getbDenuncia().addClickListener(event -> {
-			this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
-			this.miUsuario_Registrado = this.cabecera.getDatos()
-					.cargarDatosUsuario(this.cabecera.getUser().getUsuario());
-			boolean flag = true;
-			for (Usuario_Registrado denunciate : this.usuario.denunciante.toArray()) {
-				;
-				if (denunciate.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
-					flag = false;
-				}
-			}
-			if (flag) {
-				this.cabecera.getDatos().denunciarUsuario(miUsuario_Registrado, usuario);
-			} else {
-				Notification.show("Ya has denunciado este usuario");
-			}
+			bDenuncia();
 		});
 		boolean flag = true;
 		for (Usuario_Registrado seguidor : usuario.seguidor.toArray()) {
@@ -101,40 +87,16 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		if (!usuario.getComercial().equalsIgnoreCase("comercial")) {
 
 			this.getSeguirButton().addClickListener(event -> {
-
-				if (this.cabecera.getDatos().segimiento(this.usuario, this.cabecera.getUser()))
-					if (this.getSeguirButton().getText().equals("Seguir")) {
-						this.getSeguirButton().setText("Dejar de seguir");
-						this.cabecera.getDatos().annadirNotificacion("seguir", this.usuario, this.cabecera.getUser(),
-								null);
-						int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) + 1;
-						this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
-					} else {
-						this.getSeguirButton().setText("Seguir");
-						int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) - 1;
-						this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
-						if (this.usuario.getPrivado() == true) {
-							this.cabecera.setPerfilPrivado(
-									new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
-							this.cabecera.getVl().removeAll();
-							this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
-						}
-					}
-
-				// Notification.show("Siguiendo");
+				SeguirButton();
 			});
 
 		} else {
 			this.getSeguirButton().setVisible(false);
 			this.getDivVideos().setHeight("65%");
 		}
-		
-		this.getLayoutSeguidores().addClickListener(e->{
-			
-			this.cabecera.setSeguidoresOtroUsuario(new Ver_seguidores_otro_usuario(this.cabecera, this.usuario));
-			this.cabecera.getVl().removeAll();
-			this.cabecera.getVl().add(this.cabecera.getSeguidoresOtroUsuario());
-			
+
+		this.getLayoutSeguidores().addClickListener(e -> {
+			LayoutSeguidores();
 		});
 
 		listarVideos();
@@ -186,16 +148,16 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 			// "Ninna gritona", "100%", "25%"));
 
 			basededatos.Publicacion[] videos = null;
-			
+
 			videos = this.usuario.realiza.toArray();
-			
+
 			Arrays.sort(videos, new Comparator<Publicacion>() {
-			    public int compare(Publicacion p1, Publicacion p2) {
-			        return Integer.compare(p2.getID(), p1.getID());
-			    }
+				public int compare(Publicacion p1, Publicacion p2) {
+					return Integer.compare(p2.getID(), p1.getID());
+				}
 			});
-			
-			if(videos != null) {
+
+			if (videos != null) {
 				int contador = 0;
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
@@ -241,6 +203,53 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 			}
 
 		}
+	}
+
+	public void bDenuncia() {
+		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
+		this.miUsuario_Registrado = this.cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
+		boolean flag = true;
+		for (Usuario_Registrado denunciate : this.usuario.denunciante.toArray()) {
+			;
+			if (denunciate.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
+				flag = false;
+			}
+		}
+		if (flag) {
+			this.cabecera.getDatos().denunciarUsuario(miUsuario_Registrado, usuario);
+		} else {
+			Notification.show("Ya has denunciado este usuario");
+		}
+	}
+
+	public void SeguirButton() {
+
+		if (this.cabecera.getDatos().segimiento(this.usuario, this.cabecera.getUser()))
+			if (this.getSeguirButton().getText().equals("Seguir")) {
+				this.getSeguirButton().setText("Dejar de seguir");
+				this.cabecera.getDatos().annadirNotificacion("seguir", this.usuario, this.cabecera.getUser(), null);
+				int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) + 1;
+				this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
+			} else {
+				this.getSeguirButton().setText("Seguir");
+				int aux = Integer.valueOf(this.getLabelSeguidores().getText().replace("Seguidores: ", "")) - 1;
+				this.getLabelSeguidores().setText(String.valueOf("Seguidores: " + aux));
+				if (this.usuario.getPrivado() == true) {
+					this.cabecera
+							.setPerfilPrivado(new Ver_perfil_privado__usuario_registrado_(this.cabecera, this.usuario));
+					this.cabecera.getVl().removeAll();
+					this.cabecera.getVl().add(this.cabecera.getPerfilPrivado());
+				}
+			}
+
+		// Notification.show("Siguiendo");
+	}
+
+	public void LayoutSeguidores() {
+		this.cabecera.setSeguidoresOtroUsuario(new Ver_seguidores_otro_usuario(this.cabecera, this.usuario));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getSeguidoresOtroUsuario());
+
 	}
 
 }

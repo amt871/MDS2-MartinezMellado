@@ -20,7 +20,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 	private Usuario_Registrado usuario;
 	private Cabecera__administrador_ cabecera;
 	private MainView inicio;
-	
+
 	public Denuncias_item(Denuncia_Archivada denuncia) {
 		this.getbAceptar().setVisible(false);
 		this.getbPosponer().setVisible(false);
@@ -41,28 +41,15 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.getTextoDescripcion().setText("Comentario denuciado: " + this.comentario.getComentario());
 
 		this.getbPosponer().addClickListener(event -> {
-			this.setVisible(false);
-			if (!ComDenuVist.contains(comentario)) {
-				ComDenuVist.add(comentario);
-			}
+			bPosponerC(ComDenuVist);
 		});
 
 		this.getbAceptar().addClickListener(event -> {
-			this.cabecera.getDatos().retirarDenunciaComentario(comentario);
-			String texto = "El comentario : " + this.comentario.getComentario() + ". Publicado por el usuario: "
-					+ this.comentario.getEs_publicado().getUsuario() + " ha sido borrado a fecha de "
-					+ LocalDate.now().toString() + "por " + this.cabecera.getAdministardor().getUsuario() + ".";
-			this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.comentario.getID()), texto,
-					this.cabecera.getAdministardor());
-			this.cabecera.getDatos().eliminarComentario(comentario);
-			Notification.show("Denuncia procesada");
-			this.setVisible(false);
+			bAceptarC();
 		});
 
 		this.getbRechazar().addClickListener(event -> {
-			this.cabecera.getDatos().retirarDenunciaComentario(comentario);
-			Notification.show("Denuncia rechazada");
-			this.setVisible(false);
+			bRechazaC();
 		});
 
 	}
@@ -80,29 +67,15 @@ public class Denuncias_item extends VistaDenuncias_item {
 				"La publicacion denunciada pertene al usuario : " + this.publicacion.getRealizada().getUsuario());
 
 		this.getbPosponer().addClickListener(event -> {
-			this.setVisible(false);
-			if(!PubDenuVist.contains(publicacion)) {
-				PubDenuVist.add(publicacion);
-			}
+			bPosponerP(PubDenuVist);
 		});
 
 		this.getbAceptar().addClickListener(event -> {
-			this.cabecera.getDatos().retirarDenunciaPublicacion(publicacion);
-			String texto = "La publicación con descripción: " + this.publicacion.getDescripcion()
-					+ ". Publicado por el usuario: " + this.publicacion.getRealizada().getUsuario()
-					+ " ha sido borrada a fecha de " + LocalDate.now().toString() + "por "
-					+ this.cabecera.getAdministardor().getUsuario() + ".";
-			this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.publicacion.getID()), texto,
-					this.cabecera.getAdministardor());
-			this.cabecera.getDatos().eliminarPublicaion(publicacion);
-			Notification.show("Denuncia procesada");
-			this.setVisible(false);
+			bAceptarP();
 		});
 
 		this.getbRechazar().addClickListener(event -> {
-			this.cabecera.getDatos().retirarDenunciaComentario(comentario);
-			Notification.show("Denuncia rechazada");
-			this.setVisible(false);
+			bRechazaP();
 		});
 	}
 
@@ -119,29 +92,93 @@ public class Denuncias_item extends VistaDenuncias_item {
 				+ " ha sido denunciado un total de " + this.usuario.denunciante.size() + " veces");
 
 		this.getbPosponer().addClickListener(event -> {
-			this.setVisible(false);
-			if (!UsrDenuVist.contains(usuario)) {
-				UsrDenuVist.add(usuario);
-			}
+			bPosponerU(UsrDenuVist);
 		});
 
 		this.getbAceptar().addClickListener(event -> {
-			this.cabecera.getDatos().retirarDenunciaUsuario(usuario);
-			String texto = "El usuario: " + this.usuario.getUsuario()
-					+ ". Acumulando en su contra: " + this.usuario.denunciante.size()
-					+ " denuncias, por lo que ha sido bloqueado a fecha de " + LocalDate.now().toString() + " por "
-					+ this.cabecera.getAdministardor().getUsuario() + ".";
-			this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.usuario.getID()), texto,
-					this.cabecera.getAdministardor());
-			this.cabecera.getDatos().bloquearUsuario(usuario, this.cabecera.getAdministardor());
-			Notification.show("Denuncia procesada");
-			this.setVisible(false);
+			bAceptarU();
 		});
 
 		this.getbRechazar().addClickListener(event -> {
-			this.cabecera.getDatos().retirarDenunciaUsuario(this.usuario);
-			Notification.show("Denuncia rechazada");
-			this.setVisible(false);
+			bRechazaU();
 		});
+	}
+
+	private void bPosponerC(ArrayList<Comentario> ComDenuVist) {
+		this.setVisible(false);
+		if (!ComDenuVist.contains(comentario)) {
+			ComDenuVist.add(comentario);
+		}
+	}
+
+	private void bAceptarC() {
+		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
+		String texto = "El comentario : " + this.comentario.getComentario() + ". Publicado por el usuario: "
+				+ this.comentario.getEs_publicado().getUsuario() + " ha sido borrado a fecha de "
+				+ LocalDate.now().toString() + "por " + this.cabecera.getAdministardor().getUsuario() + ".";
+		this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.comentario.getID()), texto,
+				this.cabecera.getAdministardor());
+		this.cabecera.getDatos().eliminarComentario(comentario);
+		Notification.show("Denuncia procesada");
+		this.setVisible(false);
+
+	}
+	
+	private void bRechazaC() {
+		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
+		Notification.show("Denuncia rechazada");
+		this.setVisible(false);
+	}
+	
+	private void bPosponerP(ArrayList<Publicacion> PubDenuVist) {
+		this.setVisible(false);
+		if (!PubDenuVist.contains(publicacion)) {
+			PubDenuVist.add(publicacion);
+		}
+	}
+	
+	private void bAceptarP() {
+		this.cabecera.getDatos().retirarDenunciaPublicacion(publicacion);
+		String texto = "La publicación con descripción: " + this.publicacion.getDescripcion()
+				+ ". Publicado por el usuario: " + this.publicacion.getRealizada().getUsuario()
+				+ " ha sido borrada a fecha de " + LocalDate.now().toString() + "por "
+				+ this.cabecera.getAdministardor().getUsuario() + ".";
+		this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.publicacion.getID()), texto,
+				this.cabecera.getAdministardor());
+		this.cabecera.getDatos().eliminarPublicaion(publicacion);
+		Notification.show("Denuncia procesada");
+		this.setVisible(false);
+
+	}
+	
+	private void bRechazaP() {
+		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
+		Notification.show("Denuncia rechazada");
+		this.setVisible(false);
+	}
+	
+	private void bPosponerU(ArrayList<Usuario_Registrado> UsrDenuVist) {
+		this.setVisible(false);
+		if (!UsrDenuVist.contains(usuario)) {
+			UsrDenuVist.add(usuario);
+		}
+	}
+	
+	private void bAceptarU() {
+		this.cabecera.getDatos().retirarDenunciaUsuario(usuario);
+		String texto = "El usuario: " + this.usuario.getUsuario() + ". Acumulando en su contra: "
+				+ this.usuario.denunciante.size() + " denuncias, por lo que ha sido bloqueado a fecha de "
+				+ LocalDate.now().toString() + " por " + this.cabecera.getAdministardor().getUsuario() + ".";
+		this.cabecera.getDatos().archivarDenuncia(String.valueOf(this.usuario.getID()), texto,
+				this.cabecera.getAdministardor());
+		this.cabecera.getDatos().bloquearUsuario(usuario, this.cabecera.getAdministardor());
+		Notification.show("Denuncia procesada");
+		this.setVisible(false);
+	}
+	
+	private void bRechazaU() {
+		this.cabecera.getDatos().retirarDenunciaUsuario(this.usuario);
+		Notification.show("Denuncia rechazada");
+		this.setVisible(false);
 	}
 }

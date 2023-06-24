@@ -25,8 +25,7 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 		
 		
 		this.getIdBotonVista().addClickListener(event -> {
-			datos.cambiarNotificacion(id);
-			this.setVisible(false);
+			BotonVista(datos, id);
         });
 		
 		this.getIdImagenUsr().addClickListener(event -> {
@@ -34,14 +33,11 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
         });
 		
 		this.getbAceptar().addClickListener(event -> {
-			datos.segimiento(miUsuario, emisor);
-			datos.cambiarNotificacion(id);
-			this.setVisible(false);
+			bAceptar(datos, id, emisor);
         });
 		
 		this.getbRechazar().addClickListener(event -> {
-			datos.cambiarNotificacion(id);
-			this.setVisible(false);
+			bRechazar(id, datos);
         });
 		
 		this.getIdVideoRelacionado().addClickListener(event -> {
@@ -116,5 +112,21 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 		this.cabeceraUserReg.setDetalle(new Vista_detalle__usuario_registrado_(cabeceraUserReg, this.miUsuario, this.publicacion));
 		this.inicio.removeAll();
 		this.inicio.add(this.cabeceraUserReg.getDetalle());
+	}
+	
+	private void BotonVista(BDPrincipal datos, int id) {
+		datos.cambiarNotificacion(id);
+		this.setVisible(false);
+	}
+	
+	private void bAceptar(BDPrincipal datos, int id, Usuario_Registrado emisor) {
+		datos.segimiento(miUsuario, emisor);
+		datos.cambiarNotificacion(id);
+		this.setVisible(false);
+	}
+	
+	private void bRechazar(int id, BDPrincipal datos) {
+		datos.cambiarNotificacion(id);
+		this.setVisible(false);
 	}
 }

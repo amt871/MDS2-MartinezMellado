@@ -73,57 +73,19 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		});
 		
 		this.getDenunciarButton().addClickListener(event -> {
-			boolean flag = true;
-			for (Usuario_Registrado denunciante : this.datos.cargarVideoPoID(publicacion.getID()).es_denunciada.toArray()) {
-				if (denunciante.getUsuario().equals(this.miUsuario.getUsuario())) {
-					
-					flag = false;
-				}
-			}
-			
-			if (flag) {
-				this.datos.denunciarPublicación(this.miUsuario, publicacion);
-			}else{
-				Notification.show("Ya has denunciado esta publicación");
-			}
-			
-			
+			DenunciarButton(publicacion);
 		});
 		
 		this.video = new Video(publicacion.getVideo().replace("src/main/webapp", ""),"100%","90%");
-		
-		
-		//this.video.setWidth("120%");
-		//this.video.setHeight("50%");
-		//Publicacion publicacion = this.datos.cargarVideoPorRuta("src/main/webapp/" + publicacion2);
-		
 		this.getLayoutVideo().add(video);
 		this.getIdNumMg().setText(String.valueOf(publicacion.le_gusta.size()));
 		
 		this.getIdBMeGusta().addClickListener(event -> {
-			Publicacion publicacionAux = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
-			boolean flag = false;
-			for (Usuario_Registrado usuarios : publicacionAux.le_gusta.toArray()) {
-				if (usuarios.getUsuario().equals(miUsuario.getUsuario())) {
-					flag = true;
-				}
-			}
-			if(flag) {
-				Notification.show("Ya le has dado me gusta a esta publicación");
-			}else {
-				this.datos.annadirMeGusta(publicacionAux.getID(), this.miUsuario.getID());
-				this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacionAux);
-				this.getIdNumMg().setText(String.valueOf(Integer.parseInt(this.getIdNumMg().getText()) + 1));
-			}	
-
+			BMeGusta(publicacion);
 		});
 		
 		this.getIdBComentarios().addClickListener(event -> {
-			
-			this.cabeceraUserReg.setDetalle(new Vista_detalle__usuario_registrado_(this.cabeceraUserReg, this.usuario, publicacion));
-			this.cabeceraUserReg.getVl().removeAll();
-			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getDetalle());
-			
+			BComentarios(publicacion);
 		});
 		
 	}
@@ -157,4 +119,47 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		
 	}
 	
+	public void DenunciarButton(Publicacion publicacion) {
+		boolean flag = true;
+		for (Usuario_Registrado denunciante : this.datos.cargarVideoPoID(publicacion.getID()).es_denunciada.toArray()) {
+			if (denunciante.getUsuario().equals(this.miUsuario.getUsuario())) {
+				
+				flag = false;
+			}
+		}
+		
+		if (flag) {
+			this.datos.denunciarPublicación(this.miUsuario, publicacion);
+		}else{
+			Notification.show("Ya has denunciado esta publicación");
+		}
+		
+		
+	}
+	
+	public void BMeGusta(Publicacion publicacion) {
+		Publicacion publicacionAux = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
+		boolean flag = false;
+		for (Usuario_Registrado usuarios : publicacionAux.le_gusta.toArray()) {
+			if (usuarios.getUsuario().equals(miUsuario.getUsuario())) {
+				flag = true;
+			}
+		}
+		if(flag) {
+			Notification.show("Ya le has dado me gusta a esta publicación");
+		}else {
+			this.datos.annadirMeGusta(publicacionAux.getID(), this.miUsuario.getID());
+			this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacionAux);
+			this.getIdNumMg().setText(String.valueOf(Integer.parseInt(this.getIdNumMg().getText()) + 1));
+		}	
+
+	}
+	
+	public void BComentarios(Publicacion publicacion) {
+		
+		this.cabeceraUserReg.setDetalle(new Vista_detalle__usuario_registrado_(this.cabeceraUserReg, this.usuario, publicacion));
+		this.cabeceraUserReg.getVl().removeAll();
+		this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getDetalle());
+		
+	}
 }

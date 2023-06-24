@@ -82,51 +82,18 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			this.getVaadinButton().setEnabled(false);
 		else
 			this.getVaadinButton().addClickListener(e -> {
-
-				Publicacion publicacionAux = this.datos.cargarVideoPoID(this.publicacion.getID());
-				boolean flag = false;
-				for (Usuario_Registrado usuarios : publicacionAux.le_gusta.toArray()) {
-					if (usuarios.getUsuario().equals(miUsuario.getUsuario())) {
-						flag = true;
-					}
-				}
-				if (flag) {
-					Notification.show("Ya le has dado me gusta a esta publicación");
-				} else {
-					this.usuario = this.datos.cargarDatosUsuario(usuario.getUsuario());
-					this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());
-					this.datos.annadirMeGusta(publicacionAux.getID(), this.miUsuario.getID());
-					this.datos.annadirNotificacion("me_gusta", this.usuario, miUsuario, publicacionAux);
-					this.getLabelMeGustas()
-							.setText(String.valueOf(Integer.parseInt(this.getLabelMeGustas().getText()) + 1));
-				}
-
+				bMegusta();
 			});
 
 		this.getLabelMeGustas().setText(String.valueOf(publicacion.le_gusta.size()));
 
 		this.getbAddComentario().addClickListener(event -> {
-			if (this.datos.cargarComentario(this.getCabecera().getUser(), this.publicacion) != null) {
-				Notification.show("Ya has comentado esta publicacion ateriormente");
-			} else {
-				if (addComentario()) {
-					this.datos.annadirNotificacion("comentario", this.usuario, miUsuario,
-							this.publicacion);
-					this.vl.removeAll();
-					this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());
-					addItems();
-				}
-				this.getFieldComentario().clear();
-			}
-
+			bAddComentario();
 		});
 
 		this.getbVerMeGustas().addClickListener(e -> {
 
-			this.cabeceraUserReg
-					.setVerMeGustas(new Ver_me_gustas__otro_usuario_(this.cabeceraUserReg, this.publicacion));
-			this.cabeceraUserReg.getVl().removeAll();
-			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getVerMeGustas());
+			VerMeGustas();
 
 		});
 
@@ -373,5 +340,47 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 
 		this.getLayoutDescripcion().add(new Label(cadena));
 
+	}
+
+	public void bMegusta() {
+		Publicacion publicacionAux = this.datos.cargarVideoPoID(this.publicacion.getID());
+		boolean flag = false;
+		for (Usuario_Registrado usuarios : publicacionAux.le_gusta.toArray()) {
+			if (usuarios.getUsuario().equals(miUsuario.getUsuario())) {
+				flag = true;
+			}
+		}
+		if (flag) {
+			Notification.show("Ya le has dado me gusta a esta publicación");
+		} else {
+			this.usuario = this.datos.cargarDatosUsuario(usuario.getUsuario());
+			this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());
+			this.datos.annadirMeGusta(publicacionAux.getID(), this.miUsuario.getID());
+			this.datos.annadirNotificacion("me_gusta", this.usuario, miUsuario, publicacionAux);
+			this.getLabelMeGustas().setText(String.valueOf(Integer.parseInt(this.getLabelMeGustas().getText()) + 1));
+		}
+
+	}
+
+	public void bAddComentario() {
+
+		if (this.datos.cargarComentario(this.getCabecera().getUser(), this.publicacion) != null) {
+			Notification.show("Ya has comentado esta publicacion ateriormente");
+		} else {
+			if (addComentario()) {
+				this.datos.annadirNotificacion("comentario", this.usuario, miUsuario, this.publicacion);
+				this.vl.removeAll();
+				this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());
+				addItems();
+			}
+			this.getFieldComentario().clear();
+		}
+
+	}
+
+	public void VerMeGustas() {
+		this.cabeceraUserReg.setVerMeGustas(new Ver_me_gustas__otro_usuario_(this.cabeceraUserReg, this.publicacion));
+		this.cabeceraUserReg.getVl().removeAll();
+		this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getVerMeGustas());
 	}
 }

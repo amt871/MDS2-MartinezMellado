@@ -31,14 +31,6 @@ public class BDPrincipal
 		}
 	}
 
-	public void guardarNuevaContrasenna(String aNuevaContrasena, String aUsuario) {
-		try {
-			this.usuariosRegistrados.guardarNuevaContrasenna(aNuevaContrasena, aUsuario);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-	}
-
 	public void nuevaPublicacion(String aDescripcion, String aUbicacion, String aVideo, String aFecha, String aTipo,
 			String aPropietario) {
 		try {
@@ -58,15 +50,6 @@ public class BDPrincipal
 		}
 	}
 
-	public Usuario_Registrado iniciarSesion(String aUser, String aPass) {
-		try {
-			return this.usuariosRegistrados.iniciarSesion(aUser, aPass);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
 	public boolean cambiarContrasenna(String aNuevaContrasenna, String aNombreUsuario) {
 		try {
 			return this.usuariosRegistrados.cambiarContrasenna(aNuevaContrasenna, aNombreUsuario);
@@ -76,7 +59,6 @@ public class BDPrincipal
 		}
 	}
 
-	@Override
 	public boolean registrarse(String aNombre, String aApellidos, String aNomUsuario, String aContrasenna,
 			String aCorreo, Date aFechaNacimiento, String aDescripcion, String aFoto, String aTipo) {
 
@@ -87,51 +69,6 @@ public class BDPrincipal
 			return false;
 		}
 
-	}
-
-	public List buscarUsurios(String aBusqueda) {
-		try {
-			return this.usuariosRegistrados.buscarUsuarios(aBusqueda);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
-	public List cargarVideos() {
-		try {
-			return this.publicaciones.cargarVideos();
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
-	public List listarVideosBusqueda(String cadena) {
-		try {
-			return this.publicaciones.listarVideosBusqueda(cadena);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
-	public List buscarHahsTag(String aBusqueda) {
-		try {
-			return this.hashTag.buscarHahsTag(aBusqueda);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
-		}
-	}
-
-	public boolean comprobarPrivacidad(String aUsuario) {
-		try {
-			return this.usuariosRegistrados.datosUsuario(aUsuario).getPrivado();
-		} catch (Exception e) {
-			// TODO: handle exception
-			return true;
-		}
 	}
 
 	public Usuario_Registrado datosUsuario(String aNombreUsuario) {
@@ -161,15 +98,6 @@ public class BDPrincipal
 			this.notrificaciones.cambiarNotificacion(aNotificacion);
 		} catch (Exception e) {
 			// TODO: handle exception
-		}
-	}
-
-	public List listarVideoBusqueda(String cadena) {
-		try {
-			return this.publicaciones.listarVideosBusqueda(cadena);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
 		}
 	}
 
@@ -208,8 +136,8 @@ public class BDPrincipal
 			return null;
 		}
 	}
-	
-	public List listarUsuariosDenunciados(){
+
+	public List listarUsuariosDenunciados() {
 		try {
 			return this.usuariosRegistrados.listarUsuariosDenunciados();
 		} catch (Exception e) {
@@ -217,7 +145,7 @@ public class BDPrincipal
 			return null;
 		}
 	}
-	
+
 	public List listarComentariosDenunciados() {
 		try {
 			return this.comentario.listarComentariosDenunciados();
@@ -232,15 +160,6 @@ public class BDPrincipal
 			this.denunciaArchivada.ArchivarDenuncia(aElemento, aTipo, encargado);
 		} catch (Exception e) {
 			// TODO: handle exception
-		}
-	}
-
-	public Usuario_Registrado datosUsuarioPerfil() { // no usar, usar cargar usuario
-		try {
-			return this.usuariosRegistrados.datosUsuario(null);
-		} catch (Exception e) {
-			// TODO: handle exception
-			return null;
 		}
 	}
 
@@ -260,12 +179,6 @@ public class BDPrincipal
 			// TODO: handle exception
 			return null;
 		}
-	}
-
-	public List listarDenunciasAdministrador() {
-		// TODO Auto-generated method stub
-		return null;
-		// No usar, usar el otr
 	}
 
 	@Override
@@ -338,7 +251,7 @@ public class BDPrincipal
 	}
 
 	@Override
-	public void añadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
+	public void annadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
 		// TODO Auto-generated method stub
 		try {
 			this.hashTag.añadirPublicacionHashTag(hashtag, publicacion);
@@ -389,16 +302,6 @@ public class BDPrincipal
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-	}
-
-	@Override
-	public List listarVideosBusquedaAdministrador(String aBusqueda) {
-		try {
-			this.publicaciones.listarVideosBusqueda(aBusqueda);
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-		return null;
 	}
 
 	@Override

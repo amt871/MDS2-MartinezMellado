@@ -58,15 +58,12 @@ public class Video_otro_usuario__administrador__item extends VistaVideo_otro_usu
 		
 		this.getbComentarios().addClickListener(e ->{
 			
-			this.cabecera.setDetalle(new Vista_detalle__administrador_(this.cabecera, this.publi));
-			this.cabecera.getVl().removeAll();
-			this.cabecera.getVl().add(this.cabecera.getDetalle());
+			bComentarios();
 			
 		});
 		
 		this.getbEliminar().addClickListener(even ->{
-			this.cabecera.getDatos().eliminarPublicaion(publicacion);
-			this.setVisible(false);
+			bEliminar(publicacion);
 		});
 		
 	}
@@ -85,5 +82,16 @@ public class Video_otro_usuario__administrador__item extends VistaVideo_otro_usu
 				// this.inicio.cambiarPantalla(cabecera);
 			
 
+	}
+	
+	public void bComentarios() {
+		this.cabecera.setDetalle(new Vista_detalle__administrador_(this.cabecera, this.publi));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getDetalle());
+	}
+	
+	public void bEliminar(Publicacion publicacion) {
+		this.cabecera.getDatos().eliminarPublicaion(publicacion);
+		this.setVisible(false);
 	}
 }

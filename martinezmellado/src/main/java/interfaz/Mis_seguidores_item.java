@@ -44,19 +44,11 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 		});
 			
 		this.getbSeguir().addClickListener(event ->{
-			if(datos.segimiento(this.seguidor, this.usuario))
-				if(this.getbSeguir().getText().equals("Seguir")) {
-					this.getbSeguir().setText("Dejar de seguir");
-					datos.annadirNotificacion("seguir", this.seguidor, this.usuario, null);
-				}else {
-					this.getbSeguir().setText("Seguir");
-				}
+			bSeguir(datos);
 		});
 		
 		this.getbEliminar().addClickListener(event ->{
-			datos.segimiento(this.usuario, this.seguidor);
-			Notification.show("El usuario " + this.seguidor + " ha dejado de sueguirle");
-			this.setVisible(false);
+			bEliminar(datos);
 		});
 		
 		this.getFotoUsr().setSrc(this.seguidor.getFoto());
@@ -103,5 +95,22 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 			this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
 
 		}
+	}
+	private void bSeguir(BDPrincipal datos) {
+		if(datos.segimiento(this.seguidor, this.usuario))
+			if(this.getbSeguir().getText().equals("Seguir")) {
+				this.getbSeguir().setText("Dejar de seguir");
+				datos.annadirNotificacion("seguir", this.seguidor, this.usuario, null);
+			}else {
+				this.getbSeguir().setText("Seguir");
+			}
+	}
+	
+	private void bEliminar(BDPrincipal datos) {
+		
+		datos.segimiento(this.usuario, this.seguidor);
+		Notification.show("El usuario " + this.seguidor + " ha dejado de sueguirle");
+		this.setVisible(false);
+		
 	}
 }

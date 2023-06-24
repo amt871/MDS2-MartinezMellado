@@ -76,19 +76,11 @@ public class Configurar_perfil_comercial extends VistaConfigurar_perfil_comercia
 		});
 		
 		this.getbCambiar().addClickListener(event -> {
-			
-			if(this.cambiarFoto()) {
-				this.getCabecera().getbPerfil().click();
-			
-			}
-			
+			bCambiar();
 		});
 		
 		this.getbGuardar().addClickListener(event -> {
-		
-			if(cambiarDatos())
-				this.getCabecera().getbPerfil().click();
-			
+			bGuardar();
 		});
 		
 		this.getbCambioContra().addClickListener(event -> {
@@ -243,6 +235,17 @@ public class Configurar_perfil_comercial extends VistaConfigurar_perfil_comercia
 		
 		return false;
 
+	}
+	private void bCambiar() {
+		if(this.cambiarFoto()) {
+			this.getCabecera().getbPerfil().click();
+		
+		}
+	}
+	
+	private void bGuardar() {
+		if(cambiarDatos())
+			this.getCabecera().getbPerfil().click();
 	}
 
 }

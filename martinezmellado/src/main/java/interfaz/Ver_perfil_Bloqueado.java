@@ -7,10 +7,10 @@ public class Ver_perfil_Bloqueado {
 //	private Label _perfilBloqueadoL;
 //	private ImageIcon _fotoPerfilUsuarioII;
 //	private Label _nombreUsuarioL;
-	public Denuncias_item _denuncias;
-	public Videos_Perfil_bloqueado _unnamed_Videos_Perfil_bloqueado_;
-
-	public void desbloquear() {
-		throw new UnsupportedOperationException();
-	}
+//	public Denuncias_item _denuncias;
+//	public Videos_Perfil_bloqueado _unnamed_Videos_Perfil_bloqueado_;
+//
+//	public void desbloquear() {
+//		throw new UnsupportedOperationException();
+//	}
 }

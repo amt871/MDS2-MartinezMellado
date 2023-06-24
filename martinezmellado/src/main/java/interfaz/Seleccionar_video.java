@@ -7,9 +7,9 @@ public class Seleccionar_video {
 //	private Label _descripcionL;
 //	private TextArea _descripcionTA;
 //	private Button _publicar_video;
-	public Publicar _publicar;
-
-	public void publicar_video() {
-		throw new UnsupportedOperationException();
-	}
+//	public Publicar _publicar;
+//
+//	public void publicar_video() {
+//		throw new UnsupportedOperationException();
+//	}
 }

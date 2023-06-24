@@ -20,11 +20,15 @@ public class Hashtag__no_registrado__item extends VistaHashtag__no_registrado__i
 		
 		this.getbHashtag().addClickListener(event ->{
 			
-			this.cabecera.setHashtags(new Videos_hashtag__no_registrado_(this.hashtag, this.cabecera));
-			this.cabecera.getVl().removeAll();
-			this.cabecera.getVl().add(this.cabecera.getHashtags());
+			bHashtag();
 			
 		});
+	}
+	
+	private void bHashtag() {
+		this.cabecera.setHashtags(new Videos_hashtag__no_registrado_(this.hashtag, this.cabecera));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getHashtags());
 	}
 
 }

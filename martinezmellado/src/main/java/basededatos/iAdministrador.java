@@ -6,12 +6,6 @@ public interface iAdministrador {
 
 	public Administrador iniciarSesionAdministrador(String aUser, String aPass);
 
-	public List cargarVideos();
-
-	public List listarVideosBusquedaAdministrador(String aBusqueda);
-
-	public List buscarUsuarios(String aBusqueda);
-
 	public List buscarHashTag(String aBusqueda);
 
 	public List listarPublicacionesDenunciadas();
@@ -21,10 +15,6 @@ public interface iAdministrador {
 	public List listarComentariosDenunciados();
 
 	public void archivarDenuncia(String aElemento, String aTipo, Administrador encargado);
-
-	public Usuario_Registrado datosUsuarioPerfil();
-
-	public boolean modificarEstadoUsuario(String aNombreUsuario);
 	
 	public void retirarDenunciaComentario(Comentario comentario);
 	
@@ -41,4 +31,16 @@ public interface iAdministrador {
 	public void bloquearUsuario(Usuario_Registrado usuario, Administrador adminstrador);
 	
 	public List listarDenunciasArchivadas();
+	
+	public Usuario_Registrado cargarDatosUsuario(String aNombreUsuario);
+	
+	public List buscarUsuarios(String aBusqueda);
+	
+	public Publicacion cargarVideoPoID(int id);
+	
+	public Comentario cargarComentario(Usuario_Registrado usuario, Publicacion publicacion);
+	
+	public Publicacion[] listarTodasPublicaciones();
+	
+	public Usuario_Registrado[] listarTodosUsuarios();
 }

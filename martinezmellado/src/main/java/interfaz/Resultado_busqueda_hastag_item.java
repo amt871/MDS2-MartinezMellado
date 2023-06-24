@@ -27,12 +27,16 @@ public class Resultado_busqueda_hastag_item extends VistaResultado_busqueda_hast
 		
 		this.getbHashtag().addClickListener(event ->{
 			
-			this.cabecera.setHashtags(new Publicaciones_asociadas_a_un_hastag(this.hashtag, this.cabecera));
-			this.cabecera.getVl().removeAll();
-			this.cabecera.getVl().add(this.cabecera.getHashtags());
+			bHashtag();
 			
 		});
 	
+	}
+	
+	public void bHashtag() {
+		this.cabecera.setHashtags(new Publicaciones_asociadas_a_un_hastag(this.hashtag, this.cabecera));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getHashtags());
 	}
 	
 }

@@ -50,50 +50,22 @@ public class Mi_perfil extends VistaMi_perfil {
 	private BDPrincipal datos;
 	private Scroller scroller;
 	private VerticalLayout vl;
-	//private MainView inicio;
-	//private Configurar configurar;
-	//private Configurar_mi_perfil configPerf;
-
+	
 	public Mi_perfil(MainView vl2, Mi_cabecera mi_cabecera) {
-		// TODO Auto-generated constructor stub
-	//}
 
-	//public basededatos.Usuario_Registrado getUsuario() {
-		//return usuario;
-	//}
-
-	//public void setUsuario(basededatos.Usuario_Registrado usuario) {
-
-		//datos = new basededatos.BDPrincipal();
 		this.datos = mi_cabecera.getDatos();
 		mi_cabecera.setUser(this.datos.cargarDatosUsuario(mi_cabecera.getUser().getUsuario()));
 		this.usuario = mi_cabecera.getUser();
 		this.setCabecera(mi_cabecera);
-		//this.inicio = vl2;
 		
 		this.getbConfigurar().addClickListener(event -> {
 			
-			//this.configurar = new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos());
-			//this.configPerf = new Configurar_mi_perfil(this.inicio, mi_cabecera, this.configurar = new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()));
-			//this.inicio
-			this.getCabecera().getVl().removeAll();
-			//this.getCabecera().getVl().add(this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos()))
-					
-					
-					//);
-			this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos(), mi_cabecera));
-			this.getCabecera().setConfigPerf(new Configurar_mi_perfil(mi_cabecera, this.getCabecera().getConfig()));
-			this.getCabecera().getVl().add(this.getCabecera().getConfigPerf());
+			bConfigurar(mi_cabecera);
 			
 		});
 		
-		//File image = new File("/icons/toktok2.svg");
-		//System.out.println(image.exists());
-		
-		//this.setIdImagen(new Image("localhost:8080"+usuario.getFoto(), "Imagen no encontrada"));
 		this.getIdImagen().setSrc(usuario.getFoto());
 		this.getIdUsuario().setText(this.usuario.getUsuario());
-		//this.getIdNumMgs().setText("20 Me gustas");
 		this.getIdNumSeguidores().setText(this.usuario.seguido.size()+" seguidores");
 		
 		int megustas = 0;
@@ -101,37 +73,29 @@ public class Mi_perfil extends VistaMi_perfil {
 			megustas += publi.le_gusta.size();
 		
 		this.getIdNumMgs().setText(megustas+" me gusta");
-		
-		//System.out.println(this.usuario.getFoto());
-		
+			
 		listarVideos();
 	}
 	
-	public void listarVideos() {
+	private void listarVideos() {
 		
 		scroller = this.getScroller();
 		vl = new VerticalLayout();
 
 		scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
 
-		//scroller.getStyle().set("width", "100%");
-		//scroller.getStyle().set("height", "65%");
+
 
 		scroller.setContent(vl);
-
-		//vl.getStyle().set("width", "100%");
-		//vl.getStyle().set("height", "100%");
-		
-		//vl.getStyle().set("background-color", "black");
 		
 		addItem();
 		
 
 	}
 	
-	public void addItem() {
+	private void addItem() {
 		
-		//System.out.println(this.usuario.realiza.size());
+
 		if(this.usuario.realiza.size()==0) {
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
@@ -140,12 +104,9 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 			vl.setAlignItems(Alignment.CENTER);
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
-			//vl.setHeight("100%");
 			vl.setWidth("100%");
 			
-			//vl.add(new Video("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4"));
-			
-			//vl.add(new Mi_video_item("Usuarios/Juanra1997/videos/2023-06-05T23-00-09.914853900.mp4", "Ninna gritona", "100%", "25%"));
+	
 			
 			Publicacion[] videos = null;
 			
@@ -163,39 +124,27 @@ public class Mi_perfil extends VistaMi_perfil {
 				int contador = 0;
 				int index = 0;
 				ArrayList<HorizontalLayout> array = new ArrayList<HorizontalLayout>();
-				//ArrayList<VistaMi_video> array = new ArrayList<VistaMi_video>();
 				for(int i = videos.length-1; i>-1; i--) {
-					//System.out.println(videos[i].getVideo());
 					if(contador == 0) {
-						//System.out.println(contador);
 						array.add(new HorizontalLayout());
-						//System.out.println("Add horizontal");
 						array.get(index).setJustifyContentMode(JustifyContentMode.CENTER);
 						array.get(index).setAlignItems(Alignment.CENTER);
 						array.get(index).getStyle().set("height", "100%");
 						array.get(index).getStyle().set("width", "100%");
 						array.get(index).getStyle().set("position", "relative");
-						//array.get(index).getStyle().set("overflow", "auto");
+
 						array.get(index).setBoxSizing(BoxSizing.BORDER_BOX);
-//						array.get(index).setPadding(true);
-//						array.get(index).setMargin(false);
-//						array.get(index).setSpacing(false);
-						
-						//array.get(index).getStyle().set("background-color", "black");
 						
 						vl.add(array.get(index));
 					}
 					
 					String titulo = videos[i].getDescripcion().length() > 15 ? videos[i].getDescripcion().substring(0,11)+"..." : videos[i].getDescripcion();
 					
-					array.get(index).add(new Mi_video_item(videos[i], this.getCabecera())/*, "100%", "25%")*/);
-					//array.get(index).add(new)
+					array.get(index).add(new Mi_video_item(videos[i], this.getCabecera()));
 					contador++;
 					if(contador==4) {
 						index ++;
 						contador = 0;
-						//vl.add(array.get(0));
-						//break;
 					}
 					
 				}
@@ -204,6 +153,14 @@ public class Mi_perfil extends VistaMi_perfil {
 			
 		}
 		
+	}
+	
+	private void bConfigurar(Mi_cabecera mi_cabecera) {
+		
+		this.getCabecera().getVl().removeAll();
+		this.getCabecera().setConfig(new Configurar(mi_cabecera.getUser(), mi_cabecera.getDatos(), mi_cabecera));
+		this.getCabecera().setConfigPerf(new Configurar_mi_perfil(mi_cabecera, this.getCabecera().getConfig()));
+		this.getCabecera().getVl().add(this.getCabecera().getConfigPerf());
 	}
 		
 		

@@ -39,8 +39,8 @@ public class Iniciar_sesion extends VistaIniciar_sesion {
 //		throw new UnsupportedOperationException();
 //	}
 
-	
-	public Iniciar_sesion(MainView vl, BDPrincipal datos, Pantalla_inicio pantalla_inicio, Mi_cabecera cabeceraReg2, Cabecera_comercial cabeceraCom) {
+	public Iniciar_sesion(MainView vl, BDPrincipal datos, Pantalla_inicio pantalla_inicio, Mi_cabecera cabeceraReg2,
+			Cabecera_comercial cabeceraCom) {
 
 		// TODO Auto-generated constructor stub
 
@@ -49,7 +49,7 @@ public class Iniciar_sesion extends VistaIniciar_sesion {
 		this.pantInicio = pantalla_inicio;
 		this.cabeceraReg = cabeceraReg2;
 		this.cabeceraCom = cabeceraCom;
-		
+
 		this.getInPass().addKeyPressListener(Key.ENTER, e -> {
 
 			this.getbIniciarSesion().click();
@@ -68,36 +68,16 @@ public class Iniciar_sesion extends VistaIniciar_sesion {
 
 		this.getbIniciarSesion().addClickListener(event -> {
 
-			user = this.iniciarSesionBueno();
-
-			if (user == null)
-				return;
-
-			if (user.getComercial().equals("Normal")) {
-				// this.cabeceraReg = new Mi_cabecera(this.vl, this.datos, this.user);
-
-				this.vl.removeAll();
-				this.cabeceraReg = new Mi_cabecera(this.vl, this.datos, this.user, this.pantInicio);
-				this.cabeceraReg.setPantallaInicio(new Video_otro_usuario(this.vl, this.cabeceraReg));
-				this.vl.add(this.cabeceraReg.getPantallaInicio());
-			} else {
-				
-				this.vl.removeAll();
-				this.cabeceraCom = new Cabecera_comercial(this.vl, this.datos, this.user, this.pantInicio);
-				this.cabeceraCom.setPerfil(new Perfil_comercial(this.cabeceraCom));
-				this.vl.add(this.cabeceraCom.getPerfil());
-				
-			}
+			bIniciarSesion();
 
 		});
-		
-		this.getInicio().addClickListener(event ->{
-			
-			this.vl.removeAll();
-			this.vl.add(this.pantInicio);
-			
+
+		this.getInicio().addClickListener(event -> {
+
+			inicio();
+
 		});
-		
+
 		this.getInUser().focus();
 
 	}
@@ -158,18 +138,47 @@ public class Iniciar_sesion extends VistaIniciar_sesion {
 
 	}
 
-	public void clear() {
+	private void clear() {
 
 		this.getInUser().clear();
 		this.getInPass().clear();
 
 	}
 
-	public void recuperarContrasenna() {
+	private void recuperarContrasenna() {
 
 		this.vl.removeAll();
 		this.vl.add(new Recuperar_Contrasenna(this.datos, this.vl));
 
+	}
+
+	private void bIniciarSesion() {
+		user = this.iniciarSesionBueno();
+
+		if (user == null)
+			return;
+
+		if (user.getComercial().equals("Normal")) {
+			// this.cabeceraReg = new Mi_cabecera(this.vl, this.datos, this.user);
+
+			this.vl.removeAll();
+			this.cabeceraReg = new Mi_cabecera(this.vl, this.datos, this.user, this.pantInicio);
+			this.cabeceraReg.setPantallaInicio(new Video_otro_usuario(this.vl, this.cabeceraReg));
+			this.vl.add(this.cabeceraReg.getPantallaInicio());
+		} else {
+
+			this.vl.removeAll();
+			this.cabeceraCom = new Cabecera_comercial(this.vl, this.datos, this.user, this.pantInicio);
+			this.cabeceraCom.setPerfil(new Perfil_comercial(this.cabeceraCom));
+			this.vl.add(this.cabeceraCom.getPerfil());
+
+		}
+	}
+
+	private void inicio() {
+
+		this.vl.removeAll();
+		this.vl.add(this.pantInicio);
 	}
 
 }

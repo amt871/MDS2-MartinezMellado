@@ -11,7 +11,7 @@ import proyectoMDS.MainView;
 import vistas.VistaMi_cabecera;
 
 public class Mi_cabecera extends VistaMi_cabecera {
-	
+
 	private MainView vl;
 	private BDPrincipal datos;
 	private Usuario_Registrado user;
@@ -35,22 +35,23 @@ public class Mi_cabecera extends VistaMi_cabecera {
 	private Ver_me_gustas__otro_usuario_ verMeGustas;
 	private Ver_seguidores_otro_usuario seguidoresOtroUsuario;
 
-	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user, Pantalla_inicio pInicio/*, Iniciar_sesion iniciar_sesion*/) {
+	public Mi_cabecera(MainView vl, BDPrincipal datos, Usuario_Registrado user,
+			Pantalla_inicio pInicio/* , Iniciar_sesion iniciar_sesion */) {
 		// TODO Auto-generated constructor stub
-		
+
 		this.vl = vl;
 		this.datos = datos;
 		this.user = user;
 		this.pInicio = pInicio;
-		//iniciar_sesion = null;
-		
-		File file = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp");
-		//File file2 = new File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp/tmp.mp4");
-		
-		
-		//if(file2.exists())
-			//file2.delete();
-		if(file.exists()) {
+		// iniciar_sesion = null;
+
+		File file = new File("src/main/webapp/Usuarios/" + this.user.getUsuario() + "/tmp");
+		// File file2 = new
+		// File("src/main/webapp/Usuarios/"+this.user.getUsuario()+"/tmp/tmp.mp4");
+
+		// if(file2.exists())
+		// file2.delete();
+		if (file.exists()) {
 			try {
 				FileUtils.cleanDirectory(file);
 			} catch (IOException e) {
@@ -59,104 +60,57 @@ public class Mi_cabecera extends VistaMi_cabecera {
 			}
 			file.delete();
 		}
-		
-		file = null;
-		
-		this.getbInicio().addClickListener(event -> {
-			
-			
-			if(configPerf != null)
-				configPerf.clear();
-			
-			if(busqueda != null)
-				busqueda.clear();
-			
-			this.pantallaInicio.clear();
-			this.vl.removeAll();
-			this.vl.add(pantallaInicio = new Video_otro_usuario(this.vl, this));
-			
-			
-		});
-		
-		this.getbBusqueda().addClickListener(event ->{
-			
-			if(configPerf != null)
-				configPerf.clear();
-			
-			if(busqueda != null)
-				busqueda.clear();
-			
-			this.pantallaInicio.clear();
-			
-			this.vl.removeAll();
-			this.vl.add(busqueda = new Buscar__usuario_registrado_(this.vl, this));
-			
-		});
-		
-		this.getbPerfil().addClickListener(event -> {
-			
-			if(configPerf != null)
-				configPerf.clear();
-			
-			if(busqueda != null)
-				busqueda.clear();
-			
-			this.pantallaInicio.clear();
-			this.vl.removeAll();
-			this.vl.add(perfil = new Mi_perfil(this.vl, this));
-			
-		});
-		
-		this.getbNotis().addClickListener(event -> {
-			
-			if(configPerf != null)
-				configPerf.clear();
-			
-			if(busqueda != null)
-				busqueda.clear();
-			
-			this.pantallaInicio.clear();
-			
-			this.vl.removeAll();
-			this.vl.add(notis = new Notificaciones(this.vl, this));
-			
-		});
-		
-		this.getbPublicar().addClickListener(event -> {
-			
-			if(configPerf != null)
-				configPerf.clear();
-			
-			if(busqueda != null)
-				busqueda.clear();
-			
-			this.pantallaInicio.clear();
-			
-			this.vl.removeAll();
-			this.vl.add(publicar = new Publicar(this.vl, this));
-			
-		});
-		
 
-		//this.vl.removeAll();
-		//this.vl.add(pantallaInicio = new Video_otro_usuario(this.vl, this));
-		
+		file = null;
+
+		this.getbInicio().addClickListener(event -> {
+
+			bInicio();
+
+		});
+
+		this.getbBusqueda().addClickListener(event -> {
+
+			bBusqueda();
+
+		});
+
+		this.getbPerfil().addClickListener(event -> {
+
+			bPerfil();
+
+		});
+
+		this.getbNotis().addClickListener(event -> {
+
+			bNotis();
+
+		});
+
+		this.getbPublicar().addClickListener(event -> {
+
+			bPublicar();
+
+		});
+
+		// this.vl.removeAll();
+		// this.vl.add(pantallaInicio = new Video_otro_usuario(this.vl, this));
+
 	}
-	
-	
+
 	public void cerrarSesion() {
-	
-		if(configPerf != null)
+
+		if (configPerf != null)
 			configPerf.clear();
-		
-		if(busqueda != null)
+
+		if (busqueda != null)
 			busqueda.clear();
-		
-		if(busquedaUsuarios != null)
+
+		if (busquedaUsuarios != null)
 			busquedaUsuarios.clear();
-		
+
 		this.pantallaInicio.clear();
-		
+
 		this.user = null;
 		this.pantallaInicio = null;
 		this.busqueda = null;
@@ -175,19 +129,17 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.hashtags = null;
 		this.verMeGustas = null;
 		this.seguidoresOtroUsuario = null;
-		
+
 		this.vl.removeAll();
 		this.vl.add(this.pInicio);
-		
+
 		this.pInicio.clear();
-		
-		/*try {
-			this.finalize();
-		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		
+
+		/*
+		 * try { this.finalize(); } catch (Throwable e) { // TODO Auto-generated catch
+		 * block e.printStackTrace(); }
+		 */
+
 	}
 
 	public MainView getVl() {
@@ -270,128 +222,166 @@ public class Mi_cabecera extends VistaMi_cabecera {
 		this.siguiendo = siguiendo;
 	}
 
-
 	public Notificaciones getNotis() {
 		return notis;
 	}
-
 
 	public void setNotis(Notificaciones notis) {
 		this.notis = notis;
 	}
 
-
 	public Publicar getPublicar() {
 		return publicar;
 	}
-
 
 	public void setPublicar(Publicar publicar) {
 		this.publicar = publicar;
 	}
 
-
 	public Pantalla_inicio getpInicio() {
 		return pInicio;
 	}
-
 
 	public void setpInicio(Pantalla_inicio pInicio) {
 		this.pInicio = pInicio;
 	}
 
-
 	public Ver_perfil__usuario_registrado_ getPerfilPublico() {
 		return perfilPublico;
 	}
-
 
 	public void setPerfilPublico(Ver_perfil__usuario_registrado_ perfilPublico) {
 		this.perfilPublico = perfilPublico;
 	}
 
-
 	public Ver_perfil_privado__usuario_registrado_ getPerfilPrivado() {
 		return perfilPrivado;
 	}
-
 
 	public void setPerfilPrivado(Ver_perfil_privado__usuario_registrado_ perfilPrivado) {
 		this.perfilPrivado = perfilPrivado;
 	}
 
-
 	public Cambiar_contrasenna getCambiarContra() {
 		return cambiarContra;
 	}
-
 
 	public void setCambiarContra(Cambiar_contrasenna cambiarContra) {
 		this.cambiarContra = cambiarContra;
 	}
 
-
 	public Vista_detalle__usuario_registrado_ getDetalle() {
 		return detalle;
 	}
-
 
 	public void setDetalle(Vista_detalle__usuario_registrado_ detalle) {
 		this.detalle = detalle;
 	}
 
-
 	public Buscar_usuario__usuario_registrado_ getBusquedaUsuarios() {
 		return busquedaUsuarios;
 	}
-
 
 	public void setBusquedaUsuarios(Buscar_usuario__usuario_registrado_ busquedaUsuarios) {
 		this.busquedaUsuarios = busquedaUsuarios;
 	}
 
-
 	public Buscar_hashtag__usuario_registrado_ getBusquedaHashtag() {
 		return busquedaHashtag;
 	}
-
 
 	public void setBusquedaHashtag(Buscar_hashtag__usuario_registrado_ busquedaHashtag) {
 		this.busquedaHashtag = busquedaHashtag;
 	}
 
-
 	public Video_hashtag__usuario_registrado_ getHashtags() {
 		return hashtags;
 	}
 
-
 	public void setHashtags(Video_hashtag__usuario_registrado_ hashtags) {
 		this.hashtags = hashtags;
 	}
-
 
 	public void setVerMeGustas(Ver_me_gustas__otro_usuario_ verMeGustas) {
 		// TODO Auto-generated method stub
 		this.verMeGustas = verMeGustas;
 	}
 
-
 	public Ver_me_gustas__otro_usuario_ getVerMeGustas() {
 		return verMeGustas;
 	}
-
 
 	public void setSeguidoresOtroUsuario(Ver_seguidores_otro_usuario ver_seguidores_otro_usuario) {
 		// TODO Auto-generated method stub
 		this.seguidoresOtroUsuario = ver_seguidores_otro_usuario;
 	}
 
-
 	public Ver_seguidores_otro_usuario getSeguidoresOtroUsuario() {
 		return seguidoresOtroUsuario;
 	}
+
+	private void bInicio() {
+
+		if (configPerf != null)
+			configPerf.clear();
+
+		if (busqueda != null)
+			busqueda.clear();
+
+		this.pantallaInicio.clear();
+		this.vl.removeAll();
+		this.vl.add(pantallaInicio = new Video_otro_usuario(this.vl, this));
+	}
 	
+	private void bBusqueda() {
+		if (configPerf != null)
+			configPerf.clear();
+
+		if (busqueda != null)
+			busqueda.clear();
+
+		this.pantallaInicio.clear();
+
+		this.vl.removeAll();
+		this.vl.add(busqueda = new Buscar__usuario_registrado_(this.vl, this));
+	}
 	
+	private void bPerfil() {
+		if (configPerf != null)
+			configPerf.clear();
+
+		if (busqueda != null)
+			busqueda.clear();
+
+		this.pantallaInicio.clear();
+		this.vl.removeAll();
+		this.vl.add(perfil = new Mi_perfil(this.vl, this));
+	}
 	
+	private void bNotis() {
+		if (configPerf != null)
+			configPerf.clear();
+
+		if (busqueda != null)
+			busqueda.clear();
+
+		this.pantallaInicio.clear();
+
+		this.vl.removeAll();
+		this.vl.add(notis = new Notificaciones(this.vl, this));
+	}
+	
+	private void bPublicar() {
+		if (configPerf != null)
+			configPerf.clear();
+
+		if (busqueda != null)
+			busqueda.clear();
+
+		this.pantallaInicio.clear();
+
+		this.vl.removeAll();
+		this.vl.add(publicar = new Publicar(this.vl, this));
+	}
+
 }

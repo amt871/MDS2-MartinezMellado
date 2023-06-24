@@ -24,16 +24,7 @@ public class Recuperar_Contrasenna extends VistaRecuperar_contrasenna {
 		this.vl = vl;
 
 		this.getbEnviar().addClickListener(event -> {
-			if (!this.getIdCorreo().isEmpty()) {
-				if (this.datos.cargarUsuarioCorreo(this.getIdCorreo().getValue()) != null) {
-					this.vl.removeAll();
-					this.vl.add(new Confirmar_codigo(datos, vl, this.getIdCorreo().getValue()));
-				} else {
-					Notification.show("El correo electronico introducido no pertenece a ningun usuario");
-				}
-			} else {
-				Notification.show("Introduzca su correo electronico en el campo de texto");
-			}
+			bEnviar();
 		});
 		
 		this.getInicio().addClickListener(event ->{
@@ -42,6 +33,21 @@ public class Recuperar_Contrasenna extends VistaRecuperar_contrasenna {
 			this.vl.add(new Pantalla_inicio(this.vl, this.datos));
 			
 		});
+	}
+	
+	public void bEnviar() {
+		
+		if (!this.getIdCorreo().isEmpty()) {
+			if (this.datos.cargarUsuarioCorreo(this.getIdCorreo().getValue()) != null) {
+				this.vl.removeAll();
+				this.vl.add(new Confirmar_codigo(datos, vl, this.getIdCorreo().getValue()));
+			} else {
+				Notification.show("El correo electronico introducido no pertenece a ningun usuario");
+			}
+		} else {
+			Notification.show("Introduzca su correo electronico en el campo de texto");
+		}
+		
 	}
 
 }

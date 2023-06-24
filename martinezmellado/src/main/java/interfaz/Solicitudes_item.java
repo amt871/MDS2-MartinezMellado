@@ -6,13 +6,13 @@ public class Solicitudes_item {
 //	private ImageButton _imagenUsuarioIB;
 //	private Label _nombreUsuarioL;
 //	private Label _nSeguidoresL;
-	public Solicitudes _solicitudes;
-
-	public void aceptar() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void rechazar() {
-		throw new UnsupportedOperationException();
-	}
+//	public Solicitudes _solicitudes;
+//
+//	public void aceptar() {
+//		throw new UnsupportedOperationException();
+//	}
+//
+//	public void rechazar() {
+//		throw new UnsupportedOperationException();
+//	}
 }
