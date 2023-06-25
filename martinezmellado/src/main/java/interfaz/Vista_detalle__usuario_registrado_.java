@@ -179,9 +179,9 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 
 		for (int i = 0; i < comentarios.length; i++)
 			if (this.cabeceraUserReg != null)
-				vl.add(new Comentario_item(comentarios[i], this.cabeceraUserReg));
+				vl.add(new Comentario__usuario_registrado__item(comentarios[i], this.cabeceraUserReg));
 			else
-				vl.add(new Comentario_item(comentarios[i], this.cabeceraCom));
+				vl.add(new Comentario__comercial__item(comentarios[i], this.cabeceraCom));
 
 	}
 
