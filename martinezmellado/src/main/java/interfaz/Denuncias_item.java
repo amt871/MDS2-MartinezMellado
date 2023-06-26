@@ -114,14 +114,14 @@ public class Denuncias_item extends VistaDenuncias_item {
 		});
 	}
 
-	private void bPosponerC() {
+	public void bPosponerC() {
 		this.setVisible(false);
 		if (!this.cabecera.getComDenuVist().contains(comentario)) {
 			this.cabecera.getComDenuVist().add(comentario);
 		}
 	}
 
-	private void bAceptarC() {
+	public void bAceptarC() {
 		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
 		String texto = "El comentario : " + this.comentario.getComentario() + ". Publicado por el usuario: "
 				+ this.comentario.getEs_publicado().getUsuario() + " ha sido borrado a fecha de "
@@ -134,20 +134,20 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 	}
 	
-	private void bRechazaC() {
+	public void bRechazaC() {
 		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
 	}
 	
-	private void bPosponerP() {
+	public void bPosponerP() {
 		this.setVisible(false);
 		if (!this.cabecera.getPubDenuVist().contains(this.publicacion)) {
 			this.cabecera.getPubDenuVist().add(this.publicacion);
 		}
 	}
 	
-	private void bAceptarP() {
+	public void bAceptarP() {
 		this.cabecera.getDatos().retirarDenunciaPublicacion(publicacion);
 		String texto = "La publicacion con descripcion: " + this.publicacion.getDescripcion()
 				+ ". Publicado por el usuario: " + this.publicacion.getRealizada().getUsuario()
@@ -161,20 +161,20 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 	}
 	
-	private void bRechazaP() {
+	public void bRechazaP() {
 		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
 	}
 	
-	private void bPosponerU() {
+	public void bPosponerU() {
 		this.setVisible(false);
 		if (!this.cabecera.getUsrDenuVist().contains(usuario)) {
 			this.cabecera.getUsrDenuVist().add(usuario);
 		}
 	}
 	
-	private void bAceptarU() {
+	public void bAceptarU() {
 		this.cabecera.getDatos().retirarDenunciaUsuario(usuario);
 		String texto = "El usuario: " + this.usuario.getUsuario() + ". Acumulando en su contra: "
 				+ this.usuario.denunciante.size() + " denuncias, por lo que ha sido bloqueado a fecha de "
@@ -186,20 +186,20 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.setVisible(false);
 	}
 	
-	private void bRechazaU() {
+	public void bRechazaU() {
 		this.cabecera.getDatos().retirarDenunciaUsuario(this.usuario);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
 	}
 	
-	private void verPerfilAdministrador() {
+	public void verPerfilAdministrador() {
 		this.cabecera.setPerfil(
 				new Ver_perfil__administrador_(this.cabecera, this.usuario));
 		this.cabecera.getVl().removeAll();
 		this.cabecera.getVl().add(this.cabecera.getPerfil());
 	}
 	
-	private void verPublicacion() {
+	public void verPublicacion() {
 		this.cabecera.setDetalle(new Vista_detalle__administrador_(this.cabecera, this.publicacion));
 		this.cabecera.getVl().removeAll();
 		this.cabecera.getVl().add(this.cabecera.getDetalle());
