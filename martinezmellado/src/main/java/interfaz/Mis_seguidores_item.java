@@ -34,6 +34,7 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 	Usuario_Registrado seguidor;
 	private Mi_cabecera cabeceraUserReg;
 	private MainView inicio;
+	private boolean seguido;
 	
 	public Mis_seguidores_item(Usuario_Registrado seguido,Usuario_Registrado miUsuario,  BDPrincipal datos,  Mi_cabecera mi_cabecera, MainView inicio) {
 		this.usuario = datos.cargarDatosUsuario(miUsuario.getUsuario());
@@ -57,14 +58,14 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 		this.getFotoUsr().setSrc(this.seguidor.getFoto());
 		this.getnSeguidoresUsr().setText(this.seguidor.seguidor.size() + " seguidores");
 		this.getnUsuario().setText(this.seguidor.getUsuario());
-		boolean flag = true;
-		for (Usuario_Registrado usr : this.seguidor.seguidor.toArray()) {
-			if (usr.getUsuario().equals(this.usuario.getUsuario())) {
-				flag = false;
+		this.seguido = false;
+		for (Usuario_Registrado usr : this.usuario.seguido.toArray()) {
+			if (usr.getUsuario().equals(this.seguidor.getUsuario())) {
+				this.seguido = true;
 			}
 		}
 		//System.out.println(flag);
-		if(flag) {
+		if(!this.seguido) {
 			this.getbSeguir().setText("Seguir");
 		}else {
 			this.getbSeguir().setText("Dejar de seguir");
@@ -100,18 +101,14 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 		}
 	}
 	private void bSeguir(BDPrincipal datos) {
-		boolean seguido = false;
-		for (Usuario_Registrado seguidorAux : this.seguidor.seguido.toArray()) {
-			if (seguidorAux.getUsuario().equals(this.usuario.getUsuario())) {
-				seguido = true;
-			}
-		}
-		if (!this.seguidor.getPrivado() || seguido) {
+		if (!this.seguidor.getPrivado() || this.seguido) {
 			if(datos.segimiento(this.seguidor, this.usuario))
 				if(this.getbSeguir().getText().equals("Seguir")) {
+					this.seguido = true;
 					this.getbSeguir().setText("Dejar de seguir");
 					datos.annadirNotificacion("seguir", this.seguidor, this.usuario, null);
 				}else {
+					this.seguido = false;
 					this.getbSeguir().setText("Seguir");
 				}
 		}else {
