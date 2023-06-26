@@ -139,6 +139,7 @@ public class Buscar__usuario_registrado_ extends VistaBuscar__usuario_registrado
 				array.get(array.size() - 1).getStyle().set("position", "relative");
 				array.get(array.size() - 1).setAlignItems(Alignment.CENTER);
 				array.get(array.size() - 1).setJustifyContentMode(JustifyContentMode.CENTER);
+				array.get(array.size() - 1).setBoxSizing(BoxSizing.BORDER_BOX);
 				vlVideos.add(array.get(array.size() - 1));
 			}
 			if (array.size() == 0)

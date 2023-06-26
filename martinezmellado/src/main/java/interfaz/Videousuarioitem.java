@@ -25,9 +25,10 @@ public class Videousuarioitem extends VistaVideousuarioitem{
 		
 		this.getDivVideo().add(this.video);
 		this.getButtonUsuario().setText(this.propietario.getUsuario());
-		
+		this.getStyle().set("width", "25%");
 		//this.video.setHeight("25%");
-		this.video.setWidth("25%");
+		this.video.setMaxWidth("25%");
+		this.video.setMaxHeight("100%");
 		
 		this.getButtonUsuario().addClickListener(event -> {
 			

@@ -17,7 +17,7 @@ export class VistaVideousuarioitem extends LitElement {
   render() {
     return html`
 <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
- <vaadin-horizontal-layout id="divVideo" style="width: 100%; height: 95%; align-items: center; justify-content: center;"></vaadin-horizontal-layout>
+ <vaadin-horizontal-layout id="divVideo" style="align-items: center; justify-content: center; max-width: 90%; max-height: 90%;"></vaadin-horizontal-layout>
  <vaadin-button id="buttonUsuario" style="height: 5%;">
    Button 
  </vaadin-button>

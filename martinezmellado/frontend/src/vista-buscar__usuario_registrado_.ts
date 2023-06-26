@@ -22,7 +22,7 @@ export class VistaBuscar__usuario_registrado_ extends LitElement {
   <div id="divCabecera" style="height: 100%; width: 100%;"></div>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout style="height: 95%; width: 100%;">
-  <vaadin-vertical-layout style="width: 70%; height: 95%; justify-content: center; align-items: center;">
+  <vaadin-vertical-layout style="width: 70%; height: 100%; justify-content: center; align-items: center;">
    <vaadin-vertical-layout style="justify-content: center; width: 100%; height: 45%; align-items: center; flex-shrink: 1; flex-grow: 0;">
     <label style="padding-bottom: var(--lumo-space-s);">Usuarios recientes</label>
     <div id="divUsuarios" style="width: 100%; height: 100%; position: relative;"></div>
