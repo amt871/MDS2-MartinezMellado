@@ -30,8 +30,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.getTextoDescripcion().setText(denuncia.getTipo());
 	}
 
-	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Comentario comentario,
-			ArrayList<Comentario> ComDenuVist) {
+	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Comentario comentario) {
 
 		this.cabecera = cabecera;
 		this.inicio = inicio;
@@ -42,7 +41,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.getTextoDescripcion().setText("Comentario denuciado: " + this.comentario.getComentario());
 
 		this.getbPosponer().addClickListener(event -> {
-			bPosponerC(ComDenuVist);
+			bPosponerC();
 		});
 
 		this.getbAceptar().addClickListener(event -> {
@@ -59,8 +58,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 	}
 
-	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Publicacion publicacion,
-			ArrayList<Publicacion> PubDenuVist) {
+	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Publicacion publicacion) {
 
 		this.cabecera = cabecera;
 		this.inicio = inicio;
@@ -72,7 +70,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 				"La publicacion denunciada pertene al usuario : " + this.publicacion.getRealizada().getUsuario());
 
 		this.getbPosponer().addClickListener(event -> {
-			bPosponerP(PubDenuVist);
+			bPosponerP();
 		});
 
 		this.getbAceptar().addClickListener(event -> {
@@ -88,8 +86,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		});
 	}
 
-	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Usuario_Registrado usuario,
-			ArrayList<Usuario_Registrado> UsrDenuVist) {
+	public Denuncias_item(Cabecera__administrador_ cabecera, MainView inicio, Usuario_Registrado usuario) {
 
 		this.cabecera = cabecera;
 		this.inicio = inicio;
@@ -101,7 +98,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 				+ " ha sido denunciado un total de " + this.usuario.denunciante.size() + " veces");
 
 		this.getbPosponer().addClickListener(event -> {
-			bPosponerU(UsrDenuVist);
+			bPosponerU();
 		});
 
 		this.getbAceptar().addClickListener(event -> {
@@ -117,10 +114,10 @@ public class Denuncias_item extends VistaDenuncias_item {
 		});
 	}
 
-	private void bPosponerC(ArrayList<Comentario> ComDenuVist) {
+	private void bPosponerC() {
 		this.setVisible(false);
-		if (!ComDenuVist.contains(comentario)) {
-			ComDenuVist.add(comentario);
+		if (!this.cabecera.getComDenuVist().contains(comentario)) {
+			this.cabecera.getComDenuVist().add(comentario);
 		}
 	}
 
@@ -143,10 +140,10 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.setVisible(false);
 	}
 	
-	private void bPosponerP(ArrayList<Publicacion> PubDenuVist) {
+	private void bPosponerP() {
 		this.setVisible(false);
-		if (!PubDenuVist.contains(publicacion)) {
-			PubDenuVist.add(publicacion);
+		if (!this.cabecera.getPubDenuVist().contains(this.publicacion)) {
+			this.cabecera.getPubDenuVist().add(this.publicacion);
 		}
 	}
 	
@@ -170,10 +167,10 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.setVisible(false);
 	}
 	
-	private void bPosponerU(ArrayList<Usuario_Registrado> UsrDenuVist) {
+	private void bPosponerU() {
 		this.setVisible(false);
-		if (!UsrDenuVist.contains(usuario)) {
-			UsrDenuVist.add(usuario);
+		if (!this.cabecera.getUsrDenuVist().contains(usuario)) {
+			this.cabecera.getUsrDenuVist().add(usuario);
 		}
 	}
 	
