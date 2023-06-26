@@ -152,7 +152,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 	
 	private void bAceptarP() {
 		this.cabecera.getDatos().retirarDenunciaPublicacion(publicacion);
-		String texto = "La publicación con descripción: " + this.publicacion.getDescripcion()
+		String texto = "La publicacion con descripcion: " + this.publicacion.getDescripcion()
 				+ ". Publicado por el usuario: " + this.publicacion.getRealizada().getUsuario()
 				+ " ha sido borrada a fecha de " + LocalDate.now().toString() + "por "
 				+ this.cabecera.getAdministardor().getUsuario() + ".";

@@ -25,8 +25,8 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 	private Button usuarioButton;
 	@Id("imageButton")
 	private Image imageButton;
-	@Id("idUbicación")
-	private Label idUbicación;
+	@Id("idUbicacion")
+	private Label idUbicacion;
 	@Id("IdFecha")
 	private Label idFecha;
 	@Id("idDescripcion")
@@ -80,12 +80,12 @@ public class VistaVideo_otro_usuario_item extends LitTemplate {
 		this.imageButton = imageButton;
 	}
 
-	public Label getIdUbicación() {
-		return idUbicación;
+	public Label getIdUbicacion() {
+		return idUbicacion;
 	}
 
-	public void setIdUbicación(Label idUbicación) {
-		this.idUbicación = idUbicación;
+	public void setIdUbicacion(Label idUbicacion) {
+		this.idUbicacion = idUbicacion;
 	}
 
 	public Label getIdFecha() {

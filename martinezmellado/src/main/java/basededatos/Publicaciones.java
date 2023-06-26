@@ -113,7 +113,7 @@ public class Publicaciones {
 		MartinezMelladoMDSPersistentManager.instance().disposePersistentManager();
 	}
 
-	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) throws PersistentException {
+	public void denunciarPublicacion(Usuario_Registrado usuario, Publicacion publicacion) throws PersistentException {
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
 			Publicacion auxPublicacion = PublicacionDAO.loadPublicacionByORMID(publicacion.getORMID());

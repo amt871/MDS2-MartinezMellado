@@ -158,7 +158,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 						this.array.get(i).getStyle().set("width", "100%");
 						this.array.get(i).getImageButton().setSrc(videosPublicidad.get(indPubli).getRealizada().getFoto());
 						this.array.get(i).getLabelUsuario().setText(videosPublicidad.get(indPubli).getRealizada().getUsuario());
-						this.array.get(i).getIdUbicación().setText(videosPublicidad.get(indPubli).getUbicacion());
+						this.array.get(i).getIdUbicacion().setText(videosPublicidad.get(indPubli).getUbicacion());
 						this.array.get(i).getIdFecha().setText(videosPublicidad.get(indPubli).getFecha().toString());
 						this.array.get(i).getIdDescripcion().setText("PUBLICIDAD\n" +videosPublicidad.get(indPubli).getDescripcion());
 						this.array.get(i).getIdNumMg().setText(String.valueOf(videosPublicidad.get(indPubli).le_gusta.size()));
@@ -177,7 +177,7 @@ public class Video_otro_usuario extends VistaVideo_otro_usuario {
 						this.array.get(i).getStyle().set("width", "100%");
 						this.array.get(i).getImageButton().setSrc(videos.get(indVideo).getRealizada().getFoto());
 						this.array.get(i).getLabelUsuario().setText(videos.get(indVideo).getRealizada().getUsuario());
-						this.array.get(i).getIdUbicación().setText(videos.get(indVideo).getUbicacion());
+						this.array.get(i).getIdUbicacion().setText(videos.get(indVideo).getUbicacion());
 						this.array.get(i).getIdFecha().setText(videos.get(indVideo).getFecha().toString());
 						this.array.get(i).getIdDescripcion().setText(videos.get(indVideo).getDescripcion());
 						this.array.get(i).getIdNumMg().setText(String.valueOf(videos.get(indVideo).le_gusta.size()));

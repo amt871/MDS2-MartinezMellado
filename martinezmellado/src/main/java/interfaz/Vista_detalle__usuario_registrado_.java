@@ -53,9 +53,6 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 	private Usuario_Registrado miUsuario;
 	private Usuario_Registrado usuario;
 
-	private final String codigoHashtag = "AS0]kMrHs++T|ig]rkXU";
-	private final String codigoMention = "=5iY~HYqmGV6qHoDHxY0";
-
 	public Vista_detalle__usuario_registrado_(Mi_cabecera cabeceraUserReg, Usuario_Registrado usuario,
 			Publicacion publicacion) {
 		// TODO Auto-generated constructor stub
@@ -351,7 +348,7 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			}
 		}
 		if (flag) {
-			Notification.show("Ya le has dado me gusta a esta publicación");
+			Notification.show("Ya le has dado me gusta a esta publicacion");
 		} else {
 			this.usuario = this.datos.cargarDatosUsuario(usuario.getUsuario());
 			this.publicacion = this.datos.cargarVideoPoID(this.publicacion.getID());

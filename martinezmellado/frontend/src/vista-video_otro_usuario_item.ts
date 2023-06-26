@@ -29,7 +29,7 @@ export class VistaVideo_otro_usuario_item extends LitElement {
   </vaadin-horizontal-layout>
   <vaadin-horizontal-layout theme="spacing" style="width: 100%; align-items: center; justify-content: center; padding-top: var(--lumo-space-l); padding-bottom: var(--lumo-space-l);">
    <vaadin-vertical-layout theme="spacing" style="align-items: center; justify-content: center; width: 100%; padding-left: var(--lumo-space-xl);">
-    <label id="idUbicación" style="align-self: center; flex-grow: 0; flex-shrink: 1;">Ubicación</label>
+    <label id="idUbicacion" style="align-self: center; flex-grow: 0; flex-shrink: 1;">Ubicación</label>
    </vaadin-vertical-layout>
    <vaadin-vertical-layout theme="spacing" style="width: 100%; align-items: center; justify-content: center; padding-right: var(--lumo-space-xl);">
     <label id="IdFecha" style="flex-grow: 0; flex-shrink: 1;">Fecha de la publicación </label>

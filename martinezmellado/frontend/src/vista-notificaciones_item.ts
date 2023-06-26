@@ -22,7 +22,7 @@ export class VistaNotificaciones_item extends LitElement {
   <label id="idNombreUsuario" style="align-self: center; height: 10%;">Nombre de usuario</label>
  </vaadin-vertical-layout>
  <vaadin-horizontal-layout theme="spacing" style="width: 100%;">
-  <label id="idTextoNotificación" style="align-self: center;">Texto de la notificacion</label>
+  <label id="idTextoNotificacion" style="align-self: center;">Texto de la notificacion</label>
  </vaadin-horizontal-layout>
  <vaadin-vertical-layout theme="spacing" style="width: 100%; align-self: center;">
   <img id="idVideoRelacionado" style="width: 40%; height: 15%;" src="icons/video.png">
