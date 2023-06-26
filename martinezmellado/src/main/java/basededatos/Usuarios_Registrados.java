@@ -108,8 +108,9 @@ public class Usuarios_Registrados {
 			Usuario_RegistradoDAO.save(nuevo);
 
 			t.commit();
-
 			
+			flag = true;
+
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();

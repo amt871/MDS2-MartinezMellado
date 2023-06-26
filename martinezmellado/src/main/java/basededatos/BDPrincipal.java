@@ -66,7 +66,9 @@ public class BDPrincipal
 			return this.usuariosRegistrados.registrarse(aNombre, aApellidos, aNomUsuario, aContrasenna, aCorreo,
 					aFechaNacimiento, aDescripcion, aFoto, aTipo);
 		} catch (PersistentException e) {
+			e.printStackTrace();
 			return false;
+			
 		}
 
 	}
