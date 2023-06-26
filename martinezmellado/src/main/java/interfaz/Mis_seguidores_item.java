@@ -123,7 +123,7 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 				}
 			}
 			if (flag) {
-				this.cabeceraUserReg.getDatos().annadirNotificacion("seguir", this.seguidor, this.seguidor , null);
+				this.cabeceraUserReg.getDatos().annadirNotificacion("seguir", this.seguidor, this.usuario , null);
 			}
 		}
 		
