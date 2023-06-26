@@ -54,9 +54,9 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 
 	public Ver_perfil__usuario_registrado_(Mi_cabecera cabecera, Usuario_Registrado usuario) {
 
-		this.miUsuario_Registrado = cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
+		this.miUsuario_Registrado = cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
 		this.getLabelSeguidores().setText("Seguidores: " + this.miUsuario_Registrado.seguidor.size());
 
 		int megustas = 0;
@@ -66,7 +66,7 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getLabelMegustas().setText(megustas + " me gustas");
 		this.getImage().setSrc(this.miUsuario_Registrado.getFoto());
 		this.getLabelUsuario().setText(this.miUsuario_Registrado.getUsuario());
-		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(this.miUsuario_Registrado.getUsuario());
+		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
 
 		this.getbDenuncia().addClickListener(event -> {
 			bDenuncia();
