@@ -1,8 +1,11 @@
 package interfaz;
 
+import java.util.List;
+
 import com.vaadin.flow.component.notification.Notification;
 
 import basededatos.BDPrincipal;
+import basededatos.Notificacion;
 import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
 import vistas.VistaMis_seguidores_item;
@@ -97,13 +100,36 @@ public class Mis_seguidores_item extends VistaMis_seguidores_item {
 		}
 	}
 	private void bSeguir(BDPrincipal datos) {
-		if(datos.segimiento(this.seguidor, this.usuario))
-			if(this.getbSeguir().getText().equals("Seguir")) {
-				this.getbSeguir().setText("Dejar de seguir");
-				datos.annadirNotificacion("seguir", this.seguidor, this.usuario, null);
-			}else {
-				this.getbSeguir().setText("Seguir");
+		boolean seguido = false;
+		for (Usuario_Registrado seguidorAux : this.seguidor.seguido.toArray()) {
+			if (seguidorAux.getUsuario().equals(this.usuario.getUsuario())) {
+				seguido = true;
 			}
+		}
+		if (!this.seguidor.getPrivado() || seguido) {
+			if(datos.segimiento(this.seguidor, this.usuario))
+				if(this.getbSeguir().getText().equals("Seguir")) {
+					this.getbSeguir().setText("Dejar de seguir");
+					datos.annadirNotificacion("seguir", this.seguidor, this.usuario, null);
+				}else {
+					this.getbSeguir().setText("Seguir");
+				}
+		}else {
+			boolean flag = true;
+			List<Notificacion> listaNotificaciones = this.cabeceraUserReg.getDatos().listarNitificaciones(this.seguidor.getUsuario());
+			for (Notificacion notificacion : listaNotificaciones) {
+				if(notificacion.getTipo().equals("seguir")) {
+					if (notificacion.getUsuarioOrigen().equals(this.usuario.getUsuario())) {
+						flag = false;
+						Notification.show("El usuario ya tiene una solicitud de seguimiento tuya");
+					}
+				}
+			}
+			if (flag) {
+				this.cabeceraUserReg.getDatos().annadirNotificacion("seguir", this.seguidor, this.seguidor , null);
+			}
+		}
+		
 	}
 	
 	private void bEliminar(BDPrincipal datos) {
