@@ -27,7 +27,8 @@ import org.orm.PersistentException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 
-import basededatos.*;
+import basededatos.BDPrincipal;
+import basededatos.Usuario_Registrado;
 import elemental.json.Json;
 import proyectoMDS.MainView;
 
