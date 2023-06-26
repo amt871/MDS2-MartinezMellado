@@ -72,8 +72,8 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 			bDenuncia();
 		});
 		boolean flag = true;
-		for (Usuario_Registrado seguidor : this.miUsuario_Registrado.seguidor.toArray()) {
-			if (seguidor.getUsuario().equals(miUsuario_Registrado.getUsuario())) {
+		for (Usuario_Registrado seguidor : this.miUsuario_Registrado.seguido.toArray()) {
+			if (seguidor.getUsuario().equals(this.usuario.getUsuario())) {
 				flag = false;
 			}
 		}
