@@ -66,6 +66,9 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 
 			File file = new File("src/main/webapp//Usuarios/" + usuarioARegistrar.getNombre());
 			File videos = new File("src/main/webapp/Usuarios/" + usuarioARegistrar.getNombre() + "/videos");
+			
+			file.mkdir();
+			videos.mkdir();
 
 			file = null;
 			videos = null;
@@ -77,6 +80,7 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 					usuarioARegistrar.getComercial())) {
 
 				Notification.show("No se ha podido registrar el usuario");
+				return;
 				
 			} else
 
