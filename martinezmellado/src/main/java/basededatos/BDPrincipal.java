@@ -256,7 +256,7 @@ public class BDPrincipal
 	public void annadirPublicacionHashTag(String hashtag, Publicacion publicacion) {
 		// TODO Auto-generated method stub
 		try {
-			this.hashTag.añadirPublicacionHashTag(hashtag, publicacion);
+			this.hashTag.annadirPublicacionHashTag(hashtag, publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
 	    }

@@ -160,7 +160,7 @@ public class Registro extends VistaRegistro {
 		}
 		
 		if(this.getIdContrasenna().getValue().length()!=12) {
-			Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+			Notification.show("La contrasenna tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
 			return;
 		}
 			
@@ -175,7 +175,7 @@ public class Registro extends VistaRegistro {
 		}
 		
 		if(contMayus<2 || contMinus<2) {
-			Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+			Notification.show("La contrasenna tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
 			return;
 		}
 		//int contDigits=0;
