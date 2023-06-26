@@ -39,40 +39,7 @@ import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
 import vistas.VistaRegistro;
 
 public class Registro extends VistaRegistro {
-//	private TextField_ _nombreTF;
-//	private Label_ _nombreB;
-//	private TextField_ _apellidosTF;
-//	private Label_ _apellidosL;
-//	private TextField_ _usuarioTF;
-//	private Label _usuarioL;
-//	private TextField _contrasenaTF;
-//	private Label _contrasenaL;
-//	private TextFiled _correoTF;
-//	private TextField _fechaDeNacimientoTF;
-//	private Label _fechaDeNacimientoL;
-//	private TextField _descripcionTF;
-//	private Label _descripcionL;
-//	private Button _selecccionarB;
-//	private Label _fotoL;
-//	private CheckBox _usuarioComercial;
-//	private Button _registrarseB;
-//	private Label _esloganL;
-//	private Label _nombreAppL;
-//	private ImageIcon _logoII;
-//	public Pantalla_inicio _pantalla_inicio;
-//	public Cabecera_usuario_no_registrado _cabecera_usuario_no_registrado;
-//	public Confirmar_correo _confirmar_correo;
-//
-//	public void confirmar_correo() {
-//		throw new UnsupportedOperationException();
-//	}
 
-/*	BDPrincipal datos;
-	String pathImage;
-	MemoryBuffer memoryBuffer;// = new MemoryBuffer();
-	InputStream fileData;
-//	Usuario_Registrado usuarioARegistrar;
-	Object[] cosas;*/
 	
 	private MainView vl;
 	//private Pantalla_inicio inicio;
@@ -246,61 +213,13 @@ public class Registro extends VistaRegistro {
 		this.getUsrComBool().clear();
 		this.getIdImagen().getElement().setPropertyJson("files", Json.createArray());
 
-//USUARIO A REGISTRAR, FILEDATA		
-
-		/*if (fileData != null)
-			cosas[2] = fileData;
-		else
-			cosas[2] = null;
-
-		cosas[0] = true;*/
 		
 		String codigo = String.valueOf((int)Math.floor((Math.random()*(9999-1000+1))+1000));
 		
 		System.out.println(codigo);
 		System.out.println(usuarioARegistrar.getCorreo());
 		
-		/*try
-	    {
-			
-			JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-			
-			Properties properties = new Properties();
-			properties.put("mail.smtp.host", "smtp.gmail.com");
-			properties.put("mail.smtp.port", "465");
-			properties.put("mail.smtp.ssl.enable", "true");
-
-			mailSender.setJavaMailProperties(properties);
-			
-			mailSender.setUsername("martinezmelladonoreply@gmail.com");
-			mailSender.setPassword("MartinezMellado11");
-			
-			MimeMessage message = mailSender.createMimeMessage();
-			MimeMessageHelper helper = new MimeMessageHelper(message, true);
-			
-			helper.setFrom("martinezmelladonoreply@gmail.com");
-			helper.setSubject("CodigoRegistro");
-			helper.setText(codigo, true); // true to activate multipart
-			helper.addTo(usuarioARegistrar.getCorreo());
-			
-			mailSender.send(message);
-			
-			/*Email email = new SimpleEmail();
-			email.setHostName("smtp.gmail.com");
-			email.setSmtpPort(465);
-			email.setAuthenticator(new DefaultAuthenticator("martinezmelladonoreply@gmail.com", "MartinezMellado11"));
-			email.setSSLOnConnect(true);
-			email.setFrom("martinezmelladonoreply@gmail.com");
-			email.setSubject("CodigoRegistro");
-			email.setMsg(codigo);
-			email.addTo(usuarioARegistrar.getCorreo());
-			email.send();*/
-			
-		/*}
-	    catch (Exception e) {
-	      e.printStackTrace();
-	    }*/
-
+		
 		this.vl.removeAll();
 		this.vl.add(confCorr = new Confirmar_correo(this.vl, usuarioARegistrar, this.fileData, this.datos, this.pantalla_inicio));
 		/*try {
