@@ -31,10 +31,6 @@ public class Administrar extends VistaAdministrar {
 	private VerticalLayout vl;
 	private BDPrincipal datos;
 	private Cabecera__administrador_ cabecera;
-	private ArrayList<Comentario> ComDenuVist = new ArrayList<Comentario>();
-	private ArrayList<Publicacion> PubDenuVist = new ArrayList<Publicacion>();
-	private ArrayList<Usuario_Registrado> UsrDenuVist = new ArrayList<Usuario_Registrado>();
-
 	public Administrar(Cabecera__administrador_ cabecera__administrador_) {
 
 		this.setCabecera(cabecera__administrador_);
@@ -115,8 +111,7 @@ public class Administrar extends VistaAdministrar {
 
 					if (tipo == 0 && contCom < ComDenu.size()) {
 
-						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), ComDenu.get(contCom),
-								this.ComDenuVist));
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), ComDenu.get(contCom)));
 						vl.add(array.get(cont));
 						cont++;
 						contCom++;
@@ -126,8 +121,7 @@ public class Administrar extends VistaAdministrar {
 					} 
 					if (tipo == 1 && contPub < PubDenu.size()) {
 
-						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), PubDenu.get(contPub),
-								this.PubDenuVist));
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), PubDenu.get(contPub)));
 						vl.add(array.get(cont));
 						cont++;
 						contPub++;
@@ -137,8 +131,7 @@ public class Administrar extends VistaAdministrar {
 					} 
 					if (tipo == 2 && contUsr < UsrDenu.size()) {
 
-						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), UsrDenu.get(contUsr),
-								this.UsrDenuVist));
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), UsrDenu.get(contUsr)));
 						vl.add(array.get(cont));
 						cont++;
 						contUsr++;
@@ -157,7 +150,7 @@ public class Administrar extends VistaAdministrar {
 		}else {
 			vl.removeAll();
 			
-			int tamT = this.ComDenuVist.size() + this.PubDenuVist.size() + this.UsrDenuVist.size();
+			int tamT = this.cabecera.getComDenuVist().size() + this.cabecera.getPubDenuVist().size() + this.cabecera.getUsrDenuVist().size();
 
 			
 			int contCom = 0;
@@ -182,10 +175,9 @@ public class Administrar extends VistaAdministrar {
 
 				for (int i = 0; i < tamT;) {
 
-					if (tipo == 0 && contCom < this.ComDenuVist.size()) {
+					if (tipo == 0 && contCom < this.cabecera.getComDenuVist().size()) {
 
-						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.ComDenuVist.get(contCom),
-								this.ComDenuVist));
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.cabecera.getComDenuVist().get(contCom)));
 						vl.add(array.get(cont));
 						cont++;
 						contCom++;
@@ -193,10 +185,9 @@ public class Administrar extends VistaAdministrar {
 						i++;
 						continue;
 					} 
-					if (tipo == 1 && contPub < this.PubDenuVist.size()) {
+					if (tipo == 1 && contPub < this.cabecera.getPubDenuVist().size()) {
 
-						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.PubDenuVist.get(contPub),
-								this.PubDenuVist));
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.cabecera.getPubDenuVist().get(contPub)));
 						vl.add(array.get(cont));
 						cont++;
 						contPub++;
@@ -204,10 +195,9 @@ public class Administrar extends VistaAdministrar {
 						i++;
 						continue;
 					} 
-					if (tipo == 2 && contUsr < this.UsrDenuVist.size()) {
+					if (tipo == 2 && contUsr < this.cabecera.getUsrDenuVist().size()) {
 
-						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.UsrDenuVist.get(contUsr),
-								this.UsrDenuVist));
+						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.cabecera.getUsrDenuVist().get(contUsr)));
 						vl.add(array.get(cont));
 						cont++;
 						contUsr++;

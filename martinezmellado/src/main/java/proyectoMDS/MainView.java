@@ -65,7 +65,7 @@ public class MainView extends VerticalLayout {
 		this.removeAll();
 		
 		
-		int select = 1;
+		int select = 0;
 		switch(select) {
 
 		case 0:

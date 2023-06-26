@@ -1,7 +1,12 @@
 package interfaz;
 
+import java.util.ArrayList;
+
 import basededatos.Administrador;
 import basededatos.BDPrincipal;
+import basededatos.Comentario;
+import basededatos.Publicacion;
+import basededatos.Usuario_Registrado;
 import proyectoMDS.MainView;
 import vistas.VistaCabecera__administrador_;
 
@@ -48,6 +53,10 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 	private Busqueda_usuarios__administrador_ busquedaUsuarios;
 	private Busqueda_hastag__administrador_ busquedaHashtag;
 	private Publicaciones_asociadas_a_un_hastag hashtags;
+	private ArrayList<Comentario> ComDenuVist = new ArrayList<Comentario>();
+	private ArrayList<Publicacion> PubDenuVist = new ArrayList<Publicacion>();
+	private ArrayList<Usuario_Registrado> UsrDenuVist = new ArrayList<Usuario_Registrado>();
+
 
 	
 	public Cabecera__administrador_(MainView vl, BDPrincipal datos,
@@ -204,6 +213,30 @@ public class Cabecera__administrador_ extends VistaCabecera__administrador_{
 
 	public void setHashtags(Publicaciones_asociadas_a_un_hastag hashtags) {
 		this.hashtags = hashtags;
+	}
+
+	public ArrayList<Comentario> getComDenuVist() {
+		return ComDenuVist;
+	}
+
+	public void setComDenuVist(ArrayList<Comentario> comDenuVist) {
+		ComDenuVist = comDenuVist;
+	}
+
+	public ArrayList<Publicacion> getPubDenuVist() {
+		return PubDenuVist;
+	}
+
+	public void setPubDenuVist(ArrayList<Publicacion> pubDenuVist) {
+		PubDenuVist = pubDenuVist;
+	}
+
+	public ArrayList<Usuario_Registrado> getUsrDenuVist() {
+		return UsrDenuVist;
+	}
+
+	public void setUsrDenuVist(ArrayList<Usuario_Registrado> usrDenuVist) {
+		UsrDenuVist = usrDenuVist;
 	}
 	
 	
