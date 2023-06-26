@@ -58,7 +58,7 @@ public class Iniciar_sesion__administrador_ extends VistaIniciar_sesion__adminis
 			}
 			
 			if(this.getInPass().isEmpty()) {
-				Notification.show("Introduce la contraseña");
+				Notification.show("Introduce la contrasenna");
 				return;
 			}
 			

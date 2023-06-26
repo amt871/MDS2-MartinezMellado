@@ -59,7 +59,7 @@ public class Hashtags {
 	    return aux;
 	}
 	///Borrar el de arriba, no nos pasemos
-	public void añadirPublicacionHashTag(  String hashtag, Publicacion publicacion ) throws PersistentException {
+	public void annadirPublicacionHashTag(  String hashtag, Publicacion publicacion ) throws PersistentException {
 	    PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 	    try {
 	        	Hashtag aux = HashtagDAO.loadHashtagByQuery("hashtag= '" + hashtag + "'" , null);

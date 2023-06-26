@@ -41,7 +41,7 @@ public class Establecer_nueva_contrasenna extends VistaEstablecer_nueva_contrase
 		}else if (this.getIdPass1().getValue().equals(this.getIdPass2().getValue())){
 			
 			if(this.getIdPass1().getValue().length()!=12) {
-				Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+				Notification.show("La contrasenna tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
 				return;
 			}
 				
@@ -56,7 +56,7 @@ public class Establecer_nueva_contrasenna extends VistaEstablecer_nueva_contrase
 			}
 			
 			if(contMayus<2 || contMinus<2) {
-				Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+				Notification.show("La contrasenna tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
 				return;
 			}
 			
@@ -65,7 +65,7 @@ public class Establecer_nueva_contrasenna extends VistaEstablecer_nueva_contrase
 			this.vl.removeAll();
 			this.vl.add(new Pantalla_inicio(vl));
 		} else {
-			Notification.show("Las contraseñas no coinciden");
+			Notification.show("Las contrasennas no coinciden");
 		}
 	}
 	
