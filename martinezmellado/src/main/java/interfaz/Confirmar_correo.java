@@ -64,6 +64,12 @@ public class Confirmar_correo extends VistaConfirmar_correo {
 			// Notification.show("Correo confirmado correctamente");
 
 
+			File file = new File("src/main/webapp//Usuarios/" + usuarioARegistrar.getNombre());
+			File videos = new File("src/main/webapp/Usuarios/" + usuarioARegistrar.getNombre() + "/videos");
+
+			file = null;
+			videos = null;
+			
 			if (!datos.registrarse(usuarioARegistrar.getNombre(), usuarioARegistrar.getApellido(),
 					usuarioARegistrar.getUsuario(), usuarioARegistrar.getContrasenna(), usuarioARegistrar.getCorreo(),
 					usuarioARegistrar.getFechaNacimiento(), usuarioARegistrar.getDescripcion(),

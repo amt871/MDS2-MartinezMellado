@@ -85,13 +85,6 @@ public class Usuarios_Registrados {
 		boolean flag = false;
 		try {
 
-//			Usuario_Registrado u = Usuario_RegistradoDAO.loadUsuario_RegistradoByQuery("usuario='" + aNomUsuario + "'",
-//					null);
-//
-//			if (u != null) {
-//				return;
-//			}
-
 			Usuario_Registrado nuevo = new Usuario_Registrado();
 
 			LocalDate fechaNacimientoLocalDate = aFechaNaciemiento.toInstant().atZone(ZoneId.systemDefault())
@@ -116,17 +109,7 @@ public class Usuarios_Registrados {
 
 			t.commit();
 
-			File file = new File("src/main/webapp//Usuarios/" + aNomUsuario);
-			File videos = new File("src/main/webapp/Usuarios/" + aNomUsuario + "/videos");
-
-			// System.out.println("Ruta del usuario: "+file.getAbsolutePath());
-
-			/* System.out.println("Se crea el directorio del usuario: "+ */file.mkdir()/* ) */;
-			/* System.out.println("Se crea el directorio de videos: "+ */videos.mkdir()/* ) */;
-
-			file = null;
-			videos = null;
-			flag = true;
+			
 		} catch (Exception e) {
 			t.rollback();
 			e.printStackTrace();

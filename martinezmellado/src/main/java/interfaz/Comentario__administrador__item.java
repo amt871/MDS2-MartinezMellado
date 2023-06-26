@@ -31,7 +31,7 @@ public class Comentario__administrador__item extends VistaComentario__administra
 		this.comentario = cabecera.getDatos().cargarComentario(this.usuario, cabecera.getDatos().cargarVideoPoID(Integer.valueOf(comentario.getPublicacion())));
 		// TODO Auto-generated constructor stub
 		
-		this.getImage().setSrc("Usuarios/"+comentario.getAutor()+"/imagen.jpg");
+		this.getImage().setSrc(comentario.getEs_publicado().getFoto());
 		this.getLabelcomentario().setText(comentario.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");
