@@ -17,47 +17,9 @@ public class Comentario_item extends VistaComentario_item {
 	private Comentario comentario;
 	private Cabecera_usuario_no_registrado cabeceraNoReg;
 	
-	public Comentario_item(Comentario comentario, Mi_cabecera cabecera) {
-		
-		this.cabeceraUserReg = cabecera;
-		this.miUsuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(this.cabeceraUserReg.getUser().getUsuario());
-		this.usuario = this.cabeceraUserReg.getDatos().cargarDatosUsuario(comentario.getAutor());
-		this.comentario = this.cabeceraUserReg.getDatos().cargarComentario(this.usuario, this.cabeceraUserReg.getDatos().cargarVideoPoID(Integer.valueOf(comentario.getPublicacion())));
-		// TODO Auto-generated constructor stub
-		
-		this.getImgUser().addClickListener(event -> {
-			verPerfilPropietario();
-		});
-		
-		this.getImgUser().setSrc(comentario.getEs_publicado().getFoto());
-		this.getLabelComentario().setText(comentario.getComentario());
-		this.getStyle().set("width", "100%");
-		this.getStyle().set("height", "20%");
-		//this.getStyle().set("position", "relative");
-		
-		this.getbDenunciar().addClickListener(event -> {
-			Usuario_Registrado miUsr = cabecera.getDatos().cargarDatosUsuario(cabecera.getUser().getUsuario());
-			Usuario_Registrado usr = cabecera.getDatos().cargarDatosUsuario(comentario.getAutor());
-			Publicacion publi = cabecera.getDatos().cargarVideoPoID(Integer.valueOf(comentario.getPublicacion()));
-			Comentario aux = cabecera.getDatos().cargarComentario(usr, publi);
-			
-			boolean flag = true;
-			for (Usuario_Registrado denunciante : aux.es_denunciada.toArray()){
-				if (denunciante.getUsuario().equals(miUsr.getUsuario())) {
-					flag = false;
-				}
-			}
-			
-			
-			if (flag) {
-				cabecera.getDatos().denunciarComentario(miUsr, comentario);
-			}else{
-				Notification.show("Ya has denunciado este comentario");
-			}
-		});
-	}
 	
-	public Comentario_item(Comentario comentario2, Cabecera_comercial cabeceraCom) {
+	
+	/*public Comentario_item(Comentario comentario2, Cabecera_comercial cabeceraCom) {
 		// TODO Auto-generated constructor stub
 		this.cabeceraCom = cabeceraCom;
 		this.miUsuario = this.cabeceraCom.getDatos().cargarDatosUsuario(this.cabeceraCom.getUser().getUsuario());
@@ -93,9 +55,9 @@ public class Comentario_item extends VistaComentario_item {
 				Notification.show("Ya has denunciado este comentario");
 			}
 		});
-	}
+	}*/
 	
-	public Comentario_item(Comentario comentario2, Cabecera_usuario_no_registrado cabecera) {
+	/*public Comentario_item(Comentario comentario2, Cabecera_usuario_no_registrado cabecera) {
 		// TODO Auto-generated constructor stub
 		
 		//this.cabeceraCom = cabeceraCom;
@@ -116,28 +78,8 @@ public class Comentario_item extends VistaComentario_item {
 		this.getStyle().set("height", "20%");
 		//this.getStyle().set("position", "relative");
 		
-		/*this.getbDenunciar().addClickListener(event -> {
-			Usuario_Registrado miUsr = cabeceraCom.getDatos().cargarDatosUsuario(cabeceraCom.getUser().getUsuario());
-			Usuario_Registrado usr = cabeceraCom.getDatos().cargarDatosUsuario(comentario2.getAutor());
-			Publicacion publi = cabeceraCom.getDatos().cargarVideoPoID(Integer.valueOf(comentario2.getPublicacion()));
-			Comentario aux = cabeceraCom.getDatos().cargarComentario(usr, publi);
-			
-			boolean flag = true;
-			for (Usuario_Registrado denunciante : aux.es_denunciada.toArray()){
-				if (denunciante.getUsuario().equals(miUsr.getUsuario())) {
-					flag = false;
-				}
-			}
-			
-			
-			if (flag) {
-				cabeceraCom.getDatos().denunciarComentario(miUsr, comentario2);
-			}else{
-				Notification.show("Ya has denunciado este comentario");
-			}
-		});*/
 		this.getbDenunciar().setVisible(false);
-	}
+	}*/
 
 	private void verPerfilPropietario() {
 		if (this.usuario.getUsuario().equals(this.miUsuario.getUsuario())) {

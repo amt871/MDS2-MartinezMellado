@@ -40,6 +40,26 @@ public class Establecer_nueva_contrasenna extends VistaEstablecer_nueva_contrase
 			Notification.show("Rellene los dos campos");
 		}else if (this.getIdPass1().getValue().equals(this.getIdPass2().getValue())){
 			
+			if(this.getIdPass1().getValue().length()!=12) {
+				Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+				return;
+			}
+				
+			int contMayus=0;
+			int contMinus=0;
+			
+			for(int i = 0; i<this.getIdPass1().getValue().length(); i++) {
+				if(Character.isUpperCase(this.getIdPass1().getValue().charAt(i)))
+					contMayus++;
+				if(Character.isLowerCase(this.getIdPass1().getValue().charAt(i)))
+					contMinus++;
+			}
+			
+			if(contMayus<2 || contMinus<2) {
+				Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+				return;
+			}
+			
 			Usuario_Registrado aux = this.datos.cargarUsuarioCorreo(this.correo);
 			this.datos.cambiarContrasenna(this.getIdPass1().getValue(), aux.getUsuario());
 			this.vl.removeAll();

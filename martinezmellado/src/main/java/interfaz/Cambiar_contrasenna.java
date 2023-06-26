@@ -85,12 +85,34 @@ public class Cambiar_contrasenna extends VistaCambiar_contrasenna{
 		
 		}
 		
-		if(this.getInPass().getValue().equals(this.getInPassRepeat().getValue())) {
+		if(this.getInPass().getValue().length()!=12) {
+			Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+			return false;
+		}
+			
+		int contMayus=0;
+		int contMinus=0;
+		
+		for(int i = 0; i<this.getInPass().getValue().length(); i++) {
+			if(Character.isUpperCase(this.getInPass().getValue().charAt(i)))
+				contMayus++;
+			if(Character.isLowerCase(this.getInPass().getValue().charAt(i)))
+				contMinus++;
+		}
+		
+		if(contMayus<2 || contMinus<2) {
+			Notification.show("La contraseña tiene que tener:\n1. 12 caracteres\n2. Al menos 2 minusculas\n3. Al menos 2 mayusculas");
+			return false;
+		}
+		
+		if(!this.getInPass().getValue().equals(this.getInPassRepeat().getValue())) {
 			return datos.cambiarContrasenna(this.getInPass().getValue(), this.usuario.getUsuario());
 		} else {
 			Notification.show("Las contrasennas no coinciden");
 			return false;
 		}
+		
+		
 
 	}
 	

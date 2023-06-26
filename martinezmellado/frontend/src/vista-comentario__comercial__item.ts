@@ -14,12 +14,21 @@ export class VistaComentario__comercial__item extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout theme="" style="width: 100%; height: 100%; align-items: center; justify-content: flex-start;" src="">
- <img style="height: 90%;" src="../../resources/icons/user.svg">
- <vaadin-horizontal-layout style="height: 100%; width: 100%; align-self: center; justify-content: center; align-items: center;">
-  <label>Texto comentario</label>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; position: relative;">
+ <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center;">
+  <vaadin-horizontal-layout style="width: 20%; height: 100%;">
+   <img style="max-width: 100%; max-height: 100%;" id="imgUser">
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout style="width: 60%; height: 100%; align-items: center; margin-left: var(--lumo-space-s);">
+   <label id="labelComentario">Comentario</label>
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout style="height: 100%; width: 20%; justify-content: center; align-items: center;">
+   <vaadin-button id="bDenunciar">
+     Denunciar 
+   </vaadin-button>
+  </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
-</vaadin-horizontal-layout>
+</vaadin-vertical-layout>
 `;
   }
 

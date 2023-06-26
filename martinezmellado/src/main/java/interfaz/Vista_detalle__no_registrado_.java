@@ -99,7 +99,7 @@ public class Vista_detalle__no_registrado_ extends VistaVista_detalle__no_regist
 		Comentario[] comentarios = this.publicacion.tiene.toArray();
 
 		for (int i = 0; i < comentarios.length; i++)
-			vl.add(new Comentario_item(comentarios[i], this.cabecera));
+			vl.add(new Comentario__no_registrado__item(comentarios[i], this.cabecera));
 
 	}
 

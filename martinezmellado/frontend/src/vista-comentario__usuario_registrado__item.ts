@@ -18,23 +18,18 @@ export class VistaComentario__usuario_registrado__item extends LitElement {
 
   render() {
     return html`
-<vaadin-vertical-layout style="width: 100%; height: 100%;">
- <vaadin-horizontal-layout theme="spacing" style="width: 100%; height: 100%; align-items: center; justify-content: center;">
-  <iron-icon id="idFotoAutor" style="width: 20%; height: 100%;" icon="lumo:user"></iron-icon>
-  <vaadin-horizontal-layout id="IdTextoComentario" style="height: 100%; width: 100%; align-items: center; justify-content: center;">
-   <vaadin-vertical-layout style="align-items: flex-start; justify-content: center; padding-right: var(--lumo-space-s); padding-left: var(--lumo-space-s); width: 100%; height: 100%;">
-    <vaadin-scroller style="width: 100%; height: 100%;">
-     <label>Comentario usuario: Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo Texto de ejemplo </label>
-    </vaadin-scroller>
-   </vaadin-vertical-layout>
-   <vaadin-vertical-layout theme="spacing" style="justify-content: center; align-items: center; height: 100%; margin-right: var(--lumo-space-s);">
-    <vaadin-button id="idMegusta">
-      Me gusta 
-    </vaadin-button>
-    <vaadin-button id="IdDenunciar">
-      Denunciar 
-    </vaadin-button>
-   </vaadin-vertical-layout>
+<vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center; position: relative;">
+ <vaadin-horizontal-layout style="width: 100%; height: 100%; align-items: center;">
+  <vaadin-horizontal-layout style="width: 20%; height: 100%;">
+   <img style="max-width: 100%; max-height: 100%;" id="imgUser">
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout style="width: 60%; height: 100%; align-items: center; margin-left: var(--lumo-space-s);">
+   <label id="labelComentario">Comentario</label>
+  </vaadin-horizontal-layout>
+  <vaadin-horizontal-layout style="height: 100%; width: 20%; justify-content: center; align-items: center;">
+   <vaadin-button id="bDenunciar">
+     Denunciar 
+   </vaadin-button>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
 </vaadin-vertical-layout>
