@@ -129,9 +129,9 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 		}
 		
 		if (flag) {
-			this.datos.denunciarPublicación(this.miUsuario, publicacion);
+			this.datos.denunciarPublicacion(this.miUsuario, publicacion);
 		}else{
-			Notification.show("Ya has denunciado esta publicación");
+			Notification.show("Ya has denunciado esta publicacion");
 		}
 		
 		
@@ -146,7 +146,7 @@ public class Video_otro_usuario_item extends VistaVideo_otro_usuario_item {
 			}
 		}
 		if(flag) {
-			Notification.show("Ya le has dado me gusta a esta publicación");
+			Notification.show("Ya le has dado me gusta a esta publicacion");
 		}else {
 			this.datos.annadirMeGusta(publicacionAux.getID(), this.miUsuario.getID());
 			this.datos.annadirNotificacion("me_gusta", usuario, miUsuario, publicacionAux);

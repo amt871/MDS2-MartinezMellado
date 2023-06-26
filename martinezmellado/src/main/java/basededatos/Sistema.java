@@ -135,7 +135,7 @@ public class Sistema implements iVer_perfil_publico__usuario_registrado_, iVer_p
 		return false;
 	}
 	@Override
-	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) {
+	public void denunciarPublicacion(Usuario_Registrado usuario, Publicacion publicacion) {
 		// TODO Auto-generated method stub
 		
 	}

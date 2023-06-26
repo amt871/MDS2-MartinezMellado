@@ -257,7 +257,7 @@ public class BDPrincipal
 			this.hashTag.añadirPublicacionHashTag(hashtag, publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
-		}
+	    }
 	}
 
 	@Override
@@ -285,10 +285,10 @@ public class BDPrincipal
 	}
 
 	@Override
-	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion) {
+	public void denunciarPublicacion(Usuario_Registrado usuario, Publicacion publicacion) {
 		// TODO Auto-generated method stub
 		try {
-			this.publicaciones.denunciarPublicación(usuario, publicacion);
+			this.publicaciones.denunciarPublicacion(usuario, publicacion);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

@@ -21,8 +21,8 @@ public class VistaNotificaciones_item extends LitTemplate {
 
     @Id("idNombreUsuario")
 	private Label idNombreUsuario;
-	@Id("idTextoNotificación")
-	private Label idTextoNotificación;
+	@Id("idTextoNotificacion")
+	private Label idTextoNotificacion;
 	@Id("idVideoRelacionado")
 	private Image idVideoRelacionado;
 	@Id("bAceptar")
@@ -50,12 +50,12 @@ public class VistaNotificaciones_item extends LitTemplate {
 		this.idNombreUsuario = idNombreUsuario;
 	}
 
-	public Label getIdTextoNotificación() {
-		return idTextoNotificación;
+	public Label getIdTextoNotificacion() {
+		return idTextoNotificacion;
 	}
 
-	public void setIdTextoNotificación(Label idTextoNotificación) {
-		this.idTextoNotificación = idTextoNotificación;
+	public void setIdTextoNotificacion(Label idTextoNotificacion) {
+		this.idTextoNotificacion = idTextoNotificacion;
 	}
 
 	public Image getIdVideoRelacionado() {

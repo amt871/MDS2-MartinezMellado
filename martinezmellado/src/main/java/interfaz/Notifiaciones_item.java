@@ -56,24 +56,24 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 			this.publicacion = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
-			this.getIdTextoNotificación().setText("Ha comentado: " + aux.getComentario());;
+			this.getIdTextoNotificacion().setText("Ha comentado: " + aux.getComentario());
 			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "me_gusta":
 			this.publicacion = this.cabeceraUserReg.getDatos().cargarVideoPoID(publicacion.getID());
 			this.getbAceptar().setVisible(false);
 			this.getbRechazar().setVisible(false);
-			this.getIdTextoNotificación().setText("A " + emisor.getUsuario() + " le ha gustado tu video");
+			this.getIdTextoNotificacion().setText("A " + emisor.getUsuario() + " le ha gustado tu video");
 			this.getIdNombreUsuario().setText(emisor.getUsuario());
 			break;
 		case "seguir":
 			if (miUsuario.getPrivado()) {
 				this.getIdBotonVista().setVisible(false);
-				this.getIdTextoNotificación().setText("El usuario " + emisor.getUsuario() + " ha solicitado seguirte");
+				this.getIdTextoNotificacion().setText("El usuario " + emisor.getUsuario() + " ha solicitado seguirte");
 			}else {
 				this.getbAceptar().setVisible(false);
 				this.getbRechazar().setVisible(false);
-				this.getIdTextoNotificación().setText("El usuario " + emisor.getUsuario() + " ha empezado a seguirte");
+				this.getIdTextoNotificacion().setText("El usuario " + emisor.getUsuario() + " ha empezado a seguirte");
 			}
 			this.getIdVideoRelacionado().setSrc(emisor.getFoto());
 			this.getIdNombreUsuario().setText(emisor.getUsuario());

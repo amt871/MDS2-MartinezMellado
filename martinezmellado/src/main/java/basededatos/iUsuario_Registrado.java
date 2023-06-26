@@ -27,7 +27,7 @@ public interface iUsuario_Registrado {
 
 	public boolean segimiento(Usuario_Registrado seguido, Usuario_Registrado seguidor);
 
-	public void denunciarPublicación(Usuario_Registrado usuario, Publicacion publicacion);
+	public void denunciarPublicacion(Usuario_Registrado usuario, Publicacion publicacion);
 
 	public void denunciarUsuario(Usuario_Registrado denunciante, Usuario_Registrado denunciado);
 
