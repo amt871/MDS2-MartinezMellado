@@ -35,17 +35,32 @@ public class Ver_perfil__usuario_no_registrado_ extends VistaVer_perfil__usuario
 		// TODO Auto-generated constructor stub
 		
 		this.setCabecera(cabeceraNoReg);
+		this.usuario = this.getCabecera().getDatos().cargarDatosUsuario(usuario.getUsuario());
 		int megustas = 0;
-		for(Publicacion publi : usuario.realiza.toArray())
+		for(Publicacion publi : this.usuario.realiza.toArray())
 			megustas += publi.le_gusta.size();
 		
 		this.getLabelMeGustas().setText(megustas + " me gustas");
-		this.getLabelSeguidores().setText("Seguidores: "+usuario.seguidor.size());
-		this.getLabelUsuario().setText(usuario.getUsuario());
-		this.getImage().setSrc(usuario.getFoto());
+		this.getLabelSeguidores().setText("Seguidores: "+this.usuario.seguidor.size());
+		
+		
+		
+		if (this.usuario.getEs_bloqueado() != null) {
+			this.getLabelUsuario().setText("Usuario");
+			scroller = this.getScroller();
+			vl = new VerticalLayout();
+			scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
+			scroller.setContent(vl);
+			vl.setAlignItems(Alignment.CENTER);
+			vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			vl.add(new Label("Este usuario fue bloqueado "));
+			return;
+		}
+		this.getLabelUsuario().setText(this.usuario.getUsuario());
+		this.getImage().setSrc(this.usuario.getFoto());
 		
 		this.scroller = this.getScroller();
-		this.usuario = usuario;
+		
 		
 		this.getLayoutSeguidores().addClickListener(e ->{
 			

@@ -87,31 +87,36 @@ public class Notifiaciones_item extends VistaNotificaciones_item {
 	
 	private void verPerfilOtroUsuario() {
 
-		if (this.usuario.getPrivado()) {
+		if (this.usuario.getUsuario().equals(this.miUsuario.getUsuario())) {
+			if(cabeceraUserReg != null) 
+				this.cabeceraUserReg.setPerfil(new Mi_perfil(this.cabeceraUserReg.getVl(), cabeceraUserReg));
+				this.cabeceraUserReg.getVl().removeAll();
+				this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfil());
+	}else if (this.usuario.getPrivado()) {
 
-			// System.out.println(miUsuario.getUsuario());
+		// System.out.println(miUsuario.getUsuario());
 
-			// Notification.show("Aun no implementado");
-			if (this.miUsuario.seguido.contains(this.usuario)) {
-				this.cabeceraUserReg
-						.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
-				this.inicio.removeAll();
-				this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
-			} else {
-				this.cabeceraUserReg.setPerfilPrivado(
-						new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, this.usuario));
-				this.inicio.removeAll();
-				this.inicio.add(this.cabeceraUserReg.getPerfilPrivado());
-				// this.inicio.cambiarPantalla(cabecera);
-			}
-		} else {
-
+		// Notification.show("Aun no implementado");
+		if (this.miUsuario.seguido.contains(this.usuario)) {
 			this.cabeceraUserReg
 					.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
-			this.inicio.removeAll();
-			this.inicio.add(this.cabeceraUserReg.getPerfilPublico());
-
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+		} else {
+			this.cabeceraUserReg.setPerfilPrivado(
+					new Ver_perfil_privado__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+			this.cabeceraUserReg.getVl().removeAll();
+			this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPrivado());
+			// this.inicio.cambiarPantalla(cabecera);
 		}
+	} else {
+
+		this.cabeceraUserReg
+				.setPerfilPublico(new Ver_perfil__usuario_registrado_(this.cabeceraUserReg, this.usuario));
+		this.cabeceraUserReg.getVl().removeAll();
+		this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getPerfilPublico());
+
+	}
 	}
 	
 	private void verVideoRelacionado() {

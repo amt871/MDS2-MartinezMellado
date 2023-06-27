@@ -187,12 +187,23 @@ public class Registro extends VistaRegistro {
 		Date myDate = null;
 		// Date sqlDate = null;
 		try {
+			String[] aux = this.getIdFechaNacimiento().getValue().split("/");
+			if (Integer.parseInt(aux[0]) > 31) {
+				Notification.show("Fecha invalida");
+				return;
+			}
+			if (Integer.parseInt(aux[1]) > 12) {
+				Notification.show("Fecha invalida");
+				return;
+			}
 			myDate = formatter.parse(this.getIdFechaNacimiento().getValue());
+			
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
-			Notification.show("Fecha incorrecta");
+			Notification.show("Fecha invalida");
 			return;
+			
 		}
 
 		usuarioARegistrar.setNombre(this.getIdNombre().getValue());

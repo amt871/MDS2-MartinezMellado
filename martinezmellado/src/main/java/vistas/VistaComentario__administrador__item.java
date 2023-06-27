@@ -24,8 +24,6 @@ public class VistaComentario__administrador__item extends LitTemplate {
 	private Label labelcomentario;
 	@Id("bEliminar")
 	private Button bEliminar;
-	@Id("labelMeGustas")
-	private Label labelMeGustas;
 
 	/**
      * Creates a new VistaComentario__administrador__item.
@@ -58,14 +56,7 @@ public class VistaComentario__administrador__item extends LitTemplate {
 		this.bEliminar = bEliminar;
 	}
 
-	public Label getLabelMeGustas() {
-		return labelMeGustas;
-	}
 
-	public void setLabelMeGustas(Label labelMeGustas) {
-		this.labelMeGustas = labelMeGustas;
-	}
-    
     
 
 }

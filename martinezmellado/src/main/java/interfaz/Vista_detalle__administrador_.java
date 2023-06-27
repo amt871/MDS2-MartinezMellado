@@ -57,68 +57,78 @@ public class Vista_detalle__administrador_ extends VistaVista_detalle__administr
 	private Cabecera__administrador_ cabecera;
 	private Usuario_Registrado propietario;
 	private VerticalLayout vl;
-	
+
 	public Vista_detalle__administrador_(Cabecera__administrador_ cabeceraAdmin, Publicacion publi) {
 		// TODO Auto-generated constructor stub
-		this.propietario = publi.getRealizada();
+
 		this.cabecera = cabeceraAdmin;
 		this.setCabecera(cabeceraAdmin);
-		this.getLabelFecha().setText(publi.getFecha().toString());
-		this.getLabelUbi().setText(publi.getUbicacion());
-		this.getLabelUsuario().setText(publi.getRealizada().getUsuario());
-		this.getImage().setSrc(publi.getRealizada().getFoto());
-		this.getLabelMeGustas().setText(String.valueOf(publi.le_gusta.size()));
-		this.getLabelDescripcion().setText(publi.getDescripcion());
-		this.getLayoutVideo().add(new Video(publi.getVideo().replace("src/main/webapp/", ""),"90%","90%"));
-		
-		this.getImage().addClickListener(event ->{
-			
+		this.propietario = this.cabecera.getDatos().cargarDatosUsuario(publi.getRealizada().getUsuario());
+		this.publicacion = this.cabecera.getDatos().cargarVideoPoID(publi.getID());
+		this.getLabelFecha().setText(this.publicacion.getFecha().toString());
+		this.getLabelUbi().setText(this.publicacion.getUbicacion());
+		this.getLabelUsuario().setText(this.publicacion.getRealizada().getUsuario());
+		this.getImage().setSrc(this.publicacion.getRealizada().getFoto());
+		this.getLabelMeGustas().setText(String.valueOf(this.publicacion.le_gusta.size()));
+		this.getLabelDescripcion().setText(this.publicacion.getDescripcion());
+		this.getLayoutVideo().add(new Video(this.publicacion.getVideo().replace("src/main/webapp/", ""), "90%", "90%"));
+
+		this.getImage().addClickListener(event -> {
+
 			verPerfilOtroUsuarioAdmin();
-			
+
 		});
-		
-		this.publicacion = publi;
+
 		this.vl = new VerticalLayout();
-		
+
 		scroller = this.getScroller();
-		
+
 		scroller.setScrollDirection(ScrollDirection.VERTICAL);
 		scroller.setContent(vl);
 		vl.setHeight("100%");
 		vl.setWidth("100%");
 		vl.setAlignItems(Alignment.CENTER);
-		//vl.setJustifyContentMode(JustifyContentMode.CENTER);
-		
-		if(publi.tiene.toArray().length == 0) {
+		// vl.setJustifyContentMode(JustifyContentMode.CENTER);
+
+		if (this.publicacion .tiene.toArray().length == 0) {
 			vl.setJustifyContentMode(JustifyContentMode.CENTER);
 			vl.add(new Label("Esta publicacion no tiene comentarios"));
-		}else
+		} else
 			addItems();
+		
+		this.getbEliminar().addClickListener(e ->{
+			
+			eliminar();			
+			
+		});
+	}
+
+	private void eliminar() {
+
+		this.cabecera.getDatos().eliminarPublicaion(publicacion);
+		this.getCabecera().getbInicio2().click();
+		
 	}
 
 	private void addItems() {
-		
-		Comentario[] comentarios = this.publicacion.tiene.toArray();
-		
-		for(int i=0; i<comentarios.length; i++)
-				vl.add(new Comentario__administrador__item(comentarios[i], this.cabecera));
-		
-		
-	}
-	
-	private void verPerfilOtroUsuarioAdmin() {
 
+		Comentario[] comentarios = this.publicacion.tiene.toArray();
+
+		for (int i = 0; i < comentarios.length; i++) {
+			vl.add(new Comentario__administrador__item(comentarios[i], this.cabecera));
+		}
+	}
+
+	private void verPerfilOtroUsuarioAdmin() {
 
 		// System.out.println(miUsuario.getUsuario());
 
 		// Notification.show("Aun no implementado");
-		
-			this.cabecera.setPerfil(
-					new Ver_perfil__administrador_(this.cabecera, this.propietario));
-			this.cabecera.getVl().removeAll();
-			this.cabecera.getVl().add(this.cabecera.getPerfil());
-			// this.inicio.cambiarPantalla(cabecera);
-		
 
-}
+		this.cabecera.setPerfil(new Ver_perfil__administrador_(this.cabecera, this.propietario));
+		this.cabecera.getVl().removeAll();
+		this.cabecera.getVl().add(this.cabecera.getPerfil());
+		// this.inicio.cambiarPantalla(cabecera);
+
+	}
 }

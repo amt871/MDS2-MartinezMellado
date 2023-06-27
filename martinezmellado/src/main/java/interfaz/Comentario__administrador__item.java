@@ -1,5 +1,7 @@
 package interfaz;
 
+import com.vaadin.flow.component.orderedlayout.FlexComponent.Alignment;
+
 import basededatos.Comentario;
 import basededatos.Usuario_Registrado;
 import vistas.VistaComentario__administrador__item;
@@ -31,11 +33,11 @@ public class Comentario__administrador__item extends VistaComentario__administra
 		this.comentario = cabecera.getDatos().cargarComentario(this.usuario, cabecera.getDatos().cargarVideoPoID(Integer.valueOf(comentario.getPublicacion())));
 		// TODO Auto-generated constructor stub
 		
-		this.getImage().setSrc(comentario.getEs_publicado().getFoto());
-		this.getLabelcomentario().setText(comentario.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");
-		this.setVisible(false);
+		this.getImage().setSrc(this.comentario.getEs_publicado().getFoto());
+		this.getLabelcomentario().setText(this.comentario.getComentario());
+		
 		
 		this.getbEliminar().addClickListener(event -> {
 			bEliminar();
@@ -61,6 +63,7 @@ public class Comentario__administrador__item extends VistaComentario__administra
 
 }
 	private void bEliminar() {
+		this.setVisible(false);
 		this.cabecera.getDatos().eliminarComentario(comentario);
 	}
 

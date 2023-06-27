@@ -1,5 +1,6 @@
 package interfaz;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -57,16 +58,29 @@ public class Ver_perfil__usuario_registrado_ extends VistaVer_perfil__usuario_re
 		this.getDivCabecera().add(cabecera);
 		this.cabecera = cabecera;
 		this.miUsuario_Registrado = cabecera.getDatos().cargarDatosUsuario(this.cabecera.getUser().getUsuario());
-		this.getLabelSeguidores().setText("Seguidores: " + this.miUsuario_Registrado.seguidor.size());
+		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
+		this.getLabelSeguidores().setText("Seguidores: " + this.usuario.seguidor.size());
+		
+		if (this.usuario.getEs_bloqueado() != null) {
+			this.getSeguirButton().setVisible(false);
+			scroller = this.getScroller();
+			vl = new VerticalLayout();
+			scroller.setScrollDirection(Scroller.ScrollDirection.VERTICAL);
+			scroller.setContent(vl);
+			vl.setAlignItems(Alignment.CENTER);
+			vl.setJustifyContentMode(JustifyContentMode.CENTER);
+			vl.add(new Label("Este usuario fue bloqueado "));
+			return;
+		}
 
 		int megustas = 0;
-		for (Publicacion publi : this.miUsuario_Registrado.realiza.toArray())
+		for (Publicacion publi : this.usuario.realiza.toArray())
 			megustas += publi.le_gusta.size();
 
 		this.getLabelMegustas().setText(megustas + " me gustas");
-		this.getImage().setSrc(this.miUsuario_Registrado.getFoto());
-		this.getLabelUsuario().setText(this.miUsuario_Registrado.getUsuario());
-		this.usuario = this.cabecera.getDatos().cargarDatosUsuario(usuario.getUsuario());
+		this.getImage().setSrc(this.usuario.getFoto());
+		this.getLabelUsuario().setText(this.usuario.getUsuario());
+		
 
 		this.getbDenuncia().addClickListener(event -> {
 			bDenuncia();
