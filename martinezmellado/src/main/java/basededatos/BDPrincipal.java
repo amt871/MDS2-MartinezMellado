@@ -45,7 +45,7 @@ public class BDPrincipal
 			return this.usuariosRegistrados.comprobarCredenciales(aUser, aPass);
 		} catch (PersistentException e) {
 			// TODO Auto-generated catch block
-			// e.printStackTrace();
+			e.printStackTrace();
 			return false;
 		}
 	}

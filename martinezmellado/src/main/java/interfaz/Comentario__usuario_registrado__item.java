@@ -45,7 +45,7 @@ public class Comentario__usuario_registrado__item extends VistaComentario__usuar
 		this.getLabelComentario().setText(comentario.getComentario());
 		this.getStyle().set("width", "100%");
 		this.getStyle().set("height", "20%");
-		// this.getStyle().set("position", "relative");
+		this.getStyle().set("position", "relative");
 
 		this.getbDenunciar().addClickListener(event -> {
 			Usuario_Registrado miUsr = cabecera.getDatos().cargarDatosUsuario(cabecera.getUser().getUsuario());

@@ -31,9 +31,11 @@ public class Usuarios_Registrados {
 		Boolean aux = false;
 		PersistentTransaction t = MartinezMelladoMDSPersistentManager.instance().getSession().beginTransaction();
 		try {
+//			u = Usuario_RegistradoDAO
+//					.loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
 			u = Usuario_RegistradoDAO
-					.loadUsuario_RegistradoByQuery("usuario='" + aUser + " ' and contrasenna='" + aPass + "'", null);
-			if (u != null)
+					.loadUsuario_RegistradoByQuery("usuario='" + aUser + " '", null);
+			if (u != null && u.getContrasenna().equals(aPass))
 				aux = true;
 		} catch (Exception e) {
 			t.rollback();

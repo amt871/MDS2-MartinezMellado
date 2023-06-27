@@ -198,7 +198,7 @@ public class Registro extends VistaRegistro {
 			}
 			myDate = formatter.parse(this.getIdFechaNacimiento().getValue());
 			
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
 			Notification.show("Fecha invalida");
@@ -228,8 +228,8 @@ public class Registro extends VistaRegistro {
 		
 		String codigo = String.valueOf((int)Math.floor((Math.random()*(9999-1000+1))+1000));
 		
-		System.out.println(codigo);
-		System.out.println(usuarioARegistrar.getCorreo());
+		//System.out.println(codigo);
+		//System.out.println(usuarioARegistrar.getCorreo());
 		
 		
 		this.vl.removeAll();
