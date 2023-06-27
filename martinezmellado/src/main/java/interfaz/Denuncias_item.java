@@ -131,6 +131,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.cabecera.getDatos().eliminarComentario(comentario);
 		Notification.show("Denuncia procesada");
 		this.setVisible(false);
+		this.cabecera.getComDenuVist().remove(comentario);
 
 	}
 	
@@ -138,6 +139,7 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
+		this.cabecera.getComDenuVist().remove(comentario);
 	}
 	
 	public void bPosponerP() {
@@ -158,13 +160,15 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.cabecera.getDatos().eliminarPublicaion(publicacion);
 		Notification.show("Denuncia procesada");
 		this.setVisible(false);
+		this.cabecera.getPubDenuVist().remove(publicacion);
 
 	}
 	
 	public void bRechazaP() {
-		this.cabecera.getDatos().retirarDenunciaComentario(comentario);
+		this.cabecera.getDatos().retirarDenunciaPublicacion(this.publicacion);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
+		this.cabecera.getPubDenuVist().remove(this.publicacion);
 	}
 	
 	public void bPosponerU() {
@@ -184,12 +188,14 @@ public class Denuncias_item extends VistaDenuncias_item {
 		this.cabecera.getDatos().bloquearUsuario(usuario, this.cabecera.getAdministardor());
 		Notification.show("Denuncia procesada");
 		this.setVisible(false);
+		this.cabecera.getUsrDenuVist().remove(this.usuario);
 	}
 	
 	public void bRechazaU() {
 		this.cabecera.getDatos().retirarDenunciaUsuario(this.usuario);
 		Notification.show("Denuncia rechazada");
 		this.setVisible(false);
+		this.cabecera.getUsrDenuVist().remove(this.usuario);
 	}
 	
 	public void verPerfilAdministrador() {

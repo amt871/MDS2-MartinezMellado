@@ -22,22 +22,22 @@ export class VistaVer_perfil__administrador_ extends LitElement {
  <vaadin-button style="align-self: flex-end; width: 10%; height: 5%; margin-right: var(--lumo-space-s);" id="bBloquear">
    Bloquear 
  </vaadin-button>
- <vaadin-horizontal-layout style="height: 10%; justify-content: space-between; width: 100%;">
-  <vaadin-horizontal-layout style="width: 100%; align-self: center; justify-content: center; align-items: center;">
+ <vaadin-horizontal-layout style="height: 20%; justify-content: space-between; width: 100%;">
+  <vaadin-horizontal-layout style="width: 100%; align-self: center; justify-content: flex-end; align-items: center; height: 100%;">
    <label id="labelSeguidores">Numero de seguidores</label>
   </vaadin-horizontal-layout>
-  <vaadin-vertical-layout theme="spacing">
+  <vaadin-vertical-layout style="width: 100%; height: 100%; align-items: center; justify-content: center;">
    <img style="max-height: 95%; max-width: 95%;" id="image">
    <label id="labelUsuario">Label</label>
   </vaadin-vertical-layout>
-  <vaadin-horizontal-layout style="width: 100%; align-self: center; align-items: center; justify-content: center;">
+  <vaadin-horizontal-layout style="width: 100%; align-self: center; align-items: center; justify-content: flex-start; height: 100%;">
    <label id="labelMeGustas">Numero de me gustas</label>
   </vaadin-horizontal-layout>
  </vaadin-horizontal-layout>
  <vaadin-horizontal-layout style="align-self: center; align-items: center; justify-content: center; width: 100%; height: 5%;">
   <label id="labelPrivado">Perfil privado</label>
  </vaadin-horizontal-layout>
- <div id="divScroller" style="width: 100%; height: 75%;">
+ <div id="divScroller" style="width: 100%; height: 65%;">
   <vaadin-scroller id="scroller" style="width: 100%; height: 100%;"></vaadin-scroller>
  </div>
 </vaadin-vertical-layout>

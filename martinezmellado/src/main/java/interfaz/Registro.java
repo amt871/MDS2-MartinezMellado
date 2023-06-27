@@ -198,7 +198,7 @@ public class Registro extends VistaRegistro {
 			}
 			myDate = formatter.parse(this.getIdFechaNacimiento().getValue());
 			
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();
 			Notification.show("Fecha invalida");

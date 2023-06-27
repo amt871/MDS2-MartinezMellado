@@ -60,6 +60,8 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 	private Button bVerMeGustas;
 	@Id("layoutDescripcion")
 	private HorizontalLayout layoutDescripcion;
+	@Id("bDenunciar")
+	private Button bDenunciar;
 
 	/**
      * Creates a new VistaVista_detalle__usuario_registrado_.
@@ -212,6 +214,14 @@ public class VistaVista_detalle__usuario_registrado_ extends LitTemplate {
 
 	public void setLayoutDescripcion(HorizontalLayout layoutDescripcion) {
 		this.layoutDescripcion = layoutDescripcion;
+	}
+
+	public Button getbDenunciar() {
+		return bDenunciar;
+	}
+
+	public void setbDenunciar(Button bDenunciar) {
+		this.bDenunciar = bDenunciar;
 	}
 
 	

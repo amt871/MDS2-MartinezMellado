@@ -93,6 +93,12 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 			VerMeGustas();
 
 		});
+		
+		this.getbDenunciar().addClickListener(e ->{
+			
+			DenunciarButton(this.publicacion);
+			
+		});
 
 		this.vl = new VerticalLayout();
 
@@ -379,5 +385,22 @@ public class Vista_detalle__usuario_registrado_ extends VistaVista_detalle__usua
 		this.cabeceraUserReg.setVerMeGustas(new Ver_me_gustas__otro_usuario_(this.cabeceraUserReg, this.publicacion));
 		this.cabeceraUserReg.getVl().removeAll();
 		this.cabeceraUserReg.getVl().add(this.cabeceraUserReg.getVerMeGustas());
+	}
+	
+	public void DenunciarButton(Publicacion publicacion) {
+		boolean flag = true;
+		for (Usuario_Registrado denunciante : this.datos.cargarVideoPoID(publicacion.getID()).es_denunciada.toArray()) {
+			if (denunciante.getUsuario().equals(this.miUsuario.getUsuario())) {
+				
+				flag = false;
+			}
+		}
+		
+		if (flag) {
+			this.datos.denunciarPublicacion(this.miUsuario, publicacion);
+		}else{
+			Notification.show("Ya has denunciado esta publicacion");
+		}
+		
 	}
 }

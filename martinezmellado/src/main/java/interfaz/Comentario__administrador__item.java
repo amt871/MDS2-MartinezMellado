@@ -34,7 +34,7 @@ public class Comentario__administrador__item extends VistaComentario__administra
 		// TODO Auto-generated constructor stub
 		
 		this.getStyle().set("width", "100%");
-		this.getStyle().set("height", "20%");
+		this.getStyle().set("height", "30%");
 		this.getImage().setSrc(this.comentario.getEs_publicado().getFoto());
 		this.getLabelcomentario().setText(this.comentario.getComentario());
 		

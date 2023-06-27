@@ -16,17 +16,15 @@ export class VistaDenuncias_item extends LitElement {
 
   render() {
     return html`
-<vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; justify-content: space-between; background-color: #d8d8d8;">
+<vaadin-horizontal-layout class="content" style="width: 100%; height: 100%; justify-content: space-between; background-color: #d8d8d8; position: relative;">
  <vaadin-vertical-layout style="align-items: center; height: 100%; justify-content: center; flex-shrink: 0; width: 20%;">
   <img style="max-width: 50%; max-height: 100%;" id="imagen">
-  <div>
-   <label id="texto">Objeto Denunciado</label>
-  </div>
+  <label id="texto">Objeto Denunciado</label>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout theme="spacing" style="width: 100%; height: 100%; align-self: center; align-items: center; justify-content: center;">
+ <vaadin-vertical-layout theme="spacing" style="width: 60%; height: 100%; align-self: center; align-items: center; justify-content: center;">
   <label id="textoDescripcion">Label</label>
  </vaadin-vertical-layout>
- <vaadin-vertical-layout style="align-items: center; justify-content: center; flex-grow: 0; flex-shrink: 1; width: 40%; height: 100%;">
+ <vaadin-vertical-layout style="align-items: center; justify-content: center; flex-grow: 0; flex-shrink: 1; width: 20%; height: 100%;">
   <vaadin-button style="width: 100%;" id="bAceptar">
     Aceptar 
   </vaadin-button>
