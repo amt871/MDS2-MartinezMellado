@@ -216,7 +216,7 @@ public class Administrar extends VistaAdministrar {
 	}
 	
 	public void listarDenunciasArchivadas() {
-		System.out.println("hola yo lo intento");
+		//System.out.println("hola yo lo intento");
 		
 		vl.removeAll();
 		
