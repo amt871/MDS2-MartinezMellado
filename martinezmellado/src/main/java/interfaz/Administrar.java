@@ -178,6 +178,7 @@ public class Administrar extends VistaAdministrar {
 					if (tipo == 0 && contCom < this.cabecera.getComDenuVist().size()) {
 
 						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.cabecera.getComDenuVist().get(contCom)));
+						array.get(cont).getbPosponer().setVisible(false);
 						vl.add(array.get(cont));
 						cont++;
 						contCom++;
@@ -188,6 +189,7 @@ public class Administrar extends VistaAdministrar {
 					if (tipo == 1 && contPub < this.cabecera.getPubDenuVist().size()) {
 
 						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.cabecera.getPubDenuVist().get(contPub)));
+						array.get(cont).getbPosponer().setVisible(false);
 						vl.add(array.get(cont));
 						cont++;
 						contPub++;
@@ -198,6 +200,7 @@ public class Administrar extends VistaAdministrar {
 					if (tipo == 2 && contUsr < this.cabecera.getUsrDenuVist().size()) {
 
 						array.add(new Denuncias_item(cabecera, this.cabecera.getVl(), this.cabecera.getUsrDenuVist().get(contUsr)));
+						array.get(cont).getbPosponer().setVisible(false);
 						vl.add(array.get(cont));
 						cont++;
 						contUsr++;

@@ -116,7 +116,13 @@ public class Denuncias_item extends VistaDenuncias_item {
 
 	public void bPosponerC() {
 		this.setVisible(false);
-		if (!this.cabecera.getComDenuVist().contains(comentario)) {
+		boolean flag = true;
+		for (Comentario comentario : this.cabecera.getComDenuVist()) {
+			if (comentario.getID() == this.comentario.getID()) {
+				flag = false;
+			}
+		}
+		if (flag) {
 			this.cabecera.getComDenuVist().add(comentario);
 		}
 	}
@@ -144,7 +150,13 @@ public class Denuncias_item extends VistaDenuncias_item {
 	
 	public void bPosponerP() {
 		this.setVisible(false);
-		if (!this.cabecera.getPubDenuVist().contains(this.publicacion)) {
+		boolean flag = true;
+		for (Publicacion publ : this.cabecera.getPubDenuVist()) {
+			if (publ.getID() == this.publicacion.getID()) {
+				flag = false;
+			}
+		}
+		if (flag) {
 			this.cabecera.getPubDenuVist().add(this.publicacion);
 		}
 	}
@@ -173,8 +185,14 @@ public class Denuncias_item extends VistaDenuncias_item {
 	
 	public void bPosponerU() {
 		this.setVisible(false);
-		if (!this.cabecera.getUsrDenuVist().contains(usuario)) {
-			this.cabecera.getUsrDenuVist().add(usuario);
+		boolean flag = true;
+		for (Usuario_Registrado usr : this.cabecera.getUsrDenuVist()) {
+			if (usr.getID() == this.usuario.getID()) {
+				flag = false;
+			}
+		}
+		if (flag) {
+			this.cabecera.getUsrDenuVist().add(this.usuario);
 		}
 	}
 	
